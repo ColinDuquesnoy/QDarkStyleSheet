@@ -1,7 +1,7 @@
 Introduction
 ==================
 
-This is a simple dark stylesheet for Qt applications developped for the pyludic tools. 
+This is a simple dark stylesheet for Qt applications. 
 
 It tries to mimick the **Wonton soup** color scheme from the KDE desktop.
 
@@ -49,11 +49,6 @@ What still needs to be done:
  - QStatusBar
  - QTableView
  - QToolBox 
-
-License information:
-============================
-
-No license, use it as you want :)
 
 Contact information:
 ===========================
