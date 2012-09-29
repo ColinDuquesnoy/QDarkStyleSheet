@@ -33,7 +33,7 @@ QToolTip
 QWidget
 {
     color: silver;
-    background-color: #292828;
+    background-color: #302F2F;
     selection-background-color:#78879b;
     selection-color: black;
     /*border-color: #3A3939;*/
@@ -54,8 +54,8 @@ QWidget:item:selected
 
 QMenuBar
 {
-    /*background-color: #292828;*/
-    background-color: #292828;
+    /*background-color: #302F2F;*/
+    background-color: #302F2F;
     color: silver;
 }
 
@@ -101,7 +101,7 @@ QMenu::item:selected
 QWidget:disabled
 {
     color: #404040;
-    background-color: #292828;
+    background-color: #302F2F;
 }
 
 QAbstractItemView
@@ -289,7 +289,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
 
 QTextEdit
 {
-    background-color: #292828;
+    background-color: #302F2F;
     color: silver;
     border: 1px solid #3A3939;
 }
@@ -325,7 +325,7 @@ QSizeGrip {
 
 QMainWindow::separator
 {
-    background-color: #292828;
+    background-color: #302F2F;
     color: white;
     padding-left: 4px;
     spacing: 2px; /* spacing between items in the tool bar */
@@ -363,7 +363,7 @@ QMenu::separator
 
 QRadioButton::indicator:checked, QRadioButton::indicator:unchecked{
     color: #b1b1b1;
-    background-color: #292828;
+    background-color: #302F2F;
     border: 1px solid silver;
     border-radius: 5px;
 }
@@ -377,13 +377,13 @@ QRadioButton::indicator:checked
     fx: 0.5, fy: 0.5,
     radius: 1.0,
     stop: 0.25 #78879b,
-    stop: 0.3 #292828
+    stop: 0.3 #302F2F
     );
 }
 
 QCheckBox::indicator{
     color: #b1b1b1;
-    background-color: #292828;
+    background-color: #302F2F;
     border: 1px solid silver;
     width: 9px;
     height: 9px;
@@ -425,7 +425,7 @@ QStackedWidget
 
 QToolBar {
     border: 1px solid #393838;
-    background: 1px solid #292828;
+    background: 1px solid #302F2F;
     font-weight: bold;
 }
 
@@ -449,7 +449,7 @@ QPushButton
 {
     color: silver;
     background-color: QLinearGradient( x1: 0, y1: 1, x2: 0, y2: 0,
-    stop: 0 #292828, stop: 1 #484846);
+    stop: 0 #302F2F, stop: 1 #484846);
     border-width: 1px;
     border-color: #3A3939;
     border-style: solid;
@@ -465,7 +465,7 @@ QPushButton:disabled
     /*border-color: #3A3939;*/
     /*background-color: #393e48;*/
     background-color: QLinearGradient( x1: 0, y1: 1, x2: 0, y2: 0,
-    stop: 0 #292828, stop: 1 #484846);
+    stop: 0 #302F2F, stop: 1 #484846);
     border-width: 1px;
     border-color: #3A3939;
     border-style: solid;
@@ -597,7 +597,7 @@ QLabel
 QTabBar::tab {
     color: #b1b1b1;
     border: 1px solid #3A3939;
-    background-color: #292828;
+    background-color: #302F2F;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 3px;
@@ -609,7 +609,7 @@ QTabBar::tab {
 QTabWidget::pane {
     border: 1px solid #3A3939;
     background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1,
-      stop:1 #292828, stop:0 #3A3939);
+      stop:1 #302F2F, stop:0 #3A3939);
     /*top: 1px;*/
 }
 
@@ -639,7 +639,7 @@ QTabBar::tab:selected
     margin-bottom: 0px;
 
     background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1,
-      stop:1 #292828, stop:0 #3A3939);
+      stop:1 #302F2F, stop:0 #3A3939);
 }
 
 QTabBar::tab:selected:hover
@@ -647,7 +647,7 @@ QTabBar::tab:selected:hover
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1,
-      stop:1 #292828, stop:0 #3A3939);
+      stop:1 #302F2F, stop:0 #3A3939);
 }
 
 QDockWidget
@@ -661,11 +661,11 @@ QDockWidget::title
 {
     border: 1px solid #3A3939;
     /*border-radius: 3px;*/
-    border-bottom: #292828;
+    border-bottom: #302F2F;
     text-align: left;
     spacing: 2px; /* spacing between items in the tool bar */
     background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1,
-    stop:1 #292828, stop:0 #3A3939);;
+    stop:1 #302F2F, stop:0 #3A3939);;
     background-image: none;
     padding-left: 10px;
 }
@@ -758,7 +758,7 @@ QSlider::handle:vertical {
 
 
 QToolButton { /* all types of tool button */
-    background-color: #292828;
+    background-color: #302F2F;
     /*border-radius: 3px;*/
     /*border: none;*/
 }
