@@ -423,13 +423,13 @@ QPushButton
     background-color: QLinearGradient( x1: 0, y1: 1, x2: 0, y2: 0,
     stop: 0 #302F2F, stop: 1 #484846);
     border-width: 1px;
-    border-color: #3A3939;
+    border-color: #4A4949;
     border-style: solid;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
 }
 
 QPushButton:disabled
@@ -439,11 +439,11 @@ QPushButton:disabled
     border-width: 1px;
     border-color: #3A3939;
     border-style: solid;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     color: #3A3939;
 }
 
