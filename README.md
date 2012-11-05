@@ -3,7 +3,7 @@ Introduction
 
 This is a simple dark stylesheet for Qt applications. 
 
-It tries to mimic the [Wonton Soup](http://kde-look.org/content/show.php/?content=148680 "Wonton Soup") KDE color scheme.
+It tries to mimic the [Dark Obsidian](http://kde-look.org/content/show.php/?content=148616 "Dark Obsidian") KDE color scheme.
 
 Screenshots may be found on the following website: 
 
