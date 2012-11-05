@@ -116,7 +116,11 @@ QAbstractItemView
 QWidget:focus, QMenuBar:focus
 {
     border: 1px solid rgba(48, 86, 111);
+}
 
+QTabWidget:focus, QCheckBox:focus
+{
+    border: none;
 }
 
 QLineEdit
@@ -137,8 +141,9 @@ QGroupBox {
 
 QGroupBox::title {
     subcontrol-origin: margin;
-    subcontrol-position: middle center; /* position at the top center */
-    padding: 0 3px;
+    subcontrol-position: top center; /* position at the top center */
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 QAbstractScrollArea
@@ -149,16 +154,18 @@ QAbstractScrollArea
 
 QScrollBar:horizontal
 {
-    background: #3E424A;
     height: 15px;
     margin: 0px 11px 0px 11px;
     border: 1px solid #3A3939;
     border-radius: 6px;
+    background-color: QLinearGradient( x1: 0, y1: 1, x2: 0, y2: 0,
+    stop: 0 #302F2F, stop: 1 #484846);
 }
 
 QScrollBar::handle:horizontal
 {
-    background: #758296;
+    background-color: QLinearGradient( x1: 0, y1: 1, x2: 0, y2: 0,
+    stop: 0 #605F5F, stop: 1 #787876);
     min-width: 5px;
     border-radius: 5px;
 }
@@ -219,7 +226,9 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
 
 QScrollBar:vertical
 {
-    background: #3E424A;
+    /*background: #3E424A;*/
+    background-color: QLinearGradient( x1: 1, y1: 0, x2: 0, y2: 0,
+    stop: 0 #302F2F, stop: 1 #484846);
     width: 15px;
     margin: 11px 0 11px 0;
     border: 1px solid #3A3939;
@@ -228,7 +237,9 @@ QScrollBar:vertical
 
 QScrollBar::handle:vertical
 {
-    background: #758296;
+    background-color: QLinearGradient( x1: 1, y1: 0, x2: 0, y2: 0,
+    stop: 0 #605F5F, stop: 1 #787876);
+    /*background: #787876;*/
     min-height: 5px;
     border-radius: 5px;
 }
@@ -450,8 +461,8 @@ QPushButton
     border-width: 1px;
     border-color: #3A3939;
     border-style: solid;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 3px;
@@ -481,6 +492,7 @@ QComboBox
     border-style: solid;
     border: 1px solid #3A3939;
     border-radius: 3px;
+    padding: 2px;
 }
 
 QComboBox:hover,QPushButton:hover,QAbstractSpinBox:hover,QLineEdit:hover,QTextEdit:hover,QPlainTextEdit:hover,QAbstractView:hover,QTreeView:hover
@@ -534,8 +546,9 @@ QComboBox::down-arrow:focus
 
 QPushButton:pressed
 {
-    background-color: #898e98;
-    color: black;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1,
+    stop: 0 #302F2F, stop: 1 #484846);
+    /*color: black;*/
 }
 
 QAbstractSpinBox {
@@ -691,21 +704,22 @@ QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
 QTreeView, QListView, QTableView
 {
     border: 1px solid #3A3939;
+    background-color: #201F1F;
 }
 
 QTreeView::branch:has-siblings:!adjoins-item {
-    border-image: None;
-    /*border-image: url(QDarkStyleSheet/stylesheet-vline.png) 0;*/
+    /*border-image: None;*/
+    border-image: url(QDarkStyleSheet/stylesheet-vline.png) 0;
 }
 
 QTreeView::branch:has-siblings:adjoins-item {
-    border-image: None;
-    /*border-image: url(QDarkStyleSheet/stylesheet-branch-more.png) 0;*/
+    /*border-image: None;*/
+    border-image: url(QDarkStyleSheet/stylesheet-branch-more.png) 0;
 }
 
 QTreeView::branch:!has-children:!has-siblings:adjoins-item {
-    border-image: None;
-    /*border-image: url(QDarkStyleSheet/stylesheet-branch-end.png) 0;*/
+    /*border-image: None;*/
+    border-image: url(QDarkStyleSheet/stylesheet-branch-end.png) 0;
 }
 
 QTreeView::branch:has-children:!has-siblings:closed,
