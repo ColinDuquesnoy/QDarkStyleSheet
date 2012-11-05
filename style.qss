@@ -662,6 +662,11 @@ QTreeView, QListView, QTableView
     background-color: #201F1F;
 }
 
+QTreeView:branch:selected, QTreeView:branch:hover
+{
+    background-color: #78879b;
+}
+
 QTreeView::branch:has-siblings:!adjoins-item {
     border-image: none;
     /*border-image: url(%(location)s/QDarkStyleSheet/rc/stylesheet-vline.png) 0;*/
