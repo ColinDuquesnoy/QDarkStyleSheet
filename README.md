@@ -1,15 +1,29 @@
-Introduction
-==================
+A dark stylesheet for Qt applications. 
 
-This is a simple dark stylesheet for Qt applications. 
+Screenshots
+===================
 
-It tries to mimic the [Dark Obsidian](http://kde-look.org/content/show.php/?content=148616 "Dark Obsidian") KDE color scheme.
+**TODO: Add screenshots**
 
-Screenshots may be found on the following website: 
+Usage
+============
 
-**TODO: ***create a static website to show screenshots*****
+- Download/clone the project next to your main executable (or wherever you find it fits well)
+- Load QDarkStyleSheets/style.qss and apply it on your QApplication instance
 
-This stylesheet has been tested on Windows XP and Linux KDE (Rosa Marathon 2012)
+Here is a quick snippet in python (PySide/PyQt) that shows how to use the stylesheet:
+
+```Python
+def main():
+    # create the qt application
+    app = QApplication()
+    # Load the stylesheet
+    f = open("QDarkStyleSheet/style.qss","r")
+    style_sheet = f.read()
+    f.close()
+    # apply it
+    app.setStyleSheet(style_sheet)
+```
 
 Status:
 ==============
@@ -42,9 +56,6 @@ The following widgets are styled:
 What still needs to be done:
 
  - QAbstractScrollArea
- - QHeaderView
- - QListView
- - QSizeGrip
  - QSplitter
  - QStatusBar
  - QTableView
@@ -54,4 +65,4 @@ Contact information:
 ===========================
 
   - Maintainer: colin.duquesnoy@gmail.com
-  - Homepage: **TODO**
+  - Homepage: https://github.com/ColinDuquesnoy/QDarkStyleSheet
