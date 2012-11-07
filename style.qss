@@ -695,6 +695,16 @@ QTreeView::branch:open:has-children:has-siblings  {
     image: url(%(location)s/QDarkStyleSheet/rc/branch_open.png);
 }
 
+QTreeView::branch:has-children:!has-siblings:closed:hover,
+QTreeView::branch:closed:has-children:has-siblings:hover {
+    image: url(%(location)s/QDarkStyleSheet/rc/branch_closed-on.png);
+    }
+
+QTreeView::branch:open:has-children:!has-siblings:hover,
+QTreeView::branch:open:has-children:has-siblings:hover  {
+    image: url(%(location)s/QDarkStyleSheet/rc/branch_open-on.png);
+    }
+
 QSlider::groove:horizontal {
     border: 1px solid #3A3939;
     height: 8px; 
