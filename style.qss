@@ -117,9 +117,9 @@ QLineEdit
 }
 
 QGroupBox {
-    border:1px double #3A3939;
+    border:1px solid #3A3939;
     border-radius: 7px;
-    margin-top: 1ex;
+    margin-top: 2ex;
 }
 
 QGroupBox::title {
@@ -605,15 +605,21 @@ QTabBar::tab:selected
     margin-bottom: 0px;
 
     background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1,
-      stop:1 #302F2F, stop:0 #3A3939);
+      stop:1 #302F2F, stop:0 #5A5959);
+}
+
+QTabBar::tab:!selected:hover
+{
+    color:white;
 }
 
 QTabBar::tab:selected:hover
 {
+    color:white;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1,
-      stop:1 #302F2F, stop:0 #3A3939);
+    stop:1 #302F2F, stop:0 #5A5959);
 }
 
 QDockWidget
@@ -664,33 +670,28 @@ QTreeView, QListView, QTableView
 
 QTreeView:branch:selected, QTreeView:branch:hover
 {
-    background-color: #78879b;
+    background: url(%(location)s/QDarkStyleSheet/rc/transparent.png);
 }
 
 QTreeView::branch:has-siblings:!adjoins-item {
-    border-image: none;
-    /*border-image: url(%(location)s/QDarkStyleSheet/rc/stylesheet-vline.png) 0;*/
+    border-image: url(%(location)s/QDarkStyleSheet/rc/transparent.png);
 }
 
 QTreeView::branch:has-siblings:adjoins-item {
-    border-image: none;
-    /*border-image: url(%(location)s/QDarkStyleSheet/rc/stylesheet-branch-more.png) 0;*/
+    border-image: url(%(location)s/QDarkStyleSheet/rc/transparent.png);
 }
 
 QTreeView::branch:!has-children:!has-siblings:adjoins-item {
-    border-image: none;
-    /*border-image: url(%(location)s/QDarkStyleSheet/rc/stylesheet-branch-end.png) 0;*/
+    border-image: url(%(location)s/QDarkStyleSheet/rc/transparent.png);
 }
 
 QTreeView::branch:has-children:!has-siblings:closed,
 QTreeView::branch:closed:has-children:has-siblings {
-    border-image: none;
     image: url(%(location)s/QDarkStyleSheet/rc/branch_closed.png);
 }
 
 QTreeView::branch:open:has-children:!has-siblings,
 QTreeView::branch:open:has-children:has-siblings  {
-    border-image: none;
     image: url(%(location)s/QDarkStyleSheet/rc/branch_open.png);
 }
 
