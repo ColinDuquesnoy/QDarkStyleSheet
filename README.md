@@ -1,13 +1,5 @@
 A dark stylesheet for Qt applications. 
 
-Screenshots
-===================
-
-I have used this stylesheet for an internal tool at work. Are are a few screenshots:
-
-![alt text](/screenshots/01.png "Screenshot 01")
-
-
 Usage
 ============
 
@@ -77,3 +69,10 @@ Contact information:
 
   - Maintainer: colin.duquesnoy@gmail.com
   - Homepage: https://github.com/ColinDuquesnoy/QDarkStyleSheet
+
+Screenshots
+===================
+
+I have used this stylesheet for an internal tool at work. Are are a few screenshots:
+
+![alt text](/screenshots/01.png "Screenshot 01")
