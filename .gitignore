@@ -1,3 +1,8 @@
 /*.pyc
 /style.rcc
 /style_pyside_rc.py
+./.idea
+/.idea/
+/dist/
+/QDarkStyle.egg-info/
+/build/

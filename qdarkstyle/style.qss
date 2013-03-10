@@ -1,3 +1,13 @@
+/*
+ * QDarkStyle - A dark style sheet for Qt applications
+ *
+ * Copyright 2012, 2013 Colin Duquesnoy <colin.duquesnoy@gmail.com>
+ *
+ * This software is released under the LGPLv3 license.
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 QProgressBar:horizontal {
     border: 1px solid #3A3939;
     text-align: center;

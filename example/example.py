@@ -1,4 +1,14 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# QDarkStyle - A dark style sheet for Qt applications
+#
+# Copyright 2012, 2013 Colin Duquesnoy <colin.duquesnoy@gmail.com>
+#
+# This software is released under the LGPLv3 license.
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
 """
 A simple example of use.
 
@@ -13,20 +23,13 @@ Requirements:
 	     the example
 
 """
-# standard imports
 import os
 import sys
-
-# PySide imports
 from PySide import QtGui
-
-# dark style import:
-# make the example runnable without install
 from os.path import abspath, dirname
+# make the example runnable without the need to install
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 import qdarkstyle
-
-# our ui made in QtDesigner
 import example_ui
 
 

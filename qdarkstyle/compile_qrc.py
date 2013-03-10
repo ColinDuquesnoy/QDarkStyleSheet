@@ -1,10 +1,20 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# QDarkStyle - A dark style sheet for Qt applications
+#
+# Copyright 2012, 2013 Colin Duquesnoy <colin.duquesnoy@gmail.com>
+#
+# This software is released under the LGPLv3 license.
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
 """
-Utiliy scripts to compile the qrc file. The script will 
+Utility scripts to compile the qrc file. The script will
 attempt to compile the qrc file using the following tools:
-	- rcc
-	- pyside-rcc
-	- pyrcc4
+    - rcc
+    - pyside-rcc
+    - pyrcc4
 
 Delete the compiled files that you don't want to use 
 manually after running this script.
@@ -26,4 +36,3 @@ def compile_all():
 
 if __name__ == "__main__":
     compile_all()
-

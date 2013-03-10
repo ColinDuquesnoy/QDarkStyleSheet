@@ -1,36 +1,63 @@
 QDarkStylesheet
 ==================
 
-A dark stylesheet for Qt applications. 
+A dark stylesheet for Qt applications.
+
+
+License
+---------
+
+This project is licensed under the LGPL v3
+
+
+Installation
+---------------
+
+If you are using python, all you have to do is to run setup script or to install it from pypi:
+
+```bash
+pip install qdarkstyle
+```
+
+or
+
+```bash
+python setup.py install
+```
+
+If you are using C++, the best way is to download/clone the project and copy
+the following files to your application directory:
+    - qdarkstyle/style.qss
+    - qdarkstyle/style.qrc
+    - qdarkstyle/rc (the whole directory)
 
 Usage
 -------------
 
-- Download/clone the project next to your main executable (or wherever you find it fits well)
-- Compile the qrc file for your system and add it to your application. (simply run compile_qrc.py script, it will compile the qrc file for use with Qt (c++), PyQt4 and Pyside).
-- Load QDarkStyleSheets/style.qss and apply it on your QApplication instance
-
-Here is a quick example using PySide:
+Here is an example using PySide:
 
 
 ```Python
 import sys
+import qdarkstyle
 from PySide import QtGui
-# import the style resources comiled by compile_rc.py
-import style_pyside_rc
+
 
 # create the application and the main window
 app = QtGui.QApplication(sys.argv)
 window = QtGui.QMainWindow()
 
 # setup stylesheet
-with open("style.qss", 'r') as stylesheet:
-    app.setStyleSheet(stylesheet.read())
+app.setStyleSheet(qdarkstyle.load_stylesheet())
 
 # run
 window.show()
 app.exec_()
 ```
+
+
+_There is an example included in the example folder. You can run the script without installing qdarkstyle. You
+only need to have PySide installed on your system._
 
 Status:
 -------------
@@ -67,13 +94,15 @@ What still needs to be done:
  - QStatusBar
  - QToolBox 
 
+
 Contact information:
 --------------------------
 
   - Maintainer: colin.duquesnoy@gmail.com
   - Homepage: https://github.com/ColinDuquesnoy/QDarkStyleSheet
 
-Screenshots
+
+Snapshots
 -------------
 
 I have used this stylesheet for an internal tool at work. Are are a few screenshots:
