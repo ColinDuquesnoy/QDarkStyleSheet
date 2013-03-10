@@ -1,3 +1,6 @@
+QDarkStylesheet
+==================
+
 A dark stylesheet for Qt applications. 
 
 Usage
