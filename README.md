@@ -3,18 +3,19 @@ A dark stylesheet for Qt applications.
 Screenshots
 ===================
 
-**TODO: Add screenshots**
+I have used this stylesheet for an internal tool at work. Are are a few screenshots:
+
+.. image:: /screenshots/01.png
+
 
 Usage
 ============
 
 - Download/clone the project next to your main executable (or wherever you find it fits well)
-- Compile the qrc file for your system and add it to your application. (simply compile_qrc.py script, it will compile the qrc file for use with Qt (c++), PyQt4 and Pyside.
-- Load QDarkStyleSheets/style.qss and
-- apply it on your QApplication instance
+- Compile the qrc file for your system and add it to your application. (simply run compile_qrc.py script, it will compile the qrc file for use with Qt (c++), PyQt4 and Pyside).
+- Load QDarkStyleSheets/style.qss and apply it on your QApplication instance
 
-Here is a quick snippet in python (PySide) that shows how to use the 
-stylesheet. 
+Here is a quick example using PySide:
 
 
 ```Python
