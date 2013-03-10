@@ -5,7 +5,7 @@ Screenshots
 
 I have used this stylesheet for an internal tool at work. Are are a few screenshots:
 
-.. image:: /screenshots/01.png
+![alt text](https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/screenshots/01.png "Screenshot 01")
 
 
 Usage
