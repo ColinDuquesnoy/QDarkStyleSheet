@@ -9,33 +9,31 @@ Usage
 ============
 
 - Download/clone the project next to your main executable (or wherever you find it fits well)
+- Compile the qrc file for your system and add it to your application. (simply compile_qrc.py script, it will compile the qrc file for use with Qt (c++), PyQt4 and Pyside.
 - Load QDarkStyleSheets/style.qss and
-- Format the stylesheet string to give it the correct location (otherwise 
-  resources won't show). 
-  People that don't want to format may replace all "%(location)s/" occurrences in the style.qss file by their own resource 
-  location.
 - apply it on your QApplication instance
 
-Here is a quick snippet in python (PySide/PyQt) that shows how to use the 
+Here is a quick snippet in python (PySide) that shows how to use the 
 stylesheet. 
 
 
 ```Python
-def main():
-    # create the qt application
-    app = QApplication()
+import sys
+from PySide import QtGui
+# import the style resources comiled by compile_rc.py
+import style_pyside_rc
 
-    # Load the stylesheet
-    f = open("QDarkStyleSheet/style.qss","r")
-    style_sheet = f.read()
-    f.close()
+# create the application and the main window
+app = QtGui.QApplication(sys.argv)
+window = QtGui.QMainWindow()
 
-    # format style_sheet to get the correct resource path.
-    path = "" # here we use the working directory but it might somewhere else
-    style_sheet = style_sheet % {"location":path}
-    
-    # apply the stylesheet
-    app.setStyleSheet(style_sheet)
+# setup stylesheet
+with open("style.qss", 'r') as stylesheet:
+    app.setStyleSheet(stylesheet.read())
+
+# run
+window.show()
+app.exec_()
 ```
 
 Status:
@@ -71,7 +69,6 @@ What still needs to be done:
  - QAbstractScrollArea
  - QSplitter
  - QStatusBar
- - QTableView
  - QToolBox 
 
 Contact information:
