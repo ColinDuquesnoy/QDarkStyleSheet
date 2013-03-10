@@ -13,23 +13,21 @@ This project is licensed under the LGPL v3
 Installation
 ---------------
 
-If you are using python, all you have to do is to run setup script or to install it from pypi:
-
-```bash
-pip install qdarkstyle
-```
-
-or
+If you are using **Python**, all you have to do is to run the setup script or to install from pypi (using pip or easy_install):
 
 ```bash
 python setup.py install
 ```
+or 
+```bash
+pip install qdarkstyle
+```
 
-If you are using C++, the best way is to download/clone the project and copy
+If you are using **C++**, the best way is to download/clone the project and copy
 the following files to your application directory:
-    - qdarkstyle/style.qss
-    - qdarkstyle/style.qrc
-    - qdarkstyle/rc (the whole directory)
+- **qdarkstyle/style.qss**
+- **qdarkstyle/style.qrc**
+- **qdarkstyle/rc** (the whole directory)
 
 Usage
 -------------
