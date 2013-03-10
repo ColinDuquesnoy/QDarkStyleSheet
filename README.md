@@ -4,7 +4,7 @@ QDarkStylesheet
 A dark stylesheet for Qt applications. 
 
 Usage
-============
+-------------
 
 - Download/clone the project next to your main executable (or wherever you find it fits well)
 - Compile the qrc file for your system and add it to your application. (simply run compile_qrc.py script, it will compile the qrc file for use with Qt (c++), PyQt4 and Pyside).
@@ -33,7 +33,7 @@ app.exec_()
 ```
 
 Status:
-==============
+-------------
 
 The following widgets are styled: 
 
@@ -68,13 +68,13 @@ What still needs to be done:
  - QToolBox 
 
 Contact information:
-===========================
+--------------------------
 
   - Maintainer: colin.duquesnoy@gmail.com
   - Homepage: https://github.com/ColinDuquesnoy/QDarkStyleSheet
 
 Screenshots
-===================
+-------------
 
 I have used this stylesheet for an internal tool at work. Are are a few screenshots:
 
