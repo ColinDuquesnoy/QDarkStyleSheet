@@ -1,9 +1,14 @@
+#!/usr/bin/env python
+import os
+from os.path import abspath, dirname
+
 import sys
+sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/../..'))
+
 from PySide import QtGui
+import QDarkStyleSheet
 import example_ui
 
-# import the style resources
-import style_pyside_rc
 
 
 # create the application and the main window
@@ -15,8 +20,7 @@ ui = example_ui.Ui_MainWindow()
 ui.setupUi(window)
 
 # setup stylesheet
-with open("style.qss", 'r') as stylesheet:
-    app.setStyleSheet(stylesheet.read())
+app.setStyleSheet(QDarkStyleSheet.load_stylesheet(pyside=True))
 
 # run
 window.show()
