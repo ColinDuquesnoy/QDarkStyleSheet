@@ -106,3 +106,7 @@ Snapshots
 I have used this stylesheet for an internal tool at work. Are are a few screenshots:
 
 ![alt text](/screenshots/01.png "Screenshot 01")
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ColinDuquesnoy/qdarkstylesheet/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
