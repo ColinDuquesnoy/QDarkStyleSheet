@@ -35,9 +35,9 @@ C++
 
 Download/clone the project and copy the following files to your application directory:
 
-    - **qdarkstyle/style.qss**
-    - **qdarkstyle/style.qrc**
-    - **qdarkstyle/rc/** (the whole directory)
+- **qdarkstyle/style.qss**
+- **qdarkstyle/style.qrc**
+- **qdarkstyle/rc/** (the whole directory)
 
 Usage
 ============
