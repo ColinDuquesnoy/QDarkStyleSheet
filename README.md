@@ -15,21 +15,29 @@ This project is licensed under the MIT license.
 Installation
 ---------------
 
-If you are using **Python**, all you have to do is to run the setup script or to install from pypi (using pip or easy_install):
+Python
+++++++++++++++
+
+Install the qdarkstyle package using the *setup* script or using *pip*:
 
 ```bash
 python setup.py install
 ```
-or 
+
+or
+
 ```bash
 pip install qdarkstyle
 ```
 
-If you are using **C++**, the best way is to download/clone the project and copy
-the following files to your application directory:
-- **qdarkstyle/style.qss**
-- **qdarkstyle/style.qrc**
-- **qdarkstyle/rc** (the whole directory)
+C++
++++++++++
+
+Download/clone the project and copy the following files to your application directory:
+
+    - **qdarkstyle/style.qss**
+    - **qdarkstyle/style.qrc**
+    - **qdarkstyle/rc/** (the whole directory)
 
 Usage
 -------------
