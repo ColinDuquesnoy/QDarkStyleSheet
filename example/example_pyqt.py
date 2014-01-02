@@ -37,7 +37,7 @@ Requirements:
 
 """
 import sys
-from PyQt4 import QtGui
+from PyQt4 import QtGui, QtCore
 from os.path import abspath, dirname
 # make the example runnable without the need to install
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
@@ -60,6 +60,10 @@ def main():
 
     # setup stylesheet
     app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
+
+    # auto quit after 2s when testing on travis-ci
+    if "--travis" in sys.argv:
+        QtCore.QTimer.singleShot(2000, app.exit)
 
     # run
     window.show()

@@ -1,0 +1,19 @@
+language: python
+python:
+  - "2.7"
+  - "3.2"
+virtualenv:
+  system_site_packages: true
+before_install:
+ - sudo apt-get update
+ - sudo apt-get install -qq python-pyside --fix-missing
+ - sudo apt-get install -qq python-qt4 --fix-missing
+ - sudo apt-get install -qq python3-pyside --fix-missing
+ - sudo apt-get install -qq python3-pyqt4 --fix-missing
+ - "export DISPLAY=:99.0"
+ - "sh -e /etc/init.d/xvfb start"
+before_script:
+  - cd example
+script:
+  - python example_pyqt.py --travis
+  - python example_pyside.py --travis

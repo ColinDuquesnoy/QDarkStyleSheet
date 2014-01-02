@@ -36,9 +36,8 @@ Requirements:
     the example
 
 """
-import os
 import sys
-from PySide import QtGui
+from PySide import QtGui, QtCore
 from os.path import abspath, dirname
 # make the example runnable without the need to install
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
@@ -61,6 +60,10 @@ def main():
 
     # setup stylesheet
     app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=True))
+
+        # auto quit after 2s when testing on travis-ci
+    if "--travis" in sys.argv:
+        QtCore.QTimer.singleShot(2000, app.exit)
 
     # run
     window.show()
