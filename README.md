@@ -7,16 +7,16 @@ A dark stylesheet for Qt applications.
 
 
 License
----------
+===========
 
 This project is licensed under the MIT license.
 
 
 Installation
----------------
+==============
 
 Python
-++++++++++++++
+-----------
 
 Install the qdarkstyle package using the *setup* script or using *pip*:
 
@@ -31,7 +31,7 @@ pip install qdarkstyle
 ```
 
 C++
-+++++++++
+---------
 
 Download/clone the project and copy the following files to your application directory:
 
@@ -40,7 +40,7 @@ Download/clone the project and copy the following files to your application dire
     - **qdarkstyle/rc/** (the whole directory)
 
 Usage
--------------
+============
 
 Here is an example using PySide:
 
@@ -79,7 +79,7 @@ _There is an example included in the *example* folder. You can run the script wi
 only need to have PySide or PyQt4 installed on your system._
 
 Status:
--------------
+===========
 
 The following widgets are styled: 
 
@@ -115,14 +115,14 @@ What still needs to be done:
 
 
 Contact information:
---------------------------
+=========================
 
   - Maintainer: colin.duquesnoy@gmail.com
   - Homepage: https://github.com/ColinDuquesnoy/QDarkStyleSheet
 
 
 Snapshots
--------------
+=================
 
 I have used this stylesheet for an internal tool at work. Are are a few screenshots:
 
