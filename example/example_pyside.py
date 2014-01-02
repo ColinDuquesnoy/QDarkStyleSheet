@@ -33,7 +33,7 @@ Requirements:
     - PySide
 
 .. note.. :: qdarkstyle does not have to be installed to run 
-	     the example
+    the example
 
 """
 import os
@@ -43,7 +43,7 @@ from os.path import abspath, dirname
 # make the example runnable without the need to install
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 import qdarkstyle
-import example_ui
+import example_pyside_ui as example_ui
 
 
 def main():

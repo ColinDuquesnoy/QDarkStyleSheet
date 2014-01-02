@@ -30,20 +30,19 @@ Load an ui made in QtDesigner and apply the DarkStyleSheet.
 
 Requirements:
     - Python 2 or Python 3
-    - PySide
+    - PyQt4
 
 .. note.. :: qdarkstyle does not have to be installed to run 
-	     the example
+    the example
 
 """
-import os
 import sys
-from PySide import QtGui
+from PyQt4 import QtGui
 from os.path import abspath, dirname
 # make the example runnable without the need to install
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 import qdarkstyle
-import example_ui
+import example_pyqt_ui as example_ui
 
 
 def main():
@@ -60,7 +59,7 @@ def main():
     window.setWindowTitle("QDarkStyle example")
 
     # setup stylesheet
-    app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=True))
+    app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
 
     # run
     window.show()
