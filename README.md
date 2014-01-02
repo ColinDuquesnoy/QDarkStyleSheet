@@ -2,6 +2,7 @@ QDarkStylesheet
 ==================
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ColinDuquesnoy/qdarkstylesheet/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![Build Status](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet.png?branch=master)](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet)
 
 A dark stylesheet for Qt applications.
 
