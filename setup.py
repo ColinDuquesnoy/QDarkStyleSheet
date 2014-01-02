@@ -43,6 +43,10 @@ setup(
     All you have to do is the following::
 
         import qdarkstyle
-        QtGui.QApplication().instance().setStyleSheet(qdarkstyle.load_stylesheet())
+        app = QtGui.QApplication().instance()
+        # PySide
+        app.setStyleSheet(qdarkstyle.load_stylesheet())
+        # PyQt4
+        app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
     """,
 )

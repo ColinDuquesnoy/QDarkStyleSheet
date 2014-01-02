@@ -1,6 +1,8 @@
 QDarkStylesheet
 ==================
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ColinDuquesnoy/qdarkstylesheet/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 A dark stylesheet for Qt applications.
 
 
@@ -53,9 +55,20 @@ window.show()
 app.exec_()
 ```
 
+To use PyQt4 instead of PySide, you just need to replace
 
-_There is an example included in the example folder. You can run the script without installing qdarkstyle. You
-only need to have PySide installed on your system._
+```Python
+app.setStyleSheet(qdarkstyle.load_stylesheet())
+```
+
+by
+
+```Python
+app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
+```
+
+_There is an example included in the *example* folder. You can run the script without installing qdarkstyle. You
+only need to have PySide or PyQt4 installed on your system._
 
 Status:
 -------------
@@ -108,5 +121,5 @@ I have used this stylesheet for an internal tool at work. Are are a few screensh
 ![alt text](/screenshots/01.png "Screenshot 01")
 
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ColinDuquesnoy/qdarkstylesheet/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 
