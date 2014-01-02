@@ -6,3 +6,4 @@
 /dist/
 /QDarkStyle.egg-info/
 /build/
+__pycache__

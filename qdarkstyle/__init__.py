@@ -42,9 +42,9 @@ def load_stylesheet(pyside=True):
     cwd = os.path.dirname(os.path.realpath(__file__))
     # Smart import of the rc file
     if pyside:
-        import pyside_style_rc
+        import qdarkstyle.pyside_style_rc
     else:
-        import pyqt_style_rc
+        import qdarkstyle.pyqt_style_rc
 
     # Load the stylesheet content
     ret_val = ""
