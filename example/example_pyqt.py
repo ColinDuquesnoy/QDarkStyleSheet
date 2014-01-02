@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 #
 # The MIT License (MIT)
 #
@@ -24,29 +23,50 @@
 # THE SOFTWARE.
 #
 """
-Utility scripts to compile the qrc file. The script will
-attempt to compile the qrc file using the following tools:
-    - rcc
-    - pyside-rcc
-    - pyrcc4
+A simple example of use.
 
-Delete the compiled files that you don't want to use 
-manually after running this script.
+Load an ui made in QtDesigner and apply the DarkStyleSheet.
+
+
+Requirements:
+    - Python 2 or Python 3
+    - PySide
+
+.. note.. :: qdarkstyle does not have to be installed to run 
+	     the example
+
 """
 import os
+import sys
+from PySide import QtGui
+from os.path import abspath, dirname
+# make the example runnable without the need to install
+sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
+import qdarkstyle
+import example_ui
 
 
-def compile_all():
+def main():
     """
-    Compile style.qrc using rcc, pyside-rcc and pyrcc4
-    """
-    print("Compiling for Qt: style.qrc -> style.rcc")
-    os.system("rcc style.qrc -o style.rcc")
-    print("Compiling for PyQt4: style.qrc -> pyqt_style_rc.py")
-    os.system("pyrcc4 style.qrc -o pyqt_style_rc.py")
-    print("Compiling for PySide: style.qrc -> pyside_style_rc.py")
-    os.system("pyside-rcc style.qrc -o pyside_style_rc.py")
+    Application entry point
+    """	
+    # create the application and the main window
+    app = QtGui.QApplication(sys.argv)
+    window = QtGui.QMainWindow()
+    
+    # setup ui
+    ui = example_ui.Ui_MainWindow()
+    ui.setupUi(window)
+    window.setWindowTitle("QDarkStyle example")
+
+    # setup stylesheet
+    app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=True))
+
+    # run
+    window.show()
+    app.exec_()
 
 
 if __name__ == "__main__":
-    compile_all()
+    main()
+

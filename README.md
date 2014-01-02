@@ -7,7 +7,7 @@ A dark stylesheet for Qt applications.
 License
 ---------
 
-This project is licensed under the LGPL v3
+This project is licensed under the MIT license.
 
 
 Installation
