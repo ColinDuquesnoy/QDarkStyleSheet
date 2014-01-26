@@ -776,3 +776,7 @@ QToolButton:hover {
     background-color: #3A3939;
 }
 
+QTableView QTableCornerButton::section {
+    background-color: #3A3939;
+    border: 1px solid #3A3939;
+}
