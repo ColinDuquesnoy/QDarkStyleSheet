@@ -201,6 +201,40 @@
         <widget class="QTextEdit" name="textEdit"/>
        </item>
        <item>
+        <widget class="QTableWidget" name="tableWidget">
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>New Row</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>New Column</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>New Column 2</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
         <widget class="QProgressBar" name="progressBar">
          <property name="value">
           <number>24</number>

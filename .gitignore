@@ -1,4 +1,4 @@
-/*.pyc
+*.pyc
 /style.rcc
 /style_pyside_rc.py
 ./.idea

@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Sun Mar 10 15:08:16 2013
-#      by: pyside-uic 0.2.13 running on PySide 1.1.1
+# Created: Sun Jan 26 15:54:23 2014
+#      by: pyside-uic 0.2.14 running on PySide 1.1.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -98,6 +98,23 @@ class Ui_MainWindow(object):
         self.textEdit = QtGui.QTextEdit(self.dockWidgetContents)
         self.textEdit.setObjectName("textEdit")
         self.verticalLayout.addWidget(self.textEdit)
+        self.tableWidget = QtGui.QTableWidget(self.dockWidgetContents)
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(2)
+        self.tableWidget.setRowCount(4)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(1, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(2, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(3, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        self.verticalLayout.addWidget(self.tableWidget)
         self.progressBar = QtGui.QProgressBar(self.dockWidgetContents)
         self.progressBar.setProperty("value", 24)
         self.progressBar.setObjectName("progressBar")
@@ -148,6 +165,12 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(QtGui.QApplication.translate("MainWindow", "PushButton", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.setItemText(0, QtGui.QApplication.translate("MainWindow", "Item 0", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.setItemText(1, QtGui.QApplication.translate("MainWindow", "Item 2", None, QtGui.QApplication.UnicodeUTF8))
+        self.tableWidget.verticalHeaderItem(0).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
+        self.tableWidget.verticalHeaderItem(1).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
+        self.tableWidget.verticalHeaderItem(2).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
+        self.tableWidget.verticalHeaderItem(3).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
+        self.tableWidget.horizontalHeaderItem(0).setText(QtGui.QApplication.translate("MainWindow", "New Column", None, QtGui.QApplication.UnicodeUTF8))
+        self.tableWidget.horizontalHeaderItem(1).setText(QtGui.QApplication.translate("MainWindow", "New Column 2", None, QtGui.QApplication.UnicodeUTF8))
         self.actionSubmenu.setText(QtGui.QApplication.translate("MainWindow", "Submenu", None, QtGui.QApplication.UnicodeUTF8))
         self.actionSubsubmenu.setText(QtGui.QApplication.translate("MainWindow", "Subsubmenu", None, QtGui.QApplication.UnicodeUTF8))
 
