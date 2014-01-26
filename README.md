@@ -117,6 +117,20 @@ What still needs to be done:
  - QToolBox 
 
 
+Changelog
+===========
+```
+* 1.2:
+   - Improve QTableView support
+* 1.1:
+   - Switch to MIT license
+   - Add python 3 support
+* 1.0:
+  - First public release (LGPL v2)
+```
+
+
+
 Contact information:
 =========================
 
