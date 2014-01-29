@@ -36,11 +36,32 @@ pip install qdarkstyle
 C++
 ---------
 
-Download/clone the project and copy the following files to your application directory:
+1) Download/clone the project and copy the following files to your application directory (keep the existing directory hierarchy):
 
-- **qdarkstyle/style.qss**
-- **qdarkstyle/style.qrc**
-- **qdarkstyle/rc/** (the whole directory)
+ - **qdarkstyle/style.qss**
+ - **qdarkstyle/style.qrc**
+ - **qdarkstyle/rc/** (the whole directory)
+
+2) Add **qdarkstyle/style.qrc** to your **.pro file**
+
+3) Load the stylesheet:
+
+```cpp
+QFile f("style.qss");
+
+if ( !f.exists() )
+{
+    printf("Unable to stylesheet\n");
+}
+else
+{
+    f.open(QFile::ReadOnly | QFile::Text);
+    QTextStream ts(&f);
+    app.setStyleSheet(ts.readAll());
+}
+```
+
+
 
 Usage
 ============
