@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Sun Jan 26 15:54:23 2014
+# Created: Thu Jan 30 08:26:03 2014
 #      by: pyside-uic 0.2.14 running on PySide 1.1.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -17,7 +17,14 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout_2 = QtGui.QHBoxLayout(self.centralwidget)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.groupBox = QtGui.QGroupBox(self.centralwidget)
+        self.tabWidget = QtGui.QTabWidget(self.centralwidget)
+        self.tabWidget.setTabsClosable(True)
+        self.tabWidget.setObjectName("tabWidget")
+        self.tab = QtGui.QWidget()
+        self.tab.setObjectName("tab")
+        self.gridLayout = QtGui.QGridLayout(self.tab)
+        self.gridLayout.setObjectName("gridLayout")
+        self.groupBox = QtGui.QGroupBox(self.tab)
         self.groupBox.setObjectName("groupBox")
         self.verticalLayout_3 = QtGui.QVBoxLayout(self.groupBox)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
@@ -35,8 +42,13 @@ class Ui_MainWindow(object):
         QtGui.QListWidgetItem(self.listWidget)
         QtGui.QListWidgetItem(self.listWidget)
         self.verticalLayout_3.addWidget(self.listWidget)
-        self.horizontalLayout_2.addWidget(self.groupBox)
-        self.groupBox_2 = QtGui.QGroupBox(self.centralwidget)
+        self.gridLayout.addWidget(self.groupBox, 0, 0, 1, 1)
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtGui.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.gridLayout_2 = QtGui.QGridLayout(self.tab_2)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.groupBox_2 = QtGui.QGroupBox(self.tab_2)
         self.groupBox_2.setObjectName("groupBox_2")
         self.verticalLayout_4 = QtGui.QVBoxLayout(self.groupBox_2)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
@@ -54,7 +66,9 @@ class Ui_MainWindow(object):
         item_0 = QtGui.QTreeWidgetItem(self.treeWidget)
         item_0 = QtGui.QTreeWidgetItem(self.treeWidget)
         self.verticalLayout_4.addWidget(self.treeWidget)
-        self.horizontalLayout_2.addWidget(self.groupBox_2)
+        self.gridLayout_2.addWidget(self.groupBox_2, 0, 0, 1, 1)
+        self.tabWidget.addTab(self.tab_2, "")
+        self.horizontalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 25))
@@ -132,6 +146,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuMenu.menuAction())
 
         self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -148,6 +163,7 @@ class Ui_MainWindow(object):
         self.listWidget.item(6).setText(QtGui.QApplication.translate("MainWindow", "New Item", None, QtGui.QApplication.UnicodeUTF8))
         self.listWidget.item(7).setText(QtGui.QApplication.translate("MainWindow", "New Item", None, QtGui.QApplication.UnicodeUTF8))
         self.listWidget.setSortingEnabled(__sortingEnabled)
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QtGui.QApplication.translate("MainWindow", "Tab 1", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox_2.setTitle(QtGui.QApplication.translate("MainWindow", "GroupBox", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("MainWindow", "TextLabel", None, QtGui.QApplication.UnicodeUTF8))
         self.radioButton.setText(QtGui.QApplication.translate("MainWindow", "RadioButton", None, QtGui.QApplication.UnicodeUTF8))
@@ -158,6 +174,7 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(0).setText(0, QtGui.QApplication.translate("MainWindow", "qzd", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.topLevelItem(1).setText(0, QtGui.QApplication.translate("MainWindow", "effefe", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QtGui.QApplication.translate("MainWindow", "Tab 2", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMenu.setTitle(QtGui.QApplication.translate("MainWindow", "Menu", None, QtGui.QApplication.UnicodeUTF8))
         self.menuSubmenu_2.setTitle(QtGui.QApplication.translate("MainWindow", "Submenu 2", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_2.setText(QtGui.QApplication.translate("MainWindow", "PushButton", None, QtGui.QApplication.UnicodeUTF8))

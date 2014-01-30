@@ -44,6 +44,7 @@ sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 import qdarkstyle
 import example_pyqt_ui as example_ui
 
+print(qdarkstyle.__file__)
 
 def main():
     """
