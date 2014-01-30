@@ -143,6 +143,13 @@ What still needs to be done:
 Changelog
 ===========
 ```
+* 1.3:
+    - remove outline on button, checkbox and radio button
+    - add support for closable tabs
+    - better disabled buttons
+    - fix QTextEdit background color to match the color of QPlainTextEdit and QLineEdit
+    - better hover/selected states for QTreeView and QListView
+    - add QHeaderView support
 * 1.2:
    - Improve QTableView support
 * 1.1:
