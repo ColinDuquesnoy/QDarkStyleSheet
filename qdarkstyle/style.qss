@@ -404,7 +404,6 @@ QRadioButton::indicator
 QCheckBox::indicator:pressed
 {
     border: 1px solid #78879b;
-    image:url(:/qss_icons/rc/checkbox.png);
 }
 
 QRadioButton::indicator:hover, QCheckBox::indicator:hover
