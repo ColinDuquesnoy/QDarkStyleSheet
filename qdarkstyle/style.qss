@@ -469,8 +469,7 @@ QPushButton
 
 QPushButton:disabled
 {
-    background-color: QLinearGradient( x1: 0, y1: 1, x2: 0, y2: 0,
-    stop: 0 #302F2F, stop: 1 #484846);
+    background-color: #302F2F;
     border-width: 1px;
     border-color: #3A3939;
     border-style: solid;
@@ -479,7 +478,7 @@ QPushButton:disabled
     padding-left: 10px;
     padding-right: 10px;
     /*border-radius: 3px;*/
-    color: #3A3939;
+    color: #454545;
 }
 
 QComboBox
