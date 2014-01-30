@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Thu Jan 30 08:26:03 2014
+# Created: Thu Jan 30 11:02:09 2014
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -118,6 +118,7 @@ class Ui_MainWindow(object):
         self.pushButton.setObjectName(_fromUtf8("pushButton"))
         self.horizontalLayout.addWidget(self.pushButton)
         self.pushButton_3 = QtGui.QPushButton(self.dockWidgetContents)
+        self.pushButton_3.setEnabled(False)
         self.pushButton_3.setObjectName(_fromUtf8("pushButton_3"))
         self.horizontalLayout.addWidget(self.pushButton_3)
         self.doubleSpinBox = QtGui.QDoubleSpinBox(self.dockWidgetContents)
@@ -168,7 +169,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuMenu.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -209,7 +210,7 @@ class Ui_MainWindow(object):
         self.menuSubmenu_2.setTitle(_translate("MainWindow", "Submenu 2", None))
         self.pushButton_2.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton.setText(_translate("MainWindow", "PushButton", None))
-        self.pushButton_3.setText(_translate("MainWindow", "PushButton", None))
+        self.pushButton_3.setText(_translate("MainWindow", "Disabled", None))
         self.comboBox.setItemText(0, _translate("MainWindow", "Item 0", None))
         self.comboBox.setItemText(1, _translate("MainWindow", "Item 2", None))
         item = self.tableWidget.verticalHeaderItem(0)
