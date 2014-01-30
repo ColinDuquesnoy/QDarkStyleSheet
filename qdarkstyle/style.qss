@@ -380,6 +380,11 @@ QRadioButton::indicator:checked
     );
 }
 
+QCheckBox, QRadioButton
+{
+    padding: 3px;
+}
+
 QCheckBox::indicator{
     color: #b1b1b1;
     background-color: #302F2F;
@@ -798,10 +803,20 @@ QToolButton {
 }
 
 QToolButton:pressed {
-    background-color: #3A3939;
+    background-color: #4A4949;
+    border: 1px solid silver;
+    border-radius: 3px;
 }
 QToolButton:hover {
-    background-color: #3A3939;
+    background-color: #4A4949;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+QPushButton::menu-indicator  {
+    subcontrol-origin: padding;
+    subcontrol-position: bottom right;
+    left: 8px;
 }
 
 QTableView QTableCornerButton::section {
