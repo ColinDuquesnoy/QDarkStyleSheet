@@ -164,7 +164,12 @@ Contact information:
 Snapshots
 =================
 
-I have used this stylesheet for an internal tool at work. Are are a few screenshots:
+Here are the snapshots of the example application:
+
+![alt text](/screenshots/QDarkStyle example 1.png "QDarkStyle example 1")
+![alt text](/screenshots/QDarkStyle example 2.png "QDarkStyle example 2")
+
+And here is a snapshot of an internal app I made at work:
 
 ![alt text](/screenshots/01.png "Screenshot 01")
 
