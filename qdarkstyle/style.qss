@@ -77,7 +77,6 @@ QMenuBar::item:selected
 {
     background: transparent;
     border: 1px solid #3A3939;
-;
 }
 
 QMenuBar::item:pressed
@@ -295,7 +294,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
 
 QTextEdit
 {
-    background-color: #302F2F;
+    background-color: #201F1F;
     color: silver;
     border: 1px solid #3A3939;
 }
@@ -394,6 +393,12 @@ QRadioButton::indicator
     border-radius: 7px;
     width: 9px;
     height: 9px;
+}
+
+QCheckBox::indicator:pressed
+{
+    border: 1px solid #78879b;
+    image:url(:/qss_icons/rc/checkbox.png);
 }
 
 QRadioButton::indicator:hover, QCheckBox::indicator:hover
@@ -584,6 +589,28 @@ QLabel
     border: 0px solid black;
 }
 
+QTabBar:focus
+{
+    border: 0px transparent black;
+}
+
+QTabBar::close-button  {
+    image: url(:/qss_icons/rc/close.png);
+    background: transparent;
+    icon-size: 10px;
+    padding: 5px;
+}
+
+QTabBar::close-button:hover
+{
+    background: rgba(255, 255, 255, 20);
+    border-radius: 3px;
+}
+
+QTabBar::close-button:pressed {
+    padding: 5px 4px 4px 5px;
+}
+
 QTabBar::tab {
     color: #b1b1b1;
     border: 1px solid #3A3939;
@@ -672,17 +699,18 @@ QDockWidget {
 
 QDockWidget::close-button, QDockWidget::float-button {
     border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: 3px;
     background: transparent;
     icon-size: 10px;
 }
 
 QDockWidget::close-button:hover, QDockWidget::float-button:hover {
-    background: #3A3939;
+    background: rgba(255, 255, 255, 10);
 }
 
 QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
     padding: 1px -1px -1px 1px;
+    background: rgba(255, 255, 255, 10);
 }
 
 QTreeView, QListView, QTableView
