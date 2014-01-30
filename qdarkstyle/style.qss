@@ -124,7 +124,7 @@ QWidget:focus, QMenuBar:focus
     border: 1px solid rgba(48, 86, 111);
 }
 
-QTabWidget:focus, QCheckBox:focus
+QTabWidget:focus, QCheckBox:focus, QRadioButton:focus
 {
     border: none;
 }
@@ -383,6 +383,7 @@ QRadioButton::indicator:checked
 QCheckBox, QRadioButton
 {
     padding: 3px;
+    outline: none;
 }
 
 QCheckBox::indicator{
@@ -463,6 +464,7 @@ QPushButton
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 5px;
+    outline: none;
 }
 
 QPushButton:disabled
@@ -761,6 +763,22 @@ QTreeView::branch:open:has-children:has-siblings:hover  {
     image: url(:/qss_icons/rc/branch_open-on.png);
     }
 
+QListView::item:hover, QTreeView::item:hover  {
+    background: none;
+    color: #FFFFFF
+}
+
+QTableView::item:pressed, QListView::item:pressed, QTreeView::item:pressed  {
+    background: #78879b;;
+    color: #FFFFFF
+}
+
+QTableView::item:selected:active, QTreeView::item:selected:active, QListView::item:selected:active  {
+    background: #78879b;;
+    color: #FFFFFF
+}
+
+
 QSlider::groove:horizontal {
     border: 1px solid #3A3939;
     height: 8px; 
@@ -819,7 +837,24 @@ QPushButton::menu-indicator  {
     left: 8px;
 }
 
+QTableView, QHeaderView
+{
+    border-radius: 0px;
+}
+
+QHeaderView::section  {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 #3A3939, stop: 0.5 #302f2f,
+                                      stop: 0.6 #302f2f, stop:1 #3A3939);
+    color: white;
+    padding: 4px;
+    border: 1px solid #6c6c6c;
+    border-radius: 0px;
+}
+
+
 QTableView QTableCornerButton::section {
     background-color: #3A3939;
     border: 1px solid #3A3939;
+    border-radius: 0px;
 }
