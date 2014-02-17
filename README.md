@@ -141,6 +141,7 @@ What still needs to be done:
 Changelog
 ===========
 ```
+* 1.4: Add style.qss to qrc file, this fix issues with cx_freeze
 * 1.3:
     - remove outline on button, checkbox and radio button
     - add support for closable tabs
