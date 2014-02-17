@@ -44,12 +44,10 @@ C++
 
 2) Add **qdarkstyle/style.qrc** to your **.pro file**
 
-3) Add **qdarkstyle/style.qss** to your resources.
-
-4) Load the stylesheet:
+3) Load the stylesheet:
 
 ```cpp
-QFile data(":path/to/style.qss");  // TODO: set your own resource path
+QFile f(":qdarkstyle/style.qss");
 if (!f.exists())
 {
     printf("Unable to set stylesheet, file not found\n");
@@ -57,7 +55,7 @@ if (!f.exists())
 else 
 {
     f.open(QFile::ReadOnly | QFile::Text);
-    QTextStream ts(&data);
+    QTextStream ts(&f);
     QApplication::instance()->setStyleSheet(ts.readAll());
 }
 
