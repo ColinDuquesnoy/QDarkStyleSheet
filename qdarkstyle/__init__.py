@@ -39,16 +39,23 @@ def load_stylesheet(pyside=True):
 
     :return the stylesheet string
     """
-    cwd = os.path.dirname(os.path.realpath(__file__))
     # Smart import of the rc file
     if pyside:
         import qdarkstyle.pyside_style_rc
     else:
         import qdarkstyle.pyqt_style_rc
 
-    # Load the stylesheet content
-    ret_val = ""
-    filename = os.path.join(cwd, "style.qss")
-    with open(os.path.join(__file__, filename)) as stylesheet:
-        ret_val = stylesheet.read()
-    return ret_val
+    # Load the stylesheet content from resources
+    if not pyside:
+        from PyQt4.QtCore import QFile, QTextStream
+    else:
+        from PySide.QtCore import QFile, QTextStream
+
+    f = QFile(":qdarkstyle/style.qss")
+    if not f.exists():
+        print("Unable to set stylesheet, file not found\n")
+        return ""
+    else:
+        f.open(QFile.ReadOnly | QFile.Text)
+        ts = QTextStream(f)
+        return ts.readAll()

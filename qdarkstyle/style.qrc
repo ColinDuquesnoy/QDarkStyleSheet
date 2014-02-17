@@ -25,5 +25,8 @@
     <file>rc/down_arrow_disabled.png</file>
     <file>rc/undock.png</file>
   </qresource>
+  <qresource prefix="qdarkstyle">
+      <file>style.qss</file>
+  </qresource>
 </RCC>
 
