@@ -105,42 +105,17 @@ only need to have PySide or PyQt4 installed on your system._
 Status:
 ===========
 
-The following widgets are styled: 
-
- - QMainWindow
- - QWidget
- - QMenu, QMenuBar
- - QToolTip
- - QAbstractItemView
- - QLineEdit
- - QGroupBox
- - QTextEdit, QPlainTextEdit
- - QTreeView,
- - QScrollBar
- - QRadioButton
- - QCheckBox
- - QComboBox
- - QPushButton
- - QToolButton
- - QToolBar
- - QProgressBar
- - QSpinBox
- - QFrame
- - QTabWidget, QTabBar
- - QDockWidget
- - QSlider (horizontal and vertical)
-
-What still needs to be done:
-
- - QAbstractScrollArea
- - QSplitter
- - QStatusBar
- - QToolBox 
-
+Most widgets have been styled. If you find a widget that has not been
+style, just open an issue on the issue tracker or, better, submit a pull
+request.
 
 Changelog
 ===========
 ```
+* 1.6:
+    - Improve QToolButton style
+    - Add support for InstantPopup and MenuButtonPopup
+    - Improve QMenu style (better spacing with icons)
 * 1.5:
     - improve QTabBar style: now works with all tab bar positions (North, South, West and East)
     - fix bug #6: hide QTabBar base to avoid stange lines at the base of the tab bar.
