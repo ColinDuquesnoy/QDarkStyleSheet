@@ -59,6 +59,9 @@ def main():
     ui.setupUi(window)
     window.setWindowTitle("QDarkStyle example")
 
+    # tabify dock widgets to show bug #6
+    window.tabifyDockWidget(ui.dockWidget1, ui.dockWidget2)
+
     # setup stylesheet
     app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
 

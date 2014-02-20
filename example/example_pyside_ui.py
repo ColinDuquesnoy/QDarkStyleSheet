@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Thu Jan 30 11:02:09 2014
+# Created: Thu Feb 20 08:24:45 2014
 #      by: pyside-uic 0.2.14 running on PySide 1.1.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,12 +12,13 @@ from PySide import QtCore, QtGui
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(880, 600)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout_2 = QtGui.QHBoxLayout(self.centralwidget)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.tabWidget = QtGui.QTabWidget(self.centralwidget)
+        self.tabWidget.setTabPosition(QtGui.QTabWidget.East)
         self.tabWidget.setTabsClosable(True)
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtGui.QWidget()
@@ -71,7 +72,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 880, 25))
         self.menubar.setObjectName("menubar")
         self.menuMenu = QtGui.QMenu(self.menubar)
         self.menuMenu.setObjectName("menuMenu")
@@ -81,8 +82,8 @@ class Ui_MainWindow(object):
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.ExampleDock = QtGui.QDockWidget(MainWindow)
-        self.ExampleDock.setObjectName("ExampleDock")
+        self.dockWidget1 = QtGui.QDockWidget(MainWindow)
+        self.dockWidget1.setObjectName("dockWidget1")
         self.dockWidgetContents = QtGui.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.verticalLayout_2 = QtGui.QVBoxLayout(self.dockWidgetContents)
@@ -113,7 +114,20 @@ class Ui_MainWindow(object):
         self.textEdit = QtGui.QTextEdit(self.dockWidgetContents)
         self.textEdit.setObjectName("textEdit")
         self.verticalLayout.addWidget(self.textEdit)
-        self.tableWidget = QtGui.QTableWidget(self.dockWidgetContents)
+        self.progressBar = QtGui.QProgressBar(self.dockWidgetContents)
+        self.progressBar.setProperty("value", 24)
+        self.progressBar.setObjectName("progressBar")
+        self.verticalLayout.addWidget(self.progressBar)
+        self.verticalLayout_2.addLayout(self.verticalLayout)
+        self.dockWidget1.setWidget(self.dockWidgetContents)
+        MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.dockWidget1)
+        self.dockWidget2 = QtGui.QDockWidget(MainWindow)
+        self.dockWidget2.setObjectName("dockWidget2")
+        self.dockWidgetContents_2 = QtGui.QWidget()
+        self.dockWidgetContents_2.setObjectName("dockWidgetContents_2")
+        self.gridLayout_3 = QtGui.QGridLayout(self.dockWidgetContents_2)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.tableWidget = QtGui.QTableWidget(self.dockWidgetContents_2)
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(2)
         self.tableWidget.setRowCount(4)
@@ -129,14 +143,9 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtGui.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(1, item)
-        self.verticalLayout.addWidget(self.tableWidget)
-        self.progressBar = QtGui.QProgressBar(self.dockWidgetContents)
-        self.progressBar.setProperty("value", 24)
-        self.progressBar.setObjectName("progressBar")
-        self.verticalLayout.addWidget(self.progressBar)
-        self.verticalLayout_2.addLayout(self.verticalLayout)
-        self.ExampleDock.setWidget(self.dockWidgetContents)
-        MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.ExampleDock)
+        self.gridLayout_3.addWidget(self.tableWidget, 0, 0, 1, 1)
+        self.dockWidget2.setWidget(self.dockWidgetContents_2)
+        MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.dockWidget2)
         self.actionSubmenu = QtGui.QAction(MainWindow)
         self.actionSubmenu.setObjectName("actionSubmenu")
         self.actionSubsubmenu = QtGui.QAction(MainWindow)
@@ -147,7 +156,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuMenu.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -178,11 +187,13 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QtGui.QApplication.translate("MainWindow", "Tab 2", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMenu.setTitle(QtGui.QApplication.translate("MainWindow", "Menu", None, QtGui.QApplication.UnicodeUTF8))
         self.menuSubmenu_2.setTitle(QtGui.QApplication.translate("MainWindow", "Submenu 2", None, QtGui.QApplication.UnicodeUTF8))
+        self.dockWidget1.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Dock widget 1", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_2.setText(QtGui.QApplication.translate("MainWindow", "PushButton", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton.setText(QtGui.QApplication.translate("MainWindow", "PushButton", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_3.setText(QtGui.QApplication.translate("MainWindow", "Disabled", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.setItemText(0, QtGui.QApplication.translate("MainWindow", "Item 0", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.setItemText(1, QtGui.QApplication.translate("MainWindow", "Item 2", None, QtGui.QApplication.UnicodeUTF8))
+        self.dockWidget2.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Dock widget 2", None, QtGui.QApplication.UnicodeUTF8))
         self.tableWidget.verticalHeaderItem(0).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
         self.tableWidget.verticalHeaderItem(1).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
         self.tableWidget.verticalHeaderItem(2).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>880</width>
     <height>600</height>
    </rect>
   </property>
@@ -17,8 +17,11 @@
    <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="tabPosition">
+       <enum>QTabWidget::East</enum>
+      </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="tabsClosable">
        <bool>true</bool>
@@ -151,7 +154,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>880</width>
      <height>25</height>
     </rect>
    </property>
@@ -171,7 +174,10 @@
    <addaction name="menuMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QDockWidget" name="ExampleDock">
+  <widget class="QDockWidget" name="dockWidget1">
+   <property name="windowTitle">
+    <string>Dock widget 1</string>
+   </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
    </attribute>
@@ -228,40 +234,6 @@
         <widget class="QTextEdit" name="textEdit"/>
        </item>
        <item>
-        <widget class="QTableWidget" name="tableWidget">
-         <row>
-          <property name="text">
-           <string>New Row</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>New Row</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>New Row</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>New Row</string>
-          </property>
-         </row>
-         <column>
-          <property name="text">
-           <string>New Column</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>New Column 2</string>
-          </property>
-         </column>
-        </widget>
-       </item>
-       <item>
         <widget class="QProgressBar" name="progressBar">
          <property name="value">
           <number>24</number>
@@ -269,6 +241,52 @@
         </widget>
        </item>
       </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget2">
+   <property name="windowTitle">
+    <string>Dock widget 2</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QTableWidget" name="tableWidget">
+       <row>
+        <property name="text">
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>New Row</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>New Row</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>New Column</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>New Column 2</string>
+        </property>
+       </column>
+      </widget>
      </item>
     </layout>
    </widget>
