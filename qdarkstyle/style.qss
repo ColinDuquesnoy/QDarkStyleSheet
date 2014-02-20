@@ -605,6 +605,7 @@ QTabWidget::pane {
 QTabBar
 {
     qproperty-drawBase: 0;
+    padding-right: 15px;
 }
 
 QTabBar:focus
@@ -757,6 +758,22 @@ QTabBar::tab:right:selected
     margin-right: 0px;
 }
 
+QTabBar QToolButton::right-arrow:enabled {
+     image: url(:/qss_icons/rc/right_arrow.png);
+ }
+
+ QTabBar QToolButton::left-arrow:enabled {
+     image: url(:/qss_icons/rc/left_arrow.png);
+ }
+
+QTabBar QToolButton::right-arrow:disabled {
+     image: url(:/qss_icons/rc/right_arrow_disabled.png);
+ }
+
+ QTabBar QToolButton::left-arrow:disabled {
+     image: url(:/qss_icons/rc/left_arrow_disabled.png);
+ }
+
 QDockWidget::title
 {
     border: 1px solid #3A3939;
@@ -892,9 +909,16 @@ QSlider::handle:vertical {
     border-radius: 7px;
 }
 
-
 QToolButton {
     background-color: #302F2F;
+    border: none;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+QToolButton[popupMode="1"]
+{
+    padding-right: 20px; /* make way for the popup button */
 }
 
 QToolButton:pressed {
