@@ -918,8 +918,29 @@ QToolButton {
 
 QToolButton[popupMode="1"]
 {
-    padding-right: 20px; /* make way for the popup button */
+    padding-right: 8px;
 }
+
+QToolButton[popupMode="2"]
+{
+    padding-right: 8px;
+}
+
+QToolButton::menu-button {
+     border: 2px solid gray;
+     border-top-right-radius: 6px;
+     border-bottom-right-radius: 6px;
+     width: 16px;
+ }
+
+ QToolButton::menu-arrow {
+     image: url(:/qss_icons/rc/down_arrow.png);
+     top: 10px; left: 10px; /* shift it a bit */
+ }
+
+ QToolButton::menu-arrow:open {
+     top: 10px; left: 10px; /* shift it a bit */
+ }
 
 QToolButton:pressed {
     background-color: #4A4949;
