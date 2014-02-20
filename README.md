@@ -116,6 +116,7 @@ Changelog
     - Improve QToolButton style
     - Add support for InstantPopup and MenuButtonPopup
     - Improve QMenu style (better spacing with icons)
+    - Add __version__ to python package.
 * 1.5:
     - improve QTabBar style: now works with all tab bar positions (North, South, West and East)
     - fix bug #6: hide QTabBar base to avoid stange lines at the base of the tab bar.
