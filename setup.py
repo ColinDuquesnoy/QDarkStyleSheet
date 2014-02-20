@@ -28,9 +28,19 @@ QDarkStyle is a darks stylesheet for python qt applications
 """
 from setuptools import setup, find_packages
 
+def read_version():
+    """
+    Reads the version without self importing
+    """
+    with open("qdarkstyle/__init__.py") as f:
+        lines = f.read().splitlines()
+        for l in lines:
+            if "__version__" in l:
+                return l.split("=")[1].strip().replace('"', "")
+
 setup(
     name='QDarkStyle',
-    version='1.5',
+    version=read_version(),
     packages=find_packages(),
     package_data={'qdarkstyle': ["*.qss", "*.qrc", "rc/*.png"]},
     url='https://github.com/ColinDuquesnoy/QDarkStyleSheet',

@@ -31,6 +31,9 @@ with the correct rc file.
 import os
 
 
+__version__ = "1.6"
+
+
 def load_stylesheet(pyside=True):
     """
     Loads the stylesheet. Takes care of importing the rc module.
