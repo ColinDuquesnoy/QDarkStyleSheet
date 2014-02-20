@@ -30,7 +30,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='QDarkStyle',
-    version='1.4',
+    version='1.5',
     packages=find_packages(),
     package_data={'qdarkstyle': ["*.qss", "*.qrc", "rc/*.png"]},
     url='https://github.com/ColinDuquesnoy/QDarkStyleSheet',
