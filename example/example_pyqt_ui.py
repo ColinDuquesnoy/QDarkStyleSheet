@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Thu Feb 20 08:24:45 2014
+# Created: Thu Feb 20 11:47:21 2014
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -125,6 +125,9 @@ class Ui_MainWindow(object):
         self.doubleSpinBox = QtGui.QDoubleSpinBox(self.dockWidgetContents)
         self.doubleSpinBox.setObjectName(_fromUtf8("doubleSpinBox"))
         self.horizontalLayout.addWidget(self.doubleSpinBox)
+        self.toolButton = QtGui.QToolButton(self.dockWidgetContents)
+        self.toolButton.setObjectName(_fromUtf8("toolButton"))
+        self.horizontalLayout.addWidget(self.toolButton)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.verticalLayout = QtGui.QVBoxLayout()
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
@@ -168,14 +171,22 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.tableWidget, 0, 0, 1, 1)
         self.dockWidget2.setWidget(self.dockWidgetContents_2)
         MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.dockWidget2)
-        self.actionSubmenu = QtGui.QAction(MainWindow)
-        self.actionSubmenu.setObjectName(_fromUtf8("actionSubmenu"))
-        self.actionSubsubmenu = QtGui.QAction(MainWindow)
-        self.actionSubsubmenu.setObjectName(_fromUtf8("actionSubsubmenu"))
-        self.menuSubmenu_2.addAction(self.actionSubsubmenu)
-        self.menuMenu.addAction(self.actionSubmenu)
+        self.toolBar = QtGui.QToolBar(MainWindow)
+        self.toolBar.setObjectName(_fromUtf8("toolBar"))
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        self.actionAction = QtGui.QAction(MainWindow)
+        self.actionAction.setObjectName(_fromUtf8("actionAction"))
+        self.actionSub_menu = QtGui.QAction(MainWindow)
+        self.actionSub_menu.setObjectName(_fromUtf8("actionSub_menu"))
+        self.actionAction_C = QtGui.QAction(MainWindow)
+        self.actionAction_C.setObjectName(_fromUtf8("actionAction_C"))
+        self.menuSubmenu_2.addAction(self.actionSub_menu)
+        self.menuSubmenu_2.addAction(self.actionAction_C)
+        self.menuMenu.addAction(self.actionAction)
         self.menuMenu.addAction(self.menuSubmenu_2.menuAction())
         self.menubar.addAction(self.menuMenu.menuAction())
+        self.toolBar.addAction(self.actionAction)
+        self.toolBar.addAction(self.actionSub_menu)
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -221,6 +232,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton.setText(_translate("MainWindow", "PushButton", None))
         self.pushButton_3.setText(_translate("MainWindow", "Disabled", None))
+        self.toolButton.setText(_translate("MainWindow", "...", None))
         self.comboBox.setItemText(0, _translate("MainWindow", "Item 0", None))
         self.comboBox.setItemText(1, _translate("MainWindow", "Item 2", None))
         self.dockWidget2.setWindowTitle(_translate("MainWindow", "Dock widget 2", None))
@@ -236,6 +248,9 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "New Column", None))
         item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "New Column 2", None))
-        self.actionSubmenu.setText(_translate("MainWindow", "Submenu", None))
-        self.actionSubsubmenu.setText(_translate("MainWindow", "Subsubmenu", None))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar", None))
+        self.actionAction.setText(_translate("MainWindow", "Action", None))
+        self.actionSub_menu.setText(_translate("MainWindow", "Action B", None))
+        self.actionSub_menu.setToolTip(_translate("MainWindow", "submenu", None))
+        self.actionAction_C.setText(_translate("MainWindow", "Action C", None))
 

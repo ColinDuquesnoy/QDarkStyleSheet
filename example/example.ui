@@ -166,9 +166,10 @@
      <property name="title">
       <string>Submenu 2</string>
      </property>
-     <addaction name="actionSubsubmenu"/>
+     <addaction name="actionSub_menu"/>
+     <addaction name="actionAction_C"/>
     </widget>
-    <addaction name="actionSubmenu"/>
+    <addaction name="actionAction"/>
     <addaction name="menuSubmenu_2"/>
    </widget>
    <addaction name="menuMenu"/>
@@ -211,6 +212,13 @@
        </item>
        <item>
         <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+       </item>
+       <item>
+        <widget class="QToolButton" name="toolButton">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -291,14 +299,35 @@
     </layout>
    </widget>
   </widget>
-  <action name="actionSubmenu">
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAction"/>
+   <addaction name="actionSub_menu"/>
+  </widget>
+  <action name="actionAction">
    <property name="text">
-    <string>Submenu</string>
+    <string>Action</string>
    </property>
   </action>
-  <action name="actionSubsubmenu">
+  <action name="actionSub_menu">
    <property name="text">
-    <string>Subsubmenu</string>
+    <string>Action B</string>
+   </property>
+   <property name="toolTip">
+    <string>submenu</string>
+   </property>
+  </action>
+  <action name="actionAction_C">
+   <property name="text">
+    <string>Action C</string>
    </property>
   </action>
  </widget>

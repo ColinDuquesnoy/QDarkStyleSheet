@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Thu Feb 20 08:24:45 2014
+# Created: Thu Feb 20 11:47:21 2014
 #      by: pyside-uic 0.2.14 running on PySide 1.1.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -103,6 +103,9 @@ class Ui_MainWindow(object):
         self.doubleSpinBox = QtGui.QDoubleSpinBox(self.dockWidgetContents)
         self.doubleSpinBox.setObjectName("doubleSpinBox")
         self.horizontalLayout.addWidget(self.doubleSpinBox)
+        self.toolButton = QtGui.QToolButton(self.dockWidgetContents)
+        self.toolButton.setObjectName("toolButton")
+        self.horizontalLayout.addWidget(self.toolButton)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.verticalLayout = QtGui.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
@@ -146,14 +149,22 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.tableWidget, 0, 0, 1, 1)
         self.dockWidget2.setWidget(self.dockWidgetContents_2)
         MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.dockWidget2)
-        self.actionSubmenu = QtGui.QAction(MainWindow)
-        self.actionSubmenu.setObjectName("actionSubmenu")
-        self.actionSubsubmenu = QtGui.QAction(MainWindow)
-        self.actionSubsubmenu.setObjectName("actionSubsubmenu")
-        self.menuSubmenu_2.addAction(self.actionSubsubmenu)
-        self.menuMenu.addAction(self.actionSubmenu)
+        self.toolBar = QtGui.QToolBar(MainWindow)
+        self.toolBar.setObjectName("toolBar")
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        self.actionAction = QtGui.QAction(MainWindow)
+        self.actionAction.setObjectName("actionAction")
+        self.actionSub_menu = QtGui.QAction(MainWindow)
+        self.actionSub_menu.setObjectName("actionSub_menu")
+        self.actionAction_C = QtGui.QAction(MainWindow)
+        self.actionAction_C.setObjectName("actionAction_C")
+        self.menuSubmenu_2.addAction(self.actionSub_menu)
+        self.menuSubmenu_2.addAction(self.actionAction_C)
+        self.menuMenu.addAction(self.actionAction)
         self.menuMenu.addAction(self.menuSubmenu_2.menuAction())
         self.menubar.addAction(self.menuMenu.menuAction())
+        self.toolBar.addAction(self.actionAction)
+        self.toolBar.addAction(self.actionSub_menu)
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
@@ -191,6 +202,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(QtGui.QApplication.translate("MainWindow", "PushButton", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton.setText(QtGui.QApplication.translate("MainWindow", "PushButton", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_3.setText(QtGui.QApplication.translate("MainWindow", "Disabled", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolButton.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.setItemText(0, QtGui.QApplication.translate("MainWindow", "Item 0", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.setItemText(1, QtGui.QApplication.translate("MainWindow", "Item 2", None, QtGui.QApplication.UnicodeUTF8))
         self.dockWidget2.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Dock widget 2", None, QtGui.QApplication.UnicodeUTF8))
@@ -200,6 +212,9 @@ class Ui_MainWindow(object):
         self.tableWidget.verticalHeaderItem(3).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
         self.tableWidget.horizontalHeaderItem(0).setText(QtGui.QApplication.translate("MainWindow", "New Column", None, QtGui.QApplication.UnicodeUTF8))
         self.tableWidget.horizontalHeaderItem(1).setText(QtGui.QApplication.translate("MainWindow", "New Column 2", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionSubmenu.setText(QtGui.QApplication.translate("MainWindow", "Submenu", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionSubsubmenu.setText(QtGui.QApplication.translate("MainWindow", "Subsubmenu", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolBar.setWindowTitle(QtGui.QApplication.translate("MainWindow", "toolBar", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionAction.setText(QtGui.QApplication.translate("MainWindow", "Action", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionSub_menu.setText(QtGui.QApplication.translate("MainWindow", "Action B", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionSub_menu.setToolTip(QtGui.QApplication.translate("MainWindow", "submenu", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionAction_C.setText(QtGui.QApplication.translate("MainWindow", "Action C", None, QtGui.QApplication.UnicodeUTF8))
 
