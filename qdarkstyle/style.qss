@@ -95,11 +95,19 @@ QMenu
 {
     border: 1px solid #3A3939;
     color: silver;
+    margin: 2px;
+}
+
+QMenu::icon
+{
+    margin: 5px;
 }
 
 QMenu::item
 {
-    padding: 2px 20px 2px 20px;
+    padding: 5px 30px 5px 30px;
+    margin-left: 5px;
+    border: 1px solid transparent; /* reserve space for selection border */
 }
 
 QMenu::item:selected
