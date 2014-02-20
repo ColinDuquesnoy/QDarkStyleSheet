@@ -834,19 +834,25 @@ QTreeView::branch:open:has-children:has-siblings:hover  {
     image: url(:/qss_icons/rc/branch_open-on.png);
     }
 
-QListView::item:hover, QTreeView::item:hover  {
-    background: none;
+QListView::item:!selected:hover, QListView::item:!selected:hover, QTreeView::item:!selected:hover  {
+    background: rgba(0, 0, 0, 0);
+    outline: 0;
     color: #FFFFFF
+}
+
+QListView::item:selected:hover, QListView::item:selected:hover, QTreeView::item:selected:hover  {
+    background: #78879b;;
+    color: #FFFFFF;
 }
 
 QTableView::item:pressed, QListView::item:pressed, QTreeView::item:pressed  {
     background: #78879b;;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 QTableView::item:selected:active, QTreeView::item:selected:active, QListView::item:selected:active  {
     background: #78879b;;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 
