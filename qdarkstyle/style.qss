@@ -805,10 +805,16 @@ QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
     background: rgba(255, 255, 255, 10);
 }
 
-QTreeView, QListView, QTableView
+QTreeView, QListView
 {
-    border: 1px solid #3A3939;
+    border: 1px solid #78879b;
     background-color: #201F1F;
+}
+
+QTableView
+{
+    border: 1px solid #6c6c6c;
+    gridline-color: #6c6c6c;
 }
 
 QTreeView:branch:selected, QTreeView:branch:hover
@@ -961,14 +967,58 @@ QTableView, QHeaderView
     border-radius: 0px;
 }
 
+QHeaderView
+{
+    border: 1px transparent;
+    margin: 0px;
+    padding: 0px;
+}
+
 QHeaderView::section  {
     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                                       stop:0 #3A3939, stop: 0.5 #302f2f,
                                       stop: 0.6 #302f2f, stop:1 #3A3939);
-    color: white;
+    color: silver;
     padding: 4px;
     border: 1px solid #6c6c6c;
     border-radius: 0px;
+    text-align: center;
+}
+
+QHeaderView::section::vertical::first
+{
+    border-top: 1px solid #6c6c6c;
+}
+
+QHeaderView::section::vertical
+{
+    border-top: transparent;
+}
+
+QHeaderView::section::horizontal::first
+{
+    border-left: 1px solid #6c6c6c;
+}
+
+QHeaderView::section::horizontal
+{
+    border-left: transparent;
+}
+
+
+QHeaderView::section:checked
+ {
+    color: white;
+    background-color: #5A5959;
+ }
+
+ /* style the sort indicator */
+QHeaderView::down-arrow {
+    image: url(:/qss_icons/rc/down_arrow.png);
+}
+
+QHeaderView::up-arrow {
+    mage: url(:/qss_icons/rc/up_arrow.png);
 }
 
 
