@@ -31,7 +31,7 @@ with the correct rc file.
 import os
 
 
-__version__ = "1.6"
+__version__ = "1.7"
 
 
 def load_stylesheet(pyside=True):
