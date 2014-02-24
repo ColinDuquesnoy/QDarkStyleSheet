@@ -112,6 +112,11 @@ request.
 Changelog
 ===========
 ```
+* 1.7:
+    - Fix appearance of bottom tab bars (invert gradient)
+    - Improve QTableView: add grid line and fix section borders
+    - Fix bug #7: bug when resizing QTableView
+    - Fix bug #8: text elidation no working on QDockWidget
 * 1.6:
     - Improve QToolButton style
     - Add support for InstantPopup and MenuButtonPopup
