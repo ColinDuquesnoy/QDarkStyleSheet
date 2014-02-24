@@ -667,7 +667,7 @@ QTabBar::tab:top {
 QTabBar::tab:bottom {
     color: #b1b1b1;
     border: 1px solid #3A3939;
-    background-color: QLinearGradient(x1:0, y1:1, x2:0, y2:0,
+    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1,
       stop:1 #302F2F, stop:0 #5A5959);
     padding-left: 5px;
     padding-right: 5px;
