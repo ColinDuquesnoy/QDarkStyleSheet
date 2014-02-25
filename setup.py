@@ -42,7 +42,6 @@ setup(
     name='QDarkStyle',
     version=read_version(),
     packages=find_packages(),
-    package_data={'qdarkstyle': ["*.qss", "*.qrc", "rc/*.png"]},
     url='https://github.com/ColinDuquesnoy/QDarkStyleSheet',
     license='MIT',
     author='Colin Duquesnoy',
