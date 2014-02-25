@@ -112,6 +112,9 @@ request.
 Changelog
 ===========
 ```
+* 1.8:
+    - Add support for QToolBox
+    - Fix issue with grid line in QTableView if there is only ONE row/column
 * 1.7:
     - Fix appearance of bottom tab bars (invert gradient)
     - Improve QTableView: add grid line and fix section borders
