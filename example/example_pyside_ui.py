@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Thu Feb 20 11:47:21 2014
+# Created: Tue Feb 25 09:02:44 2014
 #      by: pyside-uic 0.2.14 running on PySide 1.1.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -29,10 +29,23 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName("groupBox")
         self.verticalLayout_3 = QtGui.QVBoxLayout(self.groupBox)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.lineEdit = QtGui.QLineEdit(self.groupBox)
+        self.toolBox = QtGui.QToolBox(self.groupBox)
+        self.toolBox.setObjectName("toolBox")
+        self.page = QtGui.QWidget()
+        self.page.setGeometry(QtCore.QRect(0, 0, 388, 390))
+        self.page.setObjectName("page")
+        self.gridLayout_4 = QtGui.QGridLayout(self.page)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.lineEdit = QtGui.QLineEdit(self.page)
         self.lineEdit.setObjectName("lineEdit")
-        self.verticalLayout_3.addWidget(self.lineEdit)
-        self.listWidget = QtGui.QListWidget(self.groupBox)
+        self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
+        self.toolBox.addItem(self.page, "")
+        self.page_2 = QtGui.QWidget()
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 388, 390))
+        self.page_2.setObjectName("page_2")
+        self.gridLayout_5 = QtGui.QGridLayout(self.page_2)
+        self.gridLayout_5.setObjectName("gridLayout_5")
+        self.listWidget = QtGui.QListWidget(self.page_2)
         self.listWidget.setObjectName("listWidget")
         QtGui.QListWidgetItem(self.listWidget)
         QtGui.QListWidgetItem(self.listWidget)
@@ -42,7 +55,9 @@ class Ui_MainWindow(object):
         QtGui.QListWidgetItem(self.listWidget)
         QtGui.QListWidgetItem(self.listWidget)
         QtGui.QListWidgetItem(self.listWidget)
-        self.verticalLayout_3.addWidget(self.listWidget)
+        self.gridLayout_5.addWidget(self.listWidget, 0, 0, 1, 1)
+        self.toolBox.addItem(self.page_2, "")
+        self.verticalLayout_3.addWidget(self.toolBox)
         self.gridLayout.addWidget(self.groupBox, 0, 0, 1, 1)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtGui.QWidget()
@@ -168,11 +183,13 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
+        self.toolBox.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox.setTitle(QtGui.QApplication.translate("MainWindow", "GroupBox", None, QtGui.QApplication.UnicodeUTF8))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page), QtGui.QApplication.translate("MainWindow", "Page 1", None, QtGui.QApplication.UnicodeUTF8))
         __sortingEnabled = self.listWidget.isSortingEnabled()
         self.listWidget.setSortingEnabled(False)
         self.listWidget.item(0).setText(QtGui.QApplication.translate("MainWindow", "New Item", None, QtGui.QApplication.UnicodeUTF8))
@@ -184,6 +201,7 @@ class Ui_MainWindow(object):
         self.listWidget.item(6).setText(QtGui.QApplication.translate("MainWindow", "New Item", None, QtGui.QApplication.UnicodeUTF8))
         self.listWidget.item(7).setText(QtGui.QApplication.translate("MainWindow", "New Item", None, QtGui.QApplication.UnicodeUTF8))
         self.listWidget.setSortingEnabled(__sortingEnabled)
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_2), QtGui.QApplication.translate("MainWindow", "Page 2", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QtGui.QApplication.translate("MainWindow", "Tab 1", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox_2.setTitle(QtGui.QApplication.translate("MainWindow", "GroupBox", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("MainWindow", "TextLabel", None, QtGui.QApplication.UnicodeUTF8))

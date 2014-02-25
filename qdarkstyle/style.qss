@@ -1027,3 +1027,22 @@ QTableCornerButton::section {
     border: 1px solid #3A3939;
     border-radius: 0px;
 }
+
+QToolBox::tab {
+    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1,
+        stop:1 #302F2F, stop:0 #5A5959);
+    padding-left: 3px;
+    padding-right: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: -1px;
+
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: darkgray;
+ }
+
+ QToolBox::tab:selected { /* italicize selected tabs */
+     font: italic bold;
+     color: white;
+ }

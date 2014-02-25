@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Thu Feb 20 11:47:21 2014
+# Created: Tue Feb 25 09:02:44 2014
 #      by: PyQt4 UI code generator 4.10.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -43,10 +43,23 @@ class Ui_MainWindow(object):
         self.groupBox.setObjectName(_fromUtf8("groupBox"))
         self.verticalLayout_3 = QtGui.QVBoxLayout(self.groupBox)
         self.verticalLayout_3.setObjectName(_fromUtf8("verticalLayout_3"))
-        self.lineEdit = QtGui.QLineEdit(self.groupBox)
+        self.toolBox = QtGui.QToolBox(self.groupBox)
+        self.toolBox.setObjectName(_fromUtf8("toolBox"))
+        self.page = QtGui.QWidget()
+        self.page.setGeometry(QtCore.QRect(0, 0, 388, 390))
+        self.page.setObjectName(_fromUtf8("page"))
+        self.gridLayout_4 = QtGui.QGridLayout(self.page)
+        self.gridLayout_4.setObjectName(_fromUtf8("gridLayout_4"))
+        self.lineEdit = QtGui.QLineEdit(self.page)
         self.lineEdit.setObjectName(_fromUtf8("lineEdit"))
-        self.verticalLayout_3.addWidget(self.lineEdit)
-        self.listWidget = QtGui.QListWidget(self.groupBox)
+        self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
+        self.toolBox.addItem(self.page, _fromUtf8(""))
+        self.page_2 = QtGui.QWidget()
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 388, 390))
+        self.page_2.setObjectName(_fromUtf8("page_2"))
+        self.gridLayout_5 = QtGui.QGridLayout(self.page_2)
+        self.gridLayout_5.setObjectName(_fromUtf8("gridLayout_5"))
+        self.listWidget = QtGui.QListWidget(self.page_2)
         self.listWidget.setObjectName(_fromUtf8("listWidget"))
         item = QtGui.QListWidgetItem()
         self.listWidget.addItem(item)
@@ -64,7 +77,9 @@ class Ui_MainWindow(object):
         self.listWidget.addItem(item)
         item = QtGui.QListWidgetItem()
         self.listWidget.addItem(item)
-        self.verticalLayout_3.addWidget(self.listWidget)
+        self.gridLayout_5.addWidget(self.listWidget, 0, 0, 1, 1)
+        self.toolBox.addItem(self.page_2, _fromUtf8(""))
+        self.verticalLayout_3.addWidget(self.toolBox)
         self.gridLayout.addWidget(self.groupBox, 0, 0, 1, 1)
         self.tabWidget.addTab(self.tab, _fromUtf8(""))
         self.tab_2 = QtGui.QWidget()
@@ -190,11 +205,13 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
+        self.toolBox.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.groupBox.setTitle(_translate("MainWindow", "GroupBox", None))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("MainWindow", "Page 1", None))
         __sortingEnabled = self.listWidget.isSortingEnabled()
         self.listWidget.setSortingEnabled(False)
         item = self.listWidget.item(0)
@@ -214,6 +231,7 @@ class Ui_MainWindow(object):
         item = self.listWidget.item(7)
         item.setText(_translate("MainWindow", "New Item", None))
         self.listWidget.setSortingEnabled(__sortingEnabled)
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page_2), _translate("MainWindow", "Page 2", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Tab 1", None))
         self.groupBox_2.setTitle(_translate("MainWindow", "GroupBox", None))
         self.label.setText(_translate("MainWindow", "TextLabel", None))
