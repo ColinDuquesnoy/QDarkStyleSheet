@@ -985,7 +985,7 @@ QHeaderView::section  {
     text-align: center;
 }
 
-QHeaderView::section::vertical::first
+QHeaderView::section::vertical::first, QHeaderView::section::vertical::only-one
 {
     border-top: 1px solid #6c6c6c;
 }
@@ -995,7 +995,7 @@ QHeaderView::section::vertical
     border-top: transparent;
 }
 
-QHeaderView::section::horizontal::first
+QHeaderView::section::horizontal::first, QHeaderView::section::horizontal::only-one
 {
     border-left: 1px solid #6c6c6c;
 }
@@ -1018,7 +1018,7 @@ QHeaderView::down-arrow {
 }
 
 QHeaderView::up-arrow {
-    mage: url(:/qss_icons/rc/up_arrow.png);
+    image: url(:/qss_icons/rc/up_arrow.png);
 }
 
 
