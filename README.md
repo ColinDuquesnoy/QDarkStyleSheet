@@ -112,6 +112,8 @@ request.
 Changelog
 ===========
 ```
+* 1.9:
+    - Improve QTabBar consistency and make selected tabs more distinctive
 * 1.8:
     - Add support for QToolBox
     - Fix issue with grid line in QTableView if there is only ONE row/column
