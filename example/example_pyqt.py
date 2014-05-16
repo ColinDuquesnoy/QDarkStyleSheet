@@ -36,20 +36,22 @@ Requirements:
     the example
 
 """
+import logging
 import sys
 from PyQt4 import QtGui, QtCore
-from os.path import abspath, dirname
 # make the example runnable without the need to install
+from os.path import abspath, dirname
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
+
 import qdarkstyle
 import example_pyqt_ui as example_ui
 
-print(qdarkstyle.__file__)
 
 def main():
     """
     Application entry point
-    """	
+    """
+    logging.basicConfig(level=logging.DEBUG)
     # create the application and the main window
     app = QtGui.QApplication(sys.argv)
     window = QtGui.QMainWindow()

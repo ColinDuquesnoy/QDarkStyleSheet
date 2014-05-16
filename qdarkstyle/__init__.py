@@ -28,10 +28,15 @@ Initialise the QDarkStyleSheet module when used with python.
 This modules provides a function to transparently load the stylesheets
 with the correct rc file.
 """
+import logging
 import platform
 
 
 __version__ = "1.9"
+
+
+def _logger():
+    return logging.getLogger('qdarkstyle')
 
 
 def load_stylesheet(pyside=True):
@@ -56,7 +61,8 @@ def load_stylesheet(pyside=True):
 
     f = QFile(":qdarkstyle/style.qss")
     if not f.exists():
-        print("Unable to set stylesheet, file not found\n")
+        _logger().error("Unable to load stylesheet, file not found in "
+                        "resources")
         return ""
     else:
         f.open(QFile.ReadOnly | QFile.Text)
