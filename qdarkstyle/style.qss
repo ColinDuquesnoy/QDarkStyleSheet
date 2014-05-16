@@ -776,9 +776,14 @@ QTabBar QToolButton::right-arrow:disabled {
 
 
 QDockWidget {
-    border: 1px solid lightgray;
+    border: 1px solid #403F3F;
     titlebar-close-icon: url(:/qss_icons/rc/close.png);
     titlebar-normal-icon: url(:/qss_icons/rc/undock.png);
+}
+
+QDockWidget::title
+{
+    background-color: #353434;
 }
 
 QDockWidget::close-button, QDockWidget::float-button {
