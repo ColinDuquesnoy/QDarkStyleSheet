@@ -28,7 +28,7 @@ Initialise the QDarkStyleSheet module when used with python.
 This modules provides a function to transparently load the stylesheets
 with the correct rc file.
 """
-import os
+import platform
 
 
 __version__ = "1.9"
@@ -61,4 +61,13 @@ def load_stylesheet(pyside=True):
     else:
         f.open(QFile.ReadOnly | QFile.Text)
         ts = QTextStream(f)
-        return ts.readAll()
+        stylesheet = ts.readAll()
+        if platform.system().lower() == 'darwin':  # see issue #12 on github
+            mac_fix = '''
+            QDockWidget::title
+            {
+                background-color: #353434;
+            }
+            '''
+            stylesheet += mac_fix
+        return stylesheet
