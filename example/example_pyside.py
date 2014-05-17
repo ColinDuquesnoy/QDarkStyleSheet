@@ -44,7 +44,7 @@ from os.path import abspath, dirname
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 
 import qdarkstyle
-import example_pyside_ui as example_ui
+import ui.example_pyside_ui as example_ui
 
 
 def main():
