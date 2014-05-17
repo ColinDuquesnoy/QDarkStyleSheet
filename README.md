@@ -6,7 +6,7 @@ QDarkStylesheet
 [![Number of PyPI downloads](https://pypip.in/d/QDarkStyle/badge.png)](https://pypi.python.org/pypi/QDarkStyle)
 [![Latest PyPI version](https://pypip.in/v/QDarkStyle/badge.png)](https://pypi.python.org/pypi/QDarkStyle)
 
-A dark stylesheet for Qt applications.
+A dark stylesheet for Qt applications (Qt4, Qt5, PySide, PyQt4 and PyQt5).
 
 
 License
@@ -21,7 +21,7 @@ Installation
 Python
 -----------
 
-Install the qdarkstyle package using the *setup* script or using *pip*:
+Install ``qdarkstyle`` package using the *setup* script or using *pip*:
 
 ```bash
 python setup.py install
@@ -99,8 +99,12 @@ by
 app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
 ```
 
-_There is an example included in the *example* folder. You can run the script without installing qdarkstyle. You
-only need to have PySide or PyQt4 installed on your system._
+To use PyQt5, you need to use ``load_stylesheet_pyqt5`` instead of
+``load_stylesheet``.
+
+_There is an example included in the *example* folder.
+You can run the script without installing qdarkstyle. You only need to have
+PySide (or PyQt4 or PyQt5) installed on your system._
 
 Status:
 ===========
@@ -112,6 +116,10 @@ request.
 Changelog
 ===========
 ```
+* 1.10:
+    - Add PyQt5 support
+    - Fix bug #12 (dock widget title not dark on OSX. Note that this reopens
+      issue #8 for MAC users)
 * 1.9:
     - Improve QTabBar consistency and make selected tabs more distinctive
 * 1.8:
