@@ -48,7 +48,9 @@ setup(
     author_email='colin.duquesnoy@gmail.com',
     description='A dark stylesheet for pyside/pyqt applications',
     long_description="""
-    This package provides a dark style sheet for PySide/PyQt applications.
+    This package provides a dark style sheet for PySide/PyQt4/PyQt5
+    applications.
+
     All you have to do is the following::
 
         import qdarkstyle
@@ -57,6 +59,9 @@ setup(
         app.setStyleSheet(qdarkstyle.load_stylesheet())
         # PyQt4
         app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
+        # PyQt5
+        app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+
     """,
     classifiers=[
           'Development Status :: 5 - Production/Stable',
