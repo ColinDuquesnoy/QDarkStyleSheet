@@ -108,6 +108,7 @@ def load_stylesheet_pyqt5():
             QDockWidget::title
             {
                 background-color: #353434;
+                text-align: center;
             }
             '''
             stylesheet += mac_fix
