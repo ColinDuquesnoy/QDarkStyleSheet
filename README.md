@@ -116,6 +116,10 @@ request.
 Changelog
 ===========
 ```
+* 1.11:
+    - Fix QDockWidget title position on Mac.
+    - Add QStatusBar support
+    - Improve QToolButton especially the MenuButtonPopup and InstantPopup modes
 * 1.10:
     - Add PyQt5 support
     - Fix bug #12 (dock widget title not dark on OSX. Note that this reopens
