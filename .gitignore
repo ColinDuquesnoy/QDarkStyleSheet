@@ -7,3 +7,10 @@
 /QDarkStyle.egg-info/
 /build/
 __pycache__
+*.tar
+*.tar.*
+*.log
+*.log.*
+*.sig
+pkg/
+src/
