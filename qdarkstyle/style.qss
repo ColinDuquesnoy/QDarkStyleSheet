@@ -499,6 +499,7 @@ QComboBox
     border: 1px solid #3A3939;
     border-radius: 3px;
     padding: 2px;
+    min-width: 75px;
 }
 
 QComboBox:hover,QPushButton:hover,QAbstractSpinBox:hover,QLineEdit:hover,QTextEdit:hover,QPlainTextEdit:hover,QAbstractView:hover,QTreeView:hover
@@ -561,6 +562,7 @@ QAbstractSpinBox {
     background-color: #201F1F;
     color: silver;
     border-radius: 3px;
+    min-width: 75px;
 }
 
 QAbstractSpinBox:up-button
