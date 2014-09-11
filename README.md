@@ -1,7 +1,6 @@
 QDarkStylesheet
 ==================
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ColinDuquesnoy/qdarkstylesheet/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 [![Build Status](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet.png?branch=master)](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet)
 [![Number of PyPI downloads](https://pypip.in/d/QDarkStyle/badge.png)](https://pypi.python.org/pypi/QDarkStyle)
 [![Latest PyPI version](https://pypip.in/v/QDarkStyle/badge.png)](https://pypi.python.org/pypi/QDarkStyle)
@@ -116,6 +115,7 @@ request.
 Changelog
 ===========
 ```
+* 1.12: fix minimum size of input widgets (see issue #14)
 * 1.11:
     - Fix QDockWidget title position on Mac.
     - Add QStatusBar support
