@@ -2,8 +2,8 @@
 # Maintainer: Colin Duquesnoy <colin.duquesnoy@gmail.com>
 pkgbase=python-qdarkstyle
 pkgname=('python2-qdarkstyle' 'python-qdarkstyle')
-pkgver=1.11
-_pkgver=1.11
+pkgver=1.12
+_pkgver=1.12
 pkgrel=1
 arch=('any')
 url="https://github.com/davidhalter/qdarkstyle"
@@ -11,7 +11,7 @@ license=('MIT')
 depends=('python2')
 makedepends=('python2-setuptools' 'python-setuptools')
 source=("https://pypi.python.org/packages/source/Q/QDarkStyle/QDarkStyle-${_pkgver}.tar.gz")
-md5sums=('cd5ec838d828d31c2fd3467103ac6862')
+md5sums=('SKIP')
 
 build() {
    cd "$srcdir/QDarkStyle-${_pkgver}"
