@@ -115,6 +115,7 @@ request.
 Changelog
 ===========
 ```
+* 1.13: fix issue with horizontal scrollbar arrows, left and right were inversed.
 * 1.12: fix minimum size of input widgets (see issue #14)
 * 1.11:
     - Fix QDockWidget title position on Mac.

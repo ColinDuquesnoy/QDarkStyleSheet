@@ -32,7 +32,7 @@ import logging
 import platform
 
 
-__version__ = "1.12"
+__version__ = "1.13"
 
 
 def _logger():
