@@ -20,6 +20,7 @@
     <file>rc/left_arrow_disabled.png</file>
     <file>rc/Hsepartoolbar.png</file>
     <file>rc/checkbox.png</file>
+    <file>rc/checkbox_indeterminate.png</file>
     <file>rc/branch_open.png</file>
     <file>rc/Vsepartoolbar.png</file>
     <file>rc/down_arrow_disabled.png</file>

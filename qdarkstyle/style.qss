@@ -397,10 +397,13 @@ QCheckBox, QRadioButton
     outline: none;
 }
 
-QCheckBox::indicator{
+QCheckBox::indicator, QGroupBox::indicator, QMenu::indicator:non-exclusive{
     color: #b1b1b1;
     background-color: #302F2F;
     border: 1px solid silver;
+}
+
+QCheckBox::indicator, QMenu::indicator:non-exclusive{
     width: 9px;
     height: 9px;
 }
@@ -422,7 +425,7 @@ QRadioButton::indicator:hover, QCheckBox::indicator:hover
     border: 1px solid #78879b;
 }
 
-QCheckBox::indicator:checked
+QCheckBox::indicator:checked, QGroupBox::indicator:checked, QMenu::indicator:non-exclusive:checked
 {
     image:url(:/qss_icons/rc/checkbox.png);
 }
@@ -430,6 +433,10 @@ QCheckBox::indicator:checked
 QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
 {
     border: 1px solid #444;
+}
+
+QCheckBox::indicator:indeterminate {
+    image: url(:/qss_icons/rc/checkbox_indeterminate.png);
 }
 
 QFrame
@@ -896,7 +903,7 @@ QToolButton {
     margin: 3px;
 }
 
-QToolButton:pressed, QToolButton::menu-button:pressed {
+QToolButton:pressed, QToolButton::menu-button:pressed, QToolButton:checked, QToolButton::menu-button:checked {
     background-color: #4A4949;
     border: 1px solid silver;
 }
