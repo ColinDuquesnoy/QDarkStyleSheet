@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Fri Jan  9 16:47:47 2015
+# Created: Fri Jan  9 17:06:23 2015
 #      by: PyQt5 UI code generator 5.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(880, 600)
+        MainWindow.resize(877, 750)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtWidgets.QToolBox(self.groupBox)
         self.toolBox.setObjectName("toolBox")
         self.page = QtWidgets.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 96, 42))
+        self.page.setGeometry(QtCore.QRect(0, 0, 401, 522))
         self.page.setObjectName("page")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.page)
         self.gridLayout_4.setObjectName("gridLayout_4")
@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.toolBox.addItem(self.page, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 404, 372))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 401, 522))
         self.page_2.setObjectName("page_2")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.page_2)
         self.gridLayout_5.setObjectName("gridLayout_5")
@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 880, 28))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 877, 28))
         self.menubar.setObjectName("menubar")
         self.menuMenu = QtWidgets.QMenu(self.menubar)
         self.menuMenu.setObjectName("menuMenu")
@@ -123,6 +123,11 @@ class Ui_MainWindow(object):
         self.pushButton = QtWidgets.QPushButton(self.dockWidgetContents)
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
+        self.line_2 = QtWidgets.QFrame(self.dockWidgetContents)
+        self.line_2.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
+        self.horizontalLayout.addWidget(self.line_2)
         self.pushButton_3 = QtWidgets.QPushButton(self.dockWidgetContents)
         self.pushButton_3.setEnabled(False)
         self.pushButton_3.setObjectName("pushButton_3")
@@ -144,6 +149,11 @@ class Ui_MainWindow(object):
         self.textEdit = QtWidgets.QTextEdit(self.dockWidgetContents)
         self.textEdit.setObjectName("textEdit")
         self.verticalLayout.addWidget(self.textEdit)
+        self.line = QtWidgets.QFrame(self.dockWidgetContents)
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.verticalLayout.addWidget(self.line)
         self.progressBar = QtWidgets.QProgressBar(self.dockWidgetContents)
         self.progressBar.setProperty("value", 24)
         self.progressBar.setObjectName("progressBar")

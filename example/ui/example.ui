@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>880</width>
-    <height>600</height>
+    <width>877</width>
+    <height>750</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,8 +47,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>96</width>
-                <height>42</height>
+                <width>401</width>
+                <height>522</height>
                </rect>
               </property>
               <attribute name="label">
@@ -65,8 +65,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>404</width>
-                <height>372</height>
+                <width>401</width>
+                <height>522</height>
                </rect>
               </property>
               <attribute name="label">
@@ -201,7 +201,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>880</width>
+     <width>877</width>
      <height>28</height>
     </rect>
    </property>
@@ -248,6 +248,13 @@
         </widget>
        </item>
        <item>
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="pushButton_3">
          <property name="enabled">
           <bool>false</bool>
@@ -287,6 +294,13 @@
        </item>
        <item>
         <widget class="QTextEdit" name="textEdit"/>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QProgressBar" name="progressBar">

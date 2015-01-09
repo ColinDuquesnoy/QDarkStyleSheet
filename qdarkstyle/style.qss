@@ -1050,3 +1050,8 @@ QStatusBar::item {
     border: 1px solid #3A3939;
     border-radius: 3px;
  }
+
+
+ QFrame[height="3"], QFrame[width="3"] {
+    background-color: #3A3939;
+}
