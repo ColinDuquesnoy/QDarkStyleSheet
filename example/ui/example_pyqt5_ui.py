@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Sat May 17 20:31:42 2014
-#      by: PyQt5 UI code generator 5.2.1
+# Created: Fri Jan  9 16:47:47 2015
+#      by: PyQt5 UI code generator 5.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtWidgets.QToolBox(self.groupBox)
         self.toolBox.setObjectName("toolBox")
         self.page = QtWidgets.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 388, 390))
+        self.page.setGeometry(QtCore.QRect(0, 0, 96, 42))
         self.page.setObjectName("page")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.page)
         self.gridLayout_4.setObjectName("gridLayout_4")
@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.toolBox.addItem(self.page, "")
         self.page_2 = QtWidgets.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 388, 390))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 404, 372))
         self.page_2.setObjectName("page_2")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.page_2)
         self.gridLayout_5.setObjectName("gridLayout_5")
@@ -85,6 +85,10 @@ class Ui_MainWindow(object):
         self.checkBox = QtWidgets.QCheckBox(self.groupBox_2)
         self.checkBox.setObjectName("checkBox")
         self.verticalLayout_4.addWidget(self.checkBox)
+        self.checkBox_2 = QtWidgets.QCheckBox(self.groupBox_2)
+        self.checkBox_2.setTristate(True)
+        self.checkBox_2.setObjectName("checkBox_2")
+        self.verticalLayout_4.addWidget(self.checkBox_2)
         self.treeWidget = QtWidgets.QTreeWidget(self.groupBox_2)
         self.treeWidget.setObjectName("treeWidget")
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
@@ -95,7 +99,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 880, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 880, 28))
         self.menubar.setObjectName("menubar")
         self.menuMenu = QtWidgets.QMenu(self.menubar)
         self.menuMenu.setObjectName("menuMenu")
@@ -190,7 +194,7 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionSub_menu)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         self.toolBox.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -224,6 +228,7 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "TextLabel"))
         self.radioButton.setText(_translate("MainWindow", "RadioButton"))
         self.checkBox.setText(_translate("MainWindow", "CheckBox"))
+        self.checkBox_2.setText(_translate("MainWindow", "CheckBox Tristate"))
         self.treeWidget.headerItem().setText(0, _translate("MainWindow", "qdz"))
         __sortingEnabled = self.treeWidget.isSortingEnabled()
         self.treeWidget.setSortingEnabled(False)

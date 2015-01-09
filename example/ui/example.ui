@@ -21,7 +21,7 @@
        <enum>QTabWidget::East</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="tabsClosable">
        <bool>true</bool>
@@ -47,8 +47,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>388</width>
-                <height>390</height>
+                <width>96</width>
+                <height>42</height>
                </rect>
               </property>
               <attribute name="label">
@@ -65,8 +65,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>388</width>
-                <height>390</height>
+                <width>404</width>
+                <height>372</height>
                </rect>
               </property>
               <attribute name="label">
@@ -159,6 +159,16 @@
             </widget>
            </item>
            <item>
+            <widget class="QCheckBox" name="checkBox_2">
+             <property name="text">
+              <string>CheckBox Tristate</string>
+             </property>
+             <property name="tristate">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QTreeWidget" name="treeWidget">
              <column>
               <property name="text">
@@ -192,7 +202,7 @@
      <x>0</x>
      <y>0</y>
      <width>880</width>
-     <height>25</height>
+     <height>28</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMenu">
