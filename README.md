@@ -115,6 +115,7 @@ request.
 Changelog
 ===========
 ```
+* 1.14: add support for tristate check boxes and for vertical and horizontal lines
 * 1.13: fix issue with horizontal scrollbar arrows, left and right were inversed.
 * 1.12: fix minimum size of input widgets (see issue #14)
 * 1.11:
