@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Tue Feb 25 09:02:44 2014
-#      by: pyside-uic 0.2.14 running on PySide 1.1.2
+# Created: Fri Jan  9 17:22:51 2015
+#      by: pyside-uic 0.2.15 running on PySide 1.2.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,7 +12,7 @@ from PySide import QtCore, QtGui
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(880, 600)
+        MainWindow.resize(877, 750)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout_2 = QtGui.QHBoxLayout(self.centralwidget)
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtGui.QToolBox(self.groupBox)
         self.toolBox.setObjectName("toolBox")
         self.page = QtGui.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 388, 390))
+        self.page.setGeometry(QtCore.QRect(0, 0, 401, 522))
         self.page.setObjectName("page")
         self.gridLayout_4 = QtGui.QGridLayout(self.page)
         self.gridLayout_4.setObjectName("gridLayout_4")
@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.toolBox.addItem(self.page, "")
         self.page_2 = QtGui.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 388, 390))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 401, 522))
         self.page_2.setObjectName("page_2")
         self.gridLayout_5 = QtGui.QGridLayout(self.page_2)
         self.gridLayout_5.setObjectName("gridLayout_5")
@@ -77,6 +77,10 @@ class Ui_MainWindow(object):
         self.checkBox = QtGui.QCheckBox(self.groupBox_2)
         self.checkBox.setObjectName("checkBox")
         self.verticalLayout_4.addWidget(self.checkBox)
+        self.checkBox_2 = QtGui.QCheckBox(self.groupBox_2)
+        self.checkBox_2.setTristate(True)
+        self.checkBox_2.setObjectName("checkBox_2")
+        self.verticalLayout_4.addWidget(self.checkBox_2)
         self.treeWidget = QtGui.QTreeWidget(self.groupBox_2)
         self.treeWidget.setObjectName("treeWidget")
         item_0 = QtGui.QTreeWidgetItem(self.treeWidget)
@@ -87,7 +91,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 880, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 877, 28))
         self.menubar.setObjectName("menubar")
         self.menuMenu = QtGui.QMenu(self.menubar)
         self.menuMenu.setObjectName("menuMenu")
@@ -111,6 +115,11 @@ class Ui_MainWindow(object):
         self.pushButton = QtGui.QPushButton(self.dockWidgetContents)
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
+        self.line_2 = QtGui.QFrame(self.dockWidgetContents)
+        self.line_2.setFrameShape(QtGui.QFrame.VLine)
+        self.line_2.setFrameShadow(QtGui.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
+        self.horizontalLayout.addWidget(self.line_2)
         self.pushButton_3 = QtGui.QPushButton(self.dockWidgetContents)
         self.pushButton_3.setEnabled(False)
         self.pushButton_3.setObjectName("pushButton_3")
@@ -132,6 +141,11 @@ class Ui_MainWindow(object):
         self.textEdit = QtGui.QTextEdit(self.dockWidgetContents)
         self.textEdit.setObjectName("textEdit")
         self.verticalLayout.addWidget(self.textEdit)
+        self.line = QtGui.QFrame(self.dockWidgetContents)
+        self.line.setFrameShape(QtGui.QFrame.HLine)
+        self.line.setFrameShadow(QtGui.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.verticalLayout.addWidget(self.line)
         self.progressBar = QtGui.QProgressBar(self.dockWidgetContents)
         self.progressBar.setProperty("value", 24)
         self.progressBar.setObjectName("progressBar")
@@ -182,7 +196,7 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionSub_menu)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         self.toolBox.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -207,6 +221,7 @@ class Ui_MainWindow(object):
         self.label.setText(QtGui.QApplication.translate("MainWindow", "TextLabel", None, QtGui.QApplication.UnicodeUTF8))
         self.radioButton.setText(QtGui.QApplication.translate("MainWindow", "RadioButton", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox.setText(QtGui.QApplication.translate("MainWindow", "CheckBox", None, QtGui.QApplication.UnicodeUTF8))
+        self.checkBox_2.setText(QtGui.QApplication.translate("MainWindow", "CheckBox Tristate", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.headerItem().setText(0, QtGui.QApplication.translate("MainWindow", "qdz", None, QtGui.QApplication.UnicodeUTF8))
         __sortingEnabled = self.treeWidget.isSortingEnabled()
         self.treeWidget.setSortingEnabled(False)
