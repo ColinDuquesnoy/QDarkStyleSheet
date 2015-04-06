@@ -153,7 +153,7 @@ QLineEdit
 QGroupBox {
     border:1px solid #3A3939;
     border-radius: 7px;
-    margin-top: 2ex;
+    margin-top: 20px;
 }
 
 QGroupBox::title {
@@ -161,7 +161,7 @@ QGroupBox::title {
     subcontrol-position: top center;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 5px;
+    padding-top: 10px;
 }
 
 QAbstractScrollArea
