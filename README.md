@@ -115,6 +115,7 @@ request.
 Changelog
 ===========
 ```
+* 1.16: fix QGroupBox title padding (see issue #20)
 * 1.15: improve tristate checkbox graphics: undetermined state is now represented by a dash
 * 1.14: add support for tristate check boxes and for vertical and horizontal lines
 * 1.13: fix issue with horizontal scrollbar arrows, left and right were inversed.
