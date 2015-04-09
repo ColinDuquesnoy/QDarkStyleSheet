@@ -27,42 +27,32 @@
 QDarkStyle is a darks stylesheet for python qt applications
 """
 from setuptools import setup, find_packages
-
-def read_version():
-    """
-    Reads the version without self importing
-    """
-    with open("qdarkstyle/__init__.py") as f:
-        lines = f.read().splitlines()
-        for l in lines:
-            if "__version__" in l:
-                return l.split("=")[1].strip().replace('"', "")
+from qdarkstyle import __version__
 
 setup(
     name='QDarkStyle',
-    version=read_version(),
+    version=__version__,
     packages=find_packages(),
     url='https://github.com/ColinDuquesnoy/QDarkStyleSheet',
     license='MIT',
     author='Colin Duquesnoy',
     author_email='colin.duquesnoy@gmail.com',
-    description='A dark stylesheet for pyside/pyqt applications',
+    description='A dark stylesheet for PyQt/PySide applications',
     long_description="""
-    This package provides a dark style sheet for PySide/PyQt4/PyQt5
-    applications.
+This package provides a dark style sheet for PySide/PyQt4/PyQt5 applications.
 
-    All you have to do is the following::
+All you have to do is the following::
 
-        import qdarkstyle
-        app = QtGui.QApplication().instance()
-        # PySide
-        app.setStyleSheet(qdarkstyle.load_stylesheet())
-        # PyQt4
-        app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
-        # PyQt5
-        app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+    import qdarkstyle
+    app = QtGui.QApplication().instance()
+    # PySide
+    app.setStyleSheet(qdarkstyle.load_stylesheet())
+    # PyQt4
+    app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
+    # PyQt5
+    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
 
-    """,
+""",
     classifiers=[
           'Development Status :: 5 - Production/Stable',
           'Environment :: X11 Applications :: Qt',

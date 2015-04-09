@@ -14,3 +14,9 @@ __pycache__
 *.sig
 pkg/
 src/
+
+*.tar.gz
+deb_dist
+*~
+*.usr
+
