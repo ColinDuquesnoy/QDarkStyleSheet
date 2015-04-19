@@ -20,3 +20,4 @@ deb_dist
 *~
 *.usr
 
+/gpg_key
