@@ -15,9 +15,14 @@ __pycache__
 pkg/
 src/
 
+# stdeb files
 *.tar.gz
 deb_dist
-*~
-*.usr
-
 /gpg_key
+
+# gedit temp files
+*~
+
+# hackedit project files
+.hackedit
+
