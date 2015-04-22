@@ -47,8 +47,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>401</width>
-                <height>522</height>
+                <width>98</width>
+                <height>45</height>
                </rect>
               </property>
               <attribute name="label">
@@ -65,8 +65,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>401</width>
-                <height>522</height>
+                <width>273</width>
+                <height>517</height>
                </rect>
               </property>
               <attribute name="label">
@@ -202,7 +202,7 @@
      <x>0</x>
      <y>0</y>
      <width>877</width>
-     <height>28</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMenu">
@@ -310,6 +310,25 @@
         </widget>
        </item>
       </layout>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>

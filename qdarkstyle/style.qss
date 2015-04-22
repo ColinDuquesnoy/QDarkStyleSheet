@@ -443,6 +443,7 @@ QCheckBox::indicator:indeterminate {
 QFrame
 {
     border-radius: 3px;
+    border: 1px solid #444;
 }
 
 QStackedWidget
@@ -1053,6 +1054,6 @@ QStatusBar::item {
  }
 
 
- QFrame[height="3"], QFrame[width="3"] {
-    background-color: #3A3939;
+QFrame[height="3"], QFrame[width="3"] {
+    background-color: #444;
 }

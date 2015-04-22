@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Fri Jan  9 17:06:23 2015
-#      by: PyQt4 UI code generator 4.11.3
+# Created: Wed Apr 22 17:17:44 2015
+#      by: PyQt4 UI code generator 4.11.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -46,7 +46,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtGui.QToolBox(self.groupBox)
         self.toolBox.setObjectName(_fromUtf8("toolBox"))
         self.page = QtGui.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 401, 522))
+        self.page.setGeometry(QtCore.QRect(0, 0, 98, 45))
         self.page.setObjectName(_fromUtf8("page"))
         self.gridLayout_4 = QtGui.QGridLayout(self.page)
         self.gridLayout_4.setObjectName(_fromUtf8("gridLayout_4"))
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.toolBox.addItem(self.page, _fromUtf8(""))
         self.page_2 = QtGui.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 401, 522))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 102, 102))
         self.page_2.setObjectName(_fromUtf8("page_2"))
         self.gridLayout_5 = QtGui.QGridLayout(self.page_2)
         self.gridLayout_5.setObjectName(_fromUtf8("gridLayout_5"))
@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 877, 28))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 877, 22))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuMenu = QtGui.QMenu(self.menubar)
         self.menuMenu.setObjectName(_fromUtf8("menuMenu"))
@@ -173,6 +173,12 @@ class Ui_MainWindow(object):
         self.progressBar.setObjectName(_fromUtf8("progressBar"))
         self.verticalLayout.addWidget(self.progressBar)
         self.verticalLayout_2.addLayout(self.verticalLayout)
+        self.frame = QtGui.QFrame(self.dockWidgetContents)
+        self.frame.setMinimumSize(QtCore.QSize(0, 100))
+        self.frame.setFrameShape(QtGui.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtGui.QFrame.Raised)
+        self.frame.setObjectName(_fromUtf8("frame"))
+        self.verticalLayout_2.addWidget(self.frame)
         self.dockWidget1.setWidget(self.dockWidgetContents)
         MainWindow.addDockWidget(QtCore.Qt.DockWidgetArea(1), self.dockWidget1)
         self.dockWidget2 = QtGui.QDockWidget(MainWindow)
