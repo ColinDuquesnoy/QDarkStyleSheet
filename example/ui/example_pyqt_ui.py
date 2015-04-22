@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Wed Apr 22 17:17:44 2015
-#      by: PyQt4 UI code generator 4.11.1
+# Created: Wed Apr 22 17:42:12 2015
+#      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.toolBox.addItem(self.page, _fromUtf8(""))
         self.page_2 = QtGui.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 102, 102))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 273, 517))
         self.page_2.setObjectName(_fromUtf8("page_2"))
         self.gridLayout_5 = QtGui.QGridLayout(self.page_2)
         self.gridLayout_5.setObjectName(_fromUtf8("gridLayout_5"))
@@ -177,6 +177,7 @@ class Ui_MainWindow(object):
         self.frame.setMinimumSize(QtCore.QSize(0, 100))
         self.frame.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtGui.QFrame.Raised)
+        self.frame.setLineWidth(3)
         self.frame.setObjectName(_fromUtf8("frame"))
         self.verticalLayout_2.addWidget(self.frame)
         self.dockWidget1.setWidget(self.dockWidgetContents)
