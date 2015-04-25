@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Sat Apr 25 14:45:42 2015
+# Created: Sat Apr 25 14:52:27 2015
 #      by: pyside-uic 0.2.15 running on PySide 1.2.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.toolBox.addItem(self.page, "")
         self.page_2 = QtGui.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 96, 86))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 168, 531))
         self.page_2.setObjectName("page_2")
         self.gridLayout_5 = QtGui.QGridLayout(self.page_2)
         self.gridLayout_5.setObjectName("gridLayout_5")
@@ -249,7 +249,7 @@ class Ui_MainWindow(object):
         self.menuSubmenu_2.setTitle(QtGui.QApplication.translate("MainWindow", "&Submenu 2", None, QtGui.QApplication.UnicodeUTF8))
         self.dockWidget1.setWindowTitle(QtGui.QApplication.translate("MainWindow", "&Dock widget 1", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_2.setText(QtGui.QApplication.translate("MainWindow", "PushButton", None, QtGui.QApplication.UnicodeUTF8))
-        self.bt_delay_popup.setText(QtGui.QApplication.translate("MainWindow", "Delayed popup", None, QtGui.QApplication.UnicodeUTF8))
+        self.bt_delay_popup.setText(QtGui.QApplication.translate("MainWindow", "Delayed popup  ", None, QtGui.QApplication.UnicodeUTF8))
         self.bt_instant_popup.setText(QtGui.QApplication.translate("MainWindow", "Instant popup", None, QtGui.QApplication.UnicodeUTF8))
         self.bt_menu_button_popup.setText(QtGui.QApplication.translate("MainWindow", "MenuButtonPopup", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_3.setText(QtGui.QApplication.translate("MainWindow", "Disabled", None, QtGui.QApplication.UnicodeUTF8))

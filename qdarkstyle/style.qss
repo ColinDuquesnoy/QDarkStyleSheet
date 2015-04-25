@@ -616,9 +616,8 @@ QLabel
     border: 0px solid black;
 }
 
-
 QTabWidget::pane {
-    border: 1px solid #3A3939;
+    border: 1px transparent black;
 }
 
 QTabBar
@@ -906,18 +905,14 @@ QToolButton {
     padding: 3px;
 }
 
-QToolButton[popupMode="0"] { /* only for DelayedPopup */
- padding-right: 10px; /* make way for the popup button */
-}
-
 QToolButton[popupMode="1"] { /* only for MenuButtonPopup */
  padding-right: 20px; /* make way for the popup button */
- border: 1px solid #4A4949;
+ border: 1px transparent #4A4949;
 }
 
 QToolButton[popupMode="2"] { /* only for InstantPopup */
  padding-right: 10px; /* make way for the popup button */
- border: 1px solid #4A4949;
+ border: 1px transparent #4A4949;
 }
 
 
@@ -926,7 +921,7 @@ QToolButton:hover, QToolButton::menu-button:hover {
     border: 1px solid #78879b;
 }
 
-QToolButton:pressed, QToolButton::menu-button:pressed {
+QToolButton:checked, QToolButton:pressed, QToolButton::menu-button:pressed {
     background-color: #4A4949;
     border: 1px solid #78879b;
 }
@@ -939,7 +934,7 @@ QToolButton::menu-indicator {
 
 /* the subcontrols below are used only in the MenuButtonPopup mode */
 QToolButton::menu-button {
- border: 1px solid #4A4949;
+ border: 1px transparent #4A4949;
  border-top-right-radius: 6px;
  border-bottom-right-radius: 6px;
  /* 16px width + 4px for border = 20px allocated above */
@@ -1071,4 +1066,22 @@ QStatusBar::item {
 
 QFrame[height="3"], QFrame[width="3"] {
     background-color: #444;
+}
+
+
+QSplitter::handle {
+    image: url(:/qss_icons/rc/stylesheet-vline.png);
+    border: none;
+}
+
+QSplitter::handle:horizontal {
+    width: 2px;
+}
+
+QSplitter::handle:vertical {
+    height: 2px;
+}
+
+QSplitter::handle:pressed {
+    image: url(:/qss_icons/rc/stylesheet-vline.png);
 }
