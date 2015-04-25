@@ -903,6 +903,10 @@ QToolButton {
     border: 1px solid #3A3939;
     border-radius: 3px;
     margin: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 QToolButton:pressed, QToolButton::menu-button:pressed, QToolButton:checked, QToolButton::menu-button:checked {
@@ -915,12 +919,22 @@ QToolButton:hover, QToolButton::menu-button:hover {
     border: 1px solid gray;
 }
 
-QToolButton[popupMode="1"] { /* only for MenuButtonPopup */
+QToolButton[popupMode="0"] { /* only for DelayedPopup */
+ padding-right: 10px; /* make way for the popup button */
+}
+
+QToolButton[popupMode="1"] { /* only for InstantPopup */
  padding-right: 20px; /* make way for the popup button */
 }
 
 QToolButton[popupMode="2"] { /* only for MenuButtonPopup */
  padding-right: 10px; /* make way for the popup button */
+}
+
+/* the subcontrol below is used only in the InstantPopup or DelayedPopup mode */
+QToolButton::menu-indicator {
+ image: url(:/qss_icons/rc/down_arrow.png);
+ top: -7px; left: -2px; /* shift it a bit */
 }
 
 /* the subcontrols below are used only in the MenuButtonPopup mode */

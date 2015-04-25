@@ -59,6 +59,18 @@ def main():
     # setup ui
     ui = example_ui.Ui_MainWindow()
     ui.setupUi(window)
+    ui.bt_delay_popup.addActions([
+        ui.actionAction,
+        ui.actionAction_C
+    ])
+    ui.bt_instant_popup.addActions([
+        ui.actionAction,
+        ui.actionAction_C
+    ])
+    ui.bt_menu_button_popup.addActions([
+        ui.actionAction,
+        ui.actionAction_C
+    ])
     window.setWindowTitle("QDarkStyle example")
 
     # tabify dock widgets to show bug #6

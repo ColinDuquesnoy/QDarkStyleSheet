@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Wed Apr 22 17:42:12 2015
-#      by: PyQt4 UI code generator 4.11.3
+# Created: Sat Apr 25 13:43:30 2015
+#      by: PyQt4 UI code generator 4.11.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(877, 750)
+        MainWindow.resize(937, 750)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.horizontalLayout_2 = QtGui.QHBoxLayout(self.centralwidget)
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.toolBox.addItem(self.page, _fromUtf8(""))
         self.page_2 = QtGui.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 273, 517))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 129, 517))
         self.page_2.setObjectName(_fromUtf8("page_2"))
         self.gridLayout_5 = QtGui.QGridLayout(self.page_2)
         self.gridLayout_5.setObjectName(_fromUtf8("gridLayout_5"))
@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 877, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 937, 22))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuMenu = QtGui.QMenu(self.menubar)
         self.menuMenu.setObjectName(_fromUtf8("menuMenu"))
@@ -134,9 +134,17 @@ class Ui_MainWindow(object):
         self.pushButton_2 = QtGui.QPushButton(self.dockWidgetContents)
         self.pushButton_2.setObjectName(_fromUtf8("pushButton_2"))
         self.horizontalLayout.addWidget(self.pushButton_2)
-        self.pushButton = QtGui.QPushButton(self.dockWidgetContents)
-        self.pushButton.setObjectName(_fromUtf8("pushButton"))
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.bt_delay_popup = QtGui.QToolButton(self.dockWidgetContents)
+        self.bt_delay_popup.setObjectName(_fromUtf8("bt_delay_popup"))
+        self.horizontalLayout.addWidget(self.bt_delay_popup)
+        self.bt_instant_popup = QtGui.QToolButton(self.dockWidgetContents)
+        self.bt_instant_popup.setPopupMode(QtGui.QToolButton.InstantPopup)
+        self.bt_instant_popup.setObjectName(_fromUtf8("bt_instant_popup"))
+        self.horizontalLayout.addWidget(self.bt_instant_popup)
+        self.bt_menu_button_popup = QtGui.QToolButton(self.dockWidgetContents)
+        self.bt_menu_button_popup.setPopupMode(QtGui.QToolButton.MenuButtonPopup)
+        self.bt_menu_button_popup.setObjectName(_fromUtf8("bt_menu_button_popup"))
+        self.horizontalLayout.addWidget(self.bt_menu_button_popup)
         self.line_2 = QtGui.QFrame(self.dockWidgetContents)
         self.line_2.setFrameShape(QtGui.QFrame.VLine)
         self.line_2.setFrameShadow(QtGui.QFrame.Sunken)
@@ -270,7 +278,9 @@ class Ui_MainWindow(object):
         self.menuSubmenu_2.setTitle(_translate("MainWindow", "Submenu 2", None))
         self.dockWidget1.setWindowTitle(_translate("MainWindow", "Dock widget 1", None))
         self.pushButton_2.setText(_translate("MainWindow", "PushButton", None))
-        self.pushButton.setText(_translate("MainWindow", "PushButton", None))
+        self.bt_delay_popup.setText(_translate("MainWindow", "Delayed popup", None))
+        self.bt_instant_popup.setText(_translate("MainWindow", "Instant popup", None))
+        self.bt_menu_button_popup.setText(_translate("MainWindow", "MenuButtonPopup", None))
         self.pushButton_3.setText(_translate("MainWindow", "Disabled", None))
         self.toolButton.setText(_translate("MainWindow", "...", None))
         self.comboBox.setItemText(0, _translate("MainWindow", "Item 0", None))

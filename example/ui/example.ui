@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>877</width>
+    <width>937</width>
     <height>750</height>
    </rect>
   </property>
@@ -65,7 +65,7 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>273</width>
+                <width>129</width>
                 <height>517</height>
                </rect>
               </property>
@@ -201,7 +201,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>877</width>
+     <width>937</width>
      <height>22</height>
     </rect>
    </property>
@@ -241,9 +241,29 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QToolButton" name="bt_delay_popup">
          <property name="text">
-          <string>PushButton</string>
+          <string>Delayed popup</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="bt_instant_popup">
+         <property name="text">
+          <string>Instant popup</string>
+         </property>
+         <property name="popupMode">
+          <enum>QToolButton::InstantPopup</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="bt_menu_button_popup">
+         <property name="text">
+          <string>MenuButtonPopup</string>
+         </property>
+         <property name="popupMode">
+          <enum>QToolButton::MenuButtonPopup</enum>
          </property>
         </widget>
        </item>
