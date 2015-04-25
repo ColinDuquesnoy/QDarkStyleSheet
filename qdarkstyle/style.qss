@@ -1070,18 +1070,15 @@ QFrame[height="3"], QFrame[width="3"] {
 
 
 QSplitter::handle {
-    image: url(:/qss_icons/rc/stylesheet-vline.png);
-    border: none;
+    border: 1px transparent black;
 }
 
 QSplitter::handle:horizontal {
-    width: 2px;
+    image: url(:/qss_icons/rc/Hsepartoolbar.png);
+    width: 5px;
 }
 
 QSplitter::handle:vertical {
-    height: 2px;
-}
-
-QSplitter::handle:pressed {
-    image: url(:/qss_icons/rc/stylesheet-vline.png);
+    image: url(:/qss_icons/rc/Vsepartoolbar.png);
+    height: 5px;
 }
