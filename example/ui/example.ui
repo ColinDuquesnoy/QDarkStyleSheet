@@ -47,8 +47,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>98</width>
-                <height>45</height>
+                <width>96</width>
+                <height>43</height>
                </rect>
               </property>
               <attribute name="label">
@@ -65,8 +65,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>129</width>
-                <height>517</height>
+                <width>96</width>
+                <height>86</height>
                </rect>
               </property>
               <attribute name="label">
@@ -147,7 +147,7 @@
            <item>
             <widget class="QRadioButton" name="radioButton">
              <property name="text">
-              <string>RadioButton</string>
+              <string>RadioB&amp;utton</string>
              </property>
             </widget>
            </item>
@@ -202,16 +202,16 @@
      <x>0</x>
      <y>0</y>
      <width>937</width>
-     <height>22</height>
+     <height>29</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMenu">
     <property name="title">
-     <string>Menu</string>
+     <string>&amp;Menu</string>
     </property>
     <widget class="QMenu" name="menuSubmenu_2">
      <property name="title">
-      <string>Submenu 2</string>
+      <string>&amp;Submenu 2</string>
      </property>
      <addaction name="actionSub_menu"/>
      <addaction name="actionAction_C"/>
@@ -224,7 +224,7 @@
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QDockWidget" name="dockWidget1">
    <property name="windowTitle">
-    <string>Dock widget 1</string>
+    <string>&amp;Dock widget 1</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -292,6 +292,9 @@
          <property name="text">
           <string>...</string>
          </property>
+         <property name="popupMode">
+          <enum>QToolButton::InstantPopup</enum>
+         </property>
         </widget>
        </item>
       </layout>
@@ -355,7 +358,7 @@
   </widget>
   <widget class="QDockWidget" name="dockWidget2">
    <property name="windowTitle">
-    <string>Dock widget 2</string>
+    <string>Dock widget &amp;2</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -414,12 +417,12 @@
   </widget>
   <action name="actionAction">
    <property name="text">
-    <string>Action</string>
+    <string>&amp;Action</string>
    </property>
   </action>
   <action name="actionSub_menu">
    <property name="text">
-    <string>Action B</string>
+    <string>&amp;Action B</string>
    </property>
    <property name="toolTip">
     <string>submenu</string>
@@ -427,7 +430,7 @@
   </action>
   <action name="actionAction_C">
    <property name="text">
-    <string>Action C</string>
+    <string>Action &amp;C</string>
    </property>
   </action>
  </widget>

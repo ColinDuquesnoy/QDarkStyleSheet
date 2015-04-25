@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Sat Apr 25 14:02:32 2015
+# Created: Sat Apr 25 14:45:41 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -46,7 +46,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtGui.QToolBox(self.groupBox)
         self.toolBox.setObjectName(_fromUtf8("toolBox"))
         self.page = QtGui.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 98, 45))
+        self.page.setGeometry(QtCore.QRect(0, 0, 96, 43))
         self.page.setObjectName(_fromUtf8("page"))
         self.gridLayout_4 = QtGui.QGridLayout(self.page)
         self.gridLayout_4.setObjectName(_fromUtf8("gridLayout_4"))
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.toolBox.addItem(self.page, _fromUtf8(""))
         self.page_2 = QtGui.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 129, 517))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 96, 86))
         self.page_2.setObjectName(_fromUtf8("page_2"))
         self.gridLayout_5 = QtGui.QGridLayout(self.page_2)
         self.gridLayout_5.setObjectName(_fromUtf8("gridLayout_5"))
@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 937, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 937, 29))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuMenu = QtGui.QMenu(self.menubar)
         self.menuMenu.setObjectName(_fromUtf8("menuMenu"))
@@ -158,6 +158,7 @@ class Ui_MainWindow(object):
         self.doubleSpinBox.setObjectName(_fromUtf8("doubleSpinBox"))
         self.horizontalLayout.addWidget(self.doubleSpinBox)
         self.toolButton = QtGui.QToolButton(self.dockWidgetContents)
+        self.toolButton.setPopupMode(QtGui.QToolButton.InstantPopup)
         self.toolButton.setObjectName(_fromUtf8("toolButton"))
         self.horizontalLayout.addWidget(self.toolButton)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
@@ -264,7 +265,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Tab 1", None))
         self.groupBox_2.setTitle(_translate("MainWindow", "GroupBox", None))
         self.label.setText(_translate("MainWindow", "TextLabel", None))
-        self.radioButton.setText(_translate("MainWindow", "RadioButton", None))
+        self.radioButton.setText(_translate("MainWindow", "RadioB&utton", None))
         self.checkBox.setText(_translate("MainWindow", "CheckBox", None))
         self.checkBox_2.setText(_translate("MainWindow", "CheckBox Tristate", None))
         self.treeWidget.headerItem().setText(0, _translate("MainWindow", "qdz", None))
@@ -274,9 +275,9 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(1).setText(0, _translate("MainWindow", "effefe", None))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2", None))
-        self.menuMenu.setTitle(_translate("MainWindow", "Menu", None))
-        self.menuSubmenu_2.setTitle(_translate("MainWindow", "Submenu 2", None))
-        self.dockWidget1.setWindowTitle(_translate("MainWindow", "Dock widget 1", None))
+        self.menuMenu.setTitle(_translate("MainWindow", "&Menu", None))
+        self.menuSubmenu_2.setTitle(_translate("MainWindow", "&Submenu 2", None))
+        self.dockWidget1.setWindowTitle(_translate("MainWindow", "&Dock widget 1", None))
         self.pushButton_2.setText(_translate("MainWindow", "PushButton", None))
         self.bt_delay_popup.setText(_translate("MainWindow", "Delayed popup", None))
         self.bt_instant_popup.setText(_translate("MainWindow", "Instant popup", None))
@@ -285,7 +286,7 @@ class Ui_MainWindow(object):
         self.toolButton.setText(_translate("MainWindow", "...", None))
         self.comboBox.setItemText(0, _translate("MainWindow", "Item 0", None))
         self.comboBox.setItemText(1, _translate("MainWindow", "Item 2", None))
-        self.dockWidget2.setWindowTitle(_translate("MainWindow", "Dock widget 2", None))
+        self.dockWidget2.setWindowTitle(_translate("MainWindow", "Dock widget &2", None))
         item = self.tableWidget.verticalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Row", None))
         item = self.tableWidget.verticalHeaderItem(1)
@@ -299,8 +300,8 @@ class Ui_MainWindow(object):
         item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "New Column 2", None))
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar", None))
-        self.actionAction.setText(_translate("MainWindow", "Action", None))
-        self.actionSub_menu.setText(_translate("MainWindow", "Action B", None))
+        self.actionAction.setText(_translate("MainWindow", "&Action", None))
+        self.actionSub_menu.setText(_translate("MainWindow", "&Action B", None))
         self.actionSub_menu.setToolTip(_translate("MainWindow", "submenu", None))
-        self.actionAction_C.setText(_translate("MainWindow", "Action C", None))
+        self.actionAction_C.setText(_translate("MainWindow", "Action &C", None))
 

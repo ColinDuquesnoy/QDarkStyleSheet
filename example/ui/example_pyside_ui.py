@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Sat Apr 25 14:02:33 2015
+# Created: Sat Apr 25 14:45:42 2015
 #      by: pyside-uic 0.2.15 running on PySide 1.2.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.toolBox = QtGui.QToolBox(self.groupBox)
         self.toolBox.setObjectName("toolBox")
         self.page = QtGui.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 98, 45))
+        self.page.setGeometry(QtCore.QRect(0, 0, 96, 43))
         self.page.setObjectName("page")
         self.gridLayout_4 = QtGui.QGridLayout(self.page)
         self.gridLayout_4.setObjectName("gridLayout_4")
@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.lineEdit, 0, 0, 1, 1)
         self.toolBox.addItem(self.page, "")
         self.page_2 = QtGui.QWidget()
-        self.page_2.setGeometry(QtCore.QRect(0, 0, 129, 517))
+        self.page_2.setGeometry(QtCore.QRect(0, 0, 96, 86))
         self.page_2.setObjectName("page_2")
         self.gridLayout_5 = QtGui.QGridLayout(self.page_2)
         self.gridLayout_5.setObjectName("gridLayout_5")
@@ -91,7 +91,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 937, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 937, 29))
         self.menubar.setObjectName("menubar")
         self.menuMenu = QtGui.QMenu(self.menubar)
         self.menuMenu.setObjectName("menuMenu")
@@ -136,6 +136,7 @@ class Ui_MainWindow(object):
         self.doubleSpinBox.setObjectName("doubleSpinBox")
         self.horizontalLayout.addWidget(self.doubleSpinBox)
         self.toolButton = QtGui.QToolButton(self.dockWidgetContents)
+        self.toolButton.setPopupMode(QtGui.QToolButton.InstantPopup)
         self.toolButton.setObjectName("toolButton")
         self.horizontalLayout.addWidget(self.toolButton)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
@@ -234,7 +235,7 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QtGui.QApplication.translate("MainWindow", "Tab 1", None, QtGui.QApplication.UnicodeUTF8))
         self.groupBox_2.setTitle(QtGui.QApplication.translate("MainWindow", "GroupBox", None, QtGui.QApplication.UnicodeUTF8))
         self.label.setText(QtGui.QApplication.translate("MainWindow", "TextLabel", None, QtGui.QApplication.UnicodeUTF8))
-        self.radioButton.setText(QtGui.QApplication.translate("MainWindow", "RadioButton", None, QtGui.QApplication.UnicodeUTF8))
+        self.radioButton.setText(QtGui.QApplication.translate("MainWindow", "RadioB&utton", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox.setText(QtGui.QApplication.translate("MainWindow", "CheckBox", None, QtGui.QApplication.UnicodeUTF8))
         self.checkBox_2.setText(QtGui.QApplication.translate("MainWindow", "CheckBox Tristate", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.headerItem().setText(0, QtGui.QApplication.translate("MainWindow", "qdz", None, QtGui.QApplication.UnicodeUTF8))
@@ -244,9 +245,9 @@ class Ui_MainWindow(object):
         self.treeWidget.topLevelItem(1).setText(0, QtGui.QApplication.translate("MainWindow", "effefe", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QtGui.QApplication.translate("MainWindow", "Tab 2", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuMenu.setTitle(QtGui.QApplication.translate("MainWindow", "Menu", None, QtGui.QApplication.UnicodeUTF8))
-        self.menuSubmenu_2.setTitle(QtGui.QApplication.translate("MainWindow", "Submenu 2", None, QtGui.QApplication.UnicodeUTF8))
-        self.dockWidget1.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Dock widget 1", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuMenu.setTitle(QtGui.QApplication.translate("MainWindow", "&Menu", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuSubmenu_2.setTitle(QtGui.QApplication.translate("MainWindow", "&Submenu 2", None, QtGui.QApplication.UnicodeUTF8))
+        self.dockWidget1.setWindowTitle(QtGui.QApplication.translate("MainWindow", "&Dock widget 1", None, QtGui.QApplication.UnicodeUTF8))
         self.pushButton_2.setText(QtGui.QApplication.translate("MainWindow", "PushButton", None, QtGui.QApplication.UnicodeUTF8))
         self.bt_delay_popup.setText(QtGui.QApplication.translate("MainWindow", "Delayed popup", None, QtGui.QApplication.UnicodeUTF8))
         self.bt_instant_popup.setText(QtGui.QApplication.translate("MainWindow", "Instant popup", None, QtGui.QApplication.UnicodeUTF8))
@@ -255,7 +256,7 @@ class Ui_MainWindow(object):
         self.toolButton.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.setItemText(0, QtGui.QApplication.translate("MainWindow", "Item 0", None, QtGui.QApplication.UnicodeUTF8))
         self.comboBox.setItemText(1, QtGui.QApplication.translate("MainWindow", "Item 2", None, QtGui.QApplication.UnicodeUTF8))
-        self.dockWidget2.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Dock widget 2", None, QtGui.QApplication.UnicodeUTF8))
+        self.dockWidget2.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Dock widget &2", None, QtGui.QApplication.UnicodeUTF8))
         self.tableWidget.verticalHeaderItem(0).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
         self.tableWidget.verticalHeaderItem(1).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
         self.tableWidget.verticalHeaderItem(2).setText(QtGui.QApplication.translate("MainWindow", "New Row", None, QtGui.QApplication.UnicodeUTF8))
@@ -263,8 +264,8 @@ class Ui_MainWindow(object):
         self.tableWidget.horizontalHeaderItem(0).setText(QtGui.QApplication.translate("MainWindow", "New Column", None, QtGui.QApplication.UnicodeUTF8))
         self.tableWidget.horizontalHeaderItem(1).setText(QtGui.QApplication.translate("MainWindow", "New Column 2", None, QtGui.QApplication.UnicodeUTF8))
         self.toolBar.setWindowTitle(QtGui.QApplication.translate("MainWindow", "toolBar", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionAction.setText(QtGui.QApplication.translate("MainWindow", "Action", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionSub_menu.setText(QtGui.QApplication.translate("MainWindow", "Action B", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionAction.setText(QtGui.QApplication.translate("MainWindow", "&Action", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionSub_menu.setText(QtGui.QApplication.translate("MainWindow", "&Action B", None, QtGui.QApplication.UnicodeUTF8))
         self.actionSub_menu.setToolTip(QtGui.QApplication.translate("MainWindow", "submenu", None, QtGui.QApplication.UnicodeUTF8))
-        self.actionAction_C.setText(QtGui.QApplication.translate("MainWindow", "Action C", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionAction_C.setText(QtGui.QApplication.translate("MainWindow", "Action &C", None, QtGui.QApplication.UnicodeUTF8))
 
