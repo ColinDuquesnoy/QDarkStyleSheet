@@ -11,6 +11,8 @@
     <file>rc/right_arrow_disabled.png</file>
     <file>rc/sizegrip.png</file>
     <file>rc/close.png</file>
+    <file>rc/close-hover.png</file>
+    <file>rc/close-pressed.png</file>
     <file>rc/down_arrow.png</file>
     <file>rc/Vmovetoolbar.png</file>
     <file>rc/left_arrow.png</file>
