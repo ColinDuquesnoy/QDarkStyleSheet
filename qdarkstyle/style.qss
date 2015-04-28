@@ -435,6 +435,12 @@ QFrame
     border: 1px solid #444;
 }
 
+QFrame[frameShape="0"]
+{
+    border-radius: 2px;
+    border: 1px transparent #444;
+}
+
 QStackedWidget
 {
     border: 1px transparent black;
