@@ -32,7 +32,7 @@ import logging
 import platform
 
 
-__version__ = "1.16"
+__version__ = "2.0.0b0"
 
 
 def _logger():
@@ -74,6 +74,7 @@ def load_stylesheet(pyside=True):
             {
                 background-color: #353434;
                 text-align: center;
+                height: 12px;
             }
             '''
             stylesheet += mac_fix
@@ -109,6 +110,7 @@ def load_stylesheet_pyqt5():
             {
                 background-color: #353434;
                 text-align: center;
+                height: 12px;
             }
             '''
             stylesheet += mac_fix
