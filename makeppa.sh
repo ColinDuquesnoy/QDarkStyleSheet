@@ -1,9 +1,9 @@
 #! /bin/bash
 
 # package info
-ppa="ppa:colin-duquesnoy/experimental"
+ppa="ppa:colin-duquesnoy/stable"
 name="qdarkstyle"
-version="1.16"
+version="2.0"
 
 # read pgp key from gpg_key file
 gpg_key=`cat gpg_key`
