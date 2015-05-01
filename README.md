@@ -114,7 +114,8 @@ request.
 
 Changelog
 ===========
-```
+
+* 2.0: Improve stylesheet to make it look a bit more modern (see pull request #25)
 * 1.16: fix QGroupBox title padding (see issue #20)
 * 1.15: improve tristate checkbox graphics: undetermined state is now represented by a dash
 * 1.14: add support for tristate check boxes and for vertical and horizontal lines
@@ -161,7 +162,7 @@ Changelog
    - Add python 3 support
 * 1.0:
   - First public release (LGPL v2)
-```
+
 
 
 
