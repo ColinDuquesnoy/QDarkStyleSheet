@@ -127,13 +127,41 @@
         <item row="0" column="0">
          <widget class="QTabWidget" name="tabWidget_2">
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_3">
            <attribute name="title">
             <string>Tab 1</string>
            </attribute>
-           <layout class="QGridLayout" name="gridLayout_6"/>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="1" column="0">
+             <widget class="QPushButton" name="checkableButton">
+              <property name="text">
+               <string>Checkable button</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="pushButton">
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="pushButton_5">
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
           <widget class="QWidget" name="tab_5">
            <attribute name="title">
@@ -473,6 +501,31 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>pushButton</tabstop>
+  <tabstop>checkableButton</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>tabWidget_2</tabstop>
+  <tabstop>tableWidget</tabstop>
+  <tabstop>radioButton</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>checkBox_2</tabstop>
+  <tabstop>treeWidget</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>bt_delay_popup</tabstop>
+  <tabstop>bt_instant_popup</tabstop>
+  <tabstop>bt_menu_button_popup</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>doubleSpinBox</tabstop>
+  <tabstop>toolButton</tabstop>
+  <tabstop>comboBox</tabstop>
+  <tabstop>horizontalSlider</tabstop>
+  <tabstop>textEdit</tabstop>
+  <tabstop>verticalSlider</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>listWidget</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

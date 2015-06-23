@@ -494,8 +494,9 @@ QPushButton:disabled
     color: #454545;
 }
 
-QPushButton:focus {
+QPushButton:focus:!hover {
     background-color: #3d8ec9;
+    color: white;
 }
 
 QComboBox
@@ -507,6 +508,11 @@ QComboBox
     border-radius: 2px;
     padding: 2px;
     min-width: 75px;
+}
+
+QPushButton:checked{
+    background-color: #4A4949;
+    border-color: #6A6969;
 }
 
 QComboBox:hover,QPushButton:hover,QAbstractSpinBox:hover,QLineEdit:hover,QTextEdit:hover,QPlainTextEdit:hover,QAbstractView:hover,QTreeView:hover
@@ -903,7 +909,8 @@ QToolButton:hover, QToolButton::menu-button:hover {
     border: 1px solid #78879b;
 }
 
-QToolButton:checked, QToolButton:pressed, QToolButton::menu-button:pressed {
+QToolButton:checked, QToolButton:pressed,
+        QToolButton::menu-button:pressed {
     background-color: #4A4949;
     border: 1px solid #78879b;
 }

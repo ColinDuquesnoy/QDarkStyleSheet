@@ -32,7 +32,7 @@ Requirements:
     - Python 2 or Python 3
     - PyQt4
 
-.. note.. :: qdarkstyle does not have to be installed to run 
+.. note.. :: qdarkstyle does not have to be installed to run
     the example
 
 """
@@ -55,7 +55,7 @@ def main():
     # create the application and the main window
     app = QtGui.QApplication(sys.argv)
     window = QtGui.QMainWindow()
-    
+
     # setup ui
     ui = example_ui.Ui_MainWindow()
     ui.setupUi(window)
@@ -90,4 +90,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

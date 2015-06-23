@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file 'example.ui'
 #
-# Created: Sat Apr 25 17:30:26 2015
-#      by: PyQt4 UI code generator 4.11.3
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -87,6 +86,17 @@ class Ui_MainWindow(object):
         self.tab_3.setObjectName(_fromUtf8("tab_3"))
         self.gridLayout_6 = QtGui.QGridLayout(self.tab_3)
         self.gridLayout_6.setObjectName(_fromUtf8("gridLayout_6"))
+        self.checkableButton = QtGui.QPushButton(self.tab_3)
+        self.checkableButton.setCheckable(True)
+        self.checkableButton.setChecked(True)
+        self.checkableButton.setObjectName(_fromUtf8("checkableButton"))
+        self.gridLayout_6.addWidget(self.checkableButton, 1, 0, 1, 1)
+        self.pushButton = QtGui.QPushButton(self.tab_3)
+        self.pushButton.setObjectName(_fromUtf8("pushButton"))
+        self.gridLayout_6.addWidget(self.pushButton, 0, 0, 1, 1)
+        self.pushButton_5 = QtGui.QPushButton(self.tab_3)
+        self.pushButton_5.setObjectName(_fromUtf8("pushButton_5"))
+        self.gridLayout_6.addWidget(self.pushButton_5, 2, 0, 1, 1)
         self.tabWidget_2.addTab(self.tab_3, _fromUtf8(""))
         self.tab_5 = QtGui.QWidget()
         self.tab_5.setObjectName(_fromUtf8("tab_5"))
@@ -260,8 +270,30 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(0)
         self.toolBox.setCurrentIndex(1)
-        self.tabWidget_2.setCurrentIndex(1)
+        self.tabWidget_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        MainWindow.setTabOrder(self.pushButton, self.checkableButton)
+        MainWindow.setTabOrder(self.checkableButton, self.pushButton_5)
+        MainWindow.setTabOrder(self.pushButton_5, self.tabWidget_2)
+        MainWindow.setTabOrder(self.tabWidget_2, self.tableWidget)
+        MainWindow.setTabOrder(self.tableWidget, self.radioButton)
+        MainWindow.setTabOrder(self.radioButton, self.checkBox)
+        MainWindow.setTabOrder(self.checkBox, self.checkBox_2)
+        MainWindow.setTabOrder(self.checkBox_2, self.treeWidget)
+        MainWindow.setTabOrder(self.treeWidget, self.pushButton_2)
+        MainWindow.setTabOrder(self.pushButton_2, self.bt_delay_popup)
+        MainWindow.setTabOrder(self.bt_delay_popup, self.bt_instant_popup)
+        MainWindow.setTabOrder(self.bt_instant_popup, self.bt_menu_button_popup)
+        MainWindow.setTabOrder(self.bt_menu_button_popup, self.pushButton_3)
+        MainWindow.setTabOrder(self.pushButton_3, self.doubleSpinBox)
+        MainWindow.setTabOrder(self.doubleSpinBox, self.toolButton)
+        MainWindow.setTabOrder(self.toolButton, self.comboBox)
+        MainWindow.setTabOrder(self.comboBox, self.horizontalSlider)
+        MainWindow.setTabOrder(self.horizontalSlider, self.textEdit)
+        MainWindow.setTabOrder(self.textEdit, self.verticalSlider)
+        MainWindow.setTabOrder(self.verticalSlider, self.tabWidget)
+        MainWindow.setTabOrder(self.tabWidget, self.lineEdit)
+        MainWindow.setTabOrder(self.lineEdit, self.listWidget)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
@@ -287,6 +319,9 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "New Item", None))
         self.listWidget.setSortingEnabled(__sortingEnabled)
         self.toolBox.setItemText(self.toolBox.indexOf(self.page_2), _translate("MainWindow", "Page 2", None))
+        self.checkableButton.setText(_translate("MainWindow", "Checkable button", None))
+        self.pushButton.setText(_translate("MainWindow", "PushButton", None))
+        self.pushButton_5.setText(_translate("MainWindow", "PushButton", None))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_3), _translate("MainWindow", "Tab 1", None))
         item = self.tableWidget.verticalHeaderItem(0)
         item.setText(_translate("MainWindow", "New Row", None))
