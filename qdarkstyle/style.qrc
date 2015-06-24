@@ -21,12 +21,24 @@
     <file>rc/right_arrow.png</file>
     <file>rc/left_arrow_disabled.png</file>
     <file>rc/Hsepartoolbar.png</file>
-    <file>rc/checkbox.png</file>
-    <file>rc/checkbox_indeterminate.png</file>
     <file>rc/branch_open.png</file>
     <file>rc/Vsepartoolbar.png</file>
     <file>rc/down_arrow_disabled.png</file>
     <file>rc/undock.png</file>
+    <file>rc/checkbox_checked_disabled.png</file>
+    <file>rc/checkbox_checked_focus.png</file>
+    <file>rc/checkbox_checked.png</file>
+    <file>rc/checkbox_indeterminate.png</file>
+    <file>rc/checkbox_indeterminate_focus.png</file>
+    <file>rc/checkbox_unchecked_disabled.png</file>
+    <file>rc/checkbox_unchecked_focus.png</file>
+    <file>rc/checkbox_unchecked.png</file>
+    <file>rc/radio_checked_disabled.png</file>
+    <file>rc/radio_checked_focus.png</file>
+    <file>rc/radio_checked.png</file>
+    <file>rc/radio_unchecked_disabled.png</file>
+    <file>rc/radio_unchecked_focus.png</file>
+    <file>rc/radio_unchecked.png</file>
   </qresource>
   <qresource prefix="qdarkstyle">
       <file>style.qss</file>
