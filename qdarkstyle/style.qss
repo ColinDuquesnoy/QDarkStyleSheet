@@ -284,7 +284,7 @@ QWidget:focus, QMenuBar:focus
     border: 1px solid #78879b;
 }
 
-QTabWidget:focus, QCheckBox:focus, QRadioButton:focus
+QTabWidget:focus, QCheckBox:focus, QRadioButton:focus, QSlider:focus
 {
     border: none;
 }
