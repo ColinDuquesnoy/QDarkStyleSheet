@@ -136,6 +136,7 @@ QGroupBox::indicator:indeterminate:focus
     image: url(:/qss_icons/rc/checkbox_indeterminate_focus.png);
 }
 
+QCheckBox::indicator:checked:disabled,
 QGroupBox::indicator:checked:disabled
 {
     image: url(:/qss_icons/rc/checkbox_checked_disabled.png);
@@ -205,12 +206,12 @@ QRadioButton::indicator:indeterminate:pressed
 QRadioButton::indicator:checked:disabled
 {
   outline: none;
-  image: url(:/qss_icons/rc/radio_checked.png);
+  image: url(:/qss_icons/rc/radio_checked_disabled.png);
 }
 
 QRadioButton::indicator:unchecked:disabled
 {
-    image: url(:/qss_icons/rc/radio_unchecked.png);
+    image: url(:/qss_icons/rc/radio_unchecked_disabled.png);
 }
 
 
