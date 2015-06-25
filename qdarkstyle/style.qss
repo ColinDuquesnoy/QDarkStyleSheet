@@ -313,6 +313,7 @@ QMenu::indicator:exclusive:checked:selected {
 }
 
 QMenu::right-arrow {
+    margin: 5px;
     image: url(:/qss_icons/rc/right_arrow.png)
 }
 
