@@ -265,6 +265,54 @@ QMenu::item:selected
     color: black;
 }
 
+QMenu::separator {
+    height: 2px;
+    background: lightblue;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+QMenu::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+/* non-exclusive indicator = check box style indicator
+   (see QActionGroup::setExclusive) */
+QMenu::indicator:non-exclusive:unchecked {
+    image: url(:/qss_icons/rc/checkbox_unchecked.png);
+}
+
+QMenu::indicator:non-exclusive:unchecked:selected {
+    image: url(:/qss_icons/rc/checkbox_unchecked_hover.png);
+}
+
+QMenu::indicator:non-exclusive:checked {
+    image: url(:/qss_icons/rc/checkbox_checked.png);
+}
+
+QMenu::indicator:non-exclusive:checked:selected {
+    image: url(:/qss_icons/rc/checkbox_checked_hover.png);
+}
+
+/* exclusive indicator = radio button style indicator (see QActionGroup::setExclusive) */
+QMenu::indicator:exclusive:unchecked {
+    image: url(:/qss_icons/rc/radio_unchecked.png);
+}
+
+QMenu::indicator:exclusive:unchecked:selected {
+    image: url(:/qss_icons/rc/radio_unchecked_disabled.png);
+}
+
+QMenu::indicator:exclusive:checked {
+    image: url(:/qss_icons/rc/radio_checked.png);
+}
+
+QMenu::indicator:exclusive:checked:selected {
+    image: url(:/qss_icons/rc/radio_checked_disabled.png);
+}
+
+
 QWidget:disabled
 {
     color: #404040;
