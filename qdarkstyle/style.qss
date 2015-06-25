@@ -273,8 +273,8 @@ QMenu::separator {
 }
 
 QMenu::indicator {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
 }
 
 /* non-exclusive indicator = check box style indicator
@@ -284,7 +284,7 @@ QMenu::indicator:non-exclusive:unchecked {
 }
 
 QMenu::indicator:non-exclusive:unchecked:selected {
-    image: url(:/qss_icons/rc/checkbox_unchecked_hover.png);
+    image: url(:/qss_icons/rc/checkbox_unchecked_disabled.png);
 }
 
 QMenu::indicator:non-exclusive:checked {
@@ -292,7 +292,7 @@ QMenu::indicator:non-exclusive:checked {
 }
 
 QMenu::indicator:non-exclusive:checked:selected {
-    image: url(:/qss_icons/rc/checkbox_checked_hover.png);
+    image: url(:/qss_icons/rc/checkbox_checked_disabled.png);
 }
 
 /* exclusive indicator = radio button style indicator (see QActionGroup::setExclusive) */
@@ -310,6 +310,10 @@ QMenu::indicator:exclusive:checked {
 
 QMenu::indicator:exclusive:checked:selected {
     image: url(:/qss_icons/rc/radio_checked_disabled.png);
+}
+
+QMenu::right-arrow {
+    image: url(:/qss_icons/rc/right_arrow.png)
 }
 
 
