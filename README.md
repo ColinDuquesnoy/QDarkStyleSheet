@@ -98,6 +98,17 @@ by
 app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
 ```
 
+and
+```
+from PySide import QtGui
+```
+
+by
+
+```
+from PyQt4 import QtGui
+```
+
 To use PyQt5, you need to use ``load_stylesheet_pyqt5`` instead of
 ``load_stylesheet``.
 
