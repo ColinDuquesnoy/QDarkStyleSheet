@@ -126,6 +126,10 @@ request.
 Changelog
 ===========
 
+* 2.1:
+    - Add style for QPushButton:checked
+    - Improve QCheckBox and QRadioButton style
+    - Add style for QMenu::right-arrow
 * 2.0: Improve stylesheet to make it look a bit more modern (see pull request #25)
 * 1.16: fix QGroupBox title padding (see issue #20)
 * 1.15: improve tristate checkbox graphics: undetermined state is now represented by a dash
