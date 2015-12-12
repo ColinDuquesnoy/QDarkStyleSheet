@@ -55,7 +55,7 @@ else
 {
     f.open(QFile::ReadOnly | QFile::Text);
     QTextStream ts(&f);
-    QApplication::instance()->setStyleSheet(ts.readAll());
+    qApp->setStyleSheet(ts.readAll());
 }
 
 ```
