@@ -51,7 +51,7 @@ if (!f.exists())
 {
     printf("Unable to set stylesheet, file not found\n");
 }
-else 
+else
 {
     f.open(QFile::ReadOnly | QFile::Text);
     QTextStream ts(&f);
@@ -126,6 +126,9 @@ request.
 Changelog
 ===========
 
+* 2.2:
+    - Major update of the color scheme based on the Breeze Dark theme of KDE 5
+    - fix issues #29, #30, #31, #32 and #35
 * 2.1:
     - Add style for QPushButton:checked
     - Improve QCheckBox and QRadioButton style
@@ -196,7 +199,3 @@ Here are a few snapshots:
 ![alt text](/screenshots/QDarkStyle example 1.png "QDarkStyle example 1")
 ![alt text](/screenshots/QDarkStyle example 2.png "QDarkStyle example 2")
 ![alt text](/screenshots/01.png "Screenshot 01")
-
-
-
-
