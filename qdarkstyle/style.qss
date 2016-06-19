@@ -1046,12 +1046,14 @@ QToolButton[popupMode="2"] { /* only for InstantPopup */
 QToolButton:hover, QToolButton::menu-button:hover {
     background-color: transparent;
     border: 1px solid #78879b;
+    padding: 2px;
 }
 
 QToolButton:checked, QToolButton:pressed,
         QToolButton::menu-button:pressed {
     background-color: #4A4949;
     border: 1px solid #78879b;
+    padding: 2px;
 }
 
 /* the subcontrol below is used only in the InstantPopup or DelayedPopup mode */
