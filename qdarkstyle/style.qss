@@ -38,6 +38,7 @@ QWidget
     selection-color: #eff0f1;
     background-clip: border;
     border-image: none;
+    border: 0px transparent black;
     outline: 0;
 }
 
@@ -1169,8 +1170,7 @@ QToolBox::tab:selected { /* italicize selected tabs */
  }
 
 QStatusBar::item {
-    border: 1px solid #76797C;
-    border-radius: 2px;
+    border: 0px transparent dark;
  }
 
 
