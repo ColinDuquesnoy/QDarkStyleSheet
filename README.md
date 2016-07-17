@@ -126,6 +126,9 @@ request.
 Changelog
 ===========
 
+* 2.2.1:
+    - remove border of status bar widgets
+
 * 2.2:
     - Major update of the color scheme based on the Breeze Dark theme of KDE 5
     - fix issues #29, #30, #31, #32 and #35
