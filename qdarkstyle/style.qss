@@ -788,6 +788,8 @@ QTabBar::tab:top:!selected
     background-color: #54575B;
     border: 1px solid #76797C;
     border-bottom: 1px transparent black;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;    
 }
 
 QTabBar::tab:top:!selected:hover {
@@ -863,10 +865,10 @@ QTabBar::tab:right:!selected
 {
     color: #eff0f1;
     background-color: #54575B;
-    border: 1px transparent #76797C;
+    border: 1px solid #76797C;
     border-right: 1px transparent black;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
 }
 
 QTabBar::tab:right:!selected:hover {
