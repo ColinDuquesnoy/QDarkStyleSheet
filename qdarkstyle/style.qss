@@ -730,6 +730,7 @@ QAbstractSpinBox::down-arrow:hover
 QLabel
 {
     border: 0px solid black;
+	color: white;
 }
 
 QTabWidget{
