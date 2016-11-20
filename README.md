@@ -126,6 +126,11 @@ request.
 Changelog
 ===========
 
+* 2.2.2:
+    - Add hover to unselected item in QListView/QTreeView
+    - Fixes for vertical QToolBar, QToolBar Extend Button & QTabWidget's Pane Misalignment
+    - Fixed consistency of QTabBar depending on position
+
 * 2.2.1:
     - remove border of status bar widgets
 
