@@ -580,7 +580,10 @@ QToolBar::separator:horizontal {
     image: url(:/qss_icons/rc/Hsepartoolbar.png);
 }
 QToolBar::separator:vertical {
-    image: url(:/qss_icons/rc/Vsepartoolbars.png);
+    image: url(:/qss_icons/rc/Vsepartoolbar.png);
+}
+QToolButton#qt_toolbar_ext_button {
+    background: #58595a
 }
 
 QPushButton
@@ -739,7 +742,7 @@ QTabWidget{
 QTabWidget::pane {
     border: 1px solid #76797C;
     padding: 5px;
-    margin: 1px;
+    margin: 0px;
 }
 
 QTabBar
