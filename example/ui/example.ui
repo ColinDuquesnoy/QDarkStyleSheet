@@ -47,8 +47,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>718</width>
-                <height>227</height>
+                <width>98</width>
+                <height>44</height>
                </rect>
               </property>
               <attribute name="label">
@@ -65,8 +65,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>718</width>
-                <height>227</height>
+                <width>697</width>
+                <height>210</height>
                </rect>
               </property>
               <attribute name="label">
@@ -210,6 +210,9 @@
            </attribute>
           </widget>
          </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QDateEdit" name="dateEdit"/>
         </item>
        </layout>
       </widget>
@@ -357,7 +360,7 @@
      <x>0</x>
      <y>0</y>
      <width>1068</width>
-     <height>29</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMenu">
