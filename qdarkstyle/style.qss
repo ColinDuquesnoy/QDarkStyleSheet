@@ -1210,3 +1210,51 @@ QProgressBar {
 QProgressBar::chunk {
     background-color: #05B8CC;
 }
+
+QDateEdit
+{
+    selection-background-color: #3daee9;
+    border-style: solid;
+    border: 1px solid #3375A3;
+    border-radius: 2px;
+    padding: 1px;
+    min-width: 75px;
+}
+
+QDateEdit:on
+{
+    padding-top: 3px;
+    padding-left: 4px;
+    selection-background-color: #4a4a4a;
+}
+
+QDateEdit QAbstractItemView
+{
+    background-color: #232629;
+    border-radius: 2px;
+    border: 1px solid #3375A3;
+    selection-background-color: #3daee9;
+}
+
+QDateEdit::drop-down
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 0px;
+    border-left-color: darkgray;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QDateEdit::down-arrow
+{
+    image: url(:/qss_icons/rc/down_arrow_disabled.png);
+}
+
+QDateEdit::down-arrow:on, QDateEdit::down-arrow:hover,
+QDateEdit::down-arrow:focus
+{
+    image: url(:/qss_icons/rc/down_arrow.png);
+}
