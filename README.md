@@ -126,6 +126,9 @@ request.
 Changelog
 ===========
 
+* 2.3.0:
+    - Add support for QDateEdit
+
 * 2.2.2:
     - Add hover to unselected item in QListView/QTreeView
     - Fixes for vertical QToolBar, QToolBar Extend Button & QTabWidget's Pane Misalignment
