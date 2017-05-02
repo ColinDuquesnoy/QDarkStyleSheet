@@ -1,5 +1,5 @@
 QDarkStylesheet
-==================
+===============
 
 [![Build Status](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet.png?branch=master)](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet)
 [![Number of PyPI downloads](https://img.shields.io/pypi/dm/QDarkStyle.svg)](https://pypi.python.org/pypi/QDarkStyle)
@@ -9,16 +9,16 @@ A dark stylesheet for Qt applications (Qt4, Qt5, PySide, PyQt4 and PyQt5).
 
 
 License
-===========
+=======
 
 This project is licensed under the MIT license.
 
 
 Installation
-==============
+============
 
 Python
------------
+------
 
 Install ``qdarkstyle`` package using the *setup* script or using *pip*:
 
@@ -33,7 +33,7 @@ pip install qdarkstyle
 ```
 
 C++
----------
+---
 
 1) Download/clone the project and copy the following files to your application directory (keep the existing directory hierarchy):
 
@@ -63,7 +63,7 @@ else
 
 
 Usage
-============
+=====
 
 Here is an example using PySide:
 
@@ -99,32 +99,36 @@ app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
 ```
 
 and
-```
+```Python
 from PySide import QtGui
 ```
 
 by
 
-```
+```Python
 from PyQt4 import QtGui
 ```
 
 To use PyQt5, you need to use ``load_stylesheet_pyqt5`` instead of
 ``load_stylesheet``.
 
+```Python
+app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+```
+
 _There is an example included in the *example* folder.
 You can run the script without installing qdarkstyle. You only need to have
 PySide (or PyQt4 or PyQt5) installed on your system._
 
 Status:
-===========
+=======
 
 Most widgets have been styled. If you find a widget that has not been
 style, just open an issue on the issue tracker or, better, submit a pull
 request.
 
 Changelog
-===========
+=========
 
 * 2.3.0:
     - Add support for QDateEdit
@@ -196,16 +200,16 @@ Changelog
 
 
 Contact information:
-=========================
+====================
 
   - Maintainer: colin.duquesnoy@gmail.com
   - Homepage: https://github.com/ColinDuquesnoy/QDarkStyleSheet
 
 
 Snapshots
-=================
+=========
 
 Here are a few snapshots:
 
-![alt text](/screenshots/QDarkStyle example 1.png "QDarkStyle example 1")
-![alt text](/screenshots/QDarkStyle example 2.png "QDarkStyle example 2")
+![alt text](https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/screenshots/QDarkStyle%20example%201.png "QDarkStyle example 1")
+![alt text](https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/screenshots/QDarkStyle%20example%202.png "QDarkStyle example 2")
