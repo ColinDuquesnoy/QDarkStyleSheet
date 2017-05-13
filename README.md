@@ -130,6 +130,13 @@ request.
 Changelog
 =========
 
+* 2.3.1:
+    - Improve checkbox color (use accent color used in other widgets) and darken view hover/selected colors to play nicer with other widget colors
+    - Shift to the right the first tab
+    - Update license year
+    - Update README.md (fix snapshots links and formatting)
+    - Removed QLineEdit top/bottom padding which cut off text while editing QListView items
+
 * 2.3.0:
     - Add support for QDateEdit
 
