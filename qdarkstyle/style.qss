@@ -332,6 +332,11 @@ QLineEdit
     color: #eff0f1;
 }
 
+QAbstractItemView QLineEdit
+{
+    padding: 0;
+}
+
 QGroupBox {
     border:1px solid #76797C;
     border-radius: 2px;
