@@ -44,13 +44,13 @@ QWidget
 
 QWidget:item:hover
 {
-    background-color: #3daee9;
+    background-color: #18465d;
     color: #eff0f1;
 }
 
 QWidget:item:selected
 {
-    background-color: #3daee9;
+    background-color: #18465d;
 }
 
 QCheckBox
@@ -662,7 +662,7 @@ QComboBox QAbstractItemView
     background-color: #232629;
     border-radius: 2px;
     border: 1px solid #76797C;
-    selection-background-color: #3daee9;
+    selection-background-color: #18465d;
 }
 
 QComboBox::drop-down
@@ -969,13 +969,13 @@ QTreeView::branch:open:has-children:has-siblings:hover  {
     }
 
 QListView::item:!selected:hover, QTreeView::item:!selected:hover  {
-    background: rgba(167,218,245, 0.3);
+    background: #18465d;
     outline: 0;
     color: #eff0f1
 }
 
 QListView::item:selected:hover, QTreeView::item:selected:hover  {
-    background: #3daee9;
+    background: #287399;
     color: #eff0f1;
 }
 
@@ -1090,12 +1090,12 @@ QTableView, QHeaderView
 }
 
 QTableView::item:pressed, QListView::item:pressed, QTreeView::item:pressed  {
-    background: #3daee9;
+    background: #18465d;
     color: #eff0f1;
 }
 
 QTableView::item:selected:active, QTreeView::item:selected:active, QListView::item:selected:active  {
-    background: #3daee9;
+    background: #287399;
     color: #eff0f1;
 }
 

@@ -71,6 +71,9 @@ def main():
         ui.actionAction,
         ui.actionAction_C
     ])
+    item = QtWidgets.QTableWidgetItem("Test")
+    item.setCheckState(QtCore.Qt.Checked)
+    ui.tableWidget.setItem(0, 0, item)
     window.setWindowTitle("QDarkStyle example")
 
     # tabify dock widgets to show bug #6
