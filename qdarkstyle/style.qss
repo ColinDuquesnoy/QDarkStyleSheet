@@ -236,7 +236,6 @@ QMenu::icon
 QMenu::item
 {
     padding: 5px 30px 5px 30px;
-    margin-left: 5px;
     border: 1px solid transparent; /* reserve space for selection border */
 }
 
