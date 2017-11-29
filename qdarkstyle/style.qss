@@ -799,7 +799,7 @@ QTabBar::tab:top:!selected
     border: 1px solid #76797C;
     border-bottom: 1px transparent black;
     border-top-left-radius: 2px;
-    border-top-right-radius: 2px;    
+    border-top-right-radius: 2px;
 }
 
 QTabBar::tab:top:!selected:hover {
@@ -976,6 +976,36 @@ QListView::item:!selected:hover, QTreeView::item:!selected:hover  {
 QListView::item:selected:hover, QTreeView::item:selected:hover  {
     background: #287399;
     color: #eff0f1;
+}
+
+QTreeView::indicator:checked, QListView::indicator:checked
+{
+    image: url(:/qss_icons/rc/checkbox_checked.png);
+}
+
+QTreeView::indicator:checked, QListView::indicator:checked
+{
+    image: url(:/qss_icons/rc/checkbox_unchecked.png);
+}
+
+QTreeView::indicator:checked:hover,
+QTreeView::indicator:checked:focus,
+QTreeView::indicator:checked:pressed,
+QListView::indicator:checked:hover,
+QListView::indicator:checked:focus,
+QListView::indicator:checked:pressed
+{
+    image: url(:/qss_icons/rc/checkbox_checked_focus.png);
+}
+
+QTreeView::indicator:unchecked:hover,
+QTreeView::indicator:unchecked:focus,
+QTreeView::indicator:unchecked:pressed,
+QListView::indicator:unchecked:hover,
+QListView::indicator:unchecked:focus,
+QListView::indicator:unchecked:pressed
+{
+    image: url(:/qss_icons/rc/checkbox_unchecked_focus.png);
 }
 
 QSlider::groove:horizontal {
