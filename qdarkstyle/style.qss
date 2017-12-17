@@ -983,7 +983,7 @@ QTreeView::indicator:checked, QListView::indicator:checked
     image: url(:/qss_icons/rc/checkbox_checked.png);
 }
 
-QTreeView::indicator:checked, QListView::indicator:checked
+QTreeView::indicator:unchecked, QListView::indicator:unchecked
 {
     image: url(:/qss_icons/rc/checkbox_unchecked.png);
 }
