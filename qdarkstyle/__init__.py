@@ -136,7 +136,7 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
 
     # Just a warning if both are set but differs each other
     if qt_api and pyqtgraph_qt_lib:
-        if qt_api != pyqtgraph_qt_lib:
+        if qt_api != pyqtgraph_qt_lib.lower():
             _logger().warning("Both QT_API=%s and PYQTGRAPH_QT_LIB=%s are set, "
                               "but with different values, this could cause "
                               "some issues if using them in the same project!"
