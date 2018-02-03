@@ -26,3 +26,9 @@ deb_dist
 # hackedit project files
 .hackedit
 
+# vs code project files
+.vscode
+.mypy_cache
+.cache
+.env
+

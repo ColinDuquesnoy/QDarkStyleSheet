@@ -73,47 +73,100 @@ import sys
 import qdarkstyle
 from PySide import QtGui
 
-
 # create the application and the main window
 app = QtGui.QApplication(sys.argv)
 window = QtGui.QMainWindow()
 
 # setup stylesheet
-app.setStyleSheet(qdarkstyle.load_stylesheet())
+app.setStyleSheet(qdarkstyle.load_stylesheet_pyside())
 
 # run
 window.show()
 app.exec_()
 ```
 
-To use PyQt4 instead of PySide, you just need to replace
+To use another wrapper for Qt, you just need to replace some lines. See examples bellow.
 
-```Python
-app.setStyleSheet(qdarkstyle.load_stylesheet())
-```
+To use PyQt4, change two lines:
 
-by
-
-```Python
-app.setStyleSheet(qdarkstyle.load_stylesheet(pyside=False))
-```
-
-and
 ```Python
 from PySide import QtGui
+app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt())
 ```
 
-by
+If PyQt5, more lines need to be changed because of its API, see the complete example
 
 ```Python
-from PyQt4 import QtGui
-```
+import sys
+import qdarkstyle
+from PyQt5 import QtWidgets
 
-To use PyQt5, you need to use ``load_stylesheet_pyqt5`` instead of
-``load_stylesheet``.
+# create the application and the main window
+app = QtWidgets.QApplication(sys.argv)
+window = QtWidgets.QMainWindow()
 
-```Python
+# setup stylesheet
 app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+
+# run
+window.show()
+app.exec_()
+```
+
+If your project uses QtPy or you need to set it programmatically, it is far more simple:
+
+```Python
+
+import sys
+import qdarkstyle
+import os
+
+# set the environment variable to use a specific wrapper
+# it can be set to pyqt, pyqt5, pyside or pyside2 (not implemented yet)
+# you do not need to use QtPy to set this variable
+os.environ['QT_API'] = 'pyqt'
+
+# import from QtPy instead of doing it directly
+# note that QtPy always uses PyQt5 API
+from qtpy import QtWidgets
+
+# create the application and the main window
+app = QtWidgets.QApplication(sys.argv)
+window = QtWidgets.QMainWindow()
+
+# setup stylesheet
+app.setStyleSheet(qdarkstyle.load_stylesheet_from_environment())
+
+# run
+window.show()
+app.exec_()
+```
+
+It is also simple if you use PyQtGraph:
+
+```Python
+import sys
+import qdarkstyle
+import os
+
+# set the environment variable to use a specific wrapper
+# it can be set to PyQt, PyQt5, PySide or PySide2 (not implemented yet)
+os.environ['PYQTGRAPH_QT_LIB'] = 'PyQt' 
+
+# import from pyqtgraph instead of doing it directly
+# note that PyQtGraph always uses PyQt4 API
+from pyqtgraph.Qt import QtGui
+
+# create the application and the main window
+app = QtGui.QApplication(sys.argv)
+window = QtGui.QMainWindow()
+
+# setup stylesheet
+app.setStyleSheet(qdarkstyle.load_stylesheet_from_environment(is_pyqtgraph=True))
+
+# run
+window.show()
+app.exec_()
 ```
 
 _There is an example included in the *example* folder.
@@ -129,6 +182,8 @@ request.
 
 Changelog
 =========
+* 2.4:
+    - Add function to get Qt information from environment variable
 
 * 2.3.1:
     - Improve checkbox color (use accent color used in other widgets) and darken view hover/selected colors to play nicer with other widget colors
