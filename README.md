@@ -183,10 +183,40 @@ PySide (or PyQt4 or PyQt5) installed on your system._
 Snapshots
 =========
 
-Here are a few snapshots:
+Here are a few snapshots comparing the use of QDarkStyle and the default style.
+Click in the image to zoom.
 
-![alt text](https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/screenshots/QDarkStyle%20example%201.png "QDarkStyle example 1")
-![alt text](https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/screenshots/QDarkStyle%20example%202.png "QDarkStyle example 2")
+
+<table style="width:100%">
+  <tr>
+    <th colspan=2>Containers (no tabs) and Buttons</th>
+  </tr>
+  <tr>
+    <td><img src="./screenshots/qdarkstyle_containers_buttons.png"/></td>
+    <td><img src="./screenshots/no_dark_containers_buttons.png"/></td>
+  </tr>
+  <tr>
+    <th colspan=2>Containers (tabs) and Displays</th>
+  </tr>
+  <tr>
+    <td><img src="./screenshots/qdarkstyle_containers_tabs_displays.png"/></td>
+    <td><img src="./screenshots/no_dark_containers_tabs_displays.png"/></td>
+  </tr>
+  <tr>
+    <th colspan=2>Widgets and Inputs (with fields)</th>
+  </tr>
+  <tr>
+    <td><img src="./screenshots/qdarkstyle_widgets_inputs_fields.png"/></td>
+    <td><img src="./screenshots/no_dark_widgets_inputs_fields.png"/></td>
+  </tr>
+  <tr>
+    <th colspan=2>Views and Inputs (without fields)</th>
+  </tr>
+  <tr>
+    <td><img src="./screenshots/qdarkstyle_views_inputs_no_fields.png"/></td>
+    <td><img src="./screenshots/no_dark_views_inputs_no_fields.png"/></td>
+  </tr>
+</table>
 
 
 Changelog

@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>762</width>
+    <height>705</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::South</enum>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="ContainerContainers">
+       <attribute name="title">
+        <string>Containers</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_29">
+        <item row="1" column="2">
+         <widget class="QGroupBox" name="groupBoxDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Inside GroupBox</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QToolBox" name="toolBoxDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="page_4">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>196</width>
+             <height>73</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Page 1</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_23">
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_93">
+              <property name="text">
+               <string>Inside ToolBox Page 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_5">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>163</width>
+             <height>38</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Page 2</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_24">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_94">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ToolBox Page 2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="7" column="2">
+         <widget class="QMdiArea" name="mdiAreaDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <widget class="QWidget" name="subwindow1Dis">
+           <property name="windowTitle">
+            <string>Subwindow</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_98">
+              <property name="text">
+               <string>Inside MDI Area 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="subwindow2Dis">
+           <property name="windowTitle">
+            <string>Subwindow</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_99">
+              <property name="text">
+               <string>Inside MDI Area 2 </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QMdiArea" name="mdiArea">
+          <widget class="QWidget" name="subwindow1">
+           <property name="windowTitle">
+            <string>Subwindow</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_28">
+              <property name="text">
+               <string>Inside MDI Area 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="subwindow2">
+           <property name="windowTitle">
+            <string>Subwindow</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_40">
+              <property name="text">
+               <string>Inside MDI Area 2 </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="page1">
+           <layout class="QGridLayout" name="gridLayout_12">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_44">
+              <property name="text">
+               <string>Inside Stacked Page 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page2">
+           <layout class="QGridLayout" name="gridLayout_13">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_45">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside Stacked Page 2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QStackedWidget" name="stackedWidgetDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="page1Dis">
+           <layout class="QGridLayout" name="gridLayout_26">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_95">
+              <property name="text">
+               <string>Inside Stacked Page 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page2Dis">
+           <layout class="QGridLayout" name="gridLayout_27">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_96">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside Stacked Page 2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QScrollArea" name="scrollAreaDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContentsDis">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>181</width>
+             <height>246</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_84">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_85">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>ScroolArea </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_86">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_87">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_88">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_89">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_90">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_91">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_92">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QWidget" name="widget" native="true">
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_17">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_47">
+             <property name="toolTip">
+              <string>This is a tool tip</string>
+             </property>
+             <property name="statusTip">
+              <string>This is a status tip</string>
+             </property>
+             <property name="whatsThis">
+              <string>This is &quot;what is this&quot;</string>
+             </property>
+             <property name="text">
+              <string>Inside Widget</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_100">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Enabled</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QFrame" name="frameDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_25">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="toolTip">
+              <string>This is a tool tip</string>
+             </property>
+             <property name="statusTip">
+              <string>This is a status tip</string>
+             </property>
+             <property name="whatsThis">
+              <string>This is &quot;what is this&quot;</string>
+             </property>
+             <property name="text">
+              <string>Inside Frame</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QToolBox" name="toolBox">
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="page_1">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>196</width>
+             <height>73</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Page 1</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_14">
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_41">
+              <property name="text">
+               <string>Inside ToolBox Page 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="page_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>163</width>
+             <height>38</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Page 2</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_15">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_42">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ToolBox Page 2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QFrame" name="frame">
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="toolTip">
+              <string>This is a tool tip</string>
+             </property>
+             <property name="statusTip">
+              <string>This is a status tip</string>
+             </property>
+             <property name="whatsThis">
+              <string>This is &quot;what is this&quot;</string>
+             </property>
+             <property name="text">
+              <string>Inside Frame</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="6" column="2">
+         <widget class="QWidget" name="widgetDis" native="true">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_28">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_97">
+             <property name="toolTip">
+              <string>This is a tool tip</string>
+             </property>
+             <property name="statusTip">
+              <string>This is a status tip</string>
+             </property>
+             <property name="whatsThis">
+              <string>This is &quot;what is this&quot;</string>
+             </property>
+             <property name="text">
+              <string>Inside Widget</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="title">
+           <string>GroupBox</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="toolTip">
+              <string>This is a tool tip</string>
+             </property>
+             <property name="statusTip">
+              <string>This is a status tip</string>
+             </property>
+             <property name="whatsThis">
+              <string>This is &quot;what is this&quot;</string>
+             </property>
+             <property name="text">
+              <string>Inside GroupBox</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_101">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Disabled</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_102">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>GroupBox</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_103">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ScroolArea</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_104">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ToolBox</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_105">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Stacked</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_106">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Frame</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_107">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Widget</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_108">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>MDI Area</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>181</width>
+             <height>246</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_43">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_63">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>ScroolArea </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_66">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_67">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_68">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_46">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_69">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_64">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_65">
+              <property name="toolTip">
+               <string>This is a tool tip</string>
+              </property>
+              <property name="statusTip">
+               <string>This is a status tip</string>
+              </property>
+              <property name="whatsThis">
+               <string>This is &quot;what is this&quot;</string>
+              </property>
+              <property name="text">
+               <string>Inside ScroolArea</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="ContainerContainersTab">
+       <attribute name="title">
+        <string>Containers - Tabs</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_22">
+        <item row="0" column="0">
+         <widget class="QTabWidget" name="tabWidgetNorth">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="documentMode">
+           <bool>false</bool>
+          </property>
+          <property name="tabsClosable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tab_7">
+           <attribute name="title">
+            <string>Tab 1</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_8">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_52">
+              <property name="text">
+               <string>Inside TabWidget North Closable Tab 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_8">
+           <attribute name="title">
+            <string>Tab 2</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_48">
+              <property name="text">
+               <string>Inside TabWidget North Closable Tab 2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QTabWidget" name="tabWidgetWest">
+          <property name="tabPosition">
+           <enum>QTabWidget::West</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_5">
+           <attribute name="title">
+            <string>Tab 1</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_39">
+              <property name="text">
+               <string>Inside TabWidget West Tab 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_6">
+           <attribute name="title">
+            <string>Tab 2</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_9">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_54">
+              <property name="text">
+               <string>Inside TabWidget West Tab 2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QTabWidget" name="tabWidgetEast">
+          <property name="tabPosition">
+           <enum>QTabWidget::East</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>Tab 1</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_38">
+              <property name="text">
+               <string>Inside TabWidget East Tab 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>Tab 2</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_11">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_55">
+              <property name="text">
+               <string>Inside TabWidget East Tab 2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QTabWidget" name="tabWidgetSouth">
+          <property name="tabPosition">
+           <enum>QTabWidget::South</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="tabsClosable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Tab 1</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_34">
+              <property name="text">
+               <string>Inside TabWidget South Closable Tab 1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>Tab 2</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_18">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_62">
+              <property name="text">
+               <string>Inside TabWidget South Closable Tab 2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="ContainerWidgets">
+       <attribute name="title">
+        <string>Widgets</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="1" column="2">
+         <widget class="QListWidget" name="listWidget">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <row>
+           <property name="text">
+            <string>New Row</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>New Row</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>New Row</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>New Column</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>New Column</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>1.23</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>Hello</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>1,45</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>Olá</string>
+           </property>
+          </item>
+          <item row="2" column="0">
+           <property name="text">
+            <string>12/12/2012</string>
+           </property>
+          </item>
+          <item row="2" column="1">
+           <property name="text">
+            <string>Oui</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QTreeWidget" name="treeWidget">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>New Column</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>New Column</string>
+           </property>
+          </column>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <item>
+            <property name="text">
+             <string>New Subitem</string>
+            </property>
+            <property name="text">
+             <string>Test</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>New Subitem</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+           </item>
+          </item>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <item>
+            <property name="text">
+             <string>New Subitem</string>
+            </property>
+           </item>
+          </item>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="label_58">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="text">
+           <string>TableWidget</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QTableWidget" name="tableWidgetDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <row>
+           <property name="text">
+            <string>New Row</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>New Row</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>New Row</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>New Column</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>New Column</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>1.23</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>Hello</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>1,45</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>Olá</string>
+           </property>
+          </item>
+          <item row="2" column="0">
+           <property name="text">
+            <string>12/12/2012</string>
+           </property>
+          </item>
+          <item row="2" column="1">
+           <property name="text">
+            <string>Oui</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QListWidget" name="listWidgetDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_57">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="text">
+           <string>TreeWidget</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_56">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="text">
+           <string>ListWidget</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QTreeWidget" name="treeWidgetDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string>New Column</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>New Column</string>
+           </property>
+          </column>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <item>
+            <property name="text">
+             <string>New Subitem</string>
+            </property>
+            <property name="text">
+             <string>Test</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>New Subitem</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+           </item>
+          </item>
+          <item>
+           <property name="text">
+            <string>New Item</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>New Subitem</string>
+            </property>
+           </item>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_81">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Enabled</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_82">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Disabled</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="ContainerViews">
+       <attribute name="title">
+        <string>Views</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="2" column="1">
+         <widget class="QTreeView" name="treeView"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_27">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ListView</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QListView" name="listView"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_59">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TreeView</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_60">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TableView</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTableView" name="tableView"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_61">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ColunmView</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QColumnView" name="columnView"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_70">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Enabled</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QListView" name="listViewDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_80">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Disabled</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QTreeView" name="treeViewDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QTableView" name="tableViewDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QColumnView" name="columnViewDis">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_71">
+      <property name="text">
+       <string>Inside CentralWidget</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>762</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <widget class="QMenu" name="menuMenuSub">
+     <property name="title">
+      <string>Menu Sub</string>
+     </property>
+     <addaction name="actionActionSubA"/>
+     <addaction name="actionActionSubB"/>
+    </widget>
+    <addaction name="actionActionA"/>
+    <addaction name="menuMenuSub"/>
+   </widget>
+   <widget class="QMenu" name="menuMenuDelayed">
+    <property name="title">
+     <string>Menu Delayed</string>
+    </property>
+    <widget class="QMenu" name="menuMenuSubDelayed">
+     <property name="title">
+      <string>Menu Sub Delayed</string>
+     </property>
+     <addaction name="actionActionDelayedSubA"/>
+    </widget>
+    <addaction name="actionActionDelayedA"/>
+    <addaction name="menuMenuSubDelayed"/>
+   </widget>
+   <widget class="QMenu" name="menuMenuCheckale">
+    <property name="title">
+     <string>Menu Checkable</string>
+    </property>
+    <addaction name="actionActionCheckableA"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About QDarkStyle</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuMenu"/>
+   <addaction name="menuMenuDelayed"/>
+   <addaction name="menuMenuCheckale"/>
+   <addaction name="menuHelp"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionActionA"/>
+   <addaction name="separator"/>
+   <addaction name="actionActionSubA"/>
+   <addaction name="actionActionSubB"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarDelayed">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionActionDelayedA"/>
+   <addaction name="separator"/>
+   <addaction name="actionActionDelayedSubA"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarCheckable">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionActionCheckableA"/>
+   <addaction name="separator"/>
+   <addaction name="actionActionCheckableSubAChecked"/>
+   <addaction name="actionActionCheckableSubAUnchecked"/>
+  </widget>
+  <action name="actionActionA">
+   <property name="text">
+    <string>Action A</string>
+   </property>
+  </action>
+  <action name="actionActionSubA">
+   <property name="text">
+    <string>Action A Sub</string>
+   </property>
+   <property name="toolTip">
+    <string>Action A Sub</string>
+   </property>
+  </action>
+  <action name="actionActionSubB">
+   <property name="text">
+    <string>Action B Sub</string>
+   </property>
+  </action>
+  <action name="actionActionDelayedA">
+   <property name="text">
+    <string>Action Delayed A</string>
+   </property>
+   <property name="toolTip">
+    <string>Action Delayed A</string>
+   </property>
+  </action>
+  <action name="actionActionDelayedSubA">
+   <property name="text">
+    <string>Action Delayed Sub A</string>
+   </property>
+   <property name="toolTip">
+    <string>Action Delayed Sub A</string>
+   </property>
+  </action>
+  <action name="actionActionCheckableA">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Action Checkable A</string>
+   </property>
+   <property name="toolTip">
+    <string>Action Checkable A</string>
+   </property>
+  </action>
+  <action name="actionActionCheckableSubAChecked">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Action Checkable Sub A Checked</string>
+   </property>
+   <property name="toolTip">
+    <string>Action Checkable Sub A Checked</string>
+   </property>
+  </action>
+  <action name="actionActionCheckableSubAUnchecked">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Action Checkable Sub A Unchecked</string>
+   </property>
+   <property name="toolTip">
+    <string>Action Checkable Sub A Unchecked</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>toolBox</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>toolBoxDis</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>261</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>333</x>
+     <y>270</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
