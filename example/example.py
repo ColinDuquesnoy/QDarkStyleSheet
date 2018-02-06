@@ -127,7 +127,8 @@ def main():
     window = QMainWindow()
     ui = ui_main()
     ui.setupUi(window)
-    window.setWindowTitle("QDarkStyle Example - Using " + args.qt_from)
+    window.setWindowTitle("QDarkStyle v." + qdarkstyle.__version__ +
+                          " - Example - Using " + args.qt_from)
 
     # create docks for buttons
     dw_buttons = QDockWidget()
