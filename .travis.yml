@@ -1,6 +1,10 @@
 language: python
 python:
   - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
 virtualenv:
   system_site_packages: true
 before_install:
@@ -14,5 +18,8 @@ before_install:
 before_script:
   - cd example
 script:
-  - python example_pyqt.py --travis
-  - python example_pyside.py --travis
+  - python example.py --qt_from=pyqt --travis
+  - python example.py --qt_from=pyside --travis
+
+  - python example.py --qt_from=pyqt --no_dark --travis
+  - python example.py --qt_from=pyside --no_dark --travis
