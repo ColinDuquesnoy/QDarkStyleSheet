@@ -1,23 +1,38 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""
-A simple example of use.
+"""Example of qdarkstyle use for Python and Qt applications.
 
-Load an ui made in QtDesigner and apply the DarkStyleSheet.
+This module a main window with every item that could be created with
+Qt Design (common ones) in the basic states (enabled/disabled), and
+(checked/unchecked) for those who has this attribute.
 
 Requirements:
+
     - Python 2 or Python 3
-    - PyQt4, PyQt5 or PySide
-    - QtPy or PyQtGraph (if necessary)
+    - PyQt4 or PyQt5 or PySide
+    - QtPy or PyQtGraph (if choosen)
 
-Running:
+To run this example using PyQt4, simple do
 
-python example.py --qt_from=pyside (or any other available)
+.. code-block:: python
 
-To see all options for starting this example, run:
+    python example.py
 
-python example --help
+or
+
+.. code-block:: python
+
+    python example.py  --qt_from=pyqt
+
+Other options for qt_from are: pyqt5, pyside, qtpy and pyqtgraph.
+
+You also can run the example without dark theme (no_dark), to check for
+problems.
+
+.. code-block:: python
+
+    python example.py  --qt_from=pyqt --no_dark
 
 .. note.. :: qdarkstyle does not have to be installed to run the example.
 
@@ -27,22 +42,22 @@ import logging
 import sys
 import argparse
 
-import qdarkstyle
-
 # make the example runnable without the need to install
 from os.path import abspath, dirname
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
+
+import qdarkstyle
 
 
 def main():
     """Execute QDarkStyle example."""
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument('--qt_from', default='pyqt5',
+    parser.add_argument('--qt_from', default='pyqt',
                         choices=['pyqt', 'pyqt5', 'pyside', 'qtpy', 'pyqtgraph'],
                         help="Choose which wrapper/framework is to be used to run the example.", type=str)
     parser.add_argument('--no_dark', action='store_true',
-                        help="Exihibts the original (without qdarkstyle) window.")
+                        help="Exihibts the original  window (without qdarkstyle).")
 
     # parsing arguments from command line
     args = parser.parse_args()
