@@ -15,8 +15,8 @@ before_install:
 before_script:
   - cd example
 script:
-  - python example.py --qt_from=pyqt --travis
-  - python example.py --qt_from=pyside --travis
+  - python example.py --qt_from=pyqt --test
+  - python example.py --qt_from=pyside --test
 
-  - python example.py --qt_from=pyqt --no_dark --travis
-  - python example.py --qt_from=pyside --no_dark --travis
+  - python example.py --qt_from=pyqt --no_dark --test
+  - python example.py --qt_from=pyside --no_dark --test
