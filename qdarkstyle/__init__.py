@@ -1,33 +1,49 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#
-# The MIT License (MIT)
-#
-# Copyright (c) <2013-2014> <Colin Duquesnoy>
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
-#
-"""
-Initialise the QDarkStyleSheet module when used with python.
 
-This modules provides a function to transparently load the stylesheets
+"""QDarkStyle is a dark stylesheet for Python and Qt applications.
+
+This module provides a function to transparently load the stylesheets
 with the correct rc file.
+
+First, start importing our module
+
+.. code-block:: python
+
+    import qdarkstyle
+
+Then you can get stylesheet provided by QDarkStyle for various Qt wrappers
+as shown bellow
+
+.. code-block:: python
+
+    # PySide
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyside()
+    # PyQt4
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyqt()
+    # PyQt5
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
+
+Or from environment variables provided for QtPy or PyQtGraph, see
+
+.. code-block:: python
+
+    # QtPy
+    dark_stylesheet = qdarkstyle.load_stylesheet_from_environment()
+    # PyQtGraph
+    dark_stylesheet = qdarkstyle.load_stylesheet_from_environment(is_pyqtgraph)
+
+Finally, set your QApplication with it
+
+.. code-block:: python
+
+    app.setStyleSheet(dark_stylesheet)
+
+Enjoy!
+
+
 """
+
 import logging
 import platform
 import os
