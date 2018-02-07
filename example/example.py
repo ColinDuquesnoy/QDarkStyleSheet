@@ -58,7 +58,8 @@ def main():
                         help="Choose which wrapper/framework is to be used to run the example.", type=str)
     parser.add_argument('--no_dark', action='store_true',
                         help="Exihibts the original  window (without qdarkstyle).")
-
+    parser.add_argument('--test', action='store_true',
+                        help="Auto close window after 2s.")
     # parsing arguments from command line
     args = parser.parse_args()
 
@@ -177,7 +178,7 @@ def main():
     # connect some actions, signals and functions
     # auto quit after 2s when testing on travis-ci
 
-    if "--travis" in sys.argv:
+    if "--test" in sys.argv:
         QTimer.singleShot(2000, app.exit)
 
     # run
