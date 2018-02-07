@@ -5,7 +5,9 @@
 
 include MANIFEST.in
 include setup.py
-include COPYING
+include AUTHORS.md
+include CHANGES.md
+include LICENSE.md
 include README.md
 include qdarkstyle/style.qss
 include qdarkstyle/style.qrc
