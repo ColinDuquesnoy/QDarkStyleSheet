@@ -1,6 +1,18 @@
 Changelog
 =========
 
+* 2.5.1:
+    - Fix travis files, needs more improvement #74
+    - Improve modules description
+    - Update setup.py, remove license
+    - Improve README, CHANGES and AUTHORS
+* 2.5:
+    - Add new complete example with new files
+    - Add new screenshots for new example
+    - Update travis files
+    - Add support to example of QtPy and PyQtGraph
+    - Move scripts for compiling to scrip folder
+    - Update README, CHANGES
 * 2.4:
     - Add function to get Qt information from environment variable #69, #70, #73
     - Add CC-BY license for images and transfer COPYING to LICENSE file #68
@@ -10,7 +22,7 @@ Changelog
     - Improve checkbox color (use accent color used in other widgets) and darken view hover/selected colors to play nicer with other widget colors
     - Shift to the right the first tab
     - Update license year
-    - Update README.md (fix snapshots links and formatting)
+    - Update README (fix snapshots links and formatting)
     - Removed QLineEdit top/bottom padding which cut off text while editing QListView items
 * 2.3.0:
     - Add support for QDateEdit
@@ -60,7 +72,7 @@ Changelog
     - Improve QToolButton style
     - Add support for InstantPopup and MenuButtonPopup
     - Improve QMenu style (better spacing with icons)
-    - Add __version__ to python package.
+    - Add \__version__ to python package.
 * 1.5:
     - Improve QTabBar style: now works with all tab bar positions (North, South, West and East)
     - Fix bug #6: hide QTabBar base to avoid stange lines at the base of the tab bar.
