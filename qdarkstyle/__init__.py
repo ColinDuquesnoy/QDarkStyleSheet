@@ -49,7 +49,7 @@ import platform
 import os
 
 
-__version__ = "2.5"
+__version__ = "2.5.1"
 
 PYQTGRAPH_QT_LIB_VALUES = ['PyQt', 'PyQt5', 'PySide', 'PySide2']
 QT_API_VALUES = ['pyqt', 'pyqt5', 'pyside', 'pyside2']
