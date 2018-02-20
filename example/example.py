@@ -171,12 +171,9 @@ def main():
 
     def read_settings(window):
         settings = QSettings('QDarkStyle', 'QDarkStyle Example')
-        pt = QPoint(200, 200)
-        sz = QSize(400, 400)
-        bt = QByteArray()
-        pos = settings.value('pos', pt)
-        size = settings.value('size', sz)
-        state = settings.value('state', bt)
+        pos = settings.value('pos', window.pos())
+        size = settings.value('size', window.size())
+        state = settings.value('state', window.saveState())
         window.restoreState(state)
         window.resize(size)
         window.move(pos)
