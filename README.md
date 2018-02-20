@@ -1,27 +1,23 @@
-QDarkStylesheet
-===============
+# QDarkStylesheet
 
 [![Build Status](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet.png?branch=master)](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet)
-[![Number of PyPI downloads](https://img.shields.io/pypi/dm/QDarkStyle.svg)](https://pypi.python.org/pypi/QDarkStyle)
 [![Latest PyPI version](https://img.shields.io/pypi/v/QDarkStyle.svg)](https://pypi.python.org/pypi/QDarkStyle)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 A dark stylesheet for Qt applications (Qt4, Qt5, PySide, PyQt4, PyQt5, QtPy,
 PyQtGraph).
 
+## Installation
 
-Installation
-============
+### Python
 
-
-Python
-------
-
-From PyPI: Get the lastest stable version of ``qdarkstyle`` package using *pip* (preferable):
+From PyPI: Get the lastest stable version of ``qdarkstyle`` package
+using *pip* (preferable):
 
 ```bash
 pip install qdarkstyle
 ```
-
 
 From code: Download/clone the project, go to ``qdarkstyle`` folder then:
 
@@ -35,41 +31,35 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
     python setup.py install
     ```
 
+### C++
 
-C++
----
+- Download/clone the project and copy the following files to your application
+  directory (keep the existing directory hierarchy):
 
-1) Download/clone the project and copy the following files to your application
-directory (keep the existing directory hierarchy):
+  - **qdarkstyle/style.qss**
+  - **qdarkstyle/style.qrc**
+  - **qdarkstyle/rc/** (the whole directory)
 
-    - **qdarkstyle/style.qss**
-    - **qdarkstyle/style.qrc**
-    - **qdarkstyle/rc/** (the whole directory)
+- Add **qdarkstyle/style.qrc** to your **.pro file**
 
-2) Add **qdarkstyle/style.qrc** to your **.pro file**
+- Load the stylesheet:
 
-3) Load the stylesheet:
+  ```cpp
+  QFile f(":qdarkstyle/style.qss");
+  if (!f.exists())
+  {
+      printf("Unable to set stylesheet, file not found\n");
+  }
+  else
+  {
+      f.open(QFile::ReadOnly | QFile::Text);
+      QTextStream ts(&f);
+      qApp->setStyleSheet(ts.readAll());
+  ```
 
-    ```cpp
-    QFile f(":qdarkstyle/style.qss");
-    if (!f.exists())
-    {
-        printf("Unable to set stylesheet, file not found\n");
-    }
-    else
-    {
-        f.open(QFile::ReadOnly | QFile::Text);
-        QTextStream ts(&f);
-        qApp->setStyleSheet(ts.readAll());
-    }
+## Usage
 
-    ```
-
-
-Usage
-=====
-
-Here is an example using PySide:
+Here is an example using PySide
 
 ```Python
 import sys
@@ -91,7 +81,7 @@ app.exec_()
 To use another wrapper for Qt, you just need to replace some lines.
 See examples bellow.
 
-To use PyQt4, change two lines:
+To use PyQt4, change two lines
 
 ```Python
 from PySide import QtGui
@@ -119,10 +109,9 @@ app.exec_()
 ```
 
 If your project uses QtPy or you need to set it programmatically,
-it is far more simple:
+it is far more simple
 
 ```Python
-
 import sys
 import qdarkstyle
 import os
@@ -148,7 +137,7 @@ window.show()
 app.exec_()
 ```
 
-It is also simple if you use PyQtGraph:
+It is also simple if you use PyQtGraph
 
 ```Python
 import sys
@@ -157,7 +146,7 @@ import os
 
 # set the environment variable to use a specific wrapper
 # it can be set to PyQt, PyQt5, PySide or PySide2 (not implemented yet)
-os.environ['PYQTGRAPH_QT_LIB'] = 'PyQt' 
+os.environ['PYQTGRAPH_QT_LIB'] = 'PyQt'
 
 # import from pyqtgraph instead of doing it directly
 # note that PyQtGraph always uses PyQt4 API
@@ -179,13 +168,10 @@ _There is an example included in the *example* folder.
 You can run the script without installing qdarkstyle. You only need to have
 PySide (or PyQt4 or PyQt5) installed on your system._
 
-
-Snapshots
-=========
+## Snapshots
 
 Here are a few snapshots comparing the use of QDarkStyle and the default style.
 Click in the image to zoom.
-
 
 <table style="width:100%">
   <tr>
@@ -218,30 +204,22 @@ Click in the image to zoom.
   </tr>
 </table>
 
-
-Changelog
-=========
+## Changelog
 
 Please, see [CHANGES](CHANGES.md) file.
 
-
-License
-=======
+## License
 
 This project is licensed under the MIT license.
 Imagens contained in this project are licensed under CC-BY license.
 
 For more information see [LICENSE](LICENSE.md) file.
 
-
-Authors
-=======
+## Authors
 
 For more information see [AUTHORS](AUTHORS.md) file.
 
-
-Contribute
-==========
+## Contribute
 
 Most widgets have been styled. If you find a widget that has not been
 style, just open an issue on the issue tracker or, better, submit a pull

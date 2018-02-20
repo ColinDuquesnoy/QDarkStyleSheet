@@ -1,5 +1,6 @@
-Mainteiner(s)
-=============
+# Authors
+
+## Mainteiner(s)
 
 These people were/are mainteiners of this project.
 
@@ -12,9 +13,7 @@ These people were/are mainteiners of this project.
     <daniel.pizetta@usp.br> -
     improvements and bug fixes.
 
-
-Contributor(s)
-==============
+## Contributor(s)
 
 These people contribute to bug fixes, improvements and so on.
 Please, insert your information after the last one.
