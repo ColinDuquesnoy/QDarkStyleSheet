@@ -224,3 +224,5 @@ For more information see [AUTHORS](AUTHORS.md) file.
 Most widgets have been styled. If you find a widget that has not been
 style, just open an issue on the issue tracker or, better, submit a pull
 request.
+
+If you want to contribute, see how to [CONTRIBUTE](CONTRIBUTE.md).

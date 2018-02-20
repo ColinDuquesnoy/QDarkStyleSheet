@@ -119,11 +119,11 @@ These are the basic steps needed to start developing on QDarkStyle.
 Inside modules we provided a logging that should be used to inform the user.
 Please, follow the levels bellow.
 
-    - debug: for debug information, high detailed one, directed to programers;
-    - info: something important for common user to know;
-    - warning: something that should not be a big problem or a desicision changed;
-    - error: some error, but not capable of stop program;
-    - critical: something that stops the running program.
+- debug: for debug information, high detailed one, directed to programers
+- info: something important for common user to know
+- warning: something that should not be a big problem or a desicision changed
+- error: some error, but not capable of stop program
+- critical: something that stops the running program
 
 ## Guide to QDarkStyle
 
@@ -133,22 +133,23 @@ widget provided by Qt - common ones. Feel free to add more to them.
 To simplify the structure, there are separated files in
 [example.ui](.example/ui/) folder.
 
-- `dw_buttons.ui`: all types of buttons;
-- `dw_containers_no_tabs.ui`: all types of containers except for tabs;
-- `dw_containers_tabs.ui`: all containers tabs;
-- `dw_displays.ui`: all types of displays;
-- `dw_inputs_fields.ui`: all types of inputs with fields;
-- `dw_inputs_no_fields.ui`: all types of inputs without fields;
-- `dw_views.ui`: all types of views;
-- `dw_widgets.ui`: all types of widgets;
-- `mw_menus.ui`: main window with all menus and toolbars.
+- `dw_buttons.ui`: all types of buttons
+- `dw_containers_no_tabs.ui`: all types of containers except for tabs
+- `dw_containers_tabs.ui`: all containers tabs
+- `dw_displays.ui`: all types of displays
+- `dw_inputs_fields.ui`: all types of inputs with fields
+- `dw_inputs_no_fields.ui`: all types of inputs without fields
+- `dw_views.ui`: all types of views
+- `dw_widgets.ui`: all types of widgets
+- `mw_menus.ui`: main window with all menus and toolbars
 
 *Obs.: `dw` stands for dock widget and `mw` for main window.*
 
 The entire example is built at runtime, in
-[example.py](./example/example.py).
+[example.py](./example/example.py). To see more information about it,
+see its documentation.
 
-To see more information about it, see its documentation.
+### Modifying UI Files
 
 Feel free to modify `.ui` files with Qt Designer and recompile UI using
 [process_ui.py](./script/process_ui.py) script, inside script folder, using:
@@ -159,15 +160,19 @@ python process_ui.py
 
 It will generate all `_ui.py` files for PyQt4, PyQt5, PySide, QtPy, PyQtGraph.
 
-If you are changing the stylesheet, you will need to recompile the QRC
-files using [process_qrc.py](./script/process_qrc.py) script, inside
-script folder.
+### Modifying QSS File
+
+If you are changing the [stylesheet](.qdarkstyle/style.qss) , you will need
+to recompile the QRC files using [process_qrc.py](./script/process_qrc.py)
+script, inside script folder.
 
 ```bash
 python process_qrc.py
 ```
 
 This generates all `_rc.py` files for PyQt4, PyQt5, PySide, QtPy, PyQtGraph.
+
+### Making It Easy
 
 To simplify this process for the developer, if you are changing many things,
 use the script [run_ui_css_edition.py](./script/run_ui_css_edition.py):
@@ -177,10 +182,9 @@ python run_ui_css_edition.py
 ```
 
 This creates a loop that restarts the application, process ui and css
-files. For more information see its documentation.
+files. 
 
-For more information about those scripts and their options, see their
-documentation.
+For more information about those scripts, see their documentation.
 
 ### Qt, Stylesheets and Palettes
 
@@ -209,3 +213,8 @@ for it. This will keep our implementation stable.
 If you are fixing something about style, please, provide an screenshot
 before and after the fix to comparison. This could be inserted in the issue
 tracker, as a message.
+
+## If You Are a Mantainer, Go Ahead
+
+We create a guide to create and upload this package to PyPI, follow the
+instructions in [PRODUCTION](.PRODUCTION.md).
