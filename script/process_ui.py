@@ -1,35 +1,46 @@
-#!python
 # -*- coding: utf-8 -*-
+"""Script to process UI files (convert .ui to .py).
 
-"""Script to process UI files.
+It compiles .ui files to be used with PyQt4, PyQt5, PySide, QtPy, PyQtGraph.
+You just need to run (it has default values) from script folder.
 
-It compiles .ui files for using PyQt4, PyQt5, PySide, QtPy, PyQtGraph.
+To run this script you need to have these tools available on system:
 
-To run this script you need to have these tools:
-    - pyuic4
-    - pyuic5
-    - pyside-uic
+    - pyuic4 for PyQt4 and PyQtGraph
+    - pyuic5 for PyQt5 and QtPy
+    - pyside-uic for Pyside
 
-This is used to compile files for examples.
+Links to understand those tools:
 
-:since: 2018/02/05
-:author: Daniel Cosmo Pizetta
+    - pyuic4: http://pyqt.sourceforge.net/Docs/PyQt4/designer.html#pyuic4
+    - pyuic5: http://pyqt.sourceforge.net/Docs/PyQt5/designer.html#pyuic5
+    - pyside-uic: https://www.mankier.com/1/pyside-uic
+
 """
 
-from __future__ import absolute_import
-from __future__ import print_function
+from __future__ import absolute_import, print_function
 
 import argparse
 import glob
 import os
-from subprocess import call
 import sys
+from subprocess import call
 
 
 def main(arguments):
     """Process UI files."""
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument('--ui_dir', help="UI directory", default='../example/ui', type=str)
+    parser = argparse.ArgumentParser(description=__doc__,
+                                     formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--ui_dir',
+                        default='../example/ui',
+                        type=str,
+                        help="UI files directory, relative to current directory.",)
+    parser.add_argument('--create',
+                        default='all',
+                        choices=['pyqt', 'pyqt5', 'pyside', 'qtpy', 'pyqtgraph', 'all'],
+                        type=str,
+                        help="Choose which one would be generated.")
+
     args = parser.parse_args(arguments)
 
     print('Changing directory to: ', args.ui_dir)
@@ -51,27 +62,35 @@ def main(arguments):
         py_file_pyqtgraph = filename + '_pyqtgraph_ui' + ext
 
         # calling external commands
-        call(['pyuic5', '--from-imports', ui_file, '-o', py_file_pyqt5])
-        call(['pyuic4', '--from-imports', ui_file, '-o', py_file_pyqt])
-        call(['pyside-uic', '--from-imports', ui_file, '-o', py_file_pyside])
+        if args.create in ['pyqt', 'pyqtgraph', 'all']:
+            call(['pyuic4', '--from-imports', ui_file, '-o', py_file_pyqt])
 
-        # special case - qtpy - syntax is PyQt5
-        with open(py_file_pyqt5, 'r') as file:
-            filedata = file.read()
-        # replace the target string
-        filedata = filedata.replace('from PyQt5', 'from qtpy')
-        with open(py_file_qtpy, 'w+') as file:
-            # write the file out again
-            file.write(filedata)
+        if args.create in ['pyqt5', 'qtpy', 'all']:
+            call(['pyuic5', '--from-imports', ui_file, '-o', py_file_pyqt5])
 
-        # special case - pyqtgraph - syntax is PyQt4
-        with open(py_file_pyqt, 'r') as file:
-            filedata = file.read()
-        # replace the target string
-        filedata = filedata.replace('from PyQt4', 'from pyqtgraph.Qt')
-        with open(py_file_pyqtgraph, 'w+') as file:
-            # write the file out again
-            file.write(filedata)
+        if args.create in ['pyside', 'all']:
+            call(['pyside-uic', '--from-imports', ui_file, '-o', py_file_pyside])
+
+        if args.create in ['qtpy', 'all']:
+            print("Compiling for PySide ...")
+            # special case - qtpy - syntax is PyQt5
+            with open(py_file_pyqt5, 'r') as file:
+                filedata = file.read()
+            # replace the target string
+            filedata = filedata.replace('from PyQt5', 'from qtpy')
+            with open(py_file_qtpy, 'w+') as file:
+                # write the file out again
+                file.write(filedata)
+
+        if args.create in ['pyqtgraph', 'all']:
+            # special case - pyqtgraph - syntax is PyQt4
+            with open(py_file_pyqt, 'r') as file:
+                filedata = file.read()
+            # replace the target string
+            filedata = filedata.replace('from PyQt4', 'from pyqtgraph.Qt')
+            with open(py_file_pyqtgraph, 'w+') as file:
+                # write the file out again
+                file.write(filedata)
 
 
 if __name__ == '__main__':
