@@ -6,7 +6,7 @@ This file describes a path to contribute to this project.
 
 If you have encountered a problem with QDarkStyle or have an idea for a new
 feature, please submit it to the
-[issue tracker](https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues)
+[issue tracker](https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues).
 
 ## Contributing to QDarkStyle
 
@@ -119,11 +119,11 @@ These are the basic steps needed to start developing on QDarkStyle.
 Inside modules we provided a logging that should be used to inform the user.
 Please, follow the levels bellow.
 
-- debug: for debug information, high detailed one, directed to programers
-- info: something important for common user to know
-- warning: something that should not be a big problem or a desicision changed
-- error: some error, but not capable of stop program
-- critical: something that stops the running program
+- debug: for debug information, high detailed one, directed to programers;
+- info: something important for common user to know;
+- warning: something that should not be a big problem or a desicision changed;
+- error: some error, but not capable of stop program;
+- critical: something that stops the running program.
 
 ## Guide to QDarkStyle
 
@@ -133,15 +133,15 @@ widget provided by Qt - common ones. Feel free to add more to them.
 To simplify the structure, there are separated files in
 [example.ui](.example/ui/) folder.
 
-- `dw_buttons.ui`: all types of buttons
-- `dw_containers_no_tabs.ui`: all types of containers except for tabs
-- `dw_containers_tabs.ui`: all containers tabs
-- `dw_displays.ui`: all types of displays
-- `dw_inputs_fields.ui`: all types of inputs with fields
-- `dw_inputs_no_fields.ui`: all types of inputs without fields
-- `dw_views.ui`: all types of views
-- `dw_widgets.ui`: all types of widgets
-- `mw_menus.ui`: main window with all menus and toolbars
+- `dw_buttons.ui`: all types of buttons;
+- `dw_containers_no_tabs.ui`: all types of containers except for tabs;
+- `dw_containers_tabs.ui`: all containers tabs;
+- `dw_displays.ui`: all types of displays;
+- `dw_inputs_fields.ui`: all types of inputs with fields;
+- `dw_inputs_no_fields.ui`: all types of inputs without fields;
+- `dw_views.ui`: all types of views;
+- `dw_widgets.ui`: all types of widgets;
+- `mw_menus.ui`: main window with all menus and toolbars.
 
 *Obs.: `dw` stands for dock widget and `mw` for main window.*
 
@@ -151,7 +151,7 @@ see its documentation.
 
 ### Modifying UI Files
 
-Feel free to modify `.ui` files with Qt Designer and recompile UI using
+Feel free to modify [ui](./example/ui) files with Qt Designer and recompile UI using
 [process_ui.py](./script/process_ui.py) script, inside script folder, using:
 
 ```bash
@@ -162,7 +162,7 @@ It will generate all `_ui.py` files for PyQt4, PyQt5, PySide, QtPy, PyQtGraph.
 
 ### Modifying QSS File
 
-If you are changing the [stylesheet](.qdarkstyle/style.qss) , you will need
+If you are changing the [stylesheet](.qdarkstyle/style.qss), you will need
 to recompile the QRC files using [process_qrc.py](./script/process_qrc.py)
 script, inside script folder.
 
@@ -182,7 +182,7 @@ python run_ui_css_edition.py
 ```
 
 This creates a loop that restarts the application, process ui and css
-files. 
+files.
 
 For more information about those scripts, see their documentation.
 
@@ -201,20 +201,23 @@ Create good palettes with these tools. For example, on paletton, choose
   bit of the main color, so it is nice to change it if you change the main
   color.
 
-- [Paletton](http://paletton.com/)
+- [Paletton.com](http://paletton.com/)
 - [Coolors.co](https://coolors.co/)
 
 ## Unit Testing and Fix Preview
 
 It is a good practice, if you are writing functions to QDarkStyle or fixing
 something related to those functions (not style), that you provide a test
-for it. This will keep our implementation stable.
+for it.
 
-If you are fixing something about style, please, provide an screenshot
-before and after the fix to comparison. This could be inserted in the issue
-tracker, as a message.
+If you are fixing something about style, please, at least, provide an
+screenshot before and after the fix to comparison. This could be inserted
+in the issue tracker, as a message. Better than that, use modules provided
+in test folder to create a GUI test, creating a new file for it.
+
+Check [test](./test) files to more details. Tests will keep our application stable.
 
 ## If You Are a Mantainer, Go Ahead
 
 We create a guide to create and upload this package to PyPI, follow the
-instructions in [PRODUCTION](.PRODUCTION.md).
+instructions in [PRODUCTION](./PRODUCTION.md).
