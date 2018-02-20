@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!python
 # -*- coding: utf-8 -*-
 
 """Example of qdarkstyle use for Python and Qt applications.
@@ -46,6 +46,7 @@ import argparse
 from os.path import abspath, dirname
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 
+# must be in this place, after setting path, to not need to install
 import qdarkstyle
 
 
@@ -69,52 +70,76 @@ def main():
     if args.qt_from == 'pyside':
         # using PySide wrapper
         from PySide.QtGui import QApplication, QMainWindow, QDockWidget
-        from PySide.QtCore import QTimer, Qt
+        from PySide.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         # import examples UI according to wrapper
-        from ui.mw_views_widgets_containers_pyside_ui import Ui_MainWindow as ui_main
+        from ui.mw_menus_pyside_ui import Ui_MainWindow as ui_main
+
         from ui.dw_buttons_pyside_ui import Ui_DockWidget as ui_buttons
         from ui.dw_displays_pyside_ui import Ui_DockWidget as ui_displays
-        from ui.dw_inputs_fields_pyside_ui import Ui_DockWidget as ui_inputs
+        from ui.dw_inputs_fields_pyside_ui import Ui_DockWidget as ui_inputs_fields
         from ui.dw_inputs_no_fields_pyside_ui import Ui_DockWidget as ui_inputs_no_fields
+
+        from ui.dw_widgets_pyside_ui import Ui_DockWidget as ui_widgets
+        from ui.dw_views_pyside_ui import Ui_DockWidget as ui_views
+        from ui.dw_containers_tabs_pyside_ui import Ui_DockWidget as ui_containers_tabs
+        from ui.dw_containers_no_tabs_pyside_ui import Ui_DockWidget as ui_containers_no_tabs
         # getting style
         style = qdarkstyle.load_stylesheet_pyside()
 
     elif args.qt_from == 'pyqt':
         # using PyQt4 wrapper
         from PyQt4.QtGui import QApplication, QMainWindow, QDockWidget
-        from PyQt4.QtCore import QTimer, Qt
+        from PyQt4.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         # import examples UI according to wrapper
-        from ui.mw_views_widgets_containers_pyqt_ui import Ui_MainWindow as ui_main
+        from ui.mw_menus_pyqt_ui import Ui_MainWindow as ui_main
+
         from ui.dw_buttons_pyqt_ui import Ui_DockWidget as ui_buttons
         from ui.dw_displays_pyqt_ui import Ui_DockWidget as ui_displays
-        from ui.dw_inputs_fields_pyqt_ui import Ui_DockWidget as ui_inputs
+        from ui.dw_inputs_fields_pyqt_ui import Ui_DockWidget as ui_inputs_fields
         from ui.dw_inputs_no_fields_pyqt_ui import Ui_DockWidget as ui_inputs_no_fields
+
+        from ui.dw_widgets_pyqt_ui import Ui_DockWidget as ui_widgets
+        from ui.dw_views_pyqt_ui import Ui_DockWidget as ui_views
+        from ui.dw_containers_tabs_pyqt_ui import Ui_DockWidget as ui_containers_tabs
+        from ui.dw_containers_no_tabs_pyqt_ui import Ui_DockWidget as ui_containers_no_tabs
         # getting style
         style = qdarkstyle.load_stylesheet_pyqt()
 
     elif args.qt_from == 'pyqt5':
         # using PyQt5 wrapper
         from PyQt5.QtWidgets import QApplication, QMainWindow, QDockWidget
-        from PyQt5.QtCore import QTimer, Qt
+        from PyQt5.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         # import examples UI according to wrapper
-        from ui.mw_views_widgets_containers_pyqt5_ui import Ui_MainWindow as ui_main
+        from ui.mw_menus_pyqt5_ui import Ui_MainWindow as ui_main
+
         from ui.dw_buttons_pyqt5_ui import Ui_DockWidget as ui_buttons
         from ui.dw_displays_pyqt5_ui import Ui_DockWidget as ui_displays
-        from ui.dw_inputs_fields_pyqt5_ui import Ui_DockWidget as ui_inputs
+        from ui.dw_inputs_fields_pyqt5_ui import Ui_DockWidget as ui_inputs_fields
         from ui.dw_inputs_no_fields_pyqt5_ui import Ui_DockWidget as ui_inputs_no_fields
+
+        from ui.dw_widgets_pyqt5_ui import Ui_DockWidget as ui_widgets
+        from ui.dw_views_pyqt5_ui import Ui_DockWidget as ui_views
+        from ui.dw_containers_tabs_pyqt5_ui import Ui_DockWidget as ui_containers_tabs
+        from ui.dw_containers_no_tabs_pyqt5_ui import Ui_DockWidget as ui_containers_no_tabs
         # getting style
         style = qdarkstyle.load_stylesheet_pyqt5()
 
     elif args.qt_from == 'qtpy':
         # using QtPy API
         from qtpy.QtWidgets import QApplication, QMainWindow, QDockWidget
-        from qtpy.QtCore import QTimer, Qt
+        from qtpy.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         # import examples UI according to wrapper
-        from ui.mw_views_widgets_containers_qtpy_ui import Ui_MainWindow as ui_main
+        from ui.mw_menus_qtpy_ui import Ui_MainWindow as ui_main
+
         from ui.dw_buttons_qtpy_ui import Ui_DockWidget as ui_buttons
         from ui.dw_displays_qtpy_ui import Ui_DockWidget as ui_displays
-        from ui.dw_inputs_fields_qtpy_ui import Ui_DockWidget as ui_inputs
+        from ui.dw_inputs_fields_qtpy_ui import Ui_DockWidget as ui_inputs_fields
         from ui.dw_inputs_no_fields_qtpy_ui import Ui_DockWidget as ui_inputs_no_fields
+
+        from ui.dw_widgets_qtpy_ui import Ui_DockWidget as ui_widgets
+        from ui.dw_views_qtpy_ui import Ui_DockWidget as ui_views
+        from ui.dw_containers_tabs_qtpy_ui import Ui_DockWidget as ui_containers_tabs
+        from ui.dw_containers_no_tabs_qtpy_ui import Ui_DockWidget as ui_containers_no_tabs
         # getting style
         style = qdarkstyle.load_stylesheet_from_environment()
 
@@ -122,25 +147,51 @@ def main():
         # using PyQtGraph API
         from pyqtgraph.Qt import QtGui, QtCore
         # import examples UI according to wrapper
-        from ui.mw_views_widgets_containers_pyqtgraph_ui import Ui_MainWindow as ui_main
+        from ui.mw_menus_pyqtgraph_ui import Ui_MainWindow as ui_main
         from ui.mw_dw_buttons_pyqtgraph_ui import Ui_DockWidget as ui_buttons
         from ui.mw_dw_displays_pyqtgraph_ui import Ui_DockWidget as ui_displays
-        from ui.mw_dw_inputs_fields_pyqtgraph_ui import Ui_DockWidget as ui_inputs
+        from ui.mw_dw_inputs_fields_pyqtgraph_ui import Ui_DockWidget as ui_inputs_fields
         from ui.mw_dw_inputs_no_fields_pyqtgraph_ui import Ui_DockWidget as ui_inputs_no_fields
+
+        from ui.dw_widgets_pyqtgraph_ui import Ui_DockWidget as ui_widgets
+        from ui.dw_views_pyqtgraph_ui import Ui_DockWidget as ui_views
+        from ui.dw_containers_tabs_pyqtgraph_ui import Ui_DockWidget as ui_containers_tabs
+        from ui.dw_containers_no_tabs_pyqtgraph_ui import Ui_DockWidget as ui_containers_no_tabs
         # getting style
         style = qdarkstyle.load_stylesheet_from_environment(is_pyqtgraph=True)
 
     if args.no_dark:
         style = ''
 
+    def write_settings(window):
+        settings = QSettings('QDarkStyle', 'QDarkStyle Example')
+        settings.setValue('pos', window.pos())
+        settings.setValue('size', window.size())
+        settings.setValue('state', window.saveState())
+
+    def read_settings(window):
+        settings = QSettings('QDarkStyle', 'QDarkStyle Example')
+        pt = QPoint(200, 200)
+        sz = QSize(400, 400)
+        bt = QByteArray()
+        pos = settings.value('pos', pt)
+        size = settings.value('size', sz)
+        state = settings.value('state', bt)
+        window.restoreState(state)
+        window.resize(size)
+        window.move(pos)
+
     # create the application
     app = QApplication(sys.argv)
+    app.setOrganizationName('QDarkStyle')
+    app.setApplicationName('QDarkStyle Example')
 
     # setup stylesheet
     app.setStyleSheet(style)
 
     # create main window
     window = QMainWindow()
+    window.setObjectName('mainwindow')
     ui = ui_main()
     ui.setupUi(window)
     window.setWindowTitle("QDarkStyle v." + qdarkstyle.__version__ +
@@ -148,42 +199,75 @@ def main():
 
     # create docks for buttons
     dw_buttons = QDockWidget()
+    dw_buttons.setObjectName('buttons')
     ui_buttons = ui_buttons()
     ui_buttons.setupUi(dw_buttons)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_buttons)
 
     # create docks for buttons
     dw_displays = QDockWidget()
+    dw_displays.setObjectName('displays')
     ui_displays = ui_displays()
     ui_displays.setupUi(dw_displays)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_displays)
 
     # create docks for inputs - fields
-    dw_inputs = QDockWidget()
-    ui_inputs = ui_inputs()
-    ui_inputs.setupUi(dw_inputs)
-    window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs)
+    dw_inputs_fields = QDockWidget()
+    dw_inputs_fields.setObjectName('_fields')
+    ui_inputs_fields = ui_inputs_fields()
+    ui_inputs_fields.setupUi(dw_inputs_fields)
+    window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_fields)
 
     # create docks for inputs - no fields
-    dw_inputs_no_field = QDockWidget()
-    ui_inputs_no_field = ui_inputs_no_fields()
-    ui_inputs_no_field.setupUi(dw_inputs_no_field)
-    window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_no_field)
+    dw_inputs_no_fields = QDockWidget()
+    dw_inputs_no_fields.setObjectName('inputs_no_fields')
+    ui_inputs_no_fields = ui_inputs_no_fields()
+    ui_inputs_no_fields.setupUi(dw_inputs_no_fields)
+    window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_no_fields)
 
-    # tabify docks
+    # create docks for widgets
+    dw_widgets = QDockWidget()
+    dw_widgets.setObjectName('widgets')
+    ui_widgets = ui_widgets()
+    ui_widgets.setupUi(dw_widgets)
+    window.addDockWidget(Qt.LeftDockWidgetArea, dw_widgets)
+
+    # create docks for views
+    dw_views = QDockWidget()
+    dw_views.setObjectName('views')
+    ui_views = ui_views()
+    ui_views.setupUi(dw_views)
+    window.addDockWidget(Qt.LeftDockWidgetArea, dw_views)
+
+    # create docks for containters - tabs
+    dw_containers_tabs = QDockWidget()
+    dw_containers_tabs.setObjectName('containers')
+    ui_containers_tabs = ui_containers_tabs()
+    ui_containers_tabs.setupUi(dw_containers_tabs)
+    window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_tabs)
+
+    # create docks for containers - no tabs
+    dw_containers_no_tabs = QDockWidget()
+    dw_containers_no_tabs.setObjectName('containers_no_tabs')
+    ui_containers_no_tabs = ui_containers_no_tabs()
+    ui_containers_no_tabs.setupUi(dw_containers_no_tabs)
+    window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_no_tabs)
+
+    # tabify right docks
     window.tabifyDockWidget(dw_buttons, dw_displays)
-    window.tabifyDockWidget(dw_displays, dw_inputs)
-    window.tabifyDockWidget(dw_inputs, dw_inputs_no_field)
+    window.tabifyDockWidget(dw_displays, dw_inputs_fields)
+    window.tabifyDockWidget(dw_inputs_fields, dw_inputs_no_fields)
 
-    # connect some actions, signals and functions
     # auto quit after 2s when testing on travis-ci
-
     if "--test" in sys.argv:
         QTimer.singleShot(2000, app.exit)
 
     # run
+    read_settings(window)
     window.showMaximized()
     app.exec_()
+    write_settings(window)
+
 
 if __name__ == "__main__":
     sys.exit(main())
