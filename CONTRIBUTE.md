@@ -131,7 +131,7 @@ Now you can use our example to work on the stylesheet. It has all possible
 widget provided by Qt - common ones. Feel free to add more to them.
 
 To simplify the structure, there are separated files in
-[example.ui](.example/ui/) folder.
+[example.ui](./example/ui/) folder.
 
 - `dw_buttons.ui`: all types of buttons;
 - `dw_containers_no_tabs.ui`: all types of containers except for tabs;
@@ -162,7 +162,7 @@ It will generate all `_ui.py` files for PyQt4, PyQt5, PySide, QtPy, PyQtGraph.
 
 ### Modifying QSS File
 
-If you are changing the [stylesheet](.qdarkstyle/style.qss), you will need
+If you are changing the [stylesheet](./qdarkstyle/style.qss), you will need
 to recompile the QRC files using [process_qrc.py](./script/process_qrc.py)
 script, inside script folder.
 
