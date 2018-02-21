@@ -1,10 +1,16 @@
 # Changelog
 
+- 2.5.2:
+  - Modularize files from example/ui to simplify edition (developers)
+  - Add scripts to process files and run example more easiy (developers)
+  - Better documentation (developers)
+  - Add CONTRIBUTE, PRODUCTION files (developers)
+  - Lint markdown to standardize files
 - 2.5.1:
   - Fix travis files, needs more improvement #74
   - Improve modules description
   - Update setup.py, remove license
-  - Improve README, CHANGES and AUTHORS
+  - Update and improve README, CHANGES and AUTHORS
 - 2.5:
   - Add new complete example with new files
   - Add new screenshots for new example
@@ -19,7 +25,7 @@
   - Restructure README creating AUTHORS, CHANGES, and LICENSE #71
 - 2.3.1:
   - Improve checkbox color (use accent color used in other widgets) and
-    darken view hover/selected colors to play  nicer with other widget colors
+    darken view hover/selected colors to play nicer with other widget colors
   - Shift to the right the first tab
   - Update license year
   - Update README (fix snapshots links and formatting)
@@ -41,7 +47,7 @@
   - Add style for QPushButton:checked
   - Improve QCheckBox and QRadioButton style
   - Add style for QMenu::right-arrow
-- 2.0:
+- **2.0**:
   - Improve stylesheet to make it look a bit more modern (see pull request #25)
 - 1.16:
   - Fix QGroupBox title padding (see issue #20)
@@ -92,5 +98,5 @@
 - 1.1:
   - Switch to MIT license
   - Add python 3 support
-- 1.0:
+- **1.0**:
   - First public release (LGPL v2)

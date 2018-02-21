@@ -41,7 +41,6 @@ Finally, set your QApplication with it
 
 Enjoy!
 
-
 """
 
 import logging
@@ -49,7 +48,7 @@ import platform
 import os
 
 
-__version__ = "2.5.1"
+__version__ = "2.5.2"
 
 PYQTGRAPH_QT_LIB_VALUES = ['PyQt', 'PyQt5', 'PySide', 'PySide2']
 QT_API_VALUES = ['pyqt', 'pyqt5', 'pyside', 'pyside2']
@@ -89,9 +88,9 @@ def _qt_wrapper_import(qt_api):
             qt_wrapper = 'PySide2'
             loader = load_stylesheet_pyside2()
     except ImportError as err:
-        _logger().error("Impossible import Qt wrapper. " + str(err))
+        _logger().error("Impossible import Qt wrapper.\n %s", str(err))
     else:
-        _logger().info("Using Qt wrapper = %s " % qt_wrapper)
+        _logger().info("Using Qt wrapper = %s ", qt_wrapper)
     finally:
         return loader
 
@@ -118,16 +117,17 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
         # Log this error just if using QT_API
         if not is_pyqtgraph:
             _logger().error("QT_API does not exist, do os.environ['QT_API']= "
-                            "and choose one option from %s" % QT_API_VALUES)
+                            "and choose one option from %s", QT_API_VALUES)
     else:
         if not is_pyqtgraph:
             if qt_api in QT_API_VALUES:
-                _logger().info("Found QT_API='%s'" % qt_api)
+                _logger().info("Found QT_API='%s'", qt_api)
                 loader = _qt_wrapper_import(qt_api)
             else:
                 # Raise this error because the function need this key/value
                 raise KeyError("QT_API=%s is unknown, please use a value "
-                               "from %s" % (qt_api, QT_API_VALUES))
+                               "from %s",
+                               (qt_api, QT_API_VALUES))
 
     # Get values from PYQTGRAPH_QT_LIB
     try:
@@ -137,26 +137,27 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
         if is_pyqtgraph:
             _logger().error("PYQTGRAP_QT_API does not exist, do "
                             "os.environ['PYQTGRAPH_QT_LIB']= "
-                            "and choose one option from %s" %
+                            "and choose one option from %s",
                             PYQTGRAPH_QT_LIB_VALUES)
     else:
         if is_pyqtgraph:
             if pyqtgraph_qt_lib in PYQTGRAPH_QT_LIB_VALUES:
-                _logger().info("Found PYQTGRAPH_QT_LIB='%s'" % pyqtgraph_qt_lib)
+                _logger().info("Found PYQTGRAPH_QT_LIB='%s'", pyqtgraph_qt_lib)
                 loader = _qt_wrapper_import(pyqtgraph_qt_lib)
             else:
                 # Raise this error because the function need this key/value
                 raise KeyError("PYQTGRAPH_QT_LIB=%s is unknown, please use a "
-                               "value from %s" % (pyqtgraph_qt_lib,
-                                                  PYQTGRAPH_QT_LIB_VALUES))
+                               "value from %s", (
+                                   pyqtgraph_qt_lib,
+                                   PYQTGRAPH_QT_LIB_VALUES))
 
     # Just a warning if both are set but differs each other
     if qt_api and pyqtgraph_qt_lib:
         if qt_api != pyqtgraph_qt_lib.lower():
             _logger().warning("Both QT_API=%s and PYQTGRAPH_QT_LIB=%s are set, "
                               "but with different values, this could cause "
-                              "some issues if using them in the same project!"
-                              % (qt_api, pyqtgraph_qt_lib))
+                              "some issues if using them in the same project!",
+                              qt_api, pyqtgraph_qt_lib)
 
     return loader
 
