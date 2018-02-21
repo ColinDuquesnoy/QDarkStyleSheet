@@ -7,7 +7,9 @@ include MANIFEST.in
 include setup.py
 include AUTHORS.md
 include CHANGES.md
+include CONTRIBUTE.md
 include LICENSE.md
+include PRODUCTION.md
 include README.md
 include qdarkstyle/style.qss
 include qdarkstyle/style.qrc
