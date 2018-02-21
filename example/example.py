@@ -145,14 +145,15 @@ def main():
 
     elif args.qt_from == 'pyqtgraph':
         # using PyQtGraph API
-        from pyqtgraph.Qt import QtGui, QtCore
+        from pyqtgraph.Qt.QtGui import QApplication, QMainWindow, QDockWidget
+        from pyqtgraph.Qt.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
+        #from pyqtgraph.Qt import QtGui, QtCore
         # import examples UI according to wrapper
         from ui.mw_menus_pyqtgraph_ui import Ui_MainWindow as ui_main
-        from ui.mw_dw_buttons_pyqtgraph_ui import Ui_DockWidget as ui_buttons
-        from ui.mw_dw_displays_pyqtgraph_ui import Ui_DockWidget as ui_displays
-        from ui.mw_dw_inputs_fields_pyqtgraph_ui import Ui_DockWidget as ui_inputs_fields
-        from ui.mw_dw_inputs_no_fields_pyqtgraph_ui import Ui_DockWidget as ui_inputs_no_fields
-
+        from ui.dw_buttons_pyqtgraph_ui import Ui_DockWidget as ui_buttons
+        from ui.dw_displays_pyqtgraph_ui import Ui_DockWidget as ui_displays
+        from ui.dw_inputs_fields_pyqtgraph_ui import Ui_DockWidget as ui_inputs_fields
+        from ui.dw_inputs_no_fields_pyqtgraph_ui import Ui_DockWidget as ui_inputs_no_fields
         from ui.dw_widgets_pyqtgraph_ui import Ui_DockWidget as ui_widgets
         from ui.dw_views_pyqtgraph_ui import Ui_DockWidget as ui_views
         from ui.dw_containers_tabs_pyqtgraph_ui import Ui_DockWidget as ui_containers_tabs
@@ -164,16 +165,23 @@ def main():
         style = ''
 
     def write_settings(window):
+        """Get window settings and write it into a file."""
         settings = QSettings('QDarkStyle', 'QDarkStyle Example')
         settings.setValue('pos', window.pos())
         settings.setValue('size', window.size())
         settings.setValue('state', window.saveState())
 
     def read_settings(window):
+        """Read and set window settings from a file."""
         settings = QSettings('QDarkStyle', 'QDarkStyle Example')
-        pos = settings.value('pos', window.pos())
-        size = settings.value('size', window.size())
-        state = settings.value('state', window.saveState())
+        if args.qt_from == 'pyside':
+            pos = settings.value('pos', window.pos())
+            size = settings.value('size', window.size())
+            state = settings.value('state', window.saveState())
+        else:
+            pos = settings.value('pos', window.pos(), type='QPoint')
+            size = settings.value('size', window.size(), type='QSize')
+            state = settings.value('state', window.saveState(), type='QByteArray')
         window.restoreState(state)
         window.resize(size)
         window.move(pos)
