@@ -45,7 +45,7 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
 - Load the stylesheet:
 
   ```cpp
-  QFile f(":qdarkstyle/style.qss");
+  QFile f("qdarkstyle/style.qss");
   if (!f.exists())
   {
       printf("Unable to set stylesheet, file not found\n");
