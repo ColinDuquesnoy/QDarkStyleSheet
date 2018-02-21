@@ -55,6 +55,7 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
       f.open(QFile::ReadOnly | QFile::Text);
       QTextStream ts(&f);
       qApp->setStyleSheet(ts.readAll());
+  }
   ```
 
 ## Usage
