@@ -4,7 +4,7 @@
   - Modularize files from example/ui to simplify edition (developers)
   - Add scripts to process files and run example more easiy (developers)
   - Better documentation (developers)
-  - Add CONTRIBUTE, PRODUCTION files (developers)
+  - Add CONTRIBUTE, CODE_OF_CONDUCT, and PRODUCTION files
   - Lint markdown to standardize files
 - 2.5.1:
   - Fix travis files, needs more improvement #74

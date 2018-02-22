@@ -1,6 +1,7 @@
-# Contribute
+# Contributing
 
-This file describes a path to contribute to this project.
+This file describes a path to contribute to this project. Check out our
+[CODE OF CONDUCT](./CODE_OF_CONDUCT.md).
 
 ## Bug Reports and Feature Requests
 
