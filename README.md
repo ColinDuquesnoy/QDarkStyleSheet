@@ -60,6 +60,8 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
   }
   ```
 
+_Note: The ":" in the file name is necessary to define that file as a resource library. For more information see the discussion [here](https://github.com/ColinDuquesnoy/QDarkStyleSheet/pull/87)._
+
 ## Usage
 
 Here is an example using PySide
