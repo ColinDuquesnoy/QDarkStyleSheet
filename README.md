@@ -42,8 +42,11 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
   - **qdarkstyle/style.qrc**
   - **qdarkstyle/rc/** (the whole directory)
 
-- Add **qdarkstyle/style.qrc** to your **.pro file**
+- Add **qdarkstyle/style.qrc** to your **.pro file** as follows:
 
+  ```cpp
+  RESOURCES += qdarkstyle/style.qrc
+  ```
 - Load the stylesheet:
 
   ```cpp
