@@ -46,7 +46,7 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
 
   ```cpp
   RESOURCES += qdarkstyle/style.qrc
-  ```
+  ```
 - Load the stylesheet:
 
   ```cpp
