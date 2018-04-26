@@ -3,6 +3,7 @@
 - 2.5.3
   - Add future warning and pending deprecation for 3.0 version preparation #89
   - Add ISSUE_TEMPLATE to ask for default information on issue tracker
+  - fix #93 issue
 - 2.5.2:
   - Modularize files from example/ui to simplify edition (developers)
   - Add scripts to process files and run example more easiy (developers)
