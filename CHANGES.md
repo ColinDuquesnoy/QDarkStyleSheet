@@ -1,5 +1,7 @@
 # Changelog
 
+- 2.5.4
+  - Fix indicator image of checkable QGroupBox for check/uncheck states, #93 
 - 2.5.3
   - Add future warning and pending deprecation for 3.0 version preparation #89
   - Add ISSUE_TEMPLATE to ask for default information on issue tracker

@@ -47,7 +47,8 @@ QGroupBox::indicator {
     margin-left: 2px;
 }
 
-QCheckBox::indicator:unchecked {
+QCheckBox::indicator:unchecked,
+QGroupBox::indicator:unchecked {
     image: url(:/qss_icons/rc/checkbox_unchecked.png);
 }
 
@@ -61,7 +62,8 @@ QGroupBox::indicator:unchecked:pressed {
     image: url(:/qss_icons/rc/checkbox_unchecked_focus.png);
 }
 
-QCheckBox::indicator:checked {
+QCheckBox::indicator:checked
+QGroupBox::indicator:checked, {
     image: url(:/qss_icons/rc/checkbox_checked.png);
 }
 

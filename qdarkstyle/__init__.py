@@ -48,7 +48,7 @@ import platform
 import os
 import warnings
 
-__version__ = "2.5.3"
+__version__ = "2.5.4"
 
 PYQTGRAPH_QT_LIB_VALUES = ['PyQt', 'PyQt5', 'PySide', 'PySide2']
 QT_API_VALUES = ['pyqt', 'pyqt5', 'pyside', 'pyside2']
