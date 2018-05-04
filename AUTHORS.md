@@ -19,5 +19,6 @@ These people contribute to bug fixes, improvements and so on.
 Please, insert your information after the last one.
 
 - Year - Name - `<contact>` - contribution.
+- 2018 - Xingyun Wu - `xingyun.wu@foxmail.com` - bug fixes.
 
 Thank you all!
