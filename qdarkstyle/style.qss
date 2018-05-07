@@ -912,6 +912,11 @@ QListView::indicator:unchecked {
     image: url(:/qss_icons/rc/checkbox_unchecked.png);
 }
 
+QTreeView::indicator:indeterminate,
+QListView::indicator:indeterminate {
+    image: url(:/qss_icons/rc/checkbox_indeterminate.png);
+}
+
 QTreeView::indicator:checked:hover,
 QTreeView::indicator:checked:focus,
 QTreeView::indicator:checked:pressed,
@@ -928,6 +933,15 @@ QListView::indicator:unchecked:hover,
 QListView::indicator:unchecked:focus,
 QListView::indicator:unchecked:pressed {
     image: url(:/qss_icons/rc/checkbox_unchecked_focus.png);
+}
+
+QTreeView::indicator:indeterminate:hover,
+QTreeView::indicator:indeterminate:focus,
+QTreeView::indicator:indeterminate:pressed,
+QListView::indicator:indeterminate:hover,
+QListView::indicator:indeterminate:focus,
+QListView::indicator:indeterminate:pressed {
+    image: url(:/qss_icons/rc/checkbox_indeterminate_focus.png);
 }
 
 QSlider::groove:horizontal {
