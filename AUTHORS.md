@@ -20,5 +20,6 @@ Please, insert your information after the last one.
 
 - Year - Name - `<contact>` - contribution.
 - 2018 - Xingyun Wu - `xingyun.wu@foxmail.com` - bug fixes.
+- 2018 - [KcHNST](https://github.com/KcHNST) - bug fixes.
 
 Thank you all!
