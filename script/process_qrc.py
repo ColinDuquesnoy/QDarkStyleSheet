@@ -68,16 +68,19 @@ def main(arguments):
 
         # calling external commands
         if args.create in ['pyqt', 'pyqtgraph', 'all']:
+            print("Compiling for PyQt4 ...")
             call(['pyrcc4', '-py3', qrc_file, '-o', py_file_pyqt])
 
         if args.create in ['pyqt5', 'qtpy', 'all']:
+            print("Compiling for PyQt5 ...")
             call(['pyrcc5', qrc_file, '-o', py_file_pyqt5])
 
         if args.create in ['pyside', 'all']:
+            print("Compiling for PySide ...")
             call(['pyside-rcc', '-py3', qrc_file, '-o', py_file_pyside])
 
         if args.create in ['qtpy', 'all']:
-            print("Compiling for PySide ...")
+            print("Compiling for QtPy ...")
             # special case - qtpy - syntax is PyQt5
             with open(py_file_pyqt5, 'r') as file:
                 filedata = file.read()
@@ -88,6 +91,7 @@ def main(arguments):
                 file.write(filedata)
 
         if args.create in ['pyqtgraph', 'all']:
+            print("Compiling for PyQtGraph ...")
             # special case - pyqtgraph - syntax is PyQt4
             with open(py_file_pyqt, 'r') as file:
                 filedata = file.read()
