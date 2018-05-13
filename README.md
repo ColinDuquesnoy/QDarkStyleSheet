@@ -47,7 +47,12 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
   ```cpp
   RESOURCES += qdarkstyle/style.qrc
   ```
-- Load the stylesheet:
+- Edit `Sources/main.cpp` and include `<QFile>` and `<QTextStream>`
+  ```cpp
+  #include <QFile>
+  #include <QTextStream>
+  ```
+- Add the following to the `main` function to load the stylesheet:
 
   ```cpp
   QFile f(":qdarkstyle/style.qss");
