@@ -961,6 +961,14 @@ QSlider::handle:horizontal {
     border-radius: 9px;
 }
 
+QSlider::sub-page:horizontal {
+    border: 1px solid #565a5e;
+    height: 4px;
+    background: #3daee9;
+    margin: 0px;
+    border-radius: 2px;
+}
+
 QSlider::groove:vertical {
     border: 1px solid #565a5e;
     width: 4px;
@@ -976,6 +984,14 @@ QSlider::handle:vertical {
     height: 16px;
     margin: 0 -8px;
     border-radius: 9px;
+}
+
+QSlider::sub-page:vertical {
+    border: 1px solid #565a5e;
+    width: 4px;
+    background: #3daee9;
+    margin: 0px;
+    border-radius: 3px;
 }
 
 QToolButton {
