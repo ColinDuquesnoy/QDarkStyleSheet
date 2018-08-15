@@ -16,6 +16,7 @@ Links to understand those tools:
     - pyuic4: http://pyqt.sourceforge.net/Docs/PyQt4/designer.html#pyuic4
     - pyuic5: http://pyqt.sourceforge.net/Docs/PyQt5/designer.html#pyuic5
     - pyside-uic: https://www.mankier.com/1/pyside-uic
+    - pyside2-uic: https://wiki.qt.io/Qt_for_Python_UiFiles (Documentation Incomplete)
 
 """
 

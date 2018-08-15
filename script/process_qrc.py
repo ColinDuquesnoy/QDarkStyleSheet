@@ -17,6 +17,7 @@ Links to understand those tools:
     - pyrcc4: http://pyqt.sourceforge.net/Docs/PyQt4/resources.html#pyrcc4
     - pyrcc5: http://pyqt.sourceforge.net/Docs/PyQt5/resources.html#pyrcc5
     - pyside-rcc: https://www.mankier.com/1/pyside-rcc
+    - pyside2-rcc: https://doc.qt.io/qtforpython/overviews/resources.html (Documentation Incomplete)
     - rcc on Qt4: http://doc.qt.io/archives/qt-4.8/rcc.html
     - rcc on Qt5: http://doc.qt.io/qt-5/rcc.html
 

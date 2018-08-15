@@ -19,6 +19,8 @@ as shown bellow
 
     # PySide
     dark_stylesheet = qdarkstyle.load_stylesheet_pyside()
+    # PySide
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyside2()
     # PyQt4
     dark_stylesheet = qdarkstyle.load_stylesheet_pyqt()
     # PyQt5
@@ -48,7 +50,7 @@ import platform
 import os
 import warnings
 
-__version__ = "2.5.4"
+__version__ = "2.6.0"
 
 PYQTGRAPH_QT_LIB_VALUES = ['PyQt', 'PyQt5', 'PySide', 'PySide2']
 QT_API_VALUES = ['pyqt', 'pyqt5', 'pyside', 'pyside2']
