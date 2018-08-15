@@ -6,6 +6,7 @@ The script will attempt to compile the qrc file using the following tools:
     - pyrcc4 for PyQt4 and PyQtGraph (Python)
     - pyrcc5 for PyQt5 and QtPy (Python)
     - pyside-rcc for PySide (Python)
+    - pyside2-rcc for PySide2 (Python)
     - rcc for Qt4 and Qt5 (C++)
 
 Delete the compiled files that you don't want to use manually after
@@ -40,7 +41,7 @@ def main(arguments):
                         help="QRC file directory, relative to current directory.",)
     parser.add_argument('--create',
                         default='all',
-                        choices=['pyqt', 'pyqt5', 'pyside', 'qtpy', 'pyqtgraph', 'qt', 'qt5', 'all'],
+                        choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'qt', 'qt5', 'all'],
                         type=str,
                         help="Choose which one would be generated.")
 
@@ -63,6 +64,7 @@ def main(arguments):
         py_file_pyqt5 = 'pyqt5_' + filename + ext
         py_file_pyqt = 'pyqt_' + filename + ext
         py_file_pyside = 'pyside_' + filename + ext
+        py_file_pyside2 = 'pyside2_' + filename + ext
         py_file_qtpy = 'qtpy_' + filename + ext
         py_file_pyqtgraph = 'pyqtgraph_' + filename + ext
 
@@ -78,6 +80,10 @@ def main(arguments):
         if args.create in ['pyside', 'all']:
             print("Compiling for PySide ...")
             call(['pyside-rcc', '-py3', qrc_file, '-o', py_file_pyside])
+
+        if args.create in ['pyside2', 'all']:
+            print("Compiling for PySide ...")
+            call(['pyside2-rcc', '-py3', qrc_file, '-o', py_file_pyside2])
 
         if args.create in ['qtpy', 'all']:
             print("Compiling for QtPy ...")

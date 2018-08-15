@@ -9,6 +9,7 @@ To run this script you need to have these tools available on system:
     - pyuic4 for PyQt4 and PyQtGraph
     - pyuic5 for PyQt5 and QtPy
     - pyside-uic for Pyside
+    - pyside2-uic for Pyside2
 
 Links to understand those tools:
 
@@ -37,7 +38,7 @@ def main(arguments):
                         help="UI files directory, relative to current directory.",)
     parser.add_argument('--create',
                         default='all',
-                        choices=['pyqt', 'pyqt5', 'pyside', 'qtpy', 'pyqtgraph', 'all'],
+                        choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'all'],
                         type=str,
                         help="Choose which one would be generated.")
 
@@ -58,6 +59,7 @@ def main(arguments):
         py_file_pyqt5 = filename + '_pyqt5_ui' + ext
         py_file_pyqt = filename + '_pyqt_ui' + ext
         py_file_pyside = filename + '_pyside_ui' + ext
+        py_file_pyside2 = filename + '_pyside2_ui' + ext
         py_file_qtpy = filename + '_qtpy_ui' + ext
         py_file_pyqtgraph = filename + '_pyqtgraph_ui' + ext
 
@@ -70,6 +72,9 @@ def main(arguments):
 
         if args.create in ['pyside', 'all']:
             call(['pyside-uic', '--from-imports', ui_file, '-o', py_file_pyside])
+
+        if args.create in ['pyside', 'all']:
+            call(['pyside2-uic', '--from-imports', ui_file, '-o', py_file_pyside2])
 
         if args.create in ['qtpy', 'all']:
             print("Compiling for PySide ...")
