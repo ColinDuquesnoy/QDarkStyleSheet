@@ -190,7 +190,7 @@ def load_stylesheet(pyside=True):
     if not pyside:
         from PyQt4.QtCore import QFile, QTextStream
     else:
-        from PySide.QtCore import QFile, QTextStream
+        from PySide2.QtCore import QFile, QTextStream
 
     f = QFile(":qdarkstyle/style.qss")
     if not f.exists():
