@@ -19,6 +19,8 @@ as shown bellow
 
     # PySide
     dark_stylesheet = qdarkstyle.load_stylesheet_pyside()
+    # PySide
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyside2()
     # PyQt4
     dark_stylesheet = qdarkstyle.load_stylesheet_pyqt()
     # PyQt5
@@ -48,7 +50,7 @@ import platform
 import os
 import warnings
 
-__version__ = "2.5.4"
+__version__ = "2.6.0"
 
 PYQTGRAPH_QT_LIB_VALUES = ['PyQt', 'PyQt5', 'PySide', 'PySide2']
 QT_API_VALUES = ['pyqt', 'pyqt5', 'pyside', 'pyside2']
@@ -181,8 +183,24 @@ def load_stylesheet(pyside=True):
         FutureWarning
     )
     # Smart import of the rc file
+
+    pyside_ver = None
+
     if pyside:
-        import qdarkstyle.pyside_style_rc
+
+        # Detect the PySide version available
+        try:
+            import PySide
+        except ModuleNotFoundError:
+            import PySide2
+            pyside_ver = 2
+        else:
+            pyside_ver = 1
+
+        if pyside_ver == 1:
+            import qdarkstyle.pyside_style_rc
+        else:
+            import qdarkstyle.pyside2_style_rc
     else:
         import qdarkstyle.pyqt_style_rc
 
@@ -190,7 +208,10 @@ def load_stylesheet(pyside=True):
     if not pyside:
         from PyQt4.QtCore import QFile, QTextStream
     else:
-        from PySide.QtCore import QFile, QTextStream
+        if pyside_ver == 1:
+            from PySide.QtCore import QFile, QTextStream
+        else:
+            from PySide2.QtCore import QFile, QTextStream
 
     f = QFile(":qdarkstyle/style.qss")
     if not f.exists():
@@ -241,7 +262,7 @@ def load_stylesheet_pyside2():
         "use load_stylesheet()",
         PendingDeprecationWarning
     )
-    raise NotImplementedError("PySide 2 is not supported yet.")
+    return load_stylesheet(pyside=True)
 
 
 def load_stylesheet_pyqt():

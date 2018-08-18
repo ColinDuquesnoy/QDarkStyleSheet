@@ -1,5 +1,6 @@
 # Changelog
-
+- 2.6.0
+  - PySide 2 (Technical Preview) Support
 - 2.5.4
   - Fix indicator image of checkable QGroupBox for check/uncheck states, #93 
   - Fix wrong comma position, #95
