@@ -1,6 +1,7 @@
 # Changelog
 - 2.6.0
   - PySide 2 (Technical Preview) Support
+  - Improve menu indicator position on QPushButton, #102
 - 2.5.4
   - Fix indicator image of checkable QGroupBox for check/uncheck states, #93 
   - Fix wrong comma position, #95
