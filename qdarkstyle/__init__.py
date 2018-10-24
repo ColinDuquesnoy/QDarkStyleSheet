@@ -46,12 +46,35 @@ Enjoy!
 import logging
 import platform
 import os
+import sys
+import importlib
+
+__version__ = "2.6"
 
 
-__version__ = "2.5.2"
+QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
+"""list: values of all Qt bindings to import."""
 
-PYQTGRAPH_QT_LIB_VALUES = ['PyQt', 'PyQt5', 'PySide', 'PySide2']
+QT_ABSTRACTIONS = ['qtpy', 'pyqtgraph', 'Qt']
+"""list: values of all Qt abstraction layers to import."""
+
+QT4_IMPORT_API = ['QtCore', 'QtGui']
+"""list: which subpackage to import for Qt4 API."""
+
+QT5_IMPORT_API = ['QtCore', 'QtGui', 'QtWidgets']
+"""list: which subpackage to import for Qt5 API."""
+
 QT_API_VALUES = ['pyqt', 'pyqt5', 'pyside', 'pyside2']
+"""list: values for QT_API environment variable used by QtPy."""
+
+QT_LIB_VALUES = ['PyQt', 'PyQt5', 'PySide', 'PySide2']
+"""list: values for PYQTGRAPH_QT_LIB environment variable used by PyQtGraph."""
+
+QT_BINDING = 'Not set or inexistent'
+"""str: Qt binding in use."""
+
+QT_ABSTRACTION = 'Not set or inexistent'
+"""str: Qt abstraction layer in use."""
 
 
 def _logger():
@@ -138,10 +161,10 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
             _logger().error("PYQTGRAP_QT_API does not exist, do "
                             "os.environ['PYQTGRAPH_QT_LIB']= "
                             "and choose one option from %s",
-                            PYQTGRAPH_QT_LIB_VALUES)
+                            QT_LIB_VALUES)
     else:
         if is_pyqtgraph:
-            if pyqtgraph_qt_lib in PYQTGRAPH_QT_LIB_VALUES:
+            if pyqtgraph_qt_lib in QT_LIB_VALUES:
                 _logger().info("Found PYQTGRAPH_QT_LIB='%s'", pyqtgraph_qt_lib)
                 loader = _qt_wrapper_import(pyqtgraph_qt_lib)
             else:
@@ -149,7 +172,7 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
                 raise KeyError("PYQTGRAPH_QT_LIB=%s is unknown, please use a "
                                "value from %s", (
                                    pyqtgraph_qt_lib,
-                                   PYQTGRAPH_QT_LIB_VALUES))
+                                   QT_LIB_VALUES))
 
     # Just a warning if both are set but differs each other
     if qt_api and pyqtgraph_qt_lib:
@@ -265,3 +288,92 @@ def load_stylesheet_pyqt5():
             '''
             stylesheet += mac_fix
         return stylesheet
+
+
+def information():
+    """Get system and runtime information."""
+    info = []
+    qt_api = ''
+    qt_lib = ''
+
+    try:
+        qt_api = os.environ['QT_API']
+    except KeyError:
+        qt_api = 'Not set or inexistent'
+
+    try:
+        qt_lib = os.environ['PYQTGRAPH_QT_LIB']
+    except KeyError:
+        qt_lib = 'Not set or inexistent'
+
+    info.append('QDarkStyle: %s' % __version__)
+    info.append('OS: %s %s %s' % (os.uname().sysname, os.uname().release, os.uname().machine))
+    info.append('Platform: %s' % sys.platform)
+    info.append('Python: %s' % '.'.join(str(e) for e in sys.version_info[:]))
+    info.append('Python API: %s' % sys.api_version)
+    info.append('Binding in use: %s' % QT_BINDING)
+    info.append('Abstraction in use: %s' % QT_ABSTRACTION)
+    info.append('QT_API: %s' % qt_api)
+    info.append('PYQTGRAPH_QT_LIB: %s' % qt_lib)
+    return info
+
+
+def qt_bindings():
+    """Return a list of qt bindings available."""
+
+    import PyQt5.QtCore
+    import PyQt5.Qt
+    import sip
+    import PySide
+    import PySide.QtCore
+
+    print("PySide:", PySide.__version__,
+          "QtCompiled:", PySide.QtCore.__version__,
+          "QtRunTime", PySide.QtCore.qVersion())
+
+    print("PyQt:", PyQt5.QtCore.QT_VERSION_STR,
+          "QtCompiled:", PyQt5.QtCore.QT_VERSION_STR,
+          "QtRunTime", PyQt5.QtCore.qVersion(),
+          "SIP:", sip.SIP_VERSION_STR)
+
+    bindings = QT_BINDINGS
+    for binding in bindings:
+        # check import
+        spec = importlib.util.find_spec(binding)
+        if spec is None:
+            # remove if not available
+            bindings.remove(binding)
+    return bindings
+
+
+def qt_abstractions():
+    """Return a list of qt abstraction layers available."""
+    abstractions = QT_ABSTRACTIONS
+    for abstraction in abstractions:
+        # check import
+        spec = importlib.util.find_spec(abstraction)
+        if spec is None:
+            # remove if not available
+            abstractions.remove(abstraction)
+    return abstractions
+
+
+def import_qt_modules_from(use_binding='pyqt5', use_abstraction='qtpy'):
+    spec_binding = importlib.util.find_spec(use_binding)
+    spec_abstraction = importlib.util.find_spec(use_abstraction)
+
+    if spec_binding is None:
+        print("Cannot find Qt binding: ", use_binding)
+    else:
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        # Adding the module to sys.modules is optional.
+        sys.modules[name] = module
+
+    if spec_abstraction is None:
+        print("Cannot find Qt abstraction layer: ", use_abstraction)
+    else:
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        # Adding the module to sys.modules is optional.
+        sys.modules[name] = module
