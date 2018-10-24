@@ -41,6 +41,7 @@ problems.
 import logging
 import sys
 import argparse
+import importlib.util
 
 # make the example runnable without the need to install
 from os.path import abspath, dirname
@@ -273,6 +274,10 @@ def main():
     app.exec_()
     write_settings(window)
 
+    def help(self):
+        """Pop up help information."""
+    info = qdarkstyle.get_info()
+    str_info = '\n'.join(info)
 
 if __name__ == "__main__":
     sys.exit(main())

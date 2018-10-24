@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_inputs_no_fields.ui'
 #
-# Created by: PyQt5 UI code generator 5.10
+# Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -15,6 +15,7 @@ class Ui_DockWidget(object):
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.gridLayout = QtWidgets.QGridLayout(self.dockWidgetContents)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.dial = QtWidgets.QDial(self.dockWidgetContents)
         self.dial.setMinimumSize(QtCore.QSize(0, 0))
