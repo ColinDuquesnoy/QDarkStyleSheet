@@ -1,4 +1,5 @@
 #! /bin/bash
+# -*- coding: utf-8 -*-
 
 # package info
 ppa="ppa:colin-duquesnoy/stable"
