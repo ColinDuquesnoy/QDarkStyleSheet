@@ -1,5 +1,10 @@
 # Changelog
 
+- 2.6:
+  - New palette color, almost whole new qss file, simplify configuration
+  - Add get_info function on qdarkstyle to get environment information for
+    debbuging and/or issue tracker
+  - Add help dialog to example to show get_info information
 - 2.5.2:
   - Modularize files from example/ui to simplify edition (developers)
   - Add scripts to process files and run example more easiy (developers)
