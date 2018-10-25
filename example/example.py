@@ -195,7 +195,7 @@ def main():
     def read_settings(window):
         """Read and set window settings from a file."""
         settings = QSettings('QDarkStyle', 'QDarkStyle Example')
-        if args.qt_from == 'pyside':
+        if args.qt_from == 'pyside' or args.qt_from == 'pyside2':
             pos = settings.value('pos', window.pos())
             size = settings.value('size', window.size())
             state = settings.value('state', window.saveState())
