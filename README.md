@@ -4,6 +4,8 @@
 [![Latest PyPI version](https://img.shields.io/pypi/v/QDarkStyle.svg)](https://pypi.python.org/pypi/QDarkStyle)
 [![License: MIT](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![conduct](https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-green.svg?style=flat-square)](http://contributor-covenant.org/version/1/4/)
+
 
 A dark stylesheet for Qt applications (Qt4, Qt5, PySide, PyQt4, PyQt5, QtPy,
 PyQtGraph).
@@ -40,12 +42,15 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
   - **qdarkstyle/style.qrc**
   - **qdarkstyle/rc/** (the whole directory)
 
-- Add **qdarkstyle/style.qrc** to your **.pro file**
+- Add **qdarkstyle/style.qrc** to your **.pro file** as follows:
 
+  ```cpp
+  RESOURCES += qdarkstyle/style.qrc
+  ```
 - Load the stylesheet:
 
   ```cpp
-  QFile f("qdarkstyle/style.qss");
+  QFile f(":qdarkstyle/style.qss");
   if (!f.exists())
   {
       printf("Unable to set stylesheet, file not found\n");
@@ -57,6 +62,8 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
       qApp->setStyleSheet(ts.readAll());
   }
   ```
+
+_Note: The ":" in the file name is necessary to define that file as a resource library. For more information see the discussion [here](https://github.com/ColinDuquesnoy/QDarkStyleSheet/pull/87)._
 
 ## Usage
 

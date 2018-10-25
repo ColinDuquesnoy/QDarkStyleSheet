@@ -5,12 +5,22 @@
   - Add get_info function on qdarkstyle to get environment information for
     debbuging and/or issue tracker
   - Add help dialog to example to show get_info information
+  - PySide 2 (Technical Preview) Support
+  - Improve menu indicator position on QPushButton, #102
+- 2.5.4
+  - Fix indicator image of checkable QGroupBox for check/uncheck states, #93 
+  - Fix wrong comma position, #95
+  - Added image for the missing QTreeView/QListView undeterminated state, fix #92
+- 2.5.3
+  - Add future warning and pending deprecation for 3.0 version preparation #89
+  - Add ISSUE_TEMPLATE to ask for default information on issue tracker
 - 2.5.2:
   - Modularize files from example/ui to simplify edition (developers)
   - Add scripts to process files and run example more easiy (developers)
   - Better documentation (developers)
   - Add CONTRIBUTE, CODE_OF_CONDUCT, and PRODUCTION files
   - Lint markdown to standardize files
+  - Fix and add mor information in C++ example
 - 2.5.1:
   - Fix travis files, needs more improvement #74
   - Improve modules description

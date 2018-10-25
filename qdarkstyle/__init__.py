@@ -19,6 +19,8 @@ as shown bellow
 
     # PySide
     dark_stylesheet = qdarkstyle.load_stylesheet_pyside()
+    # PySide
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyside2()
     # PyQt4
     dark_stylesheet = qdarkstyle.load_stylesheet_pyqt()
     # PyQt5
@@ -128,6 +130,11 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
 
     :return the stylesheet string
     """
+    warnings.warn(
+        "load_stylesheet_from_environment() will be deprecated in version 3,"
+        "use load_stylesheet()",
+        PendingDeprecationWarning
+    )
     qt_api = ''
     pyqtgraph_qt_lib = ''
 
@@ -193,9 +200,30 @@ def load_stylesheet(pyside=True):
 
     :return the stylesheet string
     """
+    warnings.warn(
+        "load_stylesheet() will not receive pyside parameter in version 3. "
+        "Set QtPy environment variable to specify the Qt binding insteady.",
+        FutureWarning
+    )
     # Smart import of the rc file
+
+    pyside_ver = None
+
     if pyside:
-        import qdarkstyle.pyside_style_rc
+
+        # Detect the PySide version available
+        try:
+            import PySide
+        except ModuleNotFoundError:
+            import PySide2
+            pyside_ver = 2
+        else:
+            pyside_ver = 1
+
+        if pyside_ver == 1:
+            import qdarkstyle.pyside_style_rc
+        else:
+            import qdarkstyle.pyside2_style_rc
     else:
         import qdarkstyle.pyqt_style_rc
 
@@ -203,7 +231,10 @@ def load_stylesheet(pyside=True):
     if not pyside:
         from PyQt4.QtCore import QFile, QTextStream
     else:
-        from PySide.QtCore import QFile, QTextStream
+        if pyside_ver == 1:
+            from PySide.QtCore import QFile, QTextStream
+        else:
+            from PySide2.QtCore import QFile, QTextStream
 
     f = QFile(":qdarkstyle/style.qss")
     if not f.exists():
@@ -233,6 +264,12 @@ def load_stylesheet_pyside():
 
     :return the stylesheet string
     """
+    warnings.warn(
+        "load_stylesheet_pyside() will be deprecated in version 3,"
+        "set QtPy environment variable to specify the Qt binding and "
+        "use load_stylesheet()",
+        PendingDeprecationWarning
+    )
     return load_stylesheet(pyside=True)
 
 
@@ -242,7 +279,13 @@ def load_stylesheet_pyside2():
 
     :raise NotImplementedError: Because it is not supported yet
     """
-    raise NotImplementedError("PySide 2 is not supported yet.")
+    warnings.warn(
+        "load_stylesheet_pyside2() will be deprecated in version 3,"
+        "set QtPy environment variable to specify the Qt binding and "
+        "use load_stylesheet()",
+        PendingDeprecationWarning
+    )
+    return load_stylesheet(pyside=True)
 
 
 def load_stylesheet_pyqt():
@@ -251,6 +294,12 @@ def load_stylesheet_pyqt():
 
     :return the stylesheet string
     """
+    warnings.warn(
+        "load_stylesheet_pyqt() will be deprecated in version 3,"
+        "set QtPy environment variable to specify the Qt binding and "
+        "use load_stylesheet()",
+        PendingDeprecationWarning
+    )
     return load_stylesheet(pyside=False)
 
 
@@ -262,6 +311,12 @@ def load_stylesheet_pyqt5():
 
     :return the stylesheet string
     """
+    warnings.warn(
+        "load_stylesheet_pyqt5() will be deprecated in version 3,"
+        "set QtPy environment variable to specify the Qt binding and "
+        "use load_stylesheet()",
+        PendingDeprecationWarning
+    )
     # Smart import of the rc file
     import qdarkstyle.pyqt5_style_rc
 

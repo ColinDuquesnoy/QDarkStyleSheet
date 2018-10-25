@@ -151,7 +151,6 @@ QCheckBox::indicator:checked:pressed {
 }
 
 QCheckBox::indicator:checked:disabled,
-QGroupBox::indicator:checked:disabled {
     image: url(:/qss_icons/rc/checkbox_checked_disabled.png);
 }
 
@@ -190,6 +189,11 @@ QGroupBox::indicator:checked:pressed {
     border: none;
     image: url(:/qss_icons/rc/checkbox_checked_focus.png);
 }
+
+QGroupBox::indicator:checked:disabled {
+    image: url(:/qss_icons/rc/checkbox_checked_disabled.png);
+}
+
 
 /* QRadioButton ----------------------------------------------------------- */
 
@@ -839,6 +843,7 @@ QPushButton:disabled {
     padding: 3px;
 }
 
+
 QPushButton:checked {
     background-color: #31363B;
     border: 1px solid #31363B;
@@ -859,7 +864,12 @@ QPushButton:checked:disabled {
 QPushButton::menu-indicator {
     subcontrol-origin: padding;
     subcontrol-position: bottom right;
-    left: 8px;
+    bottom: 5px;
+}
+
+QPushButton:pressed {
+    background-color: #232629;
+    border: 1px solid #179AE0;
 }
 
 /* QToolButton ------------------------------------------------------------ */
@@ -892,7 +902,7 @@ QToolButton:checked,
 QToolButton:pressed,
 QToolButton::menu-button:pressed {
     background-color: #232629;
-    border: 1px solid #31363B;
+    border: 1px solid #179AE0;
     padding: 0px;
 }
 
@@ -958,7 +968,7 @@ QComboBox {
     border: 1px solid #31363B;
     border-radius: 4px;
     padding: 4px;
-    min-width: 75px;
+    /* min-width: 75px; removed for fix #109 */
     selection-background-color: #3375A3;
 }
 
@@ -1368,6 +1378,20 @@ QListView::indicator:unchecked:hover,
 QListView::indicator:unchecked:focus,
 QListView::indicator:unchecked:pressed {
     image: url(:/qss_icons/rc/checkbox_unchecked_focus.png);
+}
+
+QTreeView::indicator:indeterminate:hover,
+QTreeView::indicator:indeterminate:focus,
+QTreeView::indicator:indeterminate:pressed,
+QListView::indicator:indeterminate:hover,
+QListView::indicator:indeterminate:focus,
+QListView::indicator:indeterminate:pressed {
+    image: url(:/qss_icons/rc/checkbox_indeterminate_focus.png);
+}
+
+QTreeView::indicator:indeterminate,
+QListView::indicator:indeterminate {
+    image: url(:/qss_icons/rc/checkbox_indeterminate.png);
 }
 
 QListView,
