@@ -14,7 +14,7 @@ PyQtGraph).
 
 ### Python
 
-From PyPI: Get the lastest stable version of ``qdarkstyle`` package
+From PyPI: Get the latest stable version of ``qdarkstyle`` package
 using *pip* (preferable):
 
 ```bash
@@ -86,8 +86,8 @@ window.show()
 app.exec_()
 ```
 
-To use another wrapper for Qt, you just need to replace some lines.
-See examples bellow.
+To use another wrapper for Qt, you need to replace some lines.
+See examples below.
 
 To use PyQt4, change two lines
 
@@ -172,18 +172,28 @@ window.show()
 app.exec_()
 ```
 
-It you are using Qt.py, which is different from qtpy, you should install
-qtpy also, then set both to the same binding.
-
-
+If you are using Qt.py, which is different from qtpy, you should install
+qtpy then set both to the same binding.
 
 _There is an example included in the *example* folder.
 You can run the script without installing qdarkstyle. You only need to have
 PySide or PySide2 or PyQt4 or PyQt5 installed on your system._
 
+
+## What is new?
+
+In the version 2.6, a reestructure stylesheet is provided. The palette has only 9 colors. Most widgets are revised and their styles were improved. We also provide a command line (script) to get info that could be used when opening issues. See the image below.
+
+```
+qdarkstyle --all
+```
+
+<img src="./screenshots/cmd.png"/>
+
+
 ## Snapshots
 
-Here are a few snapshots comparing the use of QDarkStyle and the default style.
+Here are a few snapshots comparing the use of QDarkStyle v2.5.3 and the default style.
 Click in the image to zoom.
 
 <table style="width:100%">
@@ -224,7 +234,7 @@ Please, see [CHANGES](CHANGES.md) file.
 ## License
 
 This project is licensed under the MIT license.
-Imagens contained in this project are licensed under CC-BY license.
+Images contained in this project are licensed under CC-BY license.
 
 For more information see [LICENSE](LICENSE.md) file.
 

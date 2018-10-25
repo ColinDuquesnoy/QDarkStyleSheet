@@ -1,18 +1,20 @@
 # Changelog
 
 - 2.6:
-  - Add changes made by other people in the new style - merge does not work there
-  - Update README with Qt.py and PySide 2 information
+  - Fix the wrong upload of style.qss - sorry
+  - Fix almost all widgets backgrounds, and other not previously covered widgets with new style
+  - New palette color, almost whole new qss file, simplify configuration, partially #112, #101, #109, 
+  - Add changes made by other people in the new style - merge does not work there #93, #92, #102
+  - Update README with Qt.py and PySide 2 information #110, #107, #83
   - Update __init__ info
   - Improve scripts for processing ui and qrc
   - Add __main__ and setup entry, to access function directly
-  - New palette color, almost whole new qss file, simplify configuration
   - Add function to get information about bindings and abstraction layers for
     debbuging and/or issue tracker
   - PySide 2 support
   - Improve menu indicator position on QPushButton, #102
 - 2.5.4
-  - Fix indicator image of checkable QGroupBox for check/uncheck states, #93 
+  - Fix indicator image of checkable QGroupBox for check/uncheck states, #93
   - Fix wrong comma position, #95
   - Added image for the missing QTreeView/QListView undeterminated state, fix #92
 - 2.5.3
