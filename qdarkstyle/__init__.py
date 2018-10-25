@@ -45,11 +45,11 @@ Enjoy!
 
 """
 
-import logging
-import platform
-import os
-import sys
 import importlib
+import logging
+import os
+import platform
+import sys
 import warnings
 
 __version__ = "2.6"
@@ -349,31 +349,43 @@ def load_stylesheet_pyqt5():
             stylesheet += mac_fix
         return stylesheet
 
+
 def information():
     """Get system and runtime information."""
     info = []
     qt_api = ''
     qt_lib = ''
+    qt_bin = ''
 
     try:
         qt_api = os.environ['QT_API']
     except KeyError:
-        qt_api = 'Not set or inexistent'
+        qt_api = 'Not set or nonexistent'
 
     try:
-        qt_lib = os.environ['PYQTGRAPH_QT_LIB']
+        from Qt import __binding__
+        qt_lib = __binding__
+    except (KeyError, ModuleNotFoundError):
+        qt_lib = 'Not set or nonexistent'
+
+    try:
+        qt_bin = os.environ['PYQTGRAPH_QT_LIB']
     except KeyError:
-        qt_lib = 'Not set or inexistent'
+        qt_bin = 'Not set or nonexistent'
 
     info.append('QDarkStyle: %s' % __version__)
-    info.append('OS: %s %s %s' % (os.uname().sysname, os.uname().release, os.uname().machine))
+    info.append('OS: %s %s %s' % (platform.system(), platform.release(), platform.machine()))
     info.append('Platform: %s' % sys.platform)
     info.append('Python: %s' % '.'.join(str(e) for e in sys.version_info[:]))
     info.append('Python API: %s' % sys.api_version)
-    info.append('Binding in use: %s' % QT_BINDING)
+
+    info.append('Binding in use:     %s' % QT_BINDING)
     info.append('Abstraction in use: %s' % QT_ABSTRACTION)
-    info.append('QT_API: %s' % qt_api)
-    info.append('PYQTGRAPH_QT_LIB: %s' % qt_lib)
+
+    info.append('qtpy (QT_API):                %s' % qt_api)
+    info.append('pyqtgraph (PYQTGRAPH_QT_LIB): %s' % qt_lib)
+    info.append('Qt.py (__binding__):          %s' % qt_bin)
+
     return info
 
 
@@ -403,13 +415,14 @@ def qt_abstractions():
 
 
 def import_qt_modules_from(use_binding='pyqt5', use_abstraction='qtpy'):
+    """New approach to import modules using importlib."""
     spec_binding = importlib.util.find_spec(use_binding)
     spec_abstraction = importlib.util.find_spec(use_abstraction)
 
     if spec_binding is None:
         print("Cannot find Qt binding: ", use_binding)
     else:
-        module = importlib.util.module_from_spec(spec)
+        module = importlib.util.module_from_spec(spec_binding)
         spec.loader.exec_module(module)
         # Adding the module to sys.modules is optional.
         sys.modules[name] = module
