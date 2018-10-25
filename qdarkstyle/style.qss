@@ -967,9 +967,9 @@ QCommandLinkButton {
 QComboBox {
     border: 1px solid #31363B;
     border-radius: 4px;
-    padding: 4px;
-    min-width: 75px;
     selection-background-color: #3375A3;
+    padding: 4px;
+    /* min-width: 75px;  removed to fix 109 */
 }
 
 QComboBox:disabled {

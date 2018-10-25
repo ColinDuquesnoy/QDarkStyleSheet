@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>662</width>
-    <height>231</height>
+    <height>307</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,10 +18,29 @@
     <item>
      <widget class="QLabel" name="label_71">
       <property name="text">
-       <string>Inside CentralWidget</string>
+       <string>Inside Central Widget</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Hyperlink Example&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#aa0000;&quot;&gt;CSS for the documents (RichText) &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#aa0000;&quot;&gt;is not the same as the application.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#aa0000;&quot;&gt;We cannot change the internal &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#aa0000;&quot;&gt;content CSS, e.g., hyperlinks.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#4d545b;&quot;&gt;See issue #112.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::TextBrowserInteraction</set>
       </property>
      </widget>
     </item>

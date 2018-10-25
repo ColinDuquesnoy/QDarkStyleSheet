@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(662, 231)
+        MainWindow.resize(662, 307)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -20,6 +20,13 @@ class Ui_MainWindow(object):
         self.label_71.setAlignment(QtCore.Qt.AlignCenter)
         self.label_71.setObjectName("label_71")
         self.verticalLayout_4.addWidget(self.label_71)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setTextFormat(QtCore.Qt.RichText)
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setOpenExternalLinks(True)
+        self.label.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
+        self.label.setObjectName("label")
+        self.verticalLayout_4.addWidget(self.label)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 662, 28))
@@ -102,7 +109,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_71.setText(_translate("MainWindow", "Inside CentralWidget"))
+        self.label_71.setText(_translate("MainWindow", "Inside Central Widget"))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><a href=\"https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112\"><span style=\" text-decoration: underline; color:#0000ff;\">Hyperlink Example</span></a></p><p align=\"center\"><a href=\"https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112\"><span style=\" text-decoration: underline; color:#aa0000;\">CSS for the documents (RichText) </span></a></p><p align=\"center\"><a href=\"https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112\"><span style=\" text-decoration: underline; color:#aa0000;\">is not the same as the application.</span></a></p><p align=\"center\"><a href=\"https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112\"><span style=\" text-decoration: underline; color:#aa0000;\">We cannot change the internal </span></a></p><p align=\"center\"><a href=\"https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112\"><span style=\" text-decoration: underline; color:#aa0000;\">content CSS, e.g., hyperlinks.</span></a></p><p align=\"center\"><a href=\"https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112\"><span style=\" text-decoration: underline; color:#4d545b;\">See issue #112.</span></a></p></body></html>"))
         self.menuMenu.setTitle(_translate("MainWindow", "Menu"))
         self.menuMenuSub.setTitle(_translate("MainWindow", "Menu Sub"))
         self.menuMenuDelayed.setTitle(_translate("MainWindow", "Menu Delayed"))
