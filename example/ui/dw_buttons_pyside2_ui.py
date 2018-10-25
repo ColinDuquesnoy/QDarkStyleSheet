@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_buttons.ui'
 #
-# Created: Thu Oct 25 01:26:33 2018
+# Created: Thu Oct 25 17:09:49 2018
 #      by: pyside2-uic 2.0.0 running on PySide2 5.6.0~a1
 #
 # WARNING! All changes made in this file will be lost!
