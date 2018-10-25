@@ -30,4 +30,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Topic :: Software Development :: Libraries :: Application Frameworks'
-    ])
+    ],
+    zip_safe=False,  # don't use eggs
+    entry_points={"console_scripts": ["qdarkstyle=qdarkstyle.__main__:main"]}
+)
