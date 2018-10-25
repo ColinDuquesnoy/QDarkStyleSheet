@@ -1,11 +1,15 @@
 # Changelog
 
 - 2.6:
+  - Add changes made by other people in the new style - merge does not work there
+  - Update README with Qt.py and PySide 2 information
+  - Update __init__ info
+  - Improve scripts for processing ui and qrc
+  - Add __main__ and setup entry, to access function directly
   - New palette color, almost whole new qss file, simplify configuration
-  - Add get_info function on qdarkstyle to get environment information for
+  - Add function to get information about bindings and abstraction layers for
     debbuging and/or issue tracker
-  - Add help dialog to example to show get_info information
-  - PySide 2 (Technical Preview) Support
+  - PySide 2 support
   - Improve menu indicator position on QPushButton, #102
 - 2.5.4
   - Fix indicator image of checkable QGroupBox for check/uncheck states, #93 

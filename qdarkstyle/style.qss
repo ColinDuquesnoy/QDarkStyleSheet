@@ -150,7 +150,7 @@ QCheckBox::indicator:checked:pressed {
     image: url(:/qss_icons/rc/checkbox_checked_focus.png);
 }
 
-QCheckBox::indicator:checked:disabled,
+QCheckBox::indicator:checked:disabled{
     image: url(:/qss_icons/rc/checkbox_checked_disabled.png);
 }
 
@@ -968,7 +968,7 @@ QComboBox {
     border: 1px solid #31363B;
     border-radius: 4px;
     padding: 4px;
-    /* min-width: 75px; removed for fix #109 */
+    min-width: 75px;
     selection-background-color: #3375A3;
 }
 

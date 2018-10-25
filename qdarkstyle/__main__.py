@@ -8,6 +8,7 @@ from os.path import abspath, dirname
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 
 from example import example
+import qdarkstyle
 from qdarkstyle import qt_bindings, qt_abstractions, information, __version__
 
 

@@ -7,7 +7,7 @@
 [![conduct](https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-green.svg?style=flat-square)](http://contributor-covenant.org/version/1/4/)
 
 
-A dark stylesheet for Qt applications (Qt4, Qt5, PySide, PyQt4, PyQt5, QtPy,
+A dark stylesheet for Qt applications (Qt4, Qt5, PySide, PySide2, PyQt4, PyQt5, QtPy,
 PyQtGraph).
 
 ## Installation
@@ -172,9 +172,14 @@ window.show()
 app.exec_()
 ```
 
+It you are using Qt.py, which is different from qtpy, you should install
+qtpy also, then set both to the same binding.
+
+
+
 _There is an example included in the *example* folder.
 You can run the script without installing qdarkstyle. You only need to have
-PySide (or PyQt4 or PyQt5) installed on your system._
+PySide or PySide2 or PyQt4 or PyQt5 installed on your system._
 
 ## Snapshots
 

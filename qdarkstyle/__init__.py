@@ -19,7 +19,7 @@ as shown bellow
 
     # PySide
     dark_stylesheet = qdarkstyle.load_stylesheet_pyside()
-    # PySide
+    # PySide 2
     dark_stylesheet = qdarkstyle.load_stylesheet_pyside2()
     # PyQt4
     dark_stylesheet = qdarkstyle.load_stylesheet_pyqt()
@@ -50,6 +50,7 @@ import platform
 import os
 import sys
 import importlib
+import warnings
 
 __version__ = "2.6"
 
@@ -57,7 +58,7 @@ __version__ = "2.6"
 QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
 """list: values of all Qt bindings to import."""
 
-QT_ABSTRACTIONS = ['qtpy', 'pyqtgraph', 'Qt']
+QT_ABSTRACTIONS = ['qtpy', 'pyqtgraph', 'Qt.py']
 """list: values of all Qt abstraction layers to import."""
 
 QT4_IMPORT_API = ['QtCore', 'QtGui']
@@ -72,10 +73,10 @@ QT_API_VALUES = ['pyqt', 'pyqt5', 'pyside', 'pyside2']
 QT_LIB_VALUES = ['PyQt', 'PyQt5', 'PySide', 'PySide2']
 """list: values for PYQTGRAPH_QT_LIB environment variable used by PyQtGraph."""
 
-QT_BINDING = 'Not set or inexistent'
+QT_BINDING = 'Not set or nonexistent'
 """str: Qt binding in use."""
 
-QT_ABSTRACTION = 'Not set or inexistent'
+QT_ABSTRACTION = 'Not set or nonexistent'
 """str: Qt abstraction layer in use."""
 
 
@@ -116,6 +117,7 @@ def _qt_wrapper_import(qt_api):
         _logger().error("Impossible import Qt wrapper.\n %s", str(err))
     else:
         _logger().info("Using Qt wrapper = %s ", qt_wrapper)
+        QT_BINDING = qt_wrapper
     finally:
         return loader
 
@@ -151,6 +153,7 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
     else:
         if not is_pyqtgraph:
             if qt_api in QT_API_VALUES:
+                QT_ABSTRACTION = "qtpy"
                 _logger().info("Found QT_API='%s'", qt_api)
                 loader = _qt_wrapper_import(qt_api)
             else:
@@ -170,8 +173,10 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
                             "and choose one option from %s",
                             QT_LIB_VALUES)
     else:
+
         if is_pyqtgraph:
             if pyqtgraph_qt_lib in QT_LIB_VALUES:
+                QT_ABSTRACTION = "pyqtgraph"
                 _logger().info("Found PYQTGRAPH_QT_LIB='%s'", pyqtgraph_qt_lib)
                 loader = _qt_wrapper_import(pyqtgraph_qt_lib)
             else:
@@ -344,7 +349,6 @@ def load_stylesheet_pyqt5():
             stylesheet += mac_fix
         return stylesheet
 
-
 def information():
     """Get system and runtime information."""
     info = []
@@ -375,21 +379,6 @@ def information():
 
 def qt_bindings():
     """Return a list of qt bindings available."""
-
-    import PyQt5.QtCore
-    import PyQt5.Qt
-    import sip
-    import PySide
-    import PySide.QtCore
-
-    print("PySide:", PySide.__version__,
-          "QtCompiled:", PySide.QtCore.__version__,
-          "QtRunTime", PySide.QtCore.qVersion())
-
-    print("PyQt:", PyQt5.QtCore.QT_VERSION_STR,
-          "QtCompiled:", PyQt5.QtCore.QT_VERSION_STR,
-          "QtRunTime", PyQt5.QtCore.qVersion(),
-          "SIP:", sip.SIP_VERSION_STR)
 
     bindings = QT_BINDINGS
     for binding in bindings:
