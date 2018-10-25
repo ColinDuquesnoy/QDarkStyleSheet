@@ -10,7 +10,7 @@ Qt Design (common ones) in the basic states (enabled/disabled), and
 Requirements:
 
     - Python 2 or Python 3
-    - PyQt4 or PyQt5 or PySide
+    - PyQt4 or PyQt5 or PySide or PySide2
     - QtPy or PyQtGraph (if choosen)
 
 To run this example using PyQt4, simple do
@@ -49,14 +49,15 @@ sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 
 # must be in this place, after setting path, to not need to install
 import qdarkstyle
+from qdarkstyle import QT_BINDING, QT_ABSTRACTION
 
 
 def main():
     """Execute QDarkStyle example."""
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument('--qt_from', default='pyqt',
-                        choices=['pyqt', 'pyqt5', 'pyside', 'qtpy', 'pyqtgraph'],
+    parser.add_argument('--qt_from', default='qtpy',
+                        choices=['pyqt', 'pyqt5', 'pyside','pyside2', 'qtpy', 'pyqtgraph'],
                         help="Choose which wrapper/framework is to be used to run the example.", type=str)
     parser.add_argument('--no_dark', action='store_true',
                         help="Exihibts the original  window (without qdarkstyle).")
@@ -124,6 +125,25 @@ def main():
         from ui.dw_containers_no_tabs_pyqt5_ui import Ui_DockWidget as ui_containers_no_tabs
         # getting style
         style = qdarkstyle.load_stylesheet_pyqt5()
+
+    elif args.qt_from == 'pyside2':
+        # using PyQt5 wrapper
+        from PySide2.QtWidgets import QApplication, QMainWindow, QDockWidget
+        from PySide2.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
+        # import examples UI according to wrapper
+        from ui.mw_menus_pyside2_ui import Ui_MainWindow as ui_main
+
+        from ui.dw_buttons_pyside2_ui import Ui_DockWidget as ui_buttons
+        from ui.dw_displays_pyside2_ui import Ui_DockWidget as ui_displays
+        from ui.dw_inputs_fields_pyside2_ui import Ui_DockWidget as ui_inputs_fields
+        from ui.dw_inputs_no_fields_pyside2_ui import Ui_DockWidget as ui_inputs_no_fields
+
+        from ui.dw_widgets_pyside2_ui import Ui_DockWidget as ui_widgets
+        from ui.dw_views_pyside2_ui import Ui_DockWidget as ui_views
+        from ui.dw_containers_tabs_pyside2_ui import Ui_DockWidget as ui_containers_tabs
+        from ui.dw_containers_no_tabs_pyside2_ui import Ui_DockWidget as ui_containers_no_tabs
+        # getting style
+        style = qdarkstyle.load_stylesheet_pyside2()
 
     elif args.qt_from == 'qtpy':
         # using QtPy API
@@ -200,8 +220,7 @@ def main():
     window.setObjectName('mainwindow')
     ui = ui_main()
     ui.setupUi(window)
-    window.setWindowTitle("QDarkStyle v." + qdarkstyle.__version__ +
-                          " - Example - Using " + args.qt_from)
+    window.setWindowTitle("QDarkStyle v." + qdarkstyle.__version__)
 
     # create docks for buttons
     dw_buttons = QDockWidget()
@@ -269,15 +288,13 @@ def main():
         QTimer.singleShot(2000, app.exit)
 
     # run
+    qdarkstyle.information()
     read_settings(window)
     window.showMaximized()
     app.exec_()
     write_settings(window)
 
-    def help(self):
-        """Pop up help information."""
-    info = qdarkstyle.get_info()
-    str_info = '\n'.join(info)
+
 
 if __name__ == "__main__":
     sys.exit(main())
