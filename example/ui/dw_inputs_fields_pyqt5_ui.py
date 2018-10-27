@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_inputs_fields.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -15,7 +15,6 @@ class Ui_DockWidget(object):
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.gridLayout = QtWidgets.QGridLayout(self.dockWidgetContents)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.label = QtWidgets.QLabel(self.dockWidgetContents)
         font = QtGui.QFont()
