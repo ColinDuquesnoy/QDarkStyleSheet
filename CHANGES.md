@@ -1,6 +1,12 @@
 # Changelog
 
 - 2.6:
+  - Many other enhancements and fix #103, #111, #106
+  - Fix tab disabled, background and color
+  - Enhance tab selection
+  - Enhance spacing (padding and margin)
+  - Enhance table, list, tree and combo box selection
+  - Fix slider disabled and enhance size
   - Fix the wrong upload of style.qss - sorry
   - Fix almost all widgets backgrounds, and other not previously covered widgets with new style
   - New palette color, almost whole new qss file, simplify configuration, partially #112, #101, #109, 
