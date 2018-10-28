@@ -41,7 +41,6 @@ problems.
 import logging
 import sys
 import argparse
-import importlib.util
 
 # make the example runnable without the need to install
 from os.path import abspath, dirname
