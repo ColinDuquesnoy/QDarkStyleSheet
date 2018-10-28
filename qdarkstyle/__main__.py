@@ -27,8 +27,8 @@ def main():
                         help="Show available bindings for Qt")
     parser.add_argument('-a', '--abstractions', action='store_true',
                         help="Show available abstraction layers for Qt bindings")
-    parser.add_argument('-e', '--example', action='store_true',
-                        help="Show qdarkstyle example")
+    # parser.add_argument('-e', '--example', action='store_true',
+    #                     help="Show qdarkstyle example")
     parser.add_argument('-v', '--version', action='store_true',
                         help="Show qdarkstyle version")
     parser.add_argument('--all', action='store_true',
@@ -58,8 +58,8 @@ def main():
         info = __version__
         print('\nVersion: %s' % info)
 
-    if args.example:
-        example.main()
+    # if args.example:
+    #     example.main()
 
 
 if __name__ == "__main__":

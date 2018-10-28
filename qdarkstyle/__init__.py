@@ -45,7 +45,13 @@ Enjoy!
 
 """
 
-import importlib
+importlib_error = ""
+
+try:
+    import importlib
+except ImportError:
+    importlib_error = "Not available in Python 2.7"
+
 import logging
 import os
 import platform
@@ -58,7 +64,7 @@ __version__ = "2.6"
 QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
 """list: values of all Qt bindings to import."""
 
-QT_ABSTRACTIONS = ['qtpy', 'pyqtgraph', 'Qt.py']
+QT_ABSTRACTIONS = ['qtpy', 'pyqtgraph', 'Qt']
 """list: values of all Qt abstraction layers to import."""
 
 QT4_IMPORT_API = ['QtCore', 'QtGui']
@@ -364,9 +370,12 @@ def information():
 
     try:
         from Qt import __binding__
-        qt_lib = __binding__
-    except (KeyError, ModuleNotFoundError):
+    except Exception:
+        # It should be (KeyError, ModuleNotFoundError, ImportError)
+        # but each python version have a different one, and not define others
         qt_lib = 'Not set or nonexistent'
+    else:
+        qt_lib = __binding__
 
     try:
         qt_bin = os.environ['PYQTGRAPH_QT_LIB']
@@ -391,6 +400,9 @@ def information():
 
 def qt_bindings():
     """Return a list of qt bindings available."""
+    if importlib_error:
+        print(importlib_error)
+        return []
 
     bindings = QT_BINDINGS
     for binding in bindings:
@@ -404,6 +416,10 @@ def qt_bindings():
 
 def qt_abstractions():
     """Return a list of qt abstraction layers available."""
+    if importlib_error:
+        print(importlib_error)
+        return []
+
     abstractions = QT_ABSTRACTIONS
     for abstraction in abstractions:
         # check import
@@ -416,6 +432,10 @@ def qt_abstractions():
 
 def import_qt_modules_from(use_binding='pyqt5', use_abstraction='qtpy'):
     """New approach to import modules using importlib."""
+    if importlib_error:
+        print(importlib_error)
+        return []
+
     spec_binding = importlib.util.find_spec(use_binding)
     spec_abstraction = importlib.util.find_spec(use_abstraction)
 
