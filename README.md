@@ -182,7 +182,7 @@ PySide or PySide2 or PyQt4 or PyQt5 installed on your system._
 
 ## What is new?
 
-In the version 2.6, a reestructure stylesheet is provided. The palette has only 9 colors. Most widgets are revised and their styles were improved. We also provide a command line (script) to get info that could be used when opening issues. See the image below.
+In the version 2.6 and later, a reestructure stylesheet is provided. The palette has only 9 colors. Most widgets are revised and their styles were improved. We also provide a command line (script) to get info that could be used when opening issues. See the image below.
 
 ```
 qdarkstyle --all
@@ -193,7 +193,7 @@ qdarkstyle --all
 
 ## Snapshots
 
-Here are a few snapshots comparing the use of QDarkStyle v2.5.3 and the default style.
+Here are a few snapshots comparing the use of QDarkStyle v2.6.1 and the default style.
 Click in the image to zoom.
 
 <table style="width:100%">
@@ -212,14 +212,14 @@ Click in the image to zoom.
     <td><img src="./screenshots/no_dark_containers_tabs_displays.png"/></td>
   </tr>
   <tr>
-    <th colspan=2>Widgets and Inputs (with fields)</th>
+    <th colspan=2>Widgets and Inputs (fields)</th>
   </tr>
   <tr>
     <td><img src="./screenshots/qdarkstyle_widgets_inputs_fields.png"/></td>
     <td><img src="./screenshots/no_dark_widgets_inputs_fields.png"/></td>
   </tr>
   <tr>
-    <th colspan=2>Views and Inputs (without fields)</th>
+    <th colspan=2>Views and Inputs (no fields)</th>
   </tr>
   <tr>
     <td><img src="./screenshots/qdarkstyle_views_inputs_no_fields.png"/></td>
