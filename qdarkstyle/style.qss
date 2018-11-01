@@ -1190,15 +1190,22 @@ QTabWidget {
     selection-background-color: #31363B;
 }
 
+QTabWidget::focus QWidget{
+    border: none;
+}
+
 QTabWidget::pane {
     border: 1px solid #31363B;
     padding: 2px;
     margin: 0px;
 }
 
+
 QTabWidget:selected {
     background-color: #31363B;
+    border: 1px solid #31363B;
 }
+
 
 QTabWidget:focus {
     border: none;
