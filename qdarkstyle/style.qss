@@ -73,22 +73,32 @@ QWidget:item:hover {
 }
 
 /* QMainWindow ------------------------------------------------------------ */
+/* This adjusts the splitter in the dock widget, not qsplitter              */
+
 
 QMainWindow::separator {
     background-color: #31363B;
     border: 0 solid #232629;
     spacing: 0;
-    padding: 0;
+    padding: 1px;
     margin: 0;
 }
 
 QMainWindow::separator:hover {
     background-color: #4D545B;
     border: 0px solid #179AE0;
-    spacing: 0;
-    padding: 0;
-    margin: 0;
 }
+
+QMainWindow::separator:horizontal {
+    width: 5px;
+    image: url(:/qss_icons/rc/Vsepartoolbar.png);
+}
+
+QMainWindow::separator:vertical {
+    height: 5px;
+    image: url(:/qss_icons/rc/Hsepartoolbar.png);
+}
+
 
 /* QToolTip --------------------------------------------------------------- */
 
@@ -346,12 +356,12 @@ QMenu {
 }
 
 QMenu::separator {
-    height: 1px;
+    height: 2px;
     background-color: #31363B;
     color: #A9A9A9;
     padding-left: 4px;
-    margin-left: 10px;
-    margin-right: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 QMenu::icon {
@@ -368,12 +378,7 @@ QMenu::item:selected {
     color: #EFF0F1;
 }
 
-QMenu::separator {
-    height: 2px;
-    background: #31363B;
-    margin-left: 2px;
-    margin-right: 2px;
-}
+
 
 QMenu::indicator {
     width: 12px;
@@ -658,18 +663,22 @@ QToolBar {
 }
 
 QToolBar::handle:horizontal {
+    width: 6px;
     image: url(:/qss_icons/rc/Hmovetoolbar.png);
 }
 
 QToolBar::handle:vertical {
+    height: 6px;
     image: url(:/qss_icons/rc/Vmovetoolbar.png);
 }
 
 QToolBar::separator:horizontal {
+    width: 3px;
     image: url(:/qss_icons/rc/Hsepartoolbar.png);
 }
 
 QToolBar::separator:vertical {
+    height: 3px;
     image: url(:/qss_icons/rc/Vsepartoolbar.png);
 }
 
@@ -1249,7 +1258,7 @@ QTabBar::tab:left:selected:disabled {
 }
 
 QTabBar::tab:right:selected:disabled {
-    border-right: 2px solid #18465D;;
+    border-right: 2px solid #18465D;
     color: #4D545B;
     background-color: #31363B;
 }
@@ -1409,6 +1418,20 @@ QTabBar QToolButton::right-arrow:disabled {
 QTabBar QToolButton::left-arrow:disabled {
     image: url(:/qss_icons/rc/left_arrow_disabled.png);
 }
+
+
+/*  Some examples from internet to check
+
+QTabBar::tabButton() and QTabBar::tabIcon()
+QTabBar::tear {width: 0px; border: none;}
+QTabBar::tear {image: url(tear_indicator.png);}
+QTabBar::scroller{width:85pix;}
+QTabBar QToolbutton{background-color:"light blue";}
+
+But that left the buttons transparant.
+Looked confusing as the tab buttons migrated behind the scroller buttons.
+So we had to color the back ground of the scroller buttons
+*/
 
 /* QDockWiget ------------------------------------------------------------- */
 
@@ -1753,22 +1776,35 @@ QFrame[width="3"] {
 
 /* QSplitter -------------------------------------------------------------- */
 
-QSplitter::handle {
-    border: 1px solid #179AE0;
+QSplitter {
+    background-color: #31363B;
+    spacing: 0;
+    padding: 0;
+    margin: 0;
 }
 
-QSplitter::handle:hover {
-    background-color: #232629;
-    border: 1px solid #31363B;
+QSplitter::separator {
+    background-color: #31363B;
+    border: 0 solid #232629;
+    spacing: 0;
+    padding: 1px;
+    margin: 0;
 }
 
-QSplitter::handle:horizontal {
-    width: 1px;
+QSplitter::separator:hover {
+    background-color: #4D545B;
 }
 
-QSplitter::handle:vertical {
-    height: 1px;
+QSplitter::separator:horizontal {
+    width: 5px;
+    image: url(:/qss_icons/rc/Vsepartoolbar.png);
 }
+
+QSplitter::separator:vertical {
+    height: 5px;
+    image: url(:/qss_icons/rc/Hsepartoolbar.png);
+}
+
 
 /* QDateEdit-------------------------------------------------------------- */
 

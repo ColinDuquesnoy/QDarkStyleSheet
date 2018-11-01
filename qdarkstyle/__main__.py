@@ -28,7 +28,7 @@ def main():
     parser.add_argument('-a', '--abstractions', action='store_true',
                         help="Show available abstraction layers for Qt bindings")
     # parser.add_argument('-e', '--example', action='store_true',
-    #                     help="Show qdarkstyle example")
+    #                     help="Show qdarkstyle example, subcommand.")
     parser.add_argument('-v', '--version', action='store_true',
                         help="Show qdarkstyle version")
     parser.add_argument('--all', action='store_true',
