@@ -3,9 +3,10 @@
 /style_pyside_rc.py
 ./.idea
 /.idea/
-/dist/
-/QDarkStyle.egg-info/
-/build/
+dist/
+docs/
+QDarkStyle.egg-info/
+build/
 __pycache__
 *.tar
 *.tar.*
