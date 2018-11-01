@@ -1,5 +1,8 @@
 # Changelog
-
+- 2.6.1:
+  - Fix and improve QSplitter and separators from tool bar and windows #115
+  - Fix README version screenshots and update them
+  - Add reset function into example to reset GUI settings, after you mess up with
 - 2.6:
   - Many other enhancements and fix #103, #111, #106
   - Fix tab disabled, background and color
