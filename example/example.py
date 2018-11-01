@@ -62,6 +62,8 @@ def main():
                         help="Exihibts the original  window (without qdarkstyle).")
     parser.add_argument('--test', action='store_true',
                         help="Auto close window after 2s.")
+    parser.add_argument('--reset', action='store_true',
+                        help="Reset GUI settings (position, size).")
     # parsing arguments from command line
     args = parser.parse_args()
 
@@ -191,7 +193,7 @@ def main():
         settings.setValue('size', window.size())
         settings.setValue('state', window.saveState())
 
-    def read_settings(window):
+    def read_settings(window, reset=False):
         """Read and set window settings from a file."""
         settings = QSettings('QDarkStyle', 'QDarkStyle Example')
         if args.qt_from == 'pyside' or args.qt_from == 'pyside2':
@@ -202,9 +204,11 @@ def main():
             pos = settings.value('pos', window.pos(), type='QPoint')
             size = settings.value('size', window.size(), type='QSize')
             state = settings.value('state', window.saveState(), type='QByteArray')
-        window.restoreState(state)
-        window.resize(size)
-        window.move(pos)
+
+        if not reset:
+            window.restoreState(state)
+            window.resize(size)
+            window.move(pos)
 
     # create the application
     app = QApplication(sys.argv)
@@ -235,19 +239,19 @@ def main():
     ui_displays.setupUi(dw_displays)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_displays)
 
-    # create docks for inputs - fields
-    dw_inputs_fields = QDockWidget()
-    dw_inputs_fields.setObjectName('_fields')
-    ui_inputs_fields = ui_inputs_fields()
-    ui_inputs_fields.setupUi(dw_inputs_fields)
-    window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_fields)
-
     # create docks for inputs - no fields
     dw_inputs_no_fields = QDockWidget()
     dw_inputs_no_fields.setObjectName('inputs_no_fields')
     ui_inputs_no_fields = ui_inputs_no_fields()
     ui_inputs_no_fields.setupUi(dw_inputs_no_fields)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_no_fields)
+
+    # create docks for inputs - fields
+    dw_inputs_fields = QDockWidget()
+    dw_inputs_fields.setObjectName('_fields')
+    ui_inputs_fields = ui_inputs_fields()
+    ui_inputs_fields.setupUi(dw_inputs_fields)
+    window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_fields)
 
     # create docks for widgets
     dw_widgets = QDockWidget()
@@ -263,13 +267,6 @@ def main():
     ui_views.setupUi(dw_views)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_views)
 
-    # create docks for containters - tabs
-    dw_containers_tabs = QDockWidget()
-    dw_containers_tabs.setObjectName('containers')
-    ui_containers_tabs = ui_containers_tabs()
-    ui_containers_tabs.setupUi(dw_containers_tabs)
-    window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_tabs)
-
     # create docks for containers - no tabs
     dw_containers_no_tabs = QDockWidget()
     dw_containers_no_tabs.setObjectName('containers_no_tabs')
@@ -277,18 +274,30 @@ def main():
     ui_containers_no_tabs.setupUi(dw_containers_no_tabs)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_no_tabs)
 
+    # create docks for containters - tabs
+    dw_containers_tabs = QDockWidget()
+    dw_containers_tabs.setObjectName('containers')
+    ui_containers_tabs = ui_containers_tabs()
+    ui_containers_tabs.setupUi(dw_containers_tabs)
+    window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_tabs)
+
     # tabify right docks
     window.tabifyDockWidget(dw_buttons, dw_displays)
     window.tabifyDockWidget(dw_displays, dw_inputs_fields)
     window.tabifyDockWidget(dw_inputs_fields, dw_inputs_no_fields)
 
+    # tabify right docks
+    window.tabifyDockWidget(dw_containers_no_tabs, dw_containers_tabs)
+    window.tabifyDockWidget(dw_containers_tabs, dw_widgets)
+    window.tabifyDockWidget(dw_widgets, dw_views)
+
     # auto quit after 2s when testing on travis-ci
-    if "--test" in sys.argv:
+    if args.test:
         QTimer.singleShot(2000, app.exit)
 
     # run
     qdarkstyle.information()
-    read_settings(window)
+    read_settings(window, args.reset)
     window.showMaximized()
     app.exec_()
     write_settings(window)
