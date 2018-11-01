@@ -350,7 +350,7 @@ class Ui_DockWidget(object):
         QtCore.QMetaObject.connectSlotsByName(DockWidget)
 
     def retranslateUi(self, DockWidget):
-        DockWidget.setWindowTitle(_translate("DockWidget", "Containers", None))
+        DockWidget.setWindowTitle(_translate("DockWidget", "Containers - No Tabs", None))
         self.label_126.setText(_translate("DockWidget", "Disabled", None))
         self.label_124.setText(_translate("DockWidget", "Enabled", None))
         self.label_133.setText(_translate("DockWidget", "MDI Area", None))

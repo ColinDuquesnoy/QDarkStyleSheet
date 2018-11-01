@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_views.ui'
 #
-# Created: Sat Oct 27 00:00:53 2018
+# Created: Thu Nov  1 16:06:05 2018
 #      by: pyside2-uic 2.0.0 running on PySide2 5.6.0~a1
 #
 # WARNING! All changes made in this file will be lost!

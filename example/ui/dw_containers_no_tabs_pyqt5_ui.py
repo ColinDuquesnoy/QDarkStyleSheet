@@ -337,7 +337,7 @@ class Ui_DockWidget(object):
 
     def retranslateUi(self, DockWidget):
         _translate = QtCore.QCoreApplication.translate
-        DockWidget.setWindowTitle(_translate("DockWidget", "Containers"))
+        DockWidget.setWindowTitle(_translate("DockWidget", "Containers - No Tabs"))
         self.label_126.setText(_translate("DockWidget", "Disabled"))
         self.label_124.setText(_translate("DockWidget", "Enabled"))
         self.label_133.setText(_translate("DockWidget", "MDI Area"))

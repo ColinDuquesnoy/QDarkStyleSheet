@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_containers_no_tabs.ui'
 #
-# Created: Sat Oct 27 00:00:52 2018
+# Created: Thu Nov  1 16:06:05 2018
 #      by: pyside2-uic 2.0.0 running on PySide2 5.6.0~a1
 #
 # WARNING! All changes made in this file will be lost!
@@ -339,7 +339,7 @@ class Ui_DockWidget(object):
         QtCore.QMetaObject.connectSlotsByName(DockWidget)
 
     def retranslateUi(self, DockWidget):
-        DockWidget.setWindowTitle(QtWidgets.QApplication.translate("DockWidget", "Containers", None, -1))
+        DockWidget.setWindowTitle(QtWidgets.QApplication.translate("DockWidget", "Containers - No Tabs", None, -1))
         self.label_126.setText(QtWidgets.QApplication.translate("DockWidget", "Disabled", None, -1))
         self.label_124.setText(QtWidgets.QApplication.translate("DockWidget", "Enabled", None, -1))
         self.label_133.setText(QtWidgets.QApplication.translate("DockWidget", "MDI Area", None, -1))
