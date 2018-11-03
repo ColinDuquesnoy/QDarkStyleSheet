@@ -1009,11 +1009,15 @@ QToolButton::menu-arrow:open {
 /* QCommandLinkButton ----------------------------------------------------- */
 
 QCommandLinkButton {
-    background-color: #31363B;
+    background-color: #232629;
     border: 1px solid #31363B;
     border-radius: 4px;
     padding: 0px;
     margin:0px;
+}
+
+QCommandLinkButton:disabled {
+    background-color: #232629;
 }
 
 /* ------------------------------------------------------------------------ */
