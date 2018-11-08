@@ -3,7 +3,6 @@
 
 from qdarkstyle import qt_bindings, qt_abstractions, information, __version__
 import qdarkstyle
-from example import example
 import argparse
 import sys
 
