@@ -68,29 +68,37 @@ def main(arguments):
         if args.create in ['pyqt', 'pyqtgraph', 'all']:
             try:
                 call(['pyuic4', '--from-imports', ui_file, '-o', py_file_pyqt])
-            except FileNotFoundError:
-                print("You must install pyuic4")
+            except Exception as er:
+                print("You must install pyuic4 %s" % str(er))
+            else:
+                print("Compiling using pyuic4 ...")
 
         if args.create in ['pyqt5', 'qtpy', 'all']:
             try:
                 call(['pyuic5', '--from-imports', ui_file, '-o', py_file_pyqt5])
-            except FileNotFoundError:
-                print("You must install pyuic5")
+            except Exception as er:
+                print("You must install pyuic5 %s" % str(er))
+            else:
+                print("Compiling using pyuic5 ...")
 
         if args.create in ['pyside', 'all']:
             try:
                 call(['pyside-uic', '--from-imports', ui_file, '-o', py_file_pyside])
-            except FileNotFoundError:
-                print("You must install pyside-uic")
+            except Exception as er:
+                print("You must install pyside-uic %s" % str(er))
+            else:
+                print("Compiling using pyside-uic ...")
 
         if args.create in ['pyside2', 'all']:
             try:
                 call(['pyside2-uic', '--from-imports', ui_file, '-o', py_file_pyside2])
-            except FileNotFoundError:
-                print("You must install pyside2-uic")
+            except Exception as er:
+                print("You must install pyside2-uic %s" % str(er))
+            else:
+                print("Compiling using pyside2-uic ...")
 
         if args.create in ['qtpy', 'all']:
-            print("Compiling for PySide ...")
+            print("Creating also for qtpy ...")
             # special case - qtpy - syntax is PyQt5
             with open(py_file_pyqt5, 'r') as file:
                 filedata = file.read()
@@ -101,6 +109,7 @@ def main(arguments):
                 file.write(filedata)
 
         if args.create in ['pyqtgraph', 'all']:
+            print("Creating also for pyqtgraph ...")
             # special case - pyqtgraph - syntax is PyQt4
             with open(py_file_pyqt, 'r') as file:
                 filedata = file.read()
