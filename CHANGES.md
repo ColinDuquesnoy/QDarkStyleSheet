@@ -1,4 +1,9 @@
 # Changelog
+- 2.6.2:
+  - Enhance command link button
+  - Enhance tab colors and spacing, closes #118
+  - Start using tox, helping partially #77
+  - Fix example and other scripts issues
 - 2.6.1:
   - Fix and improve QSplitter and separators from tool bar and windows #115
   - Fix README version screenshots and update them
