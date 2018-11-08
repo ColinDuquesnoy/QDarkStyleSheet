@@ -1,18 +1,18 @@
 *.pyc
-/style.rcc
-/style_pyside_rc.py
-./.idea
-/.idea/
+
 dist/
-docs/
-QDarkStyle.egg-info/
 build/
+docs/
+
+*.egg-info/
 __pycache__
+
 *.tar
 *.tar.*
 *.log
 *.log.*
 *.sig
+
 pkg/
 src/
 
@@ -32,4 +32,6 @@ deb_dist
 .mypy_cache
 .cache
 .env
-
+./.idea
+/.idea/
+.tox

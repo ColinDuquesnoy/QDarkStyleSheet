@@ -1,15 +1,16 @@
-language: python
-python:
-  - "2.7"
-  - "3.4"
-virtualenv:
-  system_site_packages: true
-before_install:
- - sudo apt-get update
- - sudo apt-get install -qq python-pyside --fix-missing
- - sudo apt-get install -qq python-qt4 --fix-missing
- - sudo apt-get install -qq python3-pyside --fix-missing
- - sudo apt-get install -qq python3-pyqt4 --fix-missing
+anguage: python
+matrix:
+  include:
+    - python: 2.7
+      env: TOXENV=py27
+    - python: 3.4
+      env: TOXENV=py34
+    - python: 3.6
+      env: TOXENV=py36
+install:
+  - pip install tox
+script:
+  - tox
  - "export DISPLAY=:99.0"
  - "sh -e /etc/init.d/xvfb start"
 before_script:
