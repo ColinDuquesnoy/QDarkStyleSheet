@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_inputs_fields.ui'
 #
-# Created: Thu Nov  1 16:06:28 2018
+# Created: Thu Nov  8 14:56:29 2018
 #      by: pyside2-uic 2.0.0 running on PySide2 5.6.0~a1
 #
 # WARNING! All changes made in this file will be lost!

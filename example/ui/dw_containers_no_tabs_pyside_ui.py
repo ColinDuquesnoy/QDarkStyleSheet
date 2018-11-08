@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_containers_no_tabs.ui'
 #
-# Created: Thu Nov  1 16:06:05 2018
+# Created: Thu Nov  8 14:56:29 2018
 #      by: pyside-uic 0.2.15 running on PySide 1.2.2
 #
 # WARNING! All changes made in this file will be lost!
