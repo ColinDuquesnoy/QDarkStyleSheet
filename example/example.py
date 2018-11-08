@@ -41,6 +41,7 @@ problems.
 import logging
 import sys
 import argparse
+import os
 
 # make the example runnable without the need to install
 from os.path import abspath, dirname
@@ -69,6 +70,10 @@ def main():
 
     # set log for debug
     logging.basicConfig(level=logging.DEBUG)
+
+    # to avoid problems when testing without screen
+    if args.test:
+        os.environ['QT_QPA_PLATFORM']='offscreen'
 
     if args.qt_from == 'pyside':
         # using PySide wrapper
@@ -209,6 +214,9 @@ def main():
             window.restoreState(state)
             window.resize(size)
             window.move(pos)
+
+
+
 
     # create the application
     app = QApplication(sys.argv)
