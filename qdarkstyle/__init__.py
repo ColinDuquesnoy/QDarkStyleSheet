@@ -58,7 +58,7 @@ import platform
 import sys
 import warnings
 
-__version__ = "2.6.2"
+__version__ = "2.6.3"
 
 
 QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']

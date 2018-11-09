@@ -1,4 +1,9 @@
 # Changelog
+
+- 2.6.3:
+  - Palette color enhance, better contrast, contribute to #118
+  - Fixes Qslider background
+  - Better colors and format for tab and toolbox, contribute to #118
 - 2.6.2:
   - Enhance command link button
   - Enhance tab colors and spacing, closes #118
