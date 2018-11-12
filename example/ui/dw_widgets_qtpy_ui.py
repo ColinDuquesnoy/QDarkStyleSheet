@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_widgets.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
 

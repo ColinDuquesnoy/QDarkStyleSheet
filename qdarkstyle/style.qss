@@ -669,6 +669,10 @@ QToolBar {
     font-weight: bold;
 }
 
+QToolBar QToolButton{
+    background-color: #32414B;
+}
+
 QToolBar::handle:horizontal {
     width: 6px;
     image: url(:/qss_icons/rc/Hmovetoolbar.png);
@@ -948,7 +952,7 @@ QPushButton:checked:selected{
 /* QToolButton ------------------------------------------------------------ */
 
 QToolButton {
-    background-color: #32414B;
+    background-color: transparent;
     border: 1px solid #32414B;
     border-radius: 4px;
     margin: 0px;
@@ -961,7 +965,7 @@ QToolButton:checked {
 }
 
 QToolButton:disabled {
-    background-color: #32414B;
+    border: 1px solid #32414B;
 }
 
 QToolButton:hover,
@@ -972,21 +976,24 @@ QToolButton:checked:hover{
 /* the subcontrols below are used only in the MenuButtonPopup mode */
 
 QToolButton[popupMode="1"] {
+    padding: 2px;
     padding-right: 12px;     /* only for MenuButtonPopup */
-    border: 1px #32414B;   /* make way for the popup button */
+    border: 1px solid #32414B;   /* make way for the popup button */
     border-radius: 4px;
 }
 
 /* The subcontrol below is used only in the InstantPopup or DelayedPopup mode */
 
 QToolButton[popupMode="2"] {
+    padding: 2px;
     padding-right: 12px;      /* only for InstantPopup */
-    border: 1px #AAAAAA;    /* make way for the popup button */
+    border: 1px solid #32414B;    /* make way for the popup button */
 }
 
 QToolButton::menu-button {
+    padding: 2px;
     border-radius: 4px;
-    border: 1px transparent #32414B;
+    border: 1px solid #32414B;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     /* 16px width + 4px for border = 20px allocated above */
@@ -1016,15 +1023,17 @@ QToolButton::menu-arrow:open {
 /* QCommandLinkButton ----------------------------------------------------- */
 
 QCommandLinkButton {
-    background-color: #19232D;
+    background-color: transparent;
     border: 1px solid #32414B;
+    color: #F0F0F0;
     border-radius: 4px;
     padding: 0px;
-    margin:0px;
+    margin: 0px;
 }
 
 QCommandLinkButton:disabled {
-    background-color: #19232D;
+    background-color: transparent;
+    color: #787878;
 }
 
 /* ------------------------------------------------------------------------ */
