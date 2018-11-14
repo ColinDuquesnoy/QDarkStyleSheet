@@ -45,20 +45,17 @@ Enjoy!
 
 """
 
-importlib_error = ""
-
-try:
-    import importlib
-except ImportError:
-    importlib_error = "Not available in Python 2.7"
-
 import logging
 import os
 import platform
 import sys
 import warnings
+import copy
 
-__version__ = "2.6.3"
+if sys.version_info >= (3, 4):
+    import importlib
+
+__version__ = "2.6.4"
 
 
 QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
@@ -225,7 +222,7 @@ def load_stylesheet(pyside=True):
         # Detect the PySide version available
         try:
             import PySide
-        except ModuleNotFoundError:
+        except ImportError: # Compatible with py27
             import PySide2
             pyside_ver = 2
         else:
@@ -400,41 +397,61 @@ def information():
 
 def qt_bindings():
     """Return a list of qt bindings available."""
-    if importlib_error:
-        print(importlib_error)
-        return []
-
-    bindings = QT_BINDINGS
-    for binding in bindings:
-        # check import
-        spec = importlib.util.find_spec(binding)
-        if spec is None:
-            # remove if not available
-            bindings.remove(binding)
-    return bindings
+    return _check_imports(import_list=QT_BINDINGS)
 
 
 def qt_abstractions():
     """Return a list of qt abstraction layers available."""
-    if importlib_error:
-        print(importlib_error)
-        return []
+    return _check_imports(import_list=QT_ABSTRACTIONS)
 
-    abstractions = QT_ABSTRACTIONS
-    for abstraction in abstractions:
-        # check import
-        spec = importlib.util.find_spec(abstraction)
+
+def _check_imports(import_list):
+    """Return a list of imports available."""
+
+    # Disable warnings here
+    warnings.filterwarnings("ignore")
+
+    import_list_return = copy.deepcopy(import_list)
+    # Using import_list_return var in for, does not work in py2.7
+    # when removing the element, it reflects on for list
+    # so it skips next element
+    for current_import in import_list:
+
+        spec = True
+        # Copy the sys path to make sure to not insert anything
+        sys_path = sys.path
+
+        # Check import
+        if sys.version_info >= (3, 4):
+            spec = importlib.util.find_spec(current_import)
+        else:
+            try:
+                __import__(current_import)
+            except RuntimeWarning:
+                spec = True
+            except Exception:
+                spec = None
+            else:
+                spec = True
+
         if spec is None:
-            # remove if not available
-            abstractions.remove(abstraction)
-    return abstractions
+            # Remove if not available
+            import_list_return.remove(current_import)
+
+        # Restore sys path
+        sys.path = sys_path
+
+    # Restore warnings
+    warnings.resetwarnings()
+
+    return import_list_return
 
 
-def import_qt_modules_from(use_binding='pyqt5', use_abstraction='qtpy'):
+def _import_qt_modules_from(use_binding='pyqt5', use_abstraction='qtpy'):
     """New approach to import modules using importlib."""
-    if importlib_error:
-        print(importlib_error)
-        return []
+
+    if not sys.version_info >= (3, 4):
+        print('Function not available for Python < 3.4')
 
     spec_binding = importlib.util.find_spec(use_binding)
     spec_abstraction = importlib.util.find_spec(use_abstraction)
