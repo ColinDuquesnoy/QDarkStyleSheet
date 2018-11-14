@@ -1,5 +1,8 @@
 # Changelog
 
+- 2.6.4:
+  - Python 2.7 compatibility, #121
+  - Fix MANIFEST
 - 2.6.3:
   - Palette color enhance, better contrast, contribute to #118
   - Fixes Qslider background
