@@ -55,7 +55,7 @@ import copy
 if sys.version_info >= (3, 4):
     import importlib
 
-__version__ = "2.6.4"
+__version__ = "2.6.5"
 
 
 QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
@@ -257,7 +257,7 @@ def load_stylesheet(pyside=True):
             mac_fix = '''
             QDockWidget::title
             {
-                background-color: #31363b;
+                background-color: #32414B;
                 text-align: center;
                 height: 12px;
             }
@@ -344,7 +344,7 @@ def load_stylesheet_pyqt5():
             mac_fix = '''
             QDockWidget::title
             {
-                background-color: #31363b;
+                background-color: #32414B;
                 text-align: center;
                 height: 12px;
             }
