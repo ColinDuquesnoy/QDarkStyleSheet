@@ -6,16 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>742</width>
-    <height>439</height>
+    <width>596</width>
+    <height>569</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_4">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_7">
+    <item row="0" column="0">
      <widget class="QGroupBox" name="groupBox_2">
       <property name="title">
        <string>Issue #115 - Tabs scroller buttons</string>
@@ -24,17 +24,77 @@
        <item row="0" column="0">
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>11</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
            <string>Tab 1</string>
           </attribute>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>Issue #123 - Missing borders</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit">
+                <property name="text">
+                 <string>Inside tab, outside frame</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QFrame" name="frame">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QFormLayout" name="formLayout">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="lineEdit_2">
+                   <property name="text">
+                    <string>Inside tab and frame</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
          </widget>
          <widget class="QWidget" name="tab_2">
           <attribute name="title">
            <string>Tab 2</string>
           </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
          <widget class="QWidget" name="tab_3">
           <attribute name="title">
@@ -85,13 +145,14 @@
           <attribute name="title">
            <string>Page</string>
           </attribute>
+          <layout class="QGridLayout" name="gridLayout_3"/>
          </widget>
         </widget>
        </item>
       </layout>
      </widget>
     </item>
-    <item>
+    <item row="1" column="0">
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
        <string>Issue #112 - Hyperlinks color</string>
@@ -99,6 +160,9 @@
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
         <widget class="QLabel" name="label">
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues/112&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0000ff;&quot;&gt;Hyperlink Example&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#7d7d7d;&quot;&gt;CSS for the documents (RichText) is not the same as the application. We cannot change the internal content CSS, e.g., hyperlinks. We suggest you use the middle tons (0-255, use 125), so this works for both white and dark theme (this color). The original color is the blue link on top.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
@@ -122,7 +186,7 @@
       </layout>
      </widget>
     </item>
-    <item>
+    <item row="2" column="0">
      <widget class="QLabel" name="label_71">
       <property name="text">
        <string>Inside Central Widget</string>
@@ -139,7 +203,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>742</width>
+     <width>596</width>
      <height>28</height>
     </rect>
    </property>
@@ -308,6 +372,11 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
