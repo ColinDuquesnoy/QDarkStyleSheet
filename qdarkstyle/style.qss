@@ -24,14 +24,13 @@ configuration is described bellow.
 
     FOREGROUND -----------
 
-        for_light  #EFF0F1 #E0E0E0 (texts/labels)
-        for_normal #A9A9A9 #AAAAAA ()
+        for_light  #EFF0F1 #F0F0F0 (texts/labels)
         for_dark   #505F69 #787878 (disabled texts)
 
     BACKGROUND -----------
 
         bac_light  #4D545B #505F69 (unpressed)
-        bac_normal #31363B #32414B (border, disabled, pressed)
+        bac_normal #31363B #32414B (border, disabled, pressed, checked, toolbars, menus)
         bac_dark   #232629 #19232D (background)
 
 If a stranger configuration is required because of a bugfix or anything
@@ -50,10 +49,6 @@ QWidget {
     color: #F0F0F0;
     selection-background-color: #1464A0;
     selection-color: #F0F0F0;
-}
-
-QWidget:focus {
-    border: 1px solid #148CD2;
 }
 
 QWidget:disabled {
@@ -80,22 +75,25 @@ QMainWindow::separator {
     background-color: #32414B;
     border: 0 solid #19232D;
     spacing: 0;
-    padding: 1px;
-    margin: 0;
+    padding: 2px;
 }
 
 QMainWindow::separator:hover {
-    background-color: #787878;
+    background-color: #505F69;
     border: 0px solid #148CD2;
 }
 
 QMainWindow::separator:horizontal {
     width: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     image: url(:/qss_icons/rc/Vsepartoolbar.png);
 }
 
 QMainWindow::separator:vertical {
     height: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
     image: url(:/qss_icons/rc/Hsepartoolbar.png);
 }
 
@@ -364,8 +362,8 @@ QMenu {
 
 QMenu::separator {
     height: 2px;
-    background-color: #32414B;
-    color: #AAAAAA;
+    background-color: #505F69;
+    color: #F0F0F0;
     padding-left: 4px;
     margin-left: 2px;
     margin-right: 2px;
@@ -1209,12 +1207,13 @@ QTabWidget {
     selection-background-color: #32414B;
 }
 
-QTabWidget::focus QWidget{
-    border: none;
+QTabWidget QFrame{
+    border: 0;
 }
 
 QTabWidget::pane {
     border: 1px solid #32414B;
+    border-radius: 4px;
     padding: 2px;
     margin: 0px;
 }
@@ -1224,11 +1223,6 @@ QTabWidget::pane:selected {
     border: 1px solid #1464A0;
 }
 
-
-QTabWidget:focus {
-    border: none;
-}
-
 /* QTabBar ---------------------------------------------------------------- */
 
 QTabBar {
@@ -1236,6 +1230,7 @@ QTabBar {
     border-radius: 4px;
     margin: 0px;
     padding: 2px;
+    border: 0;
 
     /* left: 5px; move to the right by 5px - removed for fix */
     }
@@ -1510,6 +1505,7 @@ QDockWidget::float-button:hover {
 QDockWidget::float-button:pressed {
     border: 1px solid #32414B;
 }
+
 
 /* QTreeView QTableView QListView ----------------------------------------- */
 
