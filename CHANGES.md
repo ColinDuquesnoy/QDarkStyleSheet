@@ -2,6 +2,7 @@
 - 2.6.5:
   - Fix borderless widgets inside QTabWidget, #123
   - Fix palette table inside CSS file, header using the last column
+  - Tested on Python 27, 34, 36, 37
 - 2.6.4:
   - Python 2.7 compatibility, #121
   - Fix MANIFEST
