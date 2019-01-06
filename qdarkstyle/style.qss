@@ -1350,6 +1350,7 @@ QTabBar::tab:top:selected {
 QTabBar::tab:top:!selected:hover {
     border: 1px solid #148CD2;
     border-bottom: 3px solid #148CD2;
+    padding: 0px;
 }
 
 QTabBar::tab:bottom {
