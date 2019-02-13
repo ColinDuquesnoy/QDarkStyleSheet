@@ -1350,6 +1350,7 @@ QTabBar::tab:top:selected {
 QTabBar::tab:top:!selected:hover {
     border: 1px solid #148CD2;
     border-bottom: 3px solid #148CD2;
+    padding: 0px;
 }
 
 QTabBar::tab:bottom {
@@ -1377,6 +1378,7 @@ QTabBar::tab:bottom:selected {
 QTabBar::tab:bottom:!selected:hover {
     border: 1px solid #148CD2;
     border-top: 3px solid #148CD2;
+    padding: 0px;
 }
 
 QTabBar::tab:left {
@@ -1403,6 +1405,7 @@ QTabBar::tab:left:selected {
 QTabBar::tab:left:!selected:hover {
     border: 1px solid #148CD2;
     border-left: 3px solid #148CD2;
+    padding: 0px;
 }
 
 QTabBar::tab:right {
@@ -1429,6 +1432,7 @@ QTabBar::tab:right:selected {
 QTabBar::tab:right:!selected:hover {
     border: 1px solid #148CD2;
     border-right: 3px solid #148CD2;
+    padding: 0px;
 }
 
 QTabBar QToolButton::right-arrow:enabled {
