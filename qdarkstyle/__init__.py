@@ -213,36 +213,50 @@ def load_stylesheet(pyside=True):
         "Set QtPy environment variable to specify the Qt binding insteady.",
         PendingDeprecationWarning
     )
+
+    qt_binding_ver = None
+
     # Smart import of the rc file
-
-    pyside_ver = None
-
     if pyside:
 
         # Detect the PySide version available
         try:
             import PySide
+            qt_binding_ver = 1
         except ImportError:  # Compatible with py27
             import PySide2
-            pyside_ver = 2
-        else:
-            pyside_ver = 1
+            qt_binding_ver = 2
 
-        if pyside_ver == 1:
+        if qt_binding_ver == 1:
             import qdarkstyle.pyside_style_rc
         else:
             import qdarkstyle.pyside2_style_rc
     else:
-        import qdarkstyle.pyqt_style_rc
+
+        # Detect PyQt version available
+        try:
+            import PyQt4
+            qt_binding_ver = 4
+        except ImportError:
+            import PyQt5
+            qt_binding_ver = 5
+
+        if qt_binding_ver == 4:
+            import qdarkstyle.pyqt_style_rc
+        else:
+            import qdarkstyle.pyqt5_style_rc
 
     # Load the stylesheet content from resources
-    if not pyside:
-        from PyQt4.QtCore import QFile, QTextStream
-    else:
-        if pyside_ver == 1:
+    if pyside:
+        if qt_binding_ver == 1:
             from PySide.QtCore import QFile, QTextStream
         else:
             from PySide2.QtCore import QFile, QTextStream
+    else:
+        if qt_binding_ver == 4:
+            from PyQt4.QtCore import QFile, QTextStream
+        else:
+            from PyQt5.QtCore import QFile, QTextStream
 
     f = QFile(":qdarkstyle/style.qss")
     if not f.exists():
@@ -325,32 +339,7 @@ def load_stylesheet_pyqt5():
         "use load_stylesheet()",
         PendingDeprecationWarning
     )
-    # Smart import of the rc file
-    import qdarkstyle.pyqt5_style_rc
-
-    # Load the stylesheet content from resources
-    from PyQt5.QtCore import QFile, QTextStream
-
-    f = QFile(":qdarkstyle/style.qss")
-    if not f.exists():
-        _logger().error("Unable to load stylesheet, file not found in "
-                        "resources")
-        return ""
-    else:
-        f.open(QFile.ReadOnly | QFile.Text)
-        ts = QTextStream(f)
-        stylesheet = ts.readAll()
-        if platform.system().lower() == 'darwin':  # see issue #12 on github
-            mac_fix = '''
-            QDockWidget::title
-            {
-                background-color: #32414B;
-                text-align: center;
-                height: 12px;
-            }
-            '''
-            stylesheet += mac_fix
-        return stylesheet
+    return load_stylesheet(pyside=False)
 
 
 def information():
