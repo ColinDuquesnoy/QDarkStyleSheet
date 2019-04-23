@@ -2,6 +2,14 @@
 
 ### Describe Your Environment
 
+Please, report the output of the command (from v2.6+) or fill the information below:
+
+`$ qdarkstyle --all`
+
+Or use the helpdev if you have
+
+`$ helpdev`
+
 [Versions from your environment]
 
 - QDarkStyle:
