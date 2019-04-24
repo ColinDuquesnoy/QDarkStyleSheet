@@ -946,6 +946,10 @@ QPushButton:checked:hover{
     color: #F0F0F0;
 }
 
+QPushButton:pressed:hover{
+    border: 1px solid #1464A0;
+}
+
 QPushButton:selected,
 QPushButton:checked:selected{
     background: #1464A0;
@@ -967,6 +971,12 @@ QToolButton:checked {
     border: 1px solid #19232D;
 }
 
+QToolButton:pressed {
+    background-color: #19232D;
+    border: 1px solid #19232D;
+
+}
+
 QToolButton:disabled {
     border: 1px solid #32414B;
 }
@@ -974,6 +984,9 @@ QToolButton:disabled {
 QToolButton:hover,
 QToolButton:checked:hover{
     border: 1px solid #148CD2;
+}
+QToolButton:pressed:hover{
+    border: 1px solid #1464A0;
 }
 
 /* the subcontrols below are used only in the MenuButtonPopup mode */
