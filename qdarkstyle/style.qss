@@ -1912,3 +1912,8 @@ QAbstractView:selected {
     background: #1464A0;
     color: #32414B;
 }
+
+
+PlotWidget {
+    padding: 0px; /* to fix cut labels in plots #134 */
+}
