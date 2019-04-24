@@ -1226,7 +1226,7 @@ QTabWidget {
 }
 
 QTabWidget QFrame{
-    border: 0;
+    border: 1px solid #32414B;
 }
 
 QTabWidget::pane {
