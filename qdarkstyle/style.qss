@@ -111,6 +111,7 @@ QToolTip {
 
 QStatusBar {
     border: 1px solid #32414B;
+    background: #32414B; /*fixes spyder #9120,#9121*/
 }
 
 QStatusBar QToolTip {
@@ -119,6 +120,10 @@ QStatusBar QToolTip {
     color: #19232D;
     padding: 0;   /*remove padding, for fix combo box tooltip*/
     opacity: 230; /*reducing transparency to read better*/
+}
+
+QStatusBar QLabel {
+    background-color: transparent; /*fixes spyder #9120,#9121*/
 }
 
 /* QCheckBox -------------------------------------------------------------- */
@@ -1894,5 +1899,3 @@ QAbstractView:selected {
     background: #1464A0;
     color: #32414B;
 }
-
-

@@ -77,7 +77,7 @@ def main():
 
     if args.qt_from == 'pyside':
         # using PySide wrapper
-        from PySide.QtGui import QApplication, QMainWindow, QDockWidget
+        from PySide.QtGui import QApplication, QMainWindow, QDockWidget, QStatusBar, QLabel, QPushButton
         from PySide.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         # import examples UI according to wrapper
         from ui.mw_menus_pyside_ui import Ui_MainWindow as ui_main
@@ -96,7 +96,7 @@ def main():
 
     elif args.qt_from == 'pyqt':
         # using PyQt4 wrapper
-        from PyQt4.QtGui import QApplication, QMainWindow, QDockWidget
+        from PyQt4.QtGui import QApplication, QMainWindow, QDockWidget, QStatusBar, QLabel, QPushButton
         from PyQt4.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         # import examples UI according to wrapper
         from ui.mw_menus_pyqt_ui import Ui_MainWindow as ui_main
@@ -115,7 +115,7 @@ def main():
 
     elif args.qt_from == 'pyqt5':
         # using PyQt5 wrapper
-        from PyQt5.QtWidgets import QApplication, QMainWindow, QDockWidget
+        from PyQt5.QtWidgets import QApplication, QMainWindow, QDockWidget, QStatusBar, QLabel, QPushButton
         from PyQt5.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         # import examples UI according to wrapper
         from ui.mw_menus_pyqt5_ui import Ui_MainWindow as ui_main
@@ -134,7 +134,7 @@ def main():
 
     elif args.qt_from == 'pyside2':
         # using PyQt5 wrapper
-        from PySide2.QtWidgets import QApplication, QMainWindow, QDockWidget
+        from PySide2.QtWidgets import QApplication, QMainWindow, QDockWidget, QStatusBar, QLabel, QPushButton
         from PySide2.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         # import examples UI according to wrapper
         from ui.mw_menus_pyside2_ui import Ui_MainWindow as ui_main
@@ -153,7 +153,7 @@ def main():
 
     elif args.qt_from == 'qtpy':
         # using QtPy API
-        from qtpy.QtWidgets import QApplication, QMainWindow, QDockWidget
+        from qtpy.QtWidgets import QApplication, QMainWindow, QDockWidget, QStatusBar, QLabel, QPushButton
         from qtpy.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         # import examples UI according to wrapper
         from ui.mw_menus_qtpy_ui import Ui_MainWindow as ui_main
@@ -172,7 +172,7 @@ def main():
 
     elif args.qt_from == 'pyqtgraph':
         # using PyQtGraph API
-        from pyqtgraph.Qt.QtGui import QApplication, QMainWindow, QDockWidget
+        from pyqtgraph.Qt.QtGui import QApplication, QMainWindow, QDockWidget, QStatusBar, QLabel, QPushButton
         from pyqtgraph.Qt.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
         #from pyqtgraph.Qt import QtGui, QtCore
         # import examples UI according to wrapper
@@ -298,6 +298,13 @@ def main():
     window.tabifyDockWidget(dw_containers_no_tabs, dw_containers_tabs)
     window.tabifyDockWidget(dw_containers_tabs, dw_widgets)
     window.tabifyDockWidget(dw_widgets, dw_views)
+
+    # issues #9120, #9121 on Spyder
+    qstatusbar = QStatusBar()
+    qstatusbar.addWidget(QLabel('Issue Spyder #9120, #9121 - background not matching.'))
+    qstatusbar.addWidget(QPushButton('OK'))
+    window.setStatusBar(qstatusbar)
+
 
     # auto quit after 2s when testing on travis-ci
     if args.test:
