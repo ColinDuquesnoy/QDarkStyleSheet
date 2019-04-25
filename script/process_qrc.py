@@ -23,13 +23,17 @@ Links to understand those tools:
 
 """
 
+# Standard library imports
 from __future__ import absolute_import, print_function
+from subprocess import call
 
 import argparse
 import glob
 import os
 import sys
-from subprocess import call
+
+# Local imports
+from qdarkstyle.utils import create_qss
 
 
 def main(arguments):
@@ -60,6 +64,10 @@ def main(arguments):
         print(filename, '...')
         ext = '_rc.py'
         ext_c = '.rcc'
+
+        # Create variables SCSS files and compile SCSS files to QSS
+        print('Compiling SCSS/SASS files to QSS ...'
+        create_qss()
 
         # creating names
         py_file_pyqt5 = 'pyqt5_' + filename + ext
