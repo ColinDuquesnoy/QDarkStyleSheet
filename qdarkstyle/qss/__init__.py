@@ -3,7 +3,9 @@
 """QDarkStyle is a dark stylesheet for Python and Qt applications."""
 
 # Standard library imports
+from collections import OrderedDict
 import os
+
 
 _HERE = os.path.abspath(os.path.dirname(__file__))
 PATH_SCSS_VARIABLES = os.path.join(_HERE, '_variables.scss')
@@ -27,11 +29,35 @@ class Variables(object):
     # Size
     SIZE_BORDER_RADIUS = '4px'
 
+    # Borders
+    BORDER_NORMAL = '1px solid $COLOR_BACKGROUND_NORMAL'
+    BORDER_DARK = '1px solid $COLOR_BACKGROUND_DARK'
+    BORDER_HOVER = '1px solid $COLOR_SELECTION_LIGHT'
+
     # Example of additional widget specific variables
     W_STATUS_BAR_BACKGROUND_COLOR = COLOR_SELECTION_DARK
 
     @classmethod
     def _to_dict(cls):
         """Convert variables to dictionary."""
-        items = dir(cls)
-        return {i: getattr(cls, i) for i in items if not i.startswith("_")}
+        order = [
+            'COLOR_BACKGROUND_LIGHT',
+            'COLOR_BACKGROUND_NORMAL',
+            'COLOR_BACKGROUND_DARK',
+            'COLOR_FOREGROUND_LIGHT',
+            'COLOR_FOREGROUND_DARK',
+            'COLOR_SELECTION_LIGHT',
+            'COLOR_SELECTION_NORMAL',
+            'COLOR_SELECTION_DARK',
+            'OPACITY_TOOLTIP',
+            'SIZE_BORDER_RADIUS',
+            'BORDER_NORMAL',
+            'BORDER_DARK',
+            'BORDER_HOVER',
+            'W_STATUS_BAR_BACKGROUND_COLOR',
+        ]
+        dic = OrderedDict()
+        for var in order:
+            dic[var] = getattr(cls, var)
+
+        return dic

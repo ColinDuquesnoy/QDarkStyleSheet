@@ -36,7 +36,7 @@ def _dict_to_scss(data):
     """Create a scss variables string from a dict."""
     lines = []
     template = "${}: {};"
-    for key, value in sorted(data.items()):
+    for key, value in data.items():
         lines.append(template.format(key, value))
 
     return '\n'.join(lines)
@@ -64,7 +64,6 @@ def _scss_to_dict(string):
 def _create_scss_variables():
     """Create a scss variables file."""
     scss = _dict_to_scss(Variables._to_dict())
-    print(scss)
     data = _HEADER_SCSS + scss + '\n'
 
     with open(PATH_SCSS_VARIABLES, 'w') as f:
