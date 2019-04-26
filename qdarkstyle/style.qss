@@ -92,7 +92,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmainwindow
 --------------------------------------------------------------------------- */
 QMainWindow::separator {
   background-color: #32414B;
-  border: 0 solid #19232D;
+  border: 0px solid #19232D;
   padding: 2px;
   spacing: 0;
 }
@@ -1901,7 +1901,7 @@ QSplitter {
 
 QSplitter::separator {
   background-color: #32414B;
-  border: 0 solid #19232D;
+  border: 0px solid #19232D;
   spacing: 0;
   padding: 1px;
   margin: 0;

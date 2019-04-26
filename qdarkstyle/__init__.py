@@ -58,6 +58,7 @@ if sys.version_info >= (3, 4):
 
 # Local imports
 from qdarkstyle.utils import create_qss
+from qdarkstyle.qss import Variables
 
 
 __version__ = "2.6.5"
@@ -266,16 +267,19 @@ def load_stylesheet(pyside=True):
         f.open(QFile.ReadOnly | QFile.Text)
         ts = QTextStream(f)
         stylesheet = ts.readAll()
-        if platform.system().lower() == 'darwin':  # see issue #12 on github
+
+        # See issue #12
+        if platform.system().lower() == 'darwin':  
             mac_fix = '''
             QDockWidget::title
-            {
-                background-color: #32414B;
+            {{
+                background-color: {color};
                 text-align: center;
                 height: 12px;
-            }
-            '''
+            }}
+            '''.format(color=Variables.COLOR_BACKGROUND_NORMAL)
             stylesheet += mac_fix
+
         return stylesheet
 
 
@@ -357,16 +361,19 @@ def load_stylesheet_pyqt5():
         f.open(QFile.ReadOnly | QFile.Text)
         ts = QTextStream(f)
         stylesheet = ts.readAll()
-        if platform.system().lower() == 'darwin':  # see issue #12 on github
+
+        # See issue #12
+        if platform.system().lower() == 'darwin':
             mac_fix = '''
             QDockWidget::title
-            {
-                background-color: #32414B;
+            {{
+                background-color: {color};
                 text-align: center;
                 height: 12px;
-            }
-            '''
+            }}
+            '''.format(color=Variables.COLOR_BACKGROUND_NORMAL)
             stylesheet += mac_fix
+
         return stylesheet
 
 
