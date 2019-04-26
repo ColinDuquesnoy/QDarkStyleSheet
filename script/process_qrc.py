@@ -66,7 +66,7 @@ def main(arguments):
         ext_c = '.rcc'
 
         # Create variables SCSS files and compile SCSS files to QSS
-        print('Compiling SCSS/SASS files to QSS ...'
+        print('Compiling SCSS/SASS files to QSS ...')
         create_qss()
 
         # creating names
