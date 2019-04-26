@@ -9,7 +9,7 @@ import os
 import qtsass
 
 # Local imports
-from qdarkstyle.qss import PATH_SCSS_MAIN, PATH_SCSS_VARIABLES, VARIABLES
+from qdarkstyle.qss import PATH_SCSS_MAIN, PATH_SCSS_VARIABLES, Variables
 
 # Constants
 _HEADER_SCSS = '''// ---------------------------------------------------------------------------
@@ -63,7 +63,8 @@ def _scss_to_dict(string):
 
 def _create_scss_variables():
     """Create a scss variables file."""
-    scss = _dict_to_scss(VARIABLES)
+    scss = _dict_to_scss(Variables._to_dict())
+    print(scss)
     data = _HEADER_SCSS + scss + '\n'
 
     with open(PATH_SCSS_VARIABLES, 'w') as f:
