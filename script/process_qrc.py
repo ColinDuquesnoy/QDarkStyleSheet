@@ -68,15 +68,13 @@ def main(arguments):
                         choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'qt', 'qt5', 'all'],
                         type=str,
                         help="Choose which one would be generated.")
-    parser.add_argument('--watch',
-                        default=argparse.SUPPRESS,
-                        choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'qt', 'qt5', 'all'],
-                        type=str,
+    parser.add_argument('--watch', '-w',
+                        action='store_true',
                         help="Watch for file changes.")
 
     args = parser.parse_args(arguments)
 
-    if 'watch' in args:
+    if args.watch:
         path = os.path.join(REPO_ROOT, 'qdarkstyle')
         observer = Observer()
         handler = QSSFileHandler(parser_args=args)
