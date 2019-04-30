@@ -1063,11 +1063,11 @@ QComboBox {
     selection-background-color: #1464A0;
     padding-left: 4px;
     padding-right: 4px;
-    min-height: 1.5em;  /* This fixes  #103, #111 ? */
-    /* padding-top: 2px;     removed ro fix 132 */
-    /* padding-bottom: 2px;  removed ro fix 132 */
-    /* min-width: 75px;  removed to fix 109 */
-}
+    min-height: 1.5em;  /*   fix #103, #111      */
+    /* padding-top: 2px;     removed to fix #132 */
+    /* padding-bottom: 2px;  removed to fix #132 */
+    /* min-width: 75px;      removed to fix #109 */
+}   
 
 QComboBox QAbstractItemView {
     background-color: #19232d;
@@ -1090,7 +1090,7 @@ QComboBox:on {
     selection-background-color: #19232D;
 }
 
-/* Needed to remove indicator */
+/* Needed to remove indicator - fix #132 */
 QComboBox::indicator {
     background-color:transparent;
     selection-background-color:transparent;
@@ -1098,7 +1098,7 @@ QComboBox::indicator {
     selection-color:transparent;
 }
 
-/* Needed to remove indicator */
+/* Needed to remove indicator - fix #132 */
 QComboBox::item:alternate {
     background: #19232D;
 }
