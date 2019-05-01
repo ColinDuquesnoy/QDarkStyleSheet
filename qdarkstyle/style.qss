@@ -1057,16 +1057,24 @@ QCommandLinkButton:disabled {
 /* ------------------------------------------------------------------------ */
 
 /* QCombobox -------------------------------------------------------------- */
-
 QComboBox {
     border: 1px solid #32414B;
     border-radius: 4px;
     selection-background-color: #1464A0;
-    padding-top: 2px;     /* This fix  #103, #111*/
-    padding-bottom: 2px;  /* This fix  #103, #111*/
     padding-left: 4px;
     padding-right: 4px;
-    /* min-width: 75px;  removed to fix 109 */
+    min-height: 1.5em;  /*   fix #103, #111      */
+    /* padding-top: 2px;     removed to fix #132 */
+    /* padding-bottom: 2px;  removed to fix #132 */
+    /* min-width: 75px;      removed to fix #109 */
+}   
+
+QComboBox QAbstractItemView {
+    background-color: #19232d;
+    border-radius: 4px;
+    border: 1px solid #32414B;
+    selection-color: #148CD2;
+    selection-background-color: #32414B;
 }
 
 QComboBox:disabled {
@@ -1082,12 +1090,25 @@ QComboBox:on {
     selection-background-color: #19232D;
 }
 
-QComboBox QAbstractItemView {
-    background-color: #19232D;
-    border-radius: 4px;
-    border: 1px solid #32414B;
-    selection-color: #148CD2;
-    selection-background-color: #32414B;
+/* Needed to remove indicator - fix #132 */
+QComboBox::indicator {
+    background-color:transparent;
+    selection-background-color:transparent;
+    color:transparent;
+    selection-color:transparent;
+}
+
+/* Needed to remove indicator - fix #132 */
+QComboBox::item:alternate {
+    background: #19232D;
+}
+
+QComboBox::item:checked {
+    font-weight: bold;
+}
+
+QComboBox::item:selected {
+    border: 0px solid transparent;
 }
 
 QComboBox::drop-down {
