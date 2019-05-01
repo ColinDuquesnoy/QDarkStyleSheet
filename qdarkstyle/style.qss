@@ -25,6 +25,7 @@ configuration is described bellow.
     FOREGROUND -----------
 
         for_light  #EFF0F1 #F0F0F0 (texts/labels)
+        for_normal         #AAAAAA (not used yet)
         for_dark   #505F69 #787878 (disabled texts)
 
     BACKGROUND -----------
@@ -1067,7 +1068,7 @@ QComboBox {
     /* padding-top: 2px;     removed to fix #132 */
     /* padding-bottom: 2px;  removed to fix #132 */
     /* min-width: 75px;      removed to fix #109 */
-}   
+}
 
 QComboBox QAbstractItemView {
     background-color: #19232d;
