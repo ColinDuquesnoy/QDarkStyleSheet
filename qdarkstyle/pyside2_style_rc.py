@@ -2,7 +2,7 @@
 
 # Resource object code
 #
-# Created: qua mai 1 10:32:54 2019
+# Created: qua mai 1 10:58:42 2019
 #      by: The Resource Compiler for PySide2 (Qt v5.12.2)
 #
 # WARNING! All changes made in this file will be lost!
@@ -10,37 +10,53 @@
 from PySide2 import QtCore
 
 qt_resource_data = b"\
-\x00\x00\x00\xfc\
+\x00\x00\x00\xe0\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00Q\x00\x00\x00:\x08\x06\x00\x00\x00\xc8\xbc\xb5\xaf\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\xa7\x93\x00\
+\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\
+\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\xdc\x08\x17\
+\x0b)\x1c\x08\x84~V\x00\x00\x00`IDATx\
+\xda\xed\xd9\xb1\x0d\x00 \x08\x00AqP\x86cQ\xed\
+\x8d\x85%\x89w\xa5\x15\xf9HE\x8c\xa6\xaaj\x9do\
+\x99\x19\x1dg\x9d\x03\x11E\x14\x11\x11E\x14QDD\
+\x14QD\x11\x11QD\x11EDD\x11E\x14\x11\x11\
+E\x14\xf1[\xd1u\xb0\xdb\xdd\xd9O\xb4\xce\x88(\x22\
+\x00\x00\x00\x00\x00\x00\x00\x00\x00\xcf6\xcei\x07\x1e\xe9\
+9U@\x00\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x01\xd0\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
 \x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
-\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
-\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
-\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
-\xe1\x05\x0d\x0a9\x0e\xcf\xed\x10A\x00\x00\x00\x89ID\
-ATX\xc3c`\x18\xe9\x80\x11\x85\xf7\xff?\xa3\xed\
-\xfaW\xffhi\xe1\xe1@1&\x06F\xc6\xff\x98\x0e\
-\xa0\x83\xe5\xd8\x1c\x01w\x80\xed\xba\x97\xffQ\x14\x05\x89\
-3R\xd3R\x5c\xe63au!\x95-\xc7g&\x13\
-=,\xc7g6\xd3@\xe7\x02\x16R\xe3\x8eZA?\
-hB`\xd4\x01\xa3\x0e\x18u\xc0\xa8\x03F\x1d0\xea\
-\x80Q\x07\x10l\x0f\xd0\xb2\x8548\xa3\x80\xd2\x16\x10\
-\xa9\xad+&Z4\xc3H1s\xf0tL\xe8\xd65\
-\xa3q\xa2\x1ez\x00\x00\xa3]8e\x19\x919D\x00\
-\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x00\xac\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x07\x00\x00\x00?\x08\x06\x00\x00\x00,{\xd2\x13\
-\x00\x00\x00\x06bKGD\x00\xb3\x00y\x00y\xdc\xdd\
-S\xfc\x00\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\
-\x0b\x13\x01\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\
-\xdf\x04\x19\x10.\x14\xfa\xd6\xc4\xae\x00\x00\x009ID\
-AT8\xcbc` \x06\xc4\xc7\xc73\xc4\xc7\xc7\xa3\
-\x881aS\x84S\x12\xaf\xce\x91(\xc9\x82\xc4\xfe\x8f\
-\xc4f\x1c\x0d\xa1Q\xc9Q\xc9QI|\x05\x06\xe3h\
-\x08\x91*I>\x00\x00\x88K\x04\xd39.\x90?\x00\
-\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\x04sBIT\x08\x08\x08\x08|\x08d\x88\
+\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\x0d\xd7\
+\x01B(\x9bx\x00\x00\x00\x19tEXtSof\
+tware\x00www.inksca\
+pe.org\x9b\xee<\x1a\x00\x00\x01MID\
+ATX\x85\xed\x97;N\xc3@\x14\x00\xe7EQ\xc2\
+\xf7\x00\x81+\x00R\xeeB\xca\x8d\xedX\x14p\x1fB\
+e\x99\x8d)\xc3\x1dh\xa8\xa3(w \xf4|B>\
+\xf2\xa3p\x8c\x8cL\xb9\x16\x12x*[Zyf%\
+\x17\xef\xc1\x7fG\x8a/\xaa*6\x8e\xfd\x86\xc8\xa5\xc2\
+)\xb0\xe3\xc8\xf3!0\x03\x86\xc6\xf7\xad\x88h)@\
+U%\x89\xe3[\x15\xe9\x03K`\x82\xc8\xab\x13\xbd\xea\
+\x01\xd0\x05\xda\x88\xc4}\xcf\x0b\xf3\x88f~\xc6\xc6\xb1\
+/\x99\xfc\xb1\xd1l\xf6\x8c1s'\xf2-I\x92t\
+\xd2\xcdf\x8cj`\xad}\x00F\x00\x8d\xfc@C\xe4\
+\x12X\xa6p\xeeZ\x0e`\x8c\x99o\xd2\xb4\x07\xacD\
+\xf5\xea\xcb\x9b?(\x9c\x00\x93 \x08\x9e]\xcbs\xc2\
+0|\x02&d\xff\xd7\xf7\x00`\x17x\xafJ^\xe0\
+\x0d\xd8\xfb)\xe0W\xa8\x03\xea\x80:\xa0\x0e\xa8\x03\xea\
+\x80:\xa0\x0e(\x06,(L*\x15\xb2\xbfu\x95\x02\
+f@7I\x92NUfk\xed1\xd9x>-\x05\
+\x08\xdc\x00\xedt\xbd\xbe\x8f\xa2\xe8\xa8\x12y\x9a\x8e\x81\
+\x96\xc0\xb0\xe0\xcdPU\x19Y\x1b\xa1\x1a\x00+\xb2\xc5\
+\xe4\xc5\x89]\xf5\x90\xec\xe6-\x85\xc8\xf3\xfd\x8b|1\
+)\xaff\xd6\x9a\xed\xdc~F6)\xbb`\x01LQ\
+\xbd\xf6\x06\x83;G\xdf\xfc#|\x02\x90\xc4u0\xa3\
+8\xd1\xd4\x00\x00\x00\x00IEND\xaeB`\x82\
 \x00\x00\x03\xcc\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
@@ -165,6 +181,207 @@ $Y\x18}^w\xb6[\xadk]\x0b\xc8\xe7\xf3;\
 a\x16\xf5\x09\xa9n\xf0\x8b\xa4\xdav\xabu--\xe7\
 =\xf4\xd0\xc3\xbf\xf1\x0fx\xe5N\xf2\x11\xe4iB\x00\
 \x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x02J\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00@\x00\x00\x00@\x08\x06\x00\x00\x00\xaaiq\xde\
+\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
+\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\
+\x0b\x13\x01\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\
+\xdf\x04\x19\x10\x14\x1a8\xc77\xd0\x00\x00\x00\x1diT\
+XtComment\x00\x00\x00\x00\x00Cr\
+eated with GIMPd\
+.e\x07\x00\x00\x01\xaeIDATx\xda\xed\x9bI\
+\x92\xc3 \x0cE#]\xdc\xf6\xc9\xd3\xbb\xaeT\x06&\
+\xe9\x7f\x09\x8c\xd6]2\xef!h \xf0x\xec\xd8\xb1\
+\xe3\xce!\xcc\x8f\x9d\xe7\xf9l\xfc;YB@+p\
+\xa4\x10\xc9\x0a\xcd\x92!\xb3\x80\xa3D\xc8\x8c\xf0\x9e\x12\
+dFpO\x112;\xbcU\x82\xcc\x0en\x15!+\
+\xc1\x8fH\x90\xd5\xe0{%\xe8^\x0a/\xd8\xfb=U\
+ V\xf8\xe38\xfes\x5c\xd7E\x11\xf5\xfa\xcd\xdaw\
+k\x12\xd4\xbba\xef\x8dC\xc3[C\x11\xa5\x8f\x920\
+\x92\xb7\xc6\xa0\xa8q\xef-\xc1\x92\xaf\xc4b\x1e\x02\xa5\
+\xf1\xe7%\xa1\x94\xc7:\xef\x88W\xef\xa3\x1a\xe9\x99\xf7\
+\xdb\x84\xe86\x09\x22*\x01\xd9\xf3\x90\xff\x02\x9e\x12\x18\
+\xf0_\x87\x80\xc7\xa2\xc7\xdax$\xfc\xfb0\x80,\x85\
+-\x95\xc0\xeay\xf8^`D\x02\x1b\x1e\xbe\x19\xea\x91\
+\x10\x01\xff1\x07\xa06=586\xfc\xeb<@\xd9\
+\x0e\x8f\xce\x09\x8c\xcd\x15\xed<\xa0\x17\x86\xb5\xb3\xa4\x1e\
+\x88\xb4B\xb1\xe0\xe9\x02Z\xe0\x98\xf0!\x02,\xeb\x80\
+\xe9\x05\xb4\xc21%h6x\xb6\x04\x8d\x86g\x9c'\
+\x84\x0ah\x81\x8f\x94\x00\xd9\x0d\x8e\xf6<cQD\xd9\
+\x0d\x8e\xc2DT\x82f\x1a\xf3\x11\x124\x13|\x84\x04\
+\xb7CQ\xc4\x18\xf6\xce\x07=\x14EL`\x8cJ\xd0\
+\xac\xf0,\x09R(\x97g4\xbc\xe7w~\xfdH\x1a\
+r&\x98!_U\x80\xe5\xe6\x15\xaa\xb1\xa3yK,\
+\x9a\xbd\xe7\xd1\xf9\xcd\x17$\xb2G\xad\x92\xf7\x15\x99\x8e\
+d\xfb\x96\xd8\x8a\xb1/J\x0e$\xbf\xefU\xd9\xcc\x22\
+h\x97\xa53J\x08\xb9.\x9fE\x82\xf5\xd1\xc4~2\
+\x03h\xd8=\x1fM!eL\xf5l\xceC\x08\xf3\xe1\
+\xe4\x8e\xbb\xc7\x1f\xfe\x88Z\xe2\xcd\xef\x1cI\x00\x00\x00\
+\x00IEND\xaeB`\x82\
+\x00\x00\x00\x9f\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
+HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x08\x14\x1f\xf9\
+#\xd9\x0b\x00\x00\x00#IDAT\x08\xd7c`\xc0\
+\x0d\xe6|\x80\xb1\x18\x91\x05R\x04\xe0B\x08\x15)\x02\
+\x0c\x0c\x8c\xc8\x02\x08\x95h\x00\x00\xac\xac\x07\x90Ne\
+4\xac\x00\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\xa6\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
+HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x08\x15;\xdc\
+;\x0c\x9b\x00\x00\x00*IDAT\x08\xd7c`\xc0\
+\x00\x8c\x0c\x0cs> \x0b\xa4\x08020 \x0b\xa6\
+\x08000B\x98\x10\xc1\x14\x01\x14\x13P\xb5\xa3\x01\
+\x00\xc6\xb9\x07\x90]f\x1f\x83\x00\x00\x00\x00IEN\
+D\xaeB`\x82\
+\x00\x00\x02B\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00@\x00\x00\x00@\x08\x06\x00\x00\x00\xaaiq\xde\
+\x00\x00\x00\x06bKGD\x00\xb3\x00y\x00y\xdc\xdd\
+S\xfc\x00\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\
+\x0b\x13\x01\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\
+\xdf\x04\x19\x10\x17;_\x83tM\x00\x00\x00\x1diT\
+XtComment\x00\x00\x00\x00\x00Cr\
+eated with GIMPd\
+.e\x07\x00\x00\x01\xa6IDATx\xda\xed\x9b\xdb\
+\x0e\xc3 \x0cC\x9bh\xff\xdd\xf6\xcb\xb7\xb7i\x9av\
+IK\xec\x98B^7Q|p(\x85\xb0,3f\
+\xcc\x189\x8c\xf9\xb0m\xdb\xee\xc1\xff\xd9%\x00D\x05\
+W\x021U\xd1,\x18\xd6\x8bp\x14\x08\xebQ|&\
+\x04\xebQx&\x08\xeb]|+\x04\xeb]x+\x08\
+\xbb\x92\xf83\x10\xecj\xe2\x8fB\xb8Uvr]\xd7\
+g'\xf7}/\x01lU\xa3\xff*\x1e\x05!\xe2\x02\
+S\x11_\x05\xc1+m\x7f\xe6wj\x0ad\x8f\xfe\x11\
+q\x99N\xf8\xe5\x02S\x14\xcf\x84\xe0\xd5\xb6\xff%\x92\
+\x91\x0e\x86\x1e\xfd\xa8x\xc6\xc4\xf8\xc9\x05\xae2\xf2U\
+Np%\xdbW@0\x84\xfd[\xed\x8cL\x87\xf74\
+p\x85\x91\xaft\x82\xab\x89gCpE\xf1L\x08\x96\
+\x91\xff\xe8WXv\xfb\xaf\xf3\x80+\x8e<\xd3\x09\xae\
+.\x1e\x0d\xc1{\x10\x8f\x84\xe0\xccN*\xb6O]\x07\
+(\xb6\xefj9\xc9N;W\xcbI\xf6\x9c\xe3\xc8\x9c\
+\xcc\x82\x80\x9cpS\xe6\x00$\x04\xf4\xdb&\xf5k0\
+\xbb\xb3\x08\xf1\xd0\xaf\xc1L'\xb0\xd6\x19\xd4u@\x14\
+\x02s\x91\x05\xd9\x11j\x81\xc0^aB7E\x8f\x8a\
+A\x8b\xa7o\x8a\x1eqB\xc5\xb7\x05\x1c@\x14B\x95\
+\xf8\xaf)\x90\x99\x06-\xeb\x81\xcb\x9c\x0c\x9d\x11\xc3\xaa\
+\x17\xa0\x1e\x8eF\x9d\xc0<\x22\xa7\x1f\x8f\xff\x13\xc7\xae\
+\x14))\x90\xf8\xe6\x04\x84\xf8\x7f\x05\x12e%2\xef\
+\x10*\xc4\x87\x01 !\xa0\x22Z%\xe6\xcb\xe01\x0b\
+%O4>n\xa9\xac2\x08Z\xb1\xb4\x22\x84\x92r\
+y\x15\x08\xad\x97&\xe6\x95\x19@\xc7\xc6\xbc4\x85\x84\
+\xd1\xd5\xb5\xb9\x0c \xcc\x8b\x933F\x8f\x07S!r\
+\xe7\x176+c\x00\x00\x00\x00IEND\xaeB`\
+\x82\
+\x00\x00\x00\xa0\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
+HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x14\x1c\x1f$\
+\xc6\x09\x17\x00\x00\x00$IDAT\x08\xd7c`@\
+\x05\xff\xcf\xc3XL\xc8\x5c&dY&d\xc5p\x0e\
+\xa3!\x9c\xc3h\x88a\x1a\x0a\x00\x00m\x84\x09u7\
+\x9e\xd9#\x00\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x01\xd0\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
+\x00\x00\x00\x04sBIT\x08\x08\x08\x08|\x08d\x88\
+\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\x0d\xd7\
+\x01B(\x9bx\x00\x00\x00\x19tEXtSof\
+tware\x00www.inksca\
+pe.org\x9b\xee<\x1a\x00\x00\x01MID\
+ATX\x85\xed\xd7MN\xc2@\x18\xc6\xf1\xff[\x08\
+\x08\xea\x01\xd0+\x88\x09[\xcf!\xbb\xca\xd8\x1aI\xe0\
+>bBBiI\x97x\x0c\xd7\x84p\x07q\xef\x07\
+\x02\x81\xd7\x85\xd4\x10\xc0\xdd\x10\x13\xed\xb3\x9b\xc9\x9by\
+~\x93n:\xf0\xdf#\x9bk\xcf\x98k\xa0\x01\x94\x81\
+\x03K=\x1f\xc0HDZA\x18F\x80\xee\x02\x88g\
+L\x08\xd4\x80)0\x00^-\x01\x8e\x80\x0a\x90\x07\xba\
+\xdd(\xbaI\x10\xdf\x00\xcf\x18\x0f\x08\x04\x1e\xb3\x8bE\
+\xb5\x1d\xc7cK\xe5\x00\xd4]\xb74w\x9c>\x22\x17\
+\x02&\x88\xa2\x1e\x80\xb36\xd3\x00\xa6K\x91K\xdb\xe5\
+\x00\xed8\x1eK6[\x05f*\xd2L\xf6\xd7\x01g\
+\xc0 \x0c\xc3g\xdb\xe5I\x82 xBd\x80jy\
+\x17\xa0\x80\xea\xfb\xbe\xca\xbf\xb3\x5c\xbe\x01\xc5]\x80_\
+I\x0aH\x01) \x05\xa4\x80\x14\x90\x02R\xc0:`\
+\x82H\xf1\xc7Ik\x8d\xce!0\xd9\x02(\x8c\x80J\
+\xdduK\xfb\xea\xae\xd5j\xa7\xa8V\x80\xe1\x16\xc0\x11\
+\xb9\x07\xf2\xf3L\xe6\xc1\xf7\xfd\x93}\x94gD\xfa@\
+NEZ\xc9\xfe\xe6\xc3\xa4\x03x\xc0l\xf5\xf7\xfab\
+\xa5]\xe4xu\xf3\x9cB'\x8c\xa2[6\x1f&\xc9\
+\xa8o\xcc\x95\x8a4Q=\x07\x0aV\x00_\xdf|\x88\
+\xea]\xb7\xd7\x8b-\x9d\xf9G\xf2\x09>pdA\x95\
+\x87\xdfi\x00\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\xac\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x07\x00\x00\x00?\x08\x06\x00\x00\x00,{\xd2\x13\
+\x00\x00\x00\x06bKGD\x00\xb3\x00y\x00y\xdc\xdd\
+S\xfc\x00\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\
+\x0b\x13\x01\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\
+\xdf\x04\x19\x10.\x14\xfa\xd6\xc4\xae\x00\x00\x009ID\
+AT8\xcbc` \x06\xc4\xc7\xc73\xc4\xc7\xc7\xa3\
+\x881aS\x84S\x12\xaf\xce\x91(\xc9\x82\xc4\xfe\x8f\
+\xc4f\x1c\x0d\xa1Q\xc9Q\xc9QI|\x05\x06\xe3h\
+\x08\x91*I>\x00\x00\x88K\x04\xd39.\x90?\x00\
+\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\xa6\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x02bKGD\x00\x9cS4\xfc]\x00\x00\x00\x09p\
+HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x0b\x1b\x0e\x16\
+M[o\x00\x00\x00*IDAT\x08\xd7c`\xc0\
+\x00\x8c\x0c\x0cs> \x0b\xa4\x08020 \x0b\xa6\
+\x08000B\x98\x10\xc1\x14\x01\x14\x13P\xb5\xa3\x01\
+\x00\xc6\xb9\x07\x90]f\x1f\x83\x00\x00\x00\x00IEN\
+D\xaeB`\x82\
+\x00\x00\x00\xa0\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
+HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x14\x1f\x0d\xfc\
+R+\x9c\x00\x00\x00$IDAT\x08\xd7c`@\
+\x05s>\xc0XL\xc8\x5c&dY&d\xc5pN\
+\x8a\x00\x9c\x93\x22\x80a\x1a\x0a\x00\x00)\x95\x08\xaf\x88\
+\xac\xba4\x00\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\xf0\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
+\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
+\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
+\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
+\xe1\x05\x0d\x0a:+\xaf\xc4\x97\xc5\x00\x00\x00}ID\
+ATX\xc3c`\x18\xe9\x80\x11\x85\xf7\xff?\xa3\xed\
+\xfaW\xffhi\xe1\xe1@1&\x06F\xc6\xff\x98\x0e\
+\xa0\x83\xe5\xd8\x1c\x01w\x80\xed\xba\x97\xffQ\x14\x05\x89\
+3R\xd3R\x5c\xe63au!\x95-\xc7g&\x13\
+=,\xc7g6\xd3@\xe7\x82Q\x07\x8c:`\xd4\x01\
+\xa3\x0e\x18u\xc0\xa8\x03F\x1d0\xea\x80Q\x070\x11\
+j\xbd\xd2\xb2e\x8c3\x04h\xe1\x08\x5cf\x0e\x9e\x8e\
+\x09\xdd\xbaf4l\xf6\x0fM\x00\x00_934+\
+ \x00\xc5\x00\x00\x00\x00IEND\xaeB`\x82\
 \x00\x00\x02V\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
@@ -205,33 +422,85 @@ o\xbe \x91=J#y]\x91\xa9M\xb6n\x89M\
 \xa3)\xa4\x8c\xa1\x9e\xcdy\x08a>\x9c\x5c\xb1\xf7x\
 \x02G\xb0[\x07:D>\x01\x00\x00\x00\x00IEN\
 D\xaeB`\x82\
-\x00\x00\x00\xb6\
+\x00\x00\x03N\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x18\x00\x00\x00\x11\x08\x06\x00\x00\x00\xc7xl0\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\xa7\x93\x00\
-\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\
-\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\xdc\x08\x17\
-\x0b,\x0d\x1fC\xaa\xe1\x00\x00\x006IDAT8\
-\xcbc` \x01,Z\xb4\xe8\xff\xa2E\x8b\xfe\x93\xa2\
-\x87\x89\x81\xc6`\xd4\x82\x11`\x01#\xa9\xc9t\xd0\xf9\
-\x80\x85\x1cMqqq\x8c\xa3\xa9h\xd4\x82ad\x01\
-\x001\xb5\x09\xec\x1fK\xb4\x15\x00\x00\x00\x00IEN\
-D\xaeB`\x82\
-\x00\x00\x00\xa5\
+\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
+\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
+\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
+\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
+\xe1\x05\x0d\x0b\x09$\xca\xd2\x85S\x00\x00\x02\xdbID\
+ATX\xc3\xed\x96\xcfKTQ\x14\xc7?\xf7\xf8\x18\
+\x857m\x02\x11\xd2\x16F\xabt\x86A\x8c6&\xa3\
+\x9b\x81\x8c2\x886\xb5\xb6MmBm\xea\x1fH'\
+\xfc\x07\xdc\x9a\xab F\xa1(7\xbd\xc2E\xc8T:\
+\x19\xd2\x0fW\x1a\xc3lB\xc2G\xbcq\xba\xb7\x85w\
+d\x88f\xf4i\xad\xf4\xbb\xba\x87{\xee{\xdf\xfb=\
+\xe7\x9es\xe0\x08G8\xecPa\x9c[^lFZ\
+\x1a\xd5\x15`\x10\xe8\x02Z\xed\xd6\xba6\xbcs\x14\xd9\
+B`\xb2\xc5T\xb4\xf4\xcf\x09$<\xff\xaa\x86\x0c\xd0\
+\x0e|\xd0\x06\xcfQ\xac\xdb\xedV\x0d}@L`\xd5\
+\x11Fs\xbd\xee\x93\x7fB\xe0Z\xeeg\xc3\xe7M\x9d\
+\xd1p\x07x\xae\x0d\xe9\xe5>w\xa9\x06\xc9D\xd90\
+&\x8a\x14\xf0p\xf5G\x90\xf6/\x1d\xd7\x07\x8aQ\xc2\
+\xf3'\xe2\x9e\xff\xab\xfb\xb5?\xbc\xd73q\xcf\x1f\x89\
+{\xfe\xaf\xb8\xe7g\x0e\xa4\x80\x95\xfd\xb1\xc0\xf0b\xd2\
+\x9d\x00\xe8\x99\xf7\x1b7\xb6\xb8\x09\x5c\x17E\xcc\xba\xe6\
+\x05\xa6\xa3\x0e\x93\xf3=n`\xcf\x8ej\x18\x17\xb8\xb2\
+\x98t\xb3\xa1\x09\xd8\x84[\x11\xf8\xb4\x98t/\x00t\
+\xbf\xf6\xdbJ\x9ag@\x0c\xd0\x80Xw\x0d\x88@\xde\
+\x11\x06r\xbd\xee\xba%1\xa7\xa1\xbd\x18\x98\x8eZ\x89\
+)5\x09lg\xfb\xa9\xb2\xe1^\xe5\xe6%\xcd3\x81\
+\xce\xbf\x9c\xad\xacc%\xcd\xd3\x96\x17\x9b\x11\xcb\xea.\
+p\xba9\xa2.\xd7\xfa\x8f\xd4\x89\xc0 \xb0TI\xb8\
+\xcd2C@L\xd7Q\xcd\xee\xc5[\x1a\xd5\x10@>\
+\xe9\xbe\xd7\x86e`_\x04\xba\x04^U\x8c\xb2\xe1\x86\
+\x95z7h\xe0F\x95\xfdR\x14\xdd\xfb!pB\xb3\
+\xf3\xce\x11E\xc7.\xfe\xd5\xdf\xec\xa8\xb2\xbfU\x15\xac\
+P\x04\x90\x90\x95\xf2op\x14\xaa\x9er\xf5\x08\x14\xca\
+\x86\xb6\x1d]\x0d\x1f\xf7\x1a\x02\x1b\xf7J<Z\x81B\
+h\x02\xda\x90c\xbb\xbcVn\xf2h\xaf!\x10\xc5t\
+\x95\xdd\x0f,\x84&\xe0(\xb2\xa2\xe8Lx~\x02 \
+\xea0)\xdb\x05\xc7\xd4\xf9\x98\x11X,\x06f\xd2\xd6\
+\x81.\xe0\x8c\xc0lh\x02\x85\xc0d\x05V\xcb\x861\
+\x80\xf9\x1e7p\x84\x01\xe0CU\xb6\xf3\xc7zI\xc3\
+\xc5b*Z\x9aZ+)\xdb\xbc\xbe450\x13\x9a\
+@1\x15-i\x18\x11E*\xee\xf9#\x00\xb9^w\
+\xbd\x10\x98\xb3\xc0mmX\x00|\xc0\xd7\x86\x85\x88p\
+\xab\x10\x98s\xf9\xa4\xfb\x0d`\xfc\xebV\xda\xca?\xfc\
+\xe6\xbc\xbb\xb5\xef,\x8e{~\xc66\x96\x91\xbd\xf8O\
+\xad\x95T\xe7K\xff\x9em`c\x07n\xc7\xee\xecw\
+i?\xd6\xf8@\x14\xa3\xc0\x1c\x90\xce'\xdd\xf75\x9a\
+W\x97\x95\xbd?\x22dV6\x82\xfb\xbb\xb5\xe30\x03\
+\xc9\xa0\x86\x87\xc0imX\x16\x85'\xb0f\x13\xe0\xa4\
+}1\x1d\xc0\x17`8\x9ftg\xff\xcbH\xd6\x1cQ\
+\x97E\xed\x8cdmU#\xd9[G\x91mj`\xe6\
+@1?\xc2\x11\x0e\x1d~\x03\xf9\xaf!U\xd9\x8f\x13\
+A\x00\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\x93\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
+\x00\x00\x00\x02bKGD\x00\xd3\xb5W\xa0\x5c\x00\x00\
+\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\
+\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\xdc\x0b\x07\x0c\
+\x0c+J<0t\x00\x00\x00$IDAT\x08\xd7\
+c`@\x05\xff\xff\xc3XL\xc8\x5c&dY&d\
+\xc5p\x0e##\x9c\xc3\xc8\x88a\x1a\x0a\x00\x00\x9e\x14\
+\x0a\x05+\xca\xe5u\x00\x00\x00\x00IEND\xaeB\
+`\x82\
+\x00\x00\x00\x9e\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
 \x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
 \x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x02bKGD\x00\x9cS4\xfc]\x00\x00\x00\x09p\
+\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
 HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x0b\x02\x04m\
-\x98\x1bi\x00\x00\x00)IDAT\x08\xd7c`\xc0\
-\x00\x8c\x0c\x0c\xff\xcf\xa3\x08\x18220 \x0b2\x1a\
-200B\x98\x10AFC\x14\x13P\xb5\xa3\x01\x00\
-\xd6\x10\x07\xd2/H\xdfJ\x00\x00\x00\x00IEND\
-\xaeB`\x82\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x08\x15\x0f\xfd\
+\x8f\xf8.\x00\x00\x00\x22IDAT\x08\xd7c`\xc0\
+\x0d\xfe\x9f\x87\xb1\x18\x91\x05\x18\x0d\xe1BH*\x0c\x19\
+\x18\x18\x91\x05\x10*\xd1\x00\x00\xca\xb5\x07\xd2v\xbb\xb2\
+\xc5\x00\x00\x00\x00IEND\xaeB`\x82\
 \x00\x00\x0b\x17\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
@@ -412,159 +681,6 @@ t end=\x22w\x22?>@\x00Zq\x00\
 !\x03\xd3H\x8e\xf9\x11\xe9\xf9\x85\x0b\x17\x8e\xe6\xf9\x11\
 \x0d\x00\x8bl\x05\xe9)K\xfc\x15\x00\x00\x00\x00IE\
 ND\xaeB`\x82\
-\x00\x00\x00\x81\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x10\x00\x00\x00\x10\x01\x03\x00\x00\x00%=m\x22\
-\x00\x00\x00\x06PLTE\x00\x00\x00\xae\xae\xaewk\
-\xd6-\x00\x00\x00\x01tRNS\x00@\xe6\xd8f\x00\
-\x00\x00)IDATx^\x05\xc0\xb1\x0d\x00 \x08\
-\x04\xc0\xc3X\xd8\xfe\x0a\xcc\xc2p\x8cm(\x0e\x97G\
-h\x86Uq\xda\x1do%\xba\xcd\xd8\xfd5\x0a\x04\x1b\
-\xd6\xd9\x1a\x92\x00\x00\x00\x00IEND\xaeB`\x82\
-\
-\x00\x00\x00\xa0\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
-HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x14\x1f\x0d\xfc\
-R+\x9c\x00\x00\x00$IDAT\x08\xd7c`@\
-\x05s>\xc0XL\xc8\x5c&dY&d\xc5pN\
-\x8a\x00\x9c\x93\x22\x80a\x1a\x0a\x00\x00)\x95\x08\xaf\x88\
-\xac\xba4\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x00\xa6\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
-HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x08\x15;\xdc\
-;\x0c\x9b\x00\x00\x00*IDAT\x08\xd7c`\xc0\
-\x00\x8c\x0c\x0cs> \x0b\xa4\x08020 \x0b\xa6\
-\x08000B\x98\x10\xc1\x14\x01\x14\x13P\xb5\xa3\x01\
-\x00\xc6\xb9\x07\x90]f\x1f\x83\x00\x00\x00\x00IEN\
-D\xaeB`\x82\
-\x00\x00\x03N\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
-\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
-\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
-\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
-\xe1\x05\x0d\x0b\x09$\xca\xd2\x85S\x00\x00\x02\xdbID\
-ATX\xc3\xed\x96\xcfKTQ\x14\xc7?\xf7\xf8\x18\
-\x857m\x02\x11\xd2\x16F\xabt\x86A\x8c6&\xa3\
-\x9b\x81\x8c2\x886\xb5\xb6MmBm\xea\x1fH'\
-\xfc\x07\xdc\x9a\xab F\xa1(7\xbd\xc2E\xc8T:\
-\x19\xd2\x0fW\x1a\xc3lB\xc2G\xbcq\xba\xb7\x85w\
-d\x88f\xf4i\xad\xf4\xbb\xba\x87{\xee{\xdf\xfb=\
-\xe7\x9es\xe0\x08G8\xecPa\x9c[^lFZ\
-\x1a\xd5\x15`\x10\xe8\x02Z\xed\xd6\xba6\xbcs\x14\xd9\
-B`\xb2\xc5T\xb4\xf4\xcf\x09$<\xff\xaa\x86\x0c\xd0\
-\x0e|\xd0\x06\xcfQ\xac\xdb\xedV\x0d}@L`\xd5\
-\x11Fs\xbd\xee\x93\x7fB\xe0Z\xeeg\xc3\xe7M\x9d\
-\xd1p\x07x\xae\x0d\xe9\xe5>w\xa9\x06\xc9D\xd90\
-&\x8a\x14\xf0p\xf5G\x90\xf6/\x1d\xd7\x07\x8aQ\xc2\
-\xf3'\xe2\x9e\xff\xab\xfb\xb5?\xbc\xd73q\xcf\x1f\x89\
-{\xfe\xaf\xb8\xe7g\x0e\xa4\x80\x95\xfd\xb1\xc0\xf0b\xd2\
-\x9d\x00\xe8\x99\xf7\x1b7\xb6\xb8\x09\x5c\x17E\xcc\xba\xe6\
-\x05\xa6\xa3\x0e\x93\xf3=n`\xcf\x8ej\x18\x17\xb8\xb2\
-\x98t\xb3\xa1\x09\xd8\x84[\x11\xf8\xb4\x98t/\x00t\
-\xbf\xf6\xdbJ\x9ag@\x0c\xd0\x80Xw\x0d\x88@\xde\
-\x11\x06r\xbd\xee\xba%1\xa7\xa1\xbd\x18\x98\x8eZ\x89\
-)5\x09lg\xfb\xa9\xb2\xe1^\xe5\xe6%\xcd3\x81\
-\xce\xbf\x9c\xad\xacc%\xcd\xd3\x96\x17\x9b\x11\xcb\xea.\
-p\xba9\xa2.\xd7\xfa\x8f\xd4\x89\xc0 \xb0TI\xb8\
-\xcd2C@L\xd7Q\xcd\xee\xc5[\x1a\xd5\x10@>\
-\xe9\xbe\xd7\x86e`_\x04\xba\x04^U\x8c\xb2\xe1\x86\
-\x95z7h\xe0F\x95\xfdR\x14\xdd\xfb!pB\xb3\
-\xf3\xce\x11E\xc7.\xfe\xd5\xdf\xec\xa8\xb2\xbfU\x15\xac\
-P\x04\x90\x90\x95\xf2op\x14\xaa\x9er\xf5\x08\x14\xca\
-\x86\xb6\x1d]\x0d\x1f\xf7\x1a\x02\x1b\xf7J<Z\x81B\
-h\x02\xda\x90c\xbb\xbcVn\xf2h\xaf!\x10\xc5t\
-\x95\xdd\x0f,\x84&\xe0(\xb2\xa2\xe8Lx~\x02 \
-\xea0)\xdb\x05\xc7\xd4\xf9\x98\x11X,\x06f\xd2\xd6\
-\x81.\xe0\x8c\xc0lh\x02\x85\xc0d\x05V\xcb\x861\
-\x80\xf9\x1e7p\x84\x01\xe0CU\xb6\xf3\xc7zI\xc3\
-\xc5b*Z\x9aZ+)\xdb\xbc\xbe450\x13\x9a\
-@1\x15-i\x18\x11E*\xee\xf9#\x00\xb9^w\
-\xbd\x10\x98\xb3\xc0mmX\x00|\xc0\xd7\x86\x85\x88p\
-\xab\x10\x98s\xf9\xa4\xfb\x0d`\xfc\xebV\xda\xca?\xfc\
-\xe6\xbc\xbb\xb5\xef,\x8e{~\xc66\x96\x91\xbd\xf8O\
-\xad\x95T\xe7K\xff\x9em`c\x07n\xc7\xee\xecw\
-i?\xd6\xf8@\x14\xa3\xc0\x1c\x90\xce'\xdd\xf75\x9a\
-W\x97\x95\xbd?\x22dV6\x82\xfb\xbb\xb5\xe30\x03\
-\xc9\xa0\x86\x87\xc0imX\x16\x85'\xb0f\x13\xe0\xa4\
-}1\x1d\xc0\x17`8\x9ftg\xff\xcbH\xd6\x1cQ\
-\x97E\xed\x8cdmU#\xd9[G\x91mj`\xe6\
-@1?\xc2\x11\x0e\x1d~\x03\xf9\xaf!U\xd9\x8f\x13\
-A\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x01\xeb\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
-\x00\x00\x00\x04sBIT\x08\x08\x08\x08|\x08d\x88\
-\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\x0d\xd7\
-\x01B(\x9bx\x00\x00\x00\x19tEXtSof\
-tware\x00www.inksca\
-pe.org\x9b\xee<\x1a\x00\x00\x01hID\
-ATX\x85\xed\x97MN\xc2@\x18\x86\x9f\xaf\x10\x14\
-\xd4\x03\xa0W\x10\x13\xb6\x9eCv\xc8X\x8c&p\x1f\
-11\xa1tH\x97x\x0c\xd7\xc4x\x07q\xef\x0f\x02\
-\x91\xcf\x85\x94 \xa0,\x1c\x5ch\xdf\xddL\xdf\xf4y\
-\xa6M\xd3\x19\xf8\xef\x91\xf9\xb1o\xcc\x09P\x03\x0a\xc0\
-\xa6#\xce+p'\x22\x8d \x0c-\xa0\xcb\x04\xc47\
-&\x04*\xc0\x00\xe8\x02O\x8e\x04\xb6\x81\x22\xb0\x01\xb4\
-Z\xd6\x9e\xc6\x12S\x01\xdf\x18\x1f\x08\x04n\xd2oo\
-\xa5\xab(\xea9\x82\x03p^.\xe7G\x9e\xd7A\xe4\
-P\xc0\x04\xd6\xb6\x01\xbc\x99N\x0d\x18\x8cE\x8e\x5c\xc3\
-\x01\xae\xa2\xa8'\xe9t\x09\x18\xaaH=\x9e\x9f\x15\xd8\
-\x07\xbaa\x18>\xb8\x86\xc7\x09\x82\xe0\x1e\x91.\xaa\x85\
-e\x02YT_\xd6\x05\x9ff<~\x06r\xf10\xbd\
-\xaa\xef\x1b\xa3\xab:\xdf\xa5e\xed\xfc\x97\xf6)\xdew\
-\x17\x7f#\x89@\x22\x90\x08$\x02\x89@\x22\x90\x08\xac\
-\xdc\x0f\xac\xfa\x9f\xff4\xb3O\xa0\x8fH\xee\xcb\xa63\
-\xa2\xb7\x05\xf4\x17\x04\x14\xee\x80\xe2y\xb9\x9c_\x17\xbb\
-R\xa9\xec\xa1Z\x04n\x17\x04<\x91K`c\x94J\
-]W\xab\xd5\xddu\xc0S\x22\x1d \xa3\x22\x8dx~\
-\xfe`\xd2\x04|`8\xd9\xbd>:\xa1\x8b\xecLV\
-\x9eQh\x86\xd6\x9e1\x7f0\x89\xabUc\x8eU\xa4\
-\x8e\xea\x01\x90u\x22\xf0\xf1\xceoQ\xbdh\xb5\xdb\x91\
-\xa3{\xfe\x91\xbc\x03\x16qj'Dt\xfeO\x00\x00\
-\x00\x00IEND\xaeB`\x82\
-\x00\x00\x00\xef\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00Q\x00\x00\x00:\x08\x06\x00\x00\x00\xc8\xbc\xb5\xaf\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\xa7\x93\x00\
-\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\
-\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\xdc\x08\x17\
-\x0b*2\xff\x7f Z\x00\x00\x00oIDATx\
-\xda\xed\xd0\xb1\x0d\x000\x08\x03A\xc8\xa0\x0c\xc7\xa2I\
-\xcf\x04(\xba/]Y\x97\xb1\xb4\xee\xbes\xab\xaa\xdc\
-\xf8\xf5\x84 B\x84(\x88\x10!B\x14D\x88\x10!\
-\x0a\x22D\x88\x10\x05\x11\x22D\x88\x82\x08\x11\x22DA\
-\x84\x08Q\x10!B\x84(\x88\x10!B\x14D\x88\x10\
-!\x0a\x22D\x88\x10\x05\x11\x22D\x88\x82\x08\x11\x22D\
-A\x84\x08Q\x10!B\xfc\xaa\x07\x12U\x04tV\x9e\
-\x9eT\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x00\xa0\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x02bKGD\x00\x9cS4\xfc]\x00\x00\x00\x09p\
-HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x0b\x1b)\xb3\
-G\xee\x04\x00\x00\x00$IDAT\x08\xd7c`@\
-\x05s>\xc0XL\xc8\x5c&dY&d\xc5pN\
-\x8a\x00\x9c\x93\x22\x80a\x1a\x0a\x00\x00)\x95\x08\xaf\x88\
-\xac\xba4\x00\x00\x00\x00IEND\xaeB`\x82\
 \x00\x00\x01\xec\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
@@ -598,6 +714,48 @@ QU\x19X\x1b\xa2\x1a\x00\x0b\x92\xc1\xe4\xa5\x10\xba\xea\
 \xae\xfb\xf63\x92N\xb9\x88\xcc\x801\xaa\xd7^\xb7{\
 W\xd03\xffH>\x01\xac\x18zV\x83\xd7\xe8n\x00\
 \x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\xa6\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
+HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x14\x1f \xb9\
+\x8dw\xe9\x00\x00\x00*IDAT\x08\xd7c`\xc0\
+\x06\xe6|```B0\xa1\x1c\x08\x93\x81\x81\x09\xc1\
+d``b`H\x11@\xe2 s\x19\x90\x8d@\x02\
+\x00#\xed\x08\xafd\x9f\x0f\x15\x00\x00\x00\x00IEN\
+D\xaeB`\x82\
+\x00\x00\x00\xfc\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
+\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
+\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
+\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
+\xe1\x05\x0d\x0a9\x0e\xcf\xed\x10A\x00\x00\x00\x89ID\
+ATX\xc3c`\x18\xe9\x80\x11\x85\xf7\xff?\xa3\xed\
+\xfaW\xffhi\xe1\xe1@1&\x06F\xc6\xff\x98\x0e\
+\xa0\x83\xe5\xd8\x1c\x01w\x80\xed\xba\x97\xffQ\x14\x05\x89\
+3R\xd3R\x5c\xe63au!\x95-\xc7g&\x13\
+=,\xc7g6\xd3@\xe7\x02\x16R\xe3\x8eZA?\
+hB`\xd4\x01\xa3\x0e\x18u\xc0\xa8\x03F\x1d0\xea\
+\x80Q\x07\x10l\x0f\xd0\xb2\x8548\xa3\x80\xd2\x16\x10\
+\xa9\xad+&Z4\xc3H1s\xf0tL\xe8\xd65\
+\xa3q\xa2\x1ez\x00\x00\xa3]8e\x19\x919D\x00\
+\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\x81\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x10\x00\x00\x00\x10\x01\x03\x00\x00\x00%=m\x22\
+\x00\x00\x00\x06PLTE\x00\x00\x00\xae\xae\xaewk\
+\xd6-\x00\x00\x00\x01tRNS\x00@\xe6\xd8f\x00\
+\x00\x00)IDATx^\x05\xc0\xb1\x0d\x00 \x08\
+\x04\xc0\xc3X\xd8\xfe\x0a\xcc\xc2p\x8cm(\x0e\x97G\
+h\x86Uq\xda\x1do%\xba\xcd\xd8\xfd5\x0a\x04\x1b\
+\xd6\xd9\x1a\x92\x00\x00\x00\x00IEND\xaeB`\x82\
+\
 \x00\x00\x01\xed\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
@@ -631,6 +789,55 @@ W=$}\xf3\x8aB\xe4\x07\xc1E\xd6\x98,\xb7f\
 \xd6z\x8b\xba\xfd\x8c\xb4Rv\x9110@\xf5\xdao\
 \xb5\xee\x1c=\xf3\x8f\xe4\x13\xfb6zV\x11\xde\xcf\xd8\
 \x00\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\xdc\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x10\x00\x00\x00@\x08\x06\x00\x00\x00\x13}\xf7\x96\
+\x00\x00\x00\x06bKGD\x00\xb3\x00y\x00y\xdc\xdd\
+S\xfc\x00\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\
+\x0b\x13\x01\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\
+\xdf\x04\x19\x10-\x19\xafJ\xeb\xd0\x00\x00\x00\x1diT\
+XtComment\x00\x00\x00\x00\x00Cr\
+eated with GIMPd\
+.e\x07\x00\x00\x00@IDATX\xc3\xed\xce1\
+\x0a\x00 \x0c\x03@\xf5\xa3}[_\xaaS\xc1\xc9\xc5\
+E\xe42\x05\x1a\x8e\xb6v\x99^%\x22f\xf5\xcc\xec\
+\xfb\xe8t\x1b\xb7\x1f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\
+\x00\x00\xf06\xf0A\x16\x0bB\x08x\x15WD\xa2\x00\
+\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x01\xeb\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
+\x00\x00\x00\x04sBIT\x08\x08\x08\x08|\x08d\x88\
+\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\x0d\xd7\
+\x01B(\x9bx\x00\x00\x00\x19tEXtSof\
+tware\x00www.inksca\
+pe.org\x9b\xee<\x1a\x00\x00\x01hID\
+ATX\x85\xed\x97MN\xc2@\x18\x86\x9f\xaf\x10\x14\
+\xd4\x03\xa0W\x10\x13\xb6\x9eCv\xc8X\x8c&p\x1f\
+11\xa1tH\x97x\x0c\xd7\xc4x\x07q\xef\x0f\x02\
+\x91\xcf\x85\x94 \xa0,\x1c\x5ch\xdf\xddL\xdf\xf4y\
+\xa6M\xd3\x19\xf8\xef\x91\xf9\xb1o\xcc\x09P\x03\x0a\xc0\
+\xa6#\xce+p'\x22\x8d \x0c-\xa0\xcb\x04\xc47\
+&\x04*\xc0\x00\xe8\x02O\x8e\x04\xb6\x81\x22\xb0\x01\xb4\
+Z\xd6\x9e\xc6\x12S\x01\xdf\x18\x1f\x08\x04n\xd2oo\
+\xa5\xab(\xea9\x82\x03p^.\xe7G\x9e\xd7A\xe4\
+P\xc0\x04\xd6\xb6\x01\xbc\x99N\x0d\x18\x8cE\x8e\x5c\xc3\
+\x01\xae\xa2\xa8'\xe9t\x09\x18\xaaH=\x9e\x9f\x15\xd8\
+\x07\xbaa\x18>\xb8\x86\xc7\x09\x82\xe0\x1e\x91.\xaa\x85\
+e\x02YT_\xd6\x05\x9ff<~\x06r\xf10\xbd\
+\xaa\xef\x1b\xa3\xab:\xdf\xa5e\xed\xfc\x97\xf6)\xdew\
+\x17\x7f#\x89@\x22\x90\x08$\x02\x89@\x22\x90\x08\xac\
+\xdc\x0f\xac\xfa\x9f\xff4\xb3O\xa0\x8fH\xee\xcb\xa63\
+\xa2\xb7\x05\xf4\x17\x04\x14\xee\x80\xe2y\xb9\x9c_\x17\xbb\
+R\xa9\xec\xa1Z\x04n\x17\x04<\x91K`c\x94J\
+]W\xab\xd5\xddu\xc0S\x22\x1d \xa3\x22\x8dx~\
+\xfe`\xd2\x04|`8\xd9\xbd>:\xa1\x8b\xecLV\
+\x9eQh\x86\xd6\x9e1\x7f0\x89\xabUc\x8eU\xa4\
+\x8e\xea\x01\x90u\x22\xf0\xf1\xceoQ\xbdh\xb5\xdb\x91\
+\xa3{\xfe\x91\xbc\x03\x16qj'Dt\xfeO\x00\x00\
+\x00\x00IEND\xaeB`\x82\
 \x00\x00\x0b\x1f\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
@@ -811,113 +1018,31 @@ ket end=\x22w\x22?>'q\xef\
 @WE\xb6\xfe\x87\x99\xb9I\xcb\xefn\x9f\xf4\x0b8\
 \x9e\x00\x90A\x19\x94A\x80H\x0f\xc6\x9d\x08\x0b\xaac\
 u(\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x02B\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00@\x00\x00\x00@\x08\x06\x00\x00\x00\xaaiq\xde\
-\x00\x00\x00\x06bKGD\x00\xb3\x00y\x00y\xdc\xdd\
-S\xfc\x00\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\
-\x0b\x13\x01\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\
-\xdf\x04\x19\x10\x17;_\x83tM\x00\x00\x00\x1diT\
-XtComment\x00\x00\x00\x00\x00Cr\
-eated with GIMPd\
-.e\x07\x00\x00\x01\xa6IDATx\xda\xed\x9b\xdb\
-\x0e\xc3 \x0cC\x9bh\xff\xdd\xf6\xcb\xb7\xb7i\x9av\
-IK\xec\x98B^7Q|p(\x85\xb0,3f\
-\xcc\x189\x8c\xf9\xb0m\xdb\xee\xc1\xff\xd9%\x00D\x05\
-W\x021U\xd1,\x18\xd6\x8bp\x14\x08\xebQ|&\
-\x04\xebQx&\x08\xeb]|+\x04\xeb]x+\x08\
-\xbb\x92\xf83\x10\xecj\xe2\x8fB\xb8Uvr]\xd7\
-g'\xf7}/\x01lU\xa3\xff*\x1e\x05!\xe2\x02\
-S\x11_\x05\xc1+m\x7f\xe6wj\x0ad\x8f\xfe\x11\
-q\x99N\xf8\xe5\x02S\x14\xcf\x84\xe0\xd5\xb6\xff%\x92\
-\x91\x0e\x86\x1e\xfd\xa8x\xc6\xc4\xf8\xc9\x05\xae2\xf2U\
-Np%\xdbW@0\x84\xfd[\xed\x8cL\x87\xf74\
-p\x85\x91\xaft\x82\xab\x89gCpE\xf1L\x08\x96\
-\x91\xff\xe8WXv\xfb\xaf\xf3\x80+\x8e<\xd3\x09\xae\
-.\x1e\x0d\xc1{\x10\x8f\x84\xe0\xccN*\xb6O]\x07\
-(\xb6\xefj9\xc9N;W\xcbI\xf6\x9c\xe3\xc8\x9c\
-\xcc\x82\x80\x9cpS\xe6\x00$\x04\xf4\xdb&\xf5k0\
-\xbb\xb3\x08\xf1\xd0\xaf\xc1L'\xb0\xd6\x19\xd4u@\x14\
-\x02s\x91\x05\xd9\x11j\x81\xc0^aB7E\x8f\x8a\
-A\x8b\xa7o\x8a\x1eqB\xc5\xb7\x05\x1c@\x14B\x95\
-\xf8\xaf)\x90\x99\x06-\xeb\x81\xcb\x9c\x0c\x9d\x11\xc3\xaa\
-\x17\xa0\x1e\x8eF\x9d\xc0<\x22\xa7\x1f\x8f\xff\x13\xc7\xae\
-\x14))\x90\xf8\xe6\x04\x84\xf8\x7f\x05\x12e%2\xef\
-\x10*\xc4\x87\x01 !\xa0\x22Z%\xe6\xcb\xe01\x0b\
-%O4>n\xa9\xac2\x08Z\xb1\xb4\x22\x84\x92r\
-y\x15\x08\xad\x97&\xe6\x95\x19@\xc7\xc6\xbc4\x85\x84\
-\xd1\xd5\xb5\xb9\x0c \xcc\x8b\x933F\x8f\x07S!r\
-\xe7\x176+c\x00\x00\x00\x00IEND\xaeB`\
-\x82\
-\x00\x00\x01\xd0\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
-\x00\x00\x00\x04sBIT\x08\x08\x08\x08|\x08d\x88\
-\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\x0d\xd7\
-\x01B(\x9bx\x00\x00\x00\x19tEXtSof\
-tware\x00www.inksca\
-pe.org\x9b\xee<\x1a\x00\x00\x01MID\
-ATX\x85\xed\x97;N\xc3@\x14\x00\xe7EQ\xc2\
-\xf7\x00\x81+\x00R\xeeB\xca\x8d\xedX\x14p\x1fB\
-e\x99\x8d)\xc3\x1dh\xa8\xa3(w \xf4|B>\
-\xf2\xa3p\x8c\x8cL\xb9\x16\x12x*[Zyf%\
-\x17\xef\xc1\x7fG\x8a/\xaa*6\x8e\xfd\x86\xc8\xa5\xc2\
-)\xb0\xe3\xc8\xf3!0\x03\x86\xc6\xf7\xad\x88h)@\
-U%\x89\xe3[\x15\xe9\x03K`\x82\xc8\xab\x13\xbd\xea\
-\x01\xd0\x05\xda\x88\xc4}\xcf\x0b\xf3\x88f~\xc6\xc6\xb1\
-/\x99\xfc\xb1\xd1l\xf6\x8c1s'\xf2-I\x92t\
-\xd2\xcdf\x8cj`\xad}\x00F\x00\x8d\xfc@C\xe4\
-\x12X\xa6p\xeeZ\x0e`\x8c\x99o\xd2\xb4\x07\xacD\
-\xf5\xea\xcb\x9b?(\x9c\x00\x93 \x08\x9e]\xcbs\xc2\
-0|\x02&d\xff\xd7\xf7\x00`\x17x\xafJ^\xe0\
-\x0d\xd8\xfb)\xe0W\xa8\x03\xea\x80:\xa0\x0e\xa8\x03\xea\
-\x80:\xa0\x0e(\x06,(L*\x15\xb2\xbfu\x95\x02\
-f@7I\x92NUfk\xed1\xd9x>-\x05\
-\x08\xdc\x00\xedt\xbd\xbe\x8f\xa2\xe8\xa8\x12y\x9a\x8e\x81\
-\x96\xc0\xb0\xe0\xcdPU\x19Y\x1b\xa1\x1a\x00+\xb2\xc5\
-\xe4\xc5\x89]\xf5\x90\xec\xe6-\x85\xc8\xf3\xfd\x8b|1\
-)\xaff\xd6\x9a\xed\xdc~F6)\xbb`\x01LQ\
-\xbd\xf6\x06\x83;G\xdf\xfc#|\x02\x90\xc4u0\xa3\
-8\xd1\xd4\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x00\x96\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
-\x00\x00\x00\x02bKGD\x00\xd3\xb5W\xa0\x5c\x00\x00\
-\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\
-\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\xdc\x0b\x07\x0c\
-\x0d\x1bu\xfe1\x99\x00\x00\x00'IDAT\x08\xd7\
-e\x8c\xb1\x0d\x00\x00\x08\x83\xe0\xff\xa3up\xb1\xca\xd4\
-\x90Px\x08U!\x14\xb6Tp\xe6H\x8d\x87\xcc\x0f\
-\x0d\xe0\xf0\x08\x024\xe2+\xa7\x00\x00\x00\x00IEN\
-D\xaeB`\x82\
 \x00\x00\x00\xa6\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x02bKGD\x00\x9cS4\xfc]\x00\x00\x00\x09p\
-HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x0b\x1b\x0e\x16\
-M[o\x00\x00\x00*IDAT\x08\xd7c`\xc0\
-\x00\x8c\x0c\x0cs> \x0b\xa4\x08020 \x0b\xa6\
-\x08000B\x98\x10\xc1\x14\x01\x14\x13P\xb5\xa3\x01\
-\x00\xc6\xb9\x07\x90]f\x1f\x83\x00\x00\x00\x00IEN\
-D\xaeB`\x82\
-\x00\x00\x00\xa0\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
 \x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
 \x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
 \x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
 HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x14\x1c\x1f$\
-\xc6\x09\x17\x00\x00\x00$IDAT\x08\xd7c`@\
-\x05\xff\xcf\xc3XL\xc8\x5c&dY&d\xc5p\x0e\
-\xa3!\x9c\xc3h\x88a\x1a\x0a\x00\x00m\x84\x09u7\
-\x9e\xd9#\x00\x00\x00\x00IEND\xaeB`\x82\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x14\x1d\x00\xb0\
+\xd55\xa3\x00\x00\x00*IDAT\x08\xd7c`\xc0\
+\x06\xfe\x9fg``B0\xa1\x1c\x08\x93\x81\x81\x09\xc1\
+d``b``4D\xe2 s\x19\x90\x8d@\x02\
+\x00d@\x09u\x86\xb3\xad\x9c\x00\x00\x00\x00IEN\
+D\xaeB`\x82\
+\x00\x00\x00\xa0\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x02bKGD\x00\x9cS4\xfc]\x00\x00\x00\x09p\
+HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x0b\x1b)\xb3\
+G\xee\x04\x00\x00\x00$IDAT\x08\xd7c`@\
+\x05s>\xc0XL\xc8\x5c&dY&d\xc5pN\
+\x8a\x00\x9c\x93\x22\x80a\x1a\x0a\x00\x00)\x95\x08\xaf\x88\
+\xac\xba4\x00\x00\x00\x00IEND\xaeB`\x82\
 \x00\x00\x02V\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
@@ -958,51 +1083,77 @@ o\xbe \x91=J#y]\x91\xa9M\xb6n\x89M\
 \xa3)\xa4\x8c\xa1\x9e\xcdy\x08a>\x9c\x5c\xb1\xf7x\
 \x02Q\xa0Z\x91w\xd2\x02#\x00\x00\x00\x00IEN\
 D\xaeB`\x82\
-\x00\x00\x01\xd0\
+\x00\x00\x00\xa5\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x02bKGD\x00\x9cS4\xfc]\x00\x00\x00\x09p\
+HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
+\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x0b\x02\x04m\
+\x98\x1bi\x00\x00\x00)IDAT\x08\xd7c`\xc0\
+\x00\x8c\x0c\x0c\xff\xcf\xa3\x08\x18220 \x0b2\x1a\
+200B\x98\x10AFC\x14\x13P\xb5\xa3\x01\x00\
+\xd6\x10\x07\xd2/H\xdfJ\x00\x00\x00\x00IEND\
+\xaeB`\x82\
+\x00\x00\x00\xb6\
+\x89\
+PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
+\x00\x00\x18\x00\x00\x00\x11\x08\x06\x00\x00\x00\xc7xl0\
+\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
+\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\xa7\x93\x00\
+\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\
+\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\xdc\x08\x17\
+\x0b,\x0d\x1fC\xaa\xe1\x00\x00\x006IDAT8\
+\xcbc` \x01,Z\xb4\xe8\xff\xa2E\x8b\xfe\x93\xa2\
+\x87\x89\x81\xc6`\xd4\x82\x11`\x01#\xa9\xc9t\xd0\xf9\
+\x80\x85\x1cMqqq\x8c\xa3\xa9h\xd4\x82ad\x01\
+\x001\xb5\x09\xec\x1fK\xb4\x15\x00\x00\x00\x00IEN\
+D\xaeB`\x82\
+\x00\x00\x02\x86\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
 \x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
-\x00\x00\x00\x04sBIT\x08\x08\x08\x08|\x08d\x88\
-\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\x0d\xd7\
-\x01B(\x9bx\x00\x00\x00\x19tEXtSof\
-tware\x00www.inksca\
-pe.org\x9b\xee<\x1a\x00\x00\x01MID\
-ATX\x85\xed\xd7MN\xc2@\x18\xc6\xf1\xff[\x08\
-\x08\xea\x01\xd0+\x88\x09[\xcf!\xbb\xca\xd8\x1aI\xe0\
->bBBiI\x97x\x0c\xd7\x84p\x07q\xef\x07\
-\x02\x81\xd7\x85\xd4\x10\xc0\xdd\x10\x13\xed\xb3\x9b\xc9\x9by\
-~\x93n:\xf0\xdf#\x9bk\xcf\x98k\xa0\x01\x94\x81\
-\x03K=\x1f\xc0HDZA\x18F\x80\xee\x02\x88g\
-L\x08\xd4\x80)0\x00^-\x01\x8e\x80\x0a\x90\x07\xba\
-\xdd(\xbaI\x10\xdf\x00\xcf\x18\x0f\x08\x04\x1e\xb3\x8bE\
-\xb5\x1d\xc7cK\xe5\x00\xd4]\xb74w\x9c>\x22\x17\
-\x02&\x88\xa2\x1e\x80\xb36\xd3\x00\xa6K\x91K\xdb\xe5\
-\x00\xed8\x1eK6[\x05f*\xd2L\xf6\xd7\x01g\
-\xc0 \x0c\xc3g\xdb\xe5I\x82 xBd\x80jy\
-\x17\xa0\x80\xea\xfb\xbe\xca\xbf\xb3\x5c\xbe\x01\xc5]\x80_\
-I\x0aH\x01) \x05\xa4\x80\x14\x90\x02R\xc0:`\
-\x82H\xf1\xc7Ik\x8d\xce!0\xd9\x02(\x8c\x80J\
-\xdduK\xfb\xea\xae\xd5j\xa7\xa8V\x80\xe1\x16\xc0\x11\
-\xb9\x07\xf2\xf3L\xe6\xc1\xf7\xfd\x93}\x94gD\xfa@\
-NEZ\xc9\xfe\xe6\xc3\xa4\x03x\xc0l\xf5\xf7\xfab\
-\xa5]\xe4xu\xf3\x9cB'\x8c\xa2[6\x1f&\xc9\
-\xa8o\xcc\x95\x8a4Q=\x07\x0aV\x00_\xdf|\x88\
-\xea]\xb7\xd7\x8b-\x9d\xf9G\xf2\x09>pdA\x95\
-\x87\xdfi\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x00\xa6\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
-HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x14\x1f \xb9\
-\x8dw\xe9\x00\x00\x00*IDAT\x08\xd7c`\xc0\
-\x06\xe6|```B0\xa1\x1c\x08\x93\x81\x81\x09\xc1\
-d``b`H\x11@\xe2 s\x19\x90\x8d@\x02\
-\x00#\xed\x08\xafd\x9f\x0f\x15\x00\x00\x00\x00IEN\
+\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
+\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
+\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
+\xe1\x05\x0d\x0b\x097Nl\xc4\x8d\x00\x00\x02\x13ID\
+ATX\xc3\xed\x96\xbfkSQ\x14\xc7\xbf\xe7>\x10\
+\xe2}\x0dq(\x82\xa9C\xa5.V\xb1\x06\x07\xd7:\
+I\xad6\x85\xae\xfe\x156\xd1\xba\x0b\xf2\xaa\xa3\x93\xa3\
+\xbb\xbc67m\xd5\xc1\x8a\x9b\xf8\xabX\x11\x09\xd1\xc1\
+\x94T\x84\x1a\xee3\x22-\xef\x1e\x97+tI\x9a\xf7\
+\xc3\xc9w\xd6{\x0e\xe7s~\xdds\x80L2\xf9\xdf\
+\x85\xa2(\x1f~\xd88DG\x8e\xce\x02(\x03(\x01\
+(\xda\xa7\x16\xd8\xbc!\xe1\xf8fg\xdb\xffu\xed\xe4\
+n\xea\x00n=\x98cf\x0f\xc0(\x80\xf7`\xb3N\
+\xc2i\xd9\xe7\x223O\x028CDMA\xa8\xea\xa9\
+\xa1G\xa9\xa4\xe8\xc2\x8b\xae\xe3\xd6\x83{Ri\x96J\
+\xaf\xcaZ\xe7l\x1f\xc8\x09Y\xeb\xacY]/\xf7\xe0\
+\x9dH\x0c`\x9d\x87\xf9\x95`~P\x1b\xa9tE*\
+\x1dJ\xa5\xbd\xa4\xce\xe7\xa4\xd2\xec\xd6\x83\xeb1l\xab\
+\xd6\xb6\x1c\xab\x07l\xc3}$\xa2O?/\x0fM\xc5\
+\x0c\xe0\x093\x8f\xf2\x8fo\xe3\xbd\x1a\xb3g\x8dl\xb7\
+\x9f`\x13.\xc4\xcd 3\xdf\x000F\x85\xe1\x99^\
+:\xfd\x9a\xa4\x0c`\xa3{\xa5\xb0\x11\x17\xa0;\x9d\x7f\
+\x0b6\x9b\x00b\x01\x94\x88\xe8y\x0a\x83\xf4\x0c$\xce\
+\xc7\x018\xc6\xcc\xad\x14\x00\xb6\xf6}X\x91\x00@D\
+\x94\xd4;\x09\x87\x00\x988\x00m6\xe1HR\x00f\
+.\x02hG\x07`\xf3\x0a\xc0d\x0a%\xb8\x08\xe0e\
+d\x00\x12\x8e\x0f\x12\xa7\xddz0\x91\xe0#+\x018\
+ED\xcb\x91\x01\xcc\xce\xb6ODM6\xe1\x9d8\xce\
+\xef\x7f\xd9%\xbb\xbc\x1a9\x87\x96bE \x95\x9e\xb5\
+\x8b\xa5\x12\xd9\xb6\xd6Y\x90J\x1b\xa9\xf4\xd5D\x05\x94\
+J{v\xb1T\x06\x8d\xdc:\x0f\xf3+\xc1\x81\xd9;\
+p]\x9a\xf6\xe7\x9b`s\x17\x80'\x95~,\x95>\
+\xd7\xaf\xe6\xd5\x0f\xbf\x9f\x82\xc4mG\xd0\xe2\xdeV\xf3\
+V\x9a\x07I\x99\x99\x17\x01\x8c\x81\xcd&H\xac\x13\xd1\
+W;j\xc7\xed\xc4\x8c\x03h\x00\x98\xefN\xe7\x97\xff\
+\xcdIV\x18\x9e\x01\x89\xbf'\xd9\xc8\xbe\x93\xec5\x09\
+\xc7\xcf9\xb4\xf4\xfd\x92\xbb\x97]\xbb\x99d2\xa8\xfc\
+\x01\xd2\xac\xe6\x84\xdaGha\x00\x00\x00\x00IEN\
 D\xaeB`\x82\
-\x00\x00\x00\xe0\
+\x00\x00\x00\xef\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
 \x00\x00Q\x00\x00\x00:\x08\x06\x00\x00\x00\xc8\xbc\xb5\xaf\
@@ -1010,39 +1161,15 @@ PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
 \x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\xa7\x93\x00\
 \x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\
 \x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\xdc\x08\x17\
-\x0b)\x1c\x08\x84~V\x00\x00\x00`IDATx\
-\xda\xed\xd9\xb1\x0d\x00 \x08\x00AqP\x86cQ\xed\
-\x8d\x85%\x89w\xa5\x15\xf9HE\x8c\xa6\xaaj\x9do\
-\x99\x19\x1dg\x9d\x03\x11E\x14\x11\x11E\x14QDD\
-\x14QD\x11\x11QD\x11EDD\x11E\x14\x11\x11\
-E\x14\xf1[\xd1u\xb0\xdb\xdd\xd9O\xb4\xce\x88(\x22\
-\x00\x00\x00\x00\x00\x00\x00\x00\x00\xcf6\xcei\x07\x1e\xe9\
-9U@\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x00\x93\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
-\x00\x00\x00\x02bKGD\x00\xd3\xb5W\xa0\x5c\x00\x00\
-\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\
-\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\xdc\x0b\x07\x0c\
-\x0c+J<0t\x00\x00\x00$IDAT\x08\xd7\
-c`@\x05\xff\xff\xc3XL\xc8\x5c&dY&d\
-\xc5p\x0e##\x9c\xc3\xc8\x88a\x1a\x0a\x00\x00\x9e\x14\
-\x0a\x05+\xca\xe5u\x00\x00\x00\x00IEND\xaeB\
-`\x82\
-\x00\x00\x00\xa6\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x06\x00\x00\x00\x09\x08\x04\x00\x00\x00\xbb\x93\x95\x16\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
-HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x14\x1d\x00\xb0\
-\xd55\xa3\x00\x00\x00*IDAT\x08\xd7c`\xc0\
-\x06\xfe\x9fg``B0\xa1\x1c\x08\x93\x81\x81\x09\xc1\
-d``b``4D\xe2 s\x19\x90\x8d@\x02\
-\x00d@\x09u\x86\xb3\xad\x9c\x00\x00\x00\x00IEN\
-D\xaeB`\x82\
+\x0b*2\xff\x7f Z\x00\x00\x00oIDATx\
+\xda\xed\xd0\xb1\x0d\x000\x08\x03A\xc8\xa0\x0c\xc7\xa2I\
+\xcf\x04(\xba/]Y\x97\xb1\xb4\xee\xbes\xab\xaa\xdc\
+\xf8\xf5\x84 B\x84(\x88\x10!B\x14D\x88\x10!\
+\x0a\x22D\x88\x10\x05\x11\x22D\x88\x82\x08\x11\x22DA\
+\x84\x08Q\x10!B\x84(\x88\x10!B\x14D\x88\x10\
+!\x0a\x22D\x88\x10\x05\x11\x22D\x88\x82\x08\x11\x22D\
+A\x84\x08Q\x10!B\xfc\xaa\x07\x12U\x04tV\x9e\
+\x9eT\x00\x00\x00\x00IEND\xaeB`\x82\
 \x00\x00\x02\xd8\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
@@ -1091,21 +1218,24 @@ u\xfc\xa0[\xfcc\xf7\xf9\xbas\x93M\xb3U\xa4\xa1\
 \x90*\x06\x9f$\x95\xea\x8d\xc6F\xa77\xef\xa9\xa7\x9e\
 \xfe\xd5\x1f>\xd4\xefD\x0d\xbc\xffe\x00\x00\x00\x00I\
 END\xaeB`\x82\
-\x00\x00\x00\xc3\
+\x00\x00\x00\xf9\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00@\x00\x00\x00@\x08\x06\x00\x00\x00\xaaiq\xde\
+\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
 \x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
-\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\
-\x0b\x13\x01\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\
-\xdc\x0b\x07\x09.7\xffD\xe8\xf0\x00\x00\x00\x1diT\
-XtComment\x00\x00\x00\x00\x00Cr\
-eated with GIMPd\
-.e\x07\x00\x00\x00'IDATx\xda\xed\xc1\x01\
-\x0d\x00\x00\x00\xc2\xa0\xf7Om\x0e7\xa0\x00\x00\x00\x00\
-\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80w\x03@@\
-\x00\x01\xafz\x0e\xe8\x00\x00\x00\x00IEND\xaeB\
-`\x82\
+\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
+\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
+\xe1\x05\x0d\x0a:\x11i\xc8Nw\x00\x00\x00\x86ID\
+ATX\xc3c`\x18\xe9\x80\x11\x85\xf7\xff?\xa3\xed\
+\xfaW\xffhi\xe1\xe1@1&\x06F\xc6\xff\x98\x0e\
+\xa0\x83\xe5\xd8\x1c\x01w\x80\xed\xba\x97\xffQ\x14\x05\x89\
+3R\xd3R\x5c\xe63au!\x95-\xc7g&\x13\
+=,\xc7g6\xd3@\xe7\x82Q\x07\x8c:\x80\x85\xd8\
+|K\xb7l8\x9a\x06F\x1d0\xea\x80AS\x0e\xd0\
+\xb2V\x1c\x8d\x82Q\x07\x0cn\x07P\xbb\x16$d6\
+\x13=\xaab|f\x0e\x9e\x8e\x09\xdd\xbaft*\xe0\
+\x86\x0e\x00\x00\x08^8e9\x12\x10\xc2\x00\x00\x00\x00\
+IEND\xaeB`\x82\
 \x00\x00\x02\xf8\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
@@ -1156,164 +1286,34 @@ q\x1e7\x0a7\xfd\x1aFc\xb1\xf1\xcf[[\xaa\xaa\
 D\xb5\xd8\x11\x0a-\xcc\xcc\xcc\xfc\xf4\xb3o\x9b6\xff\
 7\xbf\x01J7\xdd\xdd\x8c\xf1\x82j\x00\x00\x00\x00I\
 END\xaeB`\x82\
-\x00\x00\x00\x9f\
+\x00\x00\x00\x96\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
 \x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
-HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x08\x14\x1f\xf9\
-#\xd9\x0b\x00\x00\x00#IDAT\x08\xd7c`\xc0\
-\x0d\xe6|\x80\xb1\x18\x91\x05R\x04\xe0B\x08\x15)\x02\
-\x0c\x0c\x8c\xc8\x02\x08\x95h\x00\x00\xac\xac\x07\x90Ne\
-4\xac\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x02\x86\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
-\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
-\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
-\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
-\xe1\x05\x0d\x0b\x097Nl\xc4\x8d\x00\x00\x02\x13ID\
-ATX\xc3\xed\x96\xbfkSQ\x14\xc7\xbf\xe7>\x10\
-\xe2}\x0dq(\x82\xa9C\xa5.V\xb1\x06\x07\xd7:\
-I\xad6\x85\xae\xfe\x156\xd1\xba\x0b\xf2\xaa\xa3\x93\xa3\
-\xbb\xbc67m\xd5\xc1\x8a\x9b\xf8\xabX\x11\x09\xd1\xc1\
-\x94T\x84\x1a\xee3\x22-\xef\x1e\x97+tI\x9a\xf7\
-\xc3\xc9w\xd6{\x0e\xe7s~\xdds\x80L2\xf9\xdf\
-\x85\xa2(\x1f~\xd88DG\x8e\xce\x02(\x03(\x01\
-(\xda\xa7\x16\xd8\xbc!\xe1\xf8fg\xdb\xffu\xed\xe4\
-n\xea\x00n=\x98cf\x0f\xc0(\x80\xf7`\xb3N\
-\xc2i\xd9\xe7\x223O\x028CDMA\xa8\xea\xa9\
-\xa1G\xa9\xa4\xe8\xc2\x8b\xae\xe3\xd6\x83{Ri\x96J\
-\xaf\xcaZ\xe7l\x1f\xc8\x09Y\xeb\xacY]/\xf7\xe0\
-\x9dH\x0c`\x9d\x87\xf9\x95`~P\x1b\xa9tE*\
-\x1dJ\xa5\xbd\xa4\xce\xe7\xa4\xd2\xec\xd6\x83\xeb1l\xab\
-\xd6\xb6\x1c\xab\x07l\xc3}$\xa2O?/\x0fM\xc5\
-\x0c\xe0\x093\x8f\xf2\x8fo\xe3\xbd\x1a\xb3g\x8dl\xb7\
-\x9f`\x13.\xc4\xcd 3\xdf\x000F\x85\xe1\x99^\
-:\xfd\x9a\xa4\x0c`\xa3{\xa5\xb0\x11\x17\xa0;\x9d\x7f\
-\x0b6\x9b\x00b\x01\x94\x88\xe8y\x0a\x83\xf4\x0c$\xce\
-\xc7\x018\xc6\xcc\xad\x14\x00\xb6\xf6}X\x91\x00@D\
-\x94\xd4;\x09\x87\x00\x988\x00m6\xe1HR\x00f\
-.\x02hG\x07`\xf3\x0a\xc0d\x0a%\xb8\x08\xe0e\
-d\x00\x12\x8e\x0f\x12\xa7\xddz0\x91\xe0#+\x018\
-ED\xcb\x91\x01\xcc\xce\xb6ODM6\xe1\x9d8\xce\
-\xef\x7f\xd9%\xbb\xbc\x1a9\x87\x96bE \x95\x9e\xb5\
-\x8b\xa5\x12\xd9\xb6\xd6Y\x90J\x1b\xa9\xf4\xd5D\x05\x94\
-J{v\xb1T\x06\x8d\xdc:\x0f\xf3+\xc1\x81\xd9;\
-p]\x9a\xf6\xe7\x9b`s\x17\x80'\x95~,\x95>\
-\xd7\xaf\xe6\xd5\x0f\xbf\x9f\x82\xc4mG\xd0\xe2\xdeV\xf3\
-V\x9a\x07I\x99\x99\x17\x01\x8c\x81\xcd&H\xac\x13\xd1\
-W;j\xc7\xed\xc4\x8c\x03h\x00\x98\xefN\xe7\x97\xff\
-\xcdIV\x18\x9e\x01\x89\xbf'\xd9\xc8\xbe\x93\xec5\x09\
-\xc7\xcf9\xb4\xf4\xfd\x92\xbb\x97]\xbb\x99d2\xa8\xfc\
-\x01\xd2\xac\xe6\x84\xdaGha\x00\x00\x00\x00IEN\
+\x00\x00\x00\x02bKGD\x00\xd3\xb5W\xa0\x5c\x00\x00\
+\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\
+\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\xdc\x0b\x07\x0c\
+\x0d\x1bu\xfe1\x99\x00\x00\x00'IDAT\x08\xd7\
+e\x8c\xb1\x0d\x00\x00\x08\x83\xe0\xff\xa3up\xb1\xca\xd4\
+\x90Px\x08U!\x14\xb6Tp\xe6H\x8d\x87\xcc\x0f\
+\x0d\xe0\xf0\x08\x024\xe2+\xa7\x00\x00\x00\x00IEN\
 D\xaeB`\x82\
-\x00\x00\x00\xdc\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x10\x00\x00\x00@\x08\x06\x00\x00\x00\x13}\xf7\x96\
-\x00\x00\x00\x06bKGD\x00\xb3\x00y\x00y\xdc\xdd\
-S\xfc\x00\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\
-\x0b\x13\x01\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\
-\xdf\x04\x19\x10-\x19\xafJ\xeb\xd0\x00\x00\x00\x1diT\
-XtComment\x00\x00\x00\x00\x00Cr\
-eated with GIMPd\
-.e\x07\x00\x00\x00@IDATX\xc3\xed\xce1\
-\x0a\x00 \x0c\x03@\xf5\xa3}[_\xaaS\xc1\xc9\xc5\
-E\xe42\x05\x1a\x8e\xb6v\x99^%\x22f\xf5\xcc\xec\
-\xfb\xe8t\x1b\xb7\x1f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\
-\x00\x00\xf06\xf0A\x16\x0bB\x08x\x15WD\xa2\x00\
-\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x02J\
+\x00\x00\x00\xc3\
 \x89\
 PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
 \x00\x00@\x00\x00\x00@\x08\x06\x00\x00\x00\xaaiq\xde\
 \x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
 \xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0b\x13\x00\x00\
 \x0b\x13\x01\x00\x9a\x9c\x18\x00\x00\x00\x07tIME\x07\
-\xdf\x04\x19\x10\x14\x1a8\xc77\xd0\x00\x00\x00\x1diT\
+\xdc\x0b\x07\x09.7\xffD\xe8\xf0\x00\x00\x00\x1diT\
 XtComment\x00\x00\x00\x00\x00Cr\
 eated with GIMPd\
-.e\x07\x00\x00\x01\xaeIDATx\xda\xed\x9bI\
-\x92\xc3 \x0cE#]\xdc\xf6\xc9\xd3\xbb\xaeT\x06&\
-\xe9\x7f\x09\x8c\xd6]2\xef!h \xf0x\xec\xd8\xb1\
-\xe3\xce!\xcc\x8f\x9d\xe7\xf9l\xfc;YB@+p\
-\xa4\x10\xc9\x0a\xcd\x92!\xb3\x80\xa3D\xc8\x8c\xf0\x9e\x12\
-dFpO\x112;\xbcU\x82\xcc\x0en\x15!+\
-\xc1\x8fH\x90\xd5\xe0{%\xe8^\x0a/\xd8\xfb=U\
- V\xf8\xe38\xfes\x5c\xd7E\x11\xf5\xfa\xcd\xdaw\
-k\x12\xd4\xbba\xef\x8dC\xc3[C\x11\xa5\x8f\x920\
-\x92\xb7\xc6\xa0\xa8q\xef-\xc1\x92\xaf\xc4b\x1e\x02\xa5\
-\xf1\xe7%\xa1\x94\xc7:\xef\x88W\xef\xa3\x1a\xe9\x99\xf7\
-\xdb\x84\xe86\x09\x22*\x01\xd9\xf3\x90\xff\x02\x9e\x12\x18\
-\xf0_\x87\x80\xc7\xa2\xc7\xdax$\xfc\xfb0\x80,\x85\
--\x95\xc0\xeay\xf8^`D\x02\x1b\x1e\xbe\x19\xea\x91\
-\x10\x01\xff1\x07\xa06=586\xfc\xeb<@\xd9\
-\x0e\x8f\xce\x09\x8c\xcd\x15\xed<\xa0\x17\x86\xb5\xb3\xa4\x1e\
-\x88\xb4B\xb1\xe0\xe9\x02Z\xe0\x98\xf0!\x02,\xeb\x80\
-\xe9\x05\xb4\xc21%h6x\xb6\x04\x8d\x86g\x9c'\
-\x84\x0ah\x81\x8f\x94\x00\xd9\x0d\x8e\xf6<cQD\xd9\
-\x0d\x8e\xc2DT\x82f\x1a\xf3\x11\x124\x13|\x84\x04\
-\xb7CQ\xc4\x18\xf6\xce\x07=\x14EL`\x8cJ\xd0\
-\xac\xf0,\x09R(\x97g4\xbc\xe7w~\xfdH\x1a\
-r&\x98!_U\x80\xe5\xe6\x15\xaa\xb1\xa3yK,\
-\x9a\xbd\xe7\xd1\xf9\xcd\x17$\xb2G\xad\x92\xf7\x15\x99\x8e\
-d\xfb\x96\xd8\x8a\xb1/J\x0e$\xbf\xefU\xd9\xcc\x22\
-h\x97\xa53J\x08\xb9.\x9fE\x82\xf5\xd1\xc4~2\
-\x03h\xd8=\x1fM!eL\xf5l\xceC\x08\xf3\xe1\
-\xe4\x8e\xbb\xc7\x1f\xfe\x88Z\xe2\xcd\xef\x1cI\x00\x00\x00\
-\x00IEND\xaeB`\x82\
-\x00\x00\x00\xf0\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
-\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
-\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
-\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
-\xe1\x05\x0d\x0a:+\xaf\xc4\x97\xc5\x00\x00\x00}ID\
-ATX\xc3c`\x18\xe9\x80\x11\x85\xf7\xff?\xa3\xed\
-\xfaW\xffhi\xe1\xe1@1&\x06F\xc6\xff\x98\x0e\
-\xa0\x83\xe5\xd8\x1c\x01w\x80\xed\xba\x97\xffQ\x14\x05\x89\
-3R\xd3R\x5c\xe63au!\x95-\xc7g&\x13\
-=,\xc7g6\xd3@\xe7\x82Q\x07\x8c:`\xd4\x01\
-\xa3\x0e\x18u\xc0\xa8\x03F\x1d0\xea\x80Q\x070\x11\
-j\xbd\xd2\xb2e\x8c3\x04h\xe1\x08\x5cf\x0e\x9e\x8e\
-\x09\xdd\xbaf4l\xf6\x0fM\x00\x00_934+\
- \x00\xc5\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\x00\xf9\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00 \x00\x00\x00 \x08\x06\x00\x00\x00szz\xf4\
-\x00\x00\x00\x06bKGD\x00\xff\x00\xff\x00\xff\xa0\xbd\
-\xa7\x93\x00\x00\x00\x09pHYs\x00\x00\x0d\xd7\x00\x00\
-\x0d\xd7\x01B(\x9bx\x00\x00\x00\x07tIME\x07\
-\xe1\x05\x0d\x0a:\x11i\xc8Nw\x00\x00\x00\x86ID\
-ATX\xc3c`\x18\xe9\x80\x11\x85\xf7\xff?\xa3\xed\
-\xfaW\xffhi\xe1\xe1@1&\x06F\xc6\xff\x98\x0e\
-\xa0\x83\xe5\xd8\x1c\x01w\x80\xed\xba\x97\xffQ\x14\x05\x89\
-3R\xd3R\x5c\xe63au!\x95-\xc7g&\x13\
-=,\xc7g6\xd3@\xe7\x82Q\x07\x8c:\x80\x85\xd8\
-|K\xb7l8\x9a\x06F\x1d0\xea\x80AS\x0e\xd0\
-\xb2V\x1c\x8d\x82Q\x07\x0cn\x07P\xbb\x16$d6\
-\x13=\xaab|f\x0e\x9e\x8e\x09\xdd\xbaft*\xe0\
-\x86\x0e\x00\x00\x08^8e9\x12\x10\xc2\x00\x00\x00\x00\
-IEND\xaeB`\x82\
-\x00\x00\x00\x9e\
-\x89\
-PNG\x0d\x0a\x1a\x0a\x00\x00\x00\x0dIHDR\x00\
-\x00\x00\x09\x00\x00\x00\x06\x08\x04\x00\x00\x00\xbb\xce|N\
-\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\
-\x02bKGD\x00\xff\x87\x8f\xcc\xbf\x00\x00\x00\x09p\
-HYs\x00\x00\x0b\x13\x00\x00\x0b\x13\x01\x00\x9a\x9c\x18\
-\x00\x00\x00\x07tIME\x07\xdc\x08\x17\x08\x15\x0f\xfd\
-\x8f\xf8.\x00\x00\x00\x22IDAT\x08\xd7c`\xc0\
-\x0d\xfe\x9f\x87\xb1\x18\x91\x05\x18\x0d\xe1BH*\x0c\x19\
-\x18\x18\x91\x05\x10*\xd1\x00\x00\xca\xb5\x07\xd2v\xbb\xb2\
-\xc5\x00\x00\x00\x00IEND\xaeB`\x82\
-\x00\x00\xa6\xc3\
+.e\x07\x00\x00\x00'IDATx\xda\xed\xc1\x01\
+\x0d\x00\x00\x00\xc2\xa0\xf7Om\x0e7\xa0\x00\x00\x00\x00\
+\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80w\x03@@\
+\x00\x01\xafz\x0e\xe8\x00\x00\x00\x00IEND\xaeB\
+`\x82\
+\x00\x00\xa6\xf2\
 /\
 * QDarkStyleShee\
 t --------------\
@@ -1367,1586 +1367,1598 @@ UND -----------\x0a\
 \x0a        for_lig\
 ht  #EFF0F1 #F0F\
 0F0 (texts/label\
-s)\x0a        for_d\
-ark   #505F69 #7\
-87878 (disabled \
-texts)\x0a\x0a    BACK\
-GROUND ---------\
---\x0a\x0a        bac_\
-light  #4D545B #\
-505F69 (unpresse\
-d)\x0a        bac_n\
-ormal #31363B #3\
-2414B (border, d\
-isabled, pressed\
-, checked, toolb\
-ars, menus)\x0a    \
-    bac_dark   #\
-232629 #19232D (\
-background)\x0a\x0aIf \
-a stranger confi\
-guration is requ\
-ired because of \
-a bugfix or anyt\
-hing\x0aelse, keep \
-the comment on t\
-hat line to nobo\
-dys changed it, \
-including the\x0ais\
-sue number.\x0a----\
+s)\x0a        for_n\
+ormal         #A\
+AAAAA (not used \
+yet)\x0a        for\
+_dark   #505F69 \
+#787878 (disable\
+d texts)\x0a\x0a    BA\
+CKGROUND -------\
+----\x0a\x0a        ba\
+c_light  #4D545B\
+ #505F69 (unpres\
+sed)\x0a        bac\
+_normal #31363B \
+#32414B (border,\
+ disabled, press\
+ed, checked, too\
+lbars, menus)\x0a  \
+      bac_dark  \
+ #232629 #19232D\
+ (background)\x0a\x0aI\
+f a stranger con\
+figuration is re\
+quired because o\
+f a bugfix or an\
+ything\x0aelse, kee\
+p the comment on\
+ that line to no\
+bodys changed it\
+, including the\x0a\
+issue number.\x0a--\
 ----------------\
 ----------------\
 ----------------\
 ----------------\
-------- */\x0a\x0a\x0a\x0a/*\
- QWidget -------\
-----------------\
-----------------\
-----------------\
---------- */\x0a\x0aQW\
-idget {\x0a    back\
-ground-color: #1\
-9232D;\x0a    borde\
-r: 0px solid #32\
-414B;\x0a    paddin\
-g: 0px;\x0a    colo\
-r: #F0F0F0;\x0a    \
-selection-backgr\
-ound-color: #146\
-4A0;\x0a    selecti\
-on-color: #F0F0F\
-0;\x0a}\x0a\x0aQWidget:di\
-sabled {\x0a    bac\
-kground-color: #\
-19232D;\x0a    colo\
-r: #787878;\x0a    \
-selection-backgr\
-ound-color: #145\
-06E;\x0a    selecti\
-on-color: #78787\
-8;\x0a}\x0a\x0aQWidget:it\
-em:selected {\x0a  \
-  background-col\
-or: #1464A0;\x0a}\x0a\x0a\
-QWidget:item:hov\
-er {\x0a    backgro\
-und-color: #148C\
-D2;\x0a    color: #\
-32414B;\x0a}\x0a\x0a/* QM\
-ainWindow ------\
-----------------\
-----------------\
-----------------\
------- */\x0a/* Thi\
-s adjusts the sp\
-litter in the do\
-ck widget, not q\
-splitter        \
-      */\x0a\x0a\x0aQMain\
-Window::separato\
-r {\x0a    backgrou\
-nd-color: #32414\
-B;\x0a    border: 0\
- solid #19232D;\x0a\
-    spacing: 0;\x0a\
-    padding: 2px\
-;\x0a}\x0a\x0aQMainWindow\
-::separator:hove\
-r {\x0a    backgrou\
-nd-color: #505F6\
-9;\x0a    border: 0\
-px solid #148CD2\
-;\x0a}\x0a\x0aQMainWindow\
-::separator:hori\
-zontal {\x0a    wid\
-th: 5px;\x0a    mar\
-gin-top: 2px;\x0a  \
-  margin-bottom:\
- 2px;\x0a    image:\
- url(:/qss_icons\
-/rc/Vsepartoolba\
-r.png);\x0a}\x0a\x0aQMain\
-Window::separato\
-r:vertical {\x0a   \
- height: 5px;\x0a  \
-  margin-left: 2\
-px;\x0a    margin-r\
-ight: 2px;\x0a    i\
-mage: url(:/qss_\
-icons/rc/Hsepart\
-oolbar.png);\x0a}\x0a\x0a\
-/* QToolTip ----\
+--------- */\x0a\x0a\x0a\x0a\
+/* QWidget -----\
 ----------------\
 ----------------\
 ----------------\
 ----------- */\x0a\x0a\
-QToolTip {\x0a    b\
-ackground-color:\
- #148CD2;\x0a    bo\
-rder: 1px solid \
-#19232D;\x0a    col\
-or: #19232D;\x0a   \
- padding: 0;   /\
-*remove padding,\
- for fix combo b\
-ox tooltip*/\x0a   \
- opacity: 230; /\
-*reducing transp\
-arency to read b\
-etter*/\x0a}\x0a\x0a/* QS\
-tatusBar -------\
-----------------\
-----------------\
-----------------\
------- */\x0a\x0aQStat\
-usBar {\x0a    bord\
-er: 1px solid #3\
-2414B;\x0a    backg\
-round: #32414B; \
-/*fixes spyder #\
-9120,#9121*/\x0a}\x0a\x0a\
-QStatusBar QTool\
-Tip {\x0a    backgr\
-ound-color: #148\
-CD2;\x0a    border:\
- 1px solid #1923\
-2D;\x0a    color: #\
-19232D;\x0a    padd\
-ing: 0;   /*remo\
-ve padding, for \
-fix combo box to\
-oltip*/\x0a    opac\
-ity: 230; /*redu\
-cing transparenc\
-y to read better\
-*/\x0a}\x0a\x0aQStatusBar\
- QLabel {\x0a    ba\
+QWidget {\x0a    ba\
 ckground-color: \
-transparent; /*f\
-ixes spyder #912\
-0,#9121*/\x0a}\x0a\x0a/* \
-QCheckBox ------\
+#19232D;\x0a    bor\
+der: 0px solid #\
+32414B;\x0a    padd\
+ing: 0px;\x0a    co\
+lor: #F0F0F0;\x0a  \
+  selection-back\
+ground-color: #1\
+464A0;\x0a    selec\
+tion-color: #F0F\
+0F0;\x0a}\x0a\x0aQWidget:\
+disabled {\x0a    b\
+ackground-color:\
+ #19232D;\x0a    co\
+lor: #787878;\x0a  \
+  selection-back\
+ground-color: #1\
+4506E;\x0a    selec\
+tion-color: #787\
+878;\x0a}\x0a\x0aQWidget:\
+item:selected {\x0a\
+    background-c\
+olor: #1464A0;\x0a}\
+\x0a\x0aQWidget:item:h\
+over {\x0a    backg\
+round-color: #14\
+8CD2;\x0a    color:\
+ #32414B;\x0a}\x0a\x0a/* \
+QMainWindow ----\
 ----------------\
 ----------------\
 ----------------\
--------- */\x0a\x0aQCh\
-eckBox {\x0a    bac\
+-------- */\x0a/* T\
+his adjusts the \
+splitter in the \
+dock widget, not\
+ qsplitter      \
+        */\x0a\x0a\x0aQMa\
+inWindow::separa\
+tor {\x0a    backgr\
+ound-color: #324\
+14B;\x0a    border:\
+ 0 solid #19232D\
+;\x0a    spacing: 0\
+;\x0a    padding: 2\
+px;\x0a}\x0a\x0aQMainWind\
+ow::separator:ho\
+ver {\x0a    backgr\
+ound-color: #505\
+F69;\x0a    border:\
+ 0px solid #148C\
+D2;\x0a}\x0a\x0aQMainWind\
+ow::separator:ho\
+rizontal {\x0a    w\
+idth: 5px;\x0a    m\
+argin-top: 2px;\x0a\
+    margin-botto\
+m: 2px;\x0a    imag\
+e: url(:/qss_ico\
+ns/rc/Vsepartool\
+bar.png);\x0a}\x0a\x0aQMa\
+inWindow::separa\
+tor:vertical {\x0a \
+   height: 5px;\x0a\
+    margin-left:\
+ 2px;\x0a    margin\
+-right: 2px;\x0a   \
+ image: url(:/qs\
+s_icons/rc/Hsepa\
+rtoolbar.png);\x0a}\
+\x0a\x0a/* QToolTip --\
+----------------\
+----------------\
+----------------\
+------------- */\
+\x0a\x0aQToolTip {\x0a   \
+ background-colo\
+r: #148CD2;\x0a    \
+border: 1px soli\
+d #19232D;\x0a    c\
+olor: #19232D;\x0a \
+   padding: 0;  \
+ /*remove paddin\
+g, for fix combo\
+ box tooltip*/\x0a \
+   opacity: 230;\
+ /*reducing tran\
+sparency to read\
+ better*/\x0a}\x0a\x0a/* \
+QStatusBar -----\
+----------------\
+----------------\
+----------------\
+-------- */\x0a\x0aQSt\
+atusBar {\x0a    bo\
+rder: 1px solid \
+#32414B;\x0a    bac\
+kground: #32414B\
+; /*fixes spyder\
+ #9120,#9121*/\x0a}\
+\x0a\x0aQStatusBar QTo\
+olTip {\x0a    back\
+ground-color: #1\
+48CD2;\x0a    borde\
+r: 1px solid #19\
+232D;\x0a    color:\
+ #19232D;\x0a    pa\
+dding: 0;   /*re\
+move padding, fo\
+r fix combo box \
+tooltip*/\x0a    op\
+acity: 230; /*re\
+ducing transpare\
+ncy to read bett\
+er*/\x0a}\x0a\x0aQStatusB\
+ar QLabel {\x0a    \
+background-color\
+: transparent; /\
+*fixes spyder #9\
+120,#9121*/\x0a}\x0a\x0a/\
+* QCheckBox ----\
+----------------\
+----------------\
+----------------\
+---------- */\x0a\x0aQ\
+CheckBox {\x0a    b\
+ackground-color:\
+ #19232D;\x0a    co\
+lor: #F0F0F0;\x0a  \
+  spacing: 4px;\x0a\
+    outline: non\
+e;\x0a    padding-t\
+op: 4px;\x0a    pad\
+ding-bottom: 4px\
+;\x0a}\x0a\x0aQCheckBox:f\
+ocus {\x0a    borde\
+r: none;\x0a}\x0a\x0aQChe\
+ckBox QWidget:di\
+sabled {\x0a    bac\
 kground-color: #\
 19232D;\x0a    colo\
-r: #F0F0F0;\x0a    \
-spacing: 4px;\x0a  \
-  outline: none;\
-\x0a    padding-top\
-: 4px;\x0a    paddi\
-ng-bottom: 4px;\x0a\
-}\x0a\x0aQCheckBox:foc\
-us {\x0a    border:\
- none;\x0a}\x0a\x0aQCheck\
-Box QWidget:disa\
-bled {\x0a    backg\
-round-color: #19\
-232D;\x0a    color:\
- #787878;\x0a}\x0a\x0aQCh\
-eckBox::indicato\
-r {\x0a    margin-l\
-eft: 4px;\x0a    wi\
-dth: 16px;\x0a    h\
-eight: 16px;\x0a}\x0a\x0a\
-QCheckBox::indic\
-ator:unchecked {\
-\x0a    image: url(\
-:/qss_icons/rc/c\
-heckbox_unchecke\
-d.png);\x0a}\x0a\x0aQChec\
-kBox::indicator:\
-unchecked:hover,\
-\x0aQCheckBox::indi\
-cator:unchecked:\
-focus,\x0aQCheckBox\
-::indicator:unch\
-ecked:pressed {\x0a\
-    border: none\
-;\x0a    image: url\
-(:/qss_icons/rc/\
-checkbox_uncheck\
-ed_focus.png);\x0a}\
+r: #787878;\x0a}\x0a\x0aQ\
+CheckBox::indica\
+tor {\x0a    margin\
+-left: 4px;\x0a    \
+width: 16px;\x0a   \
+ height: 16px;\x0a}\
 \x0a\x0aQCheckBox::ind\
 icator:unchecked\
-:disabled {\x0a    \
-image: url(:/qss\
-_icons/rc/checkb\
-ox_unchecked_dis\
-abled.png);\x0a}\x0a\x0aQ\
-CheckBox::indica\
-tor:checked {\x0a  \
-  image: url(:/q\
-ss_icons/rc/chec\
-kbox_checked.png\
-);\x0a}\x0a\x0aQCheckBox:\
-:indicator:check\
-ed:hover,\x0aQCheck\
-Box::indicator:c\
-hecked:focus,\x0aQC\
-heckBox::indicat\
-or:checked:press\
-ed {\x0a    border:\
- none;\x0a    image\
-: url(:/qss_icon\
-s/rc/checkbox_ch\
-ecked_focus.png)\
-;\x0a}\x0a\x0aQCheckBox::\
-indicator:checke\
-d:disabled{\x0a    \
-image: url(:/qss\
-_icons/rc/checkb\
-ox_checked_disab\
-led.png);\x0a}\x0a\x0aQCh\
-eckBox::indicato\
-r:indeterminate \
-{\x0a    image: url\
-(:/qss_icons/rc/\
-checkbox_indeter\
-minate.png);\x0a}\x0a\x0a\
-QCheckBox::indic\
-ator:indetermina\
-te:disabled {\x0a  \
-  image: url(:/q\
-ss_icons/rc/chec\
-kbox_indetermina\
-te_disabled.png)\
-;\x0a}\x0a\x0aQCheckBox::\
-indicator:indete\
-rminate:focus,\x0aQ\
-CheckBox::indica\
-tor:indeterminat\
-e:hover,\x0aQCheckB\
-ox::indicator:in\
-determinate:pres\
-sed {\x0a    image:\
- url(:/qss_icons\
-/rc/checkbox_ind\
-eterminate_focus\
-.png);\x0a}\x0a\x0a/* QGr\
-oupBox ---------\
-----------------\
-----------------\
-----------------\
------ */\x0a\x0aQGroup\
-Box {\x0a    font-w\
-eight: bold;\x0a   \
- border: 1px sol\
-id #32414B;\x0a    \
-border-radius: 4\
-px;\x0a    padding:\
- 4px;\x0a    margin\
--top: 16px;\x0a}\x0a\x0a\x0a\
-\x0aQGroupBox::titl\
-e {\x0a    subcontr\
-ol-origin: margi\
-n;\x0a    subcontro\
-l-position: top \
-left;\x0a    left: \
-3px;\x0a    padding\
--left: 3px;\x0a    \
-padding-right: 5\
-px;\x0a    padding-\
-top: 8px;\x0a    pa\
-dding-bottom: 16\
-px;\x0a}\x0a\x0aQGroupBox\
-::indicator {\x0a  \
-  margin-left: 4\
-px;\x0a    width: 1\
-6px;\x0a    height:\
- 16px;\x0a}\x0a\x0aQGroup\
-Box::indicator {\
-\x0a    margin-left\
-: 2px;\x0a}\x0a\x0aQGroup\
-Box::indicator:u\
-nchecked:hover,\x0a\
-QGroupBox::indic\
-ator:unchecked:f\
-ocus,\x0aQGroupBox:\
-:indicator:unche\
-cked:pressed {\x0a \
-   border: none;\
-\x0a    image: url(\
-:/qss_icons/rc/c\
-heckbox_unchecke\
-d_focus.png);\x0a}\x0a\
-\x0aQGroupBox::indi\
-cator:checked:ho\
-ver,\x0aQGroupBox::\
-indicator:checke\
-d:focus,\x0aQGroupB\
-ox::indicator:ch\
-ecked:pressed {\x0a\
-    border: none\
-;\x0a    image: url\
-(:/qss_icons/rc/\
-checkbox_checked\
-_focus.png);\x0a}\x0a\x0a\
-QGroupBox::indic\
-ator:checked:dis\
-abled {\x0a    imag\
-e: url(:/qss_ico\
-ns/rc/checkbox_c\
-hecked_disabled.\
-png);\x0a}\x0a\x0aQGroupB\
-ox::indicator:un\
-checked:disabled\
  {\x0a    image: ur\
 l(:/qss_icons/rc\
 /checkbox_unchec\
-ked_disabled.png\
-);\x0a}\x0a\x0a/* QRadioB\
-utton ----------\
-----------------\
-----------------\
-----------------\
-- */\x0a\x0aQRadioButt\
-on {\x0a    backgro\
-und-color: #1923\
-2D;\x0a    color: #\
-F0F0F0;\x0a    spac\
-ing: 0;\x0a    padd\
-ing: 0;\x0a    bord\
-er: none;\x0a    ou\
-tline: none;\x0a}\x0a\x0a\
-QRadioButton:foc\
-us {\x0a    border:\
- none;\x0a}\x0a\x0aQRadio\
-Button:disabled \
-{\x0a    background\
--color: #19232D;\
-\x0a    color: #787\
-878;\x0a    border:\
- none;\x0a    outli\
-ne: none;\x0a}\x0a\x0aQRa\
-dioButton QWidge\
-t {\x0a    backgrou\
-nd-color: #19232\
-D;\x0a    color: #F\
-0F0F0;\x0a    spaci\
-ng: 0px;\x0a    pad\
-ding: 0px;\x0a    o\
-utline: none;\x0a  \
-  border: none;\x0a\
-}\x0a\x0aQRadioButton:\
-:indicator {\x0a   \
- border: none;\x0a \
-   outline: none\
-;\x0a    margin-bot\
-tom: 2px;\x0a    wi\
-dth: 25px;\x0a    h\
-eight: 25px;\x0a}\x0a\x0a\
-QRadioButton::in\
+ked.png);\x0a}\x0a\x0aQCh\
+eckBox::indicato\
+r:unchecked:hove\
+r,\x0aQCheckBox::in\
 dicator:unchecke\
-d {\x0a    image: u\
-rl(:/qss_icons/r\
-c/radio_unchecke\
-d.png);\x0a}\x0a\x0aQRadi\
-oButton::indicat\
-or:unchecked:hov\
-er,\x0aQRadioButton\
-::indicator:unch\
-ecked:focus,\x0aQRa\
-dioButton::indic\
-ator:unchecked:p\
-ressed {\x0a    bor\
-der: none;\x0a    o\
-utline: none;\x0a  \
-  image: url(:/q\
-ss_icons/rc/radi\
-o_unchecked_focu\
-s.png);\x0a}\x0a\x0aQRadi\
-oButton::indicat\
-or:checked {\x0a   \
- border: none;\x0a \
-   outline: none\
-;\x0a    image: url\
-(:/qss_icons/rc/\
-radio_checked.pn\
-g);\x0a}\x0a\x0aQRadioBut\
-ton::indicator:c\
-hecked:hover,\x0aQR\
-adioButton::indi\
-cator:checked:fo\
-cus,\x0aQRadioButto\
-n::indicator:che\
-cked:pressed {\x0a \
-   border: none;\
-\x0a    outline: no\
+d:focus,\x0aQCheckB\
+ox::indicator:un\
+checked:pressed \
+{\x0a    border: no\
 ne;\x0a    image: u\
 rl(:/qss_icons/r\
-c/radio_checked_\
-focus.png);\x0a}\x0a\x0aQ\
-RadioButton::ind\
-icator:checked:d\
-isabled {\x0a    ou\
-tline: none;\x0a   \
- image: url(:/qs\
-s_icons/rc/radio\
-_checked_disable\
-d.png);\x0a}\x0a\x0aQRadi\
-oButton::indicat\
-or:unchecked:dis\
-abled {\x0a    imag\
+c/checkbox_unche\
+cked_focus.png);\
+\x0a}\x0a\x0aQCheckBox::i\
+ndicator:uncheck\
+ed:disabled {\x0a  \
+  image: url(:/q\
+ss_icons/rc/chec\
+kbox_unchecked_d\
+isabled.png);\x0a}\x0a\
+\x0aQCheckBox::indi\
+cator:checked {\x0a\
+    image: url(:\
+/qss_icons/rc/ch\
+eckbox_checked.p\
+ng);\x0a}\x0a\x0aQCheckBo\
+x::indicator:che\
+cked:hover,\x0aQChe\
+ckBox::indicator\
+:checked:focus,\x0a\
+QCheckBox::indic\
+ator:checked:pre\
+ssed {\x0a    borde\
+r: none;\x0a    ima\
+ge: url(:/qss_ic\
+ons/rc/checkbox_\
+checked_focus.pn\
+g);\x0a}\x0a\x0aQCheckBox\
+::indicator:chec\
+ked:disabled{\x0a  \
+  image: url(:/q\
+ss_icons/rc/chec\
+kbox_checked_dis\
+abled.png);\x0a}\x0a\x0aQ\
+CheckBox::indica\
+tor:indeterminat\
+e {\x0a    image: u\
+rl(:/qss_icons/r\
+c/checkbox_indet\
+erminate.png);\x0a}\
+\x0a\x0aQCheckBox::ind\
+icator:indetermi\
+nate:disabled {\x0a\
+    image: url(:\
+/qss_icons/rc/ch\
+eckbox_indetermi\
+nate_disabled.pn\
+g);\x0a}\x0a\x0aQCheckBox\
+::indicator:inde\
+terminate:focus,\
+\x0aQCheckBox::indi\
+cator:indetermin\
+ate:hover,\x0aQChec\
+kBox::indicator:\
+indeterminate:pr\
+essed {\x0a    imag\
 e: url(:/qss_ico\
-ns/rc/radio_unch\
-ecked_disabled.p\
-ng);\x0a}\x0a\x0a/* QMenu\
-Bar ------------\
+ns/rc/checkbox_i\
+ndeterminate_foc\
+us.png);\x0a}\x0a\x0a/* Q\
+GroupBox -------\
 ----------------\
 ----------------\
 ----------------\
---- */\x0a\x0aQMenuBar\
- {\x0a    backgroun\
-d-color: #32414B\
-;\x0a    padding: 2\
-px;\x0a    border: \
-1px solid #19232\
-D;\x0a    color: #F\
-0F0F0;\x0a}\x0a\x0aQMenuB\
-ar:focus {\x0a    b\
-order: 1px solid\
- #148CD2;\x0a}\x0a\x0aQMe\
-nuBar::item {\x0a  \
-  background: tr\
-ansparent;\x0a    p\
-adding: 4px;\x0a}\x0a\x0a\
-QMenuBar::item:s\
-elected {\x0a    pa\
-dding: 4px;\x0a    \
-background: tran\
-sparent;\x0a    bor\
-der: 0px solid #\
-32414B;\x0a}\x0a\x0aQMenu\
-Bar::item:presse\
-d {\x0a    padding:\
- 4px;\x0a    border\
-: 0px solid #324\
-14B;\x0a    backgro\
-und-color: #148C\
-D2;\x0a    color: #\
-F0F0F0;\x0a    marg\
-in-bottom: 0px;\x0a\
-    padding-bott\
-om: 0px;\x0a}\x0a\x0a/* Q\
-Menu -----------\
-----------------\
-----------------\
-----------------\
-------- */\x0a\x0aQMen\
-u {\x0a    border: \
-0px solid #32414\
-B;\x0a    color: #F\
-0F0F0;\x0a    margi\
-n: 0px;\x0a}\x0a\x0aQMenu\
-::separator {\x0a  \
-  height: 2px;\x0a \
-   background-co\
-lor: #505F69;\x0a  \
-  color: #F0F0F0\
-;\x0a    padding-le\
-ft: 4px;\x0a    mar\
-gin-left: 2px;\x0a \
-   margin-right:\
- 2px;\x0a}\x0a\x0aQMenu::\
-icon {\x0a    margi\
-n: 0px;\x0a    padd\
-ing-left:4px;\x0a}\x0a\
-\x0aQMenu::item {\x0a \
-   padding: 4px \
-24px 4px 24px;\x0a \
-   border: 1px t\
-ransparent #3241\
-4B;  /* reserve \
-space for select\
-ion border */\x0a}\x0a\
-\x0aQMenu::item:sel\
-ected {\x0a    colo\
-r: #F0F0F0;\x0a}\x0a\x0a\x0a\
-\x0aQMenu::indicato\
-r {\x0a    width: 1\
-2px;\x0a    height:\
- 12px;\x0a    paddi\
-ng-left:6px;\x0a}\x0a\x0a\
-/* non-exclusive\
- indicator = che\
-ck box style ind\
-icator (see QAct\
-ionGroup::setExc\
-lusive) */\x0a\x0aQMen\
-u::indicator:non\
--exclusive:unche\
-cked {\x0a    image\
-: url(:/qss_icon\
-s/rc/checkbox_un\
-checked.png);\x0a}\x0a\
-\x0aQMenu::indicato\
-r:non-exclusive:\
-unchecked:select\
+------- */\x0a\x0aQGro\
+upBox {\x0a    font\
+-weight: bold;\x0a \
+   border: 1px s\
+olid #32414B;\x0a  \
+  border-radius:\
+ 4px;\x0a    paddin\
+g: 4px;\x0a    marg\
+in-top: 16px;\x0a}\x0a\
+\x0a\x0a\x0aQGroupBox::ti\
+tle {\x0a    subcon\
+trol-origin: mar\
+gin;\x0a    subcont\
+rol-position: to\
+p left;\x0a    left\
+: 3px;\x0a    paddi\
+ng-left: 3px;\x0a  \
+  padding-right:\
+ 5px;\x0a    paddin\
+g-top: 8px;\x0a    \
+padding-bottom: \
+16px;\x0a}\x0a\x0aQGroupB\
+ox::indicator {\x0a\
+    margin-left:\
+ 4px;\x0a    width:\
+ 16px;\x0a    heigh\
+t: 16px;\x0a}\x0a\x0aQGro\
+upBox::indicator\
+ {\x0a    margin-le\
+ft: 2px;\x0a}\x0a\x0aQGro\
+upBox::indicator\
+:unchecked:hover\
+,\x0aQGroupBox::ind\
+icator:unchecked\
+:focus,\x0aQGroupBo\
+x::indicator:unc\
+hecked:pressed {\
+\x0a    border: non\
+e;\x0a    image: ur\
+l(:/qss_icons/rc\
+/checkbox_unchec\
+ked_focus.png);\x0a\
+}\x0a\x0aQGroupBox::in\
+dicator:checked:\
+hover,\x0aQGroupBox\
+::indicator:chec\
+ked:focus,\x0aQGrou\
+pBox::indicator:\
+checked:pressed \
+{\x0a    border: no\
+ne;\x0a    image: u\
+rl(:/qss_icons/r\
+c/checkbox_check\
+ed_focus.png);\x0a}\
+\x0a\x0aQGroupBox::ind\
+icator:checked:d\
+isabled {\x0a    im\
+age: url(:/qss_i\
+cons/rc/checkbox\
+_checked_disable\
+d.png);\x0a}\x0a\x0aQGrou\
+pBox::indicator:\
+unchecked:disabl\
 ed {\x0a    image: \
 url(:/qss_icons/\
 rc/checkbox_unch\
 ecked_disabled.p\
-ng);\x0a}\x0a\x0aQMenu::i\
-ndicator:non-exc\
-lusive:checked {\
-\x0a    image: url(\
-:/qss_icons/rc/c\
-heckbox_checked.\
-png);\x0a}\x0a\x0aQMenu::\
-indicator:non-ex\
-clusive:checked:\
-selected {\x0a    i\
-mage: url(:/qss_\
-icons/rc/checkbo\
-x_checked_disabl\
-ed.png);\x0a}\x0a\x0a/* e\
-xclusive indicat\
-or = radio butto\
-n style indicato\
-r (see QActionGr\
-oup::setExclusiv\
-e) */\x0a\x0aQMenu::in\
-dicator:exclusiv\
-e:unchecked {\x0a  \
-  image: url(:/q\
-ss_icons/rc/radi\
-o_unchecked.png)\
-;\x0a}\x0a\x0aQMenu::indi\
-cator:exclusive:\
-unchecked:select\
-ed {\x0a    image: \
-url(:/qss_icons/\
-rc/radio_uncheck\
-ed_disabled.png)\
-;\x0a}\x0a\x0aQMenu::indi\
-cator:exclusive:\
-checked {\x0a    im\
+ng);\x0a}\x0a\x0a/* QRadi\
+oButton --------\
+----------------\
+----------------\
+----------------\
+--- */\x0a\x0aQRadioBu\
+tton {\x0a    backg\
+round-color: #19\
+232D;\x0a    color:\
+ #F0F0F0;\x0a    sp\
+acing: 0;\x0a    pa\
+dding: 0;\x0a    bo\
+rder: none;\x0a    \
+outline: none;\x0a}\
+\x0a\x0aQRadioButton:f\
+ocus {\x0a    borde\
+r: none;\x0a}\x0a\x0aQRad\
+ioButton:disable\
+d {\x0a    backgrou\
+nd-color: #19232\
+D;\x0a    color: #7\
+87878;\x0a    borde\
+r: none;\x0a    out\
+line: none;\x0a}\x0a\x0aQ\
+RadioButton QWid\
+get {\x0a    backgr\
+ound-color: #192\
+32D;\x0a    color: \
+#F0F0F0;\x0a    spa\
+cing: 0px;\x0a    p\
+adding: 0px;\x0a   \
+ outline: none;\x0a\
+    border: none\
+;\x0a}\x0a\x0aQRadioButto\
+n::indicator {\x0a \
+   border: none;\
+\x0a    outline: no\
+ne;\x0a    margin-b\
+ottom: 2px;\x0a    \
+width: 25px;\x0a   \
+ height: 25px;\x0a}\
+\x0a\x0aQRadioButton::\
+indicator:unchec\
+ked {\x0a    image:\
+ url(:/qss_icons\
+/rc/radio_unchec\
+ked.png);\x0a}\x0a\x0aQRa\
+dioButton::indic\
+ator:unchecked:h\
+over,\x0aQRadioButt\
+on::indicator:un\
+checked:focus,\x0aQ\
+RadioButton::ind\
+icator:unchecked\
+:pressed {\x0a    b\
+order: none;\x0a   \
+ outline: none;\x0a\
+    image: url(:\
+/qss_icons/rc/ra\
+dio_unchecked_fo\
+cus.png);\x0a}\x0a\x0aQRa\
+dioButton::indic\
+ator:checked {\x0a \
+   border: none;\
+\x0a    outline: no\
+ne;\x0a    image: u\
+rl(:/qss_icons/r\
+c/radio_checked.\
+png);\x0a}\x0a\x0aQRadioB\
+utton::indicator\
+:checked:hover,\x0a\
+QRadioButton::in\
+dicator:checked:\
+focus,\x0aQRadioBut\
+ton::indicator:c\
+hecked:pressed {\
+\x0a    border: non\
+e;\x0a    outline: \
+none;\x0a    image:\
+ url(:/qss_icons\
+/rc/radio_checke\
+d_focus.png);\x0a}\x0a\
+\x0aQRadioButton::i\
+ndicator:checked\
+:disabled {\x0a    \
+outline: none;\x0a \
+   image: url(:/\
+qss_icons/rc/rad\
+io_checked_disab\
+led.png);\x0a}\x0a\x0aQRa\
+dioButton::indic\
+ator:unchecked:d\
+isabled {\x0a    im\
 age: url(:/qss_i\
-cons/rc/radio_ch\
-ecked.png);\x0a}\x0a\x0aQ\
-Menu::indicator:\
+cons/rc/radio_un\
+checked_disabled\
+.png);\x0a}\x0a\x0a/* QMe\
+nuBar ----------\
+----------------\
+----------------\
+----------------\
+----- */\x0a\x0aQMenuB\
+ar {\x0a    backgro\
+und-color: #3241\
+4B;\x0a    padding:\
+ 2px;\x0a    border\
+: 1px solid #192\
+32D;\x0a    color: \
+#F0F0F0;\x0a}\x0a\x0aQMen\
+uBar:focus {\x0a   \
+ border: 1px sol\
+id #148CD2;\x0a}\x0a\x0aQ\
+MenuBar::item {\x0a\
+    background: \
+transparent;\x0a   \
+ padding: 4px;\x0a}\
+\x0a\x0aQMenuBar::item\
+:selected {\x0a    \
+padding: 4px;\x0a  \
+  background: tr\
+ansparent;\x0a    b\
+order: 0px solid\
+ #32414B;\x0a}\x0a\x0aQMe\
+nuBar::item:pres\
+sed {\x0a    paddin\
+g: 4px;\x0a    bord\
+er: 0px solid #3\
+2414B;\x0a    backg\
+round-color: #14\
+8CD2;\x0a    color:\
+ #F0F0F0;\x0a    ma\
+rgin-bottom: 0px\
+;\x0a    padding-bo\
+ttom: 0px;\x0a}\x0a\x0a/*\
+ QMenu ---------\
+----------------\
+----------------\
+----------------\
+--------- */\x0a\x0aQM\
+enu {\x0a    border\
+: 0px solid #324\
+14B;\x0a    color: \
+#F0F0F0;\x0a    mar\
+gin: 0px;\x0a}\x0a\x0aQMe\
+nu::separator {\x0a\
+    height: 2px;\
+\x0a    background-\
+color: #505F69;\x0a\
+    color: #F0F0\
+F0;\x0a    padding-\
+left: 4px;\x0a    m\
+argin-left: 2px;\
+\x0a    margin-righ\
+t: 2px;\x0a}\x0a\x0aQMenu\
+::icon {\x0a    mar\
+gin: 0px;\x0a    pa\
+dding-left:4px;\x0a\
+}\x0a\x0aQMenu::item {\
+\x0a    padding: 4p\
+x 24px 4px 24px;\
+\x0a    border: 1px\
+ transparent #32\
+414B;  /* reserv\
+e space for sele\
+ction border */\x0a\
+}\x0a\x0aQMenu::item:s\
+elected {\x0a    co\
+lor: #F0F0F0;\x0a}\x0a\
+\x0a\x0a\x0aQMenu::indica\
+tor {\x0a    width:\
+ 12px;\x0a    heigh\
+t: 12px;\x0a    pad\
+ding-left:6px;\x0a}\
+\x0a\x0a/* non-exclusi\
+ve indicator = c\
+heck box style i\
+ndicator (see QA\
+ctionGroup::setE\
+xclusive) */\x0a\x0aQM\
+enu::indicator:n\
+on-exclusive:unc\
+hecked {\x0a    ima\
+ge: url(:/qss_ic\
+ons/rc/checkbox_\
+unchecked.png);\x0a\
+}\x0a\x0aQMenu::indica\
+tor:non-exclusiv\
+e:unchecked:sele\
+cted {\x0a    image\
+: url(:/qss_icon\
+s/rc/checkbox_un\
+checked_disabled\
+.png);\x0a}\x0a\x0aQMenu:\
+:indicator:non-e\
+xclusive:checked\
+ {\x0a    image: ur\
+l(:/qss_icons/rc\
+/checkbox_checke\
+d.png);\x0a}\x0a\x0aQMenu\
+::indicator:non-\
 exclusive:checke\
 d:selected {\x0a   \
  image: url(:/qs\
-s_icons/rc/radio\
-_checked_disable\
-d.png);\x0a}\x0a\x0aQMenu\
-::right-arrow {\x0a\
-    margin: 5px;\
-\x0a    image: url(\
-:/qss_icons/rc/r\
-ight_arrow.png)\x0a\
-}\x0a\x0a/* QAbstractI\
-temView --------\
+s_icons/rc/check\
+box_checked_disa\
+bled.png);\x0a}\x0a\x0a/*\
+ exclusive indic\
+ator = radio but\
+ton style indica\
+tor (see QAction\
+Group::setExclus\
+ive) */\x0a\x0aQMenu::\
+indicator:exclus\
+ive:unchecked {\x0a\
+    image: url(:\
+/qss_icons/rc/ra\
+dio_unchecked.pn\
+g);\x0a}\x0a\x0aQMenu::in\
+dicator:exclusiv\
+e:unchecked:sele\
+cted {\x0a    image\
+: url(:/qss_icon\
+s/rc/radio_unche\
+cked_disabled.pn\
+g);\x0a}\x0a\x0aQMenu::in\
+dicator:exclusiv\
+e:checked {\x0a    \
+image: url(:/qss\
+_icons/rc/radio_\
+checked.png);\x0a}\x0a\
+\x0aQMenu::indicato\
+r:exclusive:chec\
+ked:selected {\x0a \
+   image: url(:/\
+qss_icons/rc/rad\
+io_checked_disab\
+led.png);\x0a}\x0a\x0aQMe\
+nu::right-arrow \
+{\x0a    margin: 5p\
+x;\x0a    image: ur\
+l(:/qss_icons/rc\
+/right_arrow.png\
+)\x0a}\x0a\x0a/* QAbstrac\
+tItemView ------\
+----------------\
+----------------\
+----------------\
+ */\x0a\x0aQAbstractIt\
+emView {\x0a    alt\
+ernate-backgroun\
+d-color: #19232D\
+;\x0a    color: #F0\
+F0F0;\x0a    border\
+: 1px solid #324\
+14B;\x0a    border-\
+radius: 4px;\x0a}\x0a\x0a\
+QAbstractItemVie\
+w QLineEdit {\x0a  \
+  padding: 2px;\x0a\
+}\x0a\x0a/* QAbstractS\
+crollArea ------\
 ----------------\
 ----------------\
 -------------- *\
-/\x0a\x0aQAbstractItem\
-View {\x0a    alter\
-nate-background-\
-color: #19232D;\x0a\
-    color: #F0F0\
-F0;\x0a    border: \
-1px solid #32414\
-B;\x0a    border-ra\
-dius: 4px;\x0a}\x0a\x0aQA\
-bstractItemView \
-QLineEdit {\x0a    \
-padding: 2px;\x0a}\x0a\
-\x0a/* QAbstractScr\
-ollArea --------\
-----------------\
-----------------\
------------- */\x0a\
-\x0aQAbstractScroll\
-Area {\x0a    backg\
-round-color: #19\
-232D;\x0a    border\
-: 1px solid #324\
-14B;\x0a    border-\
-radius: 4px;\x0a   \
- padding: 4px;\x0a \
-   color: #F0F0F\
-0;\x0a}\x0a\x0aQAbstractS\
-crollArea:disabl\
-ed {\x0a    color: \
-#787878;\x0a}\x0a\x0a/* Q\
-ScrollArea -----\
+/\x0a\x0aQAbstractScro\
+llArea {\x0a    bac\
+kground-color: #\
+19232D;\x0a    bord\
+er: 1px solid #3\
+2414B;\x0a    borde\
+r-radius: 4px;\x0a \
+   padding: 4px;\
+\x0a    color: #F0F\
+0F0;\x0a}\x0a\x0aQAbstrac\
+tScrollArea:disa\
+bled {\x0a    color\
+: #787878;\x0a}\x0a\x0a/*\
+ QScrollArea ---\
 ----------------\
 ----------------\
 ----------------\
-------- */\x0a\x0aQScr\
-ollArea QWidget \
-QWidget:disabled\
- {\x0a    backgroun\
-d-color: #19232D\
-;\x0a}\x0a\x0a/* QScrollB\
-ar -------------\
-----------------\
-----------------\
-----------------\
- */\x0a\x0aQScrollBar:\
-horizontal {\x0a   \
- height: 16px;\x0a \
-   margin: 2px 1\
-6px 2px 16px;\x0a  \
-  border: 1px so\
-lid #32414B;\x0a   \
- border-radius: \
-4px;\x0a    backgro\
+--------- */\x0a\x0aQS\
+crollArea QWidge\
+t QWidget:disabl\
+ed {\x0a    backgro\
 und-color: #1923\
-2D;\x0a}\x0a\x0aQScrollBa\
+2D;\x0a}\x0a\x0a/* QScrol\
+lBar -----------\
+----------------\
+----------------\
+----------------\
+-- */\x0a\x0aQScrollBa\
+r:horizontal {\x0a \
+   height: 16px;\
+\x0a    margin: 2px\
+ 16px 2px 16px;\x0a\
+    border: 1px \
+solid #32414B;\x0a \
+   border-radius\
+: 4px;\x0a    backg\
+round-color: #19\
+232D;\x0a}\x0a\x0aQScroll\
+Bar::handle:hori\
+zontal {\x0a    bac\
+kground-color: #\
+787878;\x0a    bord\
+er: 1px solid #3\
+2414B;\x0a    borde\
+r-radius: 4px;\x0a \
+   min-width: 8p\
+x;\x0a\x0a}\x0a\x0aQScrollBa\
 r::handle:horizo\
-ntal {\x0a    backg\
-round-color: #78\
-7878;\x0a    border\
-: 1px solid #324\
-14B;\x0a    border-\
-radius: 4px;\x0a   \
- min-width: 8px;\
-\x0a\x0a}\x0a\x0aQScrollBar:\
-:handle:horizont\
-al:hover {\x0a    b\
-ackground-color:\
- #148CD2;\x0a    bo\
-rder: 1px solid \
-#148CD2;\x0a    bor\
-der-radius: 4px;\
-\x0a    min-width: \
-8px;\x0a}\x0a\x0aQScrollB\
-ar::add-line:hor\
-izontal {\x0a    ma\
-rgin: 0px 0px 0p\
-x 0px;\x0a    borde\
-r-image: url(:/q\
-ss_icons/rc/righ\
-t_arrow_disabled\
-.png);\x0a    width\
-: 10px;\x0a    heig\
-ht: 10px;\x0a    su\
-bcontrol-positio\
-n: right;\x0a    su\
-bcontrol-origin:\
- margin;\x0a}\x0a\x0aQScr\
-ollBar::sub-line\
-:horizontal {\x0a  \
-  margin: 0px 3p\
-x 0px 3px;\x0a    b\
-order-image: url\
-(:/qss_icons/rc/\
-left_arrow_disab\
-led.png);\x0a    he\
+ntal:hover {\x0a   \
+ background-colo\
+r: #148CD2;\x0a    \
+border: 1px soli\
+d #148CD2;\x0a    b\
+order-radius: 4p\
+x;\x0a    min-width\
+: 8px;\x0a}\x0a\x0aQScrol\
+lBar::add-line:h\
+orizontal {\x0a    \
+margin: 0px 0px \
+0px 0px;\x0a    bor\
+der-image: url(:\
+/qss_icons/rc/ri\
+ght_arrow_disabl\
+ed.png);\x0a    wid\
+th: 10px;\x0a    he\
+ight: 10px;\x0a    \
+subcontrol-posit\
+ion: right;\x0a    \
+subcontrol-origi\
+n: margin;\x0a}\x0a\x0aQS\
+crollBar::sub-li\
+ne:horizontal {\x0a\
+    margin: 0px \
+3px 0px 3px;\x0a   \
+ border-image: u\
+rl(:/qss_icons/r\
+c/left_arrow_dis\
+abled.png);\x0a    \
+height: 10px;\x0a  \
+  width: 10px;\x0a \
+   subcontrol-po\
+sition: left;\x0a  \
+  subcontrol-ori\
+gin: margin;\x0a}\x0a\x0a\
+QScrollBar::add-\
+line:horizontal:\
+hover,\x0aQScrollBa\
+r::add-line:hori\
+zontal:on {\x0a    \
+border-image: ur\
+l(:/qss_icons/rc\
+/right_arrow.png\
+);\x0a    height: 1\
+0px;\x0a    width: \
+10px;\x0a    subcon\
+trol-position: r\
+ight;\x0a    subcon\
+trol-origin: mar\
+gin;\x0a}\x0a\x0aQScrollB\
+ar::sub-line:hor\
+izontal:hover,\x0aQ\
+ScrollBar::sub-l\
+ine:horizontal:o\
+n {\x0a    border-i\
+mage: url(:/qss_\
+icons/rc/left_ar\
+row.png);\x0a    he\
 ight: 10px;\x0a    \
 width: 10px;\x0a   \
  subcontrol-posi\
 tion: left;\x0a    \
 subcontrol-origi\
 n: margin;\x0a}\x0a\x0aQS\
-crollBar::add-li\
-ne:horizontal:ho\
-ver,\x0aQScrollBar:\
-:add-line:horizo\
-ntal:on {\x0a    bo\
-rder-image: url(\
-:/qss_icons/rc/r\
-ight_arrow.png);\
-\x0a    height: 10p\
-x;\x0a    width: 10\
-px;\x0a    subcontr\
-ol-position: rig\
-ht;\x0a    subcontr\
-ol-origin: margi\
-n;\x0a}\x0a\x0aQScrollBar\
-::sub-line:horiz\
-ontal:hover,\x0aQSc\
-rollBar::sub-lin\
-e:horizontal:on \
-{\x0a    border-ima\
-ge: url(:/qss_ic\
-ons/rc/left_arro\
-w.png);\x0a    heig\
-ht: 10px;\x0a    wi\
-dth: 10px;\x0a    s\
-ubcontrol-positi\
-on: left;\x0a    su\
-bcontrol-origin:\
- margin;\x0a}\x0a\x0aQScr\
-ollBar::up-arrow\
-:horizontal,\x0aQSc\
-rollBar::down-ar\
-row:horizontal {\
-\x0a    background:\
- none;\x0a}\x0a\x0aQScrol\
-lBar::add-page:h\
-orizontal,\x0aQScro\
-llBar::sub-page:\
-horizontal {\x0a   \
- background: non\
-e;\x0a}\x0a\x0aQScrollBar\
-:vertical {\x0a    \
-background-color\
-: #19232D;\x0a    w\
-idth: 16px;\x0a    \
-margin: 16px 2px\
- 16px 2px;\x0a    b\
-order: 1px solid\
- #32414B;\x0a    bo\
-rder-radius: 4px\
-;\x0a}\x0a\x0aQScrollBar:\
-:handle:vertical\
+crollBar::up-arr\
+ow:horizontal,\x0aQ\
+ScrollBar::down-\
+arrow:horizontal\
  {\x0a    backgroun\
-d-color: #787878\
-;\x0a    border: 1p\
-x solid #32414B;\
-\x0a    min-height:\
- 8px;\x0a    border\
--radius: 4px;\x0a}\x0a\
-\x0aQScrollBar::han\
-dle:vertical:hov\
-er {\x0a    backgro\
-und-color: #148C\
-D2;\x0a    border: \
-1px solid #148CD\
-2;\x0a    border-ra\
-dius: 4px;\x0a    m\
-in-height: 8px;\x0a\
-\x0a}\x0a\x0aQScrollBar::\
-sub-line:vertica\
-l {\x0a    margin: \
-3px 0px 3px 0px;\
-\x0a    border-imag\
-e: url(:/qss_ico\
-ns/rc/up_arrow_d\
-isabled.png);\x0a  \
-  height: 10px;\x0a\
-    width: 10px;\
-\x0a    subcontrol-\
-position: top;\x0a \
-   subcontrol-or\
-igin: margin;\x0a}\x0a\
-\x0aQScrollBar::add\
--line:vertical {\
-\x0a    margin: 3px\
- 0px 3px 0px;\x0a  \
-  border-image: \
-url(:/qss_icons/\
-rc/down_arrow_di\
-sabled.png);\x0a   \
- height: 10px;\x0a \
-   width: 10px;\x0a\
-    subcontrol-p\
-osition: bottom;\
-\x0a    subcontrol-\
-origin: margin;\x0a\
-}\x0a\x0aQScrollBar::s\
-ub-line:vertical\
-:hover,\x0aQScrollB\
-ar::sub-line:ver\
-tical:on {\x0a    b\
-order-image: url\
-(:/qss_icons/rc/\
-up_arrow.png);\x0a \
-   height: 10px;\
-\x0a    width: 10px\
-;\x0a    subcontrol\
--position: top;\x0a\
-    subcontrol-o\
-rigin: margin;\x0a}\
-\x0a\x0aQScrollBar::ad\
-d-line:vertical:\
-hover,\x0aQScrollBa\
-r::add-line:vert\
-ical:on {\x0a    bo\
-rder-image: url(\
-:/qss_icons/rc/d\
-own_arrow.png);\x0a\
+d: none;\x0a}\x0a\x0aQScr\
+ollBar::add-page\
+:horizontal,\x0aQSc\
+rollBar::sub-pag\
+e:horizontal {\x0a \
+   background: n\
+one;\x0a}\x0a\x0aQScrollB\
+ar:vertical {\x0a  \
+  background-col\
+or: #19232D;\x0a   \
+ width: 16px;\x0a  \
+  margin: 16px 2\
+px 16px 2px;\x0a   \
+ border: 1px sol\
+id #32414B;\x0a    \
+border-radius: 4\
+px;\x0a}\x0a\x0aQScrollBa\
+r::handle:vertic\
+al {\x0a    backgro\
+und-color: #7878\
+78;\x0a    border: \
+1px solid #32414\
+B;\x0a    min-heigh\
+t: 8px;\x0a    bord\
+er-radius: 4px;\x0a\
+}\x0a\x0aQScrollBar::h\
+andle:vertical:h\
+over {\x0a    backg\
+round-color: #14\
+8CD2;\x0a    border\
+: 1px solid #148\
+CD2;\x0a    border-\
+radius: 4px;\x0a   \
+ min-height: 8px\
+;\x0a\x0a}\x0a\x0aQScrollBar\
+::sub-line:verti\
+cal {\x0a    margin\
+: 3px 0px 3px 0p\
+x;\x0a    border-im\
+age: url(:/qss_i\
+cons/rc/up_arrow\
+_disabled.png);\x0a\
     height: 10px\
 ;\x0a    width: 10p\
 x;\x0a    subcontro\
-l-position: bott\
-om;\x0a    subcontr\
-ol-origin: margi\
-n;\x0a}\x0a\x0aQScrollBar\
-::up-arrow:verti\
-cal,\x0aQScrollBar:\
-:down-arrow:vert\
-ical {\x0a    backg\
-round: none;\x0a}\x0a\x0a\
-QScrollBar::add-\
-page:vertical,\x0aQ\
-ScrollBar::sub-p\
-age:vertical {\x0a \
-   background: n\
-one;\x0a}\x0a\x0a/* QText\
-Edit------------\
-----------------\
-----------------\
-----------------\
---- */\x0a\x0aQTextEdi\
-t {\x0a    backgrou\
-nd-color: #19232\
-D;\x0a    color: #F\
-0F0F0;\x0a    borde\
-r: 1px solid #32\
-414B;\x0a}\x0a\x0aQTextEd\
-it:hover {\x0a    b\
-order: 1px solid\
- #148CD2;\x0a    co\
-lor: #F0F0F0;\x0a}\x0a\
-\x0aQTextEdit:selec\
-ted {\x0a    backgr\
-ound: #1464A0;\x0a \
-   color: #32414\
-B;\x0a}\x0a\x0a/* QPlainT\
-extEdit --------\
-----------------\
-----------------\
-----------------\
-- */\x0a\x0aQPlainText\
-Edit {\x0a    backg\
-round-color: #19\
-232D;\x0a    color:\
- #F0F0F0;\x0a    bo\
-rder-radius: 4px\
-;\x0a    border: 1p\
-x solid #32414B;\
-\x0a}\x0a\x0aQPlainTextEd\
-it:hover {\x0a    b\
-order: 1px solid\
- #148CD2;\x0a    co\
-lor: #F0F0F0;\x0a}\x0a\
-\x0aQPlainTextEdit:\
-selected {\x0a    b\
-ackground: #1464\
-A0;\x0a    color: #\
-32414B;\x0a}\x0a\x0a/* QS\
-izeGrip --------\
-----------------\
-----------------\
-----------------\
-------- */\x0a\x0aQSiz\
-eGrip {\x0a    imag\
-e: url(:/qss_ico\
-ns/rc/sizegrip.p\
-ng);\x0a    width: \
-12px;\x0a    height\
-: 12px;\x0a}\x0a\x0a/* QS\
-tackedWidget ---\
-----------------\
-----------------\
-----------------\
------- */\x0a\x0aQStac\
-kedWidget {\x0a    \
-padding: 4px;\x0a  \
-  border: 1px so\
-lid #32414B;\x0a   \
- border: 1px sol\
-id #19232D;\x0a}\x0a\x0a/\
-* QToolBar -----\
-----------------\
-----------------\
-----------------\
----------- */\x0a\x0aQ\
-ToolBar {\x0a    ba\
-ckground-color: \
-#32414B;\x0a    bor\
-der-bottom: 1px \
-solid #19232D;\x0a \
-   padding: 2px;\
-\x0a    font-weight\
-: bold;\x0a}\x0a\x0aQTool\
-Bar QToolButton{\
-\x0a    background-\
-color: #32414B;\x0a\
-}\x0a\x0aQToolBar::han\
-dle:horizontal {\
-\x0a    width: 6px;\
-\x0a    image: url(\
-:/qss_icons/rc/H\
-movetoolbar.png)\
-;\x0a}\x0a\x0aQToolBar::h\
-andle:vertical {\
-\x0a    height: 6px\
-;\x0a    image: url\
-(:/qss_icons/rc/\
-Vmovetoolbar.png\
-);\x0a}\x0a\x0aQToolBar::\
-separator:horizo\
-ntal {\x0a    width\
-: 3px;\x0a    image\
-: url(:/qss_icon\
-s/rc/Hsepartoolb\
-ar.png);\x0a}\x0a\x0aQToo\
-lBar::separator:\
-vertical {\x0a    h\
-eight: 3px;\x0a    \
-image: url(:/qss\
-_icons/rc/Vsepar\
-toolbar.png);\x0a}\x0a\
-\x0aQToolButton#qt_\
-toolbar_ext_butt\
-on {\x0a    backgro\
-und: #32414B;\x0a  \
-  border: 0px;\x0a \
-   color: #F0F0F\
-0;\x0a    image: ur\
-l(:/qss_icons/rc\
-/right_arrow.png\
-);\x0a}\x0a\x0a/* QAbstra\
-ctSpinBox ------\
-----------------\
-----------------\
-----------------\
-- */\x0a\x0aQAbstractS\
-pinBox {\x0a    bac\
-kground-color: #\
-19232D;\x0a    bord\
-er: 1px solid #3\
-2414B;\x0a    color\
-: #F0F0F0;\x0a    p\
-adding-top: 2px;\
-     /* This fix\
-  103, 111*/\x0a   \
- padding-bottom:\
- 2px;  /* This f\
-ix  103, 111*/\x0a \
-   padding-left:\
- 4px;\x0a    paddin\
-g-right: 4px;\x0a  \
-  border-radius:\
- 4px;\x0a    /* min\
--width: 5px; rem\
-oved to fix 109 \
-*/\x0a}\x0a\x0aQAbstractS\
-pinBox:up-button\
- {\x0a    backgroun\
-d-color: transpa\
-rent #19232D;\x0a  \
-  subcontrol-ori\
-gin: border;\x0a   \
- subcontrol-posi\
-tion: top right;\
-\x0a    border-left\
-: 1px solid #324\
-14B;\x0a    margin:\
- 1px;\x0a}\x0a\x0aQAbstra\
-ctSpinBox::up-ar\
-row,\x0aQAbstractSp\
-inBox::up-arrow:\
-disabled,\x0aQAbstr\
-actSpinBox::up-a\
-rrow:off {\x0a    i\
-mage: url(:/qss_\
-icons/rc/up_arro\
-w_disabled.png);\
-\x0a    width: 9px;\
-\x0a    height: 9px\
-;\x0a}\x0a\x0aQAbstractSp\
-inBox::up-arrow:\
-hover {\x0a    imag\
-e: url(:/qss_ico\
-ns/rc/up_arrow.p\
-ng);\x0a}\x0a\x0aQAbstrac\
-tSpinBox:down-bu\
-tton {\x0a    backg\
-round-color: tra\
-nsparent #19232D\
-;\x0a    subcontrol\
--origin: border;\
+l-position: top;\
 \x0a    subcontrol-\
-position: bottom\
- right;\x0a    bord\
-er-left: 1px sol\
-id #32414B;\x0a    \
-margin: 1px;\x0a}\x0a\x0a\
-QAbstractSpinBox\
-::down-arrow,\x0aQA\
-bstractSpinBox::\
-down-arrow:disab\
-led,\x0aQAbstractSp\
-inBox::down-arro\
-w:off {\x0a    imag\
-e: url(:/qss_ico\
-ns/rc/down_arrow\
-_disabled.png);\x0a\
-    width: 9px;\x0a\
-    height: 9px;\
-\x0a}\x0a\x0aQAbstractSpi\
-nBox::down-arrow\
-:hover {\x0a    ima\
-ge: url(:/qss_ic\
-ons/rc/down_arro\
-w.png);\x0a}\x0a\x0aQAbst\
-ractSpinBox:hove\
-r{\x0a    border: 1\
-px solid #148CD2\
-;\x0a    color: #F0\
-F0F0;\x0a}\x0a\x0aQAbstra\
-ctSpinBox:select\
-ed {\x0a    backgro\
-und: #1464A0;\x0a  \
-  color: #32414B\
-;\x0a}\x0a\x0a/* --------\
+origin: margin;\x0a\
+}\x0a\x0aQScrollBar::a\
+dd-line:vertical\
+ {\x0a    margin: 3\
+px 0px 3px 0px;\x0a\
+    border-image\
+: url(:/qss_icon\
+s/rc/down_arrow_\
+disabled.png);\x0a \
+   height: 10px;\
+\x0a    width: 10px\
+;\x0a    subcontrol\
+-position: botto\
+m;\x0a    subcontro\
+l-origin: margin\
+;\x0a}\x0a\x0aQScrollBar:\
+:sub-line:vertic\
+al:hover,\x0aQScrol\
+lBar::sub-line:v\
+ertical:on {\x0a   \
+ border-image: u\
+rl(:/qss_icons/r\
+c/up_arrow.png);\
+\x0a    height: 10p\
+x;\x0a    width: 10\
+px;\x0a    subcontr\
+ol-position: top\
+;\x0a    subcontrol\
+-origin: margin;\
+\x0a}\x0a\x0aQScrollBar::\
+add-line:vertica\
+l:hover,\x0aQScroll\
+Bar::add-line:ve\
+rtical:on {\x0a    \
+border-image: ur\
+l(:/qss_icons/rc\
+/down_arrow.png)\
+;\x0a    height: 10\
+px;\x0a    width: 1\
+0px;\x0a    subcont\
+rol-position: bo\
+ttom;\x0a    subcon\
+trol-origin: mar\
+gin;\x0a}\x0a\x0aQScrollB\
+ar::up-arrow:ver\
+tical,\x0aQScrollBa\
+r::down-arrow:ve\
+rtical {\x0a    bac\
+kground: none;\x0a}\
+\x0a\x0aQScrollBar::ad\
+d-page:vertical,\
+\x0aQScrollBar::sub\
+-page:vertical {\
+\x0a    background:\
+ none;\x0a}\x0a\x0a/* QTe\
+xtEdit----------\
 ----------------\
 ----------------\
 ----------------\
-----------------\
- */\x0a/* DISPLAYS \
-----------------\
-----------------\
-----------------\
---------------- \
-*/\x0a/* ----------\
-----------------\
-----------------\
-----------------\
--------------- *\
-/\x0a\x0a/* QLabel ---\
-----------------\
-----------------\
-----------------\
--------------- *\
-/\x0a\x0aQLabel {\x0a    \
-background-color\
-: #19232D;\x0a    b\
-order: 0px solid\
- #32414B;\x0a    pa\
-dding: 2px;\x0a    \
-margin: 0px;\x0a   \
- color: #F0F0F0\x0a\
-}\x0a\x0aQLabel::disab\
-led {\x0a    backgr\
+----- */\x0a\x0aQTextE\
+dit {\x0a    backgr\
 ound-color: #192\
-32D;\x0a    border:\
- 0px solid #3241\
-4B;\x0a    color: #\
-787878;\x0a}\x0a\x0a/* QT\
-extBrowser -----\
-----------------\
-----------------\
-----------------\
------- */\x0a\x0aQText\
-Browser {\x0a    ba\
-ckground-color: \
-#19232D;\x0a    bor\
+32D;\x0a    color: \
+#F0F0F0;\x0a    bor\
 der: 1px solid #\
-32414B;\x0a    colo\
+32414B;\x0a}\x0a\x0aQText\
+Edit:hover {\x0a   \
+ border: 1px sol\
+id #148CD2;\x0a    \
+color: #F0F0F0;\x0a\
+}\x0a\x0aQTextEdit:sel\
+ected {\x0a    back\
+ground: #1464A0;\
+\x0a    color: #324\
+14B;\x0a}\x0a\x0a/* QPlai\
+nTextEdit ------\
+----------------\
+----------------\
+----------------\
+--- */\x0a\x0aQPlainTe\
+xtEdit {\x0a    bac\
+kground-color: #\
+19232D;\x0a    colo\
 r: #F0F0F0;\x0a    \
 border-radius: 4\
-px;\x0a}\x0a\x0aQTextBrow\
-ser:disabled {\x0a \
-   background-co\
-lor: #19232D;\x0a  \
-  border: 1px so\
-lid #32414B;\x0a   \
- color: #787878;\
-\x0a    border-radi\
-us: 4px;\x0a}\x0a\x0aQTex\
-tBrowser:hover,\x0a\
-QTextBrowser:!ho\
-ver,\x0aQTextBrowse\
-r::selected,\x0aQTe\
-xtBrowser::press\
-ed {\x0a    border:\
- 1px solid #3241\
-4B;\x0a}\x0a\x0a/* QGraph\
-icsView --------\
+px;\x0a    border: \
+1px solid #32414\
+B;\x0a}\x0a\x0aQPlainText\
+Edit:hover {\x0a   \
+ border: 1px sol\
+id #148CD2;\x0a    \
+color: #F0F0F0;\x0a\
+}\x0a\x0aQPlainTextEdi\
+t:selected {\x0a   \
+ background: #14\
+64A0;\x0a    color:\
+ #32414B;\x0a}\x0a\x0a/* \
+QSizeGrip ------\
 ----------------\
 ----------------\
 ----------------\
-- */\x0a\x0aQGraphicsV\
-iew {\x0a    backgr\
-ound-color: #192\
-32D;\x0a    border:\
- 1px solid #3241\
-4B;\x0a    color: #\
-F0F0F0;\x0a    bord\
-er-radius: 4px;\x0a\
-}\x0a\x0aQGraphicsView\
-:disabled {\x0a    \
+--------- */\x0a\x0aQS\
+izeGrip {\x0a    im\
+age: url(:/qss_i\
+cons/rc/sizegrip\
+.png);\x0a    width\
+: 12px;\x0a    heig\
+ht: 12px;\x0a}\x0a\x0a/* \
+QStackedWidget -\
+----------------\
+----------------\
+----------------\
+-------- */\x0a\x0aQSt\
+ackedWidget {\x0a  \
+  padding: 4px;\x0a\
+    border: 1px \
+solid #32414B;\x0a \
+   border: 1px s\
+olid #19232D;\x0a}\x0a\
+\x0a/* QToolBar ---\
+----------------\
+----------------\
+----------------\
+------------ */\x0a\
+\x0aQToolBar {\x0a    \
+background-color\
+: #32414B;\x0a    b\
+order-bottom: 1p\
+x solid #19232D;\
+\x0a    padding: 2p\
+x;\x0a    font-weig\
+ht: bold;\x0a}\x0a\x0aQTo\
+olBar QToolButto\
+n{\x0a    backgroun\
+d-color: #32414B\
+;\x0a}\x0a\x0aQToolBar::h\
+andle:horizontal\
+ {\x0a    width: 6p\
+x;\x0a    image: ur\
+l(:/qss_icons/rc\
+/Hmovetoolbar.pn\
+g);\x0a}\x0a\x0aQToolBar:\
+:handle:vertical\
+ {\x0a    height: 6\
+px;\x0a    image: u\
+rl(:/qss_icons/r\
+c/Vmovetoolbar.p\
+ng);\x0a}\x0a\x0aQToolBar\
+::separator:hori\
+zontal {\x0a    wid\
+th: 3px;\x0a    ima\
+ge: url(:/qss_ic\
+ons/rc/Hsepartoo\
+lbar.png);\x0a}\x0a\x0aQT\
+oolBar::separato\
+r:vertical {\x0a   \
+ height: 3px;\x0a  \
+  image: url(:/q\
+ss_icons/rc/Vsep\
+artoolbar.png);\x0a\
+}\x0a\x0aQToolButton#q\
+t_toolbar_ext_bu\
+tton {\x0a    backg\
+round: #32414B;\x0a\
+    border: 0px;\
+\x0a    color: #F0F\
+0F0;\x0a    image: \
+url(:/qss_icons/\
+rc/right_arrow.p\
+ng);\x0a}\x0a\x0a/* QAbst\
+ractSpinBox ----\
+----------------\
+----------------\
+----------------\
+--- */\x0a\x0aQAbstrac\
+tSpinBox {\x0a    b\
+ackground-color:\
+ #19232D;\x0a    bo\
+rder: 1px solid \
+#32414B;\x0a    col\
+or: #F0F0F0;\x0a   \
+ padding-top: 2p\
+x;     /* This f\
+ix  103, 111*/\x0a \
+   padding-botto\
+m: 2px;  /* This\
+ fix  103, 111*/\
+\x0a    padding-lef\
+t: 4px;\x0a    padd\
+ing-right: 4px;\x0a\
+    border-radiu\
+s: 4px;\x0a    /* m\
+in-width: 5px; r\
+emoved to fix 10\
+9 */\x0a}\x0a\x0aQAbstrac\
+tSpinBox:up-butt\
+on {\x0a    backgro\
+und-color: trans\
+parent #19232D;\x0a\
+    subcontrol-o\
+rigin: border;\x0a \
+   subcontrol-po\
+sition: top righ\
+t;\x0a    border-le\
+ft: 1px solid #3\
+2414B;\x0a    margi\
+n: 1px;\x0a}\x0a\x0aQAbst\
+ractSpinBox::up-\
+arrow,\x0aQAbstract\
+SpinBox::up-arro\
+w:disabled,\x0aQAbs\
+tractSpinBox::up\
+-arrow:off {\x0a   \
+ image: url(:/qs\
+s_icons/rc/up_ar\
+row_disabled.png\
+);\x0a    width: 9p\
+x;\x0a    height: 9\
+px;\x0a}\x0a\x0aQAbstract\
+SpinBox::up-arro\
+w:hover {\x0a    im\
+age: url(:/qss_i\
+cons/rc/up_arrow\
+.png);\x0a}\x0a\x0aQAbstr\
+actSpinBox:down-\
+button {\x0a    bac\
+kground-color: t\
+ransparent #1923\
+2D;\x0a    subcontr\
+ol-origin: borde\
+r;\x0a    subcontro\
+l-position: bott\
+om right;\x0a    bo\
+rder-left: 1px s\
+olid #32414B;\x0a  \
+  margin: 1px;\x0a}\
+\x0a\x0aQAbstractSpinB\
+ox::down-arrow,\x0a\
+QAbstractSpinBox\
+::down-arrow:dis\
+abled,\x0aQAbstract\
+SpinBox::down-ar\
+row:off {\x0a    im\
+age: url(:/qss_i\
+cons/rc/down_arr\
+ow_disabled.png)\
+;\x0a    width: 9px\
+;\x0a    height: 9p\
+x;\x0a}\x0a\x0aQAbstractS\
+pinBox::down-arr\
+ow:hover {\x0a    i\
+mage: url(:/qss_\
+icons/rc/down_ar\
+row.png);\x0a}\x0a\x0aQAb\
+stractSpinBox:ho\
+ver{\x0a    border:\
+ 1px solid #148C\
+D2;\x0a    color: #\
+F0F0F0;\x0a}\x0a\x0aQAbst\
+ractSpinBox:sele\
+cted {\x0a    backg\
+round: #1464A0;\x0a\
+    color: #3241\
+4B;\x0a}\x0a\x0a/* ------\
+----------------\
+----------------\
+----------------\
+----------------\
+-- */\x0a/* DISPLAY\
+S --------------\
+----------------\
+----------------\
+----------------\
+- */\x0a/* --------\
+----------------\
+----------------\
+----------------\
+----------------\
+ */\x0a\x0a/* QLabel -\
+----------------\
+----------------\
+----------------\
+----------------\
+ */\x0a\x0aQLabel {\x0a  \
+  background-col\
+or: #19232D;\x0a   \
+ border: 0px sol\
+id #32414B;\x0a    \
+padding: 2px;\x0a  \
+  margin: 0px;\x0a \
+   color: #F0F0F\
+0\x0a}\x0a\x0aQLabel::dis\
+abled {\x0a    back\
+ground-color: #1\
+9232D;\x0a    borde\
+r: 0px solid #32\
+414B;\x0a    color:\
+ #787878;\x0a}\x0a\x0a/* \
+QTextBrowser ---\
+----------------\
+----------------\
+----------------\
+-------- */\x0a\x0aQTe\
+xtBrowser {\x0a    \
 background-color\
 : #19232D;\x0a    b\
 order: 1px solid\
  #32414B;\x0a    co\
-lor: #787878;\x0a  \
+lor: #F0F0F0;\x0a  \
   border-radius:\
- 4px;\x0a}\x0a\x0aQGraphi\
-csView:hover,\x0aQG\
-raphicsView:!hov\
-er,\x0aQGraphicsVie\
-w::selected,\x0aQGr\
-aphicsView::pres\
-sed {\x0a    border\
-: 1px solid #324\
-14B;\x0a}\x0a\x0a/* QCale\
-ndarWidget -----\
-----------------\
-----------------\
-----------------\
---- */\x0a\x0aQCalenda\
-rWidget {\x0a    bo\
-rder: 1px solid \
-#32414B;\x0a    bor\
-der-radius: 4px;\
-\x0a}\x0a\x0aQCalendarWid\
-get:disabled {\x0a \
-   background-co\
-lor: #19232D;\x0a  \
-  color: #787878\
-;\x0a}\x0a\x0a/* QLCDNumb\
-er -------------\
-----------------\
-----------------\
-----------------\
- */\x0a\x0aQLCDNumber \
-{\x0a    background\
--color: #19232D;\
-\x0a    color: #F0F\
-0F0;\x0a}\x0a\x0aQLCDNumb\
-er:disabled {\x0a  \
-  background-col\
-or: #19232D;\x0a   \
- color: #787878;\
-\x0a}\x0a\x0a/* QProgress\
-Bar ------------\
-----------------\
-----------------\
---------------- \
-*/\x0a\x0aQProgressBar\
- {\x0a    backgroun\
-d-color: #19232D\
-;\x0a    border: 1p\
-x solid #32414B;\
-\x0a    color: #F0F\
-0F0;\x0a    border-\
-radius: 4px;\x0a   \
- text-align: cen\
-ter;\x0a}\x0a\x0aQProgres\
-sBar:disabled {\x0a\
-    background-c\
-olor: #19232D;\x0a \
-   border: 1px s\
-olid #32414B;\x0a  \
-  color: #787878\
-;\x0a    border-rad\
-ius: 4px;\x0a    te\
-xt-align: center\
-;\x0a}\x0a\x0aQProgressBa\
-r::chunk {\x0a    b\
-ackground-color:\
- #1464A0;\x0a    co\
-lor: #19232D;\x0a  \
-  border-radius:\
- 4px;\x0a}\x0a\x0aQProgre\
-ssBar::chunk:dis\
-abled {\x0a    back\
-ground-color: #1\
-4506E;\x0a    color\
-: #787878;\x0a    b\
-order-radius: 4p\
-x;\x0a}\x0a\x0a\x0a/* ------\
-----------------\
-----------------\
-----------------\
-----------------\
--- */\x0a/* BUTTONS\
- ---------------\
-----------------\
-----------------\
-----------------\
-- */\x0a/* --------\
-----------------\
-----------------\
-----------------\
-----------------\
- */\x0a\x0a/* QPushBut\
-ton ------------\
-----------------\
-----------------\
-----------------\
- */\x0a\x0aQPushButton\
- {\x0a    backgroun\
-d-color: #505F69\
- ;\x0a    border: 1\
-px solid #32414B\
-;\x0a    color: #F0\
-F0F0;\x0a    border\
--radius: 4px;\x0a  \
-  padding: 3px;\x0a\
-    outline: non\
-e;\x0a}\x0a\x0aQPushButto\
-n:disabled {\x0a   \
- background-colo\
-r: #32414B;\x0a    \
-border: 1px soli\
-d #32414B;\x0a    c\
-olor: #787878;\x0a \
-   border-radius\
-: 4px;\x0a    paddi\
-ng: 3px;\x0a}\x0a\x0a\x0aQPu\
-shButton:checked\
- {\x0a    backgroun\
-d-color: #32414B\
-;\x0a    border: 1p\
-x solid #32414B;\
-\x0a    border-radi\
-us: 4px;\x0a    pad\
-ding: 3px;\x0a    o\
-utline: none;\x0a}\x0a\
-\x0aQPushButton:che\
-cked:disabled {\x0a\
-    background-c\
-olor: #19232D;\x0a \
-   border: 1px s\
-olid #32414B;\x0a  \
-  color: #787878\
-;\x0a    border-rad\
-ius: 4px;\x0a    pa\
-dding: 3px;\x0a    \
-outline: none;\x0a}\
-\x0a\x0aQPushButton::m\
-enu-indicator {\x0a\
-    subcontrol-o\
-rigin: padding;\x0a\
-    subcontrol-p\
-osition: bottom \
-right;\x0a    botto\
-m: 4px;\x0a}\x0a\x0aQPush\
-Button:pressed {\
+ 4px;\x0a}\x0a\x0aQTextBr\
+owser:disabled {\
 \x0a    background-\
 color: #19232D;\x0a\
     border: 1px \
-solid #19232D;\x0a}\
-\x0a\x0aQPushButton:ho\
-ver,\x0aQPushButton\
-:checked:hover{\x0a\
-    border: 1px \
-solid #148CD2;\x0a \
-   color: #F0F0F\
-0;\x0a}\x0a\x0aQPushButto\
-n:pressed:hover{\
+solid #32414B;\x0a \
+   color: #78787\
+8;\x0a    border-ra\
+dius: 4px;\x0a}\x0a\x0aQT\
+extBrowser:hover\
+,\x0aQTextBrowser:!\
+hover,\x0aQTextBrow\
+ser::selected,\x0aQ\
+TextBrowser::pre\
+ssed {\x0a    borde\
+r: 1px solid #32\
+414B;\x0a}\x0a\x0a/* QGra\
+phicsView ------\
+----------------\
+----------------\
+----------------\
+--- */\x0a\x0aQGraphic\
+sView {\x0a    back\
+ground-color: #1\
+9232D;\x0a    borde\
+r: 1px solid #32\
+414B;\x0a    color:\
+ #F0F0F0;\x0a    bo\
+rder-radius: 4px\
+;\x0a}\x0a\x0aQGraphicsVi\
+ew:disabled {\x0a  \
+  background-col\
+or: #19232D;\x0a   \
+ border: 1px sol\
+id #32414B;\x0a    \
+color: #787878;\x0a\
+    border-radiu\
+s: 4px;\x0a}\x0a\x0aQGrap\
+hicsView:hover,\x0a\
+QGraphicsView:!h\
+over,\x0aQGraphicsV\
+iew::selected,\x0aQ\
+GraphicsView::pr\
+essed {\x0a    bord\
+er: 1px solid #3\
+2414B;\x0a}\x0a\x0a/* QCa\
+lendarWidget ---\
+----------------\
+----------------\
+----------------\
+----- */\x0a\x0aQCalen\
+darWidget {\x0a    \
+border: 1px soli\
+d #32414B;\x0a    b\
+order-radius: 4p\
+x;\x0a}\x0a\x0aQCalendarW\
+idget:disabled {\
+\x0a    background-\
+color: #19232D;\x0a\
+    color: #7878\
+78;\x0a}\x0a\x0a/* QLCDNu\
+mber -----------\
+----------------\
+----------------\
+----------------\
+-- */\x0a\x0aQLCDNumbe\
+r {\x0a    backgrou\
+nd-color: #19232\
+D;\x0a    color: #F\
+0F0F0;\x0a}\x0a\x0aQLCDNu\
+mber:disabled {\x0a\
+    background-c\
+olor: #19232D;\x0a \
+   color: #78787\
+8;\x0a}\x0a\x0a/* QProgre\
+ssBar ----------\
+----------------\
+----------------\
+----------------\
+- */\x0a\x0aQProgressB\
+ar {\x0a    backgro\
+und-color: #1923\
+2D;\x0a    border: \
+1px solid #32414\
+B;\x0a    color: #F\
+0F0F0;\x0a    borde\
+r-radius: 4px;\x0a \
+   text-align: c\
+enter;\x0a}\x0a\x0aQProgr\
+essBar:disabled \
+{\x0a    background\
+-color: #19232D;\
 \x0a    border: 1px\
- solid #1464A0;\x0a\
-}\x0a\x0aQPushButton:s\
-elected,\x0aQPushBu\
-tton:checked:sel\
-ected{\x0a    backg\
-round: #1464A0;\x0a\
-    color: #3241\
-4B;\x0a}\x0a\x0a/* QToolB\
+ solid #32414B;\x0a\
+    color: #7878\
+78;\x0a    border-r\
+adius: 4px;\x0a    \
+text-align: cent\
+er;\x0a}\x0a\x0aQProgress\
+Bar::chunk {\x0a   \
+ background-colo\
+r: #1464A0;\x0a    \
+color: #19232D;\x0a\
+    border-radiu\
+s: 4px;\x0a}\x0a\x0aQProg\
+ressBar::chunk:d\
+isabled {\x0a    ba\
+ckground-color: \
+#14506E;\x0a    col\
+or: #787878;\x0a   \
+ border-radius: \
+4px;\x0a}\x0a\x0a\x0a/* ----\
+----------------\
+----------------\
+----------------\
+----------------\
+---- */\x0a/* BUTTO\
+NS -------------\
+----------------\
+----------------\
+----------------\
+--- */\x0a/* ------\
+----------------\
+----------------\
+----------------\
+----------------\
+-- */\x0a\x0a/* QPushB\
 utton ----------\
 ----------------\
 ----------------\
 ----------------\
--- */\x0a\x0aQToolButt\
+-- */\x0a\x0aQPushButt\
 on {\x0a    backgro\
-und-color: trans\
-parent;\x0a    bord\
-er: 1px solid #3\
-2414B;\x0a    borde\
-r-radius: 4px;\x0a \
-   margin: 0px;\x0a\
-    padding: 2px\
-;\x0a}\x0a\x0aQToolButton\
-:checked {\x0a    b\
-ackground-color:\
- #19232D;\x0a    bo\
-rder: 1px solid \
-#19232D;\x0a}\x0a\x0aQToo\
-lButton:pressed \
+und-color: #505F\
+69 ;\x0a    border:\
+ 1px solid #3241\
+4B;\x0a    color: #\
+F0F0F0;\x0a    bord\
+er-radius: 4px;\x0a\
+    padding: 3px\
+;\x0a    outline: n\
+one;\x0a}\x0a\x0aQPushBut\
+ton:disabled {\x0a \
+   background-co\
+lor: #32414B;\x0a  \
+  border: 1px so\
+lid #32414B;\x0a   \
+ color: #787878;\
+\x0a    border-radi\
+us: 4px;\x0a    pad\
+ding: 3px;\x0a}\x0a\x0a\x0aQ\
+PushButton:check\
+ed {\x0a    backgro\
+und-color: #3241\
+4B;\x0a    border: \
+1px solid #32414\
+B;\x0a    border-ra\
+dius: 4px;\x0a    p\
+adding: 3px;\x0a   \
+ outline: none;\x0a\
+}\x0a\x0aQPushButton:c\
+hecked:disabled \
 {\x0a    background\
 -color: #19232D;\
 \x0a    border: 1px\
- solid #19232D;\x0a\
-\x0a}\x0a\x0aQToolButton:\
-disabled {\x0a    b\
-order: 1px solid\
- #32414B;\x0a}\x0a\x0aQTo\
-olButton:hover,\x0a\
-QToolButton:chec\
-ked:hover{\x0a    b\
-order: 1px solid\
- #148CD2;\x0a}\x0aQToo\
-lButton:pressed:\
-hover{\x0a    borde\
-r: 1px solid #14\
-64A0;\x0a}\x0a\x0a/* the \
-subcontrols belo\
-w are used only \
-in the MenuButto\
-nPopup mode */\x0a\x0a\
-QToolButton[popu\
-pMode=\x221\x22] {\x0a   \
- padding: 2px;\x0a \
-   padding-right\
-: 12px;     /* o\
-nly for MenuButt\
-onPopup */\x0a    b\
-order: 1px solid\
- #32414B;   /* m\
-ake way for the \
-popup button */\x0a\
-    border-radiu\
-s: 4px;\x0a}\x0a\x0a/* Th\
-e subcontrol bel\
-ow is used only \
-in the InstantPo\
-pup or DelayedPo\
-pup mode */\x0a\x0aQTo\
-olButton[popupMo\
-de=\x222\x22] {\x0a    pa\
-dding: 2px;\x0a    \
-padding-right: 1\
-2px;      /* onl\
-y for InstantPop\
-up */\x0a    border\
-: 1px solid #324\
-14B;    /* make \
-way for the popu\
-p button */\x0a}\x0a\x0aQ\
-ToolButton::menu\
--button {\x0a    pa\
-dding: 2px;\x0a    \
-border-radius: 4\
-px;\x0a    border: \
-1px solid #32414\
-B;\x0a    border-to\
-p-right-radius: \
-4px;\x0a    border-\
-bottom-right-rad\
-ius: 4px;\x0a    /*\
- 16px width + 4p\
-x for border = 2\
-0px allocated ab\
-ove */\x0a    width\
-: 16px;\x0a    outl\
-ine: none;\x0a}\x0a\x0aQT\
-oolButton::menu-\
-button:hover,\x0aQT\
-oolButton::menu-\
-button:checked:h\
-over {\x0a    borde\
-r: 1px solid #14\
-8CD2;\x0a}\x0a\x0aQToolBu\
-tton::menu-indic\
-ator {\x0a    image\
-: url(:/qss_icon\
-s/rc/down_arrow.\
-png);\x0a    top: -\
-8px;     /* shif\
-t it a bit */\x0a  \
-  left: -4px;   \
- /* shift it a b\
-it */\x0a}\x0a\x0aQToolBu\
-tton::menu-arrow\
- {\x0a    image: ur\
-l(:/qss_icons/rc\
-/down_arrow.png)\
-;\x0a}\x0a\x0aQToolButton\
-::menu-arrow:ope\
-n {\x0a    border: \
-1px solid #32414\
-B;\x0a}\x0a\x0a/* QComman\
-dLinkButton ----\
+ solid #32414B;\x0a\
+    color: #7878\
+78;\x0a    border-r\
+adius: 4px;\x0a    \
+padding: 3px;\x0a  \
+  outline: none;\
+\x0a}\x0a\x0aQPushButton:\
+:menu-indicator \
+{\x0a    subcontrol\
+-origin: padding\
+;\x0a    subcontrol\
+-position: botto\
+m right;\x0a    bot\
+tom: 4px;\x0a}\x0a\x0aQPu\
+shButton:pressed\
+ {\x0a    backgroun\
+d-color: #19232D\
+;\x0a    border: 1p\
+x solid #19232D;\
+\x0a}\x0a\x0aQPushButton:\
+hover,\x0aQPushButt\
+on:checked:hover\
+{\x0a    border: 1p\
+x solid #148CD2;\
+\x0a    color: #F0F\
+0F0;\x0a}\x0a\x0aQPushBut\
+ton:pressed:hove\
+r{\x0a    border: 1\
+px solid #1464A0\
+;\x0a}\x0a\x0aQPushButton\
+:selected,\x0aQPush\
+Button:checked:s\
+elected{\x0a    bac\
+kground: #1464A0\
+;\x0a    color: #32\
+414B;\x0a}\x0a\x0a/* QToo\
+lButton --------\
 ----------------\
 ----------------\
 ----------------\
-- */\x0a\x0aQCommandLi\
-nkButton {\x0a    b\
-ackground-color:\
- transparent;\x0a  \
-  border: 1px so\
-lid #32414B;\x0a   \
- color: #F0F0F0;\
-\x0a    border-radi\
-us: 4px;\x0a    pad\
-ding: 0px;\x0a    m\
-argin: 0px;\x0a}\x0a\x0aQ\
-CommandLinkButto\
+---- */\x0a\x0aQToolBu\
+tton {\x0a    backg\
+round-color: tra\
+nsparent;\x0a    bo\
+rder: 1px solid \
+#32414B;\x0a    bor\
+der-radius: 4px;\
+\x0a    margin: 0px\
+;\x0a    padding: 2\
+px;\x0a}\x0a\x0aQToolButt\
+on:checked {\x0a   \
+ background-colo\
+r: #19232D;\x0a    \
+border: 1px soli\
+d #19232D;\x0a}\x0a\x0aQT\
+oolButton:presse\
+d {\x0a    backgrou\
+nd-color: #19232\
+D;\x0a    border: 1\
+px solid #19232D\
+;\x0a\x0a}\x0a\x0aQToolButto\
 n:disabled {\x0a   \
+ border: 1px sol\
+id #32414B;\x0a}\x0a\x0aQ\
+ToolButton:hover\
+,\x0aQToolButton:ch\
+ecked:hover{\x0a   \
+ border: 1px sol\
+id #148CD2;\x0a}\x0aQT\
+oolButton:presse\
+d:hover{\x0a    bor\
+der: 1px solid #\
+1464A0;\x0a}\x0a\x0a/* th\
+e subcontrols be\
+low are used onl\
+y in the MenuBut\
+tonPopup mode */\
+\x0a\x0aQToolButton[po\
+pupMode=\x221\x22] {\x0a \
+   padding: 2px;\
+\x0a    padding-rig\
+ht: 12px;     /*\
+ only for MenuBu\
+ttonPopup */\x0a   \
+ border: 1px sol\
+id #32414B;   /*\
+ make way for th\
+e popup button *\
+/\x0a    border-rad\
+ius: 4px;\x0a}\x0a\x0a/* \
+The subcontrol b\
+elow is used onl\
+y in the Instant\
+Popup or Delayed\
+Popup mode */\x0a\x0aQ\
+ToolButton[popup\
+Mode=\x222\x22] {\x0a    \
+padding: 2px;\x0a  \
+  padding-right:\
+ 12px;      /* o\
+nly for InstantP\
+opup */\x0a    bord\
+er: 1px solid #3\
+2414B;    /* mak\
+e way for the po\
+pup button */\x0a}\x0a\
+\x0aQToolButton::me\
+nu-button {\x0a    \
+padding: 2px;\x0a  \
+  border-radius:\
+ 4px;\x0a    border\
+: 1px solid #324\
+14B;\x0a    border-\
+top-right-radius\
+: 4px;\x0a    borde\
+r-bottom-right-r\
+adius: 4px;\x0a    \
+/* 16px width + \
+4px for border =\
+ 20px allocated \
+above */\x0a    wid\
+th: 16px;\x0a    ou\
+tline: none;\x0a}\x0a\x0a\
+QToolButton::men\
+u-button:hover,\x0a\
+QToolButton::men\
+u-button:checked\
+:hover {\x0a    bor\
+der: 1px solid #\
+148CD2;\x0a}\x0a\x0aQTool\
+Button::menu-ind\
+icator {\x0a    ima\
+ge: url(:/qss_ic\
+ons/rc/down_arro\
+w.png);\x0a    top:\
+ -8px;     /* sh\
+ift it a bit */\x0a\
+    left: -4px; \
+   /* shift it a\
+ bit */\x0a}\x0a\x0aQTool\
+Button::menu-arr\
+ow {\x0a    image: \
+url(:/qss_icons/\
+rc/down_arrow.pn\
+g);\x0a}\x0a\x0aQToolButt\
+on::menu-arrow:o\
+pen {\x0a    border\
+: 1px solid #324\
+14B;\x0a}\x0a\x0a/* QComm\
+andLinkButton --\
+----------------\
+----------------\
+----------------\
+--- */\x0a\x0aQCommand\
+LinkButton {\x0a   \
  background-colo\
 r: transparent;\x0a\
-    color: #7878\
-78;\x0a}\x0a\x0a/* ------\
-----------------\
-----------------\
-----------------\
-----------------\
--- */\x0a/* INPUTS \
-- NO FIELDS ----\
-----------------\
-----------------\
-----------------\
-- */\x0a/* --------\
-----------------\
-----------------\
-----------------\
-----------------\
- */\x0a\x0a/* QCombobo\
-x --------------\
-----------------\
-----------------\
-----------------\
- */\x0aQComboBox {\x0a\
     border: 1px \
 solid #32414B;\x0a \
-   border-radius\
-: 4px;\x0a    selec\
-tion-background-\
-color: #1464A0;\x0a\
-    padding-left\
-: 4px;\x0a    paddi\
-ng-right: 4px;\x0a \
-   min-height: 1\
-.5em;  /*   fix \
-#103, #111      \
-*/\x0a    /* paddin\
-g-top: 2px;     \
-removed to fix #\
-132 */\x0a    /* pa\
-dding-bottom: 2p\
-x;  removed to f\
-ix #132 */\x0a    /\
-* min-width: 75p\
-x;      removed \
-to fix #109 */\x0a}\
-   \x0a\x0aQComboBox Q\
-AbstractItemView\
- {\x0a    backgroun\
-d-color: #19232d\
-;\x0a    border-rad\
-ius: 4px;\x0a    bo\
-rder: 1px solid \
-#32414B;\x0a    sel\
-ection-color: #1\
-48CD2;\x0a    selec\
-tion-background-\
-color: #32414B;\x0a\
-}\x0a\x0aQComboBox:dis\
-abled {\x0a    back\
-ground-color: #1\
-9232D;\x0a    color\
-: #787878;\x0a}\x0a\x0aQC\
-omboBox:hover{\x0a \
-   border: 1px s\
-olid #148CD2;\x0a}\x0a\
-\x0aQComboBox:on {\x0a\
-    selection-ba\
-ckground-color: \
-#19232D;\x0a}\x0a\x0a/* N\
-eeded to remove \
-indicator - fix \
-#132 */\x0aQComboBo\
-x::indicator {\x0a \
+   color: #F0F0F\
+0;\x0a    border-ra\
+dius: 4px;\x0a    p\
+adding: 0px;\x0a   \
+ margin: 0px;\x0a}\x0a\
+\x0aQCommandLinkBut\
+ton:disabled {\x0a \
    background-co\
-lor:transparent;\
-\x0a    selection-b\
-ackground-color:\
-transparent;\x0a   \
- color:transpare\
-nt;\x0a    selectio\
-n-color:transpar\
-ent;\x0a}\x0a\x0a/* Neede\
-d to remove indi\
-cator - fix #132\
- */\x0aQComboBox::i\
-tem:alternate {\x0a\
-    background: \
-#19232D;\x0a}\x0a\x0aQCom\
-boBox::item:chec\
-ked {\x0a    font-w\
-eight: bold;\x0a}\x0a\x0a\
-QComboBox::item:\
-selected {\x0a    b\
-order: 0px solid\
- transparent;\x0a}\x0a\
-\x0aQComboBox::drop\
--down {\x0a    subc\
-ontrol-origin: p\
-adding;\x0a    subc\
-ontrol-position:\
- top right;\x0a    \
-width: 20px;\x0a   \
- border-left-wid\
-th: 0px;\x0a    bor\
-der-left-color: \
-#32414B;\x0a    bor\
-der-left-style: \
-solid;\x0a    borde\
-r-top-right-radi\
-us: 3px;\x0a    bor\
-der-bottom-right\
--radius: 3px;\x0a}\x0a\
-\x0aQComboBox::down\
--arrow {\x0a    ima\
-ge: url(:/qss_ic\
-ons/rc/down_arro\
-w_disabled.png);\
-\x0a}\x0a\x0aQComboBox::d\
-own-arrow:on,\x0aQC\
-omboBox::down-ar\
-row:hover,\x0aQComb\
-oBox::down-arrow\
-:focus {\x0a    ima\
-ge: url(:/qss_ic\
-ons/rc/down_arro\
-w.png);\x0a}\x0a\x0a/* QS\
-lider ----------\
+lor: transparent\
+;\x0a    color: #78\
+7878;\x0a}\x0a\x0a/* ----\
 ----------------\
 ----------------\
 ----------------\
------- */\x0a\x0aQSlid\
-er:disabled {\x0a  \
-  background: #1\
-9232D;\x0a}\x0a\x0aQSlide\
-r:focus {\x0a    bo\
-rder: none;\x0a}\x0a\x0aQ\
-Slider::groove:h\
-orizontal {\x0a    \
-background: #324\
-14B;\x0a    border:\
- 1px solid #3241\
-4B;\x0a    height: \
-4px;\x0a    margin:\
- 0px;\x0a    border\
--radius: 4px;\x0a}\x0a\
-\x0aQSlider::sub-pa\
-ge:horizontal {\x0a\
-    background: \
-#1464A0;\x0a    bor\
+----------------\
+---- */\x0a/* INPUT\
+S - NO FIELDS --\
+----------------\
+----------------\
+----------------\
+--- */\x0a/* ------\
+----------------\
+----------------\
+----------------\
+----------------\
+-- */\x0a\x0a/* QCombo\
+box ------------\
+----------------\
+----------------\
+----------------\
+-- */\x0aQComboBox \
+{\x0a    border: 1p\
+x solid #32414B;\
+\x0a    border-radi\
+us: 4px;\x0a    sel\
+ection-backgroun\
+d-color: #1464A0\
+;\x0a    padding-le\
+ft: 4px;\x0a    pad\
+ding-right: 4px;\
+\x0a    min-height:\
+ 1.5em;  /*   fi\
+x #103, #111    \
+  */\x0a    /* padd\
+ing-top: 2px;   \
+  removed to fix\
+ #132 */\x0a    /* \
+padding-bottom: \
+2px;  removed to\
+ fix #132 */\x0a   \
+ /* min-width: 7\
+5px;      remove\
+d to fix #109 */\
+\x0a}\x0a\x0aQComboBox QA\
+bstractItemView \
+{\x0a    background\
+-color: #19232d;\
+\x0a    border-radi\
+us: 4px;\x0a    bor\
 der: 1px solid #\
-32414B;\x0a    heig\
-ht: 4px;\x0a    mar\
-gin: 0px;\x0a    bo\
-rder-radius: 4px\
-;\x0a}\x0a\x0aQSlider::su\
-b-page:horizonta\
-l:disabled {\x0a   \
- background: #14\
-506E;\x0a}\x0a\x0aQSlider\
-::handle:horizon\
-tal {\x0a    backgr\
-ound: #787878;\x0a \
+32414B;\x0a    sele\
+ction-color: #14\
+8CD2;\x0a    select\
+ion-background-c\
+olor: #32414B;\x0a}\
+\x0a\x0aQComboBox:disa\
+bled {\x0a    backg\
+round-color: #19\
+232D;\x0a    color:\
+ #787878;\x0a}\x0a\x0aQCo\
+mboBox:hover{\x0a  \
+  border: 1px so\
+lid #148CD2;\x0a}\x0a\x0a\
+QComboBox:on {\x0a \
+   selection-bac\
+kground-color: #\
+19232D;\x0a}\x0a\x0a/* Ne\
+eded to remove i\
+ndicator - fix #\
+132 */\x0aQComboBox\
+::indicator {\x0a  \
+  background-col\
+or:transparent;\x0a\
+    selection-ba\
+ckground-color:t\
+ransparent;\x0a    \
+color:transparen\
+t;\x0a    selection\
+-color:transpare\
+nt;\x0a}\x0a\x0a/* Needed\
+ to remove indic\
+ator - fix #132 \
+*/\x0aQComboBox::it\
+em:alternate {\x0a \
+   background: #\
+19232D;\x0a}\x0a\x0aQComb\
+oBox::item:check\
+ed {\x0a    font-we\
+ight: bold;\x0a}\x0a\x0aQ\
+ComboBox::item:s\
+elected {\x0a    bo\
+rder: 0px solid \
+transparent;\x0a}\x0a\x0a\
+QComboBox::drop-\
+down {\x0a    subco\
+ntrol-origin: pa\
+dding;\x0a    subco\
+ntrol-position: \
+top right;\x0a    w\
+idth: 20px;\x0a    \
+border-left-widt\
+h: 0px;\x0a    bord\
+er-left-color: #\
+32414B;\x0a    bord\
+er-left-style: s\
+olid;\x0a    border\
+-top-right-radiu\
+s: 3px;\x0a    bord\
+er-bottom-right-\
+radius: 3px;\x0a}\x0a\x0a\
+QComboBox::down-\
+arrow {\x0a    imag\
+e: url(:/qss_ico\
+ns/rc/down_arrow\
+_disabled.png);\x0a\
+}\x0a\x0aQComboBox::do\
+wn-arrow:on,\x0aQCo\
+mboBox::down-arr\
+ow:hover,\x0aQCombo\
+Box::down-arrow:\
+focus {\x0a    imag\
+e: url(:/qss_ico\
+ns/rc/down_arrow\
+.png);\x0a}\x0a\x0a/* QSl\
+ider -----------\
+----------------\
+----------------\
+----------------\
+----- */\x0a\x0aQSlide\
+r:disabled {\x0a   \
+ background: #19\
+232D;\x0a}\x0a\x0aQSlider\
+:focus {\x0a    bor\
+der: none;\x0a}\x0a\x0aQS\
+lider::groove:ho\
+rizontal {\x0a    b\
+ackground: #3241\
+4B;\x0a    border: \
+1px solid #32414\
+B;\x0a    height: 4\
+px;\x0a    margin: \
+0px;\x0a    border-\
+radius: 4px;\x0a}\x0a\x0a\
+QSlider::sub-pag\
+e:horizontal {\x0a \
+   background: #\
+1464A0;\x0a    bord\
+er: 1px solid #3\
+2414B;\x0a    heigh\
+t: 4px;\x0a    marg\
+in: 0px;\x0a    bor\
+der-radius: 4px;\
+\x0a}\x0a\x0aQSlider::sub\
+-page:horizontal\
+:disabled {\x0a    \
+background: #145\
+06E;\x0a}\x0a\x0aQSlider:\
+:handle:horizont\
+al {\x0a    backgro\
+und: #787878;\x0a  \
+  border: 1px so\
+lid #32414B;\x0a   \
+ width: 8px;\x0a   \
+ height: 8px;\x0a  \
+  margin: -8px 0\
+;\x0a    border-rad\
+ius: 4px;\x0a}\x0a\x0aQSl\
+ider::handle:hor\
+izontal:hover {\x0a\
+    background: \
+#148CD2;\x0a    bor\
+der: 1px solid #\
+148CD2;\x0a}\x0a\x0aQSlid\
+er::groove:verti\
+cal {\x0a    backgr\
+ound: #32414B;\x0a \
    border: 1px s\
 olid #32414B;\x0a  \
-  width: 8px;\x0a  \
-  height: 8px;\x0a \
-   margin: -8px \
-0;\x0a    border-ra\
-dius: 4px;\x0a}\x0a\x0aQS\
-lider::handle:ho\
-rizontal:hover {\
-\x0a    background:\
- #148CD2;\x0a    bo\
-rder: 1px solid \
-#148CD2;\x0a}\x0a\x0aQSli\
-der::groove:vert\
+  width: 4px;\x0a  \
+  margin: 0px;\x0a \
+   border-radius\
+: 4px;\x0a}\x0a\x0aQSlide\
+r::sub-page:vert\
 ical {\x0a    backg\
-round: #32414B;\x0a\
+round: #1464A0;\x0a\
     border: 1px \
 solid #32414B;\x0a \
    width: 4px;\x0a \
@@ -2954,821 +2966,823 @@ solid #32414B;\x0a \
     border-radiu\
 s: 4px;\x0a}\x0a\x0aQSlid\
 er::sub-page:ver\
+tical:disabled {\
+\x0a    background:\
+ #14506E;\x0a}\x0a\x0aQSl\
+ider::handle:ver\
 tical {\x0a    back\
-ground: #1464A0;\
+ground: #787878;\
 \x0a    border: 1px\
  solid #32414B;\x0a\
-    width: 4px;\x0a\
-    margin: 0px;\
-\x0a    border-radi\
-us: 4px;\x0a}\x0a\x0aQSli\
-der::sub-page:ve\
-rtical:disabled \
-{\x0a    background\
-: #14506E;\x0a}\x0a\x0aQS\
-lider::handle:ve\
-rtical {\x0a    bac\
-kground: #787878\
-;\x0a    border: 1p\
-x solid #32414B;\
-\x0a    width: 8px;\
-\x0a    height: 8px\
-;\x0a    margin: 0 \
--8px;\x0a    border\
--radius: 4px;\x0a}\x0a\
-\x0aQSlider::handle\
-:vertical:hover \
-{\x0a    background\
-: #148CD2;\x0a    b\
-order: 1px solid\
- #148CD2;\x0a}\x0a\x0a/* \
-QLine ----------\
-----------------\
-----------------\
-----------------\
--------- */\x0a\x0aQLi\
-neEdit {\x0a    bac\
-kground-color: #\
-19232D;\x0a    padd\
-ing-top: 2px;   \
-  /* This QLineE\
-dit fix  103, 11\
-1 */\x0a    padding\
--bottom: 2px;  /\
-* This QLineEdit\
- fix  103, 111 *\
-/\x0a    padding-le\
-ft: 4px;\x0a    pad\
-ding-right: 4px;\
-\x0a    border-styl\
-e: solid;\x0a    bo\
+    width: 8px;\x0a\
+    height: 8px;\
+\x0a    margin: 0 -\
+8px;\x0a    border-\
+radius: 4px;\x0a}\x0a\x0a\
+QSlider::handle:\
+vertical:hover {\
+\x0a    background:\
+ #148CD2;\x0a    bo\
 rder: 1px solid \
-#32414B;\x0a    bor\
-der-radius: 4px;\
-\x0a    color: #F0F\
-0F0;\x0a}\x0a\x0aQLineEdi\
-t:disabled {\x0a   \
- background-colo\
-r: #19232D;\x0a    \
-color: #787878;\x0a\
-}\x0a\x0aQLineEdit:hov\
-er{\x0a    border: \
-1px solid #148CD\
-2;\x0a    color: #F\
-0F0F0;\x0a}\x0a\x0aQLineE\
-dit:selected{\x0a  \
-  background: #1\
-464A0;\x0a    color\
-: #32414B;\x0a}\x0a\x0a/*\
- QTabWiget -----\
+#148CD2;\x0a}\x0a\x0a/* Q\
+Line -----------\
 ----------------\
 ----------------\
 ----------------\
---------- */\x0a\x0aQT\
-abWidget {\x0a    p\
-adding: 2px;\x0a   \
- selection-backg\
-round-color: #32\
-414B;\x0a}\x0a\x0aQTabWid\
-get QFrame{\x0a    \
-border: 1px soli\
-d #32414B;\x0a}\x0a\x0aQT\
-abWidget::pane {\
-\x0a    border: 1px\
- solid #32414B;\x0a\
-    border-radiu\
-s: 4px;\x0a    padd\
-ing: 2px;\x0a    ma\
-rgin: 0px;\x0a}\x0a\x0aQT\
-abWidget::pane:s\
-elected {\x0a    ba\
-ckground-color: \
-#32414B;\x0a    bor\
+------- */\x0a\x0aQLin\
+eEdit {\x0a    back\
+ground-color: #1\
+9232D;\x0a    paddi\
+ng-top: 2px;    \
+ /* This QLineEd\
+it fix  103, 111\
+ */\x0a    padding-\
+bottom: 2px;  /*\
+ This QLineEdit \
+fix  103, 111 */\
+\x0a    padding-lef\
+t: 4px;\x0a    padd\
+ing-right: 4px;\x0a\
+    border-style\
+: solid;\x0a    bor\
 der: 1px solid #\
-1464A0;\x0a}\x0a\x0a/* QT\
-abBar ----------\
+32414B;\x0a    bord\
+er-radius: 4px;\x0a\
+    color: #F0F0\
+F0;\x0a}\x0a\x0aQLineEdit\
+:disabled {\x0a    \
+background-color\
+: #19232D;\x0a    c\
+olor: #787878;\x0a}\
+\x0a\x0aQLineEdit:hove\
+r{\x0a    border: 1\
+px solid #148CD2\
+;\x0a    color: #F0\
+F0F0;\x0a}\x0a\x0aQLineEd\
+it:selected{\x0a   \
+ background: #14\
+64A0;\x0a    color:\
+ #32414B;\x0a}\x0a\x0a/* \
+QTabWiget ------\
 ----------------\
+----------------\
+----------------\
+-------- */\x0a\x0aQTa\
+bWidget {\x0a    pa\
+dding: 2px;\x0a    \
+selection-backgr\
+ound-color: #324\
+14B;\x0a}\x0a\x0aQTabWidg\
+et QFrame{\x0a    b\
+order: 1px solid\
+ #32414B;\x0a}\x0a\x0aQTa\
+bWidget::pane {\x0a\
+    border: 1px \
+solid #32414B;\x0a \
+   border-radius\
+: 4px;\x0a    paddi\
+ng: 2px;\x0a    mar\
+gin: 0px;\x0a}\x0a\x0aQTa\
+bWidget::pane:se\
+lected {\x0a    bac\
+kground-color: #\
+32414B;\x0a    bord\
+er: 1px solid #1\
+464A0;\x0a}\x0a\x0a/* QTa\
+bBar -----------\
+----------------\
+----------------\
+----------------\
+----- */\x0a\x0aQTabBa\
+r {\x0a    qpropert\
+y-drawBase: 0;\x0a \
+   border-radius\
+: 4px;\x0a    margi\
+n: 0px;\x0a    padd\
+ing: 2px;\x0a    bo\
+rder: 0;\x0a\x0a    /*\
+ left: 5px; move\
+ to the right by\
+ 5px - removed f\
+or fix */\x0a    }\x0a\
+\x0aQTabBar::close-\
+button {\x0a    bor\
+der: 0;\x0a    marg\
+in: 2px;\x0a    pad\
+ding: 0;\x0a    ima\
+ge: url(:/qss_ic\
+ons/rc/close.png\
+);\x0a}\x0a\x0aQTabBar::c\
+lose-button:hove\
+r {\x0a    image: u\
+rl(:/qss_icons/r\
+c/close-hover.pn\
+g);\x0a}\x0a\x0aQTabBar::\
+close-button:pre\
+ssed {\x0a    image\
+: url(:/qss_icon\
+s/rc/close-press\
+ed.png);\x0a}\x0a\x0a/* Q\
+TabBar::tab - se\
+lected ---------\
 ----------------\
 ----------------\
 ------ */\x0a\x0aQTabB\
-ar {\x0a    qproper\
-ty-drawBase: 0;\x0a\
-    border-radiu\
-s: 4px;\x0a    marg\
-in: 0px;\x0a    pad\
-ding: 2px;\x0a    b\
-order: 0;\x0a\x0a    /\
-* left: 5px; mov\
-e to the right b\
-y 5px - removed \
-for fix */\x0a    }\
-\x0a\x0aQTabBar::close\
--button {\x0a    bo\
-rder: 0;\x0a    mar\
-gin: 2px;\x0a    pa\
-dding: 0;\x0a    im\
-age: url(:/qss_i\
-cons/rc/close.pn\
-g);\x0a}\x0a\x0aQTabBar::\
-close-button:hov\
-er {\x0a    image: \
-url(:/qss_icons/\
-rc/close-hover.p\
-ng);\x0a}\x0a\x0aQTabBar:\
-:close-button:pr\
-essed {\x0a    imag\
-e: url(:/qss_ico\
-ns/rc/close-pres\
-sed.png);\x0a}\x0a\x0a/* \
-QTabBar::tab - s\
-elected --------\
-----------------\
-----------------\
-------- */\x0a\x0aQTab\
-Bar::tab:top:sel\
-ected:disabled {\
-\x0a    border-bott\
-om: 3px solid #1\
+ar::tab:top:sele\
+cted:disabled {\x0a\
+    border-botto\
+m: 3px solid #14\
+506E;\x0a    color:\
+ #787878;\x0a    ba\
+ckground-color: \
+#32414B;\x0a}\x0a\x0aQTab\
+Bar::tab:bottom:\
+selected:disable\
+d {\x0a    border-t\
+op: 3px solid #1\
 4506E;\x0a    color\
 : #787878;\x0a    b\
 ackground-color:\
  #32414B;\x0a}\x0a\x0aQTa\
-bBar::tab:bottom\
-:selected:disabl\
-ed {\x0a    border-\
-top: 3px solid #\
-14506E;\x0a    colo\
-r: #787878;\x0a    \
-background-color\
-: #32414B;\x0a}\x0a\x0aQT\
-abBar::tab:left:\
+bBar::tab:left:s\
+elected:disabled\
+ {\x0a    border-le\
+ft: 3px solid #1\
+4506E;\x0a    color\
+: #787878;\x0a    b\
+ackground-color:\
+ #32414B;\x0a}\x0a\x0aQTa\
+bBar::tab:right:\
 selected:disable\
-d {\x0a    border-l\
-eft: 3px solid #\
-14506E;\x0a    colo\
-r: #787878;\x0a    \
-background-color\
-: #32414B;\x0a}\x0a\x0aQT\
-abBar::tab:right\
-:selected:disabl\
-ed {\x0a    border-\
-right: 3px solid\
- #14506E;\x0a    co\
-lor: #787878;\x0a  \
-  background-col\
-or: #32414B;\x0a}\x0a\x0a\
-/* QTabBar::tab \
-- !selected and \
-disabled -------\
-----------------\
------------ */\x0a\x0a\
-QTabBar::tab:top\
-:!selected:disab\
-led {\x0a    border\
--bottom: 3px sol\
-id #19232D;\x0a    \
-color: #787878;\x0a\
-    background-c\
-olor: #19232D;\x0a}\
-\x0a\x0aQTabBar::tab:b\
-ottom:!selected:\
-disabled {\x0a    b\
-order-top: 3px s\
-olid #19232D;\x0a  \
-  color: #787878\
-;\x0a    background\
--color: #19232D;\
-\x0a}\x0a\x0aQTabBar::tab\
-:left:!selected:\
-disabled {\x0a    b\
-order-right: 3px\
- solid #19232D;\x0a\
-    color: #7878\
-78;\x0a    backgrou\
-nd-color: #19232\
-D;\x0a}\x0a\x0aQTabBar::t\
-ab:right:!select\
-ed:disabled {\x0a  \
-  border-left: 3\
-px solid #19232D\
-;\x0a    color: #78\
-7878;\x0a    backgr\
-ound-color: #192\
-32D;\x0a}\x0a\x0a/* QTabB\
-ar::tab - select\
-ed -------------\
-----------------\
-----------------\
--- */\x0a\x0aQTabBar::\
-tab:top:!selecte\
-d {\x0a    border-b\
-ottom: 2px solid\
- #19232D;\x0a    ma\
-rgin-top: 2px;\x0a}\
-\x0a\x0aQTabBar::tab:b\
-ottom:!selected \
-{\x0a    border-top\
-: 2px solid #192\
-32D;\x0a    margin-\
-bottom: 3px;\x0a}\x0a\x0a\
-QTabBar::tab:lef\
-t:!selected {\x0a  \
-  border-left: 2\
-px solid #19232D\
-;\x0a    margin-rig\
-ht: 2px;\x0a}\x0a\x0aQTab\
-Bar::tab:right:!\
-selected {\x0a    b\
-order-right: 2px\
- solid #19232D;\x0a\
-    margin-left:\
- 2px;\x0a}\x0a\x0a\x0aQTabBa\
-r::tab:top {\x0a   \
+d {\x0a    border-r\
+ight: 3px solid \
+#14506E;\x0a    col\
+or: #787878;\x0a   \
  background-colo\
-r: #32414B;\x0a    \
-color: #F0F0F0;\x0a\
-    margin-left:\
- 2px;\x0a    paddin\
-g-left: 4px;\x0a   \
- padding-right: \
-4px;\x0a    padding\
--top: 2px;\x0a    p\
-adding-bottom: 2\
-px;\x0a    min-widt\
-h: 5px;\x0a    bord\
-er-bottom: 3px s\
-olid #32414B;\x0a  \
-  border-top-lef\
-t-radius: 3px;\x0a \
-   border-top-ri\
-ght-radius: 3px;\
-\x0a}\x0a\x0aQTabBar::tab\
-:top:selected {\x0a\
-    background-c\
-olor: #505F69;\x0a \
-   color: #F0F0F\
-0;\x0a    border-bo\
-ttom: 3px solid \
-#1464A0;\x0a    bor\
-der-top-left-rad\
-ius: 3px;\x0a    bo\
-rder-top-right-r\
-adius: 3px;\x0a}\x0a\x0aQ\
+r: #32414B;\x0a}\x0a\x0a/\
+* QTabBar::tab -\
+ !selected and d\
+isabled --------\
+----------------\
+---------- */\x0a\x0aQ\
 TabBar::tab:top:\
+!selected:disabl\
+ed {\x0a    border-\
+bottom: 3px soli\
+d #19232D;\x0a    c\
+olor: #787878;\x0a \
+   background-co\
+lor: #19232D;\x0a}\x0a\
+\x0aQTabBar::tab:bo\
+ttom:!selected:d\
+isabled {\x0a    bo\
+rder-top: 3px so\
+lid #19232D;\x0a   \
+ color: #787878;\
+\x0a    background-\
+color: #19232D;\x0a\
+}\x0a\x0aQTabBar::tab:\
+left:!selected:d\
+isabled {\x0a    bo\
+rder-right: 3px \
+solid #19232D;\x0a \
+   color: #78787\
+8;\x0a    backgroun\
+d-color: #19232D\
+;\x0a}\x0a\x0aQTabBar::ta\
+b:right:!selecte\
+d:disabled {\x0a   \
+ border-left: 3p\
+x solid #19232D;\
+\x0a    color: #787\
+878;\x0a    backgro\
+und-color: #1923\
+2D;\x0a}\x0a\x0a/* QTabBa\
+r::tab - selecte\
+d --------------\
+----------------\
+----------------\
+- */\x0a\x0aQTabBar::t\
+ab:top:!selected\
+ {\x0a    border-bo\
+ttom: 2px solid \
+#19232D;\x0a    mar\
+gin-top: 2px;\x0a}\x0a\
+\x0aQTabBar::tab:bo\
+ttom:!selected {\
+\x0a    border-top:\
+ 2px solid #1923\
+2D;\x0a    margin-b\
+ottom: 3px;\x0a}\x0a\x0aQ\
+TabBar::tab:left\
+:!selected {\x0a   \
+ border-left: 2p\
+x solid #19232D;\
+\x0a    margin-righ\
+t: 2px;\x0a}\x0a\x0aQTabB\
+ar::tab:right:!s\
+elected {\x0a    bo\
+rder-right: 2px \
+solid #19232D;\x0a \
+   margin-left: \
+2px;\x0a}\x0a\x0a\x0aQTabBar\
+::tab:top {\x0a    \
+background-color\
+: #32414B;\x0a    c\
+olor: #F0F0F0;\x0a \
+   margin-left: \
+2px;\x0a    padding\
+-left: 4px;\x0a    \
+padding-right: 4\
+px;\x0a    padding-\
+top: 2px;\x0a    pa\
+dding-bottom: 2p\
+x;\x0a    min-width\
+: 5px;\x0a    borde\
+r-bottom: 3px so\
+lid #32414B;\x0a   \
+ border-top-left\
+-radius: 3px;\x0a  \
+  border-top-rig\
+ht-radius: 3px;\x0a\
+}\x0a\x0aQTabBar::tab:\
+top:selected {\x0a \
+   background-co\
+lor: #505F69;\x0a  \
+  color: #F0F0F0\
+;\x0a    border-bot\
+tom: 3px solid #\
+1464A0;\x0a    bord\
+er-top-left-radi\
+us: 3px;\x0a    bor\
+der-top-right-ra\
+dius: 3px;\x0a}\x0a\x0aQT\
+abBar::tab:top:!\
+selected:hover {\
+\x0a    border: 1px\
+ solid #148CD2;\x0a\
+    border-botto\
+m: 3px solid #14\
+8CD2;\x0a    paddin\
+g: 0px;\x0a}\x0a\x0aQTabB\
+ar::tab:bottom {\
+\x0a    color: #F0F\
+0F0;\x0a    border-\
+top: 3px solid #\
+32414B;\x0a    back\
+ground-color: #3\
+2414B;\x0a    margi\
+n-left: 2px;\x0a   \
+ padding-left: 4\
+px;\x0a    padding-\
+right: 4px;\x0a    \
+padding-top: 2px\
+;\x0a    padding-bo\
+ttom: 2px;\x0a    b\
+order-bottom-lef\
+t-radius: 3px;\x0a \
+   border-bottom\
+-right-radius: 3\
+px;\x0a    min-widt\
+h: 5px;\x0a}\x0a\x0aQTabB\
+ar::tab:bottom:s\
+elected {\x0a    co\
+lor: #F0F0F0;\x0a  \
+  background-col\
+or: #505F69;\x0a   \
+ border-top: 3px\
+ solid #1464A0;\x0a\
+    border-botto\
+m-left-radius: 3\
+px;\x0a    border-b\
+ottom-right-radi\
+us: 3px;\x0a}\x0a\x0aQTab\
+Bar::tab:bottom:\
 !selected:hover \
 {\x0a    border: 1p\
 x solid #148CD2;\
-\x0a    border-bott\
-om: 3px solid #1\
-48CD2;\x0a    paddi\
-ng: 0px;\x0a}\x0a\x0aQTab\
-Bar::tab:bottom \
-{\x0a    color: #F0\
-F0F0;\x0a    border\
--top: 3px solid \
-#32414B;\x0a    bac\
-kground-color: #\
-32414B;\x0a    marg\
-in-left: 2px;\x0a  \
-  padding-left: \
-4px;\x0a    padding\
--right: 4px;\x0a   \
- padding-top: 2p\
-x;\x0a    padding-b\
-ottom: 2px;\x0a    \
-border-bottom-le\
-ft-radius: 3px;\x0a\
-    border-botto\
-m-right-radius: \
-3px;\x0a    min-wid\
-th: 5px;\x0a}\x0a\x0aQTab\
-Bar::tab:bottom:\
-selected {\x0a    c\
-olor: #F0F0F0;\x0a \
-   background-co\
-lor: #505F69;\x0a  \
-  border-top: 3p\
-x solid #1464A0;\
-\x0a    border-bott\
-om-left-radius: \
-3px;\x0a    border-\
-bottom-right-rad\
-ius: 3px;\x0a}\x0a\x0aQTa\
-bBar::tab:bottom\
-:!selected:hover\
- {\x0a    border: 1\
-px solid #148CD2\
-;\x0a    border-top\
-: 3px solid #148\
-CD2;\x0a    padding\
-: 0px;\x0a}\x0a\x0aQTabBa\
-r::tab:left {\x0a  \
-  color: #F0F0F0\
-;\x0a    background\
--color: #32414B;\
-\x0a    margin-top:\
- 2px;\x0a    paddin\
-g-left: 2px;\x0a   \
- padding-right: \
-2px;\x0a    padding\
--top: 4px;\x0a    p\
-adding-bottom: 4\
-px;\x0a    border-t\
-op-right-radius:\
- 3px;\x0a    border\
--bottom-right-ra\
-dius: 3px;\x0a    m\
-in-height: 5px;\x0a\
-}\x0a\x0aQTabBar::tab:\
-left:selected {\x0a\
-    color: #F0F0\
-F0;\x0a    backgrou\
-nd-color: #505F6\
-9;\x0a    border-le\
-ft: 3px solid #1\
-464A0;\x0a    borde\
-r-top-right-radi\
-us: 3px;\x0a    bor\
-der-bottom-right\
--radius: 3px;\x0a}\x0a\
-\x0aQTabBar::tab:le\
-ft:!selected:hov\
-er {\x0a    border:\
- 1px solid #148C\
-D2;\x0a    border-l\
-eft: 3px solid #\
-148CD2;\x0a    padd\
-ing: 0px;\x0a}\x0a\x0aQTa\
-bBar::tab:right \
-{\x0a    color: #F0\
-F0F0;\x0a    backgr\
-ound-color: #324\
-14B;\x0a    margin-\
-top: 2px;\x0a    pa\
-dding-left: 2px;\
-\x0a    padding-rig\
-ht: 2px;\x0a    pad\
-ding-top: 4px;\x0a \
-   padding-botto\
-m: 4px;\x0a    bord\
-er-top-left-radi\
-us: 3px;\x0a    bor\
-der-bottom-left-\
-radius: 3px;\x0a   \
- min-height: 5px\
-;\x0a}\x0a\x0aQTabBar::ta\
-b:right:selected\
- {\x0a    color: #F\
-0F0F0;\x0a    backg\
-round-color: #50\
-5F69;\x0a    border\
--right: 3px soli\
-d #1464A0;\x0a    b\
-order-top-left-r\
-adius: 3px;\x0a    \
-border-bottom-le\
-ft-radius: 3px;\x0a\
-}\x0a\x0aQTabBar::tab:\
-right:!selected:\
-hover {\x0a    bord\
-er: 1px solid #1\
-48CD2;\x0a    borde\
-r-right: 3px sol\
-id #148CD2;\x0a    \
-padding: 0px;\x0a}\x0a\
-\x0aQTabBar QToolBu\
-tton::right-arro\
-w:enabled {\x0a    \
-image: url(:/qss\
-_icons/rc/right_\
-arrow.png);\x0a}\x0a\x0aQ\
-TabBar QToolButt\
-on::left-arrow:e\
-nabled {\x0a    ima\
-ge: url(:/qss_ic\
-ons/rc/left_arro\
-w.png);\x0a}\x0a\x0aQTabB\
-ar QToolButton::\
-right-arrow:disa\
-bled {\x0a    image\
-: url(:/qss_icon\
-s/rc/right_arrow\
-_disabled.png);\x0a\
-}\x0a\x0aQTabBar QTool\
-Button::left-arr\
-ow:disabled {\x0a  \
-  image: url(:/q\
-ss_icons/rc/left\
-_arrow_disabled.\
-png);\x0a}\x0a\x0a\x0a/*  So\
-me examples from\
- internet to che\
-ck\x0a\x0aQTabBar::tab\
-Button() and QTa\
-bBar::tabIcon()\x0a\
-QTabBar::tear {w\
-idth: 0px; borde\
-r: none;}\x0aQTabBa\
-r::tear {image: \
-url(tear_indicat\
-or.png);}\x0aQTabBa\
-r::scroller{widt\
-h:85pix;}\x0aQTabBa\
-r QToolbutton{ba\
-ckground-color:\x22\
-light blue\x22;}\x0a\x0aB\
-ut that left the\
- buttons transpa\
-rant.\x0aLooked con\
-fusing as the ta\
-b buttons migrat\
-ed behind the sc\
-roller buttons.\x0a\
-So we had to col\
-or the back grou\
-nd of the scroll\
-er buttons\x0a*/\x0a\x0a/\
-* QDockWiget ---\
-----------------\
-----------------\
-----------------\
----------- */\x0a\x0aQ\
-DockWidget {\x0a   \
- outline: 1px so\
-lid #32414B;\x0a   \
- background-colo\
-r: #19232D;\x0a    \
-border: 1px soli\
-d #32414B;\x0a    b\
-order-radius: 4p\
-x;\x0a    titlebar-\
-close-icon: url(\
-:/qss_icons/rc/c\
-lose.png);\x0a    t\
-itlebar-normal-i\
-con: url(:/qss_i\
-cons/rc/undock.p\
-ng);\x0a}\x0a\x0aQDockWid\
-get::title {\x0a   \
- padding: 6px;  \
- /* better size \
-for title bar */\
-\x0a    border: non\
-e;\x0a    backgroun\
-d-color: #32414B\
-;\x0a}\x0a\x0aQDockWidget\
-::close-button {\
+\x0a    border-top:\
+ 3px solid #148C\
+D2;\x0a    padding:\
+ 0px;\x0a}\x0a\x0aQTabBar\
+::tab:left {\x0a   \
+ color: #F0F0F0;\
 \x0a    background-\
 color: #32414B;\x0a\
-    border-radiu\
-s: 4px;\x0a    bord\
-er: none;\x0a}\x0a\x0aQDo\
-ckWidget::close-\
-button:hover {\x0a \
-   border: 1px s\
-olid #32414B;\x0a}\x0a\
-\x0aQDockWidget::cl\
-ose-button:press\
-ed {\x0a    border:\
- 1px solid #3241\
-4B;\x0a}\x0a\x0aQDockWidg\
-et::float-button\
- {\x0a    backgroun\
-d-color: #32414B\
-;\x0a    border-rad\
-ius: 4px;\x0a    bo\
-rder: none;\x0a}\x0a\x0aQ\
-DockWidget::floa\
-t-button:hover {\
-\x0a    border: 1px\
- solid #32414B;\x0a\
-}\x0a\x0aQDockWidget::\
-float-button:pre\
-ssed {\x0a    borde\
-r: 1px solid #32\
-414B;\x0a}\x0a\x0a\x0a/* QTr\
-eeView QTableVie\
-w QListView ----\
+    margin-top: \
+2px;\x0a    padding\
+-left: 2px;\x0a    \
+padding-right: 2\
+px;\x0a    padding-\
+top: 4px;\x0a    pa\
+dding-bottom: 4p\
+x;\x0a    border-to\
+p-right-radius: \
+3px;\x0a    border-\
+bottom-right-rad\
+ius: 3px;\x0a    mi\
+n-height: 5px;\x0a}\
+\x0a\x0aQTabBar::tab:l\
+eft:selected {\x0a \
+   color: #F0F0F\
+0;\x0a    backgroun\
+d-color: #505F69\
+;\x0a    border-lef\
+t: 3px solid #14\
+64A0;\x0a    border\
+-top-right-radiu\
+s: 3px;\x0a    bord\
+er-bottom-right-\
+radius: 3px;\x0a}\x0a\x0a\
+QTabBar::tab:lef\
+t:!selected:hove\
+r {\x0a    border: \
+1px solid #148CD\
+2;\x0a    border-le\
+ft: 3px solid #1\
+48CD2;\x0a    paddi\
+ng: 0px;\x0a}\x0a\x0aQTab\
+Bar::tab:right {\
+\x0a    color: #F0F\
+0F0;\x0a    backgro\
+und-color: #3241\
+4B;\x0a    margin-t\
+op: 2px;\x0a    pad\
+ding-left: 2px;\x0a\
+    padding-righ\
+t: 2px;\x0a    padd\
+ing-top: 4px;\x0a  \
+  padding-bottom\
+: 4px;\x0a    borde\
+r-top-left-radiu\
+s: 3px;\x0a    bord\
+er-bottom-left-r\
+adius: 3px;\x0a    \
+min-height: 5px;\
+\x0a}\x0a\x0aQTabBar::tab\
+:right:selected \
+{\x0a    color: #F0\
+F0F0;\x0a    backgr\
+ound-color: #505\
+F69;\x0a    border-\
+right: 3px solid\
+ #1464A0;\x0a    bo\
+rder-top-left-ra\
+dius: 3px;\x0a    b\
+order-bottom-lef\
+t-radius: 3px;\x0a}\
+\x0a\x0aQTabBar::tab:r\
+ight:!selected:h\
+over {\x0a    borde\
+r: 1px solid #14\
+8CD2;\x0a    border\
+-right: 3px soli\
+d #148CD2;\x0a    p\
+adding: 0px;\x0a}\x0a\x0a\
+QTabBar QToolBut\
+ton::right-arrow\
+:enabled {\x0a    i\
+mage: url(:/qss_\
+icons/rc/right_a\
+rrow.png);\x0a}\x0a\x0aQT\
+abBar QToolButto\
+n::left-arrow:en\
+abled {\x0a    imag\
+e: url(:/qss_ico\
+ns/rc/left_arrow\
+.png);\x0a}\x0a\x0aQTabBa\
+r QToolButton::r\
+ight-arrow:disab\
+led {\x0a    image:\
+ url(:/qss_icons\
+/rc/right_arrow_\
+disabled.png);\x0a}\
+\x0a\x0aQTabBar QToolB\
+utton::left-arro\
+w:disabled {\x0a   \
+ image: url(:/qs\
+s_icons/rc/left_\
+arrow_disabled.p\
+ng);\x0a}\x0a\x0a\x0a/*  Som\
+e examples from \
+internet to chec\
+k\x0a\x0aQTabBar::tabB\
+utton() and QTab\
+Bar::tabIcon()\x0aQ\
+TabBar::tear {wi\
+dth: 0px; border\
+: none;}\x0aQTabBar\
+::tear {image: u\
+rl(tear_indicato\
+r.png);}\x0aQTabBar\
+::scroller{width\
+:85pix;}\x0aQTabBar\
+ QToolbutton{bac\
+kground-color:\x22l\
+ight blue\x22;}\x0a\x0aBu\
+t that left the \
+buttons transpar\
+ant.\x0aLooked conf\
+using as the tab\
+ buttons migrate\
+d behind the scr\
+oller buttons.\x0aS\
+o we had to colo\
+r the back groun\
+d of the scrolle\
+r buttons\x0a*/\x0a\x0a/*\
+ QDockWiget ----\
 ----------------\
 ----------------\
------ */\x0a\x0aQTreeV\
-iew:branch:selec\
-ted,\x0aQTreeView:b\
-ranch:hover {\x0a  \
-  background: ur\
-l(:/qss_icons/rc\
-/transparent.png\
-);\x0a}\x0a\x0aQTreeView:\
-:branch:has-sibl\
-ings:!adjoins-it\
-em {\x0a    border-\
-image: url(:/qss\
-_icons/rc/transp\
-arent.png);\x0a}\x0a\x0aQ\
-TreeView::branch\
-:has-siblings:ad\
-joins-item {\x0a   \
- border-image: u\
-rl(:/qss_icons/r\
-c/transparent.pn\
-g);\x0a}\x0a\x0aQTreeView\
-::branch:!has-ch\
-ildren:!has-sibl\
-ings:adjoins-ite\
+----------------\
+--------- */\x0a\x0aQD\
+ockWidget {\x0a    \
+outline: 1px sol\
+id #32414B;\x0a    \
+background-color\
+: #19232D;\x0a    b\
+order: 1px solid\
+ #32414B;\x0a    bo\
+rder-radius: 4px\
+;\x0a    titlebar-c\
+lose-icon: url(:\
+/qss_icons/rc/cl\
+ose.png);\x0a    ti\
+tlebar-normal-ic\
+on: url(:/qss_ic\
+ons/rc/undock.pn\
+g);\x0a}\x0a\x0aQDockWidg\
+et::title {\x0a    \
+padding: 6px;   \
+/* better size f\
+or title bar */\x0a\
+    border: none\
+;\x0a    background\
+-color: #32414B;\
+\x0a}\x0a\x0aQDockWidget:\
+:close-button {\x0a\
+    background-c\
+olor: #32414B;\x0a \
+   border-radius\
+: 4px;\x0a    borde\
+r: none;\x0a}\x0a\x0aQDoc\
+kWidget::close-b\
+utton:hover {\x0a  \
+  border: 1px so\
+lid #32414B;\x0a}\x0a\x0a\
+QDockWidget::clo\
+se-button:presse\
+d {\x0a    border: \
+1px solid #32414\
+B;\x0a}\x0a\x0aQDockWidge\
+t::float-button \
+{\x0a    background\
+-color: #32414B;\
+\x0a    border-radi\
+us: 4px;\x0a    bor\
+der: none;\x0a}\x0a\x0aQD\
+ockWidget::float\
+-button:hover {\x0a\
+    border: 1px \
+solid #32414B;\x0a}\
+\x0a\x0aQDockWidget::f\
+loat-button:pres\
+sed {\x0a    border\
+: 1px solid #324\
+14B;\x0a}\x0a\x0a\x0a/* QTre\
+eView QTableView\
+ QListView -----\
+----------------\
+----------------\
+---- */\x0a\x0aQTreeVi\
+ew:branch:select\
+ed,\x0aQTreeView:br\
+anch:hover {\x0a   \
+ background: url\
+(:/qss_icons/rc/\
+transparent.png)\
+;\x0a}\x0a\x0aQTreeView::\
+branch:has-sibli\
+ngs:!adjoins-ite\
 m {\x0a    border-i\
 mage: url(:/qss_\
 icons/rc/transpa\
 rent.png);\x0a}\x0a\x0aQT\
 reeView::branch:\
-has-children:!ha\
-s-siblings:close\
-d,\x0aQTreeView::br\
-anch:closed:has-\
-children:has-sib\
-lings {\x0a    imag\
-e: url(:/qss_ico\
-ns/rc/branch_clo\
-sed.png);\x0a}\x0a\x0aQTr\
-eeView::branch:o\
-pen:has-children\
-:!has-siblings,\x0a\
-QTreeView::branc\
-h:open:has-child\
-ren:has-siblings\
- {\x0a    image: ur\
+has-siblings:adj\
+oins-item {\x0a    \
+border-image: ur\
 l(:/qss_icons/rc\
-/branch_open.png\
+/transparent.png\
 );\x0a}\x0a\x0aQTreeView:\
-:branch:has-chil\
-dren:!has-siblin\
-gs:closed:hover,\
-\x0aQTreeView::bran\
-ch:closed:has-ch\
-ildren:has-sibli\
-ngs:hover {\x0a    \
-image: url(:/qss\
-_icons/rc/branch\
-_closed-on.png);\
-\x0a}\x0a\x0aQTreeView::b\
-ranch:open:has-c\
-hildren:!has-sib\
-lings:hover,\x0aQTr\
-eeView::branch:o\
-pen:has-children\
-:has-siblings:ho\
-ver {\x0a    image:\
- url(:/qss_icons\
-/rc/branch_open-\
-on.png);\x0a}\x0a\x0aQLis\
-tView::item:!sel\
-ected:hover,\x0aQTr\
-eeView::item:!se\
-lected:hover,\x0aQT\
-ableView::item:!\
-selected:hover,\x0a\
-QColumnView::ite\
-m:!selected:hove\
-r {\x0a    outline:\
- 0;\x0a    color: #\
-148CD2;\x0a    back\
-ground-color: #3\
-2414B;\x0a}\x0a\x0aQListV\
-iew::item:select\
-ed:hover,\x0aQTreeV\
-iew::item:select\
-ed:hover,\x0aQTable\
-View::item:selec\
-ted:hover,\x0aQColu\
-mnView::item:sel\
-ected:hover {\x0a  \
-  background: #1\
-464A0;\x0a    color\
-:  #19232D;\x0a}\x0a\x0aQ\
-TreeView::indica\
-tor:checked,\x0aQLi\
-stView::indicato\
-r:checked {\x0a    \
-image: url(:/qss\
-_icons/rc/checkb\
-ox_checked.png);\
-\x0a}\x0a\x0aQTreeView::i\
-ndicator:uncheck\
-ed,\x0aQListView::i\
-ndicator:uncheck\
-ed {\x0a    image: \
+:branch:!has-chi\
+ldren:!has-sibli\
+ngs:adjoins-item\
+ {\x0a    border-im\
+age: url(:/qss_i\
+cons/rc/transpar\
+ent.png);\x0a}\x0a\x0aQTr\
+eeView::branch:h\
+as-children:!has\
+-siblings:closed\
+,\x0aQTreeView::bra\
+nch:closed:has-c\
+hildren:has-sibl\
+ings {\x0a    image\
+: url(:/qss_icon\
+s/rc/branch_clos\
+ed.png);\x0a}\x0a\x0aQTre\
+eView::branch:op\
+en:has-children:\
+!has-siblings,\x0aQ\
+TreeView::branch\
+:open:has-childr\
+en:has-siblings \
+{\x0a    image: url\
+(:/qss_icons/rc/\
+branch_open.png)\
+;\x0a}\x0a\x0aQTreeView::\
+branch:has-child\
+ren:!has-sibling\
+s:closed:hover,\x0a\
+QTreeView::branc\
+h:closed:has-chi\
+ldren:has-siblin\
+gs:hover {\x0a    i\
+mage: url(:/qss_\
+icons/rc/branch_\
+closed-on.png);\x0a\
+}\x0a\x0aQTreeView::br\
+anch:open:has-ch\
+ildren:!has-sibl\
+ings:hover,\x0aQTre\
+eView::branch:op\
+en:has-children:\
+has-siblings:hov\
+er {\x0a    image: \
 url(:/qss_icons/\
-rc/checkbox_unch\
-ecked.png);\x0a}\x0a\x0aQ\
-TreeView::indica\
-tor:checked:hove\
-r,\x0aQTreeView::in\
-dicator:checked:\
-focus,\x0aQTreeView\
-::indicator:chec\
-ked:pressed,\x0aQLi\
-stView::indicato\
-r:checked:hover,\
-\x0aQListView::indi\
-cator:checked:fo\
-cus,\x0aQListView::\
-indicator:checke\
-d:pressed {\x0a    \
-image: url(:/qss\
-_icons/rc/checkb\
-ox_checked_focus\
-.png);\x0a}\x0a\x0aQTreeV\
-iew::indicator:u\
-nchecked:hover,\x0a\
-QTreeView::indic\
-ator:unchecked:f\
-ocus,\x0aQTreeView:\
-:indicator:unche\
-cked:pressed,\x0aQL\
-istView::indicat\
-or:unchecked:hov\
-er,\x0aQListView::i\
-ndicator:uncheck\
-ed:focus,\x0aQListV\
-iew::indicator:u\
-nchecked:pressed\
- {\x0a    image: ur\
-l(:/qss_icons/rc\
-/checkbox_unchec\
-ked_focus.png);\x0a\
+rc/branch_open-o\
+n.png);\x0a}\x0a\x0aQList\
+View::item:!sele\
+cted:hover,\x0aQTre\
+eView::item:!sel\
+ected:hover,\x0aQTa\
+bleView::item:!s\
+elected:hover,\x0aQ\
+ColumnView::item\
+:!selected:hover\
+ {\x0a    outline: \
+0;\x0a    color: #1\
+48CD2;\x0a    backg\
+round-color: #32\
+414B;\x0a}\x0a\x0aQListVi\
+ew::item:selecte\
+d:hover,\x0aQTreeVi\
+ew::item:selecte\
+d:hover,\x0aQTableV\
+iew::item:select\
+ed:hover,\x0aQColum\
+nView::item:sele\
+cted:hover {\x0a   \
+ background: #14\
+64A0;\x0a    color:\
+  #19232D;\x0a}\x0a\x0aQT\
+reeView::indicat\
+or:checked,\x0aQLis\
+tView::indicator\
+:checked {\x0a    i\
+mage: url(:/qss_\
+icons/rc/checkbo\
+x_checked.png);\x0a\
 }\x0a\x0aQTreeView::in\
-dicator:indeterm\
-inate:hover,\x0aQTr\
-eeView::indicato\
-r:indeterminate:\
-focus,\x0aQTreeView\
-::indicator:inde\
-terminate:presse\
+dicator:unchecke\
 d,\x0aQListView::in\
-dicator:indeterm\
-inate:hover,\x0aQLi\
-stView::indicato\
-r:indeterminate:\
-focus,\x0aQListView\
-::indicator:inde\
-terminate:presse\
+dicator:unchecke\
 d {\x0a    image: u\
 rl(:/qss_icons/r\
-c/checkbox_indet\
-erminate_focus.p\
-ng);\x0a}\x0a\x0aQTreeVie\
-w::indicator:ind\
-eterminate,\x0aQLis\
+c/checkbox_unche\
+cked.png);\x0a}\x0a\x0aQT\
+reeView::indicat\
+or:checked:hover\
+,\x0aQTreeView::ind\
+icator:checked:f\
+ocus,\x0aQTreeView:\
+:indicator:check\
+ed:pressed,\x0aQLis\
 tView::indicator\
-:indeterminate {\
-\x0a    image: url(\
-:/qss_icons/rc/c\
-heckbox_indeterm\
-inate.png);\x0a}\x0a\x0aQ\
-ListView,\x0aQTreeV\
-iew,\x0aQTableView,\
-\x0aQColumnView {\x0a \
-   background-co\
-lor: #19232D;\x0a  \
-  border: 1px so\
-lid #32414B;\x0a   \
- color: #F0F0F0;\
-\x0a    gridline-co\
-lor: #32414B;\x0a  \
-  border-radius:\
- 4px;\x0a}\x0a\x0aQListVi\
-ew:disabled,\x0aQTr\
-eeView:disabled,\
-\x0aQTableView:disa\
-bled,\x0aQColumnVie\
-w:disabled {\x0a   \
- background-colo\
-r: #19232D;\x0a    \
-color: #787878;\x0a\
-}\x0a\x0aQListView:sel\
-ected,\x0aQTreeView\
-:selected,\x0aQTabl\
-eView:selected,\x0a\
-QColumnView:sele\
-cted {\x0a    backg\
-round: #1464A0;\x0a\
-    color: #3241\
-4B;\x0a}\x0a\x0aQListView\
-:hover,\x0aQTreeVie\
-w::hover,\x0aQTable\
-View::hover,\x0aQCo\
-lumnView::hover \
-{\x0a    background\
--color: #19232D;\
-\x0a    border: 1px\
- solid #148CD2;\x0a\
-}\x0a\x0aQListView::it\
-em:pressed,\x0aQTre\
-eView::item:pres\
-sed,\x0aQTableView:\
-:item:pressed,\x0aQ\
-ColumnView::item\
-:pressed {\x0a    b\
-ackground-color:\
- #1464A0;\x0a}\x0a\x0aQLi\
-stView::item:sel\
+:checked:hover,\x0a\
+QListView::indic\
+ator:checked:foc\
+us,\x0aQListView::i\
+ndicator:checked\
+:pressed {\x0a    i\
+mage: url(:/qss_\
+icons/rc/checkbo\
+x_checked_focus.\
+png);\x0a}\x0a\x0aQTreeVi\
+ew::indicator:un\
+checked:hover,\x0aQ\
+TreeView::indica\
+tor:unchecked:fo\
+cus,\x0aQTreeView::\
+indicator:unchec\
+ked:pressed,\x0aQLi\
+stView::indicato\
+r:unchecked:hove\
+r,\x0aQListView::in\
+dicator:unchecke\
+d:focus,\x0aQListVi\
+ew::indicator:un\
+checked:pressed \
+{\x0a    image: url\
+(:/qss_icons/rc/\
+checkbox_uncheck\
+ed_focus.png);\x0a}\
+\x0a\x0aQTreeView::ind\
+icator:indetermi\
+nate:hover,\x0aQTre\
+eView::indicator\
+:indeterminate:f\
+ocus,\x0aQTreeView:\
+:indicator:indet\
+erminate:pressed\
+,\x0aQListView::ind\
+icator:indetermi\
+nate:hover,\x0aQLis\
+tView::indicator\
+:indeterminate:f\
+ocus,\x0aQListView:\
+:indicator:indet\
+erminate:pressed\
+ {\x0a    image: ur\
+l(:/qss_icons/rc\
+/checkbox_indete\
+rminate_focus.pn\
+g);\x0a}\x0a\x0aQTreeView\
+::indicator:inde\
+terminate,\x0aQList\
+View::indicator:\
+indeterminate {\x0a\
+    image: url(:\
+/qss_icons/rc/ch\
+eckbox_indetermi\
+nate.png);\x0a}\x0a\x0aQL\
+istView,\x0aQTreeVi\
+ew,\x0aQTableView,\x0a\
+QColumnView {\x0a  \
+  background-col\
+or: #19232D;\x0a   \
+ border: 1px sol\
+id #32414B;\x0a    \
+color: #F0F0F0;\x0a\
+    gridline-col\
+or: #32414B;\x0a   \
+ border-radius: \
+4px;\x0a}\x0a\x0aQListVie\
+w:disabled,\x0aQTre\
+eView:disabled,\x0a\
+QTableView:disab\
+led,\x0aQColumnView\
+:disabled {\x0a    \
+background-color\
+: #19232D;\x0a    c\
+olor: #787878;\x0a}\
+\x0a\x0aQListView:sele\
+cted,\x0aQTreeView:\
+selected,\x0aQTable\
+View:selected,\x0aQ\
+ColumnView:selec\
+ted {\x0a    backgr\
+ound: #1464A0;\x0a \
+   color: #32414\
+B;\x0a}\x0a\x0aQListView:\
+hover,\x0aQTreeView\
+::hover,\x0aQTableV\
+iew::hover,\x0aQCol\
+umnView::hover {\
+\x0a    background-\
+color: #19232D;\x0a\
+    border: 1px \
+solid #148CD2;\x0a}\
+\x0a\x0aQListView::ite\
+m:pressed,\x0aQTree\
+View::item:press\
+ed,\x0aQTableView::\
+item:pressed,\x0aQC\
+olumnView::item:\
+pressed {\x0a    ba\
+ckground-color: \
+#1464A0;\x0a}\x0a\x0aQLis\
+tView::item:sele\
+cted:active,\x0aQTr\
+eeView::item:sel\
 ected:active,\x0aQT\
-reeView::item:se\
-lected:active,\x0aQ\
-TableView::item:\
-selected:active,\
-\x0aQColumnView::it\
-em:selected:acti\
-ve {\x0a    backgro\
-und-color: #1464\
-A0;\x0a}\x0a\x0aQTableCor\
-nerButton::secti\
-on {\x0a    backgro\
-und-color: #1923\
-2D;\x0a    border: \
-1px transparent \
+ableView::item:s\
+elected:active,\x0a\
+QColumnView::ite\
+m:selected:activ\
+e {\x0a    backgrou\
+nd-color: #1464A\
+0;\x0a}\x0a\x0aQTableCorn\
+erButton::sectio\
+n {\x0a    backgrou\
+nd-color: #19232\
+D;\x0a    border: 1\
+px transparent #\
+32414B;\x0a    bord\
+er-radius: 0px;\x0a\
+}\x0a\x0a/* QHeaderVie\
+w --------------\
+----------------\
+----------------\
+-------------- *\
+/\x0a\x0aQHeaderView {\
+\x0a    background-\
+color: #32414B;\x0a\
+    border: 0px \
+transparent #324\
+14B;\x0a    padding\
+: 0px;\x0a    margi\
+n: 0px;\x0a    bord\
+er-radius: 0px;\x0a\
+}\x0a\x0aQHeaderView:d\
+isabled {\x0a    ba\
+ckground-color: \
 #32414B;\x0a    bor\
-der-radius: 0px;\
-\x0a}\x0a\x0a/* QHeaderVi\
-ew -------------\
-----------------\
-----------------\
---------------- \
-*/\x0a\x0aQHeaderView \
+der: 1px transpa\
+rent #32414B;\x0a  \
+  padding: 2px;\x0a\
+}\x0a\x0aQHeaderView::\
+section {\x0a    ba\
+ckground-color: \
+#32414B;\x0a    col\
+or: #F0F0F0;\x0a   \
+ padding: 2px;\x0a \
+   border-radius\
+: 0px;\x0a    text-\
+align: left;\x0a}\x0a\x0a\
+QHeaderView::sec\
+tion:checked {\x0a \
+   color: #F0F0F\
+0;\x0a    backgroun\
+d-color: #1464A0\
+;\x0a}\x0a\x0aQHeaderView\
+::section:checke\
+d:disabled {\x0a   \
+ color: #787878;\
+\x0a    background-\
+color: #14506E;\x0a\
+}\x0a\x0aQHeaderView::\
+section::horizon\
+tal:disabled,\x0aQH\
+eaderView::secti\
+on::vertical:dis\
+abled {\x0a    colo\
+r: #787878;\x0a}\x0a\x0aQ\
+HeaderView::sect\
+ion::vertical::f\
+irst,\x0aQHeaderVie\
+w::section::vert\
+ical::only-one {\
+\x0a    border-top:\
+ 1px solid #3241\
+4B;\x0a}\x0a\x0aQHeaderVi\
+ew::section::ver\
+tical {\x0a    bord\
+er-top: 1px soli\
+d #19232D;\x0a}\x0a\x0aQH\
+eaderView::secti\
+on::horizontal::\
+first,\x0aQHeaderVi\
+ew::section::hor\
+izontal::only-on\
+e {\x0a    border-l\
+eft: 1px solid #\
+32414B;\x0a}\x0a\x0aQHead\
+erView::section:\
+:horizontal {\x0a  \
+  border-left: 1\
+px solid #19232D\
+;\x0a}\x0a\x0a/* Those se\
+ttings (border/w\
+idth/height/back\
+ground-color) so\
+lve bug */\x0a/* tr\
+ansparent arrow \
+background and s\
+ize */\x0a\x0aQHeaderV\
+iew::down-arrow \
 {\x0a    background\
 -color: #32414B;\
-\x0a    border: 0px\
- transparent #32\
-414B;\x0a    paddin\
-g: 0px;\x0a    marg\
-in: 0px;\x0a    bor\
-der-radius: 0px;\
-\x0a}\x0a\x0aQHeaderView:\
-disabled {\x0a    b\
-ackground-color:\
- #32414B;\x0a    bo\
-rder: 1px transp\
-arent #32414B;\x0a \
-   padding: 2px;\
-\x0a}\x0a\x0aQHeaderView:\
-:section {\x0a    b\
-ackground-color:\
- #32414B;\x0a    co\
-lor: #F0F0F0;\x0a  \
-  padding: 2px;\x0a\
-    border-radiu\
-s: 0px;\x0a    text\
--align: left;\x0a}\x0a\
-\x0aQHeaderView::se\
-ction:checked {\x0a\
-    color: #F0F0\
-F0;\x0a    backgrou\
-nd-color: #1464A\
-0;\x0a}\x0a\x0aQHeaderVie\
-w::section:check\
-ed:disabled {\x0a  \
-  color: #787878\
-;\x0a    background\
--color: #14506E;\
-\x0a}\x0a\x0aQHeaderView:\
-:section::horizo\
-ntal:disabled,\x0aQ\
-HeaderView::sect\
-ion::vertical:di\
-sabled {\x0a    col\
-or: #787878;\x0a}\x0a\x0a\
-QHeaderView::sec\
-tion::vertical::\
-first,\x0aQHeaderVi\
-ew::section::ver\
-tical::only-one \
-{\x0a    border-top\
-: 1px solid #324\
-14B;\x0a}\x0a\x0aQHeaderV\
-iew::section::ve\
-rtical {\x0a    bor\
-der-top: 1px sol\
-id #19232D;\x0a}\x0a\x0aQ\
-HeaderView::sect\
-ion::horizontal:\
-:first,\x0aQHeaderV\
-iew::section::ho\
-rizontal::only-o\
-ne {\x0a    border-\
-left: 1px solid \
-#32414B;\x0a}\x0a\x0aQHea\
-derView::section\
-::horizontal {\x0a \
-   border-left: \
-1px solid #19232\
-D;\x0a}\x0a\x0a/* Those s\
-ettings (border/\
-width/height/bac\
-kground-color) s\
-olve bug */\x0a/* t\
-ransparent arrow\
- background and \
-size */\x0a\x0aQHeader\
-View::down-arrow\
+\x0a    width: 16px\
+;\x0a    height: 16\
+px;\x0a    border-r\
+ight: 1px solid \
+#19232D;\x0a    ima\
+ge: url(:/qss_ic\
+ons/rc/down_arro\
+w.png);\x0a}\x0a\x0aQHead\
+erView::up-arrow\
  {\x0a    backgroun\
 d-color: #32414B\
 ;\x0a    width: 16p\
@@ -3777,213 +3791,202 @@ x;\x0a    height: 1\
 right: 1px solid\
  #19232D;\x0a    im\
 age: url(:/qss_i\
-cons/rc/down_arr\
-ow.png);\x0a}\x0a\x0aQHea\
-derView::up-arro\
-w {\x0a    backgrou\
-nd-color: #32414\
-B;\x0a    width: 16\
-px;\x0a    height: \
-16px;\x0a    border\
--right: 1px soli\
-d #19232D;\x0a    i\
-mage: url(:/qss_\
-icons/rc/up_arro\
-w.png);\x0a}\x0a\x0a/* QT\
-oolBox ---------\
+cons/rc/up_arrow\
+.png);\x0a}\x0a\x0a/* QTo\
+olBox ----------\
 ----------------\
 ----------------\
 ----------------\
------ */\x0a\x0aQToolB\
-ox {\x0a    padding\
-: 0px;\x0a    borde\
-r: 1px solid #32\
-414B;\x0a}\x0a\x0aQToolBo\
-x::selected {\x0a  \
-  padding: 0px;\x0a\
-    border: 2px \
-solid #1464A0;\x0a}\
-\x0a\x0aQToolBox::tab \
+---- */\x0a\x0aQToolBo\
+x {\x0a    padding:\
+ 0px;\x0a    border\
+: 1px solid #324\
+14B;\x0a}\x0a\x0aQToolBox\
+::selected {\x0a   \
+ padding: 0px;\x0a \
+   border: 2px s\
+olid #1464A0;\x0a}\x0a\
+\x0aQToolBox::tab {\
+\x0a    background-\
+color: #19232D;\x0a\
+    border: 1px \
+solid #32414B;\x0a \
+   color: #F0F0F\
+0;\x0a    border-to\
+p-left-radius: 4\
+px;\x0a    border-t\
+op-right-radius:\
+ 4px;\x0a}\x0a\x0aQToolBo\
+x::tab:disabled \
+{\x0a    color: #78\
+7878;\x0a}\x0a\x0aQToolBo\
+x::tab:selected \
 {\x0a    background\
--color: #19232D;\
+-color: #505F69;\
+\x0a    border-bott\
+om: 2px solid #1\
+464A0;\x0a}\x0a\x0aQToolB\
+ox::tab:!selecte\
+d {\x0a    backgrou\
+nd-color: #32414\
+B;\x0a    border-bo\
+ttom: 2px solid \
+#32414B;\x0a}\x0a\x0aQToo\
+lBox::tab:select\
+ed:disabled {\x0a  \
+  background-col\
+or: #32414B;\x0a   \
+ border-bottom: \
+2px solid #14506\
+E;\x0a}\x0a\x0aQToolBox::\
+tab:!selected:di\
+sabled {\x0a    bac\
+kground-color: #\
+19232D;\x0a}\x0a\x0aQTool\
+Box::tab:hover {\
+\x0a    border-colo\
+r: #148CD2;\x0a    \
+border-bottom: 2\
+px solid #148CD2\
+;\x0a}\x0a\x0aQToolBox QS\
+crollArea QWidge\
+t QWidget {\x0a    \
+padding: 0px;\x0a  \
+  background-col\
+or: #19232D;\x0a}\x0a\x0a\
+/* QFrame ------\
+----------------\
+----------------\
+----------------\
+----------- */\x0a\x0a\
+QFrame {\x0a    bor\
+der-radius: 4px;\
 \x0a    border: 1px\
  solid #32414B;\x0a\
-    color: #F0F0\
-F0;\x0a    border-t\
-op-left-radius: \
-4px;\x0a    border-\
-top-right-radius\
-: 4px;\x0a}\x0a\x0aQToolB\
-ox::tab:disabled\
- {\x0a    color: #7\
-87878;\x0a}\x0a\x0aQToolB\
-ox::tab:selected\
- {\x0a    backgroun\
-d-color: #505F69\
-;\x0a    border-bot\
-tom: 2px solid #\
-1464A0;\x0a}\x0a\x0aQTool\
-Box::tab:!select\
-ed {\x0a    backgro\
-und-color: #3241\
-4B;\x0a    border-b\
-ottom: 2px solid\
- #32414B;\x0a}\x0a\x0aQTo\
-olBox::tab:selec\
-ted:disabled {\x0a \
-   background-co\
-lor: #32414B;\x0a  \
-  border-bottom:\
- 2px solid #1450\
-6E;\x0a}\x0a\x0aQToolBox:\
-:tab:!selected:d\
-isabled {\x0a    ba\
-ckground-color: \
-#19232D;\x0a}\x0a\x0aQToo\
-lBox::tab:hover \
-{\x0a    border-col\
-or: #148CD2;\x0a   \
- border-bottom: \
-2px solid #148CD\
-2;\x0a}\x0a\x0aQToolBox Q\
-ScrollArea QWidg\
-et QWidget {\x0a   \
- padding: 0px;\x0a \
-   background-co\
-lor: #19232D;\x0a}\x0a\
-\x0a/* QFrame -----\
-----------------\
-----------------\
-----------------\
------------- */\x0a\
-\x0aQFrame {\x0a    bo\
-rder-radius: 4px\
-;\x0a    border: 1p\
-x solid #32414B;\
-\x0a}\x0a\x0aQFrame[frame\
-Shape=\x220\x22] {\x0a   \
- border-radius: \
-4px;\x0a    border:\
- 1px transparent\
- #32414B;\x0a}\x0a\x0aQFr\
-ame[height=\x223\x22],\
-\x0aQFrame[width=\x223\
-\x22] {\x0a    backgro\
-und-color: #1923\
-2D;\x0a}\x0a\x0a/* QSplit\
-ter ------------\
-----------------\
-----------------\
-----------------\
--- */\x0a\x0aQSplitter\
- {\x0a    backgroun\
-d-color: #32414B\
-;\x0a    spacing: 0\
-;\x0a    padding: 0\
-;\x0a    margin: 0;\
-\x0a}\x0a\x0aQSplitter::s\
-eparator {\x0a    b\
-ackground-color:\
- #32414B;\x0a    bo\
-rder: 0 solid #1\
-9232D;\x0a    spaci\
-ng: 0;\x0a    paddi\
-ng: 1px;\x0a    mar\
-gin: 0;\x0a}\x0a\x0aQSpli\
-tter::separator:\
-hover {\x0a    back\
-ground-color: #7\
-87878;\x0a}\x0a\x0aQSplit\
-ter::separator:h\
-orizontal {\x0a    \
-width: 5px;\x0a    \
-image: url(:/qss\
-_icons/rc/Vsepar\
-toolbar.png);\x0a}\x0a\
-\x0aQSplitter::sepa\
-rator:vertical {\
-\x0a    height: 5px\
-;\x0a    image: url\
-(:/qss_icons/rc/\
-Hsepartoolbar.pn\
-g);\x0a}\x0a\x0a\x0a/* QDate\
-Edit------------\
-----------------\
-----------------\
-----------------\
--- */\x0a\x0aQDateEdit\
- {\x0a    selection\
--background-colo\
-r: #1464A0;\x0a    \
-border-style: so\
-lid;\x0a    border:\
- 1px solid #3241\
-4B;\x0a    border-r\
-adius: 4px;\x0a    \
-padding-top: 2px\
-;     /* This fi\
-x  #103, #111*/\x0a\
-    padding-bott\
-om: 2px;  /* Thi\
-s fix  #103, #11\
-1*/\x0a    padding-\
-left: 4px;\x0a    p\
-adding-right: 4p\
-x;\x0a    min-width\
-: 10px;\x0a}\x0a\x0aQDate\
-Edit:on {\x0a    se\
-lection-backgrou\
-nd-color: #1464A\
-0;\x0a}\x0a\x0aQDateEdit:\
-:drop-down {\x0a   \
- subcontrol-orig\
-in: padding;\x0a   \
- subcontrol-posi\
-tion: top right;\
-\x0a    width: 20px\
-;\x0a    border-top\
--right-radius: 3\
-px;\x0a    border-b\
-ottom-right-radi\
-us: 3px;\x0a}\x0a\x0aQDat\
-eEdit::down-arro\
-w {\x0a    image: u\
-rl(:/qss_icons/r\
-c/down_arrow_dis\
-abled.png);\x0a}\x0a\x0aQ\
-DateEdit::down-a\
-rrow:on,\x0aQDateEd\
-it::down-arrow:h\
-over,\x0aQDateEdit:\
-:down-arrow:focu\
-s {\x0a    image: u\
-rl(:/qss_icons/r\
-c/down_arrow.png\
-);\x0a}\x0a\x0aQDateEdit \
-QAbstractItemVie\
-w {\x0a    backgrou\
+}\x0a\x0aQFrame[frameS\
+hape=\x220\x22] {\x0a    \
+border-radius: 4\
+px;\x0a    border: \
+1px transparent \
+#32414B;\x0a}\x0a\x0aQFra\
+me[height=\x223\x22],\x0a\
+QFrame[width=\x223\x22\
+] {\x0a    backgrou\
 nd-color: #19232\
-D;\x0a    border-ra\
-dius: 4px;\x0a    b\
-order: 1px solid\
- #32414B;\x0a    se\
-lection-backgrou\
-nd-color: #1464A\
-0;\x0a}\x0a\x0aQAbstractV\
-iew:hover{\x0a    b\
-order: 1px solid\
- #148CD2;\x0a    co\
-lor: #F0F0F0;\x0a}\x0a\
-\x0aQAbstractView:s\
-elected {\x0a    ba\
-ckground: #1464A\
-0;\x0a    color: #3\
-2414B;\x0a}\x0a\x0a\x0aPlotW\
-idget {\x0a    padd\
-ing: 0px; /* to \
-fix cut labels i\
-n plots #134 */\x0a\
-}\x0a\
+D;\x0a}\x0a\x0a/* QSplitt\
+er -------------\
+----------------\
+----------------\
+----------------\
+- */\x0a\x0aQSplitter \
+{\x0a    background\
+-color: #32414B;\
+\x0a    spacing: 0;\
+\x0a    padding: 0;\
+\x0a    margin: 0;\x0a\
+}\x0a\x0aQSplitter::se\
+parator {\x0a    ba\
+ckground-color: \
+#32414B;\x0a    bor\
+der: 0 solid #19\
+232D;\x0a    spacin\
+g: 0;\x0a    paddin\
+g: 1px;\x0a    marg\
+in: 0;\x0a}\x0a\x0aQSplit\
+ter::separator:h\
+over {\x0a    backg\
+round-color: #78\
+7878;\x0a}\x0a\x0aQSplitt\
+er::separator:ho\
+rizontal {\x0a    w\
+idth: 5px;\x0a    i\
+mage: url(:/qss_\
+icons/rc/Vsepart\
+oolbar.png);\x0a}\x0a\x0a\
+QSplitter::separ\
+ator:vertical {\x0a\
+    height: 5px;\
+\x0a    image: url(\
+:/qss_icons/rc/H\
+separtoolbar.png\
+);\x0a}\x0a\x0a\x0a/* QDateE\
+dit-------------\
+----------------\
+----------------\
+----------------\
+- */\x0a\x0aQDateEdit \
+{\x0a    selection-\
+background-color\
+: #1464A0;\x0a    b\
+order-style: sol\
+id;\x0a    border: \
+1px solid #32414\
+B;\x0a    border-ra\
+dius: 4px;\x0a    p\
+adding-top: 2px;\
+     /* This fix\
+  #103, #111*/\x0a \
+   padding-botto\
+m: 2px;  /* This\
+ fix  #103, #111\
+*/\x0a    padding-l\
+eft: 4px;\x0a    pa\
+dding-right: 4px\
+;\x0a    min-width:\
+ 10px;\x0a}\x0a\x0aQDateE\
+dit:on {\x0a    sel\
+ection-backgroun\
+d-color: #1464A0\
+;\x0a}\x0a\x0aQDateEdit::\
+drop-down {\x0a    \
+subcontrol-origi\
+n: padding;\x0a    \
+subcontrol-posit\
+ion: top right;\x0a\
+    width: 20px;\
+\x0a    border-top-\
+right-radius: 3p\
+x;\x0a    border-bo\
+ttom-right-radiu\
+s: 3px;\x0a}\x0a\x0aQDate\
+Edit::down-arrow\
+ {\x0a    image: ur\
+l(:/qss_icons/rc\
+/down_arrow_disa\
+bled.png);\x0a}\x0a\x0aQD\
+ateEdit::down-ar\
+row:on,\x0aQDateEdi\
+t::down-arrow:ho\
+ver,\x0aQDateEdit::\
+down-arrow:focus\
+ {\x0a    image: ur\
+l(:/qss_icons/rc\
+/down_arrow.png)\
+;\x0a}\x0a\x0aQDateEdit Q\
+AbstractItemView\
+ {\x0a    backgroun\
+d-color: #19232D\
+;\x0a    border-rad\
+ius: 4px;\x0a    bo\
+rder: 1px solid \
+#32414B;\x0a    sel\
+ection-backgroun\
+d-color: #1464A0\
+;\x0a}\x0a\x0aQAbstractVi\
+ew:hover{\x0a    bo\
+rder: 1px solid \
+#148CD2;\x0a    col\
+or: #F0F0F0;\x0a}\x0a\x0a\
+QAbstractView:se\
+lected {\x0a    bac\
+kground: #1464A0\
+;\x0a    color: #32\
+414B;\x0a}\x0a\x0a\x0aPlotWi\
+dget {\x0a    paddi\
+ng: 0px; /* to f\
+ix cut labels in\
+ plots #134 */\x0a}\
+\x0a\
 "
 
 qt_resource_name = b"\
@@ -3999,16 +4002,16 @@ qt_resource_name = b"\
 \x00\x00\x07\x83\
 \x00r\
 \x00c\
-\x00\x1a\
-\x05\x11\xe0\xe7\
+\x00\x19\
+\x08>\xcc\x07\
+\x00s\
+\x00t\x00y\x00l\x00e\x00s\x00h\x00e\x00e\x00t\x00-\x00b\x00r\x00a\x00n\x00c\x00h\
+\x00-\x00e\x00n\x00d\x00.\x00p\x00n\x00g\
+\x00\x16\
+\x01u\xcc\x87\
 \x00c\
-\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00_\
-\x00f\x00o\x00c\x00u\x00s\x00.\x00p\x00n\x00g\
-\x00\x11\
-\x08\x8cj\xa7\
-\x00H\
-\x00s\x00e\x00p\x00a\x00r\x00t\x00o\x00o\x00l\x00b\x00a\x00r\x00.\x00p\x00n\x00g\
-\
+\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\
+\x00d\x00.\x00p\x00n\x00g\
 \x00\x1a\
 \x0e\xbc\xc3g\
 \x00r\
@@ -4019,169 +4022,169 @@ qt_resource_name = b"\
 \x00r\
 \x00a\x00d\x00i\x00o\x00_\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00.\x00p\x00n\x00g\
 \
-\x00\x0f\
-\x01\xf4\x81G\
+\x00\x09\
+\x06\x98\x83'\
 \x00c\
-\x00l\x00o\x00s\x00e\x00-\x00h\x00o\x00v\x00e\x00r\x00.\x00p\x00n\x00g\
-\x00\x1a\
-\x01!\xebG\
-\x00s\
-\x00t\x00y\x00l\x00e\x00s\x00h\x00e\x00e\x00t\x00-\x00b\x00r\x00a\x00n\x00c\x00h\
-\x00-\x00m\x00o\x00r\x00e\x00.\x00p\x00n\x00g\
-\x00\x0e\
-\x04\xa2\xfc\xa7\
-\x00d\
-\x00o\x00w\x00n\x00_\x00a\x00r\x00r\x00o\x00w\x00.\x00p\x00n\x00g\
-\x00\x11\
-\x08\xc4j\xa7\
-\x00V\
-\x00s\x00e\x00p\x00a\x00r\x00t\x00o\x00o\x00l\x00b\x00a\x00r\x00.\x00p\x00n\x00g\
-\
-\x00\x0c\
-\x06A@\x87\
-\x00s\
-\x00i\x00z\x00e\x00g\x00r\x00i\x00p\x00.\x00p\x00n\x00g\
-\x00\x18\
-\x03\x8e\xdeg\
-\x00r\
-\x00i\x00g\x00h\x00t\x00_\x00a\x00r\x00r\x00o\x00w\x00_\x00d\x00i\x00s\x00a\x00b\
-\x00l\x00e\x00d\x00.\x00p\x00n\x00g\
+\x00l\x00o\x00s\x00e\x00.\x00p\x00n\x00g\
+\x00\x15\
+\x0f\xf3\xc0\x07\
+\x00u\
+\x00p\x00_\x00a\x00r\x00r\x00o\x00w\x00_\x00d\x00i\x00s\x00a\x00b\x00l\x00e\x00d\
+\x00.\x00p\x00n\x00g\
 \x00\x17\
 \x0c\xabQ\x07\
 \x00d\
 \x00o\x00w\x00n\x00_\x00a\x00r\x00r\x00o\x00w\x00_\x00d\x00i\x00s\x00a\x00b\x00l\
 \x00e\x00d\x00.\x00p\x00n\x00g\
+\x00\x0a\
+\x05\x95\xde'\
+\x00u\
+\x00n\x00d\x00o\x00c\x00k\x00.\x00p\x00n\x00g\
+\x00\x0f\
+\x02\x9f\x05\x87\
+\x00r\
+\x00i\x00g\x00h\x00t\x00_\x00a\x00r\x00r\x00o\x00w\x00.\x00p\x00n\x00g\
+\x00\x1f\
+\x0a\xae'G\
+\x00c\
+\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\
+\x00d\x00_\x00d\x00i\x00s\x00a\x00b\x00l\x00e\x00d\x00.\x00p\x00n\x00g\
+\x00\x11\
+\x08\x8cj\xa7\
+\x00H\
+\x00s\x00e\x00p\x00a\x00r\x00t\x00o\x00o\x00l\x00b\x00a\x00r\x00.\x00p\x00n\x00g\
+\
+\x00\x0f\
+\x06S%\xa7\
+\x00b\
+\x00r\x00a\x00n\x00c\x00h\x00_\x00o\x00p\x00e\x00n\x00.\x00p\x00n\x00g\
+\x00\x18\
+\x03\x8e\xdeg\
+\x00r\
+\x00i\x00g\x00h\x00t\x00_\x00a\x00r\x00r\x00o\x00w\x00_\x00d\x00i\x00s\x00a\x00b\
+\x00l\x00e\x00d\x00.\x00p\x00n\x00g\
+\x00\x1c\
+\x08?\xdag\
+\x00c\
+\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\
+\x00d\x00_\x00f\x00o\x00c\x00u\x00s\x00.\x00p\x00n\x00g\
+\x00\x0f\
+\x01\xf4\x81G\
+\x00c\
+\x00l\x00o\x00s\x00e\x00-\x00h\x00o\x00v\x00e\x00r\x00.\x00p\x00n\x00g\
 \x00\x17\
 \x0f\x1e\x9bG\
 \x00r\
 \x00a\x00d\x00i\x00o\x00_\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00_\x00f\x00o\x00c\
 \x00u\x00s\x00.\x00p\x00n\x00g\
-\x00\x1d\
-\x09\x07\x81\x07\
-\x00c\
-\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00_\
-\x00d\x00i\x00s\x00a\x00b\x00l\x00e\x00d\x00.\x00p\x00n\x00g\
 \x00\x14\
-\x0b\xc5\xd7\xc7\
-\x00s\
-\x00t\x00y\x00l\x00e\x00s\x00h\x00e\x00e\x00t\x00-\x00v\x00l\x00i\x00n\x00e\x00.\
-\x00p\x00n\x00g\
-\x00\x11\
-\x0b\xda0\xa7\
+\x06^,\x07\
 \x00b\
-\x00r\x00a\x00n\x00c\x00h\x00_\x00c\x00l\x00o\x00s\x00e\x00d\x00.\x00p\x00n\x00g\
+\x00r\x00a\x00n\x00c\x00h\x00_\x00c\x00l\x00o\x00s\x00e\x00d\x00-\x00o\x00n\x00.\
+\x00p\x00n\x00g\
+\x00\x0c\
+\x06\xe6\xe6g\
+\x00u\
+\x00p\x00_\x00a\x00r\x00r\x00o\x00w\x00.\x00p\x00n\x00g\
+\x00\x11\
+\x08\xc4j\xa7\
+\x00V\
+\x00s\x00e\x00p\x00a\x00r\x00t\x00o\x00o\x00l\x00b\x00a\x00r\x00.\x00p\x00n\x00g\
 \
 \x00\x14\
 \x07\xec\xd1\xc7\
 \x00c\
 \x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00.\
 \x00p\x00n\x00g\
+\x00\x17\
+\x0ce\xce\x07\
+\x00l\
+\x00e\x00f\x00t\x00_\x00a\x00r\x00r\x00o\x00w\x00_\x00d\x00i\x00s\x00a\x00b\x00l\
+\x00e\x00d\x00.\x00p\x00n\x00g\
+\x00\x1a\
+\x05\x11\xe0\xe7\
+\x00c\
+\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00_\
+\x00f\x00o\x00c\x00u\x00s\x00.\x00p\x00n\x00g\
+\x00\x0c\
+\x06A@\x87\
+\x00s\
+\x00i\x00z\x00e\x00g\x00r\x00i\x00p\x00.\x00p\x00n\x00g\
 \x00\x1a\
 \x01\x87\xaeg\
 \x00c\
 \x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00i\x00n\x00d\x00e\x00t\x00e\x00r\x00m\
 \x00i\x00n\x00a\x00t\x00e\x00.\x00p\x00n\x00g\
 \x00\x10\
+\x01\x00\xca\xa7\
+\x00H\
+\x00m\x00o\x00v\x00e\x00t\x00o\x00o\x00l\x00b\x00a\x00r\x00.\x00p\x00n\x00g\
+\x00\x1d\
+\x09\x07\x81\x07\
+\x00c\
+\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00_\
+\x00d\x00i\x00s\x00a\x00b\x00l\x00e\x00d\x00.\x00p\x00n\x00g\
+\x00\x10\
 \x01\x07J\xa7\
 \x00V\
 \x00m\x00o\x00v\x00e\x00t\x00o\x00o\x00l\x00b\x00a\x00r\x00.\x00p\x00n\x00g\
-\x00\x0a\
-\x05\x95\xde'\
-\x00u\
-\x00n\x00d\x00o\x00c\x00k\x00.\x00p\x00n\x00g\
-\x00\x16\
-\x01u\xcc\x87\
+\x00\x0e\
+\x0e\xde\xfa\xc7\
+\x00l\
+\x00e\x00f\x00t\x00_\x00a\x00r\x00r\x00o\x00w\x00.\x00p\x00n\x00g\
+\x00\x11\
+\x0b\xda0\xa7\
+\x00b\
+\x00r\x00a\x00n\x00c\x00h\x00_\x00c\x00l\x00o\x00s\x00e\x00d\x00.\x00p\x00n\x00g\
+\
+\x00\x11\
+\x08\x90\x94g\
 \x00c\
-\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\
-\x00d\x00.\x00p\x00n\x00g\
+\x00l\x00o\x00s\x00e\x00-\x00p\x00r\x00e\x00s\x00s\x00e\x00d\x00.\x00p\x00n\x00g\
+\
+\x00\x0e\
+\x04\xa2\xfc\xa7\
+\x00d\
+\x00o\x00w\x00n\x00_\x00a\x00r\x00r\x00o\x00w\x00.\x00p\x00n\x00g\
+\x00\x1a\
+\x01!\xebG\
+\x00s\
+\x00t\x00y\x00l\x00e\x00s\x00h\x00e\x00e\x00t\x00-\x00b\x00r\x00a\x00n\x00c\x00h\
+\x00-\x00m\x00o\x00r\x00e\x00.\x00p\x00n\x00g\
+\x00\x19\
+\x0bYn\x87\
+\x00r\
+\x00a\x00d\x00i\x00o\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00_\x00f\
+\x00o\x00c\x00u\x00s\x00.\x00p\x00n\x00g\
+\x00\x14\
+\x0b\xc5\xd7\xc7\
+\x00s\
+\x00t\x00y\x00l\x00e\x00s\x00h\x00e\x00e\x00t\x00-\x00v\x00l\x00i\x00n\x00e\x00.\
+\x00p\x00n\x00g\
+\x00\x13\
+\x08\xc8\x96\xe7\
+\x00r\
+\x00a\x00d\x00i\x00o\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00.\x00p\
+\x00n\x00g\
+\x00 \
+\x09\xd7\x1f\xa7\
+\x00c\
+\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00i\x00n\x00d\x00e\x00t\x00e\x00r\x00m\
+\x00i\x00n\x00a\x00t\x00e\x00_\x00f\x00o\x00c\x00u\x00s\x00.\x00p\x00n\x00g\
+\x00\x1c\
+\x01\xe0J\x07\
+\x00r\
+\x00a\x00d\x00i\x00o\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00_\x00d\
+\x00i\x00s\x00a\x00b\x00l\x00e\x00d\x00.\x00p\x00n\x00g\
 \x00\x12\
 \x07\x8f\x9d'\
 \x00b\
 \x00r\x00a\x00n\x00c\x00h\x00_\x00o\x00p\x00e\x00n\x00-\x00o\x00n\x00.\x00p\x00n\
 \x00g\
 \x00\x0f\
-\x06S%\xa7\
-\x00b\
-\x00r\x00a\x00n\x00c\x00h\x00_\x00o\x00p\x00e\x00n\x00.\x00p\x00n\x00g\
-\x00\x0f\
-\x02\x9f\x05\x87\
-\x00r\
-\x00i\x00g\x00h\x00t\x00_\x00a\x00r\x00r\x00o\x00w\x00.\x00p\x00n\x00g\
-\x00\x11\
-\x08\x90\x94g\
-\x00c\
-\x00l\x00o\x00s\x00e\x00-\x00p\x00r\x00e\x00s\x00s\x00e\x00d\x00.\x00p\x00n\x00g\
-\
-\x00\x1f\
-\x0a\xae'G\
-\x00c\
-\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\
-\x00d\x00_\x00d\x00i\x00s\x00a\x00b\x00l\x00e\x00d\x00.\x00p\x00n\x00g\
-\x00\x17\
-\x0ce\xce\x07\
-\x00l\
-\x00e\x00f\x00t\x00_\x00a\x00r\x00r\x00o\x00w\x00_\x00d\x00i\x00s\x00a\x00b\x00l\
-\x00e\x00d\x00.\x00p\x00n\x00g\
-\x00\x19\
-\x08>\xcc\x07\
-\x00s\
-\x00t\x00y\x00l\x00e\x00s\x00h\x00e\x00e\x00t\x00-\x00b\x00r\x00a\x00n\x00c\x00h\
-\x00-\x00e\x00n\x00d\x00.\x00p\x00n\x00g\
-\x00\x14\
-\x06^,\x07\
-\x00b\
-\x00r\x00a\x00n\x00c\x00h\x00_\x00c\x00l\x00o\x00s\x00e\x00d\x00-\x00o\x00n\x00.\
-\x00p\x00n\x00g\
-\x00\x0e\
-\x0e\xde\xfa\xc7\
-\x00l\
-\x00e\x00f\x00t\x00_\x00a\x00r\x00r\x00o\x00w\x00.\x00p\x00n\x00g\
-\x00\x13\
-\x08\xc8\x96\xe7\
-\x00r\
-\x00a\x00d\x00i\x00o\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00.\x00p\
-\x00n\x00g\
-\x00\x0f\
 \x0c\xe2hg\
 \x00t\
 \x00r\x00a\x00n\x00s\x00p\x00a\x00r\x00e\x00n\x00t\x00.\x00p\x00n\x00g\
-\x00\x1c\
-\x01\xe0J\x07\
-\x00r\
-\x00a\x00d\x00i\x00o\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00_\x00d\
-\x00i\x00s\x00a\x00b\x00l\x00e\x00d\x00.\x00p\x00n\x00g\
-\x00\x15\
-\x0f\xf3\xc0\x07\
-\x00u\
-\x00p\x00_\x00a\x00r\x00r\x00o\x00w\x00_\x00d\x00i\x00s\x00a\x00b\x00l\x00e\x00d\
-\x00.\x00p\x00n\x00g\
-\x00\x19\
-\x0bYn\x87\
-\x00r\
-\x00a\x00d\x00i\x00o\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\x00d\x00_\x00f\
-\x00o\x00c\x00u\x00s\x00.\x00p\x00n\x00g\
-\x00\x10\
-\x01\x00\xca\xa7\
-\x00H\
-\x00m\x00o\x00v\x00e\x00t\x00o\x00o\x00l\x00b\x00a\x00r\x00.\x00p\x00n\x00g\
-\x00\x09\
-\x06\x98\x83'\
-\x00c\
-\x00l\x00o\x00s\x00e\x00.\x00p\x00n\x00g\
-\x00\x1c\
-\x08?\xdag\
-\x00c\
-\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00u\x00n\x00c\x00h\x00e\x00c\x00k\x00e\
-\x00d\x00_\x00f\x00o\x00c\x00u\x00s\x00.\x00p\x00n\x00g\
-\x00 \
-\x09\xd7\x1f\xa7\
-\x00c\
-\x00h\x00e\x00c\x00k\x00b\x00o\x00x\x00_\x00i\x00n\x00d\x00e\x00t\x00e\x00r\x00m\
-\x00i\x00n\x00a\x00t\x00e\x00_\x00f\x00o\x00c\x00u\x00s\x00.\x00p\x00n\x00g\
-\x00\x0c\
-\x06\xe6\xe6g\
-\x00u\
-\x00p\x00_\x00a\x00r\x00r\x00o\x00w\x00.\x00p\x00n\x00g\
 \x00\x09\
 \x00(\xad#\
 \x00s\
@@ -4193,45 +4196,45 @@ qt_resource_struct = b"\
 \x00\x00\x00\x00\x00\x02\x00\x00\x00\x01\x00\x00\x00+\
 \x00\x00\x00\x1a\x00\x02\x00\x00\x00\x01\x00\x00\x00\x03\
 \x00\x00\x002\x00\x02\x00\x00\x00'\x00\x00\x00\x04\
-\x00\x00\x06d\x00\x00\x00\x00\x00\x01\x00\x00F\x82\
-\x00\x00\x03b\x00\x00\x00\x00\x00\x01\x00\x00$\x94\
-\x00\x00\x01$\x00\x00\x00\x00\x00\x01\x00\x00\x0b\x8a\
-\x00\x00\x03\xa2\x00\x00\x00\x00\x00\x01\x00\x001\xfd\
-\x00\x00\x03(\x00\x00\x00\x00\x00\x01\x00\x00\x22\xa3\
-\x00\x00\x05\xbe\x00\x00\x00\x00\x00\x01\x00\x00@Y\
-\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x00\x00\x090\
-\x00\x00\x04\x22\x00\x00\x00\x00\x00\x01\x00\x005\x15\
-\x00\x00\x01\xc6\x00\x00\x00\x00\x00\x01\x00\x00\x18\x8d\
-\x00\x00\x01^\x00\x00\x00\x00\x00\x01\x00\x00\x0cD\
+\x00\x00\x04\x86\x00\x00\x00\x00\x00\x01\x00\x00-\x93\
+\x00\x00\x04\xec\x00\x00\x00\x00\x00\x01\x00\x000b\
+\x00\x00\x05\xa6\x00\x00\x00\x00\x00\x01\x00\x00?\xd6\
+\x00\x00\x00t\x00\x00\x00\x00\x00\x01\x00\x00\x00\xe4\
+\x00\x00\x04L\x00\x00\x00\x00\x00\x01\x00\x00+\xa2\
+\x00\x00\x06\xb8\x00\x00\x00\x00\x00\x01\x00\x00G\xe6\
+\x00\x00\x02\xc6\x00\x00\x00\x00\x00\x01\x00\x00\x15\x83\
+\x00\x00\x01\x9e\x00\x00\x00\x00\x00\x01\x00\x00\x10\x19\
+\x00\x00\x02R\x00\x00\x00\x00\x00\x01\x00\x00\x13\xeb\
+\x00\x00\x05\x84\x00\x00\x00\x00\x00\x01\x00\x00?-\
+\x00\x00\x03\xf4\x00\x00\x00\x00\x00\x01\x00\x00*\x1d\
+\x00\x00\x01\x84\x00\x00\x00\x00\x00\x01\x00\x00\x0d\xd3\
+\x00\x00\x04.\x00\x00\x00\x00\x00\x01\x00\x00+\x1d\
+\x00\x00\x02.\x00\x00\x00\x00\x00\x01\x00\x00\x13A\
+\x00\x00\x03\x1e\x00\x00\x00\x00\x00\x01\x00\x00\x1b/\
+\x00\x00\x01\x08\x00\x00\x00\x00\x00\x01\x00\x00\x0a8\
+\x00\x00\x03L\x00\x00\x00\x00\x00\x01\x00\x00\x1b\xc6\
+\x00\x00\x06\xf6\x00\x00\x00\x00\x00\x01\x00\x00J\xe2\
+\x00\x00\x03\x92\x00\x00\x00\x00\x00\x01\x00\x00'\x83\
 \x00\x00\x00<\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\
-\x00\x00\x03\x88\x00\x00\x00\x00\x00\x01\x00\x00/\xb7\
-\x00\x00\x01\xa8\x00\x00\x00\x00\x00\x01\x00\x00\x18\x08\
-\x00\x00\x03\xfe\x00\x00\x00\x00\x00\x01\x00\x004k\
-\x00\x00\x05\x1e\x00\x00\x00\x00\x00\x01\x00\x00;u\
-\x00\x00\x06\x8a\x00\x00\x00\x00\x00\x01\x00\x00Gb\
-\x00\x00\x07&\x00\x00\x00\x00\x00\x01\x00\x00K\xa1\
-\x00\x00\x03\xd4\x00\x00\x00\x00\x00\x01\x00\x003\xd1\
-\x00\x00\x02\xfa\x00\x00\x00\x00\x00\x01\x00\x00 \xb3\
-\x00\x00\x04\xe6\x00\x00\x00\x00\x00\x01\x00\x00:\x91\
-\x00\x00\x06\xa2\x00\x00\x00\x00\x00\x01\x00\x00I\xb0\
-\x00\x00\x00v\x00\x00\x00\x00\x00\x01\x00\x00\x01\x00\
-\x00\x00\x04F\x00\x00\x00\x00\x00\x01\x00\x005\xb9\
-\x00\x00\x01\x80\x00\x00\x00\x00\x00\x01\x00\x00\x0c\xed\
-\x00\x00\x05n\x00\x00\x00\x00\x00\x01\x00\x00<\xb6\
-\x00\x00\x02d\x00\x00\x00\x00\x00\x01\x00\x00\x1d-\
-\x00\x00\x06\xe0\x00\x00\x00\x00\x00\x01\x00\x00J\xa4\
-\x00\x00\x04n\x00\x00\x00\x00\x00\x01\x00\x008\x13\
-\x00\x00\x00\xd8\x00\x00\x00\x00\x00\x01\x00\x00\x05\x80\
-\x00\x00\x06,\x00\x00\x00\x00\x00\x01\x00\x00C\xf8\
-\x00\x00\x02\xa4\x00\x00\x00\x00\x00\x01\x00\x00\x1f\x1c\
-\x00\x00\x02\xd2\x00\x00\x00\x00\x00\x01\x00\x00 \x0f\
-\x00\x00\x04\xb2\x00\x00\x00\x00\x00\x01\x00\x009\xe7\
-\x00\x00\x01\xfc\x00\x00\x00\x00\x00\x01\x00\x00\x191\
-\x00\x00\x05\x9a\x00\x00\x00\x00\x00\x01\x00\x00?\x92\
-\x00\x00\x00\x9e\x00\x00\x00\x00\x00\x01\x00\x00\x01\xb0\
-\x00\x00\x05L\x00\x00\x00\x00\x00\x01\x00\x00<\x0c\
-\x00\x00\x020\x00\x00\x00\x00\x00\x01\x00\x00\x19\xdb\
-\x00\x00\x05\xfc\x00\x00\x00\x00\x00\x01\x00\x00CU\
+\x00\x00\x02\x88\x00\x00\x00\x00\x00\x01\x00\x00\x14\x8f\
+\x00\x00\x02\x06\x00\x00\x00\x00\x00\x01\x00\x00\x12\x91\
+\x00\x00\x05\x5c\x00\x00\x00\x00\x00\x01\x00\x00<\xd3\
+\x00\x00\x03j\x00\x00\x00\x00\x00\x01\x00\x00\x1ch\
+\x00\x00\x06F\x00\x00\x00\x00\x00\x01\x00\x00D\x0d\
+\x00\x00\x04\xac\x00\x00\x00\x00\x00\x01\x00\x00.s\
+\x00\x00\x06r\x00\x00\x00\x00\x00\x01\x00\x00F\xe9\
+\x00\x00\x01\xc2\x00\x00\x00\x00\x00\x01\x00\x00\x10\xbd\
+\x00\x00\x00\xe0\x00\x00\x00\x00\x00\x01\x00\x00\x06\x88\
+\x00\x00\x05\xe0\x00\x00\x00\x00\x00\x01\x00\x00@\x90\
+\x00\x00\x06\x18\x00\x00\x00\x00\x00\x01\x00\x00C\x1a\
+\x00\x00\x054\x00\x00\x00\x00\x00\x01\x00\x00</\
+\x00\x00\x03\xc0\x00\x00\x00\x00\x00\x01\x00\x00)s\
+\x00\x00\x01P\x00\x00\x00\x00\x00\x01\x00\x00\x0d)\
+\x00\x00\x07 \x00\x00\x00\x00\x00\x01\x00\x00K|\
+\x00\x00\x00\xa6\x00\x00\x00\x00\x00\x01\x00\x00\x02\xb8\
+\x00\x00\x05\x12\x00\x00\x00\x00\x00\x01\x00\x00;\x85\
+\x00\x00\x02\xea\x00\x00\x00\x00\x00\x01\x00\x00\x17\xdd\
+\x00\x00\x01 \x00\x00\x00\x00\x00\x01\x00\x00\x0c\x86\
 \x00\x00\x07D\x00\x00\x00\x00\x00\x01\x00\x00LC\
 "
 
