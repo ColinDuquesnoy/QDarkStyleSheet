@@ -1,4 +1,9 @@
 # Changelog
+
+- 2.6.8:
+  - Update color from images, fix #127
+  - Add retina resolution @2x, fix #140
+  - Intermediate version before merge PR #142 adding scripts
 - 2.6.7:
   - Fix combobox indicator and padding #132
   - Fix PyQtGraph plot axes covered by padding #134
