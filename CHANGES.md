@@ -1,6 +1,9 @@
 # Changelog
 
 - 2.6.8:
+  - Fix double border in QtabWidget for pyqt5
+  - Fix widgets border in QTabWidget as QLabel  #141, #123, #126
+  - Fix QTab scroller buttons background #136
   - Update color from images, fix #127
   - Add retina resolution @2x, fix #140
   - Intermediate version before merge PR #142 adding scripts
