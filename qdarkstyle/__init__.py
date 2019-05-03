@@ -55,7 +55,7 @@ import copy
 if sys.version_info >= (3, 4):
     import importlib
 
-__version__ = "2.6.6"
+__version__ = "2.6.8"
 
 
 QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
