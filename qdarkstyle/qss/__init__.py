@@ -20,6 +20,7 @@ class DarkPalette(object):
     COLOR_BACKGROUND_NORMAL = '#32414B'
     COLOR_BACKGROUND_DARK = '#19232D'
     COLOR_FOREGROUND_LIGHT = '#F0F0F0'
+    COLOR_FOREGROUND_NORMAL = '#AAAAAA'
     COLOR_FOREGROUND_DARK = '#787878'
     COLOR_SELECTION_LIGHT = '#148CD2'
     COLOR_SELECTION_NORMAL = '#1464A0'
@@ -38,13 +39,14 @@ class DarkPalette(object):
     W_STATUS_BAR_BACKGROUND_COLOR = COLOR_SELECTION_DARK
 
     @classmethod
-    def _to_dict(cls):
+    def _to_dict(cls, colors_only=False):
         """Convert variables to dictionary."""
         order = [
             'COLOR_BACKGROUND_LIGHT',
             'COLOR_BACKGROUND_NORMAL',
             'COLOR_BACKGROUND_DARK',
             'COLOR_FOREGROUND_LIGHT',
+            'COLOR_FOREGROUND_NORMAL',
             'COLOR_FOREGROUND_DARK',
             'COLOR_SELECTION_LIGHT',
             'COLOR_SELECTION_NORMAL',
@@ -58,6 +60,18 @@ class DarkPalette(object):
         ]
         dic = OrderedDict()
         for var in order:
-            dic[var] = getattr(cls, var)
+            value = getattr(cls, var)
+
+            if colors_only:
+                if not var.startswith('COLOR'):
+                    value = None
+
+            if value:
+                dic[var] = value
 
         return dic
+
+    @classmethod
+    def color_palette(cls):
+        """Retunt the ordered colored palette dictionary."""
+        return cls._to_dict(colors_only=True)

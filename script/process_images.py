@@ -76,18 +76,44 @@ def create_colored_svg(svg_path, temp_svg_path, base_color, new_color):
         fh.write(new_data)
 
 
-def convert_svg_to_png(path_svg, path_png, height, width):
+def convert_svg_to_png(svg_path, png_path, height, width):
     """Convert svg files to png files using Qt."""
     size = QSize(height, width)
-    icon = QIcon(path_svg)
+    icon = QIcon(svg_path)
     pixmap = icon.pixmap(size)
     img = pixmap.toImage()
-    img.save(path_png)
+    img.save(png_path)
+
+
+def create_palette_image():
+    """Create palette image on repo root."""
+    base_palette_svg_path = os.path.join(SVG_PATH, 'palette.svg')
+    palette_svg_path = os.path.join(ROOT_PATH, 'palette.svg')
+    palette_png_path = os.path.join(ROOT_PATH, 'palette.png')
+
+    with open(base_palette_svg_path, 'r') as fh:
+        data = fh.read()
+
+    color_palette = DarkPalette.color_palette()
+    for color_name, color_value in color_palette.items():
+        data = data.replace('{{ ' + color_name + ' }}', color_value.lower())
+
+    with open(palette_svg_path, 'w') as fh:
+        fh.write(data)
+
+    convert_svg_to_png(palette_svg_path, palette_png_path, 4000, 4000)
+    return palette_svg_path, palette_png_path
 
 
 def main():
-    """"""
+    """Run main image processing routine."""
     app = QApplication([])
+
+    palette_svg_path, palette_png_path = create_palette_image()
+    print('\n' + palette_svg_path)
+    print(palette_png_path)
+    print('\n')
+
     temp_dir = tempfile.mkdtemp()
     svg_fnames = [f for f in os.listdir(SVG_PATH) if f.endswith('.svg')]
 
