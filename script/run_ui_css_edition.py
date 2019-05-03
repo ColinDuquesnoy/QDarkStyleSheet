@@ -2,10 +2,15 @@
 # -*- coding: utf-8 -*-
 """Process qrc and ui files, then run example in while loop."""
 
+# Standard library imports
 from __future__ import absolute_import, print_function
-
-import sys
 from subprocess import call
+import os
+import sys
+
+# Constants
+HERE = os.path.abspath(os.path.dirname(__file__))
+REPO_ROOT = os.path.dirname(HERE)
 
 
 def main():
@@ -35,13 +40,16 @@ def main():
         print(sys.argv)
 
         # process qrc files
-        call(['python', 'process_qrc.py'])
+        process_qrc = os.path.join(HERE, 'process_qrc.py')
+        call(['python', process_qrc])
         # process ui files
-        call(['python', 'process_ui.py'])
+        process_ui = os.path.join(HERE, 'process_ui.py')
+        call(['python', process_ui])
         # open dark example
-        dark = call(['python', '../example/example.py'] + sys.argv[1:])
+        example = os.path.join(REPO_ROOT, 'example', 'example.py')
+        dark = call(['python', example] + sys.argv[1:])
         # open no dark example
-        no_dark = call(['python', '../example/example.py', '--no_dark'] + sys.argv[1:])
+        no_dark = call(['python', example, '--no_dark'] + sys.argv[1:])
 
         if dark or no_dark:
             print('Unf! It not worked! Please, check the error(s).')
