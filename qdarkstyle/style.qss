@@ -1185,7 +1185,7 @@ QSlider::groove:vertical {
     border-radius: 4px;
 }
 
-QSlider::sub-page:vertical {
+QSlider::add-page:vertical {
     background: #1464A0;
     border: 1px solid #32414B;
     width: 4px;
@@ -1193,7 +1193,7 @@ QSlider::sub-page:vertical {
     border-radius: 4px;
 }
 
-QSlider::sub-page:vertical:disabled {
+QSlider::add-page:vertical:disabled {
     background: #14506E;
 }
 
