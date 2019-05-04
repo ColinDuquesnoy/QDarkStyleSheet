@@ -1,7 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+A dark style sheet for QtWidgets application.
+"""
 
+# Standard library imports
 from setuptools import setup, find_packages
+
+# Local imports
 from qdarkstyle import __version__
 from qdarkstyle import __doc__ as long_desc
 
@@ -9,8 +15,8 @@ from qdarkstyle import __doc__ as long_desc
 install_requires = []
 
 extras_require = {
-    'example': ['qtpy>=1.7', 'pyside2', 'pyqt5'],
-    'develop': ['watchdog']
+    'example': ['pyqt5', 'pyside2', 'qtpy>=1.7'],
+    'develop': ['qtsass', 'watchdog']
 }
 
 setup(
