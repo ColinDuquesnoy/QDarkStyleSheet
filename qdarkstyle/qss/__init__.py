@@ -42,7 +42,7 @@ class DarkPalette(object):
     PATH_RESOURCES = "':/qss_icons'"
 
     @classmethod
-    def _to_dict(cls):
+    def _to_dict(cls, colors_only=False):
         """Convert variables to dictionary."""
         order = [
             'COLOR_BACKGROUND_LIGHT',
@@ -64,6 +64,18 @@ class DarkPalette(object):
         ]
         dic = OrderedDict()
         for var in order:
-            dic[var] = getattr(cls, var)
+            value = getattr(cls, var)
+
+            if colors_only:
+                if not var.startswith('COLOR'):
+                    value = None
+
+            if value:
+                dic[var] = value
 
         return dic
+
+    @classmethod
+    def color_palette(cls):
+        """Return the ordered colored palette dictionary."""
+        return cls._to_dict(colors_only=True)
