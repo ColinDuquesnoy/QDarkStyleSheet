@@ -52,8 +52,8 @@ QMainWindow {
     &::separator {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border: 0px solid $COLOR_BACKGROUND_DARK;
-        padding: 2px;
         spacing: 0;
+        padding: 2px;
 
         &:hover {
             background-color: $COLOR_BACKGROUND_LIGHT;
@@ -61,17 +61,17 @@ QMainWindow {
         }
 
         &:horizontal {
-            image: url(:/qss_icons/rc/Vsepartoolbar.png);
             margin-bottom: 2px;
             margin-top: 2px;
             width: 5px;
+            image: url(:/qss_icons/rc/Vsepartoolbar.png);
         }
 
         &:vertical {
             height: 5px;
-            image: url(:/qss_icons/rc/Hsepartoolbar.png);
             margin-left: 2px;
             margin-right: 2px;
+            image: url(:/qss_icons/rc/Hsepartoolbar.png);
         }
     }
 }
@@ -86,11 +86,12 @@ QToolTip {
     border: $BORDER_DARK;
     color: $COLOR_BACKGROUND_DARK;
 
+    /* Remove padding, for fix combo box tooltip */
+    padding: 0;
+
     /* Reducing transparency to read better */
     opacity: $OPACITY_TOOLTIP;
 
-    /* Remove padding, for fix combo box tooltip */
-    padding: 0;
 }
 
 /* QStatusBar -------------------------------------------------------------
@@ -100,6 +101,9 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qstatusbar
 --------------------------------------------------------------------------- */
 QStatusBar {
     border: $BORDER_NORMAL;
+
+    /* Fixes Spyder #9120, #9121 */
+    background: $COLOR_BACKGROUND_NORMAL;
 
     QToolTip {
         background-color: $COLOR_SELECTION_LIGHT;
@@ -112,6 +116,11 @@ QStatusBar {
         /* Remove padding, for fix combo box tooltip */
         padding: 0;
     }
+
+    QLabel {
+        /* Fixes Spyder #9120, #9121 */
+        background: transparent;
+    }
 }
 
 /* QCheckBox --------------------------------------------------------------
@@ -122,19 +131,19 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qcheckbox
 QCheckBox {
     background-color: $COLOR_BACKGROUND_DARK;
     color: $COLOR_FOREGROUND_LIGHT;
-    outline: none;
-    padding-bottom: 4px;
-    padding-top: 4px;
     spacing: 4px;
+    outline: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
 
     &:focus {
         border: none;
     }
 
     &::indicator {
-        height: 16px;
         margin-left: 4px;
         width: 16px;
+        height: 16px;
 
         &:unchecked {
             image: url(:/qss_icons/rc/checkbox_unchecked.png);
@@ -210,9 +219,9 @@ QGroupBox {
     }
 
     &::indicator {
+        margin-left: 2px;
         width: 16px;
         height: 16px;
-        margin-left: 2px;
 
         &:unchecked {
 
@@ -1002,6 +1011,10 @@ QPushButton {
     &:pressed {
         background-color: $COLOR_BACKGROUND_DARK;
         border: $BORDER_DARK;
+
+        &:hover {
+            border: $BORDER_HOVER;
+        }
     }
 
     &:hover {
@@ -1042,7 +1055,16 @@ QToolButton {
         }
     }
 
-    :disabled {
+    &:pressed {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: $BORDER_DARK;
+
+        &:hover {
+            border: $BORDER_HOVER;
+        }
+    }
+
+    &:disabled {
         border: $BORDER_NORMAL;
     }
 
@@ -1130,7 +1152,7 @@ QCommandLinkButton {
 /* INPUTS - NO FIELDS ----------------------------------------------------- */
 /* ------------------------------------------------------------------------ */
 
-/* QCombobox --------------------------------------------------------------
+/* QComboBox --------------------------------------------------------------
 
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qcombobox
 
@@ -1139,16 +1161,16 @@ QComboBox {
     border: $BORDER_NORMAL;
     border-radius: $SIZE_BORDER_RADIUS;
     selection-background-color: $COLOR_SELECTION_NORMAL;
-
-    /* This fixes 103, 111 */
-    padding-top: 2px;
-
-    /* This fixes 103, 111 */
-    padding-bottom: 2px;
     padding-left: 4px;
     padding-right: 4px;
-    /* min-width: 75px;  removed to fix 109 */
 
+    /* Fixes #103, #111 */
+    min-height: 1.5em;
+
+    /* padding-top: 2px;     removed to fix #132 */
+    /* padding-bottom: 2px;  removed to fix #132 */
+    /* min-width: 75px;      removed to fix #109 */
+ 
     &:disabled {
         background-color: $COLOR_BACKGROUND_DARK;
         color: $COLOR_FOREGROUND_DARK;
@@ -1160,6 +1182,27 @@ QComboBox {
 
     &:on {
         selection-background-color: $COLOR_BACKGROUND_DARK;
+    }
+
+    /* Needed to remove indicator - fix #132 */
+    &::indicator {
+        background-color:transparent;
+        selection-background-color:transparent;
+        color:transparent;
+        selection-color:transparent;
+
+         /* Needed to remove indicator - fix #132 */
+        &:alternate {
+            background: #19232D;
+        }
+
+        &:checked {
+            font-weight: bold;
+        }
+
+        &:selected {
+            border: 0px solid transparent;
+        }
     }
 
     &::drop-down {
@@ -1225,23 +1268,27 @@ QSlider {
         }
     }
 
-    &::sub-page {
-        &:horizontal {
-            background: $COLOR_SELECTION_NORMAL;
-            border: $BORDER_NORMAL;
-            height: 4px;
-            margin: 0px;
-            border-radius: $SIZE_BORDER_RADIUS;
-
-            &:disabled {
-                background: $COLOR_SELECTION_DARK;
-            }
-        }
+    &::add-page {
 
         &:vertical {
             background: $COLOR_SELECTION_NORMAL;
             border: $BORDER_NORMAL;
             width: 4px;
+            margin: 0px;
+            border-radius: $SIZE_BORDER_RADIUS;
+
+            :disabled {
+                background: $COLOR_SELECTION_DARK;
+            }
+        }
+    }
+
+    &::sub-page {
+
+        &:horizontal {
+            background: $COLOR_SELECTION_NORMAL;
+            border: $BORDER_NORMAL;
+            height: 4px;
             margin: 0px;
             border-radius: $SIZE_BORDER_RADIUS;
 
@@ -1324,15 +1371,31 @@ QTabWidget {
     padding: 2px;
     selection-background-color: $COLOR_BACKGROUND_NORMAL;
 
+    /* Add wanted borders - fix #141, #126, #123 */
+    QWidget {
+
+        QWidget {
+            border: $BORDER_NORMAL;
+        }
+    }
+
+    /* Add wanted borders - fix #141, #126, #123 */
     QFrame {
-        border: 0;
+        border: $BORDER_NORMAL;
+    }
+
+    QLabel {
+        /* Label derived from frame, remove border #141 */
+        border: 0px solid $COLOR_BACKGROUND_NORMAL; 
     }
 
     &::pane {
         border: $BORDER_NORMAL;
         border-radius: $SIZE_BORDER_RADIUS;
-        padding: 2px;
         margin: 0px;
+
+        /* Fixes double border inside pane wit pyqt5 */
+        padding: 0px;
 
         &:selected {
             background-color: $COLOR_BACKGROUND_NORMAL;
@@ -1562,6 +1625,11 @@ QTabBar {
     }
 
     QToolButton {
+        /* Fixes #136 */
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        width: 16px;
+        height: 16px;
+
         &::right-arrow {
             &:enabled {
                 image: url(:/qss_icons/rc/right_arrow.png);
@@ -2044,4 +2112,9 @@ QAbstractView {
         background: $COLOR_SELECTION_NORMAL;
         color: $COLOR_BACKGROUND_NORMAL;
     }
+}
+
+PlotWidget {
+    /* Fix cut labels in plots #134 */
+    padding: 0px;
 }

@@ -6,7 +6,12 @@
 import os
 
 # Third party imports
-import qtsass
+try:
+    import qtsass
+    QTSASS_INSTALLED = True
+except ImportError:
+    QTSASS_INSTALLED = False
+
 
 # Local imports
 from qdarkstyle.qss import PATH_SCSS_MAIN, PATH_SCSS_VARIABLES, Variables
@@ -72,15 +77,17 @@ def _create_scss_variables():
 
 def _create_qss():
     """Create a styles.qss file from qtsass."""
-    qtsass.compile_filename(PATH_SCSS_MAIN, PATH_CSS_STYLES, output_style='expanded')
+    if QTSASS_INSTALLED:
+        qtsass.compile_filename(PATH_SCSS_MAIN, PATH_CSS_STYLES,
+                                output_style='expanded')
 
-    with open(PATH_CSS_STYLES, 'r') as f:
-        data = f.read()
+        with open(PATH_CSS_STYLES, 'r') as f:
+            data = f.read()
 
-    data = _HEADER_QSS + data
+        data = _HEADER_QSS + data
 
-    with open(PATH_CSS_STYLES, 'w') as f:
-        f.write(data)
+        with open(PATH_CSS_STYLES, 'w') as f:
+            f.write(data)
 
 
 def create_qss():
