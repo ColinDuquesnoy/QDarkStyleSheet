@@ -97,6 +97,7 @@ def main(arguments):
 def run_process(args):
     """Process qrc files."""
     # Generate qrc file based on the content of the resources folder
+    print('Generating style.qrc files ...')
     generate_qrc_file()
 
     print('Changing directory to: ', args.qrc_dir)
@@ -177,8 +178,7 @@ def run_process(args):
 
 
 def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
-    """Help."""
-
+    """Generate the style.qrc file programmaticaly."""
     template_header = '''<RCC>
   <qresource prefix="{resource_prefix}">
 '''
