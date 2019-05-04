@@ -52,6 +52,7 @@ import os
 import platform
 import sys
 import warnings
+import copy
 
 if sys.version_info >= (3, 4):
     import importlib
@@ -61,7 +62,7 @@ from qdarkstyle.utils import create_qss
 from qdarkstyle.qss import Variables
 
 
-__version__ = "2.6.5"
+__version__ = "2.6.8"
 
 
 QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
@@ -221,7 +222,7 @@ def load_stylesheet(pyside=True):
     warnings.warn(
         "load_stylesheet() will not receive pyside parameter in version 3. "
         "Set QtPy environment variable to specify the Qt binding insteady.",
-        FutureWarning
+        PendingDeprecationWarning
     )
 
     # Compiles SCSS/SASS files to QSS
@@ -236,7 +237,7 @@ def load_stylesheet(pyside=True):
         # Detect the PySide version available
         try:
             import PySide
-        except ImportError: # Compatible with py27
+        except ImportError:  # Compatible with py27
             import PySide2
             pyside_ver = 2
         else:

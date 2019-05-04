@@ -1,4 +1,21 @@
 # Changelog
+
+- 2.6.8:
+  - Fix double border in QtabWidget for pyqt5
+  - Fix widgets border in QTabWidget as QLabel  #141, #123, #126
+  - Fix QTab scroller buttons background #136
+  - Update color from images, fix #127
+  - Add retina resolution @2x, fix #140
+  - Intermediate version before merge PR #142 adding scripts
+- 2.6.7:
+  - Fix combobox indicator and padding #132
+  - Fix PyQtGraph plot axes covered by padding #134
+  - Update authors
+- 2.6.6:
+  - Fix tabbed bordeless frames and add more examples, #123, #126
+  - Add feedback to pressed buttons, #133
+  - Change future warning to pending deprecation for developers, #125 in v2.x
+  - Fix hover in qtabwidget, #128
 - 2.6.5:
   - Fix borderless widgets inside QTabWidget, #123
   - Fix palette table inside CSS file, header using the last column
@@ -28,7 +45,7 @@
   - Fix slider disabled and enhance size
   - Fix the wrong upload of style.qss - sorry
   - Fix almost all widgets backgrounds, and other not previously covered widgets with new style
-  - New palette color, almost whole new qss file, simplify configuration, partially #112, #101, #109, 
+  - New palette color, almost whole new qss file, simplify configuration, partially #112, #101, #109,
   - Add changes made by other people in the new style - merge does not work there #93, #92, #102
   - Update README with Qt.py and PySide 2 information #110, #107, #83
   - Update __init__ info

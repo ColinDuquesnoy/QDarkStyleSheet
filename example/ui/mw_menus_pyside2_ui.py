@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mw_menus.ui'
 #
-# Created: Thu Dec 13 17:14:05 2018
+# Created: Wed Apr 24 12:02:37 2019
 #      by: pyside2-uic 2.0.0 running on PySide2 5.6.0~a1
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PySide2 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(596, 569)
+        MainWindow.resize(596, 717)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_7 = QtWidgets.QGridLayout(self.centralwidget)
@@ -42,6 +42,7 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.formLayout = QtWidgets.QFormLayout(self.frame)
+        self.formLayout.setFieldGrowthPolicy(QtWidgets.QFormLayout.AllNonFixedFieldsGrow)
         self.formLayout.setObjectName("formLayout")
         self.label_3 = QtWidgets.QLabel(self.frame)
         self.label_3.setObjectName("label_3")
@@ -49,7 +50,15 @@ class Ui_MainWindow(object):
         self.lineEdit_2 = QtWidgets.QLineEdit(self.frame)
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.lineEdit_2)
-        self.gridLayout_5.addWidget(self.frame, 1, 0, 1, 2)
+        self.listWidget_2 = QtWidgets.QListWidget(self.frame)
+        self.listWidget_2.setObjectName("listWidget_2")
+        QtWidgets.QListWidgetItem(self.listWidget_2)
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.listWidget_2)
+        self.gridLayout_5.addWidget(self.frame, 2, 0, 1, 2)
+        self.listWidget = QtWidgets.QListWidget(self.groupBox_3)
+        self.listWidget.setObjectName("listWidget")
+        QtWidgets.QListWidgetItem(self.listWidget)
+        self.gridLayout_5.addWidget(self.listWidget, 1, 1, 1, 1)
         self.gridLayout_4.addWidget(self.groupBox_3, 1, 0, 1, 1)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
@@ -114,7 +123,7 @@ class Ui_MainWindow(object):
         self.gridLayout_7.addWidget(self.label_71, 2, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 596, 28))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 596, 25))
         self.menubar.setObjectName("menubar")
         self.menuMenu = QtWidgets.QMenu(self.menubar)
         self.menuMenu.setObjectName("menuMenu")
@@ -190,7 +199,7 @@ class Ui_MainWindow(object):
         self.toolBarCheckable.addAction(self.actionActionCheckableSubAUnchecked)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.lineEdit, self.tabWidget)
         MainWindow.setTabOrder(self.tabWidget, self.lineEdit_2)
@@ -203,6 +212,14 @@ class Ui_MainWindow(object):
         self.lineEdit.setText(QtWidgets.QApplication.translate("MainWindow", "Inside tab, outside frame", None, -1))
         self.label_3.setText(QtWidgets.QApplication.translate("MainWindow", "TextLabel", None, -1))
         self.lineEdit_2.setText(QtWidgets.QApplication.translate("MainWindow", "Inside tab and frame", None, -1))
+        __sortingEnabled = self.listWidget_2.isSortingEnabled()
+        self.listWidget_2.setSortingEnabled(False)
+        self.listWidget_2.item(0).setText(QtWidgets.QApplication.translate("MainWindow", "ListWidget", None, -1))
+        self.listWidget_2.setSortingEnabled(__sortingEnabled)
+        __sortingEnabled = self.listWidget.isSortingEnabled()
+        self.listWidget.setSortingEnabled(False)
+        self.listWidget.item(0).setText(QtWidgets.QApplication.translate("MainWindow", "ListWidget", None, -1))
+        self.listWidget.setSortingEnabled(__sortingEnabled)
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QtWidgets.QApplication.translate("MainWindow", "Tab 1", None, -1))
         self.label_4.setText(QtWidgets.QApplication.translate("MainWindow", "TextLabel", None, -1))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QtWidgets.QApplication.translate("MainWindow", "Tab 2", None, -1))

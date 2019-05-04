@@ -2,16 +2,17 @@
 
 # Form implementation generated from reading ui file 'mw_menus.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(596, 569)
+        MainWindow.resize(596, 717)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_7 = QtWidgets.QGridLayout(self.centralwidget)
@@ -25,7 +26,6 @@ class Ui_MainWindow(object):
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.tab)
-        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_4.setObjectName("gridLayout_4")
         self.groupBox_3 = QtWidgets.QGroupBox(self.tab)
         self.groupBox_3.setObjectName("groupBox_3")
@@ -42,6 +42,7 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.formLayout = QtWidgets.QFormLayout(self.frame)
+        self.formLayout.setFieldGrowthPolicy(QtWidgets.QFormLayout.AllNonFixedFieldsGrow)
         self.formLayout.setObjectName("formLayout")
         self.label_3 = QtWidgets.QLabel(self.frame)
         self.label_3.setObjectName("label_3")
@@ -49,13 +50,22 @@ class Ui_MainWindow(object):
         self.lineEdit_2 = QtWidgets.QLineEdit(self.frame)
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.lineEdit_2)
-        self.gridLayout_5.addWidget(self.frame, 1, 0, 1, 2)
+        self.listWidget_2 = QtWidgets.QListWidget(self.frame)
+        self.listWidget_2.setObjectName("listWidget_2")
+        item = QtWidgets.QListWidgetItem()
+        self.listWidget_2.addItem(item)
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.listWidget_2)
+        self.gridLayout_5.addWidget(self.frame, 2, 0, 1, 2)
+        self.listWidget = QtWidgets.QListWidget(self.groupBox_3)
+        self.listWidget.setObjectName("listWidget")
+        item = QtWidgets.QListWidgetItem()
+        self.listWidget.addItem(item)
+        self.gridLayout_5.addWidget(self.listWidget, 1, 1, 1, 1)
         self.gridLayout_4.addWidget(self.groupBox_3, 1, 0, 1, 1)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.gridLayout_6 = QtWidgets.QGridLayout(self.tab_2)
-        self.gridLayout_6.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_6.setObjectName("gridLayout_6")
         self.label_4 = QtWidgets.QLabel(self.tab_2)
         self.label_4.setObjectName("label_4")
@@ -91,7 +101,6 @@ class Ui_MainWindow(object):
         self.tab_12 = QtWidgets.QWidget()
         self.tab_12.setObjectName("tab_12")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.tab_12)
-        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.tabWidget.addTab(self.tab_12, "")
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
@@ -116,7 +125,7 @@ class Ui_MainWindow(object):
         self.gridLayout_7.addWidget(self.label_71, 2, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 596, 28))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 596, 25))
         self.menubar.setObjectName("menubar")
         self.menuMenu = QtWidgets.QMenu(self.menubar)
         self.menuMenu.setObjectName("menuMenu")
@@ -192,7 +201,7 @@ class Ui_MainWindow(object):
         self.toolBarCheckable.addAction(self.actionActionCheckableSubAUnchecked)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.lineEdit, self.tabWidget)
         MainWindow.setTabOrder(self.tabWidget, self.lineEdit_2)
@@ -206,6 +215,16 @@ class Ui_MainWindow(object):
         self.lineEdit.setText(_translate("MainWindow", "Inside tab, outside frame"))
         self.label_3.setText(_translate("MainWindow", "TextLabel"))
         self.lineEdit_2.setText(_translate("MainWindow", "Inside tab and frame"))
+        __sortingEnabled = self.listWidget_2.isSortingEnabled()
+        self.listWidget_2.setSortingEnabled(False)
+        item = self.listWidget_2.item(0)
+        item.setText(_translate("MainWindow", "ListWidget"))
+        self.listWidget_2.setSortingEnabled(__sortingEnabled)
+        __sortingEnabled = self.listWidget.isSortingEnabled()
+        self.listWidget.setSortingEnabled(False)
+        item = self.listWidget.item(0)
+        item.setText(_translate("MainWindow", "ListWidget"))
+        self.listWidget.setSortingEnabled(__sortingEnabled)
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Tab 1"))
         self.label_4.setText(_translate("MainWindow", "TextLabel"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))
@@ -246,4 +265,5 @@ class Ui_MainWindow(object):
         self.actionActionCheckableSubAChecked.setToolTip(_translate("MainWindow", "Action Checkable Sub A Checked"))
         self.actionActionCheckableSubAUnchecked.setText(_translate("MainWindow", "Action Checkable Sub A Unchecked"))
         self.actionActionCheckableSubAUnchecked.setToolTip(_translate("MainWindow", "Action Checkable Sub A Unchecked"))
+
 

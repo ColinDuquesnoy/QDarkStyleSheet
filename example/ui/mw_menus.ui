@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>596</width>
-    <height>569</height>
+    <height>717</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
        <item row="0" column="0">
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -51,7 +51,7 @@
                 </property>
                </widget>
               </item>
-              <item row="1" column="0" colspan="2">
+              <item row="2" column="0" colspan="2">
                <widget class="QFrame" name="frame">
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
@@ -60,6 +60,9 @@
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QFormLayout" name="formLayout">
+                 <property name="fieldGrowthPolicy">
+                  <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                 </property>
                  <item row="0" column="0">
                   <widget class="QLabel" name="label_3">
                    <property name="text">
@@ -74,7 +77,25 @@
                    </property>
                   </widget>
                  </item>
+                 <item row="1" column="1">
+                  <widget class="QListWidget" name="listWidget_2">
+                   <item>
+                    <property name="text">
+                     <string>ListWidget</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
                 </layout>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QListWidget" name="listWidget">
+                <item>
+                 <property name="text">
+                  <string>ListWidget</string>
+                 </property>
+                </item>
                </widget>
               </item>
              </layout>
@@ -204,7 +225,7 @@
      <x>0</x>
      <y>0</y>
      <width>596</width>
-     <height>28</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMenu">
