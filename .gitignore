@@ -1,6 +1,5 @@
-*.orig
-
 *.pyc
+*.orig
 
 dist/
 build/

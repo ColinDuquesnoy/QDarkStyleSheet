@@ -45,6 +45,8 @@ Enjoy!
 
 """
 
+# Standard library imports
+import copy
 import logging
 import os
 import platform
@@ -54,6 +56,11 @@ import copy
 
 if sys.version_info >= (3, 4):
     import importlib
+
+# Local imports
+from qdarkstyle.utils import create_qss
+from qdarkstyle.qss import DarkPalette
+
 
 __version__ = "2.6.8"
 
@@ -140,6 +147,10 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
         "use load_stylesheet()",
         PendingDeprecationWarning
     )
+
+    # Compiles SCSS/SASS files to QSS
+    create_qss()
+
     qt_api = ''
     pyqtgraph_qt_lib = ''
 
@@ -213,6 +224,10 @@ def load_stylesheet(pyside=True):
         "Set QtPy environment variable to specify the Qt binding insteady.",
         PendingDeprecationWarning
     )
+
+    # Compiles SCSS/SASS files to QSS
+    create_qss()
+
     # Smart import of the rc file
 
     pyside_ver = None
@@ -253,16 +268,19 @@ def load_stylesheet(pyside=True):
         f.open(QFile.ReadOnly | QFile.Text)
         ts = QTextStream(f)
         stylesheet = ts.readAll()
-        if platform.system().lower() == 'darwin':  # see issue #12 on github
+
+        # See issue #12
+        if platform.system().lower() == 'darwin':  
             mac_fix = '''
             QDockWidget::title
-            {
-                background-color: #32414B;
+            {{
+                background-color: {color};
                 text-align: center;
                 height: 12px;
-            }
-            '''
+            }}
+            '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
             stylesheet += mac_fix
+
         return stylesheet
 
 
@@ -325,6 +343,10 @@ def load_stylesheet_pyqt5():
         "use load_stylesheet()",
         PendingDeprecationWarning
     )
+
+    # Compiles SCSS/SASS files to QSS
+    create_qss()
+
     # Smart import of the rc file
     import qdarkstyle.pyqt5_style_rc
 
@@ -340,16 +362,19 @@ def load_stylesheet_pyqt5():
         f.open(QFile.ReadOnly | QFile.Text)
         ts = QTextStream(f)
         stylesheet = ts.readAll()
-        if platform.system().lower() == 'darwin':  # see issue #12 on github
+
+        # See issue #12
+        if platform.system().lower() == 'darwin':
             mac_fix = '''
             QDockWidget::title
-            {
-                background-color: #32414B;
+            {{
+                background-color: {color};
                 text-align: center;
                 height: 12px;
-            }
-            '''
+            }}
+            '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
             stylesheet += mac_fix
+
         return stylesheet
 
 
