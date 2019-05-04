@@ -1,0 +1,2109 @@
+/*
+
+See Qt documentation:
+
+  - https://doc.qt.io/qt-5/stylesheet.html
+  - https://doc.qt.io/qt-5/stylesheet-reference.html
+  - https://doc.qt.io/qt-5/stylesheet-examples.html
+
+--------------------------------------------------------------------------- */
+
+
+/* QWidget ----------------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QWidget {
+    background-color: $COLOR_BACKGROUND_DARK;
+    border: 0px solid $COLOR_BACKGROUND_NORMAL;
+    padding: 0px;
+    color: $COLOR_FOREGROUND_LIGHT;
+    selection-background-color: $COLOR_SELECTION_NORMAL;
+    selection-color: $COLOR_FOREGROUND_LIGHT;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_DARK;
+        selection-background-color: $COLOR_SELECTION_DARK;
+        selection-color: $COLOR_FOREGROUND_DARK;
+    }
+
+    &::item {
+
+        &:selected {
+            background-color: $COLOR_SELECTION_NORMAL;
+        }
+
+        &:hover {
+            background-color: $COLOR_SELECTION_LIGHT;
+            color: $COLOR_BACKGROUND_NORMAL;
+        }
+    }
+}
+
+/* QMainWindow ------------------------------------------------------------
+
+This adjusts the splitter in the dock widget, not qsplitter
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmainwindow
+
+--------------------------------------------------------------------------- */
+QMainWindow {
+
+    &::separator {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        border: 0px solid $COLOR_BACKGROUND_DARK;
+        spacing: 0px;
+        padding: 2px;
+
+        &:hover {
+            background-color: $COLOR_BACKGROUND_LIGHT;
+            border: 0px solid $COLOR_SELECTION_LIGHT;
+        }
+
+        &:horizontal {
+            width: 5px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            image: url($PATH_RESOURCES + '/rc/Vsepartoolbar.png');
+        }
+
+        &:vertical {
+            height: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+            image: url($PATH_RESOURCES + '/rc/Hsepartoolbar.png');
+        }
+    }
+}
+
+/* QToolTip ---------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtooltip
+
+--------------------------------------------------------------------------- */
+QToolTip {
+    background-color: $COLOR_SELECTION_LIGHT;
+    border: $BORDER_DARK;
+    color: $COLOR_BACKGROUND_DARK;
+
+    /* Remove padding, for fix combo box tooltip */
+    padding: 0px;
+
+    /* Reducing transparency to read better */
+    opacity: $OPACITY_TOOLTIP;
+
+}
+
+/* QStatusBar -------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qstatusbar
+
+--------------------------------------------------------------------------- */
+QStatusBar {
+    border: $BORDER_NORMAL;
+
+    /* Fixes Spyder #9120, #9121 */
+    background: $COLOR_BACKGROUND_NORMAL;
+
+    QToolTip {
+        background-color: $COLOR_SELECTION_LIGHT;
+        border: $BORDER_DARK;
+        color: $COLOR_BACKGROUND_DARK;
+
+        /* Remove padding, for fix combo box tooltip */
+        padding: 0px;
+
+        /* Reducing transparency to read better */
+        opacity: $OPACITY_TOOLTIP;
+    }
+
+    QLabel {
+        /* Fixes Spyder #9120, #9121 */
+        background: transparent;
+    }
+}
+
+/* QCheckBox --------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qcheckbox
+
+--------------------------------------------------------------------------- */
+QCheckBox {
+    background-color: $COLOR_BACKGROUND_DARK;
+    color: $COLOR_FOREGROUND_LIGHT;
+    spacing: 4px;
+    outline: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    &:focus {
+        border: none;
+    }
+
+    QWidget:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_DARK;
+    }
+
+    &::indicator {
+        margin-left: 4px;
+        width: 16px;
+        height: 16px;
+
+        &:unchecked {
+            image: url($PATH_RESOURCES + '/rc/checkbox_unchecked.png');
+
+            &:hover,
+            &:focus,
+            &:pressed {
+                border: none;
+                image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_focus.png');
+            }
+
+            &:disabled {
+                image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_disabled.png');
+            }
+        }
+
+        &:checked {
+            image: url($PATH_RESOURCES + '/rc/checkbox_checked.png');
+
+            &:hover,
+            &:focus,
+            &:pressed {
+                border: none;
+                image: url($PATH_RESOURCES + '/rc/checkbox_checked_focus.png');
+            }
+
+            &:disabled{
+                image: url($PATH_RESOURCES + '/rc/checkbox_checked_disabled.png');
+            }
+        }
+
+        &:indeterminate {
+            image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate.png');
+
+            &:disabled {
+                image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_disabled.png');
+            }
+
+            &:focus,
+            &:hover,
+            &:pressed {
+                image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_focus.png');
+            }
+        }
+    }
+}
+
+/* QGroupBox --------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qgroupbox
+
+--------------------------------------------------------------------------- */
+QGroupBox {
+    font-weight: bold;
+    border: $BORDER_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+    padding: 4px;
+    margin-top: 16px;
+
+    &::title {
+        subcontrol-origin: margin;
+        subcontrol-position: top left;
+        left: 3px;
+        padding-left: 3px;
+        padding-right: 5px;
+        padding-top: 8px;
+        padding-bottom: 16px;
+    }
+
+    &::indicator {
+        margin-left: 2px;
+        width: 16px;
+        height: 16px;
+
+        &:unchecked {
+
+            &:hover,
+            &:focus,
+            &:pressed {
+                border: none;
+                image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_focus.png');
+            }
+
+            &:disabled {
+                image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_disabled.png');
+            }
+        }
+
+        &:checked {
+
+            &:hover,
+            &:focus,
+            &:pressed {
+                border: none;
+                image: url($PATH_RESOURCES + '/rc/checkbox_checked_focus.png');
+            }
+
+            &:disabled {
+                image: url($PATH_RESOURCES + '/rc/checkbox_checked_disabled.png');
+            }
+        }
+    }
+}
+
+/* QRadioButton -----------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qradiobutton
+
+--------------------------------------------------------------------------- */
+QRadioButton {
+    background-color: $COLOR_BACKGROUND_DARK;
+    color: $COLOR_FOREGROUND_LIGHT;
+    spacing: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+
+    &:focus {
+        border: none;
+    }
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_DARK;
+        border: none;
+        outline: none;
+    }
+
+    QWidget {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_LIGHT;
+        spacing: 0px;
+        padding: 0px;
+        outline: none;
+        border: none;
+    }
+
+    &::indicator {
+        border: none;
+        outline: none;
+        margin-bottom: 2px;
+        width: 25px;
+        height: 25px;
+
+        &:unchecked {
+            image: url($PATH_RESOURCES + '/rc/radio_unchecked.png');
+
+            &:hover,
+            &:focus,
+            &:pressed {
+                border: none;
+                outline: none;
+                image: url($PATH_RESOURCES + '/rc/radio_unchecked_focus.png');
+            }
+
+            &:disabled {
+                image: url($PATH_RESOURCES + '/rc/radio_unchecked_disabled.png');
+            }
+        }
+
+        &:checked {
+            border: none;
+            outline: none;
+            image: url($PATH_RESOURCES + '/rc/radio_checked.png');
+
+            &:hover,
+            &:focus,
+            &:pressed {
+                border: none;
+                outline: none;
+                image: url($PATH_RESOURCES + '/rc/radio_checked_focus.png');
+            }
+
+            &:disabled {
+                outline: none;
+                image: url($PATH_RESOURCES + '/rc/radio_checked_disabled.png');
+            }
+        }
+    }
+}
+
+/* QMenuBar ---------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmenubar
+
+--------------------------------------------------------------------------- */
+QMenuBar {
+    background-color: $COLOR_BACKGROUND_NORMAL;
+    padding: 2px;
+    border: $BORDER_DARK;
+    color: $COLOR_FOREGROUND_LIGHT;
+
+    &:focus {
+        border: $BORDER_HOVER;
+    }
+
+    &::item {
+        background: transparent;
+        padding: 4px;
+
+        &:selected {
+            padding: 4px;
+            background: transparent;
+            border: 0px solid $COLOR_BACKGROUND_NORMAL;
+        }
+
+        &:pressed {
+            padding: 4px;
+            border: 0px solid $COLOR_BACKGROUND_NORMAL;
+            background-color: $COLOR_SELECTION_LIGHT;
+            color: $COLOR_FOREGROUND_LIGHT;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+    }
+}
+
+/* QMenu ------------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmenu
+
+--------------------------------------------------------------------------- */
+QMenu {
+    border: 0px solid $COLOR_BACKGROUND_NORMAL;
+    color: $COLOR_FOREGROUND_LIGHT;
+    margin: 0px;
+
+    &::separator {
+        height: 2px;
+        background-color: $COLOR_BACKGROUND_LIGHT;
+        color: $COLOR_FOREGROUND_LIGHT;
+        padding-left: 4px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    &::icon {
+        margin: 0px;
+        padding-left:4px;
+    }
+
+    &::item {
+        padding: 4px 24px 4px 24px;
+
+        /* Reserve space for selection border */
+        border: 1px transparent $COLOR_BACKGROUND_NORMAL;
+
+        &:selected {
+            color: $COLOR_FOREGROUND_LIGHT;
+        }
+    }
+
+    &::indicator {
+        width: 12px;
+        height: 12px;
+        padding-left:6px;
+
+        /* non-exclusive indicator = check box style indicator (see QActionGroup::setExclusive) */
+        &:non-exclusive {
+
+            &:unchecked {
+                image: url($PATH_RESOURCES + '/rc/checkbox_unchecked.png');
+
+                &:selected {
+                    image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_disabled.png');
+                }
+            }
+
+            &:checked {
+                image: url($PATH_RESOURCES + '/rc/checkbox_checked.png');
+
+                &:selected {
+                    image: url($PATH_RESOURCES + '/rc/checkbox_checked_disabled.png');
+                }
+            }
+        }
+
+        /* exclusive indicator = radio button style indicator (see QActionGroup::setExclusive) */
+        &:exclusive {
+
+            &:unchecked {
+                image: url($PATH_RESOURCES + '/rc/radio_unchecked.png');
+
+                &:selected {
+                    image: url($PATH_RESOURCES + '/rc/radio_unchecked_disabled.png');
+                }
+            }
+
+            &:checked {
+                image: url($PATH_RESOURCES + '/rc/radio_checked.png');
+
+                &:selected {
+                    image: url($PATH_RESOURCES + '/rc/radio_checked_disabled.png');
+                }
+            }
+        }
+    }
+
+    &::right-arrow {
+        margin: 5px;
+        image: url($PATH_RESOURCES + '/rc/right_arrow.png');
+    }
+}
+
+/* QAbstractItemView ------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qcombobox
+
+--------------------------------------------------------------------------- */
+QAbstractItemView {
+    alternate-background-color: $COLOR_BACKGROUND_DARK;
+    color: $COLOR_FOREGROUND_LIGHT;
+    border: $BORDER_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+
+    QLineEdit {
+        padding: 2px;
+    }
+}
+
+/* QAbstractScrollArea ----------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qabstractscrollarea
+
+--------------------------------------------------------------------------- */
+QAbstractScrollArea {
+    background-color: $COLOR_BACKGROUND_DARK;
+    border: $BORDER_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+    padding: 4px;
+    color: $COLOR_FOREGROUND_LIGHT;
+
+    &:disabled {
+        color: $COLOR_FOREGROUND_DARK;
+    }
+}
+
+/* QScrollArea ------------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QScrollArea QWidget QWidget:disabled {
+    background-color: $COLOR_BACKGROUND_DARK;
+}
+
+/* QScrollBar -------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qscrollbar
+
+--------------------------------------------------------------------------- */
+QScrollBar {
+
+    &:horizontal {
+        height: 16px;
+        margin: 2px 16px 2px 16px;
+        border: $BORDER_NORMAL;
+        border-radius: $SIZE_BORDER_RADIUS;
+        background-color: $COLOR_BACKGROUND_DARK;
+    }
+
+    &:vertical {
+        background-color: $COLOR_BACKGROUND_DARK;
+        width: 16px;
+        margin: 16px 2px 16px 2px;
+        border: $BORDER_NORMAL;
+        border-radius: $SIZE_BORDER_RADIUS;
+    }
+
+    &::handle {
+
+        &:horizontal {
+            background-color: $COLOR_FOREGROUND_DARK;
+            border: $BORDER_NORMAL;
+            border-radius: $SIZE_BORDER_RADIUS;
+            min-width: 8px;
+
+            &:hover {
+                background-color: $COLOR_SELECTION_LIGHT;
+                border: $BORDER_HOVER;
+                border-radius: $SIZE_BORDER_RADIUS;
+                min-width: 8px;
+            }
+        }
+
+        &:vertical {
+            background-color: $COLOR_FOREGROUND_DARK;
+            border: $BORDER_NORMAL;
+            min-height: 8px;
+            border-radius: $SIZE_BORDER_RADIUS;
+
+            &:hover {
+                background-color: $COLOR_SELECTION_LIGHT;
+                border: $BORDER_HOVER;
+                border-radius: $SIZE_BORDER_RADIUS;
+                min-height: 8px;
+
+            }
+        }
+    }
+
+    &::add-line {
+
+        &:horizontal {
+            margin: 0px 0px 0px 0px;
+            border-image: url($PATH_RESOURCES + '/rc/right_arrow_disabled.png');
+            width: 10px;
+            height: 10px;
+            subcontrol-position: right;
+            subcontrol-origin: margin;
+
+            &:hover,
+            &:on {
+                border-image: url($PATH_RESOURCES + '/rc/right_arrow.png');
+                height: 10px;
+                width: 10px;
+                subcontrol-position: right;
+                subcontrol-origin: margin;
+            }
+        }
+
+        &:vertical {
+            margin: 3px 0px 3px 0px;
+            border-image: url($PATH_RESOURCES + '/rc/down_arrow_disabled.png');
+            height: 10px;
+            width: 10px;
+            subcontrol-position: bottom;
+            subcontrol-origin: margin;
+
+            &:hover,
+            &:on {
+                border-image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+                height: 10px;
+                width: 10px;
+                subcontrol-position: bottom;
+                subcontrol-origin: margin;
+            }
+        }
+    }
+
+    &::sub-line {
+        &:horizontal {
+            margin: 0px 3px 0px 3px;
+            border-image: url($PATH_RESOURCES + '/rc/left_arrow_disabled.png');
+            height: 10px;
+            width: 10px;
+            subcontrol-position: left;
+            subcontrol-origin: margin;
+
+            &:hover,
+            &:on {
+                border-image: url($PATH_RESOURCES + '/rc/left_arrow.png');
+                height: 10px;
+                width: 10px;
+                subcontrol-position: left;
+                subcontrol-origin: margin;
+            }
+        }
+
+        &:vertical {
+            margin: 3px 0px 3px 0px;
+            border-image: url($PATH_RESOURCES + '/rc/up_arrow_disabled.png');
+            height: 10px;
+            width: 10px;
+            subcontrol-position: top;
+            subcontrol-origin: margin;
+
+            &:hover,
+            &:on {
+                border-image: url($PATH_RESOURCES + '/rc/up_arrow.png');
+                height: 10px;
+                width: 10px;
+                subcontrol-position: top;
+                subcontrol-origin: margin;
+            }
+        }
+    }
+
+    &::up-arrow:horizontal,
+    &::down-arrow:horizontal {
+        background: none;
+    }
+
+    &::up-arrow:vertical,
+    &::down-arrow:vertical {
+        background: none;
+    }
+
+    &::add-page:horizontal,
+    &::sub-page:horizontal {
+        background: none;
+    }
+
+    &::add-page:vertical,
+    &::sub-page:vertical {
+        background: none;
+    }
+}
+
+/* QTextEdit --------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-specific-widgets
+
+--------------------------------------------------------------------------- */
+QTextEdit {
+    background-color: $COLOR_BACKGROUND_DARK;
+    color: $COLOR_FOREGROUND_LIGHT;
+    border: $BORDER_NORMAL;
+
+    &:hover {
+        border: $BORDER_HOVER;
+        color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+    &:selected {
+        background: $COLOR_SELECTION_NORMAL;
+        color: $COLOR_BACKGROUND_NORMAL;
+    }
+}
+
+/* QPlainTextEdit ---------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QPlainTextEdit {
+    background-color: $COLOR_BACKGROUND_DARK;
+    color: $COLOR_FOREGROUND_LIGHT;
+    border-radius: $SIZE_BORDER_RADIUS;
+    border: $BORDER_NORMAL;
+
+    &:hover {
+        border: $BORDER_HOVER;
+        color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+    &:selected {
+        background: $COLOR_SELECTION_NORMAL;
+        color: $COLOR_BACKGROUND_NORMAL;
+    }
+}
+
+/* QSizeGrip --------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qsizegrip
+
+--------------------------------------------------------------------------- */
+QSizeGrip {
+    image: url($PATH_RESOURCES + '/rc/sizegrip.png');
+    width: 12px;
+    height: 12px;
+}
+
+/* QStackedWidget ---------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QStackedWidget {
+    padding: 4px;
+    border: $BORDER_NORMAL;
+    border: $BORDER_DARK;
+}
+
+/* QToolBar ---------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbar
+
+--------------------------------------------------------------------------- */
+QToolBar {
+    background-color: $COLOR_BACKGROUND_NORMAL;
+    border-bottom: $BORDER_DARK;
+    padding: 2px;
+    font-weight: bold;
+
+    QToolButton {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+    }
+
+    &::handle {
+
+        &:horizontal {
+            width: 6px;
+            image: url($PATH_RESOURCES + '/rc/Hmovetoolbar.png');
+        }
+
+        &:vertical {
+            height: 6px;
+            image: url($PATH_RESOURCES + '/rc/Vmovetoolbar.png');
+        }
+    }
+
+    &::separator {
+
+        &:horizontal {
+            width: 3px;
+            image: url($PATH_RESOURCES + '/rc/Hsepartoolbar.png');
+        }
+
+        &:vertical {
+            height: 3px;
+            image: url($PATH_RESOURCES + '/rc/Vsepartoolbar.png');
+        }
+    }
+}
+
+QToolButton#qt_toolbar_ext_button {
+    background: $COLOR_BACKGROUND_NORMAL;
+    border: 0px;
+    color: $COLOR_FOREGROUND_LIGHT;
+    image: url($PATH_RESOURCES + '/rc/right_arrow.png');
+}
+
+/* QAbstractSpinBox -------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QAbstractSpinBox {
+    background-color: $COLOR_BACKGROUND_DARK;
+    border: $BORDER_NORMAL;
+    color: $COLOR_FOREGROUND_LIGHT;
+
+    /* This fixes 103, 111 */
+    padding-top: 2px;
+
+    /* This fixes 103, 111 */
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: $SIZE_BORDER_RADIUS;
+    /* min-width: 5px; removed to fix 109 */
+
+    &:up-button {
+        background-color: transparent $COLOR_BACKGROUND_DARK;
+        subcontrol-origin: border;
+        subcontrol-position: top right;
+        border-left: $BORDER_NORMAL;
+        margin: 1px;
+    }
+
+    &::up-arrow,
+    &::up-arrow:disabled,
+    &::up-arrow:off {
+        image: url($PATH_RESOURCES + '/rc/up_arrow_disabled.png');
+        width: 9px;
+        height: 9px;
+    }
+
+    &::up-arrow:hover {
+        image: url($PATH_RESOURCES + '/rc/up_arrow.png');
+    }
+
+    &:down-button {
+        background-color: transparent $COLOR_BACKGROUND_DARK;
+        subcontrol-origin: border;
+        subcontrol-position: bottom right;
+        border-left: $BORDER_NORMAL;
+        margin: 1px;
+    }
+
+    &::down-arrow,
+    &::down-arrow:disabled,
+    &::down-arrow:off {
+        image: url($PATH_RESOURCES + '/rc/down_arrow_disabled.png');
+        width: 9px;
+        height: 9px;
+    }
+
+    &::down-arrow:hover {
+        image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+    }
+
+    &:hover {
+        border: $BORDER_HOVER;
+        color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+    &:selected {
+        background: $COLOR_SELECTION_NORMAL;
+        color: $COLOR_BACKGROUND_NORMAL;
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+/* DISPLAYS --------------------------------------------------------------- */
+/* ------------------------------------------------------------------------ */
+
+/* QLabel -----------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qframe
+
+--------------------------------------------------------------------------- */
+QLabel {
+    background-color: $COLOR_BACKGROUND_DARK;
+    border: 0px solid $COLOR_BACKGROUND_NORMAL;
+    padding: 2px;
+    margin: 0px;
+    color: $COLOR_FOREGROUND_LIGHT;
+
+    &::disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: 0px solid $COLOR_BACKGROUND_NORMAL;
+        color: $COLOR_FOREGROUND_DARK;
+    }
+}
+
+/* QTextBrowser -----------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qabstractscrollarea
+
+--------------------------------------------------------------------------- */
+QTextBrowser {
+    background-color: $COLOR_BACKGROUND_DARK;
+    border: $BORDER_NORMAL;
+    color: $COLOR_FOREGROUND_LIGHT;
+    border-radius: $SIZE_BORDER_RADIUS;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: $BORDER_NORMAL;
+        color: $COLOR_FOREGROUND_DARK;
+        border-radius: $SIZE_BORDER_RADIUS;
+    }
+
+    &:hover,
+    &:!hover,
+    &::selected,
+    &::pressed {
+        border: $BORDER_NORMAL;
+    }
+}
+
+/* QGraphicsView ----------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QGraphicsView {
+    background-color: $COLOR_BACKGROUND_DARK;
+    border: $BORDER_NORMAL;
+    color: $COLOR_FOREGROUND_LIGHT;
+    border-radius: $SIZE_BORDER_RADIUS;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: $BORDER_NORMAL;
+        color: $COLOR_FOREGROUND_DARK;
+        border-radius: $SIZE_BORDER_RADIUS;
+    }
+
+    &:hover,
+    &:!hover,
+    &::selected,
+    &::pressed {
+        border: $BORDER_NORMAL;
+    }
+}
+
+/* QCalendarWidget --------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QCalendarWidget {
+    border: $BORDER_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_DARK;
+    }
+}
+
+/* QLCDNumber -------------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QLCDNumber {
+    background-color: $COLOR_BACKGROUND_DARK;
+    color: $COLOR_FOREGROUND_LIGHT;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_DARK;
+    }
+}
+
+/* QProgressBar -----------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qprogressbar
+
+--------------------------------------------------------------------------- */
+QProgressBar {
+    background-color: $COLOR_BACKGROUND_DARK;
+    border: $BORDER_NORMAL;
+    color: $COLOR_FOREGROUND_LIGHT;
+    border-radius: $SIZE_BORDER_RADIUS;
+    text-align: center;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: $BORDER_NORMAL;
+        color: $COLOR_FOREGROUND_DARK;
+        border-radius: $SIZE_BORDER_RADIUS;
+        text-align: center;
+    }
+
+    &::chunk {
+        background-color: $COLOR_SELECTION_NORMAL;
+        color: $COLOR_BACKGROUND_DARK;
+        border-radius: $SIZE_BORDER_RADIUS;
+
+        &:disabled {
+            background-color: $COLOR_SELECTION_DARK;
+            color: $COLOR_FOREGROUND_DARK;
+            border-radius: $SIZE_BORDER_RADIUS;
+        }
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+/* BUTTONS ---------------------------------------------------------------- */
+/* ------------------------------------------------------------------------ */
+
+/* QPushButton ------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qpushbutton
+
+--------------------------------------------------------------------------- */
+QPushButton {
+    background-color: $COLOR_BACKGROUND_LIGHT;
+    border: $BORDER_NORMAL;
+    color: $COLOR_FOREGROUND_LIGHT;
+    border-radius: $SIZE_BORDER_RADIUS;
+    padding: 3px;
+    outline: none;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        border: $BORDER_NORMAL;
+        color: $COLOR_FOREGROUND_DARK;
+        border-radius: $SIZE_BORDER_RADIUS;
+        padding: 3px;
+    }
+
+    &:checked {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        border: $BORDER_NORMAL;
+        border-radius: $SIZE_BORDER_RADIUS;
+        padding: 3px;
+        outline: none;
+
+        &:disabled {
+            background-color: $COLOR_BACKGROUND_DARK;
+            border: $BORDER_NORMAL;
+            color: $COLOR_FOREGROUND_DARK;
+            border-radius: $SIZE_BORDER_RADIUS;
+            padding: 3px;
+            outline: none;
+        }
+
+        &:selected {
+            background: $COLOR_SELECTION_NORMAL;
+            color: $COLOR_BACKGROUND_NORMAL;
+        }
+
+        &:hover {
+            border: $BORDER_HOVER;
+            color: $COLOR_FOREGROUND_LIGHT;
+        }
+    }
+
+    &::menu-indicator {
+        subcontrol-origin: padding;
+        subcontrol-position: bottom right;
+        bottom: 4px;
+    }
+
+    &:pressed {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: $BORDER_DARK;
+
+        &:hover {
+            border: $BORDER_HOVER;
+        }
+    }
+
+    &:hover {
+        border: $BORDER_HOVER;
+        color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+    &:selected {
+        background: $COLOR_SELECTION_NORMAL;
+        color: $COLOR_BACKGROUND_NORMAL;
+    }
+}
+
+/* QToolButton ------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbutton
+
+--------------------------------------------------------------------------- */
+QToolButton {
+    background-color: transparent;
+    border: $BORDER_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+    margin: 0px;
+    padding: 2px;
+
+    &:checked {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: $BORDER_DARK;
+
+        &:hover {
+            border: $BORDER_HOVER;
+        }
+    }
+
+    &:pressed {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: $BORDER_DARK;
+
+        &:hover {
+            border: $BORDER_HOVER;
+        }
+    }
+
+    &:disabled {
+        border: $BORDER_NORMAL;
+    }
+
+    &:hover {
+        border: $BORDER_HOVER;
+    }
+
+    /* The subcontrols below are used only in the MenuButtonPopup mode */
+    &[popupMode="1"] {
+        padding: 2px;
+
+        /* Only for MenuButtonPopup */
+        padding-right: 12px;
+
+        /* Make way for the popup button */
+        border: $BORDER_NORMAL;
+        border-radius: $SIZE_BORDER_RADIUS;
+    }
+
+    /* The subcontrol below is used only in the InstantPopup or DelayedPopup mode */
+    &[popupMode="2"] {
+        padding: 2px;
+
+        /* Only for InstantPopup */
+        padding-right: 12px;
+
+        /* Make way for the popup button */
+        border: $BORDER_NORMAL;
+    }
+
+    &::menu-button {
+        padding: 2px;
+        border-radius: $SIZE_BORDER_RADIUS;
+        border: $BORDER_NORMAL;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        /* 16px width + 4px for border = 20px allocated above */
+        width: 16px;
+        outline: none;
+
+        &:hover {
+            border: $BORDER_HOVER;
+        }
+
+        &:checked {
+            &:hover {
+                border: $BORDER_HOVER;
+            }
+        }
+    }
+
+    &::menu-indicator {
+        image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+        top: -8px;     /* Shift it a bit */
+        left: -4px;    /* Shift it a bit */
+    }
+
+    &::menu-arrow {
+        image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+
+        &:open {
+            border: $BORDER_NORMAL;
+        }
+    }
+}
+
+/* QCommandLinkButton -----------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QCommandLinkButton {
+    background-color: transparent;
+    border: $BORDER_NORMAL;
+    color: $COLOR_FOREGROUND_LIGHT;
+    border-radius: $SIZE_BORDER_RADIUS;
+    padding: 0px;
+    margin: 0px;
+
+    &:disabled {
+        background-color: transparent;
+        color: $COLOR_FOREGROUND_DARK;
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+/* INPUTS - NO FIELDS ----------------------------------------------------- */
+/* ------------------------------------------------------------------------ */
+
+/* QComboBox --------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qcombobox
+
+--------------------------------------------------------------------------- */
+QComboBox {
+    border: $BORDER_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+    selection-background-color: $COLOR_SELECTION_NORMAL;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    /* Fixes #103, #111 */
+    min-height: 1.5em;
+
+    /* padding-top: 2px;     removed to fix #132 */
+    /* padding-bottom: 2px;  removed to fix #132 */
+    /* min-width: 75px;      removed to fix #109 */
+ 
+    QAbstractItemView {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border-radius: $SIZE_BORDER_RADIUS;
+        border: $BORDER_NORMAL;
+        selection-color: $COLOR_SELECTION_LIGHT;
+        selection-background-color: $COLOR_BACKGROUND_NORMAL;
+    }
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_DARK;
+    }
+
+    &:hover {
+        border: $BORDER_HOVER;
+    }
+
+    &:on {
+        selection-background-color: $COLOR_BACKGROUND_DARK;
+    }
+
+    /* Needed to remove indicator - fix #132 */
+    &::indicator {
+        background-color:transparent;
+        selection-background-color:transparent;
+        color:transparent;
+        selection-color:transparent;
+
+         /* Needed to remove indicator - fix #132 */
+        &:alternate {
+            background: #19232D;
+        }
+    }
+
+    &::item {
+
+        &:alternate {
+            background: $COLOR_BACKGROUND_DARK;
+        }
+
+        &:checked {
+            font-weight: bold;
+        }
+
+        &:selected {
+            border: 0px solid transparent;
+        }
+    }
+
+    &::drop-down {
+        subcontrol-origin: padding;
+        subcontrol-position: top right;
+        width: 20px;
+        border-left-width: 0px;
+        border-left-color: $COLOR_BACKGROUND_NORMAL;
+        border-left-style: solid;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    &::down-arrow {
+        image: url($PATH_RESOURCES + '/rc/down_arrow_disabled.png');
+
+        &:on,
+        &:hover,
+        &:focus {
+            image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+        }
+    }
+}
+
+/* QSlider ----------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qslider
+
+--------------------------------------------------------------------------- */
+QSlider {
+
+    &:disabled {
+        background: $COLOR_BACKGROUND_DARK;
+    }
+
+    &:focus {
+        border: none;
+    }
+
+    &::groove {
+        &:horizontal {
+            background: $COLOR_BACKGROUND_NORMAL;
+            border: $BORDER_NORMAL;
+            height: 4px;
+            margin: 0px;
+            border-radius: $SIZE_BORDER_RADIUS;
+        }
+
+        &:vertical {
+            background: $COLOR_BACKGROUND_NORMAL;
+            border: $BORDER_NORMAL;
+            width: 4px;
+            margin: 0px;
+            border-radius: $SIZE_BORDER_RADIUS;
+        }
+    }
+
+    &::add-page {
+
+        &:vertical {
+            background: $COLOR_SELECTION_NORMAL;
+            border: $BORDER_NORMAL;
+            width: 4px;
+            margin: 0px;
+            border-radius: $SIZE_BORDER_RADIUS;
+
+            :disabled {
+                background: $COLOR_SELECTION_DARK;
+            }
+        }
+    }
+
+    &::sub-page {
+
+        &:horizontal {
+            background: $COLOR_SELECTION_NORMAL;
+            border: $BORDER_NORMAL;
+            height: 4px;
+            margin: 0px;
+            border-radius: $SIZE_BORDER_RADIUS;
+
+            &:disabled {
+                background: $COLOR_SELECTION_DARK;
+            }
+        }
+    }
+
+    &::handle {
+
+        &:horizontal {
+            background: $COLOR_FOREGROUND_DARK;
+            border: $BORDER_NORMAL;
+            width: 8px;
+            height: 8px;
+            margin: -8px 0px;
+            border-radius: $SIZE_BORDER_RADIUS;
+
+            &:hover {
+                background: $COLOR_SELECTION_LIGHT;
+                border: $BORDER_HOVER;
+            }
+        }
+
+        &:vertical {
+            background: $COLOR_FOREGROUND_DARK;
+            border: $BORDER_NORMAL;
+            width: 8px;
+            height: 8px;
+            margin: 0 -8px;
+            border-radius: $SIZE_BORDER_RADIUS;
+
+            &:hover {
+                background: $COLOR_SELECTION_LIGHT;
+                border: $BORDER_HOVER;
+            }
+        }
+    }
+}
+
+/* QLineEdit --------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qlineedit
+
+--------------------------------------------------------------------------- */
+QLineEdit {
+    background-color: $COLOR_BACKGROUND_DARK;
+    padding-top: 2px;     /* This QLineEdit fix  103, 111 */
+    padding-bottom: 2px;  /* This QLineEdit fix  103, 111 */
+    padding-left: 4px;
+    padding-right: 4px;
+    border-style: solid;
+    border: $BORDER_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+    color: $COLOR_FOREGROUND_LIGHT;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_DARK;
+    }
+
+    &:hover {
+        border: $BORDER_HOVER;
+        color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+    &:selected {
+        background: $COLOR_SELECTION_NORMAL;
+        color: $COLOR_BACKGROUND_NORMAL;
+    }
+}
+
+/* QTabWiget --------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabbar
+
+--------------------------------------------------------------------------- */
+QTabWidget {
+    padding: 2px;
+    selection-background-color: $COLOR_BACKGROUND_NORMAL;
+
+    QWidget QWidget,
+    QFrame {
+        /* Add wanted borders - fix #141, #126, #123 */
+        border: $BORDER_NORMAL;
+    }
+
+    QLabel {
+        /* Label derived from frame, remove border #141 */
+        border: 0px solid $COLOR_BACKGROUND_NORMAL; 
+    }
+
+    &::pane {
+        border: $BORDER_NORMAL;
+        border-radius: $SIZE_BORDER_RADIUS;
+        margin: 0px;
+
+        /* Fixes double border inside pane wit pyqt5 */
+        padding: 0px;
+
+        &:selected {
+            background-color: $COLOR_BACKGROUND_NORMAL;
+            border: 1px solid $COLOR_SELECTION_NORMAL;
+        }
+    }
+}
+
+/* QTabBar ----------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabbar
+
+--------------------------------------------------------------------------- */
+QTabBar {
+    qproperty-drawBase: 0;
+    border-radius: $SIZE_BORDER_RADIUS;
+    margin: 0px;
+    padding: 2px;
+    border: 0;
+    /* left: 5px; move to the right by 5px - removed for fix */
+
+    &::close-button {
+        border: 0;
+        margin: 2px;
+        padding: 0px;
+        image: url($PATH_RESOURCES + '/rc/close.png');
+
+        &:hover {
+            image: url($PATH_RESOURCES + '/rc/close-hover.png');
+        }
+
+        &:pressed {
+            image: url($PATH_RESOURCES + '/rc/close-pressed.png');
+        }
+    }
+}
+
+/* QTabBar::tab - selected ------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabbar
+
+--------------------------------------------------------------------------- */
+QTabBar {
+
+    &::tab {
+
+        &:top:selected:disabled {
+            border-bottom: 3px solid $COLOR_SELECTION_DARK;
+            color: $COLOR_FOREGROUND_DARK;
+            background-color: $COLOR_BACKGROUND_NORMAL;
+        }
+
+        &:bottom:selected:disabled {
+            border-top: 3px solid $COLOR_SELECTION_DARK;
+            color: $COLOR_FOREGROUND_DARK;
+            background-color: $COLOR_BACKGROUND_NORMAL;
+        }
+
+        &:left:selected:disabled {
+            border-left: 3px solid $COLOR_SELECTION_DARK;
+            color: $COLOR_FOREGROUND_DARK;
+            background-color: $COLOR_BACKGROUND_NORMAL;
+        }
+
+        &:right:selected:disabled {
+            border-right: 3px solid $COLOR_SELECTION_DARK;
+            color: $COLOR_FOREGROUND_DARK;
+            background-color: $COLOR_BACKGROUND_NORMAL;
+        }
+
+        /* !selected and disabled ----------------------------------------- */
+        &:top:!selected:disabled {
+            border-bottom: 3px solid $COLOR_BACKGROUND_DARK;
+            color: $COLOR_FOREGROUND_DARK;
+            background-color: $COLOR_BACKGROUND_DARK;
+        }
+
+        &:bottom:!selected:disabled {
+            border-top: 3px solid $COLOR_BACKGROUND_DARK;
+            color: $COLOR_FOREGROUND_DARK;
+            background-color: $COLOR_BACKGROUND_DARK;
+        }
+
+        &:left:!selected:disabled {
+            border-right: 3px solid $COLOR_BACKGROUND_DARK;
+            color: $COLOR_FOREGROUND_DARK;
+            background-color: $COLOR_BACKGROUND_DARK;
+        }
+
+        &:right:!selected:disabled {
+            border-left: 3px solid $COLOR_BACKGROUND_DARK;
+            color: $COLOR_FOREGROUND_DARK;
+            background-color: $COLOR_BACKGROUND_DARK;
+        }
+
+        /* selected ------------------------------------------------------- */
+        &:top:!selected {
+            border-bottom: 2px solid $COLOR_BACKGROUND_DARK;
+            margin-top: 2px;
+        }
+        
+        &:bottom:!selected {
+            border-top: 2px solid $COLOR_BACKGROUND_DARK;
+            margin-bottom: 3px;
+        }
+        
+        &:left:!selected {
+            border-left: 2px solid $COLOR_BACKGROUND_DARK;
+            margin-right: 2px;
+        }
+        
+        &:right:!selected {
+            border-right: 2px solid $COLOR_BACKGROUND_DARK;
+            margin-left: 2px;
+        }
+
+        &:top {
+            background-color: $COLOR_BACKGROUND_NORMAL;
+            color: $COLOR_FOREGROUND_LIGHT;
+            margin-left: 2px;
+            padding-left: 4px;
+            padding-right: 4px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            min-width: 5px;
+            border-bottom: 3px solid $COLOR_BACKGROUND_NORMAL;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+
+            &:selected {
+                background-color: $COLOR_BACKGROUND_LIGHT;
+                color: $COLOR_FOREGROUND_LIGHT;
+                border-bottom: 3px solid $COLOR_SELECTION_NORMAL;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+            }    
+
+            &:!selected:hover {
+                border: $BORDER_HOVER;
+                border-bottom: 3px solid $COLOR_SELECTION_LIGHT;
+                padding: 0px;
+            }
+        }
+        
+        &:bottom {
+            color: $COLOR_FOREGROUND_LIGHT;
+            border-top: 3px solid $COLOR_BACKGROUND_NORMAL;
+            background-color: $COLOR_BACKGROUND_NORMAL;
+            margin-left: 2px;
+            padding-left: 4px;
+            padding-right: 4px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            min-width: 5px;
+
+            &:selected {
+                color: $COLOR_FOREGROUND_LIGHT;
+                background-color: $COLOR_BACKGROUND_LIGHT;
+                border-top: 3px solid $COLOR_SELECTION_NORMAL;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+            
+            &:!selected:hover {
+                border: $BORDER_HOVER;
+                border-top: 3px solid $COLOR_SELECTION_LIGHT;
+                padding: 0px;
+            }
+    
+        }
+        
+        &:left {
+            color: $COLOR_FOREGROUND_LIGHT;
+            background-color: $COLOR_BACKGROUND_NORMAL;
+            margin-top: 2px;
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            min-height: 5px;
+
+            &:selected {
+                color: $COLOR_FOREGROUND_LIGHT;
+                background-color: $COLOR_BACKGROUND_LIGHT;
+                border-left: 3px solid $COLOR_SELECTION_NORMAL;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+            
+            &:!selected:hover {
+                border: $BORDER_HOVER;
+                border-left: 3px solid $COLOR_SELECTION_LIGHT;
+                padding: 0px;
+            }
+        }
+
+        &:right {
+            color: $COLOR_FOREGROUND_LIGHT;
+            background-color: $COLOR_BACKGROUND_NORMAL;
+            margin-top: 2px;
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            min-height: 5px;
+
+            &:selected {
+                color: $COLOR_FOREGROUND_LIGHT;
+                background-color: $COLOR_BACKGROUND_LIGHT;
+                border-right: 3px solid $COLOR_SELECTION_NORMAL;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+            
+            &:!selected:hover {
+                border: $BORDER_HOVER;
+                border-right: 3px solid $COLOR_SELECTION_LIGHT;
+                padding: 0px;
+            }    
+        }
+    }
+
+    QToolButton {
+        /* Fixes #136 */
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        width: 16px;
+        height: 16px;
+
+        &::left-arrow {
+            &:enabled {
+                image: url($PATH_RESOURCES + '/rc/left_arrow.png');
+            }
+
+            &:disabled {
+                image: url($PATH_RESOURCES + '/rc/left_arrow_disabled.png');
+            }
+        }
+
+        &::right-arrow {
+            &:enabled {
+                image: url($PATH_RESOURCES + '/rc/right_arrow.png');
+            }
+
+            &:disabled {
+                image: url($PATH_RESOURCES + '/rc/right_arrow_disabled.png');
+            }    
+        }
+    }
+}
+
+/* QDockWiget -------------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QDockWidget {
+    outline: $BORDER_NORMAL;
+    background-color: $COLOR_BACKGROUND_DARK;
+    border: $BORDER_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+    titlebar-close-icon: url($PATH_RESOURCES + '/rc/close.png');
+    titlebar-normal-icon: url($PATH_RESOURCES + '/rc/undock.png');
+
+    &::title {
+        /* Better size for title bar */
+        padding: 6px;
+        border: none;
+        background-color: $COLOR_BACKGROUND_NORMAL;
+    }
+
+    &::close-button {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        border-radius: $SIZE_BORDER_RADIUS;
+        border: none;
+
+        &:hover {
+            border: $BORDER_NORMAL;
+        }
+
+        &:pressed {
+            border: $BORDER_NORMAL;
+        }
+    }
+
+    &::float-button {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        border-radius: $SIZE_BORDER_RADIUS;
+        border: none;
+
+        &:hover {
+            border: $BORDER_NORMAL;
+        }
+
+        &:pressed {
+            border: $BORDER_NORMAL;
+        }
+    }
+}
+
+/* QTreeView QListView QTableView -----------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtreeview
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qlistview
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtableview
+
+--------------------------------------------------------------------------- */
+QTreeView {
+
+    &:branch {
+
+        &:selected,
+        &:hover {
+            background: url($PATH_RESOURCES + '/rc/transparent.png');
+        }
+
+        &:has-siblings:!adjoins-item {
+            border-image: url($PATH_RESOURCES + '/rc/transparent.png');
+        }
+
+        &:has-siblings:adjoins-item {
+            border-image: url($PATH_RESOURCES + '/rc/transparent.png');
+        }
+
+        &:!has-children:!has-siblings:adjoins-item {
+            border-image: url($PATH_RESOURCES + '/rc/transparent.png');
+        }
+
+        &:has-children:!has-siblings:closed,
+        &:closed:has-children:has-siblings {
+            image: url($PATH_RESOURCES + '/rc/branch_closed.png');
+        }
+
+        &:open:has-children:!has-siblings,
+        &:open:has-children:has-siblings {
+            image: url($PATH_RESOURCES + '/rc/branch_open.png');
+        }
+
+        &:has-children:!has-siblings:closed:hover,
+        &:closed:has-children:has-siblings:hover {
+            image: url($PATH_RESOURCES + '/rc/branch_closed-on.png');
+        }
+
+        &:open:has-children:!has-siblings:hover,
+        &:open:has-children:has-siblings:hover {
+            image: url($PATH_RESOURCES + '/rc/branch_open-on.png');
+        }
+    }
+}
+
+QTreeView, 
+QListView {
+
+    &::indicator {
+
+        &:checked {
+            image: url($PATH_RESOURCES + '/rc/checkbox_checked.png');
+
+            &:hover,
+            &:focus,
+            &:pressed {
+                image: url($PATH_RESOURCES + '/rc/checkbox_checked_focus.png');
+            }
+        }
+
+        &:unchecked {
+            image: url($PATH_RESOURCES + '/rc/checkbox_unchecked.png');
+
+            &:hover,
+            &:focus,
+            &:pressed {
+                image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_focus.png');
+            }
+        }
+
+        &:indeterminate {
+            image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate.png');
+
+            &:hover,
+            &:focus,
+            &:pressed {
+                image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_focus.png');
+            }
+        }
+    }
+}
+
+QTreeView,
+QListView,
+QTableView,
+QColumnView {
+    background-color: $COLOR_BACKGROUND_DARK;
+    border: $BORDER_NORMAL;
+    color: $COLOR_FOREGROUND_LIGHT;
+    gridline-color: $COLOR_BACKGROUND_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_DARK;
+    }
+
+    &:selected {
+        background: $COLOR_SELECTION_NORMAL;
+        color: $COLOR_BACKGROUND_NORMAL;
+    }
+
+    &::hover {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: $BORDER_HOVER;
+    }    
+
+    &::item {
+
+        &:pressed {
+            background-color: $COLOR_SELECTION_NORMAL;
+        }
+        
+        &:selected {
+
+            &:hover {
+                background: $COLOR_SELECTION_NORMAL;
+                color:  $COLOR_BACKGROUND_DARK;
+            }
+
+            &:active {
+                background-color: $COLOR_SELECTION_NORMAL;
+            }            
+        }
+    
+        &:!selected {
+
+            &:hover {
+                outline: 0;
+                color: $COLOR_SELECTION_LIGHT;
+                background-color: $COLOR_BACKGROUND_NORMAL;            
+            }
+        }
+    }
+}
+
+QTableCornerButton {
+    &::section {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: 1px transparent $COLOR_BACKGROUND_NORMAL;
+        border-radius: 0px;
+    }
+}
+
+/* QHeaderView ------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qheaderview
+
+--------------------------------------------------------------------------- */
+QHeaderView {
+    background-color: $COLOR_BACKGROUND_NORMAL;
+    border: 0px transparent $COLOR_BACKGROUND_NORMAL;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+
+    &:disabled {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        border: 1px transparent $COLOR_BACKGROUND_NORMAL;
+        padding: 2px;
+    }
+
+    &::section {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        color: $COLOR_FOREGROUND_LIGHT;
+        padding: 2px;
+        border-radius: 0px;
+        text-align: left;
+
+        &:checked {
+            color: $COLOR_FOREGROUND_LIGHT;
+            background-color: $COLOR_SELECTION_NORMAL;
+
+            &:disabled {
+                color: $COLOR_FOREGROUND_DARK;
+                background-color: $COLOR_SELECTION_DARK;
+            }
+        }
+
+        &::horizontal  {
+            border-left: $BORDER_DARK;
+
+            &::first,
+            &::only-one {
+                border-left: $BORDER_NORMAL;
+            }
+
+            &:disabled {
+                color: $COLOR_FOREGROUND_DARK;
+            }
+        }
+
+        &::vertical {
+            border-top: $BORDER_DARK;
+
+            &::first,
+            &::only-one {
+                border-top: $BORDER_NORMAL;
+            }
+
+            &:disabled {
+                color: $COLOR_FOREGROUND_DARK;
+            }
+        }
+    }
+
+    &::down-arrow {
+        /* Those settings (border/width/height/background-color) solve bug */
+        /* transparent arrow background and size */
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        width: 16px;
+        height: 16px;
+        border-right: $BORDER_DARK;
+        image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+    }
+
+    &::up-arrow {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        width: 16px;
+        height: 16px;
+        border-right: $BORDER_DARK;
+        image: url($PATH_RESOURCES + '/rc/up_arrow.png');
+    }
+}
+
+/* QToolBox --------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbox
+
+--------------------------------------------------------------------------- */
+QToolBox {
+    padding: 0px;
+    border: $BORDER_NORMAL;
+
+    &::selected {
+        padding: 0px;
+        border: 2px solid $COLOR_SELECTION_NORMAL;
+    }
+
+    &::tab {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border: $BORDER_NORMAL;
+        color: $COLOR_FOREGROUND_LIGHT;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+
+        &:disabled {
+            color: $COLOR_FOREGROUND_DARK;
+        }
+
+        &:selected {
+            background-color: $COLOR_BACKGROUND_LIGHT;
+            border-bottom: 2px solid $COLOR_SELECTION_NORMAL;
+
+            &:disabled {
+                background-color: $COLOR_BACKGROUND_NORMAL;
+                border-bottom: 2px solid $COLOR_SELECTION_DARK;
+            }
+        }
+
+        &:!selected {
+            background-color: $COLOR_BACKGROUND_NORMAL;
+            border-bottom: 2px solid $COLOR_BACKGROUND_NORMAL;
+
+            &:disabled {
+                background-color: $COLOR_BACKGROUND_DARK;
+            }
+    
+        }
+
+        &:hover {
+            border-color: $COLOR_SELECTION_LIGHT;
+            border-bottom: 2px solid $COLOR_SELECTION_LIGHT;
+        }
+    }
+
+    QScrollArea QWidget QWidget {
+        padding: 0px;
+        background-color: $COLOR_BACKGROUND_DARK;
+    }
+}
+
+/* QFrame -----------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qframe
+
+--------------------------------------------------------------------------- */
+QFrame {
+    border-radius: $SIZE_BORDER_RADIUS;
+    border: $BORDER_NORMAL;
+
+    &[frameShape="0"] {
+        border-radius: $SIZE_BORDER_RADIUS;
+        border: 1px transparent $COLOR_BACKGROUND_NORMAL;
+    }
+
+    &[height="3"],
+    &[width="3"] {
+        background-color: $COLOR_BACKGROUND_DARK;
+    }
+}
+
+/* QSplitter --------------------------------------------------------------
+
+https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qsplitter
+
+--------------------------------------------------------------------------- */
+QSplitter {
+    background-color: $COLOR_BACKGROUND_NORMAL;
+    spacing: 0px;
+    padding: 0px;
+    margin: 0px;
+
+    &::separator {
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        border: 0px solid $COLOR_BACKGROUND_DARK;
+        spacing: 0px;
+        padding: 1px;
+        margin: 0px;
+
+        &:hover {
+            background-color: $COLOR_FOREGROUND_DARK;
+        }
+
+        &:horizontal {
+            width: 5px;
+            image: url($PATH_RESOURCES + '/rc/Vsepartoolbar.png');
+        }
+
+        &:vertical {
+            height: 5px;
+            image: url($PATH_RESOURCES + '/rc/Hsepartoolbar.png');
+        }
+    }
+}
+
+/* QDateEdit --------------------------------------------------------------
+
+--------------------------------------------------------------------------- */
+QDateEdit {
+    selection-background-color: $COLOR_SELECTION_NORMAL;
+    border-style: solid;
+    border: $BORDER_NORMAL;
+    border-radius: $SIZE_BORDER_RADIUS;
+
+    /* This fixes 103, 111 */
+    padding-top: 2px;
+
+    /* This fixes 103, 111 */
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-width: 10px;
+
+    &:on {
+        selection-background-color: $COLOR_SELECTION_NORMAL;
+    }
+
+    &::drop-down {
+        subcontrol-origin: padding;
+        subcontrol-position: top right;
+        width: 20px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    &::down-arrow {
+        image: url($PATH_RESOURCES + '/rc/down_arrow_disabled.png');
+
+        &:on,
+        &:hover,
+        &:focus {
+            image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+        }
+
+    }
+
+    QAbstractItemView {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border-radius: $SIZE_BORDER_RADIUS;
+        border: $BORDER_NORMAL;
+        selection-background-color: $COLOR_SELECTION_NORMAL;
+    }
+}
+
+QAbstractView {
+
+    &:hover {
+        border: $BORDER_HOVER;
+        color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+    &:selected {
+        background: $COLOR_SELECTION_NORMAL;
+        color: $COLOR_BACKGROUND_NORMAL;
+    }
+}
+
+PlotWidget {
+    /* Fix cut labels in plots #134 */
+    padding: 0px;
+}

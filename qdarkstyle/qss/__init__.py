@@ -38,6 +38,9 @@ class DarkPalette(object):
     # Example of additional widget specific variables
     W_STATUS_BAR_BACKGROUND_COLOR = COLOR_SELECTION_DARK
 
+    # Paths
+    PATH_RESOURCES = "':/qss_icons'"
+
     @classmethod
     def _to_dict(cls, colors_only=False):
         """Convert variables to dictionary."""
@@ -57,6 +60,7 @@ class DarkPalette(object):
             'BORDER_DARK',
             'BORDER_HOVER',
             'W_STATUS_BAR_BACKGROUND_COLOR',
+            'PATH_RESOURCES',
         ]
         dic = OrderedDict()
         for var in order:

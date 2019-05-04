@@ -26,6 +26,7 @@ Links to understand those tools:
 # Standard library imports
 from __future__ import absolute_import, print_function
 from subprocess import call
+
 import argparse
 import glob
 import os
@@ -34,6 +35,9 @@ import sys
 # Third party imports
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
+
+# Local imports
+from qdarkstyle.utils import create_qss
 
 # Constants
 HERE = os.path.abspath(os.path.dirname(__file__))
@@ -103,6 +107,10 @@ def run_process(args):
         print(filename, '...')
         ext = '_rc.py'
         ext_c = '.rcc'
+
+        # Create variables SCSS files and compile SCSS files to QSS
+        print('Compiling SCSS/SASS files to QSS ...')
+        create_qss()
 
         # creating names
         py_file_pyqt5 = 'pyqt5_' + filename + ext

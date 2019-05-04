@@ -38,10 +38,11 @@ problems.
 
 """
 
-import logging
-import sys
+# Standard library imports
 import argparse
+import logging
 import os
+import sys
 
 # make the example runnable without the need to install
 from os.path import abspath, dirname
@@ -50,6 +51,11 @@ sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 # must be in this place, after setting path, to not need to install
 import qdarkstyle
 from qdarkstyle import QT_BINDING, QT_ABSTRACTION
+
+# Constants
+HERE = os.path.abspath(os.path.dirname(__file__))
+REPO_ROOT = os.path.dirname(HERE)
+SCREENSHOTS_PATH = os.path.join(REPO_ROOT, 'screenshots')
 
 
 def main():
@@ -65,6 +71,10 @@ def main():
                         help="Auto close window after 2s.")
     parser.add_argument('--reset', action='store_true',
                         help="Reset GUI settings (position, size).")
+    parser.add_argument('--screenshots', action='store_true',
+                        help="Generate screenshots.")
+
+
     # parsing arguments from command line
     args = parser.parse_args()
 
@@ -305,7 +315,6 @@ def main():
     qstatusbar.addWidget(QPushButton('OK'))
     window.setStatusBar(qstatusbar)
 
-
     # auto quit after 2s when testing on travis-ci
     if args.test:
         QTimer.singleShot(2000, app.exit)
@@ -314,9 +323,75 @@ def main():
     qdarkstyle.information()
     read_settings(window, args.reset)
     window.showMaximized()
-    app.exec_()
-    write_settings(window)
 
+    # Save screenshots for differents displays and quit
+    if args.screenshots:
+        window.showFullScreen()
+        QTimer.singleShot(1000, lambda: create_screenshots(app, window, not args.no_dark))
+
+    app.exec_()
+    write_settings(window)    
+
+
+def create_screenshots(app, window, is_darkstyle):
+    """Save screenshots for different application views and quit."""
+    from qtpy.QtCore import QCoreApplication
+    from qtpy.QtGui import QGuiApplication
+    from qtpy.QtWidgets import QDockWidget, QTabWidget
+
+    print('\nCreating screenshots')
+    docks = window.findChildren(QDockWidget)
+    tabs = window.findChildren(QTabWidget)
+    widget_data = {
+        'containers_buttons.png': [
+            'Containers - No Tabs',
+            'Buttons',
+        ],
+        'containers_tabs_displays.png': [
+            'Containers - Tabs',
+            'Displays',
+        ],
+        'views_inputs_no_fields.png': [
+            'Views',
+            'Inputs - No Fields',
+        ],
+        'widgets_inputs_fields.png': [
+            'Widgets',
+            'Inputs - Fields',
+        ],
+    }
+    prefix = 'qdarkstyle_' if is_darkstyle else 'no_dark_'
+    screen = QGuiApplication.primaryScreen()
+    QCoreApplication.processEvents()
+    tab = [tab for tab in tabs if tab.count() >= 12][0]
+    tab.setCurrentIndex(11)
+    QCoreApplication.processEvents()
+
+    for fname_suffix, widgets in widget_data.items():
+        QCoreApplication.processEvents()
+        png_path = os.path.join(SCREENSHOTS_PATH, prefix + fname_suffix)
+        print('\t' + png_path)
+
+        for dockwidget_name in widgets:
+            dockwidget = [dw for dw in docks if dw.windowTitle() == dockwidget_name]
+            if dockwidget:
+                dockwidget = dockwidget[0]
+                dockwidget.show()
+                dockwidget.raise_()
+                QCoreApplication.processEvents()
+
+            dockwidget = None
+
+        QCoreApplication.processEvents()
+        pixmap = screen.grabWindow(window.winId())
+        img = pixmap.toImage()
+        img.save(png_path)
+        QCoreApplication.processEvents()
+
+    window.showNormal()
+    QCoreApplication.processEvents()
+    print('\n')
+    app.exit()
 
 
 if __name__ == "__main__":
