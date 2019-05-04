@@ -5,6 +5,14 @@ from setuptools import setup, find_packages
 from qdarkstyle import __version__
 from qdarkstyle import __doc__ as long_desc
 
+
+install_requires = []
+
+extras_require = {
+    'example': ['qtpy>=1.7', 'pyside2', 'pyqt5'],
+    'develop': ['watchdog']
+}
+
 setup(
     name='QDarkStyle',
     version=__version__,
@@ -32,5 +40,7 @@ setup(
         'Topic :: Software Development :: Libraries :: Application Frameworks'
     ],
     zip_safe=False,  # don't use eggs
-    entry_points={"console_scripts": ["qdarkstyle=qdarkstyle.__main__:main"]}
+    entry_points={"console_scripts": ["qdarkstyle=qdarkstyle.__main__:main"]},
+    extras_require=extras_require,
+    install_requires=install_requires
 )

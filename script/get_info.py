@@ -1,24 +1,26 @@
 
 # -*- coding: utf-8 -*-
-"""Script to get system information.
-"""
+"""Script to get system information."""
 
+# Standard library imports
 from __future__ import absolute_import, print_function
-
 import os
 import sys
+
+# Local imports
 import qdarkstyle
+
 
 def get_info():
     """Process UI files."""
     info = []
-    info.append('QDarkStyle: ', qdarkstyle.__version__)
-    info.append('OS: ', sys.platform)
-    info.append('Python: ', sys.version)
-    info.append('QT_API: ', os.getenv['QT_API'])
-    info.append('PYQTGRAPH_QT_LIB: ', os.getenv['PYQTGRAPH_QT_LIB'])
+    info.append('QDarkStyle: %s' % qdarkstyle.__version__)
+    info.append('OS: %s' % sys.platform)
+    info.append('Python: %s' % sys.version)
+    info.append('QT_API: %s' % os.environ.get('QT_API', None))
+    info.append('PYQTGRAPH_QT_LIB: %s' % os.environ.get('PYQTGRAPH_QT_LIB', None))
     for item in info:
         print(item)
 
 if __name__ == '__main__':
-    sys.exit(main(sys.argv[1:]))
+    sys.exit(get_info())

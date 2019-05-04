@@ -20,13 +20,17 @@ Links to understand those tools:
 
 """
 
+# Standard library imports
 from __future__ import absolute_import, print_function
-
+from subprocess import call
 import argparse
 import glob
 import os
 import sys
-from subprocess import call
+
+# Constants
+HERE = os.path.abspath(os.path.dirname(__file__))
+REPO_ROOT = os.path.dirname(HERE)
 
 
 def main(arguments):
@@ -34,7 +38,7 @@ def main(arguments):
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--ui_dir',
-                        default='../example/ui',
+                        default=os.path.join(REPO_ROOT, 'example', 'ui'),
                         type=str,
                         help="UI files directory, relative to current directory.",)
     parser.add_argument('--create',

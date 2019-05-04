@@ -23,13 +23,36 @@ Links to understand those tools:
 
 """
 
+# Standard library imports
 from __future__ import absolute_import, print_function
-
+from subprocess import call
 import argparse
 import glob
 import os
 import sys
-from subprocess import call
+
+# Third party imports
+from watchdog.events import FileSystemEventHandler
+from watchdog.observers import Observer
+
+# Constants
+HERE = os.path.abspath(os.path.dirname(__file__))
+REPO_ROOT = os.path.dirname(HERE)
+
+
+class QSSFileHandler(FileSystemEventHandler):
+    """QSS File observer."""
+
+    def __init__(self, parser_args):
+        """QSS File observer."""
+        super(QSSFileHandler, self).__init__()
+        self.args = parser_args
+
+    def on_modified(self, event):
+        """Handle file system events."""
+        if event.src_path.endswith('.qss'):
+            run_process(self.args)
+            print('\n')
 
 
 def main(arguments):
@@ -37,7 +60,7 @@ def main(arguments):
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--qrc_dir',
-                        default='../qdarkstyle',
+                        default=os.path.join(REPO_ROOT, 'qdarkstyle'),
                         type=str,
                         help="QRC file directory, relative to current directory.",)
     parser.add_argument('--create',
@@ -45,9 +68,29 @@ def main(arguments):
                         choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'qt', 'qt5', 'all'],
                         type=str,
                         help="Choose which one would be generated.")
+    parser.add_argument('--watch', '-w',
+                        action='store_true',
+                        help="Watch for file changes.")
 
     args = parser.parse_args(arguments)
 
+    if args.watch:
+        path = os.path.join(REPO_ROOT, 'qdarkstyle')
+        observer = Observer()
+        handler = QSSFileHandler(parser_args=args)
+        observer.schedule(handler, path, recursive=True)
+        try:
+            print('\nWatching QSS file for changes...\nPress Ctrl+C to exit\n')
+            observer.start()
+        except KeyboardInterrupt:
+            observer.stop()
+        observer.join()
+    else:
+        run_process(args)
+
+
+def run_process(args):
+    """Process qrc files."""
     print('Changing directory to: ', args.qrc_dir)
     os.chdir(args.qrc_dir)
 

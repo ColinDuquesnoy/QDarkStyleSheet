@@ -1,3 +1,5 @@
+*.orig
+
 *.pyc
 
 dist/
@@ -35,3 +37,6 @@ deb_dist
 ./.idea
 /.idea/
 .tox
+
+# OSX files
+.DS_Store
