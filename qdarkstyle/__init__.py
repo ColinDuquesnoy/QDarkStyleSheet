@@ -59,7 +59,7 @@ if sys.version_info >= (3, 4):
 
 # Local imports
 from qdarkstyle.utils import create_qss
-from qdarkstyle.qss import Variables
+from qdarkstyle.qss import DarkPalette
 
 
 __version__ = "2.6.8"
@@ -278,7 +278,7 @@ def load_stylesheet(pyside=True):
                 text-align: center;
                 height: 12px;
             }}
-            '''.format(color=Variables.COLOR_BACKGROUND_NORMAL)
+            '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
             stylesheet += mac_fix
 
         return stylesheet
@@ -372,7 +372,7 @@ def load_stylesheet_pyqt5():
                 text-align: center;
                 height: 12px;
             }}
-            '''.format(color=Variables.COLOR_BACKGROUND_NORMAL)
+            '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
             stylesheet += mac_fix
 
         return stylesheet

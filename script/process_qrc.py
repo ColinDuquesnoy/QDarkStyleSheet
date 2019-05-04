@@ -36,6 +36,9 @@ import sys
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
+# Local imports
+from qdarkstyle.utils import create_qss
+
 # Constants
 HERE = os.path.abspath(os.path.dirname(__file__))
 REPO_ROOT = os.path.dirname(HERE)

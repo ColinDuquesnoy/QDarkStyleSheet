@@ -14,7 +14,7 @@ except ImportError:
 
 
 # Local imports
-from qdarkstyle.qss import PATH_SCSS_MAIN, PATH_SCSS_VARIABLES, Variables
+from qdarkstyle.qss import DarkPalette, PATH_SCSS_MAIN, PATH_SCSS_VARIABLES
 
 # Constants
 _HEADER_SCSS = '''// ---------------------------------------------------------------------------

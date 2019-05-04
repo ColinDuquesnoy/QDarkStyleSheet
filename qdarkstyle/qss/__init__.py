@@ -12,7 +12,7 @@ PATH_SCSS_VARIABLES = os.path.join(_HERE, '_variables.scss')
 PATH_SCSS_MAIN = os.path.join(_HERE, 'main.scss')
 
 
-class Variables(object):
+class DarkPalette(object):
     """Theme variables."""
 
     # Color
@@ -20,6 +20,7 @@ class Variables(object):
     COLOR_BACKGROUND_NORMAL = '#32414B'
     COLOR_BACKGROUND_DARK = '#19232D'
     COLOR_FOREGROUND_LIGHT = '#F0F0F0'
+    COLOR_FOREGROUND_NORMAL = '#AAAAAA'
     COLOR_FOREGROUND_DARK = '#787878'
     COLOR_SELECTION_LIGHT = '#148CD2'
     COLOR_SELECTION_NORMAL = '#1464A0'
@@ -37,6 +38,9 @@ class Variables(object):
     # Example of additional widget specific variables
     W_STATUS_BAR_BACKGROUND_COLOR = COLOR_SELECTION_DARK
 
+    # Paths
+    PATH_RESOURCES = "':/qss_icons'"
+
     @classmethod
     def _to_dict(cls):
         """Convert variables to dictionary."""
@@ -45,6 +49,7 @@ class Variables(object):
             'COLOR_BACKGROUND_NORMAL',
             'COLOR_BACKGROUND_DARK',
             'COLOR_FOREGROUND_LIGHT',
+            'COLOR_FOREGROUND_NORMAL',
             'COLOR_FOREGROUND_DARK',
             'COLOR_SELECTION_LIGHT',
             'COLOR_SELECTION_NORMAL',
@@ -55,6 +60,7 @@ class Variables(object):
             'BORDER_DARK',
             'BORDER_HOVER',
             'W_STATUS_BAR_BACKGROUND_COLOR',
+            'PATH_RESOURCES',
         ]
         dic = OrderedDict()
         for var in order:
