@@ -68,7 +68,7 @@ def _scss_to_dict(string):
 
 def _create_scss_variables():
     """Create a scss variables file."""
-    scss = _dict_to_scss(Variables._to_dict())
+    scss = _dict_to_scss(DarkPalette._to_dict())
     data = _HEADER_SCSS + scss + '\n'
 
     with open(PATH_SCSS_VARIABLES, 'w') as f:

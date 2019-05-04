@@ -10,7 +10,7 @@
 This is the main style sheet, the palette has eight colors.
 
 It is based on three selecting colors, three greyish (background) colors
-plus twi whitish (foreground) colors. Each set of widgets of the same
+plus three whitish (foreground) colors. Each set of widgets of the same
 type have a header like this:
 
     ------------------
@@ -62,8 +62,8 @@ See Qt documentation:
 QWidget {
   background-color: #19232D;
   border: 0px solid #32414B;
-  color: #F0F0F0;
   padding: 0px;
+  color: #F0F0F0;
   selection-background-color: #1464A0;
   selection-color: #F0F0F0;
 }
@@ -94,7 +94,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmainwindow
 QMainWindow::separator {
   background-color: #32414B;
   border: 0px solid #19232D;
-  spacing: 0;
+  spacing: 0px;
   padding: 2px;
 }
 
@@ -104,9 +104,9 @@ QMainWindow::separator:hover {
 }
 
 QMainWindow::separator:horizontal {
-  margin-bottom: 2px;
-  margin-top: 2px;
   width: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
   image: url(":/qss_icons/rc/Vsepartoolbar.png");
 }
 
@@ -127,7 +127,7 @@ QToolTip {
   border: 1px solid #19232D;
   color: #19232D;
   /* Remove padding, for fix combo box tooltip */
-  padding: 0;
+  padding: 0px;
   /* Reducing transparency to read better */
   opacity: 230;
 }
@@ -147,10 +147,10 @@ QStatusBar QToolTip {
   background-color: #148CD2;
   border: 1px solid #19232D;
   color: #19232D;
+  /* Remove padding, for fix combo box tooltip */
+  padding: 0px;
   /* Reducing transparency to read better */
   opacity: 230;
-  /* Remove padding, for fix combo box tooltip */
-  padding: 0;
 }
 
 QStatusBar QLabel {
@@ -174,6 +174,11 @@ QCheckBox {
 
 QCheckBox:focus {
   border: none;
+}
+
+QCheckBox QWidget:disabled {
+  background-color: #19232D;
+  color: #787878;
 }
 
 QCheckBox::indicator {
@@ -218,11 +223,6 @@ QCheckBox::indicator:indeterminate:disabled {
 
 QCheckBox::indicator:indeterminate:focus, QCheckBox::indicator:indeterminate:hover, QCheckBox::indicator:indeterminate:pressed {
   image: url(":/qss_icons/rc/checkbox_indeterminate_focus.png");
-}
-
-QCheckBox QWidget:disabled {
-  background-color: #19232D;
-  color: #787878;
 }
 
 /* QGroupBox --------------------------------------------------------------
@@ -280,8 +280,8 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qradiobutton
 QRadioButton {
   background-color: #19232D;
   color: #F0F0F0;
-  spacing: 0;
-  padding: 0;
+  spacing: 0px;
+  padding: 0px;
   border: none;
   outline: none;
 }
@@ -468,9 +468,9 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qcombobox
 --------------------------------------------------------------------------- */
 QAbstractItemView {
   alternate-background-color: #19232D;
+  color: #F0F0F0;
   border: 1px solid #32414B;
   border-radius: 4px;
-  color: #F0F0F0;
 }
 
 QAbstractItemView QLineEdit {
@@ -486,8 +486,8 @@ QAbstractScrollArea {
   background-color: #19232D;
   border: 1px solid #32414B;
   border-radius: 4px;
-  color: #F0F0F0;
   padding: 4px;
+  color: #F0F0F0;
 }
 
 QAbstractScrollArea:disabled {
@@ -641,8 +641,8 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-specific-widgets
 --------------------------------------------------------------------------- */
 QTextEdit {
   background-color: #19232D;
-  border: 1px solid #32414B;
   color: #F0F0F0;
+  border: 1px solid #32414B;
 }
 
 QTextEdit:hover {
@@ -731,7 +731,7 @@ QToolBar::separator:vertical {
   image: url(":/qss_icons/rc/Vsepartoolbar.png");
 }
 
-QToolBar#qt_toolbar_ext_button {
+QToolButton#qt_toolbar_ext_button {
   background: #32414B;
   border: 0px;
   color: #F0F0F0;
@@ -753,16 +753,6 @@ QAbstractSpinBox {
   padding-right: 4px;
   border-radius: 4px;
   /* min-width: 5px; removed to fix 109 */
-}
-
-QAbstractSpinBox:hover {
-  border: 1px solid #148CD2;
-  color: #F0F0F0;
-}
-
-QAbstractSpinBox:selected {
-  background: #1464A0;
-  color: #32414B;
 }
 
 QAbstractSpinBox:up-button {
@@ -799,6 +789,16 @@ QAbstractSpinBox::down-arrow, QAbstractSpinBox::down-arrow:disabled, QAbstractSp
 
 QAbstractSpinBox::down-arrow:hover {
   image: url(":/qss_icons/rc/down_arrow.png");
+}
+
+QAbstractSpinBox:hover {
+  border: 1px solid #148CD2;
+  color: #F0F0F0;
+}
+
+QAbstractSpinBox:selected {
+  background: #1464A0;
+  color: #32414B;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -978,6 +978,12 @@ QPushButton:checked:hover {
   color: #F0F0F0;
 }
 
+QPushButton::menu-indicator {
+  subcontrol-origin: padding;
+  subcontrol-position: bottom right;
+  bottom: 4px;
+}
+
 QPushButton:pressed {
   background-color: #19232D;
   border: 1px solid #19232D;
@@ -995,12 +1001,6 @@ QPushButton:hover {
 QPushButton:selected {
   background: #1464A0;
   color: #32414B;
-}
-
-QPushButton::menu-indicator {
-  subcontrol-origin: padding;
-  subcontrol-position: bottom right;
-  bottom: 4px;
 }
 
 /* QToolButton ------------------------------------------------------------
@@ -1135,6 +1135,14 @@ QComboBox {
   /* Needed to remove indicator - fix #132 */
 }
 
+QComboBox QAbstractItemView {
+  background-color: #19232D;
+  border-radius: 4px;
+  border: 1px solid #32414B;
+  selection-color: #148CD2;
+  selection-background-color: #32414B;
+}
+
 QComboBox:disabled {
   background-color: #19232D;
   color: #787878;
@@ -1160,11 +1168,15 @@ QComboBox::indicator:alternate {
   background: #19232D;
 }
 
-QComboBox::indicator:checked {
+QComboBox::item:alternate {
+  background: #19232D;
+}
+
+QComboBox::item:checked {
   font-weight: bold;
 }
 
-QComboBox::indicator:selected {
+QComboBox::item:selected {
   border: 0px solid transparent;
 }
 
@@ -1185,14 +1197,6 @@ QComboBox::down-arrow {
 
 QComboBox::down-arrow:on, QComboBox::down-arrow:hover, QComboBox::down-arrow:focus {
   image: url(":/qss_icons/rc/down_arrow.png");
-}
-
-QComboBox QAbstractItemView {
-  background-color: #19232D;
-  border-radius: 4px;
-  border: 1px solid #32414B;
-  selection-color: #148CD2;
-  selection-background-color: #32414B;
 }
 
 /* QSlider ----------------------------------------------------------------
@@ -1253,7 +1257,7 @@ QSlider::handle:horizontal {
   border: 1px solid #32414B;
   width: 8px;
   height: 8px;
-  margin: -8px 0;
+  margin: -8px 0px;
   border-radius: 4px;
 }
 
@@ -1318,15 +1322,11 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabb
 QTabWidget {
   padding: 2px;
   selection-background-color: #32414B;
-  /* Add wanted borders - fix #141, #126, #123 */
-  /* Add wanted borders - fix #141, #126, #123 */
 }
 
-QTabWidget QWidget QWidget {
-  border: 1px solid #32414B;
-}
-
+QTabWidget QWidget QWidget,
 QTabWidget QFrame {
+  /* Add wanted borders - fix #141, #126, #123 */
   border: 1px solid #32414B;
 }
 
@@ -1365,7 +1365,7 @@ QTabBar {
 QTabBar::close-button {
   border: 0;
   margin: 2px;
-  padding: 0;
+  padding: 0px;
   image: url(":/qss_icons/rc/close.png");
 }
 
@@ -1572,14 +1572,6 @@ QTabBar QToolButton {
   height: 16px;
 }
 
-QTabBar QToolButton::right-arrow:enabled {
-  image: url(":/qss_icons/rc/right_arrow.png");
-}
-
-QTabBar QToolButton::right-arrow:disabled {
-  image: url(":/qss_icons/rc/right_arrow_disabled.png");
-}
-
 QTabBar QToolButton::left-arrow:enabled {
   image: url(":/qss_icons/rc/left_arrow.png");
 }
@@ -1588,18 +1580,14 @@ QTabBar QToolButton::left-arrow:disabled {
   image: url(":/qss_icons/rc/left_arrow_disabled.png");
 }
 
-/*  Some examples from internet to check
+QTabBar QToolButton::right-arrow:enabled {
+  image: url(":/qss_icons/rc/right_arrow.png");
+}
 
-QTabBar::tabButton() and QTabBar::tabIcon()
-QTabBar::tear {width: 0px; border: none;}
-QTabBar::tear {image: url(tear_indicator.png');}
-QTabBar::scroller{width:85pix;}
-QTabBar QToolbutton{background-color:"light blue";}
+QTabBar QToolButton::right-arrow:disabled {
+  image: url(":/qss_icons/rc/right_arrow_disabled.png");
+}
 
-But that left the buttons transparant.
-Looked confusing as the tab buttons migrated behind the scroller buttons.
-So we had to color the back ground of the scroller buttons
-*/
 /* QDockWiget -------------------------------------------------------------
 
 --------------------------------------------------------------------------- */
@@ -1915,7 +1903,7 @@ QToolBox::tab:!selected {
   border-bottom: 2px solid #32414B;
 }
 
-QToolBox::tab:disabled {
+QToolBox::tab:!selected:disabled {
   background-color: #19232D;
 }
 
@@ -1924,7 +1912,7 @@ QToolBox::tab:hover {
   border-bottom: 2px solid #148CD2;
 }
 
-QToolBox QWidget QWidget {
+QToolBox QScrollArea QWidget QWidget {
   padding: 0px;
   background-color: #19232D;
 }
@@ -1955,17 +1943,17 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qsplitter
 --------------------------------------------------------------------------- */
 QSplitter {
   background-color: #32414B;
-  spacing: 0;
-  padding: 0;
-  margin: 0;
+  spacing: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 QSplitter::separator {
   background-color: #32414B;
   border: 0px solid #19232D;
-  spacing: 0;
+  spacing: 0px;
   padding: 1px;
-  margin: 0;
+  margin: 0px;
 }
 
 QSplitter::separator:hover {

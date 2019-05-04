@@ -15,8 +15,8 @@ See Qt documentation:
 QWidget {
     background-color: $COLOR_BACKGROUND_DARK;
     border: 0px solid $COLOR_BACKGROUND_NORMAL;
-    color: $COLOR_FOREGROUND_LIGHT;
     padding: 0px;
+    color: $COLOR_FOREGROUND_LIGHT;
     selection-background-color: $COLOR_SELECTION_NORMAL;
     selection-color: $COLOR_FOREGROUND_LIGHT;
 
@@ -52,7 +52,7 @@ QMainWindow {
     &::separator {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border: 0px solid $COLOR_BACKGROUND_DARK;
-        spacing: 0;
+        spacing: 0px;
         padding: 2px;
 
         &:hover {
@@ -61,9 +61,9 @@ QMainWindow {
         }
 
         &:horizontal {
-            margin-bottom: 2px;
-            margin-top: 2px;
             width: 5px;
+            margin-top: 2px;
+            margin-bottom: 2px;
             image: url($PATH_RESOURCES + '/rc/Vsepartoolbar.png');
         }
 
@@ -87,7 +87,7 @@ QToolTip {
     color: $COLOR_BACKGROUND_DARK;
 
     /* Remove padding, for fix combo box tooltip */
-    padding: 0;
+    padding: 0px;
 
     /* Reducing transparency to read better */
     opacity: $OPACITY_TOOLTIP;
@@ -110,11 +110,11 @@ QStatusBar {
         border: $BORDER_DARK;
         color: $COLOR_BACKGROUND_DARK;
 
+        /* Remove padding, for fix combo box tooltip */
+        padding: 0px;
+
         /* Reducing transparency to read better */
         opacity: $OPACITY_TOOLTIP;
-
-        /* Remove padding, for fix combo box tooltip */
-        padding: 0;
     }
 
     QLabel {
@@ -138,6 +138,11 @@ QCheckBox {
 
     &:focus {
         border: none;
+    }
+
+    QWidget:disabled {
+        background-color: $COLOR_BACKGROUND_DARK;
+        color: $COLOR_FOREGROUND_DARK;
     }
 
     &::indicator {
@@ -188,11 +193,6 @@ QCheckBox {
                 image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_focus.png');
             }
         }
-    }
-
-    QWidget:disabled {
-        background-color: $COLOR_BACKGROUND_DARK;
-        color: $COLOR_FOREGROUND_DARK;
     }
 }
 
@@ -261,8 +261,8 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qradiobutton
 QRadioButton {
     background-color: $COLOR_BACKGROUND_DARK;
     color: $COLOR_FOREGROUND_LIGHT;
-    spacing: 0;
-    padding: 0;
+    spacing: 0px;
+    padding: 0px;
     border: none;
     outline: none;
 
@@ -428,6 +428,7 @@ QMenu {
 
         /* exclusive indicator = radio button style indicator (see QActionGroup::setExclusive) */
         &:exclusive {
+
             &:unchecked {
                 image: url($PATH_RESOURCES + '/rc/radio_unchecked.png');
 
@@ -459,9 +460,9 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qcombobox
 --------------------------------------------------------------------------- */
 QAbstractItemView {
     alternate-background-color: $COLOR_BACKGROUND_DARK;
+    color: $COLOR_FOREGROUND_LIGHT;
     border: $BORDER_NORMAL;
     border-radius: $SIZE_BORDER_RADIUS;
-    color: $COLOR_FOREGROUND_LIGHT;
 
     QLineEdit {
         padding: 2px;
@@ -477,8 +478,8 @@ QAbstractScrollArea {
     background-color: $COLOR_BACKGROUND_DARK;
     border: $BORDER_NORMAL;
     border-radius: $SIZE_BORDER_RADIUS;
-    color: $COLOR_FOREGROUND_LIGHT;
     padding: 4px;
+    color: $COLOR_FOREGROUND_LIGHT;
 
     &:disabled {
         color: $COLOR_FOREGROUND_DARK;
@@ -652,8 +653,8 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-specific-widgets
 --------------------------------------------------------------------------- */
 QTextEdit {
     background-color: $COLOR_BACKGROUND_DARK;
-    border: $BORDER_NORMAL;
     color: $COLOR_FOREGROUND_LIGHT;
+    border: $BORDER_NORMAL;
 
     &:hover {
         border: $BORDER_HOVER;
@@ -717,7 +718,7 @@ QToolBar {
     padding: 2px;
     font-weight: bold;
 
-    QToolButton{
+    QToolButton {
         background-color: $COLOR_BACKGROUND_NORMAL;
     }
 
@@ -746,13 +747,13 @@ QToolBar {
             image: url($PATH_RESOURCES + '/rc/Vsepartoolbar.png');
         }
     }
+}
 
-    &#qt_toolbar_ext_button {
-        background: $COLOR_BACKGROUND_NORMAL;
-        border: 0px;
-        color: $COLOR_FOREGROUND_LIGHT;
-        image: url($PATH_RESOURCES + '/rc/right_arrow.png');
-    }
+QToolButton#qt_toolbar_ext_button {
+    background: $COLOR_BACKGROUND_NORMAL;
+    border: 0px;
+    color: $COLOR_FOREGROUND_LIGHT;
+    image: url($PATH_RESOURCES + '/rc/right_arrow.png');
 }
 
 /* QAbstractSpinBox -------------------------------------------------------
@@ -772,16 +773,6 @@ QAbstractSpinBox {
     padding-right: 4px;
     border-radius: $SIZE_BORDER_RADIUS;
     /* min-width: 5px; removed to fix 109 */
-
-    &:hover {
-        border: $BORDER_HOVER;
-        color: $COLOR_FOREGROUND_LIGHT;
-    }
-
-    &:selected {
-        background: $COLOR_SELECTION_NORMAL;
-        color: $COLOR_BACKGROUND_NORMAL;
-    }
 
     &:up-button {
         background-color: transparent $COLOR_BACKGROUND_DARK;
@@ -821,6 +812,16 @@ QAbstractSpinBox {
 
     &::down-arrow:hover {
         image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+    }
+
+    &:hover {
+        border: $BORDER_HOVER;
+        color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+    &:selected {
+        background: $COLOR_SELECTION_NORMAL;
+        color: $COLOR_BACKGROUND_NORMAL;
     }
 }
 
@@ -1008,6 +1009,12 @@ QPushButton {
         }
     }
 
+    &::menu-indicator {
+        subcontrol-origin: padding;
+        subcontrol-position: bottom right;
+        bottom: 4px;
+    }
+
     &:pressed {
         background-color: $COLOR_BACKGROUND_DARK;
         border: $BORDER_DARK;
@@ -1025,12 +1032,6 @@ QPushButton {
     &:selected {
         background: $COLOR_SELECTION_NORMAL;
         color: $COLOR_BACKGROUND_NORMAL;
-    }
-
-    &::menu-indicator {
-        subcontrol-origin: padding;
-        subcontrol-position: bottom right;
-        bottom: 4px;
     }
 }
 
@@ -1171,6 +1172,14 @@ QComboBox {
     /* padding-bottom: 2px;  removed to fix #132 */
     /* min-width: 75px;      removed to fix #109 */
  
+    QAbstractItemView {
+        background-color: $COLOR_BACKGROUND_DARK;
+        border-radius: $SIZE_BORDER_RADIUS;
+        border: $BORDER_NORMAL;
+        selection-color: $COLOR_SELECTION_LIGHT;
+        selection-background-color: $COLOR_BACKGROUND_NORMAL;
+    }
+
     &:disabled {
         background-color: $COLOR_BACKGROUND_DARK;
         color: $COLOR_FOREGROUND_DARK;
@@ -1194,6 +1203,13 @@ QComboBox {
          /* Needed to remove indicator - fix #132 */
         &:alternate {
             background: #19232D;
+        }
+    }
+
+    &::item {
+
+        &:alternate {
+            background: $COLOR_BACKGROUND_DARK;
         }
 
         &:checked {
@@ -1224,14 +1240,6 @@ QComboBox {
         &:focus {
             image: url($PATH_RESOURCES + '/rc/down_arrow.png');
         }
-    }
-
-    QAbstractItemView {
-        background-color: $COLOR_BACKGROUND_DARK;
-        border-radius: $SIZE_BORDER_RADIUS;
-        border: $BORDER_NORMAL;
-        selection-color: $COLOR_SELECTION_LIGHT;
-        selection-background-color: $COLOR_BACKGROUND_NORMAL;
     }
 }
 
@@ -1305,7 +1313,7 @@ QSlider {
             border: $BORDER_NORMAL;
             width: 8px;
             height: 8px;
-            margin: -8px 0;
+            margin: -8px 0px;
             border-radius: $SIZE_BORDER_RADIUS;
 
             &:hover {
@@ -1371,16 +1379,9 @@ QTabWidget {
     padding: 2px;
     selection-background-color: $COLOR_BACKGROUND_NORMAL;
 
-    /* Add wanted borders - fix #141, #126, #123 */
-    QWidget {
-
-        QWidget {
-            border: $BORDER_NORMAL;
-        }
-    }
-
-    /* Add wanted borders - fix #141, #126, #123 */
+    QWidget QWidget,
     QFrame {
+        /* Add wanted borders - fix #141, #126, #123 */
         border: $BORDER_NORMAL;
     }
 
@@ -1420,7 +1421,7 @@ QTabBar {
     &::close-button {
         border: 0;
         margin: 2px;
-        padding: 0;
+        padding: 0px;
         image: url($PATH_RESOURCES + '/rc/close.png');
 
         &:hover {
@@ -1630,16 +1631,6 @@ QTabBar {
         width: 16px;
         height: 16px;
 
-        &::right-arrow {
-            &:enabled {
-                image: url($PATH_RESOURCES + '/rc/right_arrow.png');
-            }
-
-            &:disabled {
-                image: url($PATH_RESOURCES + '/rc/right_arrow_disabled.png');
-            }    
-        }
-
         &::left-arrow {
             &:enabled {
                 image: url($PATH_RESOURCES + '/rc/left_arrow.png');
@@ -1649,21 +1640,18 @@ QTabBar {
                 image: url($PATH_RESOURCES + '/rc/left_arrow_disabled.png');
             }
         }
+
+        &::right-arrow {
+            &:enabled {
+                image: url($PATH_RESOURCES + '/rc/right_arrow.png');
+            }
+
+            &:disabled {
+                image: url($PATH_RESOURCES + '/rc/right_arrow_disabled.png');
+            }    
+        }
     }
 }
-
-/*  Some examples from internet to check
-
-QTabBar::tabButton() and QTabBar::tabIcon()
-QTabBar::tear {width: 0px; border: none;}
-QTabBar::tear {image: url(tear_indicator.png');}
-QTabBar::scroller{width:85pix;}
-QTabBar QToolbutton{background-color:"light blue";}
-
-But that left the buttons transparant.
-Looked confusing as the tab buttons migrated behind the scroller buttons.
-So we had to color the back ground of the scroller buttons
-*/
 
 /* QDockWiget -------------------------------------------------------------
 
@@ -1980,10 +1968,11 @@ QToolBox {
         &:!selected {
             background-color: $COLOR_BACKGROUND_NORMAL;
             border-bottom: 2px solid $COLOR_BACKGROUND_NORMAL;
-        }
 
-        &:disabled {
-            background-color: $COLOR_BACKGROUND_DARK;
+            &:disabled {
+                background-color: $COLOR_BACKGROUND_DARK;
+            }
+    
         }
 
         &:hover {
@@ -1992,7 +1981,7 @@ QToolBox {
         }
     }
 
-    QWidget QWidget {
+    QScrollArea QWidget QWidget {
         padding: 0px;
         background-color: $COLOR_BACKGROUND_DARK;
     }
@@ -2025,16 +2014,16 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qsplitter
 --------------------------------------------------------------------------- */
 QSplitter {
     background-color: $COLOR_BACKGROUND_NORMAL;
-    spacing: 0;
-    padding: 0;
-    margin: 0;
+    spacing: 0px;
+    padding: 0px;
+    margin: 0px;
 
     &::separator {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border: 0px solid $COLOR_BACKGROUND_DARK;
-        spacing: 0;
+        spacing: 0px;
         padding: 1px;
-        margin: 0;
+        margin: 0px;
 
         &:hover {
             background-color: $COLOR_FOREGROUND_DARK;
