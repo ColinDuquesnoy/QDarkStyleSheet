@@ -73,5 +73,5 @@ class DarkPalette(object):
 
     @classmethod
     def color_palette(cls):
-        """Retunt the ordered colored palette dictionary."""
+        """Return the ordered colored palette dictionary."""
         return cls._to_dict(colors_only=True)
