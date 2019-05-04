@@ -132,6 +132,34 @@ def _qt_wrapper_import(qt_api):
         return loader
 
 
+def _apply_stylesheet_patches(stylesheet):
+    """Apply OS specific stylesheet pacthes."""
+    # See issue #12
+    if platform.system().lower() == 'darwin':  
+        mac_fix = '''
+        QDockWidget::title
+        {{
+            background-color: {color};
+            text-align: center;
+            height: 12px;
+        }}
+        '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
+        stylesheet += mac_fix
+
+    return stylesheet
+
+
+def _apply_palette_fix(QCoreApplication, QPalette, QColor):
+    """Apply application level fixes on the QPalette."""
+    # See issue #139
+    color = DarkPalette.COLOR_SELECTION_LIGHT
+    qcolor = QColor(color)
+    app = QCoreApplication.instance()
+    palette = app.palette()
+    palette.setColor(QPalette.Normal, QPalette.Link, qcolor)
+    app.setPalette(palette)
+
+
 def load_stylesheet_from_environment(is_pyqtgraph=False):
     """
     Load the stylesheet from QT_API (or PYQTGRAPH_QT_LIB) environment variable.
@@ -252,12 +280,18 @@ def load_stylesheet(pyside=True):
 
     # Load the stylesheet content from resources
     if not pyside:
-        from PyQt4.QtCore import QFile, QTextStream
+        from PyQt4.QtCore import QCoreApplication, QFile, QTextStream
+        from PyQt4.QtGui import QColor, QPalette
     else:
         if pyside_ver == 1:
-            from PySide.QtCore import QFile, QTextStream
+            from PySide.QtCore import QCoreApplication, QFile, QTextStream
+            from PySide.QtGui import QColor, QPalette
         else:
-            from PySide2.QtCore import QFile, QTextStream
+            from PySide2.QtCore import QCoreApplocation, QFile, QTextStream
+            from PySide2.QtGui import QColor, QPalette
+
+    # Apply palette fix. See issue #139
+    _apply_palette_fix(QCoreApplication, QPalette, QColor)
 
     f = QFile(":qdarkstyle/style.qss")
     if not f.exists():
@@ -269,17 +303,8 @@ def load_stylesheet(pyside=True):
         ts = QTextStream(f)
         stylesheet = ts.readAll()
 
-        # See issue #12
-        if platform.system().lower() == 'darwin':  
-            mac_fix = '''
-            QDockWidget::title
-            {{
-                background-color: {color};
-                text-align: center;
-                height: 12px;
-            }}
-            '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
-            stylesheet += mac_fix
+        # Apply OS specific patches
+        stylesheet = _apply_stylesheet_patches(stylesheet)
 
         return stylesheet
 
@@ -351,7 +376,11 @@ def load_stylesheet_pyqt5():
     import qdarkstyle.pyqt5_style_rc
 
     # Load the stylesheet content from resources
-    from PyQt5.QtCore import QFile, QTextStream
+    from PyQt5.QtCore import QCoreApplication, QFile, QTextStream
+    from PyQt5.QtGui import QColor, QPalette
+
+    # Apply palette fix. See issue #139
+    _apply_palette_fix(QCoreApplication, QPalette, QColor)
 
     f = QFile(":qdarkstyle/style.qss")
     if not f.exists():
@@ -363,17 +392,8 @@ def load_stylesheet_pyqt5():
         ts = QTextStream(f)
         stylesheet = ts.readAll()
 
-        # See issue #12
-        if platform.system().lower() == 'darwin':
-            mac_fix = '''
-            QDockWidget::title
-            {{
-                background-color: {color};
-                text-align: center;
-                height: 12px;
-            }}
-            '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
-            stylesheet += mac_fix
+        # Apply OS specific patches
+        stylesheet = _apply_stylesheet_patches(stylesheet)
 
         return stylesheet
 
