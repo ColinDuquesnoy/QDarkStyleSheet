@@ -1380,15 +1380,23 @@ QTabWidget {
     padding: 2px;
     selection-background-color: $COLOR_BACKGROUND_NORMAL;
 
-    QWidget QWidget,
-    QFrame {
-        /* Add wanted borders - fix #141, #126, #123 */
-        border: $BORDER_NORMAL;
+    QWidget {
+        border: 0px solid $COLOR_BACKGROUND_NORMAL;
     }
 
-    QLabel {
-        /* Label derived from frame, remove border #141 */
-        border: 0px solid $COLOR_BACKGROUND_NORMAL; 
+    /* Add wanted borders - fix #141, #126, #123 */
+    QWidget QWidget      
+    QTableView,	
+    QTreeView,	
+    QListView,	
+    QGroupBox,	
+    QLineEdit,	
+    QComboBox,	
+    QFontComboBox,	
+    QTextEdit,	
+    QSpinBox,	
+    QDoubleSpinBox {	
+        border: $BORDER_NORMAL;
     }
 
     &::pane {

@@ -1323,17 +1323,25 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabb
 QTabWidget {
   padding: 2px;
   selection-background-color: #32414B;
-}
-
-QTabWidget QWidget QWidget,
-QTabWidget QFrame {
   /* Add wanted borders - fix #141, #126, #123 */
-  border: 1px solid #32414B;
 }
 
-QTabWidget QLabel {
-  /* Label derived from frame, remove border #141 */
+QTabWidget QWidget {
   border: 0px solid #32414B;
+}
+
+QTabWidget QWidget QWidget
+QTableView,
+QTabWidget QTreeView,
+QTabWidget QListView,
+QTabWidget QGroupBox,
+QTabWidget QLineEdit,
+QTabWidget QComboBox,
+QTabWidget QFontComboBox,
+QTabWidget QTextEdit,
+QTabWidget QSpinBox,
+QTabWidget QDoubleSpinBox {
+  border: 1px solid #32414B;
 }
 
 QTabWidget::pane {
