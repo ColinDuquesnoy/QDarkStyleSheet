@@ -53,6 +53,9 @@ import platform
 import sys
 import warnings
 
+# Local imports
+from qdarkstyle.palette import DarkPalette
+
 if sys.version_info >= (3, 4):
     import importlib
 
@@ -169,9 +172,11 @@ def _apply_palette_fix(QCoreApplication, QPalette, QColor):
     color = DarkPalette.COLOR_SELECTION_LIGHT
     qcolor = QColor(color)
     app = QCoreApplication.instance()
-    palette = app.palette()
-    palette.setColor(QPalette.Normal, QPalette.Link, qcolor)
-    app.setPalette(palette)
+
+    if app:
+        palette = app.palette()
+        palette.setColor(QPalette.Normal, QPalette.Link, qcolor)
+        app.setPalette(palette)
 
 
 def load_stylesheet_from_environment(is_pyqtgraph=False):
@@ -189,11 +194,6 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
         "use load_stylesheet()",
         PendingDeprecationWarning
     )
-
-    # Compiles SCSS/SASS files to QSS
-    from qdarkstyle.utils.scss import create_qss
-    create_qss()
-
     qt_api = ''
     pyqtgraph_qt_lib = ''
 
@@ -384,7 +384,6 @@ def load_stylesheet_pyqt5():
         "use load_stylesheet()",
         PendingDeprecationWarning
     )
-
     # Compiles SCSS/SASS files to QSS
     from qdarkstyle.utils.scss import create_qss
     create_qss()
@@ -410,8 +409,7 @@ def load_stylesheet_pyqt5():
         stylesheet = ts.readAll()
 
         # Apply OS specific patches
-        stylesheet = _apply_stylesheet_patches(stylesheet)
-
+        # stylesheet = _apply_stylesheet_patches(stylesheet)
         return stylesheet
 
 

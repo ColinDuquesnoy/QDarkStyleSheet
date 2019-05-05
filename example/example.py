@@ -101,8 +101,9 @@ def main():
         from ui.dw_views_pyside_ui import Ui_DockWidget as ui_views
         from ui.dw_containers_tabs_pyside_ui import Ui_DockWidget as ui_containers_tabs
         from ui.dw_containers_no_tabs_pyside_ui import Ui_DockWidget as ui_containers_no_tabs
-        # getting style
-        style = qdarkstyle.load_stylesheet_pyside()
+
+        # Getting style
+        style_method = qdarkstyle.load_stylesheet_pyside
 
     elif args.qt_from == 'pyqt':
         # using PyQt4 wrapper
@@ -120,8 +121,9 @@ def main():
         from ui.dw_views_pyqt_ui import Ui_DockWidget as ui_views
         from ui.dw_containers_tabs_pyqt_ui import Ui_DockWidget as ui_containers_tabs
         from ui.dw_containers_no_tabs_pyqt_ui import Ui_DockWidget as ui_containers_no_tabs
-        # getting style
-        style = qdarkstyle.load_stylesheet_pyqt()
+
+        # Getting style
+        style_method = qdarkstyle.load_stylesheet_pyqt
 
     elif args.qt_from == 'pyqt5':
         # using PyQt5 wrapper
@@ -139,8 +141,9 @@ def main():
         from ui.dw_views_pyqt5_ui import Ui_DockWidget as ui_views
         from ui.dw_containers_tabs_pyqt5_ui import Ui_DockWidget as ui_containers_tabs
         from ui.dw_containers_no_tabs_pyqt5_ui import Ui_DockWidget as ui_containers_no_tabs
-        # getting style
-        style = qdarkstyle.load_stylesheet_pyqt5()
+
+        # Getting style
+        style_method = qdarkstyle.load_stylesheet_pyqt5
 
     elif args.qt_from == 'pyside2':
         # using PyQt5 wrapper
@@ -158,8 +161,9 @@ def main():
         from ui.dw_views_pyside2_ui import Ui_DockWidget as ui_views
         from ui.dw_containers_tabs_pyside2_ui import Ui_DockWidget as ui_containers_tabs
         from ui.dw_containers_no_tabs_pyside2_ui import Ui_DockWidget as ui_containers_no_tabs
-        # getting style
-        style = qdarkstyle.load_stylesheet_pyside2()
+
+        # Getting style
+        style_method = qdarkstyle.load_stylesheet_pyside2
 
     elif args.qt_from == 'qtpy':
         # using QtPy API
@@ -177,8 +181,9 @@ def main():
         from ui.dw_views_qtpy_ui import Ui_DockWidget as ui_views
         from ui.dw_containers_tabs_qtpy_ui import Ui_DockWidget as ui_containers_tabs
         from ui.dw_containers_no_tabs_qtpy_ui import Ui_DockWidget as ui_containers_no_tabs
-        # getting style
-        style = qdarkstyle.load_stylesheet_from_environment()
+
+        # Getting style
+        style_method = qdarkstyle.load_stylesheet_from_environment
 
     elif args.qt_from == 'pyqtgraph':
         # using PyQtGraph API
@@ -195,8 +200,9 @@ def main():
         from ui.dw_views_pyqtgraph_ui import Ui_DockWidget as ui_views
         from ui.dw_containers_tabs_pyqtgraph_ui import Ui_DockWidget as ui_containers_tabs
         from ui.dw_containers_no_tabs_pyqtgraph_ui import Ui_DockWidget as ui_containers_no_tabs
-        # getting style
-        style = qdarkstyle.load_stylesheet_from_environment(is_pyqtgraph=True)
+
+        # Getting style
+        style_method = lambda: qdarkstyle.load_stylesheet_from_environment(is_pyqtgraph=True)
 
     if args.no_dark:
         style = ''
@@ -225,15 +231,13 @@ def main():
             window.resize(size)
             window.move(pos)
 
-
-
-
     # create the application
     app = QApplication(sys.argv)
     app.setOrganizationName('QDarkStyle')
     app.setApplicationName('QDarkStyle Example')
 
     # setup stylesheet
+    style = style_method()
     app.setStyleSheet(style)
 
     # create main window
