@@ -1,9 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""QDarkStyle is a dark stylesheet for Python and Qt applications."""
+"""Utilities for compiling SASS files."""
 
 # Standard library imports
+import keyword
 import os
+import re
+import shutil
+import sys
 
 # Third party imports
 try:
@@ -12,12 +16,16 @@ try:
 except ImportError:
     QTSASS_INSTALLED = False
 
-
 # Local imports
-from qdarkstyle.qss import DarkPalette, PATH_SCSS_MAIN, PATH_SCSS_VARIABLES
+from qdarkstyle import (MAIN_SCSS_FILE, MAIN_SCSS_FILEPATH, QSS_PATH,
+                        QSS_FILEPATH, RC_PATH, STYLE_FILE,
+                        VARIABLES_SCSS_FILE, VARIABLES_SCSS_FILEPATH)
+from qdarkstyle.palette import DarkPalette
+from qdarkstyle.utils.images import create_images, create_palette_image
 
 # Constants
-_HEADER_SCSS = '''// ---------------------------------------------------------------------------
+PY2 = sys.version[0] == '2'
+HEADER_SCSS = '''// ---------------------------------------------------------------------------
 //
 //    File created programmatically
 //
@@ -25,7 +33,7 @@ _HEADER_SCSS = '''// -----------------------------------------------------------
 //
 //----------------------------------------------------------------------------
 '''
-_HEADER_QSS = '''/* ---------------------------------------------------------------------------
+HEADER_QSS = '''/* ---------------------------------------------------------------------------
 
     Created by the qtsass compiler
 
@@ -33,8 +41,6 @@ _HEADER_QSS = '''/* ------------------------------------------------------------
 
 --------------------------------------------------------------------------- */
 '''
-_HERE = os.path.abspath(os.path.dirname(__file__))
-PATH_CSS_STYLES = os.path.join(_HERE, 'style.qss')
 
 
 def _dict_to_scss(data):
@@ -42,7 +48,8 @@ def _dict_to_scss(data):
     lines = []
     template = "${}: {};"
     for key, value in data.items():
-        lines.append(template.format(key, value))
+        line = template.format(key, value)
+        lines.append(line)
 
     return '\n'.join(lines)
 
@@ -66,35 +73,193 @@ def _scss_to_dict(string):
     return data
 
 
-def _create_scss_variables():
+def _create_scss_variables(variables_scss_filepath, palette,
+                           header=HEADER_SCSS):
     """Create a scss variables file."""
-    scss = _dict_to_scss(DarkPalette._to_dict())
-    data = _HEADER_SCSS + scss + '\n'
+    scss = _dict_to_scss(palette.to_dict())
+    data = header + scss + '\n'
 
-    with open(PATH_SCSS_VARIABLES, 'w') as f:
+    with open(variables_scss_filepath, 'w') as f:
         f.write(data)
 
 
-def _create_qss():
+def _create_qss(main_scss_path, qss_filepath, header=HEADER_QSS):
     """Create a styles.qss file from qtsass."""
+    data = ''
     if QTSASS_INSTALLED:
-        qtsass.compile_filename(PATH_SCSS_MAIN, PATH_CSS_STYLES,
+        qtsass.compile_filename(main_scss_path, qss_filepath,
                                 output_style='expanded')
 
-        with open(PATH_CSS_STYLES, 'r') as f:
+        with open(qss_filepath, 'r') as f:
             data = f.read()
 
-        data = _HEADER_QSS + data
+        data = header + data
 
-        with open(PATH_CSS_STYLES, 'w') as f:
+        with open(qss_filepath, 'w') as f:
             f.write(data)
 
+    return data
 
-def create_qss():
+
+def create_qss(qss_filepath=QSS_FILEPATH, main_scss_filepath=MAIN_SCSS_FILEPATH,
+               variables_scss_filepath=VARIABLES_SCSS_FILEPATH,
+               palette=DarkPalette):
     """Create variables files and run qtsass compilation."""
-    _create_scss_variables()
-    _create_qss()
+    _create_scss_variables(variables_scss_filepath, palette)
+    stylesheet = _create_qss(main_scss_filepath, qss_filepath)
+    return stylesheet
+
+
+def is_identifier(name):
+    """Check that `name` string is a valid identifier in Python."""
+    if PY2:
+        is_not_keyword = name not in keyword.kwlist
+        pattern = re.compile(r'^[a-z_][a-z0-9_]*$', re.I)
+        matches_pattern = bool(pattern.match(name))
+        check =  is_not_keyword and matches_pattern
+    else:
+        check = name.isidentifier()
+
+    return check
+
+
+def create_custom_qss(
+        name,
+        path,
+        color_background_light,
+        color_background_normal,
+        color_background_dark,
+        color_foreground_light,
+        color_foreground_normal,
+        color_foreground_dark,
+        color_selection_light,
+        color_selection_normal,
+        color_selection_dark,
+        border_radius,
+    ):
+    """
+    Create a custom palette based on the parameters defined.
+
+    The `name` must be a valid Python identifier and will be stored
+    as a lowercased folder (even if the identifier had uppercase letters).
+
+    This fuction returns the custom stylesheet pointing to resources stored at
+    .../path/name/.
+    """
+    stylesheet = ''
+
+    # Check if name is valid
+    if is_identifier(name):
+        name = name if name[0].isupper() else name.capitalize()
+    else:
+        raise Exception('The custom palette name must be a valid Python '
+                        'identifier!')
+
+    # Copy resources folder
+    rc_loc = os.path.basename(RC_PATH)
+    qss_loc = os.path.basename(QSS_PATH)
+    theme_root_path = os.path.join(path, name.lower())
+    theme_rc_path = os.path.join(theme_root_path, rc_loc)
+    if os.path.isdir(theme_root_path):
+        shutil.rmtree(theme_root_path)
+    shutil.copytree(RC_PATH, theme_rc_path)
+
+    # Copy QSS folder and contents
+    theme_qss_path = os.path.join(theme_root_path, qss_loc)
+    if os.path.isdir(theme_qss_path):
+        os.removedirs(theme_qss_path)
+    shutil.copytree(QSS_PATH, theme_qss_path)
+
+    # Create custom palette
+    custom_palette = type(name, (DarkPalette, ), {})
+    custom_palette.COLOR_BACKGROUND_LIGHT = color_background_light
+    custom_palette.COLOR_BACKGROUND_NORMAL = color_background_normal
+    custom_palette.COLOR_BACKGROUND_DARK = color_background_dark
+    custom_palette.COLOR_FOREGROUND_LIGHT = color_foreground_light
+    custom_palette.COLOR_FOREGROUND_NORMAL = color_foreground_normal
+    custom_palette.COLOR_FOREGROUND_DARK = color_foreground_dark
+    custom_palette.COLOR_SELECTION_LIGHT = color_selection_light
+    custom_palette.COLOR_SELECTION_NORMAL = color_selection_normal
+    custom_palette.COLOR_SELECTION_DARK = color_selection_dark
+    custom_palette.SIZE_BORDER_RADIUS = border_radius
+    custom_palette.PATH_RESOURCES = "'{}'".format(theme_root_path)
+
+    # Process images and save them to the custom platte rc folder
+    create_images(rc_path=theme_rc_path, palette=custom_palette)
+    create_palette_image(path=theme_root_path, palette=custom_palette)
+
+    # Compile SCSS
+    variables_scss_filepath = os.path.join(theme_qss_path, VARIABLES_SCSS_FILE)
+    theme_main_scss_filepath = os.path.join(theme_qss_path, MAIN_SCSS_FILE)
+    theme_qss_filepath = os.path.join(theme_root_path, STYLE_FILE)
+    stylesheet = create_qss(
+        qss_filepath=theme_qss_filepath,
+        main_scss_filepath=theme_main_scss_filepath,
+        variables_scss_filepath=variables_scss_filepath,
+        palette=custom_palette,
+    )
+
+    # Update colors in text
+    with open(theme_main_scss_filepath, 'r') as fh:
+        data = fh.read()
+
+    for key, color in DarkPalette.color_palette().items():
+        custom_color = custom_palette.color_palette()[key].upper()
+        data = data.replace(color, custom_color)
+        stylesheet = stylesheet.replace(color, custom_color)
+
+    with open(theme_main_scss_filepath, 'w') as fh:
+        fh.write(data)
+
+    with open(theme_qss_filepath, 'w') as fh:
+        fh.write(stylesheet)
+
+    return stylesheet
+
+
+def create_custom_qss_from_palette(name, path, palette):
+    """
+    Create a custom palette based on a palette class.
+    """
+    kwargs = {
+        'name': name,
+        'path': path,
+        'border_radius': palette.SIZE_BORDER_RADIUS,
+    }
+    kwargs.update(palette.color_palette())
+    stylesheet = create_custom_qss(**kwargs)
+
+    return stylesheet
+
+
+def create_custom_qss_from_dict(name, path, palette_dict):
+    """
+    Create a custom palette based on a palette dictionary.
+    """
+    kwargs = {
+        'name': name,
+        'path': path,
+        'border_radius': palette.get('SIZE_BORDER_RADIUS', '4px'),
+    }
+    kwargs.update(palette_dict)
+    stylesheet = create_custom_qss(**kwargs)
+
+    return stylesheet
 
 
 if __name__ == '__main__':
-    create_qss()
+    # Example of a custom palette
+    qss = create_custom_qss(
+        'MyAwesomePalette',
+        '/Users/gpena-castellanos/Desktop',
+        '#aa0000',
+        '#cc0000',
+        '#ff0000',
+        '#00aa00',
+        '#00cc00',
+        '#00ff00',
+        '#0000aa',
+        '#0000cc',
+        '#0000ff',
+        '0px',
+    )
