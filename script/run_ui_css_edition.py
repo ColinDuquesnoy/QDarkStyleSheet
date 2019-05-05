@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Process qrc and ui files, then run example in while loop."""
+"""
+Process qrc, ui, image, and screenshot files, then run example in while loop.
+"""
 
 # Standard library imports
 from __future__ import absolute_import, print_function
@@ -17,38 +19,41 @@ def main():
     """Process qrc and ui files, then run example in while loop."""
     dark = None
     no_dark = None
-
+    themes = {'Dark': dark, 'No Dark': no_dark}
     while True:
-        try:
-            dark.kill()
-        except AttributeError:
-            print('Dark not running!')
-        except Exception:
-            print('Dark still running!')
-        else:
-            print('Dark was killed!')
-
-        try:
-            no_dark.kill()
-        except AttributeError:
-            print('No Dark not running!')
-        except Exception:
-            print('No Dark still running!')
-        else:
-            print('No Dark was killed!')
+        for theme_name, theme_process in themes.items():
+            try:
+                theme_process.kill()
+            except AttributeError:
+                print(theme_name + ' not running!')
+            except Exception:
+                print(theme_name + ' still running!')
+            else:
+                print(theme_name + ' was killed!')
 
         print(sys.argv)
 
-        # process qrc files
+        # Process images
+        process_images = os.path.join(HERE, 'process_images.py')
+        call(['python', process_images])
+
+        # Process qrc files
         process_qrc = os.path.join(HERE, 'process_qrc.py')
         call(['python', process_qrc])
-        # process ui files
+
+        # Process ui files
         process_ui = os.path.join(HERE, 'process_ui.py')
         call(['python', process_ui])
-        # open dark example
+
+        # Create screenshots
         example = os.path.join(REPO_ROOT, 'example', 'example.py')
+        call(['python', example, '--screenshots'])
+        call(['python', example, '--no_dark', '--screenshots'])
+
+        # Open dark example
         dark = call(['python', example] + sys.argv[1:])
-        # open no dark example
+
+        # Open no dark example
         no_dark = call(['python', example, '--no_dark'] + sys.argv[1:])
 
         if dark or no_dark:

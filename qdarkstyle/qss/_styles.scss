@@ -693,9 +693,10 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qsizegrip
 
 --------------------------------------------------------------------------- */
 QSizeGrip {
-    image: url($PATH_RESOURCES + '/rc/sizegrip.png');
+    background: transparent;
     width: 12px;
     height: 12px;
+    image: url($PATH_RESOURCES + '/rc/sizegrip.png');
 }
 
 /* QStackedWidget ---------------------------------------------------------
