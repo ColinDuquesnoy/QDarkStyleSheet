@@ -1,15 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""QDarkStyle is a dark stylesheet for Python and Qt applications."""
+"""QDarkStyle default palette."""
 
 # Standard library imports
 from collections import OrderedDict
-import os
-
-
-_HERE = os.path.abspath(os.path.dirname(__file__))
-PATH_SCSS_VARIABLES = os.path.join(_HERE, '_variables.scss')
-PATH_SCSS_MAIN = os.path.join(_HERE, 'main.scss')
 
 
 class DarkPalette(object):
@@ -42,7 +36,7 @@ class DarkPalette(object):
     PATH_RESOURCES = "':/qss_icons'"
 
     @classmethod
-    def _to_dict(cls, colors_only=False):
+    def to_dict(cls, colors_only=False):
         """Convert variables to dictionary."""
         order = [
             'COLOR_BACKGROUND_LIGHT',
@@ -78,4 +72,4 @@ class DarkPalette(object):
     @classmethod
     def color_palette(cls):
         """Return the ordered colored palette dictionary."""
-        return cls._to_dict(colors_only=True)
+        return cls.to_dict(colors_only=True)
