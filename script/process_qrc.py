@@ -37,9 +37,9 @@ from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
 # Local imports
-from qdarkstyle import PACKAGE_PATH
-from qdarkstyle.utils.scss import create_qss
+from qdarkstyle import PACKAGE_PATH, QRC_FILEPATH, RC_PATH
 from qdarkstyle.utils.images import create_images, create_palette_image
+from qdarkstyle.utils.scss import create_qss
 
 
 class QSSFileHandler(FileSystemEventHandler):
@@ -93,7 +93,11 @@ def main(arguments):
 
 def run_process(args):
     """Process qrc files."""
-    # Create palette and resources png images
+    # Generate qrc file based on the content of the resources folder
+    print('Generating style.qrc files ...')
+    generate_qrc_file()
+    
+# Create palette and resources png images
     create_palette_image()
     create_images()
 
@@ -172,6 +176,33 @@ def run_process(args):
             with open(py_file_pyqtgraph, 'w+') as file:
                 # write the file out again
                 file.write(filedata)
+
+
+def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
+    """Generate the style.qrc file programmaticaly."""
+    template_header = '''<RCC>
+  <qresource prefix="{resource_prefix}">
+'''
+    template_footer = '''
+  </qresource>
+  <qresource prefix="{style_prefix}">
+      <file>style.qss</file>
+  </qresource>
+</RCC>
+'''
+    template_file = '    <file>rc/{fname}</file>'
+    files = []
+    for fname in sorted(os.listdir(RC_PATH)):
+        files.append(template_file.format(fname=fname))
+
+    # Join parts
+    qrc_content = (template_header.format(resource_prefix=resource_prefix)
+                   + '\n'.join(files)
+                   + template_footer.format(style_prefix=style_prefix))
+
+    # Write qrc file
+    with open(QRC_FILEPATH, 'w') as fh:
+        fh.write(qrc_content)
 
 
 if __name__ == '__main__':
