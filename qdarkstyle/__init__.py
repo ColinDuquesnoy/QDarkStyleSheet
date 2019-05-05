@@ -52,19 +52,14 @@ import os
 import platform
 import sys
 import warnings
-import copy
 
 if sys.version_info >= (3, 4):
     import importlib
 
-# Local imports
-from qdarkstyle.utils import create_qss
-from qdarkstyle.qss import DarkPalette
-
-
 __version__ = "2.6.8"
 
 
+# Constants
 QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
 """list: values of all Qt bindings to import."""
 
@@ -88,6 +83,24 @@ QT_BINDING = 'Not set or nonexistent'
 
 QT_ABSTRACTION = 'Not set or nonexistent'
 """str: Qt abstraction layer in use."""
+
+# File names
+VARIABLES_SCSS_FILE = '_variables.scss'
+MAIN_SCSS_FILE = 'main.scss'
+STYLE_FILE = 'style.qss'
+QRC_FILE = STYLE_FILE.replace('.qss', '.qrc')
+
+# Paths
+PACKAGE_PATH = os.path.abspath(os.path.dirname(__file__))
+REPO_PATH = os.path.dirname(PACKAGE_PATH)
+QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
+RC_PATH = os.path.join(PACKAGE_PATH, 'rc')
+SVG_PATH = os.path.join(PACKAGE_PATH, 'svg')
+
+# File paths
+QSS_FILEPATH = os.path.join(PACKAGE_PATH, STYLE_FILE)
+MAIN_SCSS_FILEPATH = os.path.join(QSS_PATH, MAIN_SCSS_FILE)
+VARIABLES_SCSS_FILEPATH = os.path.join(QSS_PATH, VARIABLES_SCSS_FILE)
 
 
 def _logger():
@@ -149,6 +162,7 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
     )
 
     # Compiles SCSS/SASS files to QSS
+    from qdarkstyle.utils.scss import create_qss
     create_qss()
 
     qt_api = ''
@@ -226,6 +240,7 @@ def load_stylesheet(pyside=True):
     )
 
     # Compiles SCSS/SASS files to QSS
+    from qdarkstyle.utils.scss import create_qss
     create_qss()
 
     # Smart import of the rc file
@@ -270,6 +285,7 @@ def load_stylesheet(pyside=True):
         stylesheet = ts.readAll()
 
         # See issue #12
+        from qdarkstyle.palette import DarkPalette
         if platform.system().lower() == 'darwin':  
             mac_fix = '''
             QDockWidget::title
@@ -345,6 +361,7 @@ def load_stylesheet_pyqt5():
     )
 
     # Compiles SCSS/SASS files to QSS
+    from qdarkstyle.utils.scss import create_qss
     create_qss()
 
     # Smart import of the rc file
@@ -364,6 +381,7 @@ def load_stylesheet_pyqt5():
         stylesheet = ts.readAll()
 
         # See issue #12
+        from qdarkstyle.palette import DarkPalette
         if platform.system().lower() == 'darwin':
             mac_fix = '''
             QDockWidget::title
