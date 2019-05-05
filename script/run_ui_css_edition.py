@@ -11,8 +11,8 @@ import os
 import sys
 
 # Constants
-HERE = os.path.abspath(os.path.dirname(__file__))
-REPO_ROOT = os.path.dirname(HERE)
+SCRIPTS_PATH = os.path.abspath(os.path.dirname(__file__))
+REPO_PATH = os.path.dirname(SCRIPTS_PATH)
 
 
 def main():
@@ -34,19 +34,19 @@ def main():
         print(sys.argv)
 
         # Process images
-        process_images = os.path.join(HERE, 'process_images.py')
+        process_images = os.path.join(SCRIPTS_PATH, 'process_images.py')
         call(['python', process_images])
 
         # Process qrc files
-        process_qrc = os.path.join(HERE, 'process_qrc.py')
+        process_qrc = os.path.join(SCRIPTS_PATH, 'process_qrc.py')
         call(['python', process_qrc])
 
         # Process ui files
-        process_ui = os.path.join(HERE, 'process_ui.py')
+        process_ui = os.path.join(SCRIPTS_PATH, 'process_ui.py')
         call(['python', process_ui])
 
         # Create screenshots
-        example = os.path.join(REPO_ROOT, 'example', 'example.py')
+        example = os.path.join(REPO_PATH, 'example', 'example.py')
         call(['python', example, '--screenshots'])
         call(['python', example, '--no_dark', '--screenshots'])
 

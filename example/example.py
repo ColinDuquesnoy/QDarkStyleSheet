@@ -53,9 +53,9 @@ import qdarkstyle
 from qdarkstyle import QT_BINDING, QT_ABSTRACTION
 
 # Constants
-HERE = os.path.abspath(os.path.dirname(__file__))
-REPO_ROOT = os.path.dirname(HERE)
-SCREENSHOTS_PATH = os.path.join(REPO_ROOT, 'screenshots')
+EXAMPLE_PATH = os.path.abspath(os.path.dirname(__file__))
+REPO_PATH = os.path.dirname(EXAMPLE_PATH)
+SCREENSHOTS_PATH = os.path.join(REPO_PATH, 'screenshots')
 
 
 def main():
@@ -339,7 +339,8 @@ def create_screenshots(app, window, is_darkstyle):
     from qtpy.QtGui import QGuiApplication
     from qtpy.QtWidgets import QDockWidget, QTabWidget
 
-    print('\nCreating screenshots')
+    theme = 'dark' if is_darkstyle else 'normal'
+    print('\nCreating {} screenshots'.format(theme))
     docks = window.findChildren(QDockWidget)
     tabs = window.findChildren(QTabWidget)
     widget_data = {
