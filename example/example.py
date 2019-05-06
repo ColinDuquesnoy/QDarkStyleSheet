@@ -324,7 +324,6 @@ def main():
         QTimer.singleShot(2000, app.exit)
 
     # run
-    qdarkstyle.information()
     read_settings(window, args.reset)
     window.showMaximized()
 
@@ -334,7 +333,7 @@ def main():
         QTimer.singleShot(1000, lambda: create_screenshots(app, window, not args.no_dark))
 
     app.exec_()
-    write_settings(window)    
+    write_settings(window)
 
 
 def create_screenshots(app, window, is_darkstyle):
