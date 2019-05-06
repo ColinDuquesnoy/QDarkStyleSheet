@@ -52,19 +52,17 @@ import os
 import platform
 import sys
 import warnings
-import copy
+
+# Local imports
+from qdarkstyle.palette import DarkPalette
 
 if sys.version_info >= (3, 4):
     import importlib
 
-# Local imports
-from qdarkstyle.utils import create_qss
-from qdarkstyle.qss import DarkPalette
-
-
 __version__ = "2.6.8"
 
 
+# Constants
 QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
 """list: values of all Qt bindings to import."""
 
@@ -88,6 +86,25 @@ QT_BINDING = 'Not set or nonexistent'
 
 QT_ABSTRACTION = 'Not set or nonexistent'
 """str: Qt abstraction layer in use."""
+
+# File names
+VARIABLES_SCSS_FILE = '_variables.scss'
+MAIN_SCSS_FILE = 'main.scss'
+STYLE_FILE = 'style.qss'
+QRC_FILE = STYLE_FILE.replace('.qss', '.qrc')
+
+# Paths
+PACKAGE_PATH = os.path.abspath(os.path.dirname(__file__))
+REPO_PATH = os.path.dirname(PACKAGE_PATH)
+QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
+RC_PATH = os.path.join(PACKAGE_PATH, 'rc')
+SVG_PATH = os.path.join(PACKAGE_PATH, 'svg')
+
+# File paths
+QSS_FILEPATH = os.path.join(PACKAGE_PATH, STYLE_FILE)
+QRC_FILEPATH = os.path.join(PACKAGE_PATH, QRC_FILE)
+MAIN_SCSS_FILEPATH = os.path.join(QSS_PATH, MAIN_SCSS_FILE)
+VARIABLES_SCSS_FILEPATH = os.path.join(QSS_PATH, VARIABLES_SCSS_FILE)
 
 
 def _logger():
@@ -155,9 +172,11 @@ def _apply_palette_fix(QCoreApplication, QPalette, QColor):
     color = DarkPalette.COLOR_SELECTION_LIGHT
     qcolor = QColor(color)
     app = QCoreApplication.instance()
-    palette = app.palette()
-    palette.setColor(QPalette.Normal, QPalette.Link, qcolor)
-    app.setPalette(palette)
+
+    if app:
+        palette = app.palette()
+        palette.setColor(QPalette.Normal, QPalette.Link, qcolor)
+        app.setPalette(palette)
 
 
 def load_stylesheet_from_environment(is_pyqtgraph=False):
@@ -175,10 +194,6 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
         "use load_stylesheet()",
         PendingDeprecationWarning
     )
-
-    # Compiles SCSS/SASS files to QSS
-    create_qss()
-
     qt_api = ''
     pyqtgraph_qt_lib = ''
 
@@ -254,6 +269,7 @@ def load_stylesheet(pyside=True):
     )
 
     # Compiles SCSS/SASS files to QSS
+    from qdarkstyle.utils.scss import create_qss
     create_qss()
 
     # Smart import of the rc file
@@ -368,8 +384,8 @@ def load_stylesheet_pyqt5():
         "use load_stylesheet()",
         PendingDeprecationWarning
     )
-
     # Compiles SCSS/SASS files to QSS
+    from qdarkstyle.utils.scss import create_qss
     create_qss()
 
     # Smart import of the rc file
@@ -393,8 +409,7 @@ def load_stylesheet_pyqt5():
         stylesheet = ts.readAll()
 
         # Apply OS specific patches
-        stylesheet = _apply_stylesheet_patches(stylesheet)
-
+        # stylesheet = _apply_stylesheet_patches(stylesheet)
         return stylesheet
 
 

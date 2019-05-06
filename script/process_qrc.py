@@ -37,12 +37,9 @@ from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
 # Local imports
-from qdarkstyle.utils import create_qss
-
-# Constants
-HERE = os.path.abspath(os.path.dirname(__file__))
-REPO_ROOT = os.path.dirname(HERE)
-RC_PATH = os.path.join(REPO_ROOT, 'qdarkstyle', 'rc')
+from qdarkstyle import PACKAGE_PATH, QRC_FILEPATH, RC_PATH
+from qdarkstyle.utils.images import create_images, create_palette_image
+from qdarkstyle.utils.scss import create_qss
 
 
 class QSSFileHandler(FileSystemEventHandler):
@@ -65,7 +62,7 @@ def main(arguments):
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--qrc_dir',
-                        default=os.path.join(REPO_ROOT, 'qdarkstyle'),
+                        default=PACKAGE_PATH,
                         type=str,
                         help="QRC file directory, relative to current directory.",)
     parser.add_argument('--create',
@@ -80,7 +77,7 @@ def main(arguments):
     args = parser.parse_args(arguments)
 
     if args.watch:
-        path = os.path.join(REPO_ROOT, 'qdarkstyle')
+        path = PACKAGE_PATH
         observer = Observer()
         handler = QSSFileHandler(parser_args=args)
         observer.schedule(handler, path, recursive=True)
@@ -99,6 +96,11 @@ def run_process(args):
     # Generate qrc file based on the content of the resources folder
     print('Generating style.qrc files ...')
     generate_qrc_file()
+    
+    # Create palette and resources png images
+    print('Generating palette images ...')
+    create_palette_image()
+    create_images()
 
     print('Changing directory to: ', args.qrc_dir)
     os.chdir(args.qrc_dir)
@@ -200,8 +202,7 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
                    + template_footer.format(style_prefix=style_prefix))
 
     # Write qrc file
-    qrc_path = os.path.join(REPO_ROOT, 'qdarkstyle', 'style.qrc')
-    with open(qrc_path, 'w') as fh:
+    with open(QRC_FILEPATH, 'w') as fh:
         fh.write(qrc_content)
 
 
