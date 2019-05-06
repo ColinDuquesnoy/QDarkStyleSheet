@@ -152,7 +152,7 @@ def _qt_wrapper_import(qt_api):
 def _apply_stylesheet_patches(stylesheet):
     """Apply OS specific stylesheet pacthes."""
     # See issue #12
-    if platform.system().lower() == 'darwin':  
+    if platform.system().lower() == 'darwin':
         mac_fix = '''
         QDockWidget::title
         {{
@@ -303,7 +303,7 @@ def load_stylesheet(pyside=True):
             from PySide.QtCore import QCoreApplication, QFile, QTextStream
             from PySide.QtGui import QColor, QPalette
         else:
-            from PySide2.QtCore import QCoreApplocation, QFile, QTextStream
+            from PySide2.QtCore import QCoreApplication, QFile, QTextStream
             from PySide2.QtGui import QColor, QPalette
 
     # Apply palette fix. See issue #139
