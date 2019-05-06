@@ -97,7 +97,8 @@ def run_process(args):
     print('Generating style.qrc files ...')
     generate_qrc_file()
     
-# Create palette and resources png images
+    # Create palette and resources png images
+    print('Generating palette images ...')
     create_palette_image()
     create_images()
 
