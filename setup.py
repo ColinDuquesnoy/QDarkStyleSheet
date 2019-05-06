@@ -12,7 +12,7 @@ from qdarkstyle import __version__
 from qdarkstyle import __doc__ as long_desc
 
 
-install_requires = []
+install_requires = ['helpdev>=0.6']
 
 extras_require = {
     'example': ['pyqt5', 'pyside2', 'qtpy>=1.7'],
