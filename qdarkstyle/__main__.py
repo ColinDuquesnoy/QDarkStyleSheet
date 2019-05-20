@@ -53,7 +53,7 @@ def main():
         info.update(helpdev.check_qt_abstractions())
 
     if args.dependencies or args.all:
-        info.update(helpdev.check_python_packages(packages='helpdev'))
+        info.update(helpdev.check_python_packages(packages='helpdev,qdarkstyle'))
 
     helpdev.print_output(info)
 
