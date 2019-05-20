@@ -204,8 +204,6 @@ def main():
         # Getting style
         style_method = lambda: qdarkstyle.load_stylesheet_from_environment(is_pyqtgraph=True)
 
-    if args.no_dark:
-        style = ''
 
     def write_settings(window):
         """Get window settings and write it into a file."""
@@ -237,7 +235,11 @@ def main():
     app.setApplicationName('QDarkStyle Example')
 
     # setup stylesheet
-    style = style_method()
+    style = ''
+
+    if args.no_dark is False:
+        style = style_method()
+
     app.setStyleSheet(style)
 
     # create main window
