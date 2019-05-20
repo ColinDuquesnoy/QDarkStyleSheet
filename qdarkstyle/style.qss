@@ -1931,17 +1931,17 @@ QToolBox QScrollArea QWidget QWidget {
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qframe
 
 --------------------------------------------------------------------------- */
-QFrame {
+.QFrame {
   border-radius: 4px;
   border: 1px solid #32414B;
 }
 
-QFrame[frameShape="0"] {
+.QFrame[frameShape="0"] {
   border-radius: 4px;
   border: 1px transparent #32414B;
 }
 
-QFrame[height="3"], QFrame[width="3"] {
+.QFrame[height="3"], .QFrame[width="3"] {
   background-color: #19232D;
 }
 
