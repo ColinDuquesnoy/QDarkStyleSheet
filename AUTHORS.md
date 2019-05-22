@@ -2,18 +2,29 @@
 
 ## Mainteiner(s)
 
+
 These people were/are mainteiners of this project.
 
-- 2013-current
-    [Colin Duquesnoy](https://github.com/ColinDuquesnoy) -
-    <colin.duquesnoy@gmail.com> -
-    original author.
-- 2018-current
-    [Daniel Pizetta](https://github.com/dpizetta) -
-    <daniel.pizetta@usp.br> -
-    improvements and bug fixes.
+* 2013-current
+  [Colin Duquesnoy](https://github.com/ColinDuquesnoy) -
+  <colin.duquesnoy@gmail.com> -
+  original author.
+
+* 2018-current
+  [Daniel Pizetta](https://github.com/dpizetta) -
+  <daniel.pizetta@usp.br> -
+  bug fixes, improvements, features.
+
+* 2019-current
+  [Gonzalo Peña-Castellanos](https://github.com/goanpeca) -
+  bug fixes, improvements, features.
+
+* 2019-current
+  [Carlos Cordoba](https://github.com/ccordoba12)
+
 
 ## Contributor(s)
+
 
 These people contribute to bug fixes, improvements and so on.
 Please, insert your information after the last one.
@@ -25,4 +36,5 @@ Please, insert your information after the last one.
 - 2018 - [KcHNST](https://github.com/KcHNST) - bug fixes.
 - 2019 - [goanpeca](https://github.com/goanpeca) - bug fixes, improvements, features.
 
-Thank you all!
+
+And all people that reported bugs, thank you all!
