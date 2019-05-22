@@ -15,7 +15,6 @@ Welcome to QDarkStyle's documentation!
    build/script/index.rst
    changes.rst
    contributing.rst
-   production.rst
    authors.rst
    license.rst
    code_of_conduct.rst
