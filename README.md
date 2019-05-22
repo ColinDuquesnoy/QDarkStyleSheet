@@ -1,17 +1,11 @@
 # QDarkStylesheet
 
 [![Build Status](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet.png?branch=master)](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet)
-
-[![Docs Status](https://readthedocs.org/projects/qdarkstylesheet/badge/?version=latest&style=flat)](https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet)
-
+[![Docs Status](https://readthedocs.org/projects/qdarkstylesheet/badge/?version=latest&style=flat)](https://qdarkstylesheet.readthedocs.io)
 [![Latest PyPI version](https://img.shields.io/pypi/v/QDarkStyle.svg)](https://pypi.python.org/pypi/QDarkStyle)
-
 [![License: MIT](https://img.shields.io/dub/l/vibe-d.svg?color=lightgrey)](https://opensource.org/licenses/MIT)
-
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-
 [![conduct](https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-green.svg?style=flat&color=lightgrey)](http://contributor-covenant.org/version/1/4/)
-
 
 A dark stylesheet for Qt applications (Qt4, Qt5, PySide, PySide2, PyQt4, PyQt5, QtPy,
 PyQtGraph).
@@ -20,24 +14,25 @@ PyQtGraph).
 
 ### Python
 
-From PyPI: Get the latest stable version of ``qdarkstyle`` package
-using *pip* (preferable):
+From PyPI: Get the latest stable version of `qdarkstyle` package
+using _pip_ (preferable):
 
 ```bash
 pip install qdarkstyle
 ```
 
-From code: Download/clone the project, go to ``qdarkstyle`` folder then:
+From code: Download/clone the project, go to `qdarkstyle` folder then:
 
-- You can use the *setup* script and pip install.
-    ```bash
-    pip install .
-    ```
+- You can use the _setup_ script and pip install.
 
-- Or, you can use the *setup* script with Python:
-    ```bash
-    python setup.py install
-    ```
+  ```bash
+  pip install .
+  ```
+
+- Or, you can use the _setup_ script with Python:
+  ```bash
+  python setup.py install
+  ```
 
 ### C++
 
@@ -53,6 +48,7 @@ From code: Download/clone the project, go to ``qdarkstyle`` folder then:
   ```cpp
   RESOURCES += qdarkstyle/style.qrc
   ```
+
 - Load the stylesheet:
 
   ```cpp
@@ -185,17 +181,18 @@ _There is an example included in the *example* folder.
 You can run the script without installing qdarkstyle. You only need to have
 PySide or PySide2 or PyQt4 or PyQt5 installed on your system._
 
-
 ## What is new?
 
-In the version 2.6 and later, a reestructure stylesheet is provided. The palette has only 9 colors. Most widgets are revised and their styles were improved. We also provide a command line (script) to get info that could be used when opening issues. See the image below.
+In the version 2.6 and later, a reestructure stylesheet is provided.
+The palette has only 9 colors. Most widgets are revised and their styles
+were improved. We also provide a command line (script) to get info that
+could be used when opening issues. See the image below.
 
 ```
 qdarkstyle --all
 ```
 
 <img src="./screenshots/cmd.png"/>
-
 
 ## Snapshots
 
