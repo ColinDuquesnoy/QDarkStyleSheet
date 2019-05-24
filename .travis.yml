@@ -1,13 +1,27 @@
 language: python
+
+before_install:
+  - sudo apt-get update
+  # to be able to display
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
 matrix:
   include:
-    - python: 2.7
-      env: TOXENV=py27
-    - python: 3.4
-      env: TOXENV=py34
     - python: 3.6
       env: TOXENV=py36
+    - python: 3.6
+      env: TOXENV=py36-pyqt5
+    - python: 3.6
+      env: TOXENV=py36-pyside2
+
 install:
-  - pip install tox
+  # to make sure it has everything up to date
+  - pip install -U setuptools
+  - pip install -U pip
+  - pip install -U wheel
+  - pip install -U virtualenv
+  - pip install -U tox
+
 script:
   - tox
