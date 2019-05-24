@@ -449,7 +449,7 @@ QMenu {
 
     &::right-arrow {
         margin: 5px;
-        image: url($PATH_RESOURCES + '/rc/right_arrow.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_right.png');
     }
 }
 
@@ -552,7 +552,7 @@ QScrollBar {
 
         &:horizontal {
             margin: 0px 0px 0px 0px;
-            border-image: url($PATH_RESOURCES + '/rc/right_arrow_disabled.png');
+            border-image: url($PATH_RESOURCES + '/rc/arrow_right_disabled.png');
             width: 10px;
             height: 10px;
             subcontrol-position: right;
@@ -560,7 +560,7 @@ QScrollBar {
 
             &:hover,
             &:on {
-                border-image: url($PATH_RESOURCES + '/rc/right_arrow.png');
+                border-image: url($PATH_RESOURCES + '/rc/arrow_right.png');
                 height: 10px;
                 width: 10px;
                 subcontrol-position: right;
@@ -570,7 +570,7 @@ QScrollBar {
 
         &:vertical {
             margin: 3px 0px 3px 0px;
-            border-image: url($PATH_RESOURCES + '/rc/down_arrow_disabled.png');
+            border-image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
             height: 10px;
             width: 10px;
             subcontrol-position: bottom;
@@ -578,7 +578,7 @@ QScrollBar {
 
             &:hover,
             &:on {
-                border-image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+                border-image: url($PATH_RESOURCES + '/rc/arrow_down.png');
                 height: 10px;
                 width: 10px;
                 subcontrol-position: bottom;
@@ -590,7 +590,7 @@ QScrollBar {
     &::sub-line {
         &:horizontal {
             margin: 0px 3px 0px 3px;
-            border-image: url($PATH_RESOURCES + '/rc/left_arrow_disabled.png');
+            border-image: url($PATH_RESOURCES + '/rc/arrow_left_disabled.png');
             height: 10px;
             width: 10px;
             subcontrol-position: left;
@@ -598,7 +598,7 @@ QScrollBar {
 
             &:hover,
             &:on {
-                border-image: url($PATH_RESOURCES + '/rc/left_arrow.png');
+                border-image: url($PATH_RESOURCES + '/rc/arrow_left.png');
                 height: 10px;
                 width: 10px;
                 subcontrol-position: left;
@@ -608,7 +608,7 @@ QScrollBar {
 
         &:vertical {
             margin: 3px 0px 3px 0px;
-            border-image: url($PATH_RESOURCES + '/rc/up_arrow_disabled.png');
+            border-image: url($PATH_RESOURCES + '/rc/arrow_up_disabled.png');
             height: 10px;
             width: 10px;
             subcontrol-position: top;
@@ -616,7 +616,7 @@ QScrollBar {
 
             &:hover,
             &:on {
-                border-image: url($PATH_RESOURCES + '/rc/up_arrow.png');
+                border-image: url($PATH_RESOURCES + '/rc/arrow_up.png');
                 height: 10px;
                 width: 10px;
                 subcontrol-position: top;
@@ -754,7 +754,7 @@ QToolButton#qt_toolbar_ext_button {
     background: $COLOR_BACKGROUND_NORMAL;
     border: 0px;
     color: $COLOR_FOREGROUND_LIGHT;
-    image: url($PATH_RESOURCES + '/rc/right_arrow.png');
+    image: url($PATH_RESOURCES + '/rc/arrow_right.png');
 }
 
 /* QAbstractSpinBox -------------------------------------------------------
@@ -786,13 +786,13 @@ QAbstractSpinBox {
     &::up-arrow,
     &::up-arrow:disabled,
     &::up-arrow:off {
-        image: url($PATH_RESOURCES + '/rc/up_arrow_disabled.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_up_disabled.png');
         width: 9px;
         height: 9px;
     }
 
     &::up-arrow:hover {
-        image: url($PATH_RESOURCES + '/rc/up_arrow.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_up.png');
     }
 
     &:down-button {
@@ -806,13 +806,13 @@ QAbstractSpinBox {
     &::down-arrow,
     &::down-arrow:disabled,
     &::down-arrow:off {
-        image: url($PATH_RESOURCES + '/rc/down_arrow_disabled.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
         width: 9px;
         height: 9px;
     }
 
     &::down-arrow:hover {
-        image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_down.png');
     }
 
     &:hover {
@@ -1119,13 +1119,13 @@ QToolButton {
     }
 
     &::menu-indicator {
-        image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_down.png');
         top: -8px;     /* Shift it a bit */
         left: -4px;    /* Shift it a bit */
     }
 
     &::menu-arrow {
-        image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_down.png');
 
         &:open {
             border: $BORDER_NORMAL;
@@ -1234,12 +1234,12 @@ QComboBox {
     }
 
     &::down-arrow {
-        image: url($PATH_RESOURCES + '/rc/down_arrow_disabled.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
 
         &:on,
         &:hover,
         &:focus {
-            image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+            image: url($PATH_RESOURCES + '/rc/arrow_down.png');
         }
     }
 }
@@ -1642,21 +1642,21 @@ QTabBar {
 
         &::left-arrow {
             &:enabled {
-                image: url($PATH_RESOURCES + '/rc/left_arrow.png');
+                image: url($PATH_RESOURCES + '/rc/arrow_left.png');
             }
 
             &:disabled {
-                image: url($PATH_RESOURCES + '/rc/left_arrow_disabled.png');
+                image: url($PATH_RESOURCES + '/rc/arrow_left_disabled.png');
             }
         }
 
         &::right-arrow {
             &:enabled {
-                image: url($PATH_RESOURCES + '/rc/right_arrow.png');
+                image: url($PATH_RESOURCES + '/rc/arrow_right.png');
             }
 
             &:disabled {
-                image: url($PATH_RESOURCES + '/rc/right_arrow_disabled.png');
+                image: url($PATH_RESOURCES + '/rc/arrow_right_disabled.png');
             }
         }
     }
@@ -1927,7 +1927,7 @@ QHeaderView {
         width: 16px;
         height: 16px;
         border-right: $BORDER_DARK;
-        image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_down.png');
     }
 
     &::up-arrow {
@@ -1935,7 +1935,7 @@ QHeaderView {
         width: 16px;
         height: 16px;
         border-right: $BORDER_DARK;
-        image: url($PATH_RESOURCES + '/rc/up_arrow.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_up.png');
     }
 }
 
@@ -2081,12 +2081,12 @@ QDateEdit {
     }
 
     &::down-arrow {
-        image: url($PATH_RESOURCES + '/rc/down_arrow_disabled.png');
+        image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
 
         &:on,
         &:hover,
         &:focus {
-            image: url($PATH_RESOURCES + '/rc/down_arrow.png');
+            image: url($PATH_RESOURCES + '/rc/arrow_down.png');
         }
 
     }
