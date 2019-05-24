@@ -15,12 +15,27 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   inkscape:export-filename="/home/colin/checkbox_checked.png"
+   inkscape:export-filename="/home/colin/checkbox_indeterminate.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
-   sodipodi:docname="radio_unchecked.svg">
+   sodipodi:docname="branch_end.svg">
   <defs
-     id="defs4" />
+     id="defs4">
+    <marker
+       inkscape:stockid="StopS"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="StopS"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path994"
+         d="M 0.0,5.65 L 0.0,-5.65"
+         style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;stroke-opacity:1"
+         transform="scale(0.2)" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -28,9 +43,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="6.2339067"
-     inkscape:cy="10.637865"
+     inkscape:zoom="12.96875"
+     inkscape:cx="17.258854"
+     inkscape:cy="15.720635"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -46,12 +61,12 @@
        type="xygrid"
        id="grid4203" />
     <sodipodi:guide
-       position="-15,16"
+       position="9.0000001,16"
        orientation="0,1"
        id="guide4205"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="16,22.000001"
+       position="16,38.000001"
        orientation="1,0"
        id="guide4207"
        inkscape:locked="false" />
@@ -64,7 +79,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -73,12 +88,16 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-1020.3622)">
-    <ellipse
-       style="opacity:1;fill:#000000;fill-opacity:0;stroke:#ff0000;stroke-width:2.13751721;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4138"
-       cx="16.005583"
-       cy="1036.3723"
-       rx="9.931242"
-       ry="9.931241" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:"
+       d="m 16,1020.3622 v 16 h 16"
+       id="path4521"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 31,1034.3622 v 4"
+       id="path1433"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
