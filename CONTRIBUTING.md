@@ -140,10 +140,25 @@ Please, follow the levels bellow.
 
 - error: some error, but not capable of stop program;
 
-- critical: something that stops the running program.
+- critical: something that could stop the running program.
+
+
+## Documentation
+
+
+Documentation is the key to keep all information and necessary instructions to
+others. We use the reStructured text format (rst) for all docs.
+
+All new functions, classes, files, must be documented with all arguments,
+returns, exceptions. Whithout this it should not pass the tests.
+
+The better example is to see the current files to get the style. We are
+using the Google Format and Sphinx for generating the docs.
 
 
 ## Guide to QDarkStyle
+
+### Structure of the Example
 
 
 Now you can use our example to work on the stylesheet. It has all possible
@@ -212,7 +227,7 @@ files.
 For more information about those scripts, see their documentation.
 
 
-### Qt, Stylesheets and Palettes
+### Qt, Stylesheets, Palettes and Icons
 
 
 - [Box model](http://doc.qt.io/qt-5/images/stylesheet-boxmodel.png)
@@ -223,13 +238,26 @@ For more information about those scripts, see their documentation.
 - [References](http://doc.qt.io/qt-5/stylesheet.html)
 
 Create good palettes with these tools. For example, on paletton, choose
-  three colors from greyish light (foreground), greyish dark (background)
-  and three more colorfull colors (selection). Greyish colors have a litle
-  bit of the main color, so it is nice to change it if you change the main
-  color.
+three colors from greyish light (foreground), greyish dark (background)
+and three more colorfull colors (selection). Greyish colors have a litle
+bit of the main color, so it is nice to change it if you change the main
+color.
 
 - [Paletton.com](http://paletton.com/)
 - [Coolors.co](https://coolors.co/)
+
+As a minimal guide to create new icons (svg) images, we list two main sources.
+
+ - [Material](https://material.io/design/iconography/product-icons.html#grid-keyline-shapes)
+ - [KDE](https://hig.kde.org/style/icon.html)
+
+Main characteristics are of SVG images are:
+
+- Size: 32px X 32px;
+- Border: 2px border space;
+- Line: 2px minimum thickness. Complementary 4px and 8px thickness;
+- Color: #ff0000, red for all images - programatically changed;
+- Keep only structural changes in images, not colors, e.g, states hover and disabled.
 
 
 ## Unit Testing and Fix Preview
