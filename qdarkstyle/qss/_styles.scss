@@ -1726,15 +1726,15 @@ QTreeView {
         }
 
         &:has-siblings:!adjoins-item {
-            border-image: url($PATH_RESOURCES + '/rc/transparent.png');
+            border-image: url($PATH_RESOURCES + '/rc/branch_line.png');
         }
 
         &:has-siblings:adjoins-item {
-            border-image: url($PATH_RESOURCES + '/rc/transparent.png');
+            border-image: url($PATH_RESOURCES + '/rc/branch_more.png');
         }
 
         &:!has-children:!has-siblings:adjoins-item {
-            border-image: url($PATH_RESOURCES + '/rc/transparent.png');
+            border-image: url($PATH_RESOURCES + '/rc/branch_end.png');
         }
 
         &:has-children:!has-siblings:closed,
@@ -1749,12 +1749,12 @@ QTreeView {
 
         &:has-children:!has-siblings:closed:hover,
         &:closed:has-children:has-siblings:hover {
-            image: url($PATH_RESOURCES + '/rc/branch_closed-on.png');
+            image: url($PATH_RESOURCES + '/rc/branch_closed_focus.png');
         }
 
         &:open:has-children:!has-siblings:hover,
         &:open:has-children:has-siblings:hover {
-            image: url($PATH_RESOURCES + '/rc/branch_open-on.png');
+            image: url($PATH_RESOURCES + '/rc/branch_open_focus.png');
         }
     }
 }
