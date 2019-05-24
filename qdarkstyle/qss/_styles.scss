@@ -696,7 +696,7 @@ QSizeGrip {
     background: transparent;
     width: 12px;
     height: 12px;
-    image: url($PATH_RESOURCES + '/rc/sizegrip.png');
+    image: url($PATH_RESOURCES + '/rc/window_grip.png');
 }
 
 /* QStackedWidget ---------------------------------------------------------
@@ -1431,14 +1431,14 @@ QTabBar {
         border: 0;
         margin: 2px;
         padding: 0px;
-        image: url($PATH_RESOURCES + '/rc/close.png');
+        image: url($PATH_RESOURCES + '/rc/window_close.png');
 
         &:hover {
-            image: url($PATH_RESOURCES + '/rc/close-hover.png');
+            image: url($PATH_RESOURCES + '/rc/window_close_focus.png');
         }
 
         &:pressed {
-            image: url($PATH_RESOURCES + '/rc/close-pressed.png');
+            image: url($PATH_RESOURCES + '/rc/window_close_pressed.png');
         }
     }
 }
@@ -1670,8 +1670,8 @@ QDockWidget {
     background-color: $COLOR_BACKGROUND_DARK;
     border: $BORDER_NORMAL;
     border-radius: $SIZE_BORDER_RADIUS;
-    titlebar-close-icon: url($PATH_RESOURCES + '/rc/close.png');
-    titlebar-normal-icon: url($PATH_RESOURCES + '/rc/undock.png');
+    titlebar-close-icon: url($PATH_RESOURCES + '/rc/window_close.png');
+    titlebar-normal-icon: url($PATH_RESOURCES + '/rc/window_undock.png');
 
     &::title {
         /* Better size for title bar */
