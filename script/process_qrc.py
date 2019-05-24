@@ -95,8 +95,12 @@ def run_process(args):
     """Process qrc files."""
     # Generate qrc file based on the content of the resources folder
     print('Generating style.qrc files ...')
+
+    # Todo: It should delete qrc file before
+    # Todo: If the file is deleted we must run twoce to work properly
+
     generate_qrc_file()
-    
+
     # Create palette and resources png images
     print('Generating palette images ...')
     create_palette_image()
@@ -144,7 +148,7 @@ def run_process(args):
 
         if args.create in ['pyside', 'all']:
             print("Compiling for PySide ...")
-            try:    
+            try:
                 call(['pyside-rcc', '-py3', qrc_file, '-o', py_file_pyside])
             except FileNotFoundError:
                 print("You must install pyside-rcc")
