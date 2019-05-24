@@ -64,14 +64,14 @@ QMainWindow {
             width: 5px;
             margin-top: 2px;
             margin-bottom: 2px;
-            image: url($PATH_RESOURCES + '/rc/Vsepartoolbar.png');
+            image: url($PATH_RESOURCES + '/rc/toolbar_separator_vertical.png');
         }
 
         &:vertical {
             height: 5px;
             margin-left: 2px;
             margin-right: 2px;
-            image: url($PATH_RESOURCES + '/rc/Hsepartoolbar.png');
+            image: url($PATH_RESOURCES + '/rc/toolbar_separator_horizontal.png');
         }
     }
 }
@@ -727,12 +727,12 @@ QToolBar {
 
         &:horizontal {
             width: 6px;
-            image: url($PATH_RESOURCES + '/rc/Hmovetoolbar.png');
+            image: url($PATH_RESOURCES + '/rc/toolbar_move_horizontal.png');
         }
 
         &:vertical {
             height: 6px;
-            image: url($PATH_RESOURCES + '/rc/Vmovetoolbar.png');
+            image: url($PATH_RESOURCES + '/rc/toolbar_move_horizontal.png');
         }
     }
 
@@ -740,12 +740,12 @@ QToolBar {
 
         &:horizontal {
             width: 3px;
-            image: url($PATH_RESOURCES + '/rc/Hsepartoolbar.png');
+            image: url($PATH_RESOURCES + '/rc/toolbar_separator_horizontal.png');
         }
 
         &:vertical {
             height: 3px;
-            image: url($PATH_RESOURCES + '/rc/Vsepartoolbar.png');
+            image: url($PATH_RESOURCES + '/rc/toolbar_separator_vertical.png');
         }
     }
 }
@@ -2040,12 +2040,12 @@ QSplitter {
 
         &:horizontal {
             width: 5px;
-            image: url($PATH_RESOURCES + '/rc/Vsepartoolbar.png');
+            image: url($PATH_RESOURCES + '/rc/toolbar_separator_vertical.png');
         }
 
         &:vertical {
             height: 5px;
-            image: url($PATH_RESOURCES + '/rc/Hsepartoolbar.png');
+            image: url($PATH_RESOURCES + '/rc/toolbar_separator_horizontal.png');
         }
     }
 }
