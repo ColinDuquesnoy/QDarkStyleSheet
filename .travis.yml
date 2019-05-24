@@ -1,6 +1,8 @@
 dist: xenial
-
 language: python
+
+services:
+  - xvfb
 
 before_install:
   - sudo apt-get update
