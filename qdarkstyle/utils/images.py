@@ -24,33 +24,16 @@ def _get_file_color_map(fname, palette):
     """Return map of files to color from given palette."""
     color_disabled = palette.COLOR_BACKGROUND_NORMAL
     color_focus = palette.COLOR_SELECTION_LIGHT
+    color_pressed = palette.COLOR_SELECTION_NORMAL
     color_normal = palette.COLOR_FOREGROUND_DARK
+    name, ext = fname.split('.')
 
     files_map = {
-        'checkbox_checked.svg': {
-            'checkbox_checked.svg': color_normal,
-            'checkbox_checked_disabled.svg': color_disabled,
-            'checkbox_checked_focus.svg': color_focus,
-        },
-        'checkbox_indeterminate.svg': {
-            'checkbox_indeterminate.svg': color_normal,
-            'checkbox_indeterminate_disabled.svg': color_disabled,
-            'checkbox_indeterminate_focus.svg': color_focus,
-        },
-        'checkbox_unchecked.svg': {
-            'checkbox_unchecked.svg': color_normal,
-            'checkbox_unchecked_disabled.svg': color_disabled,
-            'checkbox_unchecked_focus.svg': color_focus,
-        },
-        'radio_checked.svg': {
-            'radio_checked.svg': color_normal,
-            'radio_checked_disabled.svg': color_disabled,
-            'radio_checked_focus.svg': color_focus,
-        },
-        'radio_unchecked.svg': {
-            'radio_unchecked.svg': color_normal,
-            'radio_unchecked_disabled.svg': color_disabled,
-            'radio_unchecked_focus.svg': color_focus,
+        fname: {
+            fname: color_normal,
+            name + '_disabled.' + ext: color_disabled,
+            name + '_focus.' + ext: color_focus,
+            name + '_pressed.' + ext: color_pressed,
         }
     }
     for f, file_colors in files_map.items():
