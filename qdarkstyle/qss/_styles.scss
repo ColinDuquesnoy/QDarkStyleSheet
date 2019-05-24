@@ -147,8 +147,8 @@ QCheckBox {
 
     &::indicator {
         margin-left: 4px;
-        width: 16px;
         height: 16px;
+        width: 16px;
 
         &:unchecked {
             image: url($PATH_RESOURCES + '/rc/checkbox_unchecked.png');
@@ -220,8 +220,8 @@ QGroupBox {
 
     &::indicator {
         margin-left: 2px;
-        width: 16px;
-        height: 16px;
+        height: 12px;
+        width: 12px;
 
         &:unchecked {
 
@@ -261,7 +261,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qradiobutton
 QRadioButton {
     background-color: $COLOR_BACKGROUND_DARK;
     color: $COLOR_FOREGROUND_LIGHT;
-    spacing: 0px;
+    spacing: 4px;
     padding: 0px;
     border: none;
     outline: none;
@@ -289,9 +289,9 @@ QRadioButton {
     &::indicator {
         border: none;
         outline: none;
-        margin-bottom: 2px;
-        width: 25px;
-        height: 25px;
+        margin-left: 4px;
+        height: 16px;
+        width: 16px;
 
         &:unchecked {
             image: url($PATH_RESOURCES + '/rc/radio_unchecked.png');
@@ -553,16 +553,16 @@ QScrollBar {
         &:horizontal {
             margin: 0px 0px 0px 0px;
             border-image: url($PATH_RESOURCES + '/rc/arrow_right_disabled.png');
-            width: 10px;
-            height: 10px;
+            height: 12px;
+            width: 12px;
             subcontrol-position: right;
             subcontrol-origin: margin;
 
             &:hover,
             &:on {
                 border-image: url($PATH_RESOURCES + '/rc/arrow_right.png');
-                height: 10px;
-                width: 10px;
+                height: 12px;
+                width: 12px;
                 subcontrol-position: right;
                 subcontrol-origin: margin;
             }
@@ -571,16 +571,16 @@ QScrollBar {
         &:vertical {
             margin: 3px 0px 3px 0px;
             border-image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
-            height: 10px;
-            width: 10px;
+            height: 12px;
+            width: 12px;
             subcontrol-position: bottom;
             subcontrol-origin: margin;
 
             &:hover,
             &:on {
                 border-image: url($PATH_RESOURCES + '/rc/arrow_down.png');
-                height: 10px;
-                width: 10px;
+                height: 12px;
+                width: 12px;
                 subcontrol-position: bottom;
                 subcontrol-origin: margin;
             }
@@ -591,16 +591,16 @@ QScrollBar {
         &:horizontal {
             margin: 0px 3px 0px 3px;
             border-image: url($PATH_RESOURCES + '/rc/arrow_left_disabled.png');
-            height: 10px;
-            width: 10px;
+            height: 12px;
+            width: 12px;
             subcontrol-position: left;
             subcontrol-origin: margin;
 
             &:hover,
             &:on {
                 border-image: url($PATH_RESOURCES + '/rc/arrow_left.png');
-                height: 10px;
-                width: 10px;
+                height: 12px;
+                width: 12px;
                 subcontrol-position: left;
                 subcontrol-origin: margin;
             }
@@ -609,16 +609,16 @@ QScrollBar {
         &:vertical {
             margin: 3px 0px 3px 0px;
             border-image: url($PATH_RESOURCES + '/rc/arrow_up_disabled.png');
-            height: 10px;
-            width: 10px;
+            height: 12px;
+            width: 12px;
             subcontrol-position: top;
             subcontrol-origin: margin;
 
             &:hover,
             &:on {
                 border-image: url($PATH_RESOURCES + '/rc/arrow_up.png');
-                height: 10px;
-                width: 10px;
+                height: 12px;
+                width: 12px;
                 subcontrol-position: top;
                 subcontrol-origin: margin;
             }
@@ -787,8 +787,8 @@ QAbstractSpinBox {
     &::up-arrow:disabled,
     &::up-arrow:off {
         image: url($PATH_RESOURCES + '/rc/arrow_up_disabled.png');
-        width: 9px;
-        height: 9px;
+        height: 12px;
+        width: 12px;
     }
 
     &::up-arrow:hover {
@@ -807,8 +807,8 @@ QAbstractSpinBox {
     &::down-arrow:disabled,
     &::down-arrow:off {
         image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
-        width: 9px;
-        height: 9px;
+        height: 12px;
+        width: 12px;
     }
 
     &::down-arrow:hover {
@@ -1235,7 +1235,8 @@ QComboBox {
 
     &::down-arrow {
         image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
-
+        height: 12px;
+        width: 12px;
         &:on,
         &:hover,
         &:focus {
@@ -1637,8 +1638,8 @@ QTabBar {
     QToolButton {
         /* Fixes #136 */
         background-color: $COLOR_BACKGROUND_NORMAL;
-        width: 16px;
-        height: 16px;
+        height: 12px;
+        width: 12px;
 
         &::left-arrow {
             &:enabled {
@@ -1685,12 +1686,13 @@ QDockWidget {
         border-radius: $SIZE_BORDER_RADIUS;
         border: none;
 
+
         &:hover {
-            border: $BORDER_NORMAL;
+            image: url($PATH_RESOURCES + '/rc/window_close_focus.png');
         }
 
         &:pressed {
-            border: $BORDER_NORMAL;
+            image: url($PATH_RESOURCES + '/rc/window_close_pressed.png');
         }
     }
 
@@ -1700,11 +1702,11 @@ QDockWidget {
         border: none;
 
         &:hover {
-            border: $BORDER_NORMAL;
+            image: url($PATH_RESOURCES + '/rc/window_undock_focus.png');
         }
 
         &:pressed {
-            border: $BORDER_NORMAL;
+            image: url($PATH_RESOURCES + '/rc/window_undock_pressed.png');
         }
     }
 }
@@ -1924,16 +1926,16 @@ QHeaderView {
         /* Those settings (border/width/height/background-color) solve bug */
         /* transparent arrow background and size */
         background-color: $COLOR_BACKGROUND_NORMAL;
-        width: 16px;
-        height: 16px;
+        height: 12px;
+        width: 12px;
         border-right: $BORDER_DARK;
         image: url($PATH_RESOURCES + '/rc/arrow_down.png');
     }
 
     &::up-arrow {
         background-color: $COLOR_BACKGROUND_NORMAL;
-        width: 16px;
-        height: 16px;
+        height: 12px;
+        width: 12px;
         border-right: $BORDER_DARK;
         image: url($PATH_RESOURCES + '/rc/arrow_up.png');
     }
@@ -2040,12 +2042,12 @@ QSplitter {
 
         &:horizontal {
             width: 5px;
-            image: url($PATH_RESOURCES + '/rc/toolbar_separator_vertical.png');
+            image: url($PATH_RESOURCES + '/rc/line_vertical.png');
         }
 
         &:vertical {
             height: 5px;
-            image: url($PATH_RESOURCES + '/rc/toolbar_separator_horizontal.png');
+            image: url($PATH_RESOURCES + '/rc/line_horizontal.png');
         }
     }
 }
@@ -2082,7 +2084,8 @@ QDateEdit {
 
     &::down-arrow {
         image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
-
+        height: 12px;
+        width: 12px;
         &:on,
         &:hover,
         &:focus {
