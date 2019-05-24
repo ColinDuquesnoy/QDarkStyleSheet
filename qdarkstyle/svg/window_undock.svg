@@ -15,10 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   inkscape:export-filename="/home/colin/checkbox_checked.png"
+   inkscape:export-filename="/home/colin/checkbox_indeterminate.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
-   sodipodi:docname="radio_unchecked.svg">
+   sodipodi:docname="undock.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.313708"
-     inkscape:cx="6.2339067"
-     inkscape:cy="10.637865"
+     inkscape:cx="17.74116"
+     inkscape:cy="14.965704"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -64,7 +64,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -73,12 +73,20 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-1020.3622)">
-    <ellipse
-       style="opacity:1;fill:#000000;fill-opacity:0;stroke:#ff0000;stroke-width:2.13751721;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4138"
-       cx="16.005583"
-       cy="1036.3723"
-       rx="9.931242"
-       ry="9.931241" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0;fill-rule:evenodd;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 9 10.999983 L 9 4.9999826 C 9 3.8919826 9.892 2.9999826 11 2.9999826 L 11 2.9999826 L 27 2.9999826 C 28.108 2.9999826 29 3.8919826 29 4.9999826 L 29 20.999983 C 29 22.107983 28.108 22.999983 27 22.999983 L 21 22.999983 "
+       id="path904"
+       transform="translate(0,1020.3622)" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3338-0-2"
+       width="18"
+       height="18"
+       x="3"
+       y="1031.3622"
+       ry="2"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>
