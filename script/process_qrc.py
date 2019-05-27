@@ -96,15 +96,15 @@ def run_process(args):
     # Generate qrc file based on the content of the resources folder
     print('Generating style.qrc files ...')
 
-    # Todo: It should delete qrc file before
-    # Todo: If the file is deleted we must run twoce to work properly
-
-    generate_qrc_file()
-
     # Create palette and resources png images
-    print('Generating palette images ...')
+    print('Generating palette image ...')
     create_palette_image()
+
+    print('Generating png images ...')
     create_images()
+
+    print('Generating qrc file ...')
+    generate_qrc_file()
 
     print('Changing directory to: ', args.qrc_dir)
     os.chdir(args.qrc_dir)
