@@ -96,6 +96,7 @@ QRC_FILE = STYLE_FILE.replace('.qss', '.qrc')
 # Paths
 PACKAGE_PATH = os.path.abspath(os.path.dirname(__file__))
 REPO_PATH = os.path.dirname(PACKAGE_PATH)
+IMAGES_PATH = os.path.join(PACKAGE_PATH, '../images')
 QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
 RC_PATH = os.path.join(PACKAGE_PATH, 'rc')
 SVG_PATH = os.path.join(PACKAGE_PATH, 'svg')
