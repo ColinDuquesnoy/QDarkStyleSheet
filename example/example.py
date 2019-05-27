@@ -50,12 +50,12 @@ sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 
 # must be in this place, after setting path, to not need to install
 import qdarkstyle
-from qdarkstyle import QT_BINDING, QT_ABSTRACTION
+from qdarkstyle import QT_BINDING, QT_ABSTRACTION, IMAGES_PATH
 
 # Constants
 EXAMPLE_PATH = os.path.abspath(os.path.dirname(__file__))
 REPO_PATH = os.path.dirname(EXAMPLE_PATH)
-SCREENSHOTS_PATH = os.path.join(REPO_PATH, 'screenshots')
+SCREENSHOTS_PATH = IMAGES_PATH
 
 
 def main():

@@ -16,8 +16,10 @@ from qtpy.QtGui import QIcon
 from qtpy.QtWidgets import QApplication
 
 # Local imports
-from qdarkstyle import _logger, RC_PATH, REPO_PATH, SVG_PATH
+from qdarkstyle import _logger, RC_PATH, REPO_PATH, SVG_PATH, IMAGES_PATH
 from qdarkstyle.palette import DarkPalette
+
+IMAGE_BLACKLIST = ['base_palette']
 
 
 def _get_file_color_map(fname, palette):
@@ -66,30 +68,32 @@ def convert_svg_to_png(svg_path, png_path, height, width):
     img.save(png_path)
 
 
-def create_palette_image(base_svg_path=SVG_PATH, path=REPO_PATH,
+def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
                          palette=DarkPalette):
     """Create palette image svg and png image on specified path."""
     # Needed to use QPixmap
     app = QApplication([])
 
-    base_palette_svg_path = os.path.join(base_svg_path, 'palette.svg')
+    base_palette_svg_path = os.path.join(base_svg_path, 'base_palette.svg')
     palette_svg_path = os.path.join(path, 'palette.svg')
     palette_png_path = os.path.join(path, 'palette.png')
+
+    _logger().info("Creating palette image ...")
+    _logger().info("From : %s" % palette_svg_path)
+    _logger().info("To   : %s" % palette_png_path)
 
     with open(base_palette_svg_path, 'r') as fh:
         data = fh.read()
 
     color_palette = palette.color_palette()
+
     for color_name, color_value in color_palette.items():
         data = data.replace('{{ ' + color_name + ' }}', color_value.lower())
 
-    with open(palette_svg_path, 'w') as fh:
+    with open(palette_svg_path, 'w+') as fh:
         fh.write(data)
 
     convert_svg_to_png(palette_svg_path, palette_png_path, 4000, 4000)
-
-    _logger().info(palette_svg_path)
-    _logger().info(palette_png_path)
 
     return palette_svg_path, palette_png_path
 
@@ -110,18 +114,30 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
         32: '.png',
         64: '@2x.png',
     }
+
+    _logger().info("Creating images ...")
+    _logger().info("From : %s" % base_svg_path)
+    _logger().info("Temp : %s" % temp_dir)
+    _logger().info("To   : %s" % rc_path)
+
     for height, ext in heights.items():
         for svg_fname in svg_fnames:
-            _logger().info(svg_fname)
-            svg_path = os.path.join(base_svg_path, svg_fname)
+            svg_name = svg_fname.split('.')[0]
+            if svg_name not in IMAGE_BLACKLIST:
+                _logger().info("Working on: %s" % svg_fname)
 
-            color_files = _get_file_color_map(svg_fname, palette=palette)
-            for color_svg_name, color in color_files.items():
-                temp_svg_path = os.path.join(temp_dir, color_svg_name)
-                _logger().info(temp_svg_path)
-                _create_colored_svg(svg_path, temp_svg_path, color)
-                width = height
-                png_fname = color_svg_name.replace('.svg', ext)
-                png_path = os.path.join(rc_path, png_fname)
-                convert_svg_to_png(temp_svg_path, png_path, height, width)
-                _logger().info(png_path)
+                svg_path = os.path.join(base_svg_path, svg_fname)
+                color_files = _get_file_color_map(svg_fname, palette=palette)
+
+                for color_svg_name, color in color_files.items():
+                    temp_svg_path = os.path.join(temp_dir, color_svg_name)
+
+                    _logger().debug("Temporary file: %s" % temp_svg_path)
+
+                    _create_colored_svg(svg_path, temp_svg_path, color)
+                    width = height
+                    png_fname = color_svg_name.replace('.svg', ext)
+                    png_path = os.path.join(rc_path, png_fname)
+                    convert_svg_to_png(temp_svg_path, png_path, height, width)
+
+                    _logger().debug("Path: %s" % png_path)
