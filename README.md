@@ -192,7 +192,7 @@ could be used when opening issues. See the image below.
 qdarkstyle --all
 ```
 
-<img src="./screenshots/cmd.png"/>
+<img src="./images/cmd.png"/>
 
 ## Snapshots
 
@@ -204,29 +204,29 @@ Click in the image to zoom.
     <th colspan=2>Containers (no tabs) and Buttons</th>
   </tr>
   <tr>
-    <td><img src="./screenshots/qdarkstyle_containers_buttons.png"/></td>
-    <td><img src="./screenshots/no_dark_containers_buttons.png"/></td>
+    <td><img src="./images/qdarkstyle_containers_buttons.png"/></td>
+    <td><img src="./images/no_dark_containers_buttons.png"/></td>
   </tr>
   <tr>
     <th colspan=2>Containers (tabs) and Displays</th>
   </tr>
   <tr>
-    <td><img src="./screenshots/qdarkstyle_containers_tabs_displays.png"/></td>
-    <td><img src="./screenshots/no_dark_containers_tabs_displays.png"/></td>
+    <td><img src="./images/qdarkstyle_containers_tabs_displays.png"/></td>
+    <td><img src="./images/no_dark_containers_tabs_displays.png"/></td>
   </tr>
   <tr>
     <th colspan=2>Widgets and Inputs (fields)</th>
   </tr>
   <tr>
-    <td><img src="./screenshots/qdarkstyle_widgets_inputs_fields.png"/></td>
-    <td><img src="./screenshots/no_dark_widgets_inputs_fields.png"/></td>
+    <td><img src="./images/qdarkstyle_widgets_inputs_fields.png"/></td>
+    <td><img src="./images/no_dark_widgets_inputs_fields.png"/></td>
   </tr>
   <tr>
     <th colspan=2>Views and Inputs (no fields)</th>
   </tr>
   <tr>
-    <td><img src="./screenshots/qdarkstyle_views_inputs_no_fields.png"/></td>
-    <td><img src="./screenshots/no_dark_views_inputs_no_fields.png"/></td>
+    <td><img src="./images/qdarkstyle_views_inputs_no_fields.png"/></td>
+    <td><img src="./images/no_dark_views_inputs_no_fields.png"/></td>
   </tr>
 </table>
 
