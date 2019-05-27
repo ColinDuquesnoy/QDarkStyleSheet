@@ -1682,8 +1682,8 @@ QDockWidget {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border-radius: $SIZE_BORDER_RADIUS;
         border: none;
-        margin
-
+        margin-left: 2px;
+        margin-right: 2px;
 
         &:hover {
             image: url($PATH_RESOURCES + '/rc/window_close_focus.png');
@@ -1698,6 +1698,8 @@ QDockWidget {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border-radius: $SIZE_BORDER_RADIUS;
         border: none;
+        margin-left: 2px;
+        margin-right: 2px;
 
         &:hover {
             image: url($PATH_RESOURCES + '/rc/window_undock_focus.png');
@@ -1726,24 +1728,26 @@ QTreeView {
         }
 
         &:has-siblings:!adjoins-item {
-            border-image: url($PATH_RESOURCES + '/rc/branch_line.png');
+            border-image: url($PATH_RESOURCES + '/rc/branch_line.png') 0;
         }
 
         &:has-siblings:adjoins-item {
-            border-image: url($PATH_RESOURCES + '/rc/branch_more.png');
+            border-image: url($PATH_RESOURCES + '/rc/branch_more.png') 0;
         }
 
         &:!has-children:!has-siblings:adjoins-item {
-            border-image: url($PATH_RESOURCES + '/rc/branch_end.png');
+            border-image: url($PATH_RESOURCES + '/rc/branch_end.png') 0;
         }
 
         &:has-children:!has-siblings:closed,
         &:closed:has-children:has-siblings {
+            border-image: none;
             image: url($PATH_RESOURCES + '/rc/branch_closed.png');
         }
 
         &:open:has-children:!has-siblings,
         &:open:has-children:has-siblings {
+            border-image: none;
             image: url($PATH_RESOURCES + '/rc/branch_open.png');
         }
 
