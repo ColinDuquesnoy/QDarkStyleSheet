@@ -11,14 +11,14 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="32"
    height="32"
-   viewBox="0 0 32 32"
+   viewBox="0 0 32 32.000001"
    id="svg2"
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    inkscape:export-filename="/home/colin/checkbox_indeterminate.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
-   sodipodi:docname="toolbar_move_horizontal.svg">
+   sodipodi:docname="transparent.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -28,11 +28,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="15.287481"
-     inkscape:cy="15.942215"
+     inkscape:zoom="16"
+     inkscape:cx="16.650582"
+     inkscape:cy="13.324661"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g820"
      showgrid="true"
      units="px"
      inkscape:window-width="1853"
@@ -46,12 +46,12 @@
        type="xygrid"
        id="grid4203" />
     <sodipodi:guide
-       position="30,15"
+       position="-15,16"
        orientation="0,1"
        id="guide4205"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="16,33"
+       position="16,22.000001"
        orientation="1,0"
        id="guide4207"
        inkscape:locked="false" />
@@ -73,15 +73,9 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-1020.3622)">
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 19,1023.3622 v 25.9814"
-       id="path4521"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 13,1023.3622 v 25.9814"
-       id="path4521-2"
-       inkscape:connector-curvature="0" />
+    <g
+       id="g820"
+       transform="matrix(1.4589382,0,0,1.4432681,-6.599406,-460.00787)"
+       style="stroke-width:4.82081699;stroke-miterlimit:4;stroke-dasharray:none" />
   </g>
 </svg>
