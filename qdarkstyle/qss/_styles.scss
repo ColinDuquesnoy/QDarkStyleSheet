@@ -1431,7 +1431,7 @@ QTabBar {
     &::close-button {
         border: 0;
         margin: 2px;
-        padding: 0px;
+        padding: 2px;
         image: url($PATH_RESOURCES + '/rc/window_close.png');
 
         &:hover {
@@ -1466,13 +1466,13 @@ QTabBar {
         }
 
         &:left:selected:disabled {
-            border-left: 3px solid $COLOR_SELECTION_DARK;
+            border-right: 3px solid $COLOR_SELECTION_DARK;
             color: $COLOR_FOREGROUND_DARK;
             background-color: $COLOR_BACKGROUND_NORMAL;
         }
 
         &:right:selected:disabled {
-            border-right: 3px solid $COLOR_SELECTION_DARK;
+            border-left: 3px solid $COLOR_SELECTION_DARK;
             color: $COLOR_FOREGROUND_DARK;
             background-color: $COLOR_BACKGROUND_NORMAL;
         }
@@ -1588,21 +1588,19 @@ QTabBar {
             padding-right: 2px;
             padding-top: 4px;
             padding-bottom: 4px;
-            border-top-right-radius: 3px;
-            border-bottom-right-radius: 3px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
             min-height: 5px;
 
             &:selected {
                 color: $COLOR_FOREGROUND_LIGHT;
                 background-color: $COLOR_BACKGROUND_LIGHT;
-                border-left: 3px solid $COLOR_SELECTION_NORMAL;
-                border-top-right-radius: 3px;
-                border-bottom-right-radius: 3px;
+                border-right: 3px solid $COLOR_SELECTION_NORMAL;
             }
 
             &:!selected:hover {
                 border: $BORDER_HOVER;
-                border-left: 3px solid $COLOR_SELECTION_LIGHT;
+                border-right: 3px solid $COLOR_SELECTION_LIGHT;
                 padding: 0px;
             }
         }
@@ -1615,21 +1613,20 @@ QTabBar {
             padding-right: 2px;
             padding-top: 4px;
             padding-bottom: 4px;
-            border-top-left-radius: 3px;
-            border-bottom-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
             min-height: 5px;
 
             &:selected {
                 color: $COLOR_FOREGROUND_LIGHT;
                 background-color: $COLOR_BACKGROUND_LIGHT;
-                border-right: 3px solid $COLOR_SELECTION_NORMAL;
-                border-top-left-radius: 3px;
-                border-bottom-left-radius: 3px;
+                border-left: 3px solid $COLOR_SELECTION_NORMAL;
+
             }
 
             &:!selected:hover {
                 border: $BORDER_HOVER;
-                border-right: 3px solid $COLOR_SELECTION_LIGHT;
+                border-left: 3px solid $COLOR_SELECTION_LIGHT;
                 padding: 0px;
             }
         }
@@ -1685,6 +1682,7 @@ QDockWidget {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border-radius: $SIZE_BORDER_RADIUS;
         border: none;
+        margin
 
 
         &:hover {
