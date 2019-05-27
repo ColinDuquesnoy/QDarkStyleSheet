@@ -251,13 +251,30 @@ As a minimal guide to create new icons (svg) images, we list two main sources.
  - [Material](https://material.io/design/iconography/product-icons.html#grid-keyline-shapes)
  - [KDE](https://hig.kde.org/style/icon.html)
 
-Main characteristics are of SVG images are:
+Main characteristics of SVG images are:
 
-- Size: 32px X 32px;
-- Border: 2px border space;
-- Line: 2px minimum thickness. Complementary 4px and 8px thickness;
+- Base size: 32px X 32px;
+- Border: 2px space, except continuous lines;
+- Corners and line end's: rounded;
+- Line: 2px minimum thickness. Complementary thickness using multiples of 2px;
+- Spacing: 4px when needed;
 - Color: #ff0000, red for all images - programatically changed;
-- Keep only structural changes in images, not colors, e.g, states hover and disabled.
+- Keep only structural changes in images, not colors, e.g, states hover and disabled;
+- Lines and shapes should align with the grid centralized;
+- Names: from basic form to specific, so they keep grouped. Ex.: arrow_left, arrow_up.
+
+Some example are given below for the horizontal Handle, Minimize, and checked Checkbox.
+
+<table style="width:100%">
+  <tr>
+    <th colspan=3>Examples of icons</th>
+  </tr>
+  <tr>
+    <td><img src="./images/icon_checkbox_indeterminated.png"/></td>
+    <td><img src="./images/icon_minimize.png"/></td>
+    <td><img src="./images/move.png"/></td>
+  </tr>
+</table>
 
 
 ## Unit Testing and Fix Preview
