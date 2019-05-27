@@ -377,7 +377,7 @@ QMenu {
     margin: 0px;
 
     &::separator {
-        height: 2px;
+        height: 5px;
         background-color: $COLOR_BACKGROUND_LIGHT;
         color: $COLOR_FOREGROUND_LIGHT;
         padding-left: 4px;
@@ -726,12 +726,12 @@ QToolBar {
     &::handle {
 
         &:horizontal {
-            width: 6px;
+            width:16px;
             image: url($PATH_RESOURCES + '/rc/toolbar_move_horizontal.png');
         }
 
         &:vertical {
-            height: 6px;
+            height: 16px;
             image: url($PATH_RESOURCES + '/rc/toolbar_move_horizontal.png');
         }
     }
@@ -739,12 +739,12 @@ QToolBar {
     &::separator {
 
         &:horizontal {
-            width: 3px;
+            width: 16px;
             image: url($PATH_RESOURCES + '/rc/toolbar_separator_horizontal.png');
         }
 
         &:vertical {
-            height: 3px;
+            height: 16px;
             image: url($PATH_RESOURCES + '/rc/toolbar_separator_vertical.png');
         }
     }
@@ -1682,11 +1682,8 @@ QDockWidget {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border-radius: $SIZE_BORDER_RADIUS;
         border: none;
-        margin-left: 2px;
-        margin-right: 2px;
-
         &:hover {
-            image: url($PATH_RESOURCES + '/rc/window_close_focus.png');
+            image: url($PATH_RESOURCES + '/rc/window_close_hover.png');
         }
 
         &:pressed {
@@ -1698,8 +1695,6 @@ QDockWidget {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border-radius: $SIZE_BORDER_RADIUS;
         border: none;
-        margin-left: 2px;
-        margin-right: 2px;
 
         &:hover {
             image: url($PATH_RESOURCES + '/rc/window_undock_focus.png');
@@ -1950,6 +1945,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbox
 --------------------------------------------------------------------------- */
 QToolBox {
     padding: 0px;
+    border: 0px;
     border: $BORDER_NORMAL;
 
     &::selected {
@@ -1996,6 +1992,7 @@ QToolBox {
 
     QScrollArea QWidget QWidget {
         padding: 0px;
+        border: 0px;
         background-color: $COLOR_BACKGROUND_DARK;
     }
 }
