@@ -38,7 +38,7 @@ from watchdog.observers import Observer
 
 # Local imports
 from qdarkstyle import PACKAGE_PATH, QRC_FILEPATH, RC_PATH
-from qdarkstyle.utils.images import create_images, create_palette_image
+from qdarkstyle.utils.images import create_images, create_palette_image, generate_qrc_file
 from qdarkstyle.utils.scss import create_qss
 
 
@@ -94,20 +94,16 @@ def main(arguments):
 def run_process(args):
     """Process qrc files."""
     # Generate qrc file based on the content of the resources folder
-    print('Generating style.qrc files ...')
 
     # Create palette and resources png images
     print('Generating palette image ...')
     create_palette_image()
 
-    print('Generating png images ...')
+    print('Generating images ...')
     create_images()
 
-    print('Generating qrc file ...')
+    print('Generating qrc ...')
     generate_qrc_file()
-
-    print('Changing directory to: ', args.qrc_dir)
-    os.chdir(args.qrc_dir)
 
     print('Converting .qrc to _rc.py and/or .rcc ...')
 
@@ -181,33 +177,6 @@ def run_process(args):
             with open(py_file_pyqtgraph, 'w+') as file:
                 # write the file out again
                 file.write(filedata)
-
-
-def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
-    """Generate the style.qrc file programmaticaly."""
-    template_header = '''<RCC>
-  <qresource prefix="{resource_prefix}">
-'''
-    template_footer = '''
-  </qresource>
-  <qresource prefix="{style_prefix}">
-      <file>style.qss</file>
-  </qresource>
-</RCC>
-'''
-    template_file = '    <file>rc/{fname}</file>'
-    files = []
-    for fname in sorted(os.listdir(RC_PATH)):
-        files.append(template_file.format(fname=fname))
-
-    # Join parts
-    qrc_content = (template_header.format(resource_prefix=resource_prefix)
-                   + '\n'.join(files)
-                   + template_footer.format(style_prefix=style_prefix))
-
-    # Write qrc file
-    with open(QRC_FILEPATH, 'w') as fh:
-        fh.write(qrc_content)
 
 
 if __name__ == '__main__':
