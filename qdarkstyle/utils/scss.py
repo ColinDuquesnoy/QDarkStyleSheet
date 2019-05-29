@@ -19,7 +19,7 @@ except ImportError:
 
 # Local imports
 from qdarkstyle import (MAIN_SCSS_FILE, MAIN_SCSS_FILEPATH, QSS_PATH,
-                        QSS_FILEPATH, RC_PATH, STYLE_FILE,
+                        QSS_FILEPATH, RC_PATH, QSS_FILE,
                         VARIABLES_SCSS_FILE, VARIABLES_SCSS_FILEPATH)
 from qdarkstyle.palette import DarkPalette
 from qdarkstyle.utils.images import create_images, create_palette_image
@@ -202,7 +202,7 @@ def create_custom_qss(
     # Compile SCSS
     variables_scss_filepath = os.path.join(theme_qss_path, VARIABLES_SCSS_FILE)
     theme_main_scss_filepath = os.path.join(theme_qss_path, MAIN_SCSS_FILE)
-    theme_qss_filepath = os.path.join(theme_root_path, STYLE_FILE)
+    theme_qss_filepath = os.path.join(theme_root_path, QSS_FILE)
     stylesheet = create_qss(
         qss_filepath=theme_qss_filepath,
         main_scss_filepath=theme_main_scss_filepath,
