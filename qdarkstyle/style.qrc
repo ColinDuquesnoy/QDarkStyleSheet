@@ -1,4 +1,5 @@
-<RCC>
+
+<RCC warning="File created programmatically. All changes made in this file will be lost!">
   <qresource prefix="qss_icons">
     <file>rc/arrow_down.png</file>
     <file>rc/arrow_down@2x.png</file>
