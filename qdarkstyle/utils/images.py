@@ -17,7 +17,7 @@ from qtpy.QtGui import QIcon
 from qtpy.QtWidgets import QApplication
 
 # Local imports
-from qdarkstyle import IMAGES_PATH, RC_PATH, SVG_PATH
+from qdarkstyle import IMAGES_PATH, RC_PATH, SVG_PATH, QRC_FILEPATH
 from qdarkstyle.palette import DarkPalette
 
 IMAGE_BLACKLIST = ['base_palette']
@@ -131,6 +131,9 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
     num_ignored = 0
 
     for height, ext in heights.items():
+        width = height
+
+        _logger.debug(" Size HxW (px): %s X %s" % (height, width))
 
         for svg_fname in svg_fnames:
             svg_name = svg_fname.split('.')[0]
@@ -139,30 +142,65 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
                 svg_path = os.path.join(base_svg_path, svg_fname)
                 color_files = _get_file_color_map(svg_fname, palette=palette)
 
-                _logger.debug(" Working: %s"
-                              % os.path.basename(svg_path))
+                _logger.debug("  Working on: %s"
+                              % os.path.basename(svg_fname))
 
                 for color_svg_name, color in color_files.items():
                     temp_svg_path = os.path.join(temp_dir, color_svg_name)
                     _create_colored_svg(svg_path, temp_svg_path, color)
 
-                    _logger.debug("  Temporary: %s"
-                                  % os.path.basename(temp_svg_path))
-
-                    width = height
                     png_fname = color_svg_name.replace('.svg', ext)
                     png_path = os.path.join(rc_path, png_fname)
                     num_png += 1
 
                     convert_svg_to_png(temp_svg_path, png_path, height, width)
 
-                    _logger.debug("  Creating: %s"
-                                  % os.path.basename(png_path))
+                    _logger.debug("   Creating: %s"
+                                  % os.path.basename(png_fname))
             else:
                 num_ignored += 1
-                _logger.debug(" Ignored blacklist: %s"
-                              % os.path.basename(svg_path))
+                _logger.debug("  Ignored blacklist: %s"
+                              % os.path.basename(svg_fname))
 
     _logger.info("# SVG files: %s" % num_svg)
     _logger.info("# PNG files: %s" % num_png)
     _logger.info("# SVG ignored: %s" % num_ignored)
+
+
+def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
+    """Generate the style.qrc file programmaticaly."""
+    template_header = '''
+<RCC warning="File created programmatically. All changes made in this file will be lost!">
+  <qresource prefix="{resource_prefix}">
+'''
+    template_footer = '''
+  </qresource>
+  <qresource prefix="{style_prefix}">
+      <file>style.qss</file>
+  </qresource>
+</RCC>
+'''
+
+    _logger.info("Generating QRC file ...")
+    _logger.info("Resource prefix: %s" % resource_prefix)
+    _logger.info("Style prefix: %s" % style_prefix)
+
+    template_file = '    <file>rc/{fname}</file>'
+    files = []
+
+    _logger.info("Searching in: %s" % RC_PATH)
+
+    # Search by png images
+    for fname in sorted(os.listdir(RC_PATH)):
+        files.append(template_file.format(fname=fname))
+
+    # Join parts
+    qrc_content = (template_header.format(resource_prefix=resource_prefix)
+                   + '\n'.join(files)
+                   + template_footer.format(style_prefix=style_prefix))
+
+    _logger.info("Writing in: %s" % QRC_FILEPATH)
+
+    # Write qrc file
+    with open(QRC_FILEPATH, 'w') as fh:
+        fh.write(qrc_content)
