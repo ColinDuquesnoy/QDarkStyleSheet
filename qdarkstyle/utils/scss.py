@@ -250,7 +250,7 @@ def create_custom_qss_from_dict(name, path, palette_dict):
     kwargs = {
         'name': name,
         'path': path,
-        'border_radius': palette.get('SIZE_BORDER_RADIUS', '4px'),
+        'border_radius': palette_dict.get('SIZE_BORDER_RADIUS', '4px'),
     }
     kwargs.update(palette_dict)
     stylesheet = create_custom_qss(**kwargs)
