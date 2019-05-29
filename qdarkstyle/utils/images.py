@@ -110,7 +110,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
     Create resources `rc` png image files from base svg files and palette.
     """
     # Needed to use QPixmap
-    app = QApplication([])
+    _ = QApplication([])
 
     temp_dir = tempfile.mkdtemp()
     svg_fnames = [f for f in os.listdir(base_svg_path) if f.endswith('.svg')]
@@ -140,14 +140,14 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
                 color_files = _get_file_color_map(svg_fname, palette=palette)
 
                 _logger.debug(" Working: %s"
-                                % os.path.basename(svg_path))
+                              % os.path.basename(svg_path))
 
                 for color_svg_name, color in color_files.items():
                     temp_svg_path = os.path.join(temp_dir, color_svg_name)
                     _create_colored_svg(svg_path, temp_svg_path, color)
 
                     _logger.debug("  Temporary: %s"
-                                    % os.path.basename(temp_svg_path))
+                                  % os.path.basename(temp_svg_path))
 
                     width = height
                     png_fname = color_svg_name.replace('.svg', ext)
@@ -157,11 +157,11 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
                     convert_svg_to_png(temp_svg_path, png_path, height, width)
 
                     _logger.debug("  Creating: %s"
-                                    % os.path.basename(png_path))
+                                  % os.path.basename(png_path))
             else:
                 num_ignored += 1
                 _logger.debug(" Ignored blacklist: %s"
-                                % os.path.basename(svg_path))
+                              % os.path.basename(svg_path))
 
     _logger.info("# SVG files: %s" % num_svg)
     _logger.info("# PNG files: %s" % num_png)
