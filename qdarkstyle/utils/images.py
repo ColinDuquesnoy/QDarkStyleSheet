@@ -9,6 +9,7 @@ from __future__ import absolute_import, division, print_function
 
 import logging
 import os
+import re
 import tempfile
 
 # Third party imports
@@ -17,7 +18,8 @@ from qtpy.QtGui import QIcon
 from qtpy.QtWidgets import QApplication
 
 # Local imports
-from qdarkstyle import IMAGES_PATH, RC_PATH, SVG_PATH, QRC_FILEPATH
+from qdarkstyle import (IMAGES_PATH, STYLES_SCSS_FILEPATH, QRC_FILEPATH, RC_PATH,
+                        SVG_PATH)
 from qdarkstyle.palette import DarkPalette
 
 IMAGE_BLACKLIST = ['base_palette']
@@ -130,6 +132,8 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
     num_png = 0
     num_ignored = 0
 
+    rc_list = get_rc_from_scss()
+
     for height, ext in heights.items():
         width = height
 
@@ -163,8 +167,9 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
                               % os.path.basename(svg_fname))
 
     _logger.info("# SVG files: %s" % num_svg)
-    _logger.info("# PNG files: %s" % num_png)
     _logger.info("# SVG ignored: %s" % num_ignored)
+    _logger.info("# PNG files: %s" % num_png)
+    _logger.info("# RC links: %s" % len(rc_list))
 
 
 def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
@@ -204,3 +209,26 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
     # Write qrc file
     with open(QRC_FILEPATH, 'w') as fh:
         fh.write(qrc_content)
+
+
+def get_rc_from_scss(pattern=r"\/.*\.png"):
+    """
+    Get all rc paths from scss files returning the list.
+    """
+
+    with open(STYLES_SCSS_FILEPATH, 'r') as fh:
+        data = fh.read()
+
+    lines = data.split("\n")
+    compiled_exp = re.compile('(' + pattern + ')')
+
+    rc_list = []
+
+    for line in lines:
+        match = re.search(compiled_exp, line)
+        if match:
+            rc_list.append(match.group(1))
+
+    rc_list = list(set(rc_list))
+
+    return rc_list
