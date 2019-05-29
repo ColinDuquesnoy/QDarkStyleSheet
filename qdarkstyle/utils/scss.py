@@ -4,6 +4,7 @@
 
 # Standard library imports
 import keyword
+import logging
 import os
 import re
 import shutil
@@ -25,6 +26,7 @@ from qdarkstyle.utils.images import create_images, create_palette_image
 
 # Constants
 PY2 = sys.version[0] == '2'
+
 HEADER_SCSS = '''// ---------------------------------------------------------------------------
 //
 //    File created programmatically
@@ -33,6 +35,7 @@ HEADER_SCSS = '''// ------------------------------------------------------------
 //
 //----------------------------------------------------------------------------
 '''
+
 HEADER_QSS = '''/* ---------------------------------------------------------------------------
 
     Created by the qtsass compiler
@@ -41,6 +44,8 @@ HEADER_QSS = '''/* -------------------------------------------------------------
 
 --------------------------------------------------------------------------- */
 '''
+
+_logger = logging.getLogger(__name__)
 
 
 def _dict_to_scss(data):
@@ -86,6 +91,7 @@ def _create_scss_variables(variables_scss_filepath, palette,
 def _create_qss(main_scss_path, qss_filepath, header=HEADER_QSS):
     """Create a styles.qss file from qtsass."""
     data = ''
+
     if QTSASS_INSTALLED:
         qtsass.compile_filename(main_scss_path, qss_filepath,
                                 output_style='expanded')
@@ -107,6 +113,7 @@ def create_qss(qss_filepath=QSS_FILEPATH, main_scss_filepath=MAIN_SCSS_FILEPATH,
     """Create variables files and run qtsass compilation."""
     _create_scss_variables(variables_scss_filepath, palette)
     stylesheet = _create_qss(main_scss_filepath, qss_filepath)
+
     return stylesheet
 
 
@@ -116,7 +123,7 @@ def is_identifier(name):
         is_not_keyword = name not in keyword.kwlist
         pattern = re.compile(r'^[a-z_][a-z0-9_]*$', re.I)
         matches_pattern = bool(pattern.match(name))
-        check =  is_not_keyword and matches_pattern
+        check = is_not_keyword and matches_pattern
     else:
         check = name.isidentifier()
 
@@ -124,19 +131,19 @@ def is_identifier(name):
 
 
 def create_custom_qss(
-        name,
-        path,
-        color_background_light,
-        color_background_normal,
-        color_background_dark,
-        color_foreground_light,
-        color_foreground_normal,
-        color_foreground_dark,
-        color_selection_light,
-        color_selection_normal,
-        color_selection_dark,
-        border_radius,
-    ):
+    name,
+    path,
+    color_background_light,
+    color_background_normal,
+    color_background_dark,
+    color_foreground_light,
+    color_foreground_normal,
+    color_foreground_dark,
+    color_selection_light,
+    color_selection_normal,
+    color_selection_dark,
+    border_radius,
+):
     """
     Create a custom palette based on the parameters defined.
 
@@ -160,14 +167,18 @@ def create_custom_qss(
     qss_loc = os.path.basename(QSS_PATH)
     theme_root_path = os.path.join(path, name.lower())
     theme_rc_path = os.path.join(theme_root_path, rc_loc)
+
     if os.path.isdir(theme_root_path):
         shutil.rmtree(theme_root_path)
+
     shutil.copytree(RC_PATH, theme_rc_path)
 
     # Copy QSS folder and contents
     theme_qss_path = os.path.join(theme_root_path, qss_loc)
+
     if os.path.isdir(theme_qss_path):
         os.removedirs(theme_qss_path)
+
     shutil.copytree(QSS_PATH, theme_qss_path)
 
     # Create custom palette
@@ -249,6 +260,8 @@ def create_custom_qss_from_dict(name, path, palette_dict):
 
 if __name__ == '__main__':
     # Example of a custom palette
+    # TODO: change to not use a specfic path
+    # TODO: may move to other place, e.g., example.py
     qss = create_custom_qss(
         'MyAwesomePalette',
         '/Users/gpena-castellanos/Desktop',
