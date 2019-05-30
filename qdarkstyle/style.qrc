@@ -41,14 +41,6 @@
     <file>rc/base_icon_focus@2x.png</file>
     <file>rc/base_icon_pressed.png</file>
     <file>rc/base_icon_pressed@2x.png</file>
-    <file>rc/branch_begin.png</file>
-    <file>rc/branch_begin@2x.png</file>
-    <file>rc/branch_begin_disabled.png</file>
-    <file>rc/branch_begin_disabled@2x.png</file>
-    <file>rc/branch_begin_focus.png</file>
-    <file>rc/branch_begin_focus@2x.png</file>
-    <file>rc/branch_begin_pressed.png</file>
-    <file>rc/branch_begin_pressed@2x.png</file>
     <file>rc/branch_closed.png</file>
     <file>rc/branch_closed@2x.png</file>
     <file>rc/branch_closed_disabled.png</file>
