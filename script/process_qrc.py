@@ -106,6 +106,7 @@ def run_process(args):
     generate_qrc_file()
 
     print('Converting .qrc to _rc.py and/or .rcc ...')
+    os.chdir(args.qrc_dir)
 
     for qrc_file in glob.glob('*.qrc'):
         # get name without extension

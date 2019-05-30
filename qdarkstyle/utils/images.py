@@ -211,6 +211,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
     _logger.info("# RC links not in RC: %s" % len(rc_list))
     _logger.info("RC links not in RC: %s" % rc_list)
 
+
 def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
     """
     Generate the style.qrc file programmaticaly.
