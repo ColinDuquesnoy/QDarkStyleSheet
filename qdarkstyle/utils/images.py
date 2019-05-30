@@ -24,11 +24,28 @@ from qdarkstyle.palette import DarkPalette
 
 IMAGE_BLACKLIST = ['base_palette']
 
+TEMPLATE_QRC_HEADER = '''
+<RCC warning="File created programmatically. All changes made in this file will be lost!">
+  <qresource prefix="{resource_prefix}">
+'''
+
+TEMPLATE_QRC_FILE = '    <file>rc/{fname}</file>'
+
+TEMPLATE_QRC_FOOTER = '''
+  </qresource>
+  <qresource prefix="{style_prefix}">
+      <file>style.qss</file>
+  </qresource>
+</RCC>
+'''
+
 _logger = logging.getLogger(__name__)
 
 
 def _get_file_color_map(fname, palette):
-    """Return map of files to color from given palette."""
+    """
+    Return map of files to color from given palette.
+    """
     color_disabled = palette.COLOR_BACKGROUND_NORMAL
     color_focus = palette.COLOR_SELECTION_LIGHT
     color_pressed = palette.COLOR_SELECTION_NORMAL
@@ -55,7 +72,9 @@ def _get_file_color_map(fname, palette):
 
 
 def _create_colored_svg(svg_path, temp_svg_path, color):
-    """Replace base svg with fill color."""
+    """
+    Replace base svg with fill color.
+    """
     with open(svg_path, 'r') as fh:
         data = fh.read()
 
@@ -67,7 +86,9 @@ def _create_colored_svg(svg_path, temp_svg_path, color):
 
 
 def convert_svg_to_png(svg_path, png_path, height, width):
-    """Convert svg files to png files using Qt."""
+    """
+    Convert svg files to png files using Qt.
+    """
     size = QSize(height, width)
     icon = QIcon(svg_path)
     pixmap = icon.pixmap(size)
@@ -77,7 +98,9 @@ def convert_svg_to_png(svg_path, png_path, height, width):
 
 def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
                          palette=DarkPalette):
-    """Create palette image svg and png image on specified path."""
+    """
+    Create palette image svg and png image on specified path.
+    """
     # Needed to use QPixmap
     _ = QApplication([])
 
@@ -86,9 +109,9 @@ def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
     palette_png_path = os.path.join(path, 'palette.png')
 
     _logger.info("Creating palette image ...")
-    _logger.info("Base: %s" % base_palette_svg_path)
-    _logger.info("From: %s" % palette_svg_path)
-    _logger.info("To  : %s" % palette_png_path)
+    _logger.info("Base SVG: %s" % base_palette_svg_path)
+    _logger.info("To SVG: %s" % palette_svg_path)
+    _logger.info("To PNG: %s" % palette_png_path)
 
     with open(base_palette_svg_path, 'r') as fh:
         data = fh.read()
@@ -116,6 +139,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
 
     temp_dir = tempfile.mkdtemp()
     svg_fnames = [f for f in os.listdir(base_svg_path) if f.endswith('.svg')]
+    base_height = 32
 
     # See: https://doc.qt.io/qt-5/scalability.html
     heights = {
@@ -132,7 +156,10 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
     num_png = 0
     num_ignored = 0
 
-    rc_list = get_rc_from_scss()
+    # Get rc links from scss to check matches
+    rc_list = get_rc_links_from_scss()
+    num_rc_list = len(rc_list)
+    print(rc_list)
 
     for height, ext in heights.items():
         width = height
@@ -142,6 +169,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
         for svg_fname in svg_fnames:
             svg_name = svg_fname.split('.')[0]
 
+            # Skip blacklist
             if svg_name not in IMAGE_BLACKLIST:
                 svg_path = os.path.join(base_svg_path, svg_fname)
                 color_files = _get_file_color_map(svg_fname, palette=palette)
@@ -149,18 +177,28 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
                 _logger.debug("  Working on: %s"
                               % os.path.basename(svg_fname))
 
+                # Replace colors and create all file for different states
                 for color_svg_name, color in color_files.items():
                     temp_svg_path = os.path.join(temp_dir, color_svg_name)
                     _create_colored_svg(svg_path, temp_svg_path, color)
 
                     png_fname = color_svg_name.replace('.svg', ext)
                     png_path = os.path.join(rc_path, png_fname)
-                    num_png += 1
-
                     convert_svg_to_png(temp_svg_path, png_path, height, width)
-
+                    num_png += 1
                     _logger.debug("   Creating: %s"
                                   % os.path.basename(png_fname))
+
+                    # Check if the rc_name is in the rc_list from scss
+                    # only for the base size
+                    if height == base_height:
+                        rc_base = os.path.basename(rc_path)
+                        png_base = os.path.basename(png_fname)
+                        rc_name = '/' + os.path.join(rc_base, png_fname)
+                        try:
+                            rc_list.remove(rc_name)
+                        except ValueError:
+                            pass
             else:
                 num_ignored += 1
                 _logger.debug("  Ignored blacklist: %s"
@@ -169,40 +207,31 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
     _logger.info("# SVG files: %s" % num_svg)
     _logger.info("# SVG ignored: %s" % num_ignored)
     _logger.info("# PNG files: %s" % num_png)
-    _logger.info("# RC links: %s" % len(rc_list))
-
+    _logger.info("# RC links: %s" % num_rc_list)
+    _logger.info("# RC links not in RC: %s" % len(rc_list))
+    _logger.info("RC links not in RC: %s" % rc_list)
 
 def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
-    """Generate the style.qrc file programmaticaly."""
-    template_header = '''
-<RCC warning="File created programmatically. All changes made in this file will be lost!">
-  <qresource prefix="{resource_prefix}">
-'''
-    template_footer = '''
-  </qresource>
-  <qresource prefix="{style_prefix}">
-      <file>style.qss</file>
-  </qresource>
-</RCC>
-'''
+    """
+    Generate the style.qrc file programmaticaly.
+    """
+
+    files = []
 
     _logger.info("Generating QRC file ...")
     _logger.info("Resource prefix: %s" % resource_prefix)
     _logger.info("Style prefix: %s" % style_prefix)
 
-    template_file = '    <file>rc/{fname}</file>'
-    files = []
-
     _logger.info("Searching in: %s" % RC_PATH)
 
     # Search by png images
     for fname in sorted(os.listdir(RC_PATH)):
-        files.append(template_file.format(fname=fname))
+        files.append(TEMPLATE_QRC_FILE.format(fname=fname))
 
     # Join parts
-    qrc_content = (template_header.format(resource_prefix=resource_prefix)
+    qrc_content = (TEMPLATE_QRC_HEADER.format(resource_prefix=resource_prefix)
                    + '\n'.join(files)
-                   + template_footer.format(style_prefix=style_prefix))
+                   + TEMPLATE_QRC_FOOTER.format(style_prefix=style_prefix))
 
     _logger.info("Writing in: %s" % QRC_FILEPATH)
 
@@ -211,9 +240,9 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
         fh.write(qrc_content)
 
 
-def get_rc_from_scss(pattern=r"\/.*\.png"):
+def get_rc_links_from_scss(pattern=r"\/.*\.png"):
     """
-    Get all rc paths from scss files returning the list.
+    Get all rc links from scss files returning the list of unique links.
     """
 
     with open(STYLES_SCSS_FILEPATH, 'r') as fh:
