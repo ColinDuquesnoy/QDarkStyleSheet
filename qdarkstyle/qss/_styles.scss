@@ -1683,7 +1683,7 @@ QDockWidget {
         border-radius: $SIZE_BORDER_RADIUS;
         border: none;
         &:hover {
-            image: url($PATH_RESOURCES + '/rc/window_close_hover.png');
+            image: url($PATH_RESOURCES + '/rc/window_close_focus.png');
         }
 
         &:pressed {
