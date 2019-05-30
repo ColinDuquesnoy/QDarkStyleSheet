@@ -194,7 +194,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
                     if height == base_height:
                         rc_base = os.path.basename(rc_path)
                         png_base = os.path.basename(png_fname)
-                        rc_name = '/' + os.path.join(rc_base, png_fname)
+                        rc_name = '/' + os.path.join(rc_base, png_base)
                         try:
                             rc_list.remove(rc_name)
                         except ValueError:
