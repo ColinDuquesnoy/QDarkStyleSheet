@@ -377,12 +377,9 @@ QMenu {
     margin: 0px;
 
     &::separator {
-        height: 5px;
+        height: 1px;
         background-color: $COLOR_BACKGROUND_LIGHT;
         color: $COLOR_FOREGROUND_LIGHT;
-        padding-left: 4px;
-        margin-left: 2px;
-        margin-right: 2px;
     }
 
     &::icon {
@@ -391,11 +388,10 @@ QMenu {
     }
 
     &::item {
+        background-color: $COLOR_BACKGROUND_NORMAL;
         padding: 4px 24px 4px 24px;
-
         /* Reserve space for selection border */
         border: 1px transparent $COLOR_BACKGROUND_NORMAL;
-
         &:selected {
             color: $COLOR_FOREGROUND_LIGHT;
         }
