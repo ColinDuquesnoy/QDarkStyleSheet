@@ -1122,13 +1122,16 @@ QToolButton {
 
     &::menu-indicator {
         image: url($PATH_RESOURCES + '/rc/arrow_down.png');
+        height: 12px;
+        width: 12px;
         top: -8px;     /* Shift it a bit */
         left: -4px;    /* Shift it a bit */
     }
 
     &::menu-arrow {
         image: url($PATH_RESOURCES + '/rc/arrow_down.png');
-
+        height: 12px;
+        width: 12px;
         &:open {
             border: $BORDER_NORMAL;
         }
