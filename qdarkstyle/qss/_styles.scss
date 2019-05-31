@@ -450,6 +450,8 @@ QMenu {
     &::right-arrow {
         margin: 5px;
         image: url($PATH_RESOURCES + '/rc/arrow_right.png');
+        height: 12px;
+        width: 12px;
     }
 }
 
