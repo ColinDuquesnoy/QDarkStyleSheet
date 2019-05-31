@@ -1930,7 +1930,6 @@ QHeaderView {
         background-color: $COLOR_BACKGROUND_NORMAL;
         height: 12px;
         width: 12px;
-        border-right: $BORDER_DARK;
         image: url($PATH_RESOURCES + '/rc/arrow_down.png');
     }
 
@@ -1938,7 +1937,6 @@ QHeaderView {
         background-color: $COLOR_BACKGROUND_NORMAL;
         height: 12px;
         width: 12px;
-        border-right: $BORDER_DARK;
         image: url($PATH_RESOURCES + '/rc/arrow_up.png');
     }
 }
