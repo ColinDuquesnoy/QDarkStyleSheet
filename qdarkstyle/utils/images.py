@@ -44,7 +44,7 @@ _logger = logging.getLogger(__name__)
 
 def _get_file_color_map(fname, palette):
     """
-    Return map of files to color from given palette.
+    Return map of files (i.e states) to color from given palette.
     """
     color_disabled = palette.COLOR_BACKGROUND_NORMAL
     color_focus = palette.COLOR_SELECTION_LIGHT
@@ -131,9 +131,18 @@ def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
 
 def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
                   palette=DarkPalette):
+    """Create resources `rc` png image files from base svg files and palette.
+
+    Search all SVG files in `base_svg_path` excluding IMAGE_BLACKLIST,
+    change its colors using `palette` creating temporary SVG files, for each
+    state generating PNG images for each size `heights`.
+
+    Args:
+        base_svg_path (str, optional): [description]. Defaults to SVG_PATH.
+        rc_path (str, optional): [description]. Defaults to RC_PATH.
+        palette (DarkPalette, optional): Palette . Defaults to DarkPalette.
     """
-    Create resources `rc` png image files from base svg files and palette.
-    """
+
     # Needed to use QPixmap
     _ = QApplication([])
 
@@ -159,7 +168,6 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
     # Get rc links from scss to check matches
     rc_list = get_rc_links_from_scss()
     num_rc_list = len(rc_list)
-    print(rc_list)
 
     for height, ext in heights.items():
         width = height
@@ -214,7 +222,15 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
 
 def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
     """
-    Generate the style.qrc file programmaticaly.
+    Generate the QRC file programmaticaly.
+
+    Search all RC folder for PNG images and create a QRC file.
+
+    Args:
+        resource_prefix (str, optional): Prefix used in resources.
+            Defaults to 'qss_icons'.
+        style_prefix (str, optional): Prefix used to this style.
+            Defaults to 'qdarkstyle'.
     """
 
     files = []
@@ -243,7 +259,13 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
 
 def get_rc_links_from_scss(pattern=r"\/.*\.png"):
     """
-    Get all rc links from scss files returning the list of unique links.
+    Get all rc links from scss file returning the list of unique links.
+
+    Args:
+        pattern (str): regex pattern to find the links.
+
+    Returns:
+        list(str): list of unique links found.
     """
 
     with open(STYLES_SCSS_FILEPATH, 'r') as fh:

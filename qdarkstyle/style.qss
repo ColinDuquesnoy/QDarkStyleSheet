@@ -393,12 +393,9 @@ QMenu {
 }
 
 QMenu::separator {
-  height: 5px;
+  height: 1px;
   background-color: #505F69;
   color: #F0F0F0;
-  padding-left: 4px;
-  margin-left: 2px;
-  margin-right: 2px;
 }
 
 QMenu::icon {
@@ -407,6 +404,7 @@ QMenu::icon {
 }
 
 QMenu::item {
+  background-color: #32414B;
   padding: 4px 24px 4px 24px;
   /* Reserve space for selection border */
   border: 1px transparent #32414B;
@@ -459,6 +457,8 @@ QMenu::indicator:exclusive:checked:selected {
 QMenu::right-arrow {
   margin: 5px;
   image: url(":/qss_icons/rc/arrow_right.png");
+  height: 12px;
+  width: 12px;
 }
 
 /* QAbstractItemView ------------------------------------------------------
@@ -1083,6 +1083,8 @@ QToolButton::menu-button:checked:hover {
 
 QToolButton::menu-indicator {
   image: url(":/qss_icons/rc/arrow_down.png");
+  height: 12px;
+  width: 12px;
   top: -8px;
   /* Shift it a bit */
   left: -4px;
@@ -1091,6 +1093,8 @@ QToolButton::menu-indicator {
 
 QToolButton::menu-arrow {
   image: url(":/qss_icons/rc/arrow_down.png");
+  height: 12px;
+  width: 12px;
 }
 
 QToolButton::menu-arrow:open {
@@ -1858,7 +1862,6 @@ QHeaderView::down-arrow {
   background-color: #32414B;
   height: 12px;
   width: 12px;
-  border-right: 1px solid #19232D;
   image: url(":/qss_icons/rc/arrow_down.png");
 }
 
@@ -1866,7 +1869,6 @@ QHeaderView::up-arrow {
   background-color: #32414B;
   height: 12px;
   width: 12px;
-  border-right: 1px solid #19232D;
   image: url(":/qss_icons/rc/arrow_up.png");
 }
 
