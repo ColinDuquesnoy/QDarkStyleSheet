@@ -476,7 +476,8 @@ QAbstractScrollArea {
     background-color: $COLOR_BACKGROUND_DARK;
     border: $BORDER_NORMAL;
     border-radius: $SIZE_BORDER_RADIUS;
-    padding: 0;                                /* fix #159 */
+    padding: 2px;                                /* fix #159 */
+    min-height: 1.25em;                          /* fix #159 */
     color: $COLOR_FOREGROUND_LIGHT;
 
     &:disabled {
@@ -701,7 +702,7 @@ QSizeGrip {
 
 --------------------------------------------------------------------------- */
 QStackedWidget {
-    padding: 4px;
+    padding: 2px;
     border: $BORDER_NORMAL;
     border: $BORDER_DARK;
 }
