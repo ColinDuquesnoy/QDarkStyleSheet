@@ -259,7 +259,20 @@
     <property name="title">
      <string>Menu Checkable</string>
     </property>
+    <widget class="QMenu" name="menuNew">
+     <property name="title">
+      <string>New</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionNew_2"/>
+     <addaction name="actionNew_4"/>
+     <addaction name="actionNew_3"/>
+     <addaction name="separator"/>
+     <addaction name="actionNew_5"/>
+    </widget>
     <addaction name="actionActionCheckableA"/>
+    <addaction name="separator"/>
+    <addaction name="menuNew"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
@@ -390,6 +403,26 @@
    </property>
    <property name="toolTip">
     <string>Action Checkable Sub A Unchecked</string>
+   </property>
+  </action>
+  <action name="actionNew_2">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionNew_3">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionNew_4">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionNew_5">
+   <property name="text">
+    <string>New</string>
    </property>
   </action>
  </widget>

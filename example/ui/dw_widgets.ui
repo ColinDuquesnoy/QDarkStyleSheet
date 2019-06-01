@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>269</width>
-    <height>306</height>
+    <width>879</width>
+    <height>548</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -217,6 +217,11 @@
         <string>New Column</string>
        </property>
       </column>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
       <item>
        <property name="text">
         <string>New Item</string>
@@ -239,7 +244,82 @@
           <string/>
          </property>
         </item>
+        <item>
+         <property name="text">
+          <string>New Item</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>New Item</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>New Item</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>New Item</string>
+         </property>
+        </item>
        </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>New Item</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>New Item</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>New Subitem</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>New Subitem</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>New Subitem</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>New Subitem</string>
+           </property>
+          </item>
+         </item>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>New Item</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>New Item</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>New Item</string>
+       </property>
       </item>
       <item>
        <property name="text">
