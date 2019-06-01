@@ -476,7 +476,7 @@ QAbstractScrollArea {
     background-color: $COLOR_BACKGROUND_DARK;
     border: $BORDER_NORMAL;
     border-radius: $SIZE_BORDER_RADIUS;
-    padding: 4px;
+    padding: 0;                                /* fix #159 */
     color: $COLOR_FOREGROUND_LIGHT;
 
     &:disabled {
