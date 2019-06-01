@@ -1,5 +1,23 @@
 # Changelog
 
+- 2.7:
+  - Remove utils from import in qdarkstyle, #170
+  - Fix border colors in tool button #176
+  - Fix scroll area and stacked with 2px padding, #159
+  - Fix backgroung submenu color, #179
+  - Fix extra border aside header's arrow indicator, #180
+  - Fix menu right arrrow indicator
+  - Fix slide bars colors, #150
+  - Fix QLabels problems, #163, #139
+  - Fix problems with example settings using PySide2 and --no_dark #167
+  - Provide SVG files for all images, standard names and sizes, fix images, #149
+  - Improve images and add high resolution images, #140
+  - Improve docs
+  - Add check to scripts for generating images, #137
+  - Fix tox and travis scripts #76
+  - Provide docs in RTD, part of #160
+  - Add helpdev depedency for reports and checks, #147
+  - Update authors and maintainers
 - 2.6.8:
   - Fix double border in QtabWidget for pyqt5
   - Fix widgets border in QTabWidget as QLabel  #141, #123, #126
