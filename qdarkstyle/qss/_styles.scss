@@ -1072,7 +1072,10 @@ QToolButton {
     }
 
     &:disabled {
-        border: $BORDER_NORMAL;
+        border: none;
+        &:hover {
+            border: $BORDER_NORMAL;
+        }
     }
 
     &:hover {
