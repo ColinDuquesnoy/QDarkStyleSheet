@@ -276,12 +276,7 @@ def load_stylesheet(pyside=True):
         PendingDeprecationWarning
     )
 
-    # Compiles SCSS/SASS files to QSS
-    from qdarkstyle.utils.scss import create_qss
-    create_qss()
-
     # Smart import of the rc file
-
     pyside_ver = None
 
     if pyside:
@@ -392,9 +387,6 @@ def load_stylesheet_pyqt5():
         "use load_stylesheet()",
         PendingDeprecationWarning
     )
-    # Compiles SCSS/SASS files to QSS
-    from qdarkstyle.utils.scss import create_qss
-    create_qss()
 
     # Smart import of the rc file
     import qdarkstyle.pyqt5_style_rc
