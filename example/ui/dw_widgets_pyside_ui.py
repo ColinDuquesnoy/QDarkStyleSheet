@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_widgets.ui'
 #
-# Created: Thu Dec 13 17:14:05 2018
+# Created: Fri May 31 23:17:04 2019
 #      by: pyside-uic 0.2.15 running on PySide 1.2.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,7 +12,7 @@ from PySide import QtCore, QtGui
 class Ui_DockWidget(object):
     def setupUi(self, DockWidget):
         DockWidget.setObjectName("DockWidget")
-        DockWidget.resize(269, 306)
+        DockWidget.resize(879, 548)
         self.dockWidgetContents = QtGui.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.gridLayout = QtGui.QGridLayout(self.dockWidgetContents)
@@ -73,6 +73,21 @@ class Ui_DockWidget(object):
         item_0 = QtGui.QTreeWidgetItem(self.treeWidget)
         item_1 = QtGui.QTreeWidgetItem(item_0)
         item_2 = QtGui.QTreeWidgetItem(item_1)
+        item_2 = QtGui.QTreeWidgetItem(item_1)
+        item_2 = QtGui.QTreeWidgetItem(item_1)
+        item_2 = QtGui.QTreeWidgetItem(item_1)
+        item_2 = QtGui.QTreeWidgetItem(item_1)
+        item_0 = QtGui.QTreeWidgetItem(self.treeWidget)
+        item_0 = QtGui.QTreeWidgetItem(self.treeWidget)
+        item_1 = QtGui.QTreeWidgetItem(item_0)
+        item_2 = QtGui.QTreeWidgetItem(item_1)
+        item_3 = QtGui.QTreeWidgetItem(item_2)
+        item_4 = QtGui.QTreeWidgetItem(item_3)
+        item_1 = QtGui.QTreeWidgetItem(item_0)
+        item_1 = QtGui.QTreeWidgetItem(item_0)
+        item_1 = QtGui.QTreeWidgetItem(item_0)
+        item_0 = QtGui.QTreeWidgetItem(self.treeWidget)
+        item_0 = QtGui.QTreeWidgetItem(self.treeWidget)
         item_0 = QtGui.QTreeWidgetItem(self.treeWidget)
         item_1 = QtGui.QTreeWidgetItem(item_0)
         self.gridLayout.addWidget(self.treeWidget, 2, 1, 1, 1)
@@ -191,14 +206,30 @@ class Ui_DockWidget(object):
         self.treeWidget.setSortingEnabled(True)
         self.treeWidget.headerItem().setText(0, QtGui.QApplication.translate("DockWidget", "New Column", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.headerItem().setText(1, QtGui.QApplication.translate("DockWidget", "New Column", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.headerItem().setText(2, QtGui.QApplication.translate("DockWidget", "New Column", None, QtGui.QApplication.UnicodeUTF8))
         __sortingEnabled = self.treeWidget.isSortingEnabled()
         self.treeWidget.setSortingEnabled(False)
         self.treeWidget.topLevelItem(0).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.topLevelItem(0).child(0).setText(0, QtGui.QApplication.translate("DockWidget", "New Subitem", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.topLevelItem(0).child(0).setText(1, QtGui.QApplication.translate("DockWidget", "Test", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.topLevelItem(0).child(0).child(0).setText(0, QtGui.QApplication.translate("DockWidget", "New Subitem", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(0).child(0).child(1).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(0).child(0).child(2).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(0).child(0).child(3).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(0).child(0).child(4).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.topLevelItem(1).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
-        self.treeWidget.topLevelItem(1).child(0).setText(0, QtGui.QApplication.translate("DockWidget", "New Subitem", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(2).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(2).child(0).setText(0, QtGui.QApplication.translate("DockWidget", "New Subitem", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(2).child(0).child(0).setText(0, QtGui.QApplication.translate("DockWidget", "New Subitem", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(2).child(0).child(0).child(0).setText(0, QtGui.QApplication.translate("DockWidget", "New Subitem", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(2).child(0).child(0).child(0).child(0).setText(0, QtGui.QApplication.translate("DockWidget", "New Subitem", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(2).child(1).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(2).child(2).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(2).child(3).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(3).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(4).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(5).setText(0, QtGui.QApplication.translate("DockWidget", "New Item", None, QtGui.QApplication.UnicodeUTF8))
+        self.treeWidget.topLevelItem(5).child(0).setText(0, QtGui.QApplication.translate("DockWidget", "New Subitem", None, QtGui.QApplication.UnicodeUTF8))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
         self.treeWidgetDis.setSortingEnabled(True)
         self.treeWidgetDis.headerItem().setText(0, QtGui.QApplication.translate("DockWidget", "New Column", None, QtGui.QApplication.UnicodeUTF8))

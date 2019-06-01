@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file 'dw_views.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from qtpy import QtCore, QtGui, QtWidgets
+
 
 class Ui_DockWidget(object):
     def setupUi(self, DockWidget):
@@ -15,7 +16,6 @@ class Ui_DockWidget(object):
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.gridLayout = QtWidgets.QGridLayout(self.dockWidgetContents)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.label_70 = QtWidgets.QLabel(self.dockWidgetContents)
         font = QtGui.QFont()
@@ -101,4 +101,5 @@ class Ui_DockWidget(object):
         self.label_59.setText(_translate("DockWidget", "TreeView"))
         self.label_60.setText(_translate("DockWidget", "TableView"))
         self.label_61.setText(_translate("DockWidget", "ColunmView"))
+
 

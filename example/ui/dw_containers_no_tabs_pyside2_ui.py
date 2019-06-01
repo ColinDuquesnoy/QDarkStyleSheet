@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'dw_containers_no_tabs.ui'
+# Form implementation generated from reading ui file 'dw_containers_no_tabs.ui',
+# licensing of 'dw_containers_no_tabs.ui' applies.
 #
-# Created: Thu Dec 13 17:14:05 2018
-#      by: pyside2-uic 2.0.0 running on PySide2 5.6.0~a1
+# Created: Fri May 31 23:17:03 2019
+#      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
 

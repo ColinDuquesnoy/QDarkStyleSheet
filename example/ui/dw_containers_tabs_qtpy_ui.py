@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file 'dw_containers_tabs.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from qtpy import QtCore, QtGui, QtWidgets
+
 
 class Ui_DockWidget(object):
     def setupUi(self, DockWidget):
@@ -15,7 +16,6 @@ class Ui_DockWidget(object):
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.dockWidgetContents)
-        self.gridLayout_5.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_5.setObjectName("gridLayout_5")
         self.label_5 = QtWidgets.QLabel(self.dockWidgetContents)
         font = QtGui.QFont()
@@ -38,7 +38,6 @@ class Ui_DockWidget(object):
         self.tab_7 = QtWidgets.QWidget()
         self.tab_7.setObjectName("tab_7")
         self.gridLayout_8 = QtWidgets.QGridLayout(self.tab_7)
-        self.gridLayout_8.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_8.setObjectName("gridLayout_8")
         self.label_52 = QtWidgets.QLabel(self.tab_7)
         self.label_52.setObjectName("label_52")
@@ -47,7 +46,6 @@ class Ui_DockWidget(object):
         self.tab_8 = QtWidgets.QWidget()
         self.tab_8.setObjectName("tab_8")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.tab_8)
-        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_4.setObjectName("gridLayout_4")
         self.label_48 = QtWidgets.QLabel(self.tab_8)
         self.label_48.setObjectName("label_48")
@@ -62,7 +60,6 @@ class Ui_DockWidget(object):
         self.tab_9 = QtWidgets.QWidget()
         self.tab_9.setObjectName("tab_9")
         self.gridLayout_10 = QtWidgets.QGridLayout(self.tab_9)
-        self.gridLayout_10.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_10.setObjectName("gridLayout_10")
         self.label_53 = QtWidgets.QLabel(self.tab_9)
         self.label_53.setObjectName("label_53")
@@ -71,7 +68,6 @@ class Ui_DockWidget(object):
         self.tab_10 = QtWidgets.QWidget()
         self.tab_10.setObjectName("tab_10")
         self.gridLayout_19 = QtWidgets.QGridLayout(self.tab_10)
-        self.gridLayout_19.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_19.setObjectName("gridLayout_19")
         self.label_49 = QtWidgets.QLabel(self.tab_10)
         self.label_49.setObjectName("label_49")
@@ -84,7 +80,6 @@ class Ui_DockWidget(object):
         self.tab_5 = QtWidgets.QWidget()
         self.tab_5.setObjectName("tab_5")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.tab_5)
-        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.label_39 = QtWidgets.QLabel(self.tab_5)
         self.label_39.setObjectName("label_39")
@@ -93,7 +88,6 @@ class Ui_DockWidget(object):
         self.tab_6 = QtWidgets.QWidget()
         self.tab_6.setObjectName("tab_6")
         self.gridLayout_9 = QtWidgets.QGridLayout(self.tab_6)
-        self.gridLayout_9.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_9.setObjectName("gridLayout_9")
         self.label_54 = QtWidgets.QLabel(self.tab_6)
         self.label_54.setObjectName("label_54")
@@ -107,7 +101,6 @@ class Ui_DockWidget(object):
         self.tab_11 = QtWidgets.QWidget()
         self.tab_11.setObjectName("tab_11")
         self.gridLayout_20 = QtWidgets.QGridLayout(self.tab_11)
-        self.gridLayout_20.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_20.setObjectName("gridLayout_20")
         self.label_50 = QtWidgets.QLabel(self.tab_11)
         self.label_50.setObjectName("label_50")
@@ -116,7 +109,6 @@ class Ui_DockWidget(object):
         self.tab_12 = QtWidgets.QWidget()
         self.tab_12.setObjectName("tab_12")
         self.gridLayout_21 = QtWidgets.QGridLayout(self.tab_12)
-        self.gridLayout_21.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_21.setObjectName("gridLayout_21")
         self.label_72 = QtWidgets.QLabel(self.tab_12)
         self.label_72.setObjectName("label_72")
@@ -129,7 +121,6 @@ class Ui_DockWidget(object):
         self.tab_3 = QtWidgets.QWidget()
         self.tab_3.setObjectName("tab_3")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.tab_3)
-        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.label_38 = QtWidgets.QLabel(self.tab_3)
         self.label_38.setObjectName("label_38")
@@ -138,7 +129,6 @@ class Ui_DockWidget(object):
         self.tab_4 = QtWidgets.QWidget()
         self.tab_4.setObjectName("tab_4")
         self.gridLayout_11 = QtWidgets.QGridLayout(self.tab_4)
-        self.gridLayout_11.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_11.setObjectName("gridLayout_11")
         self.label_55 = QtWidgets.QLabel(self.tab_4)
         self.label_55.setObjectName("label_55")
@@ -152,7 +142,6 @@ class Ui_DockWidget(object):
         self.tab_13 = QtWidgets.QWidget()
         self.tab_13.setObjectName("tab_13")
         self.gridLayout_22 = QtWidgets.QGridLayout(self.tab_13)
-        self.gridLayout_22.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_22.setObjectName("gridLayout_22")
         self.label_51 = QtWidgets.QLabel(self.tab_13)
         self.label_51.setObjectName("label_51")
@@ -161,7 +150,6 @@ class Ui_DockWidget(object):
         self.tab_14 = QtWidgets.QWidget()
         self.tab_14.setObjectName("tab_14")
         self.gridLayout_30 = QtWidgets.QGridLayout(self.tab_14)
-        self.gridLayout_30.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_30.setObjectName("gridLayout_30")
         self.label_73 = QtWidgets.QLabel(self.tab_14)
         self.label_73.setObjectName("label_73")
@@ -175,7 +163,6 @@ class Ui_DockWidget(object):
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
         self.gridLayout = QtWidgets.QGridLayout(self.tab)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.label_34 = QtWidgets.QLabel(self.tab)
         self.label_34.setObjectName("label_34")
@@ -184,7 +171,6 @@ class Ui_DockWidget(object):
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.gridLayout_18 = QtWidgets.QGridLayout(self.tab_2)
-        self.gridLayout_18.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_18.setObjectName("gridLayout_18")
         self.label_62 = QtWidgets.QLabel(self.tab_2)
         self.label_62.setObjectName("label_62")
@@ -199,7 +185,6 @@ class Ui_DockWidget(object):
         self.tab_15 = QtWidgets.QWidget()
         self.tab_15.setObjectName("tab_15")
         self.gridLayout_31 = QtWidgets.QGridLayout(self.tab_15)
-        self.gridLayout_31.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_31.setObjectName("gridLayout_31")
         self.label_35 = QtWidgets.QLabel(self.tab_15)
         self.label_35.setObjectName("label_35")
@@ -208,7 +193,6 @@ class Ui_DockWidget(object):
         self.tab_16 = QtWidgets.QWidget()
         self.tab_16.setObjectName("tab_16")
         self.gridLayout_32 = QtWidgets.QGridLayout(self.tab_16)
-        self.gridLayout_32.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_32.setObjectName("gridLayout_32")
         self.label_74 = QtWidgets.QLabel(self.tab_16)
         self.label_74.setObjectName("label_74")
@@ -265,4 +249,5 @@ class Ui_DockWidget(object):
         self.tabWidgetSouth_2.setTabText(self.tabWidgetSouth_2.indexOf(self.tab_15), _translate("DockWidget", "Tab 1"))
         self.label_74.setText(_translate("DockWidget", "Inside TabWidget South Closable Tab 2"))
         self.tabWidgetSouth_2.setTabText(self.tabWidgetSouth_2.indexOf(self.tab_16), _translate("DockWidget", "Tab 2"))
+
 

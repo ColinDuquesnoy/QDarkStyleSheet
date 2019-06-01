@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mw_menus.ui'
 #
-# Created: Wed Apr 24 12:02:37 2019
+# Created: Fri May 31 23:17:02 2019
 #      by: pyside-uic 0.2.15 running on PySide 1.2.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -135,6 +135,8 @@ class Ui_MainWindow(object):
         self.menuMenuSubDelayed.setObjectName("menuMenuSubDelayed")
         self.menuMenuCheckale = QtGui.QMenu(self.menubar)
         self.menuMenuCheckale.setObjectName("menuMenuCheckale")
+        self.menuNew = QtGui.QMenu(self.menuMenuCheckale)
+        self.menuNew.setObjectName("menuNew")
         self.menuAbout = QtGui.QMenu(self.menubar)
         self.menuAbout.setObjectName("menuAbout")
         self.menuHelp = QtGui.QMenu(self.menubar)
@@ -173,6 +175,14 @@ class Ui_MainWindow(object):
         self.actionActionCheckableSubAUnchecked = QtGui.QAction(MainWindow)
         self.actionActionCheckableSubAUnchecked.setCheckable(True)
         self.actionActionCheckableSubAUnchecked.setObjectName("actionActionCheckableSubAUnchecked")
+        self.actionNew_2 = QtGui.QAction(MainWindow)
+        self.actionNew_2.setObjectName("actionNew_2")
+        self.actionNew_3 = QtGui.QAction(MainWindow)
+        self.actionNew_3.setObjectName("actionNew_3")
+        self.actionNew_4 = QtGui.QAction(MainWindow)
+        self.actionNew_4.setObjectName("actionNew_4")
+        self.actionNew_5 = QtGui.QAction(MainWindow)
+        self.actionNew_5.setObjectName("actionNew_5")
         self.menuMenuSub.addAction(self.actionActionSubA)
         self.menuMenuSub.addAction(self.actionActionSubB)
         self.menuMenu.addAction(self.actionActionA)
@@ -180,7 +190,15 @@ class Ui_MainWindow(object):
         self.menuMenuSubDelayed.addAction(self.actionActionDelayedSubA)
         self.menuMenuDelayed.addAction(self.actionActionDelayedA)
         self.menuMenuDelayed.addAction(self.menuMenuSubDelayed.menuAction())
+        self.menuNew.addSeparator()
+        self.menuNew.addAction(self.actionNew_2)
+        self.menuNew.addAction(self.actionNew_4)
+        self.menuNew.addAction(self.actionNew_3)
+        self.menuNew.addSeparator()
+        self.menuNew.addAction(self.actionNew_5)
         self.menuMenuCheckale.addAction(self.actionActionCheckableA)
+        self.menuMenuCheckale.addSeparator()
+        self.menuMenuCheckale.addAction(self.menuNew.menuAction())
         self.menubar.addAction(self.menuMenu.menuAction())
         self.menubar.addAction(self.menuMenuDelayed.menuAction())
         self.menubar.addAction(self.menuMenuCheckale.menuAction())
@@ -241,6 +259,7 @@ class Ui_MainWindow(object):
         self.menuMenuDelayed.setTitle(QtGui.QApplication.translate("MainWindow", "Menu Delayed", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMenuSubDelayed.setTitle(QtGui.QApplication.translate("MainWindow", "Menu Sub Delayed", None, QtGui.QApplication.UnicodeUTF8))
         self.menuMenuCheckale.setTitle(QtGui.QApplication.translate("MainWindow", "Menu Checkable", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuNew.setTitle(QtGui.QApplication.translate("MainWindow", "New", None, QtGui.QApplication.UnicodeUTF8))
         self.menuAbout.setTitle(QtGui.QApplication.translate("MainWindow", "About QDarkStyle", None, QtGui.QApplication.UnicodeUTF8))
         self.menuHelp.setTitle(QtGui.QApplication.translate("MainWindow", "Help", None, QtGui.QApplication.UnicodeUTF8))
         self.toolBar.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Tool bar actions", None, QtGui.QApplication.UnicodeUTF8))
@@ -260,4 +279,8 @@ class Ui_MainWindow(object):
         self.actionActionCheckableSubAChecked.setToolTip(QtGui.QApplication.translate("MainWindow", "Action Checkable Sub A Checked", None, QtGui.QApplication.UnicodeUTF8))
         self.actionActionCheckableSubAUnchecked.setText(QtGui.QApplication.translate("MainWindow", "Action Checkable Sub A Unchecked", None, QtGui.QApplication.UnicodeUTF8))
         self.actionActionCheckableSubAUnchecked.setToolTip(QtGui.QApplication.translate("MainWindow", "Action Checkable Sub A Unchecked", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionNew_2.setText(QtGui.QApplication.translate("MainWindow", "New", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionNew_3.setText(QtGui.QApplication.translate("MainWindow", "New", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionNew_4.setText(QtGui.QApplication.translate("MainWindow", "New", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionNew_5.setText(QtGui.QApplication.translate("MainWindow", "New", None, QtGui.QApplication.UnicodeUTF8))
 

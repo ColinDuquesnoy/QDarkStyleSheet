@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mw_menus.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.1
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -137,6 +137,8 @@ class Ui_MainWindow(object):
         self.menuMenuSubDelayed.setObjectName("menuMenuSubDelayed")
         self.menuMenuCheckale = QtWidgets.QMenu(self.menubar)
         self.menuMenuCheckale.setObjectName("menuMenuCheckale")
+        self.menuNew = QtWidgets.QMenu(self.menuMenuCheckale)
+        self.menuNew.setObjectName("menuNew")
         self.menuAbout = QtWidgets.QMenu(self.menubar)
         self.menuAbout.setObjectName("menuAbout")
         self.menuHelp = QtWidgets.QMenu(self.menubar)
@@ -175,6 +177,14 @@ class Ui_MainWindow(object):
         self.actionActionCheckableSubAUnchecked = QtWidgets.QAction(MainWindow)
         self.actionActionCheckableSubAUnchecked.setCheckable(True)
         self.actionActionCheckableSubAUnchecked.setObjectName("actionActionCheckableSubAUnchecked")
+        self.actionNew_2 = QtWidgets.QAction(MainWindow)
+        self.actionNew_2.setObjectName("actionNew_2")
+        self.actionNew_3 = QtWidgets.QAction(MainWindow)
+        self.actionNew_3.setObjectName("actionNew_3")
+        self.actionNew_4 = QtWidgets.QAction(MainWindow)
+        self.actionNew_4.setObjectName("actionNew_4")
+        self.actionNew_5 = QtWidgets.QAction(MainWindow)
+        self.actionNew_5.setObjectName("actionNew_5")
         self.menuMenuSub.addAction(self.actionActionSubA)
         self.menuMenuSub.addAction(self.actionActionSubB)
         self.menuMenu.addAction(self.actionActionA)
@@ -182,7 +192,15 @@ class Ui_MainWindow(object):
         self.menuMenuSubDelayed.addAction(self.actionActionDelayedSubA)
         self.menuMenuDelayed.addAction(self.actionActionDelayedA)
         self.menuMenuDelayed.addAction(self.menuMenuSubDelayed.menuAction())
+        self.menuNew.addSeparator()
+        self.menuNew.addAction(self.actionNew_2)
+        self.menuNew.addAction(self.actionNew_4)
+        self.menuNew.addAction(self.actionNew_3)
+        self.menuNew.addSeparator()
+        self.menuNew.addAction(self.actionNew_5)
         self.menuMenuCheckale.addAction(self.actionActionCheckableA)
+        self.menuMenuCheckale.addSeparator()
+        self.menuMenuCheckale.addAction(self.menuNew.menuAction())
         self.menubar.addAction(self.menuMenu.menuAction())
         self.menubar.addAction(self.menuMenuDelayed.menuAction())
         self.menubar.addAction(self.menuMenuCheckale.menuAction())
@@ -246,6 +264,7 @@ class Ui_MainWindow(object):
         self.menuMenuDelayed.setTitle(_translate("MainWindow", "Menu Delayed"))
         self.menuMenuSubDelayed.setTitle(_translate("MainWindow", "Menu Sub Delayed"))
         self.menuMenuCheckale.setTitle(_translate("MainWindow", "Menu Checkable"))
+        self.menuNew.setTitle(_translate("MainWindow", "New"))
         self.menuAbout.setTitle(_translate("MainWindow", "About QDarkStyle"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
         self.toolBar.setWindowTitle(_translate("MainWindow", "Tool bar actions"))
@@ -265,5 +284,9 @@ class Ui_MainWindow(object):
         self.actionActionCheckableSubAChecked.setToolTip(_translate("MainWindow", "Action Checkable Sub A Checked"))
         self.actionActionCheckableSubAUnchecked.setText(_translate("MainWindow", "Action Checkable Sub A Unchecked"))
         self.actionActionCheckableSubAUnchecked.setToolTip(_translate("MainWindow", "Action Checkable Sub A Unchecked"))
+        self.actionNew_2.setText(_translate("MainWindow", "New"))
+        self.actionNew_3.setText(_translate("MainWindow", "New"))
+        self.actionNew_4.setText(_translate("MainWindow", "New"))
+        self.actionNew_5.setText(_translate("MainWindow", "New"))
 
 

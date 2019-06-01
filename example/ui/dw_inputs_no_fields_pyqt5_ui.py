@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file 'dw_inputs_no_fields.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_DockWidget(object):
     def setupUi(self, DockWidget):
@@ -15,7 +16,6 @@ class Ui_DockWidget(object):
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.gridLayout = QtWidgets.QGridLayout(self.dockWidgetContents)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
         self.dial = QtWidgets.QDial(self.dockWidgetContents)
         self.dial.setMinimumSize(QtCore.QSize(0, 0))
@@ -267,4 +267,5 @@ class Ui_DockWidget(object):
         self.verticalSliderDis.setToolTip(_translate("DockWidget", "This is a tool tip"))
         self.verticalSliderDis.setStatusTip(_translate("DockWidget", "This is a status tip"))
         self.verticalSliderDis.setWhatsThis(_translate("DockWidget", "This is \"what is this\""))
+
 

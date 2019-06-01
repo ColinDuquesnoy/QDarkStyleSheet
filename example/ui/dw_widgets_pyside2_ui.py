@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'dw_widgets.ui'
+# Form implementation generated from reading ui file 'dw_widgets.ui',
+# licensing of 'dw_widgets.ui' applies.
 #
-# Created: Thu Dec 13 17:14:05 2018
-#      by: pyside2-uic 2.0.0 running on PySide2 5.6.0~a1
+# Created: Fri May 31 23:17:04 2019
+#      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,7 +13,7 @@ from PySide2 import QtCore, QtGui, QtWidgets
 class Ui_DockWidget(object):
     def setupUi(self, DockWidget):
         DockWidget.setObjectName("DockWidget")
-        DockWidget.resize(269, 306)
+        DockWidget.resize(879, 548)
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.gridLayout = QtWidgets.QGridLayout(self.dockWidgetContents)
@@ -73,6 +74,21 @@ class Ui_DockWidget(object):
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         item_2 = QtWidgets.QTreeWidgetItem(item_1)
+        item_2 = QtWidgets.QTreeWidgetItem(item_1)
+        item_2 = QtWidgets.QTreeWidgetItem(item_1)
+        item_2 = QtWidgets.QTreeWidgetItem(item_1)
+        item_2 = QtWidgets.QTreeWidgetItem(item_1)
+        item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
+        item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
+        item_1 = QtWidgets.QTreeWidgetItem(item_0)
+        item_2 = QtWidgets.QTreeWidgetItem(item_1)
+        item_3 = QtWidgets.QTreeWidgetItem(item_2)
+        item_4 = QtWidgets.QTreeWidgetItem(item_3)
+        item_1 = QtWidgets.QTreeWidgetItem(item_0)
+        item_1 = QtWidgets.QTreeWidgetItem(item_0)
+        item_1 = QtWidgets.QTreeWidgetItem(item_0)
+        item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
+        item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         item_0 = QtWidgets.QTreeWidgetItem(self.treeWidget)
         item_1 = QtWidgets.QTreeWidgetItem(item_0)
         self.gridLayout.addWidget(self.treeWidget, 2, 1, 1, 1)
@@ -191,14 +207,30 @@ class Ui_DockWidget(object):
         self.treeWidget.setSortingEnabled(True)
         self.treeWidget.headerItem().setText(0, QtWidgets.QApplication.translate("DockWidget", "New Column", None, -1))
         self.treeWidget.headerItem().setText(1, QtWidgets.QApplication.translate("DockWidget", "New Column", None, -1))
+        self.treeWidget.headerItem().setText(2, QtWidgets.QApplication.translate("DockWidget", "New Column", None, -1))
         __sortingEnabled = self.treeWidget.isSortingEnabled()
         self.treeWidget.setSortingEnabled(False)
         self.treeWidget.topLevelItem(0).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
         self.treeWidget.topLevelItem(0).child(0).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Subitem", None, -1))
         self.treeWidget.topLevelItem(0).child(0).setText(1, QtWidgets.QApplication.translate("DockWidget", "Test", None, -1))
         self.treeWidget.topLevelItem(0).child(0).child(0).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Subitem", None, -1))
+        self.treeWidget.topLevelItem(0).child(0).child(1).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(0).child(0).child(2).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(0).child(0).child(3).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(0).child(0).child(4).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
         self.treeWidget.topLevelItem(1).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
-        self.treeWidget.topLevelItem(1).child(0).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Subitem", None, -1))
+        self.treeWidget.topLevelItem(2).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(2).child(0).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Subitem", None, -1))
+        self.treeWidget.topLevelItem(2).child(0).child(0).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Subitem", None, -1))
+        self.treeWidget.topLevelItem(2).child(0).child(0).child(0).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Subitem", None, -1))
+        self.treeWidget.topLevelItem(2).child(0).child(0).child(0).child(0).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Subitem", None, -1))
+        self.treeWidget.topLevelItem(2).child(1).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(2).child(2).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(2).child(3).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(3).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(4).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(5).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Item", None, -1))
+        self.treeWidget.topLevelItem(5).child(0).setText(0, QtWidgets.QApplication.translate("DockWidget", "New Subitem", None, -1))
         self.treeWidget.setSortingEnabled(__sortingEnabled)
         self.treeWidgetDis.setSortingEnabled(True)
         self.treeWidgetDis.headerItem().setText(0, QtWidgets.QApplication.translate("DockWidget", "New Column", None, -1))

@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file 'dw_containers_no_tabs.ui'
 #
-# Created by: PyQt5 UI code generator 5.6
+# Created by: PyQt5 UI code generator 5.12.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_DockWidget(object):
     def setupUi(self, DockWidget):
@@ -15,7 +16,6 @@ class Ui_DockWidget(object):
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.gridLayout_45 = QtWidgets.QGridLayout(self.dockWidgetContents)
-        self.gridLayout_45.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_45.setObjectName("gridLayout_45")
         self.label_126 = QtWidgets.QLabel(self.dockWidgetContents)
         font = QtGui.QFont()
@@ -52,7 +52,6 @@ class Ui_DockWidget(object):
         self.page1_2 = QtWidgets.QWidget()
         self.page1_2.setObjectName("page1_2")
         self.gridLayout_35 = QtWidgets.QGridLayout(self.page1_2)
-        self.gridLayout_35.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_35.setObjectName("gridLayout_35")
         self.label_57 = QtWidgets.QLabel(self.page1_2)
         self.label_57.setObjectName("label_57")
@@ -61,7 +60,6 @@ class Ui_DockWidget(object):
         self.page2_2 = QtWidgets.QWidget()
         self.page2_2.setObjectName("page2_2")
         self.gridLayout_36 = QtWidgets.QGridLayout(self.page2_2)
-        self.gridLayout_36.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_36.setObjectName("gridLayout_36")
         self.label_58 = QtWidgets.QLabel(self.page2_2)
         self.label_58.setObjectName("label_58")
@@ -74,7 +72,6 @@ class Ui_DockWidget(object):
         self.page1Dis_2 = QtWidgets.QWidget()
         self.page1Dis_2.setObjectName("page1Dis_2")
         self.gridLayout_37 = QtWidgets.QGridLayout(self.page1Dis_2)
-        self.gridLayout_37.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_37.setObjectName("gridLayout_37")
         self.label_113 = QtWidgets.QLabel(self.page1Dis_2)
         self.label_113.setObjectName("label_113")
@@ -83,7 +80,6 @@ class Ui_DockWidget(object):
         self.page2Dis_2 = QtWidgets.QWidget()
         self.page2Dis_2.setObjectName("page2Dis_2")
         self.gridLayout_38 = QtWidgets.QGridLayout(self.page2Dis_2)
-        self.gridLayout_38.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_38.setObjectName("gridLayout_38")
         self.label_114 = QtWidgets.QLabel(self.page2Dis_2)
         self.label_114.setObjectName("label_114")
@@ -139,7 +135,6 @@ class Ui_DockWidget(object):
         self.subwindow1Dis_2 = QtWidgets.QWidget()
         self.subwindow1Dis_2.setObjectName("subwindow1Dis_2")
         self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.subwindow1Dis_2)
-        self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.label_111 = QtWidgets.QLabel(self.subwindow1Dis_2)
         self.label_111.setObjectName("label_111")
@@ -147,7 +142,6 @@ class Ui_DockWidget(object):
         self.subwindow2Dis_2 = QtWidgets.QWidget()
         self.subwindow2Dis_2.setObjectName("subwindow2Dis_2")
         self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.subwindow2Dis_2)
-        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.label_112 = QtWidgets.QLabel(self.subwindow2Dis_2)
         self.label_112.setObjectName("label_112")
@@ -163,7 +157,6 @@ class Ui_DockWidget(object):
         self.widget_2 = QtWidgets.QWidget(self.dockWidgetContents)
         self.widget_2.setObjectName("widget_2")
         self.gridLayout_39 = QtWidgets.QGridLayout(self.widget_2)
-        self.gridLayout_39.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_39.setObjectName("gridLayout_39")
         self.label_59 = QtWidgets.QLabel(self.widget_2)
         self.label_59.setObjectName("label_59")
@@ -173,7 +166,6 @@ class Ui_DockWidget(object):
         self.widgetDis_2.setEnabled(False)
         self.widgetDis_2.setObjectName("widgetDis_2")
         self.gridLayout_44 = QtWidgets.QGridLayout(self.widgetDis_2)
-        self.gridLayout_44.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_44.setObjectName("gridLayout_44")
         self.label_125 = QtWidgets.QLabel(self.widgetDis_2)
         self.label_125.setObjectName("label_125")
@@ -184,7 +176,6 @@ class Ui_DockWidget(object):
         self.subwindow1_2 = QtWidgets.QWidget()
         self.subwindow1_2.setObjectName("subwindow1_2")
         self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.subwindow1_2)
-        self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_11.setObjectName("verticalLayout_11")
         self.label_29 = QtWidgets.QLabel(self.subwindow1_2)
         self.label_29.setObjectName("label_29")
@@ -192,7 +183,6 @@ class Ui_DockWidget(object):
         self.subwindow2_2 = QtWidgets.QWidget()
         self.subwindow2_2.setObjectName("subwindow2_2")
         self.verticalLayout_12 = QtWidgets.QVBoxLayout(self.subwindow2_2)
-        self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_12.setObjectName("verticalLayout_12")
         self.label_56 = QtWidgets.QLabel(self.subwindow2_2)
         self.label_56.setObjectName("label_56")
@@ -212,7 +202,6 @@ class Ui_DockWidget(object):
         self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 181, 246))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.verticalLayout_14 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
-        self.verticalLayout_14.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_14.setObjectName("verticalLayout_14")
         self.label_70 = QtWidgets.QLabel(self.scrollAreaWidgetContents_2)
         self.label_70.setObjectName("label_70")
@@ -251,7 +240,6 @@ class Ui_DockWidget(object):
         self.scrollAreaWidgetContentsDis_2.setGeometry(QtCore.QRect(0, 0, 181, 246))
         self.scrollAreaWidgetContentsDis_2.setObjectName("scrollAreaWidgetContentsDis_2")
         self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContentsDis_2)
-        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_13.setObjectName("verticalLayout_13")
         self.label_115 = QtWidgets.QLabel(self.scrollAreaWidgetContentsDis_2)
         self.label_115.setObjectName("label_115")
@@ -295,7 +283,6 @@ class Ui_DockWidget(object):
         self.page_3.setGeometry(QtCore.QRect(0, 0, 196, 73))
         self.page_3.setObjectName("page_3")
         self.gridLayout_41 = QtWidgets.QGridLayout(self.page_3)
-        self.gridLayout_41.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_41.setObjectName("gridLayout_41")
         self.label_60 = QtWidgets.QLabel(self.page_3)
         self.label_60.setObjectName("label_60")
@@ -305,7 +292,6 @@ class Ui_DockWidget(object):
         self.page_8.setGeometry(QtCore.QRect(0, 0, 163, 38))
         self.page_8.setObjectName("page_8")
         self.gridLayout_42 = QtWidgets.QGridLayout(self.page_8)
-        self.gridLayout_42.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_42.setObjectName("gridLayout_42")
         self.label_61 = QtWidgets.QLabel(self.page_8)
         self.label_61.setObjectName("label_61")
@@ -319,7 +305,6 @@ class Ui_DockWidget(object):
         self.page_6.setGeometry(QtCore.QRect(0, 0, 196, 73))
         self.page_6.setObjectName("page_6")
         self.gridLayout_29 = QtWidgets.QGridLayout(self.page_6)
-        self.gridLayout_29.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_29.setObjectName("gridLayout_29")
         self.label_109 = QtWidgets.QLabel(self.page_6)
         self.label_109.setObjectName("label_109")
@@ -329,7 +314,6 @@ class Ui_DockWidget(object):
         self.page_7.setGeometry(QtCore.QRect(0, 0, 163, 38))
         self.page_7.setObjectName("page_7")
         self.gridLayout_34 = QtWidgets.QGridLayout(self.page_7)
-        self.gridLayout_34.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_34.setObjectName("gridLayout_34")
         self.label_110 = QtWidgets.QLabel(self.page_7)
         self.label_110.setObjectName("label_110")
@@ -524,4 +508,5 @@ class Ui_DockWidget(object):
         self.label_110.setText(_translate("DockWidget", "Inside ToolBox Page 2"))
         self.toolBoxDis_2.setItemText(self.toolBoxDis_2.indexOf(self.page_7), _translate("DockWidget", "Page 2"))
         self.label_130.setText(_translate("DockWidget", "Stacked"))
+
 
