@@ -25,9 +25,13 @@ class DarkPalette(object):
     SIZE_BORDER_RADIUS = '4px'
 
     # Borders
+    BORDER_LIGHT = '1px solid $COLOR_BACKGROUND_LIGHT'
     BORDER_NORMAL = '1px solid $COLOR_BACKGROUND_NORMAL'
     BORDER_DARK = '1px solid $COLOR_BACKGROUND_DARK'
-    BORDER_HOVER = '1px solid $COLOR_SELECTION_LIGHT'
+
+    BORDER_SELECTION_LIGHT = '1px solid $COLOR_SELECTION_LIGHT'
+    BORDER_SELECTION_NORMAL = '1px solid $COLOR_SELECTION_NORMAL'
+    BORDER_SELECTION_DARK = '1px solid $COLOR_SELECTION_DARK'
 
     # Example of additional widget specific variables
     W_STATUS_BAR_BACKGROUND_COLOR = COLOR_SELECTION_DARK
@@ -50,9 +54,12 @@ class DarkPalette(object):
             'COLOR_SELECTION_DARK',
             'OPACITY_TOOLTIP',
             'SIZE_BORDER_RADIUS',
+            'BORDER_LIGHT',
             'BORDER_NORMAL',
             'BORDER_DARK',
-            'BORDER_HOVER',
+            'BORDER_SELECTION_LIGHT',
+            'BORDER_SELECTION_NORMAL',
+            'BORDER_SELECTION_DARK',
             'W_STATUS_BAR_BACKGROUND_COLOR',
             'PATH_RESOURCES',
         ]
