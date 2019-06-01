@@ -50,12 +50,9 @@ sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 
 # must be in this place, after setting path, to not need to install
 import qdarkstyle
-from qdarkstyle import QT_BINDING, QT_ABSTRACTION, IMAGES_PATH
 
 # Constants
-EXAMPLE_PATH = os.path.abspath(os.path.dirname(__file__))
-REPO_PATH = os.path.dirname(EXAMPLE_PATH)
-SCREENSHOTS_PATH = IMAGES_PATH
+SCREENSHOTS_PATH = qdarkstyle.IMAGES_PATH
 
 
 def main():
@@ -215,11 +212,12 @@ def main():
     def read_settings(window, reset=False):
         """Read and set window settings from a file."""
         settings = QSettings('QDarkStyle', 'QDarkStyle Example')
-        if args.qt_from == 'pyside' or args.qt_from == 'pyside2':
+
+        try:
             pos = settings.value('pos', window.pos())
             size = settings.value('size', window.size())
             state = settings.value('state', window.saveState())
-        else:
+        except Exception:
             pos = settings.value('pos', window.pos(), type='QPoint')
             size = settings.value('size', window.size(), type='QSize')
             state = settings.value('state', window.saveState(), type='QByteArray')
