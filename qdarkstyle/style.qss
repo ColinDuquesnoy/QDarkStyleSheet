@@ -1051,6 +1051,10 @@ QToolButton:pressed {
 }
 
 QToolButton:disabled {
+  border: none;
+}
+
+QToolButton:disabled:hover {
   border: 1px solid #32414B;
 }
 
