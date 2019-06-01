@@ -694,7 +694,7 @@ QSizeGrip {
 
 --------------------------------------------------------------------------- */
 QStackedWidget {
-  padding: 4px;
+  padding: 2px;
   border: 1px solid #32414B;
   border: 1px solid #19232D;
 }
@@ -713,6 +713,20 @@ QToolBar {
 
 QToolBar QToolButton {
   background-color: #32414B;
+  border: 1px solid #32414B;
+}
+
+QToolBar QToolButton:hover {
+  border: 1px solid #148CD2;
+}
+
+QToolBar QToolButton:checked {
+  border: 1px solid #19232D;
+  background-color: #19232D;
+}
+
+QToolBar QToolButton:checked:hover {
+  border: 1px solid #148CD2;
 }
 
 QToolBar::handle:horizontal {
@@ -1014,7 +1028,6 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbutton
 --------------------------------------------------------------------------- */
 QToolButton {
   background-color: transparent;
-  border: 1px solid #32414B;
   border-radius: 4px;
   margin: 0px;
   padding: 2px;
@@ -1023,21 +1036,18 @@ QToolButton {
 }
 
 QToolButton:checked {
-  background-color: #19232D;
-  border: 1px solid #19232D;
+  background-color: transparent;
+  border: 1px solid #1464A0;
 }
 
-QToolButton:checked:hover {
-  border: 1px solid #148CD2;
+QToolButton:checked:disabled {
+  border: 1px solid #14506E;
 }
 
 QToolButton:pressed {
-  background-color: #19232D;
-  border: 1px solid #19232D;
-}
-
-QToolButton:pressed:hover {
-  border: 1px solid #148CD2;
+  margin: 1px;
+  background-color: transparent;
+  border: 1px solid #1464A0;
 }
 
 QToolButton:disabled {
