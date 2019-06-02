@@ -59,7 +59,7 @@ from qdarkstyle.palette import DarkPalette
 if sys.version_info >= (3, 4):
     import importlib
 
-__version__ = "2.7"
+__version__ = "2.8"
 
 
 # Constants
