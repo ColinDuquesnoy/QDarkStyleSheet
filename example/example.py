@@ -52,6 +52,9 @@ import helpdev
 from os.path import abspath, dirname
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 
+# set log for debug
+logging.basicConfig(level=logging.DEBUG)
+
 # must be in this place, after setting path, to not need to install
 import qdarkstyle
 
@@ -77,9 +80,6 @@ def main():
 
     # parsing arguments from command line
     args = parser.parse_args()
-
-    # set log for debug
-    logging.basicConfig(level=logging.DEBUG)
 
     # to avoid problems when testing without screen
     if args.test:
