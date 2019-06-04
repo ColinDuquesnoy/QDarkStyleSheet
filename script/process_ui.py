@@ -42,7 +42,7 @@ def main(arguments):
                         type=str,
                         help="UI files directory, relative to current directory.",)
     parser.add_argument('--create',
-                        default='all',
+                        default='qtpy',
                         choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'all'],
                         type=str,
                         help="Choose which one would be generated.")
@@ -65,7 +65,7 @@ def main(arguments):
         py_file_pyqt = filename + '_pyqt_ui' + ext
         py_file_pyside = filename + '_pyside_ui' + ext
         py_file_pyside2 = filename + '_pyside2_ui' + ext
-        py_file_qtpy = filename + '_qtpy_ui' + ext
+        py_file_qtpy = filename + '_ui' + ext
         py_file_pyqtgraph = filename + '_pyqtgraph_ui' + ext
 
         # calling external commands
@@ -106,19 +106,26 @@ def main(arguments):
             # special case - qtpy - syntax is PyQt5
             with open(py_file_pyqt5, 'r') as file:
                 filedata = file.read()
+
             # replace the target string
             filedata = filedata.replace('from PyQt5', 'from qtpy')
+
             with open(py_file_qtpy, 'w+') as file:
                 # write the file out again
                 file.write(filedata)
+
+            if args.create not in ['pyqt5']:
+                os.remove(py_file_pyqt5)
 
         if args.create in ['pyqtgraph', 'all']:
             print("Creating also for pyqtgraph ...")
             # special case - pyqtgraph - syntax is PyQt4
             with open(py_file_pyqt, 'r') as file:
                 filedata = file.read()
+
             # replace the target string
             filedata = filedata.replace('from PyQt4', 'from pyqtgraph.Qt')
+
             with open(py_file_pyqtgraph, 'w+') as file:
                 # write the file out again
                 file.write(filedata)

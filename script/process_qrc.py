@@ -66,7 +66,7 @@ def main(arguments):
                         type=str,
                         help="QRC file directory, relative to current directory.",)
     parser.add_argument('--create',
-                        default='all',
+                        default='qtpy',
                         choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'qt', 'qt5', 'all'],
                         type=str,
                         help="Choose which one would be generated.")
@@ -125,7 +125,7 @@ def run_process(args):
         py_file_pyqt = 'pyqt_' + filename + ext
         py_file_pyside = 'pyside_' + filename + ext
         py_file_pyside2 = 'pyside2_' + filename + ext
-        py_file_qtpy = 'qtpy_' + filename + ext
+        py_file_qtpy = '' + filename + ext
         py_file_pyqtgraph = 'pyqtgraph_' + filename + ext
 
         # calling external commands
@@ -162,19 +162,26 @@ def run_process(args):
             # special case - qtpy - syntax is PyQt5
             with open(py_file_pyqt5, 'r') as file:
                 filedata = file.read()
+
             # replace the target string
             filedata = filedata.replace('from PyQt5', 'from qtpy')
+
             with open(py_file_qtpy, 'w+') as file:
                 # write the file out again
                 file.write(filedata)
+
+            if args.create not in ['pyqt5']:
+                os.remove(py_file_pyqt5)
 
         if args.create in ['pyqtgraph', 'all']:
             print("Compiling for PyQtGraph ...")
             # special case - pyqtgraph - syntax is PyQt4
             with open(py_file_pyqt, 'r') as file:
                 filedata = file.read()
+
             # replace the target string
             filedata = filedata.replace('from PyQt4', 'from pyqtgraph.Qt')
+
             with open(py_file_pyqtgraph, 'w+') as file:
                 # write the file out again
                 file.write(filedata)
