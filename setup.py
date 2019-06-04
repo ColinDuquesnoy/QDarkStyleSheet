@@ -12,12 +12,12 @@ from qdarkstyle import __version__
 from qdarkstyle import __doc__ as long_desc
 
 
-install_requires = ['helpdev>=0.6.2']
+install_requires = ['helpdev>=0.6.2', 'qtpy>=1.7']
 
 extras_require = {
     'develop': ['qtsass', 'watchdog'],
     'docs': ['sphinx', 'm2r', 'sphinx_rtd_theme'],
-    'example': ['pyqt5', 'pyside2', 'qtpy>=1.7']
+    'example': ['pyqt5', 'pyside2']
 }
 
 setup(
@@ -40,8 +40,7 @@ setup(
         'Operating System :: POSIX :: Linux',
         'Operating System :: MacOS',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
