@@ -58,10 +58,6 @@ __version__ = "2.8"
 
 _logger = logging.getLogger(__name__)
 
-# Constants
-QDARK_QT_BINDING = ''
-"""str: Qt binding in use."""
-
 # Folder's path
 REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 
@@ -89,6 +85,7 @@ MAIN_SCSS_FILEPATH = os.path.join(QSS_PATH, MAIN_SCSS_FILE)
 STYLES_SCSS_FILEPATH = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
 VARIABLES_SCSS_FILEPATH = os.path.join(QSS_PATH, VARIABLES_SCSS_FILE)
 
+# Todo: check if we are deprecate all those functions or keep them
 DEPRECATION_MSG = '''This function is deprecated in {},
 and it will be removed in v3.0. Please, set the
 wanted binding by using QtPy environment variable QT_API,
@@ -96,12 +93,9 @@ then use load_stylesheet() or use load_stylesheet()
 passing the argument qt_api= 'wanted_binding'.'''.format(__version__)
 
 
-def _apply_os_patches(stylesheet, QFile, QTextStream):
+def _apply_os_patches():
     """
     Apply OS-only specific stylesheet pacthes.
-
-    Args:
-        stylesheet(str): current stylesheet to apply patches.
 
     Returns:
         str: stylesheet string (css).
@@ -120,31 +114,15 @@ def _apply_os_patches(stylesheet, QFile, QTextStream):
         '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
 
     # Only open the QSS file if any patch is needed
-    #if os_fix:
+    if os_fix:
+        _logger.info("Found OS patches to be applied.")
 
-    _logger.info("Found OS patches to be applyed.")
-    qss_file = QFile(QSS_FILEPATH)
-
-    if not qss_file.exists():
-        stylesheet = ""
-        _logger.error("Unable to load qss file, file not found in "
-                        "resources. OS patch not applied.")
-    else:
-        qss_file.open(QFile.ReadOnly | QFile.Text)
-        text_stream = QTextStream(qss_file)
-        stylesheet = text_stream.readAll()
-        stylesheet += os_fix
-        _logger.info("OS patches applyed successfuly.")
-
-    return stylesheet
+    return os_fix
 
 
-def _apply_binding_patches(stylesheet):
+def _apply_binding_patches():
     """
     Apply binding-only specific stylesheet patches for the same OS.
-
-    Args:
-        stylesheet(str): current stylesheet to apply patches.
 
     Returns:
         str: stylesheet string (css).
@@ -152,17 +130,14 @@ def _apply_binding_patches(stylesheet):
     binding_fix = ""
 
     if binding_fix:
-        _logger.info("Found binding patches to be applyed.")
+        _logger.info("Found binding patches to be applied.")
 
-    return stylesheet
+    return binding_fix
 
 
-def _apply_version_patches(stylesheet):
+def _apply_version_patches():
     """
     Apply version-only specific stylesheet patches for the same binding.
-
-    Args:
-        stylesheet(str): current stylesheet to apply patches.
 
     Returns:
         str: stylesheet string (css).
@@ -170,9 +145,9 @@ def _apply_version_patches(stylesheet):
     version_fix = ""
 
     if version_fix:
-        _logger.info("Found version patches to be applyed.")
+        _logger.info("Found version patches to be applied.")
 
-    return stylesheet
+    return version_fix
 
 
 def _apply_application_patches(QCoreApplication, QPalette, QColor):
@@ -182,13 +157,18 @@ def _apply_application_patches(QCoreApplication, QPalette, QColor):
     # See issue #139
     color = DarkPalette.COLOR_SELECTION_LIGHT
     qcolor = QColor(color)
+    # Todo: check if it is qcoreapplication indeed
     app = QCoreApplication.instance()
+
+    _logger.info("Found application patches to be applied.")
 
     if app:
         palette = app.palette()
         palette.setColor(QPalette.Normal, QPalette.Link, qcolor)
         app.setPalette(palette)
-        _logger.info("Application patches applyed successfuly.")
+    else:
+        _logger.warn("No QCoreApplication instance found. "
+                     "Application patches not applied.")
 
 
 def _load_stylesheet(qt_api=''):
@@ -211,7 +191,7 @@ def _load_stylesheet(qt_api=''):
           imports on Qt things you must set both to use the same Qt
           binding (PyQt, PySide).
         - OS, Binding and binding version number, and application specific
-          patches are applyed in this order.
+          patches are applied in this order.
 
     Returns:
         str: stylesheet string (css).
@@ -224,24 +204,45 @@ def _load_stylesheet(qt_api=''):
     from qtpy.QtCore import QCoreApplication, QFile, QTextStream
     from qtpy.QtGui import QColor, QPalette
 
+    # Then we import resources - binary qrc content
+    from qdarkstyle import style_rc
+
+    package_dir = os.path.basename(PACKAGE_PATH)
+    qss_rc_path = ":" + os.path.join(package_dir, QSS_FILE)
+
+    _logger.debug("Reading QSS file in: %s" % qss_rc_path)
+
+    # It gets the qss file from compiled style_rc that was import
+    # not from the file QSS as we are using resources
+    qss_file = QFile(qss_rc_path)
+
+    if qss_file.exists():
+        qss_file.open(QFile.ReadOnly | QFile.Text)
+        text_stream = QTextStream(qss_file)
+        stylesheet = text_stream.readAll()
+        _logger.info("QSS file sucessfuly loaded.")
+    else:
+        stylesheet = ""
+        # Todo: check this raise type and add to docs
+        raise FileNotFoundError("Unable to find QSS file '{}' "
+                                "in resources.".format(qss_rc_path))
+
+    _logger.debug("Checking patches for being applied.")
+
     # Todo: check execution order for these functions
     # 1. Apply OS specific patches
-    stylesheet = _apply_os_patches("", QFile, QTextStream)
+    stylesheet += _apply_os_patches()
 
     # 2. Apply binding specific patches
-    stylesheet = _apply_binding_patches(stylesheet)
+    stylesheet += _apply_binding_patches()
 
     # 3. Apply binding version specific patches
-    stylesheet = _apply_version_patches(stylesheet)
+    stylesheet += _apply_version_patches()
 
     # 4. Apply palette fix. See issue #139
     _apply_application_patches(QCoreApplication, QPalette, QColor)
 
-    if stylesheet:
-        return stylesheet
-    else:
-        # Todo: Should import compiled style_rc file here? Or before?
-        import qdarkstyle.style_rc
+    return stylesheet
 
 
 def load_stylesheet_from_environment(is_pyqtgraph=False):
