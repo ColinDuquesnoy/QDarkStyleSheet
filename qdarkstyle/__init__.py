@@ -46,46 +46,21 @@ Enjoy!
 """
 
 # Standard library imports
-import copy
 import logging
 import os
 import platform
-import sys
 import warnings
 
 # Local imports
 from qdarkstyle.palette import DarkPalette
 
-if sys.version_info >= (3, 4):
-    import importlib
-
 __version__ = "2.8"
 
+_logger = logging.getLogger(__name__)
 
 # Constants
-QT_BINDINGS = ['PyQt4', 'PyQt5', 'PySide', 'PySide2']
-"""list: values of all Qt bindings to import."""
-
-QT_ABSTRACTIONS = ['qtpy', 'pyqtgraph', 'Qt']
-"""list: values of all Qt abstraction layers to import."""
-
-QT4_IMPORT_API = ['QtCore', 'QtGui']
-"""list: which subpackage to import for Qt4 API."""
-
-QT5_IMPORT_API = ['QtCore', 'QtGui', 'QtWidgets']
-"""list: which subpackage to import for Qt5 API."""
-
-QT_API_VALUES = ['pyqt', 'pyqt5', 'pyside', 'pyside2']
-"""list: values for QT_API environment variable used by QtPy."""
-
-QT_LIB_VALUES = ['PyQt', 'PyQt5', 'PySide', 'PySide2']
-"""list: values for PYQTGRAPH_QT_LIB environment variable used by PyQtGraph."""
-
-QT_BINDING = 'Not set or nonexistent'
+QDARK_QT_BINDING = ''
 """str: Qt binding in use."""
-
-QT_ABSTRACTION = 'Not set or nonexistent'
-"""str: Qt abstraction layer in use."""
 
 # Folder's path
 REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
@@ -114,54 +89,28 @@ MAIN_SCSS_FILEPATH = os.path.join(QSS_PATH, MAIN_SCSS_FILE)
 STYLES_SCSS_FILEPATH = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
 VARIABLES_SCSS_FILEPATH = os.path.join(QSS_PATH, VARIABLES_SCSS_FILE)
 
+DEPRECATION_MSG = '''This function is deprecated in {},
+and it will be removed in v3.0. Please, set the
+wanted binding by using QtPy environment variable QT_API,
+then use load_stylesheet() or use load_stylesheet()
+passing the argument qt_api= 'wanted_binding'.'''.format(__version__)
 
-def _logger():
-    return logging.getLogger('qdarkstyle')
 
-
-def _qt_wrapper_import(qt_api):
+def _apply_os_patches(stylesheet, QFile, QTextStream):
     """
-    Check if Qt API defined can be imported.
+    Apply OS-only specific stylesheet pacthes.
 
-    :param qt_api: Qt API string to test import
+    Args:
+        stylesheet(str): current stylesheet to apply patches.
 
-    :return load function fot given qt_api, otherwise empty string
-
+    Returns:
+        str: stylesheet string (css).
     """
-    qt_wrapper = ''
-    loader = ""
+    os_fix = ""
 
-    try:
-        if qt_api == 'PyQt' or qt_api == 'pyqt':
-            import PyQt4
-            qt_wrapper = 'PyQt4'
-            loader = load_stylesheet_pyqt()
-        elif qt_api == 'PyQt5' or qt_api == 'pyqt5':
-            import PyQt5
-            qt_wrapper = 'PyQt5'
-            loader = load_stylesheet_pyqt5()
-        elif qt_api == 'PySide' or qt_api == 'pyside':
-            import PySide
-            qt_wrapper = 'PySide'
-            loader = load_stylesheet_pyside()
-        elif qt_api == 'PySide2' or qt_api == 'pyside2':
-            import PySide2
-            qt_wrapper = 'PySide2'
-            loader = load_stylesheet_pyside2()
-    except ImportError as err:
-        _logger().error("Impossible import Qt wrapper.\n %s", str(err))
-    else:
-        _logger().info("Using Qt wrapper = %s ", qt_wrapper)
-        QT_BINDING = qt_wrapper
-    finally:
-        return loader
-
-
-def _apply_stylesheet_patches(stylesheet):
-    """Apply OS specific stylesheet pacthes."""
-    # See issue #12
     if platform.system().lower() == 'darwin':
-        mac_fix = '''
+        # See issue #12
+        os_fix = '''
         QDockWidget::title
         {{
             background-color: {color};
@@ -169,13 +118,67 @@ def _apply_stylesheet_patches(stylesheet):
             height: 12px;
         }}
         '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
-        stylesheet += mac_fix
+
+    # Only open the QSS file if any patch is needed
+    #if os_fix:
+
+    _logger.info("Found OS patches to be applyed.")
+    qss_file = QFile(QSS_FILEPATH)
+
+    if not qss_file.exists():
+        stylesheet = ""
+        _logger.error("Unable to load qss file, file not found in "
+                        "resources. OS patch not applied.")
+    else:
+        qss_file.open(QFile.ReadOnly | QFile.Text)
+        text_stream = QTextStream(qss_file)
+        stylesheet = text_stream.readAll()
+        stylesheet += os_fix
+        _logger.info("OS patches applyed successfuly.")
 
     return stylesheet
 
 
-def _apply_palette_fix(QCoreApplication, QPalette, QColor):
-    """Apply application level fixes on the QPalette."""
+def _apply_binding_patches(stylesheet):
+    """
+    Apply binding-only specific stylesheet patches for the same OS.
+
+    Args:
+        stylesheet(str): current stylesheet to apply patches.
+
+    Returns:
+        str: stylesheet string (css).
+    """
+    binding_fix = ""
+
+    if binding_fix:
+        _logger.info("Found binding patches to be applyed.")
+
+    return stylesheet
+
+
+def _apply_version_patches(stylesheet):
+    """
+    Apply version-only specific stylesheet patches for the same binding.
+
+    Args:
+        stylesheet(str): current stylesheet to apply patches.
+
+    Returns:
+        str: stylesheet string (css).
+    """
+    version_fix = ""
+
+    if version_fix:
+        _logger.info("Found version patches to be applyed.")
+
+    return stylesheet
+
+
+def _apply_application_patches(QCoreApplication, QPalette, QColor):
+    """
+    Apply application level fixes on the QPalette.
+    """
     # See issue #139
     color = DarkPalette.COLOR_SELECTION_LIGHT
     qcolor = QColor(color)
@@ -185,255 +188,151 @@ def _apply_palette_fix(QCoreApplication, QPalette, QColor):
         palette = app.palette()
         palette.setColor(QPalette.Normal, QPalette.Link, qcolor)
         app.setPalette(palette)
+        _logger.info("Application patches applyed successfuly.")
+
+
+def _load_stylesheet(qt_api=''):
+    """
+    Load the stylesheet based on QtPy abstraction layer environment variable.
+
+    If the argument is not passed, it will use the current QT_API environment
+    variable to make the imports of Qt bindings. If passed, it will set this
+    variable then make the imports.
+
+    Args:
+        qt_api (str): qt binding name to set QT_API environment variable.
+                      Default is ''. Possible values are pyside, pyside2
+                      pyqt4, pyqt5. Not case sensitive.
+
+    Note:
+        - Note that the variable QT_API is read when first imported. So,
+          pay attention to importing order.
+        - If you are using other abstraction layer, i.e PyQtGraph to do
+          imports on Qt things you must set both to use the same Qt
+          binding (PyQt, PySide).
+        - OS, Binding and binding version number, and application specific
+          patches are applyed in this order.
+
+    Returns:
+        str: stylesheet string (css).
+    """
+
+    if qt_api:
+        os.environ['QT_API'] = qt_api
+
+    # Import is made after setting QT_API
+    from qtpy.QtCore import QCoreApplication, QFile, QTextStream
+    from qtpy.QtGui import QColor, QPalette
+
+    # Todo: check execution order for these functions
+    # 1. Apply OS specific patches
+    stylesheet = _apply_os_patches("", QFile, QTextStream)
+
+    # 2. Apply binding specific patches
+    stylesheet = _apply_binding_patches(stylesheet)
+
+    # 3. Apply binding version specific patches
+    stylesheet = _apply_version_patches(stylesheet)
+
+    # 4. Apply palette fix. See issue #139
+    _apply_application_patches(QCoreApplication, QPalette, QColor)
+
+    if stylesheet:
+        return stylesheet
+    else:
+        # Todo: Should import compiled style_rc file here? Or before?
+        import qdarkstyle.style_rc
 
 
 def load_stylesheet_from_environment(is_pyqtgraph=False):
     """
     Load the stylesheet from QT_API (or PYQTGRAPH_QT_LIB) environment variable.
 
-    :param is_pyqtgraph: True if it is to be set using PYQTGRAPH_QT_LIB
+    Args:
+        is_pyqtgraph (bool): True if it is to be set using PYQTGRAPH_QT_LIB.
 
-    :raise KeyError: if QT_API/PYQTGRAPH_QT_LIB does not exist
+    Raises:
+        KeyError: if PYQTGRAPH_QT_LIB does not exist.
 
-    :return the stylesheet string
+    Returns:
+        str: the stylesheet string.
     """
-    warnings.warn(
-        "load_stylesheet_from_environment() will be deprecated in version 3,"
-        "use load_stylesheet()",
-        PendingDeprecationWarning
-    )
-    qt_api = ''
-    pyqtgraph_qt_lib = ''
+    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
 
-    loader = ""
-
-    # Get values from QT_API
-    try:
-        qt_api = os.environ['QT_API']
-    except KeyError as err:
-        # Log this error just if using QT_API
-        if not is_pyqtgraph:
-            _logger().error("QT_API does not exist, do os.environ['QT_API']= "
-                            "and choose one option from %s", QT_API_VALUES)
+    if is_pyqtgraph:
+        stylesheet = _load_stylesheet(qt_api=os.environ('PYQTGRAPH_QT_LIB'))
     else:
-        if not is_pyqtgraph:
-            if qt_api in QT_API_VALUES:
-                QT_ABSTRACTION = "qtpy"
-                _logger().info("Found QT_API='%s'", qt_api)
-                loader = _qt_wrapper_import(qt_api)
-            else:
-                # Raise this error because the function need this key/value
-                raise KeyError("QT_API=%s is unknown, please use a value "
-                               "from %s",
-                               (qt_api, QT_API_VALUES))
+        stylesheet = _load_stylesheet()
 
-    # Get values from PYQTGRAPH_QT_LIB
-    try:
-        pyqtgraph_qt_lib = os.environ['PYQTGRAPH_QT_LIB']
-    except KeyError as err:
-        # Log this error just if using PYQTGRAPH_QT_LIB
-        if is_pyqtgraph:
-            _logger().error("PYQTGRAP_QT_API does not exist, do "
-                            "os.environ['PYQTGRAPH_QT_LIB']= "
-                            "and choose one option from %s",
-                            QT_LIB_VALUES)
-    else:
-
-        if is_pyqtgraph:
-            if pyqtgraph_qt_lib in QT_LIB_VALUES:
-                QT_ABSTRACTION = "pyqtgraph"
-                _logger().info("Found PYQTGRAPH_QT_LIB='%s'", pyqtgraph_qt_lib)
-                loader = _qt_wrapper_import(pyqtgraph_qt_lib)
-            else:
-                # Raise this error because the function need this key/value
-                raise KeyError("PYQTGRAPH_QT_LIB=%s is unknown, please use a "
-                               "value from %s", (
-                                   pyqtgraph_qt_lib,
-                                   QT_LIB_VALUES))
-
-    # Just a warning if both are set but differs each other
-    if qt_api and pyqtgraph_qt_lib:
-        if qt_api != pyqtgraph_qt_lib.lower():
-            _logger().warning("Both QT_API=%s and PYQTGRAPH_QT_LIB=%s are set, "
-                              "but with different values, this could cause "
-                              "some issues if using them in the same project!",
-                              qt_api, pyqtgraph_qt_lib)
-
-    return loader
+    return stylesheet
 
 
 def load_stylesheet(pyside=True):
     """
     Load the stylesheet. Takes care of importing the rc module.
 
-    :param pyside: True to load the pyside rc file, False to load the PyQt rc file
+    Args:
+        pyside (bool): True to load the Pyside rc file, False to load
+                       the PyQt rc file.
 
-    :return the stylesheet string
+    Returns:
+        str: the stylesheet string.
     """
-    warnings.warn(
-        "load_stylesheet() will not receive pyside parameter in version 3. "
-        "Set QtPy environment variable to specify the Qt binding insteady.",
-        PendingDeprecationWarning
-    )
+    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
 
-    # Smart import of the rc file
-    pyside_ver = None
+    stylesheet = ""
 
     if pyside:
-
-        # Detect the PySide version available
-        try:
-            import PySide
-        except ImportError:  # Compatible with py27
-            import PySide2
-            pyside_ver = 2
-        else:
-            pyside_ver = 1
-
-        if pyside_ver == 1:
-            import qdarkstyle.pyside_style_rc
-        else:
-            import qdarkstyle.pyside2_style_rc
+        stylesheet = _load_stylesheet(qt_api='pyside')
+        if not stylesheet:
+            stylesheet = _load_stylesheet(qt_api='pyside2')
     else:
-        import qdarkstyle.pyqt_style_rc
+        stylesheet = _load_stylesheet(qt_api='pyqt4')
+        if not stylesheet:
+            stylesheet = _load_stylesheet(qt_api='pyqt5')
 
-    # Load the stylesheet content from resources
-    if not pyside:
-        from PyQt4.QtCore import QCoreApplication, QFile, QTextStream
-        from PyQt4.QtGui import QColor, QPalette
-    else:
-        if pyside_ver == 1:
-            from PySide.QtCore import QCoreApplication, QFile, QTextStream
-            from PySide.QtGui import QColor, QPalette
-        else:
-            from PySide2.QtCore import QCoreApplication, QFile, QTextStream
-            from PySide2.QtGui import QColor, QPalette
-
-    # Apply palette fix. See issue #139
-    _apply_palette_fix(QCoreApplication, QPalette, QColor)
-
-    f = QFile(":qdarkstyle/style.qss")
-    if not f.exists():
-        _logger().error("Unable to load stylesheet, file not found in "
-                        "resources")
-        return ""
-    else:
-        f.open(QFile.ReadOnly | QFile.Text)
-        ts = QTextStream(f)
-        stylesheet = ts.readAll()
-
-        # Apply OS specific patches
-        stylesheet = _apply_stylesheet_patches(stylesheet)
-
-        return stylesheet
+    return stylesheet
 
 
 def load_stylesheet_pyside():
     """
-    Load the stylesheet for use in a pyside application.
+    Load the stylesheet for use in a PySide application.
 
-    :return the stylesheet string
+    Returns:
+        str: the stylesheet string.
     """
-    warnings.warn(
-        "load_stylesheet_pyside() will be deprecated in version 3,"
-        "set QtPy environment variable to specify the Qt binding and "
-        "use load_stylesheet()",
-        PendingDeprecationWarning
-    )
-    return load_stylesheet(pyside=True)
+    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
+    return _load_stylesheet(qt_api='pyside')
 
 
 def load_stylesheet_pyside2():
     """
-    Load the stylesheet for use in a pyside2 application.
+    Load the stylesheet for use in a PySide2 application.
 
-    :raise NotImplementedError: Because it is not supported yet
+    Returns:
+        str: the stylesheet string.
     """
-    warnings.warn(
-        "load_stylesheet_pyside2() will be deprecated in version 3,"
-        "set QtPy environment variable to specify the Qt binding and "
-        "use load_stylesheet()",
-        PendingDeprecationWarning
-    )
-    return load_stylesheet(pyside=True)
+    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
+    return _load_stylesheet(qt_api='pyside2')
 
 
 def load_stylesheet_pyqt():
     """
-    Load the stylesheet for use in a pyqt4 application.
+    Load the stylesheet for use in a PyQt4 application.
 
-    :return the stylesheet string
+    Returns:
+        str: the stylesheet string.
     """
-    warnings.warn(
-        "load_stylesheet_pyqt() will be deprecated in version 3,"
-        "set QtPy environment variable to specify the Qt binding and "
-        "use load_stylesheet()",
-        PendingDeprecationWarning
-    )
-    return load_stylesheet(pyside=False)
+    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
+    return _load_stylesheet(qt_api='pyqt4')
 
 
 def load_stylesheet_pyqt5():
     """
-    Load the stylesheet for use in a pyqt5 application.
+    Load the stylesheet for use in a PyQt5 application.
 
-    :param pyside: True to load the pyside rc file, False to load the PyQt rc file
-
-    :return the stylesheet string
+    Returns:
+        str: the stylesheet string.
     """
-    warnings.warn(
-        "load_stylesheet_pyqt5() will be deprecated in version 3,"
-        "set QtPy environment variable to specify the Qt binding and "
-        "use load_stylesheet()",
-        PendingDeprecationWarning
-    )
-
-    # Smart import of the rc file
-    import qdarkstyle.pyqt5_style_rc
-
-    # Load the stylesheet content from resources
-    from PyQt5.QtCore import QCoreApplication, QFile, QTextStream
-    from PyQt5.QtGui import QColor, QPalette
-
-    # Apply palette fix. See issue #139
-    _apply_palette_fix(QCoreApplication, QPalette, QColor)
-
-    f = QFile(":qdarkstyle/style.qss")
-    if not f.exists():
-        _logger().error("Unable to load stylesheet, file not found in "
-                        "resources")
-        return ""
-    else:
-        f.open(QFile.ReadOnly | QFile.Text)
-        ts = QTextStream(f)
-        stylesheet = ts.readAll()
-
-        # Apply OS specific patches
-        # stylesheet = _apply_stylesheet_patches(stylesheet)
-        return stylesheet
-
-
-def _import_qt_modules_from(use_binding='pyqt5', use_abstraction='qtpy'):
-    """New approach to import modules using importlib."""
-
-    if not sys.version_info >= (3, 4):
-        print('Function not available for Python < 3.4')
-
-    spec_binding = importlib.util.find_spec(use_binding)
-    spec_abstraction = importlib.util.find_spec(use_abstraction)
-
-    if spec_binding is None:
-        print("Cannot find Qt binding: ", use_binding)
-    else:
-        module = importlib.util.module_from_spec(spec_binding)
-        spec.loader.exec_module(module)
-        # Adding the module to sys.modules is optional.
-        sys.modules[name] = module
-
-    if spec_abstraction is None:
-        print("Cannot find Qt abstraction layer: ", use_abstraction)
-    else:
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        # Adding the module to sys.modules is optional.
-        sys.modules[name] = module
+    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
+    return _load_stylesheet(qt_api='pyqt5')
