@@ -1,1 +1,1 @@
-.. mdinclude:: ../CODE_OF_CONDUCT.md
+.. mdinclude:: ../CODE_OF_CONDUCT.rst
