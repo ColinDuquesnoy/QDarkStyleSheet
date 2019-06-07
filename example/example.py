@@ -85,13 +85,6 @@ def main():
     if args.test:
         os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 
-    # setup stylesheet
-    style = ''
-
-    # This line must be before the import of qtpy
-    if args.no_dark is False:
-        style = qdarkstyle.load_stylesheet_from_environment()
-
     from qtpy import API_NAME, __version__
     from qtpy.QtWidgets import QApplication, QMainWindow, QDockWidget, QStatusBar, QLabel, QPushButton
     from qtpy.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
@@ -138,11 +131,16 @@ def main():
     app = QApplication(sys.argv)
     app.setOrganizationName('QDarkStyle')
     app.setApplicationName('QDarkStyle Example')
+
+    if args.no_dark is False:
+        style = qdarkstyle.load_stylesheet_from_environment()
+
     app.setStyleSheet(style)
 
     # create main window
     window = QMainWindow()
     window.setObjectName('mainwindow')
+
     ui = ui_main()
     ui.setupUi(window)
     window.setWindowTitle("QDarkStyle Example - " +
