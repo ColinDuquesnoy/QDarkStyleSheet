@@ -1082,35 +1082,32 @@ QToolButton {
         border: $BORDER_SELECTION_LIGHT;
     }
 
+    /* The subcontrols below are used only in the DelayedPopup mode */
+    &[popupMode="0"] {
+        /* Only for DelayedPopup */
+        padding-right: 2px;
+    }
+
     /* The subcontrols below are used only in the MenuButtonPopup mode */
     &[popupMode="1"] {
-        padding: 2px;
-
         /* Only for MenuButtonPopup */
-        padding-right: 12px;
+        padding-right: 20px;
 
-        /* Make way for the popup button */
-        border: $BORDER_NORMAL;
-        border-radius: $SIZE_BORDER_RADIUS;
+        &::menu-button {
+            border: none;
+        }
     }
 
     /* The subcontrol below is used only in the InstantPopup or DelayedPopup mode */
     &[popupMode="2"] {
-        padding: 2px;
-
         /* Only for InstantPopup */
-        padding-right: 12px;
-
-        /* Make way for the popup button */
-        border: $BORDER_NORMAL;
+        padding-right: 2px;
     }
 
     &::menu-button {
         padding: 2px;
         border-radius: $SIZE_BORDER_RADIUS;
         border: $BORDER_NORMAL;
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
         /* 16px width + 4px for border = 20px allocated above */
         width: 16px;
         outline: none;
@@ -1130,17 +1127,14 @@ QToolButton {
         image: url($PATH_RESOURCES + '/rc/arrow_down.png');
         height: 12px;
         width: 12px;
-        top: -8px;     /* Shift it a bit */
-        left: -4px;    /* Shift it a bit */
+        top: 0;        /* Exclude a shift for better image */
+        left: -2px;    /* Shift it a bit */
     }
 
     &::menu-arrow {
         image: url($PATH_RESOURCES + '/rc/arrow_down.png');
         height: 12px;
         width: 12px;
-        &:open {
-            border: $BORDER_NORMAL;
-        }
     }
 }
 
@@ -1648,6 +1642,13 @@ QTabBar {
         background-color: $COLOR_BACKGROUND_NORMAL;
         height: 12px;
         width: 12px;
+
+        &:pressed {
+            background-color: $COLOR_BACKGROUND_NORMAL;
+            &:hover {
+                border: $BORDER_SELECTION_LIGHT;
+            }
+        }
 
         &::left-arrow {
             &:enabled {
