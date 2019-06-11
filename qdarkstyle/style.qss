@@ -1031,6 +1031,7 @@ QToolButton {
   border-radius: 4px;
   margin: 0px;
   padding: 2px;
+  /* The subcontrols below are used only in the DelayedPopup mode */
   /* The subcontrols below are used only in the MenuButtonPopup mode */
   /* The subcontrol below is used only in the InstantPopup or DelayedPopup mode */
 }
@@ -1062,29 +1063,29 @@ QToolButton:hover {
   border: 1px solid #148CD2;
 }
 
+QToolButton[popupMode="0"] {
+  /* Only for DelayedPopup */
+  padding-right: 2px;
+}
+
 QToolButton[popupMode="1"] {
-  padding: 2px;
   /* Only for MenuButtonPopup */
-  padding-right: 12px;
-  /* Make way for the popup button */
-  border: 1px solid #32414B;
-  border-radius: 4px;
+  padding-right: 20px;
+}
+
+QToolButton[popupMode="1"]::menu-button {
+  border: none;
 }
 
 QToolButton[popupMode="2"] {
-  padding: 2px;
   /* Only for InstantPopup */
-  padding-right: 12px;
-  /* Make way for the popup button */
-  border: 1px solid #32414B;
+  padding-right: 2px;
 }
 
 QToolButton::menu-button {
   padding: 2px;
   border-radius: 4px;
   border: 1px solid #32414B;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
   /* 16px width + 4px for border = 20px allocated above */
   width: 16px;
   outline: none;
@@ -1102,9 +1103,9 @@ QToolButton::menu-indicator {
   image: url(":/qss_icons/rc/arrow_down.png");
   height: 12px;
   width: 12px;
-  top: -8px;
-  /* Shift it a bit */
-  left: -4px;
+  top: 0;
+  /* Exclude a shift for better image */
+  left: -2px;
   /* Shift it a bit */
 }
 
@@ -1112,10 +1113,6 @@ QToolButton::menu-arrow {
   image: url(":/qss_icons/rc/arrow_down.png");
   height: 12px;
   width: 12px;
-}
-
-QToolButton::menu-arrow:open {
-  border: 1px solid #32414B;
 }
 
 /* QCommandLinkButton -----------------------------------------------------
@@ -1598,6 +1595,14 @@ QTabBar QToolButton {
   background-color: #32414B;
   height: 12px;
   width: 12px;
+}
+
+QTabBar QToolButton:pressed {
+  background-color: #32414B;
+}
+
+QTabBar QToolButton:pressed:hover {
+  border: 1px solid #148CD2;
 }
 
 QTabBar QToolButton::left-arrow:enabled {
