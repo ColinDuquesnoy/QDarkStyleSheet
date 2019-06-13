@@ -1387,30 +1387,15 @@ QTabWidget {
     selection-background-color: $COLOR_BACKGROUND_NORMAL;
 
     QWidget {
-        border: 0px solid $COLOR_BACKGROUND_NORMAL;
-    }
-
-    /* Add wanted borders - fix #141, #126, #123 */
-    QWidget QWidget
-    QTableView,
-    QTreeView,
-    QListView,
-    QGroupBox,
-    QLineEdit,
-    QComboBox,
-    QFontComboBox,
-    QTextEdit,
-    QSpinBox,
-    QDoubleSpinBox {
-        border: $BORDER_NORMAL;
+        /* Fixes #189 */
+        border-radius: $SIZE_BORDER_RADIUS;
     }
 
     &::pane {
         border: $BORDER_NORMAL;
         border-radius: $SIZE_BORDER_RADIUS;
         margin: 0px;
-
-        /* Fixes double border inside pane wit pyqt5 */
+        /* Fixes double border inside pane with pyqt5 */
         padding: 0px;
 
         &:selected {
@@ -2010,17 +1995,21 @@ QToolBox {
 /* QFrame -----------------------------------------------------------------
 
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qframe
+https://doc.qt.io/qt-5/qframe.html#-prop
 
 --------------------------------------------------------------------------- */
+
+  /* (dot) .QFrame  fix #141, #126, #123 */
+
 .QFrame {
     border-radius: $SIZE_BORDER_RADIUS;
     border: $BORDER_NORMAL;
-
+    /* No frame */
     &[frameShape="0"] {
         border-radius: $SIZE_BORDER_RADIUS;
         border: 1px transparent $COLOR_BACKGROUND_NORMAL;
     }
-
+    /* HLine and VLine respectivelly*/
     &[height="3"],
     &[width="3"] {
         background-color: $COLOR_BACKGROUND_DARK;
