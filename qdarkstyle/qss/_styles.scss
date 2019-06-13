@@ -653,6 +653,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-specific-widgets
 QTextEdit {
     background-color: $COLOR_BACKGROUND_DARK;
     color: $COLOR_FOREGROUND_LIGHT;
+    border-radius: $SIZE_BORDER_RADIUS;
     border: $BORDER_NORMAL;
 
     &:hover {
@@ -1422,6 +1423,7 @@ QTabBar {
         border: 0;
         margin: 2px;
         padding: 2px;
+
         image: url($PATH_RESOURCES + '/rc/window_close.png');
 
         &:hover {
