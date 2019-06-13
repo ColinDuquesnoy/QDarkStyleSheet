@@ -3,8 +3,8 @@
 
 """QDarkStyle is a dark stylesheet for Python and Qt applications.
 
-This module provides a function to transparently load the stylesheets
-with the correct rc file.
+This module provides a function to load the stylesheets transparently
+with the right resources file.
 
 First, start importing our module
 
@@ -13,7 +13,7 @@ First, start importing our module
     import qdarkstyle
 
 Then you can get stylesheet provided by QDarkStyle for various Qt wrappers
-as shown bellow
+as shown below
 
 .. code-block:: python
 
@@ -26,7 +26,7 @@ as shown bellow
     # PyQt5
     dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
 
-Or from environment variables provided for QtPy or PyQtGraph, see
+Alternatively, from environment variables provided for QtPy or PyQtGraph, see
 
 .. code-block:: python
 
@@ -168,15 +168,17 @@ def _apply_application_patches(QCoreApplication, QPalette, QColor):
         app.setPalette(palette)
     else:
         _logger.warn("No QCoreApplication instance found. "
-                     "Application patches not applied.")
+                     "Application patches not applied. "
+                     "You have to call load_stylesheet function after "
+                     "instantiation of QApplication to take effect. ")
 
 
 def _load_stylesheet(qt_api=''):
     """
     Load the stylesheet based on QtPy abstraction layer environment variable.
 
-    If the argument is not passed, it will use the current QT_API environment
-    variable to make the imports of Qt bindings. If passed, it will set this
+    If the argument is not passed, it uses the current QT_API environment
+    variable to make the imports of Qt bindings. If passed, it sets this
     variable then make the imports.
 
     Args:
@@ -186,8 +188,8 @@ def _load_stylesheet(qt_api=''):
 
     Note:
         - Note that the variable QT_API is read when first imported. So,
-          pay attention to importing order.
-        - If you are using other abstraction layer, i.e PyQtGraph to do
+          pay attention to the import order.
+        - If you are using another abstraction layer, i.e PyQtGraph to do
           imports on Qt things you must set both to use the same Qt
           binding (PyQt, PySide).
         - OS, Binding and binding version number, and application specific
