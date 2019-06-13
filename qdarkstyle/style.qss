@@ -645,6 +645,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-specific-widgets
 QTextEdit {
   background-color: #19232D;
   color: #F0F0F0;
+  border-radius: 4px;
   border: 1px solid #32414B;
 }
 
@@ -1343,32 +1344,18 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabb
 QTabWidget {
   padding: 2px;
   selection-background-color: #32414B;
-  /* Add wanted borders - fix #141, #126, #123 */
 }
 
 QTabWidget QWidget {
-  border: 0px solid #32414B;
-}
-
-QTabWidget QWidget QWidget
-QTableView,
-QTabWidget QTreeView,
-QTabWidget QListView,
-QTabWidget QGroupBox,
-QTabWidget QLineEdit,
-QTabWidget QComboBox,
-QTabWidget QFontComboBox,
-QTabWidget QTextEdit,
-QTabWidget QSpinBox,
-QTabWidget QDoubleSpinBox {
-  border: 1px solid #32414B;
+  /* Fixes #189 */
+  border-radius: 4px;
 }
 
 QTabWidget::pane {
   border: 1px solid #32414B;
   border-radius: 4px;
   margin: 0px;
-  /* Fixes double border inside pane wit pyqt5 */
+  /* Fixes double border inside pane with pyqt5 */
   padding: 0px;
 }
 
@@ -1955,11 +1942,15 @@ QToolBox QScrollArea QWidget QWidget {
 /* QFrame -----------------------------------------------------------------
 
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qframe
+https://doc.qt.io/qt-5/qframe.html#-prop
 
 --------------------------------------------------------------------------- */
+/* (dot) .QFrame  fix #141, #126, #123 */
 .QFrame {
   border-radius: 4px;
   border: 1px solid #32414B;
+  /* No frame */
+  /* HLine and VLine respectivelly*/
 }
 
 .QFrame[frameShape="0"] {
