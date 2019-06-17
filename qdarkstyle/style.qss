@@ -128,8 +128,7 @@ QToolTip {
   color: #19232D;
   /* Remove padding, for fix combo box tooltip */
   padding: 0px;
-  /* Reducing transparency to read better */
-  opacity: 230;
+  /* Remove opacity, fix #174 - may need to use RGBA */
 }
 
 /* QStatusBar -------------------------------------------------------------
@@ -710,6 +709,7 @@ QToolBar {
   border-bottom: 1px solid #19232D;
   padding: 2px;
   font-weight: bold;
+  spacing: 2px;
 }
 
 QToolBar QToolButton {
@@ -1029,6 +1029,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbutton
 --------------------------------------------------------------------------- */
 QToolButton {
   background-color: transparent;
+  border: 1px solid transparent;
   border-radius: 4px;
   margin: 0px;
   padding: 2px;
@@ -1054,10 +1055,6 @@ QToolButton:pressed {
 
 QToolButton:disabled {
   border: none;
-}
-
-QToolButton:disabled:hover {
-  border: 1px solid #32414B;
 }
 
 QToolButton:hover {
