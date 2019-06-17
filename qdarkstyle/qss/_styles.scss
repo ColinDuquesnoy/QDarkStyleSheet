@@ -1903,6 +1903,8 @@ QHeaderView {
         }
 
         &::horizontal {
+            padding-left: 4px;
+            padding-right: 4px;
             border-left: $BORDER_DARK;
 
             &::first,
@@ -1916,6 +1918,8 @@ QHeaderView {
         }
 
         &::vertical {
+            padding-left: 4px;
+            padding-right: 4px;
             border-top: $BORDER_DARK;
 
             &::first,
@@ -1933,15 +1937,21 @@ QHeaderView {
         /* Those settings (border/width/height/background-color) solve bug */
         /* transparent arrow background and size */
         background-color: $COLOR_BACKGROUND_NORMAL;
+        border: none;
         height: 12px;
         width: 12px;
+        padding-left: 2px;
+        padding-right: 2px;
         image: url($PATH_RESOURCES + '/rc/arrow_down.png');
     }
 
     &::up-arrow {
         background-color: $COLOR_BACKGROUND_NORMAL;
+        border: none;
         height: 12px;
         width: 12px;
+        padding-left: 2px;
+        padding-right: 2px;
         image: url($PATH_RESOURCES + '/rc/arrow_up.png');
     }
 }
