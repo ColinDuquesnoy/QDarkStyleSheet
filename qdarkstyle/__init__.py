@@ -270,29 +270,68 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
     return stylesheet
 
 
-def load_stylesheet(pyside=True):
+def load_stylesheet(*args, **kwargs):
     """
     Load the stylesheet. Takes care of importing the rc module.
 
     Args:
-        pyside (bool): True to load the Pyside rc file, False to load
-                       the PyQt rc file.
+        pyside (bool): True to load the PySide (or PySide2) rc file,
+                       False to load the PyQt4 (or PyQt5) rc file.
+                       Default is False.
+        or
+
+        qt_api (str): qt binding name to set QT_API environment variable.
+                      Default is '', i.e PyQt5, default QtPy binding.
+                      Possible values are pyside, pyside2 pyqt4, pyqt5.
+                      Not case sensitive.
 
     Returns:
         str: the stylesheet string.
     """
-    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
 
     stylesheet = ""
+    arg = None
 
-    if pyside:
-        stylesheet = _load_stylesheet(qt_api='pyside')
-        if not stylesheet:
+    try:
+        arg = args[0]
+    except IndexError:
+        # It is already none
+        pass
+
+    if (kwargs and args) or len(args) > 1 or len(kwargs) > 1:
+        raise TypeError("load_stylesheet() takes zero or one argument: "
+                        "(new) string type qt_api='pyqt5' or "
+                        "(old) boolean type pyside='False'.")
+
+    elif not kwargs and not args:
+        stylesheet = _load_stylesheet(qt_api='pyqt5')
+
+    # Old API
+    elif 'pyside' in kwargs or isinstance(arg, bool):
+        pyside = kwargs.get('pyside', arg)
+
+        if pyside:
             stylesheet = _load_stylesheet(qt_api='pyside2')
-    else:
-        stylesheet = _load_stylesheet(qt_api='pyqt4')
-        if not stylesheet:
+            if not stylesheet:
+                stylesheet = _load_stylesheet(qt_api='pyside')
+
+        else:
             stylesheet = _load_stylesheet(qt_api='pyqt5')
+            if not stylesheet:
+                stylesheet = _load_stylesheet(qt_api='pyqt4')
+
+        # Deprecation warning only for old API
+        warnings.warn(DEPRECATION_MSG, DeprecationWarning)
+
+    # New API
+    elif 'qt_api' in kwargs or isinstance(arg, str):
+        qt_api = kwargs.get('qt_api', arg)
+        stylesheet = _load_stylesheet(qt_api=qt_api)
+
+    else:
+        raise TypeError("load_stylesheet() takes only zero or one argument: "
+                        "(new) string type qt_api='pyqt5' or "
+                        "(old) boolean type pyside='False'.")
 
     return stylesheet
 
