@@ -1839,6 +1839,8 @@ QHeaderView::section:checked:disabled {
 }
 
 QHeaderView::section::horizontal {
+  padding-left: 4px;
+  padding-right: 4px;
   border-left: 1px solid #19232D;
 }
 
@@ -1851,6 +1853,8 @@ QHeaderView::section::horizontal:disabled {
 }
 
 QHeaderView::section::vertical {
+  padding-left: 4px;
+  padding-right: 4px;
   border-top: 1px solid #19232D;
 }
 
@@ -1866,15 +1870,21 @@ QHeaderView::down-arrow {
   /* Those settings (border/width/height/background-color) solve bug */
   /* transparent arrow background and size */
   background-color: #32414B;
+  border: none;
   height: 12px;
   width: 12px;
+  padding-left: 2px;
+  padding-right: 2px;
   image: url(":/qss_icons/rc/arrow_down.png");
 }
 
 QHeaderView::up-arrow {
   background-color: #32414B;
+  border: none;
   height: 12px;
   width: 12px;
+  padding-left: 2px;
+  padding-right: 2px;
   image: url(":/qss_icons/rc/arrow_up.png");
 }
 
