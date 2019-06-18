@@ -779,7 +779,11 @@ QAbstractSpinBox:up-button {
   subcontrol-origin: border;
   subcontrol-position: top right;
   border-left: 1px solid #32414B;
+  border-bottom: 1px solid #32414B;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   margin: 1px;
+  margin-bottom: -1px;
 }
 
 QAbstractSpinBox::up-arrow, QAbstractSpinBox::up-arrow:disabled, QAbstractSpinBox::up-arrow:off {
@@ -797,7 +801,11 @@ QAbstractSpinBox:down-button {
   subcontrol-origin: border;
   subcontrol-position: bottom right;
   border-left: 1px solid #32414B;
+  border-top: 1px solid #32414B;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   margin: 1px;
+  margin-top: -1px;
 }
 
 QAbstractSpinBox::down-arrow, QAbstractSpinBox::down-arrow:disabled, QAbstractSpinBox::down-arrow:off {
@@ -1620,6 +1628,7 @@ QDockWidget {
 QDockWidget::title {
   /* Better size for title bar */
   padding: 6px;
+  spacing: 4px;
   border: none;
   background-color: #32414B;
 }
@@ -1950,6 +1959,8 @@ QToolBox QScrollArea QWidget QWidget {
 
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qframe
 https://doc.qt.io/qt-5/qframe.html#-prop
+https://doc.qt.io/qt-5/qframe.html#details
+https://stackoverflow.com/questions/14581498/qt-stylesheet-for-hline-vline-color
 
 --------------------------------------------------------------------------- */
 /* (dot) .QFrame  fix #141, #126, #123 */
@@ -1957,7 +1968,8 @@ https://doc.qt.io/qt-5/qframe.html#-prop
   border-radius: 4px;
   border: 1px solid #32414B;
   /* No frame */
-  /* HLine and VLine respectivelly*/
+  /* HLine */
+  /* HLine */
 }
 
 .QFrame[frameShape="0"] {
@@ -1965,8 +1977,16 @@ https://doc.qt.io/qt-5/qframe.html#-prop
   border: 1px transparent #32414B;
 }
 
-.QFrame[height="3"], .QFrame[width="3"] {
-  background-color: #19232D;
+.QFrame[frameShape="4"] {
+  max-height: 2px;
+  border: none;
+  background-color: #32414B;
+}
+
+.QFrame[frameShape="5"] {
+  max-width: 2px;
+  border: none;
+  background-color: #32414B;
 }
 
 /* QSplitter --------------------------------------------------------------
