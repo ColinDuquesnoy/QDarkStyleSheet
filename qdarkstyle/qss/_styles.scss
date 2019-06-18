@@ -1115,8 +1115,8 @@ QToolButton {
                 border:none;
                 border-left: 1px solid $COLOR_SELECTION_LIGHT;
                 border-radius:0;
+            }
         }
-    }
     }
 
     /* The subcontrol below is used only in the InstantPopup or DelayedPopup mode */
@@ -1160,8 +1160,8 @@ QToolButton {
 
         &:hover{
             image: url($PATH_RESOURCES + '/rc/arrow_down_focus.png');
+        }
     }
-}
 }
 
 /* QCommandLinkButton -----------------------------------------------------
@@ -1205,13 +1205,15 @@ QComboBox {
     /* min-width: 75px;      removed to fix #109 */
 
     QAbstractItemView {
-        background-color: $COLOR_BACKGROUND_NORMAL;
+        border: $BORDER_NORMAL;
+        border-radius: 0;
+        background-color: $COLOR_BACKGROUND_DARK;
         selection-background-color: $COLOR_SELECTION_NORMAL;
 
         &:hover {
-            background-color:  $COLOR_BACKGROUND_NORMAL;
+            background-color:  $COLOR_BACKGROUND_DARK;
             color: $COLOR_FOREGROUND_LIGHT;
-    }
+        }
 
         &:selected {
             background: $COLOR_SELECTION_NORMAL;
@@ -1239,6 +1241,8 @@ QComboBox {
 
     /* Needed to remove indicator - fix #132 */
     &::indicator {
+        border: none;
+        border-radius: 0;
         background-color: transparent;
         selection-background-color: transparent;
         color: transparent;
