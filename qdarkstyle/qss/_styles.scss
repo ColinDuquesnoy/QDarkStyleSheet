@@ -2019,6 +2019,8 @@ QToolBox {
 
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qframe
 https://doc.qt.io/qt-5/qframe.html#-prop
+https://doc.qt.io/qt-5/qframe.html#details
+https://stackoverflow.com/questions/14581498/qt-stylesheet-for-hline-vline-color
 
 --------------------------------------------------------------------------- */
 
@@ -2034,11 +2036,20 @@ https://doc.qt.io/qt-5/qframe.html#-prop
         border: 1px transparent $COLOR_BACKGROUND_NORMAL;
     }
 
-    /* HLine and VLine respectivelly*/
-    &[height="3"],
-    &[width="3"] {
-        background-color: $COLOR_BACKGROUND_DARK;
+    /* HLine */
+    &[frameShape="4"]{
+        max-height: 2px;
+        border: none;
+        background-color: $COLOR_BACKGROUND_NORMAL;
     }
+
+    /* HLine */
+    &[frameShape="5"]{
+        max-width: 2px;
+        border: none;
+        background-color: $COLOR_BACKGROUND_NORMAL;
+    }
+
 }
 
 /* QSplitter --------------------------------------------------------------
