@@ -800,6 +800,7 @@ QAbstractSpinBox {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         margin: 1px;
+        width: 12px;
         margin-bottom: -1px;
     }
 
@@ -807,8 +808,8 @@ QAbstractSpinBox {
     &::up-arrow:disabled,
     &::up-arrow:off {
         image: url($PATH_RESOURCES + '/rc/arrow_up_disabled.png');
-        height: 12px;
-        width: 12px;
+        height: 8px;
+        width: 8px;
     }
 
     &::up-arrow:hover {
@@ -824,6 +825,7 @@ QAbstractSpinBox {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         margin: 1px;
+        width: 8px;
         margin-top: -1px;
     }
 
@@ -831,8 +833,8 @@ QAbstractSpinBox {
     &::down-arrow:disabled,
     &::down-arrow:off {
         image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
-        height: 12px;
-        width: 12px;
+        height: 8px;
+        width: 8px;
     }
 
     &::down-arrow:hover {
