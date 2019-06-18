@@ -133,7 +133,7 @@ def main():
     app.setApplicationName('QDarkStyle Example')
 
     if args.no_dark is False:
-        style = qdarkstyle.load_stylesheet_from_environment()
+        style = qdarkstyle.load_stylesheet()
 
     app.setStyleSheet(style)
 
