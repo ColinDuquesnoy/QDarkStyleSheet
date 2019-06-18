@@ -26,14 +26,16 @@ as shown below
     # PyQt5
     dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
 
-Alternatively, from environment variables provided for QtPy or PyQtGraph, see
+Alternatively, from environment variables provided by QtPy, PyQtGraph, Qt.Py
 
 .. code-block:: python
 
     # QtPy
-    dark_stylesheet = qdarkstyle.load_stylesheet_from_environment()
+    dark_stylesheet = qdarkstyle.load_stylesheet()
     # PyQtGraph
-    dark_stylesheet = qdarkstyle.load_stylesheet_from_environment(is_pyqtgraph)
+    dark_stylesheet = qdarkstyle.load_stylesheet(qt_api=os.environ('PYQTGRAPH_QT_LIB'))
+    # Qt.Py
+    dark_stylesheet = qdarkstyle.load_stylesheet(qt_api=Qt.__binding__)
 
 Finally, set your QApplication with it
 
@@ -153,10 +155,15 @@ def _apply_version_patches():
 def _apply_application_patches(QCoreApplication, QPalette, QColor):
     """
     Apply application level fixes on the QPalette.
+
+    The import names args must be passed here because the import is done
+    inside the load_stylesheet() function, as QtPy is only imported in
+    that moment for setting reasons.
     """
     # See issue #139
     color = DarkPalette.COLOR_SELECTION_LIGHT
     qcolor = QColor(color)
+
     # Todo: check if it is qcoreapplication indeed
     app = QCoreApplication.instance()
 
@@ -192,7 +199,7 @@ def _load_stylesheet(qt_api=''):
         - If you are using another abstraction layer, i.e PyQtGraph to do
           imports on Qt things you must set both to use the same Qt
           binding (PyQt, PySide).
-        - OS, Binding and binding version number, and application specific
+        - OS, binding and binding version number, and application specific
           patches are applied in this order.
 
     Returns:
@@ -247,29 +254,6 @@ def _load_stylesheet(qt_api=''):
     return stylesheet
 
 
-def load_stylesheet_from_environment(is_pyqtgraph=False):
-    """
-    Load the stylesheet from QT_API (or PYQTGRAPH_QT_LIB) environment variable.
-
-    Args:
-        is_pyqtgraph (bool): True if it is to be set using PYQTGRAPH_QT_LIB.
-
-    Raises:
-        KeyError: if PYQTGRAPH_QT_LIB does not exist.
-
-    Returns:
-        str: the stylesheet string.
-    """
-    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
-
-    if is_pyqtgraph:
-        stylesheet = _load_stylesheet(qt_api=os.environ('PYQTGRAPH_QT_LIB'))
-    else:
-        stylesheet = _load_stylesheet()
-
-    return stylesheet
-
-
 def load_stylesheet(*args, **kwargs):
     """
     Load the stylesheet. Takes care of importing the rc module.
@@ -280,10 +264,13 @@ def load_stylesheet(*args, **kwargs):
                        Default is False.
         or
 
-        qt_api (str): qt binding name to set QT_API environment variable.
-                      Default is '', i.e PyQt5, default QtPy binding.
+        qt_api (str): Qt binding name to set QT_API environment variable.
+                      Default is '', i.e PyQt5 the default QtPy binding.
                       Possible values are pyside, pyside2 pyqt4, pyqt5.
                       Not case sensitive.
+
+    Raises:
+        TypeError: If arguments do not match: type, keyword name nor quantity.
 
     Returns:
         str: the stylesheet string.
@@ -298,15 +285,17 @@ def load_stylesheet(*args, **kwargs):
         # It is already none
         pass
 
+    # Number of arguments are wrong
     if (kwargs and args) or len(args) > 1 or len(kwargs) > 1:
         raise TypeError("load_stylesheet() takes zero or one argument: "
                         "(new) string type qt_api='pyqt5' or "
                         "(old) boolean type pyside='False'.")
 
+    # No arguments
     elif not kwargs and not args:
         stylesheet = _load_stylesheet(qt_api='pyqt5')
 
-    # Old API
+    # Old API arguments
     elif 'pyside' in kwargs or isinstance(arg, bool):
         pyside = kwargs.get('pyside', arg)
 
@@ -323,11 +312,12 @@ def load_stylesheet(*args, **kwargs):
         # Deprecation warning only for old API
         warnings.warn(DEPRECATION_MSG, DeprecationWarning)
 
-    # New API
+    # New API arguments
     elif 'qt_api' in kwargs or isinstance(arg, str):
         qt_api = kwargs.get('qt_api', arg)
         stylesheet = _load_stylesheet(qt_api=qt_api)
 
+    # Wrong API arguments name or type
     else:
         raise TypeError("load_stylesheet() takes only zero or one argument: "
                         "(new) string type qt_api='pyqt5' or "
@@ -378,3 +368,26 @@ def load_stylesheet_pyqt5():
     """
     warnings.warn(DEPRECATION_MSG, DeprecationWarning)
     return _load_stylesheet(qt_api='pyqt5')
+
+
+def load_stylesheet_from_environment(is_pyqtgraph=False):
+    """
+    Load the stylesheet from QT_API (or PYQTGRAPH_QT_LIB) environment variable.
+
+    Args:
+        is_pyqtgraph (bool): True if it is to be set using PYQTGRAPH_QT_LIB.
+
+    Raises:
+        KeyError: if PYQTGRAPH_QT_LIB does not exist.
+
+    Returns:
+        str: the stylesheet string.
+    """
+    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
+
+    if is_pyqtgraph:
+        stylesheet = _load_stylesheet(qt_api=os.environ('PYQTGRAPH_QT_LIB'))
+    else:
+        stylesheet = _load_stylesheet()
+
+    return stylesheet
