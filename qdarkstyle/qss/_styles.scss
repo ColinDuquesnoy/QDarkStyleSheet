@@ -1205,11 +1205,23 @@ QComboBox {
     /* min-width: 75px;      removed to fix #109 */
 
     QAbstractItemView {
-        background-color: $COLOR_BACKGROUND_DARK;
-        border-radius: $SIZE_BORDER_RADIUS;
-        border: $BORDER_NORMAL;
-        selection-color: $COLOR_SELECTION_LIGHT;
-        selection-background-color: $COLOR_BACKGROUND_NORMAL;
+        background-color: $COLOR_BACKGROUND_NORMAL;
+        selection-background-color: $COLOR_SELECTION_NORMAL;
+
+        &:hover {
+            background-color:  $COLOR_BACKGROUND_NORMAL;
+            color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+        &:selected {
+            background: $COLOR_SELECTION_NORMAL;
+            color: $COLOR_BACKGROUND_NORMAL;
+        }
+
+        &:alternate {
+            background: $COLOR_BACKGROUND_DARK;
+        }
+
     }
 
     &:disabled {
@@ -1222,7 +1234,7 @@ QComboBox {
     }
 
     &:on {
-        selection-background-color: $COLOR_BACKGROUND_DARK;
+        selection-background-color: $COLOR_SELECTION_NORMAL;
     }
 
     /* Needed to remove indicator - fix #132 */
@@ -1234,7 +1246,7 @@ QComboBox {
 
         /* Needed to remove indicator - fix #132 */
         &:alternate {
-            background: #19232D;
+            background: $COLOR_BACKGROUND_DARK;
         }
     }
 
