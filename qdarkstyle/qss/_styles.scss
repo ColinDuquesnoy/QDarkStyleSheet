@@ -1110,7 +1110,13 @@ QToolButton {
 
         &::menu-button {
             border: none;
+
+            &:hover {
+                border:none;
+                border-left: 1px solid $COLOR_SELECTION_LIGHT;
+                border-radius:0;
         }
+    }
     }
 
     /* The subcontrol below is used only in the InstantPopup or DelayedPopup mode */
@@ -1123,8 +1129,7 @@ QToolButton {
         padding: 2px;
         border-radius: $SIZE_BORDER_RADIUS;
         border: $BORDER_NORMAL;
-        /* 16px width + 4px for border = 20px allocated above */
-        width: 16px;
+        width: 12px;
         outline: none;
 
         &:hover {
@@ -1150,9 +1155,13 @@ QToolButton {
 
     &::menu-arrow {
         image: url($PATH_RESOURCES + '/rc/arrow_down.png');
-        height: 12px;
-        width: 12px;
+        height: 8px;
+        width: 8px;
+
+        &:hover{
+            image: url($PATH_RESOURCES + '/rc/arrow_down_focus.png');
     }
+}
 }
 
 /* QCommandLinkButton -----------------------------------------------------
