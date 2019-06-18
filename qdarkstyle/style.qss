@@ -783,13 +783,14 @@ QAbstractSpinBox:up-button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   margin: 1px;
+  width: 12px;
   margin-bottom: -1px;
 }
 
 QAbstractSpinBox::up-arrow, QAbstractSpinBox::up-arrow:disabled, QAbstractSpinBox::up-arrow:off {
   image: url(":/qss_icons/rc/arrow_up_disabled.png");
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
 }
 
 QAbstractSpinBox::up-arrow:hover {
@@ -805,13 +806,14 @@ QAbstractSpinBox:down-button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   margin: 1px;
+  width: 12px;
   margin-top: -1px;
 }
 
 QAbstractSpinBox::down-arrow, QAbstractSpinBox::down-arrow:disabled, QAbstractSpinBox::down-arrow:off {
   image: url(":/qss_icons/rc/arrow_down_disabled.png");
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
 }
 
 QAbstractSpinBox::down-arrow:hover {
@@ -1083,6 +1085,12 @@ QToolButton[popupMode="1"]::menu-button {
   border: none;
 }
 
+QToolButton[popupMode="1"]::menu-button:hover {
+  border: none;
+  border-left: 1px solid #148CD2;
+  border-radius: 0;
+}
+
 QToolButton[popupMode="2"] {
   /* Only for InstantPopup */
   padding-right: 2px;
@@ -1092,8 +1100,7 @@ QToolButton::menu-button {
   padding: 2px;
   border-radius: 4px;
   border: 1px solid #32414B;
-  /* 16px width + 4px for border = 20px allocated above */
-  width: 16px;
+  width: 12px;
   outline: none;
 }
 
@@ -1117,8 +1124,12 @@ QToolButton::menu-indicator {
 
 QToolButton::menu-arrow {
   image: url(":/qss_icons/rc/arrow_down.png");
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
+}
+
+QToolButton::menu-arrow:hover {
+  image: url(":/qss_icons/rc/arrow_down_focus.png");
 }
 
 /* QCommandLinkButton -----------------------------------------------------
@@ -1161,11 +1172,24 @@ QComboBox {
 }
 
 QComboBox QAbstractItemView {
-  background-color: #19232D;
-  border-radius: 4px;
   border: 1px solid #32414B;
-  selection-color: #148CD2;
-  selection-background-color: #32414B;
+  border-radius: 0;
+  background-color: #19232D;
+  selection-background-color: #1464A0;
+}
+
+QComboBox QAbstractItemView:hover {
+  background-color: #19232D;
+  color: #F0F0F0;
+}
+
+QComboBox QAbstractItemView:selected {
+  background: #1464A0;
+  color: #32414B;
+}
+
+QComboBox QAbstractItemView:alternate {
+  background: #19232D;
 }
 
 QComboBox:disabled {
@@ -1178,10 +1202,12 @@ QComboBox:hover {
 }
 
 QComboBox:on {
-  selection-background-color: #19232D;
+  selection-background-color: #1464A0;
 }
 
 QComboBox::indicator {
+  border: none;
+  border-radius: 0;
   background-color: transparent;
   selection-background-color: transparent;
   color: transparent;
@@ -1208,18 +1234,14 @@ QComboBox::item:selected {
 QComboBox::drop-down {
   subcontrol-origin: padding;
   subcontrol-position: top right;
-  width: 20px;
-  border-left-width: 0px;
-  border-left-color: #32414B;
-  border-left-style: solid;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  width: 12px;
+  border-left: 1px solid #32414B;
 }
 
 QComboBox::down-arrow {
   image: url(":/qss_icons/rc/arrow_down_disabled.png");
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
 }
 
 QComboBox::down-arrow:on, QComboBox::down-arrow:hover, QComboBox::down-arrow:focus {
@@ -2047,15 +2069,14 @@ QDateEdit:on {
 QDateEdit::drop-down {
   subcontrol-origin: padding;
   subcontrol-position: top right;
-  width: 20px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  width: 12px;
+  border-left: 1px solid #32414B;
 }
 
 QDateEdit::down-arrow {
   image: url(":/qss_icons/rc/arrow_down_disabled.png");
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
 }
 
 QDateEdit::down-arrow:on, QDateEdit::down-arrow:hover, QDateEdit::down-arrow:focus {
