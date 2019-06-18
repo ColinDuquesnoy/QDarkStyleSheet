@@ -1256,18 +1256,14 @@ QComboBox {
     &::drop-down {
         subcontrol-origin: padding;
         subcontrol-position: top right;
-        width: 20px;
-        border-left-width: 0px;
-        border-left-color: $COLOR_BACKGROUND_NORMAL;
-        border-left-style: solid;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
+        width: 12px;
+        border-left: 1px solid $COLOR_BACKGROUND_NORMAL;
     }
 
     &::down-arrow {
         image: url($PATH_RESOURCES + '/rc/arrow_down_disabled.png');
-        height: 12px;
-        width: 12px;
+        height: 8px;
+        width: 8px;
 
         &:on,
         &:hover,
