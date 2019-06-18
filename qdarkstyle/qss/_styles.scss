@@ -796,7 +796,11 @@ QAbstractSpinBox {
         subcontrol-origin: border;
         subcontrol-position: top right;
         border-left: $BORDER_NORMAL;
+        border-bottom: $BORDER_NORMAL;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
         margin: 1px;
+        margin-bottom: -1px;
     }
 
     &::up-arrow,
@@ -816,7 +820,11 @@ QAbstractSpinBox {
         subcontrol-origin: border;
         subcontrol-position: bottom right;
         border-left: $BORDER_NORMAL;
+        border-top: $BORDER_NORMAL;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
         margin: 1px;
+        margin-top: -1px;
     }
 
     &::down-arrow,
@@ -1680,9 +1688,12 @@ QDockWidget {
     titlebar-close-icon: url($PATH_RESOURCES + '/rc/window_close.png');
     titlebar-normal-icon: url($PATH_RESOURCES + '/rc/window_undock.png');
 
+
+
     &::title {
         /* Better size for title bar */
         padding: 6px;
+        spacing: 4px;
         border: none;
         background-color: $COLOR_BACKGROUND_NORMAL;
     }
