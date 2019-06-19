@@ -1,6 +1,6 @@
 /* QDarkStyleSheet -----------------------------------------------------------
 
-This is the main style sheet, the palette has eight colors.
+This is the main style sheet, the palette has nine colors.
 
 It is based on three selecting colors, three greyish (background) colors
 plus three whitish (foreground) colors. Each set of widgets of the same
@@ -19,21 +19,21 @@ configuration is described bellow.
 
     BACKGROUND -----------
 
-        Light  #4D545B #505F69 (unpressed)
-        Normal #31363B #32414B (border, disabled, pressed, checked, toolbars, menus)
-        Dark   #232629 #19232D (background)
+        Light   (unpressed)
+        Normal  (border, disabled, pressed, checked, toolbars, menus)
+        Dark    (background)
 
     FOREGROUND -----------
 
-        Light  #EFF0F1 #F0F0F0 (texts/labels)
-        Normal         #AAAAAA (not used yet)
-        Dark   #505F69 #787878 (disabled texts)
+        Light   (texts/labels)
+        Normal  (not used yet)
+        Dark    (disabled texts)
 
     SELECTION ------------
 
-        Light  #179AE0 #148CD2 (selection/hover/active)
-        Normal #3375A3 #1464A0 (selected)
-        Dark   #18465D #14506E (selected disabled)
+        Light  (selection/hover/active)
+        Normal (selected)
+        Dark   (selected disabled)
 
 If a stranger configuration is required because of a bugfix or anything
 else, keep the comment on the line above so nobody changes it, including the

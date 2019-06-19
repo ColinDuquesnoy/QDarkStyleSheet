@@ -31,6 +31,8 @@ HEADER_SCSS = '''// ------------------------------------------------------------
 //
 //    File created programmatically
 //
+//    The definitions are in the "qdarkstyle.palette" module
+//
 //    WARNING! All changes made in this file will be lost!
 //
 //----------------------------------------------------------------------------
@@ -38,7 +40,9 @@ HEADER_SCSS = '''// ------------------------------------------------------------
 
 HEADER_QSS = '''/* ---------------------------------------------------------------------------
 
-    Created by the qtsass compiler
+    Created by the qtsass compiler v{}
+
+    The definitions are in the "qdarkstyle.qss._styles.scss" module
 
     WARNING! All changes made in this file will be lost!
 
@@ -99,7 +103,7 @@ def _create_qss(main_scss_path, qss_filepath, header=HEADER_QSS):
         with open(qss_filepath, 'r') as f:
             data = f.read()
 
-        data = header + data
+        data = header.format(qtsass.__version__) + data
 
         with open(qss_filepath, 'w') as f:
             f.write(data)

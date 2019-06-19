@@ -43,7 +43,6 @@ QWidget {
 /* QMainWindow ------------------------------------------------------------
 
 This adjusts the splitter in the dock widget, not qsplitter
-
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qmainwindow
 
 --------------------------------------------------------------------------- */
@@ -2170,6 +2169,10 @@ QDateEdit {
     }
 }
 
+
+/* QAbstractView ----------------------------------------------------------
+
+--------------------------------------------------------------------------- */
 QAbstractView {
 
     &:hover {
@@ -2183,6 +2186,10 @@ QAbstractView {
     }
 }
 
+
+/* PlotWidget -------------------------------------------------------------
+
+--------------------------------------------------------------------------- */
 PlotWidget {
     /* Fix cut labels in plots #134 */
     padding: 0px;
