@@ -88,9 +88,8 @@ STYLES_SCSS_FILEPATH = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
 VARIABLES_SCSS_FILEPATH = os.path.join(QSS_PATH, VARIABLES_SCSS_FILE)
 
 # Todo: check if we are deprecate all those functions or keep them
-DEPRECATION_MSG = '''This function is deprecated in {},
-and it will be removed in v3.0. Please, set the
-wanted binding by using QtPy environment variable QT_API,
+DEPRECATION_MSG = '''This function will be deprecated in v3.0.
+Please, set the wanted binding by using QtPy environment variable QT_API,
 then use load_stylesheet() or use load_stylesheet()
 passing the argument qt_api= 'wanted_binding'.'''.format(__version__)
 
@@ -216,6 +215,7 @@ def _load_stylesheet(qt_api=''):
     # Then we import resources - binary qrc content
     from qdarkstyle import style_rc
 
+    # Thus, by importing the binary we can access the resources
     package_dir = os.path.basename(PACKAGE_PATH)
     qss_rc_path = ":" + os.path.join(package_dir, QSS_FILE)
 
@@ -333,7 +333,6 @@ def load_stylesheet_pyside():
     Returns:
         str: the stylesheet string.
     """
-    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
     return _load_stylesheet(qt_api='pyside')
 
 
@@ -344,7 +343,6 @@ def load_stylesheet_pyside2():
     Returns:
         str: the stylesheet string.
     """
-    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
     return _load_stylesheet(qt_api='pyside2')
 
 
@@ -355,7 +353,6 @@ def load_stylesheet_pyqt():
     Returns:
         str: the stylesheet string.
     """
-    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
     return _load_stylesheet(qt_api='pyqt4')
 
 
@@ -366,8 +363,10 @@ def load_stylesheet_pyqt5():
     Returns:
         str: the stylesheet string.
     """
-    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
     return _load_stylesheet(qt_api='pyqt5')
+
+
+# Deprecation Warning --------------------------------------------------------
 
 
 def load_stylesheet_from_environment(is_pyqtgraph=False):
@@ -391,3 +390,6 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
         stylesheet = _load_stylesheet()
 
     return stylesheet
+
+
+# Deprecated ----------------------------------------------------------------
