@@ -4,11 +4,13 @@ QDarkStylesheet
 |Build Status| |Docs Status| |Latest PyPI version| |License: MIT|
 |License: CC BY 4.0| |Conduct|
 
-A dark stylesheet for Qt applications (Qt4, Qt5, PySide, PySide2, PyQt4,
-PyQt5, QtPy, PyQtGraph).
+The most complete dark stylesheet for Qt application (Qt4, Qt5, PySide,
+PySide2, PyQt4, PyQt5, QtPy, PyQtGraph, Qt.Py).
+
 
 Installation
 ------------
+
 
 Python
 ~~~~~~
@@ -16,18 +18,26 @@ Python
 From PyPI: Get the latest stable version of ``qdarkstyle`` package using
 *pip* (preferable):
 
-.. code:: bash
+    .. code:: bash
 
-    pip install qdarkstyle
+        pip install qdarkstyle
+
 
 From code: Download/clone the project, go to ``qdarkstyle`` folder then:
 
 -  You can use the *setup* script and pip install.
 
-``bash   pip install .``
+    .. code:: bash
+
+        pip install .
+
 
 -  Or, you can use the *setup* script with Python:
-   ``bash   python setup.py install``
+
+    .. code:: bash
+
+        python setup.py install
+
 
 C++
 ~~~
@@ -35,60 +45,74 @@ C++
 -  Download/clone the project and copy the following files to your
    application directory (keep the existing directory hierarchy):
 
--  **qdarkstyle/style.qss**
--  **qdarkstyle/style.qrc**
--  **qdarkstyle/rc/** (the whole directory)
+    -  **qdarkstyle/style.qss**
+    -  **qdarkstyle/style.qrc**
+    -  **qdarkstyle/rc/** (the whole directory)
+
 
 -  Add **qdarkstyle/style.qrc** to your **.pro file** as follows:
 
-``cpp   RESOURCES += qdarkstyle/style.qrc``
+    .. code:: c++
+
+        RESOURCES += qdarkstyle/style.qrc
+
 
 -  Load the stylesheet:
 
-.. code:: c++
-    QFile f(":qdarkstyle/style.qss");
-    if (!f.exists())   {
-    printf("Unable to set stylesheet, file not found\n");
-    }   else   {       f.open(QFile::ReadOnly | QFile::Text);       QTextStream ts(&f);       qApp->setStyleSheet(ts.readAll());   }
+    .. code:: c++
 
-*Note: The ":" in the file name is necessary to define that file as a
+        QFile f(":qdarkstyle/style.qss");
+
+        if (!f.exists())   {
+            printf("Unable to set stylesheet, file not found\n");
+        }
+        else   {
+            f.open(QFile::ReadOnly | QFile::Text);
+            QTextStream ts(&f);
+            qApp->setStyleSheet(ts.readAll());
+        }
+
+
+Note: The ":" in the file name is necessary to define that file as a
 resource library. For more information see the discussion
 `here <https://github.com/ColinDuquesnoy/QDarkStyleSheet/pull/87>`__.*
+
 
 Usage
 -----
 
-Here is an example using PySide
+If your project already uses QtPy or you need to set it programmatically,
+it is far more simple
 
 .. code:: python
 
     import sys
     import qdarkstyle
-    from PySide import QtGui
+    import os
+
+    # set the environment variable to use a specific wrapper
+    # it can be set to pyqt, pyqt5, pyside or pyside2 (not implemented yet)
+    # you do not need to use QtPy to set this variable
+    os.environ['QT_API'] = 'pyqt5'
+
+    # import from QtPy instead of doing it directly
+    # note that QtPy always uses PyQt5 API
+    from qtpy import QtWidgets
 
     # create the application and the main window
-    app = QtGui.QApplication(sys.argv)
-    window = QtGui.QMainWindow()
+    app = QtWidgets.QApplication(sys.argv)
+    window = QtWidgets.QMainWindow()
 
     # setup stylesheet
-    app.setStyleSheet(qdarkstyle.load_stylesheet_pyside())
+    # the default system in qdarkstyle uses qtpy environment variable
+    app.setStyleSheet(qdarkstyle.load_stylesheet())
 
     # run
     window.show()
     app.exec_()
 
-To use another wrapper for Qt, you need to replace some lines. See
-examples below.
 
-To use PyQt4, change two lines
-
-.. code:: python
-
-    from PySide import QtGui
-    app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt())
-
-If PyQt5, more lines need to be changed because of its API, see the
-complete example
+If you are using PyQt5 directly, see the complete example
 
 .. code:: python
 
@@ -102,41 +126,37 @@ complete example
 
     # setup stylesheet
     app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+    # or in new API
+    app.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyqt5'))
 
     # run
     window.show()
     app.exec_()
 
-If your project uses QtPy or you need to set it programmatically, it is
-far more simple
+
+Here is an example using PySide2
 
 .. code:: python
 
     import sys
     import qdarkstyle
-    import os
-
-    # set the environment variable to use a specific wrapper
-    # it can be set to pyqt, pyqt5, pyside or pyside2 (not implemented yet)
-    # you do not need to use QtPy to set this variable
-    os.environ['QT_API'] = 'pyqt'
-
-    # import from QtPy instead of doing it directly
-    # note that QtPy always uses PyQt5 API
-    from qtpy import QtWidgets
+    from PyQt5 import QtWidgets
 
     # create the application and the main window
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow()
 
     # setup stylesheet
-    app.setStyleSheet(qdarkstyle.load_stylesheet_from_environment())
+    app.setStyleSheet(qdarkstyle.load_stylesheet_pyside2())
+    # or in new API
+    app.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyside2'))
 
     # run
     window.show()
     app.exec_()
 
-It is also simple if you use PyQtGraph
+
+If you use PyQtGraph, then the code is
 
 .. code:: python
 
@@ -146,7 +166,7 @@ It is also simple if you use PyQtGraph
 
     # set the environment variable to use a specific wrapper
     # it can be set to PyQt, PyQt5, PySide or PySide2 (not implemented yet)
-    os.environ['PYQTGRAPH_QT_LIB'] = 'PyQt'
+    os.environ['PYQTGRAPH_QT_LIB'] = 'PyQt5'
 
     # import from pyqtgraph instead of doing it directly
     # note that PyQtGraph always uses PyQt4 API
@@ -157,7 +177,7 @@ It is also simple if you use PyQtGraph
     window = QtGui.QMainWindow()
 
     # setup stylesheet
-    app.setStyleSheet(qdarkstyle.load_stylesheet_from_environment(is_pyqtgraph=True))
+    app.setStyleSheet(qdarkstyle.load_stylesheet(qt_api=os.environ['PYQTGRAPH_QT_LIB'])
 
     # run
     window.show()
@@ -166,9 +186,11 @@ It is also simple if you use PyQtGraph
 If you are using Qt.py, which is different from qtpy, you should install
 qtpy then set both to the same binding.
 
+
 *There is an example included in the *example* folder. You can run the
 script without installing qdarkstyle. You only need to have PySide or
 PySide2 or PyQt4 or PyQt5 installed on your system.*
+
 
 What is new?
 ------------
@@ -178,128 +200,59 @@ palette has only 9 colors. Most widgets are revised and their styles
 were improved. We also provide a command line (script) to get info that
 could be used when opening issues. See the image below.
 
-::
+From 2.7, we have added SCSS, so the palette can be accessed programatically.
+Also many scripts were added to give freedom fro developers who wants to
+change the colors of our palette. All images and icons were revised, also
+creating SVG files for all of them.
 
-    qdarkstyle --all
+From 2.8, we moved to QtPy to simplify your code, thus this is a
+required dependency now.
 
-Snapshots
----------
 
-Here are a few snapshots comparing the use of QDarkStyle v2.6.1 and the
+Screenshots
+-----------
+
+Here are a few snapshots comparing the use of QDarkStyle and the
 default style. Click in the image to zoom.
 
-.. raw:: html
 
-   <table style="width:100%">
+Containers (no tabs) and Buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. raw:: html
+.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/dark_containers_buttons.png
 
-   <tr>
+.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/images/no_dark_containers_buttons.png
 
-::
 
-    <th colspan=2>Containers (no tabs) and Buttons</th>
+Containers (tabs) and Displays
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. raw:: html
+.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/dark_containers_tabs_displays.png
 
-   </tr>
+.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/no_dark_containers_tabs_displays.png
 
-.. raw:: html
 
-   <tr>
+Widgets and Inputs (fields)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/dark_widgets_inputs_fields.png
 
-    <td><img src="./images/qdarkstyle_containers_buttons.png"/></td>
-    <td><img src="./images/no_dark_containers_buttons.png"/></td>
+.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/no_dark_widgets_inputs_fields.png
 
-.. raw:: html
 
-   </tr>
+Views and Inputs (no fields)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. raw:: html
+.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/dark_views_inputs_no_fields.png
 
-   <tr>
+.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/no_dark_views_inputs_no_fields.png
 
-::
-
-    <th colspan=2>Containers (tabs) and Displays</th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td><img src="./images/qdarkstyle_containers_tabs_displays.png"/></td>
-    <td><img src="./images/no_dark_containers_tabs_displays.png"/></td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <th colspan=2>Widgets and Inputs (fields)</th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td><img src="./images/qdarkstyle_widgets_inputs_fields.png"/></td>
-    <td><img src="./images/no_dark_widgets_inputs_fields.png"/></td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <th colspan=2>Views and Inputs (no fields)</th>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-::
-
-    <td><img src="./images/qdarkstyle_views_inputs_no_fields.png"/></td>
-    <td><img src="./images/no_dark_views_inputs_no_fields.png"/></td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   </table>
 
 Changelog
 ---------
 
 Please, see `CHANGES <CHANGES.md>`__ file.
+
 
 License
 -------
@@ -309,10 +262,12 @@ project are licensed under CC-BY license.
 
 For more information see `LICENSE <LICENSE.md>`__ file.
 
+
 Authors
 -------
 
 For more information see `AUTHORS <AUTHORS.md>`__ file.
+
 
 Contributing
 ------------
