@@ -13,8 +13,9 @@ Welcome to QDarkStyle's documentation!
    build/example/index.rst
    build/reference/index.rst
    build/script/index.rst
-   changes.rst
+   known_issues.rst
    contributing.rst
+   changes.rst
    authors.rst
    license.rst
    code_of_conduct.rst

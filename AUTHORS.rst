@@ -14,6 +14,7 @@ These people were/are mainteiners of this project.
 
 -  2019-current `Carlos Cordoba <https://github.com/ccordoba12>`__
 
+
 Contributor(s)
 --------------
 

@@ -75,7 +75,7 @@ C++
 
 Note: The ":" in the file name is necessary to define that file as a
 resource library. For more information see the discussion
-`here <https://github.com/ColinDuquesnoy/QDarkStyleSheet/pull/87>`__.*
+`here <https://github.com/ColinDuquesnoy/QDarkStyleSheet/pull/87>`__.
 
 
 Usage

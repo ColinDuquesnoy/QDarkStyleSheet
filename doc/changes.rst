@@ -1,1 +1,1 @@
-.. mdinclude::  ../CHANGES.rst
+.. include::  ../CHANGES.rst

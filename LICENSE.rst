@@ -4,7 +4,7 @@ License
 The MIT License (MIT) - Code
 ----------------------------
 
-Copyright (c) 2013-2018 Colin Duquesnoy
+Copyright (c) 2013-2019 Colin Duquesnoy
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
@@ -25,10 +25,12 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
 Creative Commons Attribution International 4.0 - Images
 -------------------------------------------------------
 
-QDarkStyle (c) 2013-2018 Colin Duquesnoy
+QDarkStyle (c) 2013-2019 Colin Duquesnoy
+QDarkStyle (c) 2019-2019 Daniel Cosmo Pizetta
 
 Creative Commons Corporation (“Creative Commons”) is not a law firm and
 does not provide legal services or legal advice. Distribution of
@@ -77,6 +79,7 @@ exhaustive, and do not form part of our licenses.
    Although not required by our licenses, you are encouraged to respect
    those requests where reasonable. `More considerations for the
    public <http://wiki.creativecommons.org/Considerations_for_licensors_and_licensees#Considerations_for_licensees>`__.
+
 
 Creative Commons Attribution 4.0 International Public License
 -------------------------------------------------------------
@@ -155,7 +158,7 @@ k. **You** means the individual or entity exercising the Licensed Rights
 Section 2 – Scope
 ~~~~~~~~~~~~~~~~~
 
-a. ***License grant.***
+a. **License grant.**
 
 1. Subject to the terms and conditions of this Public License, the
    Licensor hereby grants You a worldwide, royalty-free,
@@ -206,7 +209,7 @@ a. ***License grant.***
    designated to receive attribution as provided in Section
    3(a)(1)(A)(i).
 
-b. ***Other rights.***
+b. **Other rights.**
 
 1. Moral rights, such as the right of integrity, are not licensed under
    this Public License, nor are publicity, privacy, and/or other similar
@@ -230,7 +233,7 @@ Section 3 – License Conditions
 Your exercise of the Licensed Rights is expressly made subject to the
 following conditions.
 
-a. ***Attribution.***
+a. **Attribution.**
 
 1. If You Share the Licensed Material (including in modified form), You
    must:
@@ -238,9 +241,9 @@ a. ***Attribution.***
    A. retain the following if it is supplied by the Licensor with the
    Licensed Material:
 
-   ::
-
-        i. identification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);
+        i. identification of the creator(s) of the Licensed Material and any
+           others designated to receive attribution, in any reasonable manner
+           requested by the Licensor (including by pseudonym if designated);
 
         ii. a copyright notice;
 
@@ -295,7 +298,7 @@ Rights include other Copyright and Similar Rights.
 Section 5 – Disclaimer of Warranties and Limitation of Liability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-a. **Unless otherwise separately undertaken by the Licensor, to the
+a. Unless otherwise separately undertaken by the Licensor, to the
    extent possible, the Licensor offers the Licensed Material as-is and
    as-available, and makes no representations or warranties of any kind
    concerning the Licensed Material, whether express, implied,
@@ -304,9 +307,9 @@ a. **Unless otherwise separately undertaken by the Licensor, to the
    non-infringement, absence of latent or other defects, accuracy, or
    the presence or absence of errors, whether or not known or
    discoverable. Where disclaimers of warranties are not allowed in full
-   or in part, this disclaimer may not apply to You.**
+   or in part, this disclaimer may not apply to You.
 
-b. **To the extent possible, in no event will the Licensor be liable to
+b. To the extent possible, in no event will the Licensor be liable to
    You on any legal theory (including, without limitation, negligence)
    or otherwise for any direct, special, indirect, incidental,
    consequential, punitive, exemplary, or other losses, costs, expenses,
@@ -314,7 +317,7 @@ b. **To the extent possible, in no event will the Licensor be liable to
    Material, even if the Licensor has been advised of the possibility of
    such losses, costs, expenses, or damages. Where a limitation of
    liability is not allowed in full or in part, this limitation may not
-   apply to You.**
+   apply to You.
 
 c. The disclaimer of warranties and limitation of liability provided
    above shall be interpreted in a manner that, to the extent possible,

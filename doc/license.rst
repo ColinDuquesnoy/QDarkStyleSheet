@@ -1,1 +1,1 @@
-.. mdinclude:: ../LICENSE.rst
+.. include:: ../LICENSE.rst
