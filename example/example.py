@@ -32,18 +32,20 @@ problems.
 
 .. code-block:: python
 
-    python example.py  --qt_from=pyqt --no_dark
+    python example.py  --qt_from=pyqt5 --no_dark
 
 .. note.. :: qdarkstyle does not have to be installed to run the example.
 
 """
 
 # Standard library imports
+import qdarkstyle
 import argparse
 import logging
 import os
 import sys
 import platform
+import time
 
 # Third part libraries
 import helpdev
@@ -56,7 +58,6 @@ sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 logging.basicConfig(level=logging.DEBUG)
 
 # must be in this place, after setting path, to not need to install
-import qdarkstyle
 
 # Constants
 SCREENSHOTS_PATH = qdarkstyle.IMAGES_PATH
@@ -67,7 +68,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--qt_from', default='qtpy',
-                        choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph'],
+                        choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'qt.py'],
                         help="Choose which wrapper/framework is to be used to run the example.", type=str)
     parser.add_argument('--no_dark', action='store_true',
                         help="Exihibts the original  window (without qdarkstyle).")
@@ -78,18 +79,43 @@ def main():
     parser.add_argument('--screenshots', action='store_true',
                         help="Generate screenshots.")
 
-    # parsing arguments from command line
+    # Parsing arguments from command line
     args = parser.parse_args()
 
-    # to avoid problems when testing without screen
+    # To avoid problems when testing without screen
     if args.test:
         os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 
-    from qtpy import API_NAME, __version__
+    # Set QT_API variable before importing QtPy
+    if args.qt_from in ['pyqt', 'pyqt5', 'pyside', 'pyside2']:
+        os.environ['QT_API'] = args.qt_from
+    elif args.qt_from == 'pyqtgraph':
+        os.environ['QT_API'] = os.environ['PYQTGRAPH_QT_LIB']
+    elif args.qt_from in ['qt.py', 'qt']:
+        try:
+            import Qt
+        except ImportError:
+            print('Could not import Qt (Qt.Py)')
+        else:
+            os.environ['QT_API'] = Qt.__binding__
+
+    # QtPy imports
+    from qtpy import API_NAME, QT_VERSION, PYQT_VERSION, PYSIDE_VERSION
+    from qtpy import __version__ as QTPY_VERSION
     from qtpy.QtWidgets import QApplication, QMainWindow, QDockWidget, QStatusBar, QLabel, QPushButton
     from qtpy.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
 
-    # import examples UI according to wrapper
+    # Set API_VERSION variable
+    API_VERSION = ''
+
+    if PYQT_VERSION:
+        API_VERSION = PYQT_VERSION
+    elif PYSIDE_VERSION:
+        API_VERSION = PYSIDE_VERSION
+    else:
+        API_VERSION = 'Not found'
+
+    # Import examples UI according to wrapper
     from ui.mw_menus_ui import Ui_MainWindow as ui_main
 
     from ui.dw_buttons_ui import Ui_DockWidget as ui_buttons
@@ -132,7 +158,9 @@ def main():
     app.setOrganizationName('QDarkStyle')
     app.setApplicationName('QDarkStyle Example')
 
-    if args.no_dark is False:
+    style = ''
+
+    if not args.no_dark:
         style = qdarkstyle.load_stylesheet()
 
     app.setStyleSheet(style)
@@ -143,12 +171,15 @@ def main():
 
     ui = ui_main()
     ui.setupUi(window)
-    window.setWindowTitle("QDarkStyle Example - " +
-                          "(qdarkstyle=v" + qdarkstyle.__version__ +
-                          ", qtpy=v" + __version__ +
-                          ", " + API_NAME + "=v" + "    "
-                          ", Qt=v" + " "
-                          ", Python=v" + platform.python_version() + ")")
+
+    title = ("QDarkStyle Example - " +
+             "(QDarkStyle=v" + qdarkstyle.__version__ +
+             ", QtPy=v" + QTPY_VERSION +
+             ", " + API_NAME + "=v" + API_VERSION +
+             ", Qt=v" + QT_VERSION +
+             ", Python=v" + platform.python_version() + ")")
+
+    window.setWindowTitle(title)
 
     # create docks for buttons
     dw_buttons = QDockWidget()
@@ -220,6 +251,7 @@ def main():
     qstatusbar = QStatusBar()
     qstatusbar.addWidget(QLabel('Issue Spyder #9120, #9121 - background not matching.'))
     qstatusbar.addWidget(QPushButton('OK'))
+    qstatusbar.addWidget(QLabel('INFO: ' + title))
     window.setStatusBar(qstatusbar)
 
     # Todo: add report info and other info in HELP graphical
@@ -228,35 +260,33 @@ def main():
     if args.test:
         QTimer.singleShot(2000, app.exit)
 
-    # run
-    read_settings(window, args.reset)
-    window.showMaximized()
+    if not args.screenshots:
+        # do not read when taking screenshots
+        read_settings(window, args.reset)
+        window.showMaximized()
 
     # Save screenshots for differents displays and quit
-    # Todo: may we need to reset before screenshoots, check
     if args.screenshots:
-        window.showFullScreen()
-        QTimer.singleShot(1000, lambda: create_screenshots(app, window, not args.no_dark))
+        create_screenshots(app, window, args.no_dark)
 
     app.exec_()
     write_settings(window)
 
 
-def create_screenshots(app, window, is_darkstyle):
+def create_screenshots(app, window, no_dark):
     """Save screenshots for different application views and quit."""
-    from qtpy.QtCore import QCoreApplication
+    from qtpy.QtCore import QCoreApplication, QTimer, Qt
     from qtpy.QtGui import QGuiApplication
     from qtpy.QtWidgets import QDockWidget, QTabWidget
 
-    theme = 'dark' if is_darkstyle else 'normal'
-
+    theme = 'no_dark' if no_dark else 'dark'
     print('\nCreating {} screenshots'.format(theme))
 
     docks = window.findChildren(QDockWidget)
     tabs = window.findChildren(QTabWidget)
 
     widget_data = {
-        'containers_buttons.png': [
+        'containers_no_tabs_buttons.png': [
             'Containers - No Tabs',
             'Buttons',
         ],
@@ -264,50 +294,66 @@ def create_screenshots(app, window, is_darkstyle):
             'Containers - Tabs',
             'Displays',
         ],
-        'views_inputs_no_fields.png': [
-            'Views',
-            'Inputs - No Fields',
-        ],
         'widgets_inputs_fields.png': [
             'Widgets',
             'Inputs - Fields',
         ],
+        'views_inputs_no_fields.png': [
+            'Views',
+            'Inputs - No Fields',
+        ]
     }
-    prefix = 'qdarkstyle_' if is_darkstyle else 'no_dark_'
-    screen = QGuiApplication.primaryScreen()
 
-    QCoreApplication.processEvents()
-
+    # Central widget tabs of with examples
     tab = [tab for tab in tabs if tab.count() >= 12][0]
-    tab.setCurrentIndex(11)
+    tab.setCurrentIndex(0)
 
     QCoreApplication.processEvents()
 
-    for fname_suffix, widgets in widget_data.items():
-        QCoreApplication.processEvents()
-        png_path = os.path.join(SCREENSHOTS_PATH, prefix + fname_suffix)
+    for fname_suffix, dw_titles in widget_data.items():
+
+        png_path = os.path.join(SCREENSHOTS_PATH, theme + '_' + fname_suffix)
         print('\t' + png_path)
 
-        for dockwidget_name in widgets:
-            dockwidget = [dw for dw in docks if dw.windowTitle() == dockwidget_name]
-            if dockwidget:
-                dockwidget = dockwidget[0]
-                dockwidget.show()
-                dockwidget.raise_()
+        dw_list = []
+
+        for dw in docks:
+            if dw.windowTitle() in dw_titles:
+                print('Evidencing : ', dw.windowTitle())
+                dw_list.append(dw)
+                dw.raise_()
+                dw.show()
                 QCoreApplication.processEvents()
 
-            dockwidget = None
+        # Attention: any change in update, processEvent and sleep calls
+        # make those screenshots not working, specially the first one.
+        # It seems that processEvents are not working properly
 
+        window.update()
+        window.showFullScreen()
+        QCoreApplication.processEvents()
+
+        time.sleep(0.5)
+        QCoreApplication.processEvents()
+
+        screen = QGuiApplication.primaryScreen()
         QCoreApplication.processEvents()
         pixmap = screen.grabWindow(window.winId())
+
+        # Yeah, this is duplicated to avoid screenshot problems
+        screen = QGuiApplication.primaryScreen()
+        QCoreApplication.processEvents()
+        pixmap = screen.grabWindow(window.winId())
+
         img = pixmap.toImage()
         img.save(png_path)
+
         QCoreApplication.processEvents()
 
-    window.showNormal()
     QCoreApplication.processEvents()
+    window.close()
     print('\n')
-    app.exit()
+    app.exit(sys.exit())
 
 
 if __name__ == "__main__":
