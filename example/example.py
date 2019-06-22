@@ -83,7 +83,7 @@ def main():
     args = parser.parse_args()
 
     # To avoid problems when testing without screen
-    if args.test:
+    if args.test or args.screenshots:
         os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 
     # Set QT_API variable before importing QtPy
@@ -264,6 +264,11 @@ def main():
         # do not read when taking screenshots
         read_settings(window, args.reset)
         window.showMaximized()
+        window.showMaximized()
+        window.setWindowFlags(window.windowFlags() |
+                              Qt.WindowMinimizeButtonHint |
+                              Qt.WindowMaximizeButtonHint |
+                              Qt.WindowCloseButtonHint)
 
     # Save screenshots for differents displays and quit
     if args.screenshots:

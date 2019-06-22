@@ -16,10 +16,8 @@
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+
+import qdarkstyle
 import os
 import sys
 
@@ -35,15 +33,15 @@ sys.path.insert(0, os.path.abspath('..'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages',
-    'sphinx.ext.napoleon']
+              'sphinx.ext.doctest',
+              'sphinx.ext.intersphinx',
+              'sphinx.ext.todo',
+              'sphinx.ext.coverage',
+              'sphinx.ext.mathjax',
+              'sphinx.ext.ifconfig',
+              'sphinx.ext.viewcode',
+              'sphinx.ext.githubpages',
+              'sphinx.ext.napoleon']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -59,7 +57,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'QDarkStyle'
-copyright = '2018, Colin Duquesnoy'
+copyright = '2019, Colin Duquesnoy'
 author = 'Colin Duquesnoy'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -67,7 +65,6 @@ author = 'Colin Duquesnoy'
 # built documents.
 #
 # The short X.Y version.
-import qdarkstyle
 version = qdarkstyle.__version__
 # The full version, including alpha/beta/rc tags.
 release = ''
@@ -177,8 +174,6 @@ texinfo_documents = [
      author, 'QDarkStyle', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
