@@ -16,7 +16,7 @@ install_requires = ['helpdev>=0.6.2', 'qtpy>=1.7']
 
 extras_require = {
     'develop': ['qtsass', 'watchdog'],
-    'docs': ['sphinx', 'm2r', 'sphinx_rtd_theme'],
+    'docs': ['sphinx', 'sphinx_rtd_theme'],
     'example': ['pyqt5', 'pyside2']
 }
 
@@ -28,7 +28,7 @@ setup(
     license='MIT',
     author='Colin Duquesnoy',
     author_email='colin.duquesnoy@gmail.com',
-    description='A dark stylesheet for Python and Qt applications',
+    description='The most complete dark stylesheet for Python and Qt applications',
     long_description=long_desc,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
