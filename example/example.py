@@ -10,10 +10,12 @@ Qt Design (common ones) in the basic states (enabled/disabled), and
 Requirements:
 
     - Python 2 or Python 3
-    - PyQt4 or PyQt5 or PySide or PySide2
-    - QtPy or PyQtGraph (if choosen)
+    - QtPy
+    - Helpdev
+    - PyQt5 or PyQt4 or PySide2 or PySide
+    - PyQtGraph or Qt.Py (if choosen)
 
-To run this example using PyQt4, simple do
+To run this example using PyQt5, simple do
 
 .. code-block:: python
 
@@ -23,23 +25,21 @@ or
 
 .. code-block:: python
 
-    python example.py  --qt_from=pyqt
+    python example.py  --qt_from=pyqt5
 
-Other options for qt_from are: pyqt5, pyside, qtpy and pyqtgraph.
-
-You also can run the example without dark theme (no_dark), to check for
-problems.
+Other options for qt_from are: pyqt5, pyside2, pyqt, pyside, qtpy, pyqtgraph, and qt.py.
+Also, you can run the example without dark theme (no_dark), to check for problems.
 
 .. code-block:: python
 
     python example.py  --qt_from=pyqt5 --no_dark
 
-.. note.. :: qdarkstyle does not have to be installed to run the example.
+Note:
+    qdarkstyle does not have to be installed to run the example.
 
 """
 
 # Standard library imports
-import qdarkstyle
 import argparse
 import logging
 import os
@@ -48,16 +48,19 @@ import platform
 import time
 
 # Third part libraries
+# QtPy must be imported after setting
 import helpdev
 
-# make the example runnable without the need to install
+# Make the example runnable without the need to install
 from os.path import abspath, dirname
 sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
 
-# set log for debug
+# Set log for debug
 logging.basicConfig(level=logging.DEBUG)
+_logger = logging.getLogger(__name__)
 
-# must be in this place, after setting path, to not need to install
+# Must be in this place, after setting path, to not need to install
+import qdarkstyle
 
 # Constants
 SCREENSHOTS_PATH = qdarkstyle.IMAGES_PATH
@@ -67,17 +70,17 @@ def main():
     """Execute QDarkStyle example."""
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument('--qt_from', default='qtpy',
-                        choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'qt.py'],
-                        help="Choose which wrapper/framework is to be used to run the example.", type=str)
+    parser.add_argument('--qt_from', default='qtpy', type=str,
+                        choices=['pyqt5', 'pyqt', 'pyside2', 'pyside', 'qtpy', 'pyqtgraph', 'qt.py'],
+                        help="Choose which binding and/or abstraction is to be used to run the example.")
     parser.add_argument('--no_dark', action='store_true',
-                        help="Exihibts the original  window (without qdarkstyle).")
+                        help="Exihibts the original window (without qdarkstyle).")
     parser.add_argument('--test', action='store_true',
                         help="Auto close window after 2s.")
     parser.add_argument('--reset', action='store_true',
-                        help="Reset GUI settings (position, size).")
+                        help="Reset GUI settings (position, size) then opens.")
     parser.add_argument('--screenshots', action='store_true',
-                        help="Generate screenshots.")
+                        help="Generate screenshots on images folder.")
 
     # Parsing arguments from command line
     args = parser.parse_args()
@@ -115,7 +118,7 @@ def main():
     else:
         API_VERSION = 'Not found'
 
-    # Import examples UI according to wrapper
+    # Import examples UI
     from ui.mw_menus_ui import Ui_MainWindow as ui_main
 
     from ui.dw_buttons_ui import Ui_DockWidget as ui_buttons
@@ -127,31 +130,6 @@ def main():
     from ui.dw_views_ui import Ui_DockWidget as ui_views
     from ui.dw_containers_tabs_ui import Ui_DockWidget as ui_containers_tabs
     from ui.dw_containers_no_tabs_ui import Ui_DockWidget as ui_containers_no_tabs
-
-    def write_settings(window):
-        """Get window settings and write it into a file."""
-        settings = QSettings('QDarkStyle', 'QDarkStyle Example')
-        settings.setValue('pos', window.pos())
-        settings.setValue('size', window.size())
-        settings.setValue('state', window.saveState())
-
-    def read_settings(window, reset=False):
-        """Read and set window settings from a file."""
-        settings = QSettings('QDarkStyle', 'QDarkStyle Example')
-
-        try:
-            pos = settings.value('pos', window.pos())
-            size = settings.value('size', window.size())
-            state = settings.value('state', window.saveState())
-        except Exception:
-            pos = settings.value('pos', window.pos(), type='QPoint')
-            size = settings.value('size', window.size(), type='QSize')
-            state = settings.value('state', window.saveState(), type='QByteArray')
-
-        if not reset:
-            window.restoreState(state)
-            window.resize(size)
-            window.move(pos)
 
     # create the application
     app = QApplication(sys.argv)
@@ -179,103 +157,133 @@ def main():
              ", Qt=v" + QT_VERSION +
              ", Python=v" + platform.python_version() + ")")
 
+    _logger.info(title)
+
     window.setWindowTitle(title)
 
-    # create docks for buttons
+    # Create docks for buttons
     dw_buttons = QDockWidget()
     dw_buttons.setObjectName('buttons')
     ui_buttons = ui_buttons()
     ui_buttons.setupUi(dw_buttons)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_buttons)
 
-    # create docks for buttons
+    # Create docks for buttons
     dw_displays = QDockWidget()
     dw_displays.setObjectName('displays')
     ui_displays = ui_displays()
     ui_displays.setupUi(dw_displays)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_displays)
 
-    # create docks for inputs - no fields
+    # Create docks for inputs - no fields
     dw_inputs_no_fields = QDockWidget()
     dw_inputs_no_fields.setObjectName('inputs_no_fields')
     ui_inputs_no_fields = ui_inputs_no_fields()
     ui_inputs_no_fields.setupUi(dw_inputs_no_fields)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_no_fields)
 
-    # create docks for inputs - fields
+    # Create docks for inputs - fields
     dw_inputs_fields = QDockWidget()
     dw_inputs_fields.setObjectName('_fields')
     ui_inputs_fields = ui_inputs_fields()
     ui_inputs_fields.setupUi(dw_inputs_fields)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_fields)
 
-    # create docks for widgets
+    # Create docks for widgets
     dw_widgets = QDockWidget()
     dw_widgets.setObjectName('widgets')
     ui_widgets = ui_widgets()
     ui_widgets.setupUi(dw_widgets)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_widgets)
 
-    # create docks for views
+    # Create docks for views
     dw_views = QDockWidget()
     dw_views.setObjectName('views')
     ui_views = ui_views()
     ui_views.setupUi(dw_views)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_views)
 
-    # create docks for containers - no tabs
+    # Create docks for containers - no tabs
     dw_containers_no_tabs = QDockWidget()
     dw_containers_no_tabs.setObjectName('containers_no_tabs')
     ui_containers_no_tabs = ui_containers_no_tabs()
     ui_containers_no_tabs.setupUi(dw_containers_no_tabs)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_no_tabs)
 
-    # create docks for containters - tabs
+    # Create docks for containters - tabs
     dw_containers_tabs = QDockWidget()
     dw_containers_tabs.setObjectName('containers')
     ui_containers_tabs = ui_containers_tabs()
     ui_containers_tabs.setupUi(dw_containers_tabs)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_tabs)
 
-    # tabify right docks
+    # Tabify right docks
     window.tabifyDockWidget(dw_buttons, dw_displays)
     window.tabifyDockWidget(dw_displays, dw_inputs_fields)
     window.tabifyDockWidget(dw_inputs_fields, dw_inputs_no_fields)
 
-    # tabify right docks
+    # Tabify left docks
     window.tabifyDockWidget(dw_containers_no_tabs, dw_containers_tabs)
     window.tabifyDockWidget(dw_containers_tabs, dw_widgets)
     window.tabifyDockWidget(dw_widgets, dw_views)
 
-    # issues #9120, #9121 on Spyder
+    # Issues #9120, #9121 on Spyder
     qstatusbar = QStatusBar()
     qstatusbar.addWidget(QLabel('Issue Spyder #9120, #9121 - background not matching.'))
     qstatusbar.addWidget(QPushButton('OK'))
+
+    # Add info also in status bar for screenshots get it
     qstatusbar.addWidget(QLabel('INFO: ' + title))
     window.setStatusBar(qstatusbar)
 
     # Todo: add report info and other info in HELP graphical
 
-    # auto quit after 2s when testing on travis-ci
+    # Auto quit after 2s when in test mode
     if args.test:
         QTimer.singleShot(2000, app.exit)
 
-    if not args.screenshots:
-        # do not read when taking screenshots
-        read_settings(window, args.reset)
-        window.showMaximized()
-        window.showMaximized()
-        window.setWindowFlags(window.windowFlags() |
-                              Qt.WindowMinimizeButtonHint |
-                              Qt.WindowMaximizeButtonHint |
-                              Qt.WindowCloseButtonHint)
-
-    # Save screenshots for differents displays and quit
+    # Save screenshots for different displays and quit
     if args.screenshots:
         create_screenshots(app, window, args.no_dark)
+    # Do not read settings when taking screenshots - like reset
+    else:
+        _read_settings(window, args.reset, QSettings)
+
+    window.showMaximized()
+    window.setWindowFlags(window.windowFlags() |
+                          Qt.WindowMinimizeButtonHint |
+                          Qt.WindowMaximizeButtonHint |
+                          Qt.WindowCloseButtonHint)
 
     app.exec_()
-    write_settings(window)
+    _write_settings(window, QSettings)
+
+
+def _write_settings(window, QSettings):
+    """Get window settings and write it into a file."""
+    settings = QSettings('QDarkStyle', 'QDarkStyle Example')
+    settings.setValue('pos', window.pos())
+    settings.setValue('size', window.size())
+    settings.setValue('state', window.saveState())
+
+
+def _read_settings(window, reset, QSettings):
+    """Read and set window settings from a file."""
+    settings = QSettings('QDarkStyle', 'QDarkStyle Example')
+
+    try:
+        pos = settings.value('pos', window.pos())
+        size = settings.value('size', window.size())
+        state = settings.value('state', window.saveState())
+    except Exception:
+        pos = settings.value('pos', window.pos(), type='QPoint')
+        size = settings.value('size', window.size(), type='QSize')
+        state = settings.value('state', window.saveState(), type='QByteArray')
+
+    if not reset:
+        window.restoreState(state)
+        window.resize(size)
+        window.move(pos)
 
 
 def create_screenshots(app, window, no_dark):
@@ -309,23 +317,19 @@ def create_screenshots(app, window, no_dark):
         ]
     }
 
-    # Central widget tabs of with examples
+    # Central widget tabs of with examples, reset positions
     tab = [tab for tab in tabs if tab.count() >= 12][0]
     tab.setCurrentIndex(0)
 
     QCoreApplication.processEvents()
 
     for fname_suffix, dw_titles in widget_data.items():
-
         png_path = os.path.join(SCREENSHOTS_PATH, theme + '_' + fname_suffix)
         print('\t' + png_path)
-
-        dw_list = []
 
         for dw in docks:
             if dw.windowTitle() in dw_titles:
                 print('Evidencing : ', dw.windowTitle())
-                dw_list.append(dw)
                 dw.raise_()
                 dw.show()
                 QCoreApplication.processEvents()
