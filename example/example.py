@@ -244,16 +244,12 @@ def main():
 
     # Save screenshots for different displays and quit
     if args.screenshots:
+        window.showFullScreen()
         create_screenshots(app, window, args.no_dark)
     # Do not read settings when taking screenshots - like reset
     else:
         _read_settings(window, args.reset, QSettings)
-
-    window.showMaximized()
-    window.setWindowFlags(window.windowFlags() |
-                          Qt.WindowMinimizeButtonHint |
-                          Qt.WindowMaximizeButtonHint |
-                          Qt.WindowCloseButtonHint)
+        window.showMaximized()
 
     app.exec_()
     _write_settings(window, QSettings)

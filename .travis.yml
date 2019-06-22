@@ -16,6 +16,8 @@ matrix:
       env: TOXENV=py36-pyqt5
     - python: 3.6
       env: TOXENV=py36-pyside2
+    - python: 3.6
+      env: TOXENV=py36-doc
 
 install:
   # to make sure it has everything up to date

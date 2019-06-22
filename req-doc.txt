@@ -11,6 +11,3 @@ pipdeptree
 sphinx
 sphinx_rtd_theme
 sphinxcontrib-fulltoc
-
-# To generate screenshots
-pyqt5
