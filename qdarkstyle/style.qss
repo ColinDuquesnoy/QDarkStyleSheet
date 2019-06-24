@@ -2,6 +2,8 @@
 
     Created by the qtsass compiler v0.1.1
 
+    The definitions are in the "qdarkstyle.qss._styles.scss" module
+
     WARNING! All changes made in this file will be lost!
 
 --------------------------------------------------------------------------- */
@@ -1113,8 +1115,8 @@ QToolButton::menu-button:checked:hover {
 
 QToolButton::menu-indicator {
   image: url(":/qss_icons/rc/arrow_down.png");
-  height: 12px;
-  width: 12px;
+  height: 8px;
+  width: 8px;
   top: 0;
   /* Exclude a shift for better image */
   left: -2px;
