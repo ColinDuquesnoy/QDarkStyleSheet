@@ -105,8 +105,10 @@ def main():
     # QtPy imports
     from qtpy import API_NAME, QT_VERSION, PYQT_VERSION, PYSIDE_VERSION
     from qtpy import __version__ as QTPY_VERSION
-    from qtpy.QtWidgets import QApplication, QMainWindow, QDockWidget, QStatusBar, QLabel, QPushButton
-    from qtpy.QtCore import QTimer, Qt, QSettings, QByteArray, QPoint, QSize
+    from qtpy.QtWidgets import (QApplication, QMainWindow, QDockWidget,
+                                QStatusBar, QLabel, QPushButton, QMenu)
+    from qtpy.QtCore import (QTimer, Qt, QSettings, QByteArray, QPoint,
+                             QSize)
 
     # Set API_VERSION variable
     API_VERSION = ''
@@ -168,6 +170,15 @@ def main():
     ui_buttons.setupUi(dw_buttons)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_buttons)
 
+    # Add actions on popup toolbuttons
+    ui_buttons.toolButtonDelayedPopup.setMenu(QMenu())
+    ui_buttons.toolButtonInstantPopup.setMenu(QMenu())
+    ui_buttons.toolButtonMenuButtonPopup.setMenu(QMenu())
+    for action in ['Action A', 'Action B', 'Action C']:
+        ui_buttons.toolButtonDelayedPopup.menu().addAction(action)
+        ui_buttons.toolButtonInstantPopup.menu().addAction(action)
+        ui_buttons.toolButtonMenuButtonPopup.menu().addAction(action)
+
     # Create docks for buttons
     dw_displays = QDockWidget()
     dw_displays.setObjectName('displays')
@@ -184,7 +195,7 @@ def main():
 
     # Create docks for inputs - fields
     dw_inputs_fields = QDockWidget()
-    dw_inputs_fields.setObjectName('_fields')
+    dw_inputs_fields.setObjectName('inputs_fields')
     ui_inputs_fields = ui_inputs_fields()
     ui_inputs_fields.setupUi(dw_inputs_fields)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_fields)
@@ -212,7 +223,7 @@ def main():
 
     # Create docks for containters - tabs
     dw_containers_tabs = QDockWidget()
-    dw_containers_tabs.setObjectName('containers')
+    dw_containers_tabs.setObjectName('containers_tabs')
     ui_containers_tabs = ui_containers_tabs()
     ui_containers_tabs.setupUi(dw_containers_tabs)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_tabs)

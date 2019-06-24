@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>596</width>
+    <width>1006</width>
     <height>717</height>
    </rect>
   </property>
@@ -224,8 +224,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>596</width>
-     <height>25</height>
+     <width>1006</width>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuMenu">
@@ -264,11 +264,11 @@
       <string>New</string>
      </property>
      <addaction name="separator"/>
-     <addaction name="actionNew_2"/>
-     <addaction name="actionNew_4"/>
-     <addaction name="actionNew_3"/>
+     <addaction name="actionNewB"/>
+     <addaction name="actionNewD"/>
+     <addaction name="actionNewC"/>
      <addaction name="separator"/>
-     <addaction name="actionNew_5"/>
+     <addaction name="actionNewE"/>
     </widget>
     <addaction name="actionActionCheckableA"/>
     <addaction name="separator"/>
@@ -405,24 +405,24 @@
     <string>Action Checkable Sub A Unchecked</string>
    </property>
   </action>
-  <action name="actionNew_2">
+  <action name="actionNewB">
    <property name="text">
-    <string>New</string>
+    <string>New B</string>
    </property>
   </action>
-  <action name="actionNew_3">
+  <action name="actionNewC">
    <property name="text">
-    <string>New</string>
+    <string>New C</string>
    </property>
   </action>
-  <action name="actionNew_4">
+  <action name="actionNewD">
    <property name="text">
-    <string>New</string>
+    <string>New D</string>
    </property>
   </action>
-  <action name="actionNew_5">
+  <action name="actionNewE">
    <property name="text">
-    <string>New</string>
+    <string>New E</string>
    </property>
   </action>
  </widget>
