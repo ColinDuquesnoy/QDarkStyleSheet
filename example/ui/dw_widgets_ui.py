@@ -2,9 +2,10 @@
 
 # Form implementation generated from reading ui file 'dw_widgets.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
+
 
 from qtpy import QtCore, QtGui, QtWidgets
 
@@ -317,5 +318,3 @@ class Ui_DockWidget(object):
         item = self.tableWidgetDis.item(2, 1)
         item.setText(_translate("DockWidget", "Oui"))
         self.tableWidgetDis.setSortingEnabled(__sortingEnabled)
-
-

@@ -2,9 +2,10 @@
 
 # Form implementation generated from reading ui file 'dw_buttons.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
+
 
 from qtpy import QtCore, QtGui, QtWidgets
 
@@ -495,5 +496,3 @@ class Ui_DockWidget(object):
         self.label_36.setStatusTip(_translate("DockWidget", "This is a status tip"))
         self.label_36.setWhatsThis(_translate("DockWidget", "This is \"what is this\""))
         self.label_36.setText(_translate("DockWidget", "Inside DockWidget"))
-
-

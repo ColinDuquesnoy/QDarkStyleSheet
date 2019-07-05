@@ -2,9 +2,10 @@
 
 # Form implementation generated from reading ui file 'dw_containers_tabs.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
+
 
 from qtpy import QtCore, QtGui, QtWidgets
 
@@ -249,5 +250,3 @@ class Ui_DockWidget(object):
         self.tabWidgetSouth_2.setTabText(self.tabWidgetSouth_2.indexOf(self.tab_15), _translate("DockWidget", "Tab 1"))
         self.label_74.setText(_translate("DockWidget", "Inside TabWidget South Closable Tab 2"))
         self.tabWidgetSouth_2.setTabText(self.tabWidgetSouth_2.indexOf(self.tab_16), _translate("DockWidget", "Tab 2"))
-
-

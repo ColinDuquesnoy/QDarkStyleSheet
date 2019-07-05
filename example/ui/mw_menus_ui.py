@@ -2,9 +2,10 @@
 
 # Form implementation generated from reading ui file 'mw_menus.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
+
 
 from qtpy import QtCore, QtGui, QtWidgets
 
@@ -288,5 +289,3 @@ class Ui_MainWindow(object):
         self.actionNewC.setText(_translate("MainWindow", "New C"))
         self.actionNewD.setText(_translate("MainWindow", "New D"))
         self.actionNewE.setText(_translate("MainWindow", "New E"))
-
-

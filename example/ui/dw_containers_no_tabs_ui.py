@@ -2,9 +2,10 @@
 
 # Form implementation generated from reading ui file 'dw_containers_no_tabs.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
+
 
 from qtpy import QtCore, QtGui, QtWidgets
 
@@ -508,5 +509,3 @@ class Ui_DockWidget(object):
         self.label_110.setText(_translate("DockWidget", "Inside ToolBox Page 2"))
         self.toolBoxDis_2.setItemText(self.toolBoxDis_2.indexOf(self.page_7), _translate("DockWidget", "Page 2"))
         self.label_130.setText(_translate("DockWidget", "Stacked"))
-
-

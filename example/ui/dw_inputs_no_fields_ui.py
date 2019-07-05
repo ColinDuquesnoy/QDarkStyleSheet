@@ -2,9 +2,10 @@
 
 # Form implementation generated from reading ui file 'dw_inputs_no_fields.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.2
+# Created by: PyQt5 UI code generator 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
+
 
 from qtpy import QtCore, QtGui, QtWidgets
 
@@ -267,5 +268,3 @@ class Ui_DockWidget(object):
         self.verticalSliderDis.setToolTip(_translate("DockWidget", "This is a tool tip"))
         self.verticalSliderDis.setStatusTip(_translate("DockWidget", "This is a status tip"))
         self.verticalSliderDis.setWhatsThis(_translate("DockWidget", "This is \"what is this\""))
-
-
