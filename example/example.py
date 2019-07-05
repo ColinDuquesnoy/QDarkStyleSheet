@@ -11,7 +11,6 @@ Requirements:
 
     - Python 2 or Python 3
     - QtPy
-    - Helpdev
     - PyQt5 or PyQt4 or PySide2 or PySide
     - PyQtGraph or Qt.Py (if choosen)
 
@@ -40,6 +39,7 @@ Note:
 """
 
 # Standard library imports
+
 import argparse
 import logging
 import os
@@ -47,20 +47,14 @@ import sys
 import platform
 import time
 
-# Third part libraries
-# QtPy must be imported after setting
-import helpdev
-
-# Make the example runnable without the need to install
-from os.path import abspath, dirname
-sys.path.insert(0, abspath(dirname(abspath(__file__)) + '/..'))
+# Make the example runnable without the need to install and include ui
+sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/..'))
+# Must be in this place, after setting path, to not need to install
+import qdarkstyle
 
 # Set log for debug
 logging.basicConfig(level=logging.DEBUG)
 _logger = logging.getLogger(__name__)
-
-# Must be in this place, after setting path, to not need to install
-import qdarkstyle
 
 # Constants
 SCREENSHOTS_PATH = qdarkstyle.IMAGES_PATH
@@ -107,8 +101,7 @@ def main():
     from qtpy import __version__ as QTPY_VERSION
     from qtpy.QtWidgets import (QApplication, QMainWindow, QDockWidget,
                                 QStatusBar, QLabel, QPushButton, QMenu)
-    from qtpy.QtCore import (QTimer, Qt, QSettings, QByteArray, QPoint,
-                             QSize)
+    from qtpy.QtCore import QTimer, Qt, QSettings
 
     # Set API_VERSION variable
     API_VERSION = ''
@@ -121,17 +114,17 @@ def main():
         API_VERSION = 'Not found'
 
     # Import examples UI
-    from ui.mw_menus_ui import Ui_MainWindow as ui_main
+    from example.ui.mw_menus_ui import Ui_MainWindow as ui_main
 
-    from ui.dw_buttons_ui import Ui_DockWidget as ui_buttons
-    from ui.dw_displays_ui import Ui_DockWidget as ui_displays
-    from ui.dw_inputs_fields_ui import Ui_DockWidget as ui_inputs_fields
-    from ui.dw_inputs_no_fields_ui import Ui_DockWidget as ui_inputs_no_fields
+    from example.ui.dw_buttons_ui import Ui_DockWidget as ui_buttons
+    from example.ui.dw_displays_ui import Ui_DockWidget as ui_displays
+    from example.ui.dw_inputs_fields_ui import Ui_DockWidget as ui_inputs_fields
+    from example.ui.dw_inputs_no_fields_ui import Ui_DockWidget as ui_inputs_no_fields
 
-    from ui.dw_widgets_ui import Ui_DockWidget as ui_widgets
-    from ui.dw_views_ui import Ui_DockWidget as ui_views
-    from ui.dw_containers_tabs_ui import Ui_DockWidget as ui_containers_tabs
-    from ui.dw_containers_no_tabs_ui import Ui_DockWidget as ui_containers_no_tabs
+    from example.ui.dw_widgets_ui import Ui_DockWidget as ui_widgets
+    from example.ui.dw_views_ui import Ui_DockWidget as ui_views
+    from example.ui.dw_containers_tabs_ui import Ui_DockWidget as ui_containers_tabs
+    from example.ui.dw_containers_no_tabs_ui import Ui_DockWidget as ui_containers_no_tabs
 
     # create the application
     app = QApplication(sys.argv)
@@ -295,7 +288,7 @@ def _read_settings(window, reset, QSettings):
 
 def create_screenshots(app, window, no_dark):
     """Save screenshots for different application views and quit."""
-    from qtpy.QtCore import QCoreApplication, QTimer, Qt
+    from qtpy.QtCore import QCoreApplication
     from qtpy.QtGui import QGuiApplication
     from qtpy.QtWidgets import QDockWidget, QTabWidget
 
