@@ -49,6 +49,7 @@ import time
 
 # Make the example runnable without the need to install and include ui
 sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/..'))
+sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/ui'))
 # Must be in this place, after setting path, to not need to install
 import qdarkstyle
 
@@ -114,17 +115,17 @@ def main():
         API_VERSION = 'Not found'
 
     # Import examples UI
-    from example.ui.mw_menus_ui import Ui_MainWindow as ui_main
+    from mw_menus_ui import Ui_MainWindow as ui_main
 
-    from example.ui.dw_buttons_ui import Ui_DockWidget as ui_buttons
-    from example.ui.dw_displays_ui import Ui_DockWidget as ui_displays
-    from example.ui.dw_inputs_fields_ui import Ui_DockWidget as ui_inputs_fields
-    from example.ui.dw_inputs_no_fields_ui import Ui_DockWidget as ui_inputs_no_fields
+    from dw_buttons_ui import Ui_DockWidget as ui_buttons
+    from dw_displays_ui import Ui_DockWidget as ui_displays
+    from dw_inputs_fields_ui import Ui_DockWidget as ui_inputs_fields
+    from dw_inputs_no_fields_ui import Ui_DockWidget as ui_inputs_no_fields
 
-    from example.ui.dw_widgets_ui import Ui_DockWidget as ui_widgets
-    from example.ui.dw_views_ui import Ui_DockWidget as ui_views
-    from example.ui.dw_containers_tabs_ui import Ui_DockWidget as ui_containers_tabs
-    from example.ui.dw_containers_no_tabs_ui import Ui_DockWidget as ui_containers_no_tabs
+    from dw_widgets_ui import Ui_DockWidget as ui_widgets
+    from dw_views_ui import Ui_DockWidget as ui_views
+    from dw_containers_tabs_ui import Ui_DockWidget as ui_containers_tabs
+    from dw_containers_no_tabs_ui import Ui_DockWidget as ui_containers_no_tabs
 
     # create the application
     app = QApplication(sys.argv)
