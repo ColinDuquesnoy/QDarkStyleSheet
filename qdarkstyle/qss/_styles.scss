@@ -1578,7 +1578,10 @@ QTabBar {
             &:!selected:hover {
                 border: $BORDER_SELECTION_LIGHT;
                 border-bottom: 3px solid $COLOR_SELECTION_LIGHT;
-                padding: 0px;
+
+                /* Fixes spyder-ide/spyder#9766 */
+                padding-left: 4px;
+                padding-right: 4px;
             }
         }
 
@@ -1606,7 +1609,10 @@ QTabBar {
             &:!selected:hover {
                 border: $BORDER_SELECTION_LIGHT;
                 border-top: 3px solid $COLOR_SELECTION_LIGHT;
-                padding: 0px;
+
+                /* Fixes spyder-ide/spyder#9766 */
+                padding-left: 4px;
+                padding-right: 4px;
             }
 
         }

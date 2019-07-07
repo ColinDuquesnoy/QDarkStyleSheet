@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
 
-    Created by the qtsass compiler v0.1.1
+    Created by the qtsass compiler v0.1.2.dev0
 
     The definitions are in the "qdarkstyle.qss._styles.scss" module
 
@@ -1524,7 +1524,9 @@ QTabBar::tab:top:selected {
 QTabBar::tab:top:!selected:hover {
   border: 1px solid #148CD2;
   border-bottom: 3px solid #148CD2;
-  padding: 0px;
+  /* Fixes spyder-ide/spyder#9766 */
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 QTabBar::tab:bottom {
@@ -1552,7 +1554,9 @@ QTabBar::tab:bottom:selected {
 QTabBar::tab:bottom:!selected:hover {
   border: 1px solid #148CD2;
   border-top: 3px solid #148CD2;
-  padding: 0px;
+  /* Fixes spyder-ide/spyder#9766 */
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 QTabBar::tab:left {
