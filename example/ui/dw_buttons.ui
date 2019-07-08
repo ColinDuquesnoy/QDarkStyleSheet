@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>652</width>
-    <height>489</height>
+    <height>491</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -288,6 +288,10 @@
       <property name="text">
        <string>Icon</string>
       </property>
+      <property name="icon">
+       <iconset resource="../../qdarkstyle/style.qrc">
+        <normaloff>:/qss_icons/rc/window_undock@2x.png</normaloff>:/qss_icons/rc/window_undock@2x.png</iconset>
+      </property>
      </widget>
     </item>
     <item row="4" column="3">
@@ -358,6 +362,10 @@
      <widget class="QToolButton" name="toolButtonCheckedIcon">
       <property name="text">
        <string>Icon Checked</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../qdarkstyle/style.qrc">
+        <normaloff>:/qss_icons/rc/window_undock.png</normaloff>:/qss_icons/rc/window_undock.png</iconset>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -1119,7 +1127,9 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../qdarkstyle/style.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>radioButtonChecked</sender>

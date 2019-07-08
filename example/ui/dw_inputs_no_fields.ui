@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>402</width>
-    <height>405</height>
+    <width>380</width>
+    <height>364</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -409,49 +409,6 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="2">
-     <widget class="QComboBox" name="comboBoxDis">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="toolTip">
-       <string>This is a tool tip</string>
-      </property>
-      <property name="statusTip">
-       <string>This is a status tip</string>
-      </property>
-      <property name="whatsThis">
-       <string>This is &quot;what is this&quot;</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>ComboBox A</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>ComboBox B</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>ComboBox C</string>
-       </property>
-      </item>
-     </widget>
-    </item>
     <item row="3" column="1">
      <widget class="QScrollBar" name="horizontalScrollBar">
       <property name="minimumSize">
@@ -508,17 +465,35 @@
       </property>
       <item>
        <property name="text">
-        <string>ComboBox A</string>
+        <string>ComboBoxNotEditable</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>ComboBox B</string>
+        <string>Option 1 No Icon</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>ComboBox C</string>
+        <string>Option 2 No Icon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Option 1 With Icon</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../qdarkstyle/style.qrc">
+         <normaloff>:/qss_icons/rc/window_undock.png</normaloff>:/qss_icons/rc/window_undock.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Option 2 With Icon</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../qdarkstyle/style.qrc">
+         <normaloff>:/qss_icons/rc/window_undock_focus@2x.png</normaloff>:/qss_icons/rc/window_undock_focus@2x.png</iconset>
        </property>
       </item>
      </widget>
@@ -688,10 +663,55 @@
       </property>
      </widget>
     </item>
+    <item row="1" column="2">
+     <widget class="QComboBox" name="comboBoxDis">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>ComboBoxNotEditable</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ComboBox B</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ComboBox C</string>
+       </property>
+      </item>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../qdarkstyle/style.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>dial</sender>
