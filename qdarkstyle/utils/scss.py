@@ -11,11 +11,7 @@ import shutil
 import sys
 
 # Third party imports
-try:
-    import qtsass
-    QTSASS_INSTALLED = True
-except ImportError:
-    QTSASS_INSTALLED = False
+import qtsass
 
 # Local imports
 from qdarkstyle import (MAIN_SCSS_FILE, MAIN_SCSS_FILEPATH, QSS_PATH,
@@ -96,17 +92,16 @@ def _create_qss(main_scss_path, qss_filepath, header=HEADER_QSS):
     """Create a styles.qss file from qtsass."""
     data = ''
 
-    if QTSASS_INSTALLED:
-        qtsass.compile_filename(main_scss_path, qss_filepath,
-                                output_style='expanded')
+    qtsass.compile_filename(main_scss_path, qss_filepath,
+                            output_style='expanded')
 
-        with open(qss_filepath, 'r') as f:
-            data = f.read()
+    with open(qss_filepath, 'r') as f:
+        data = f.read()
 
-        data = header.format(qtsass.__version__) + data
+    data = header.format(qtsass.__version__) + data
 
-        with open(qss_filepath, 'w') as f:
-            f.write(data)
+    with open(qss_filepath, 'w') as f:
+        f.write(data)
 
     return data
 
