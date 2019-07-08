@@ -13,7 +13,7 @@ from qtpy import QtCore, QtGui, QtWidgets
 class Ui_DockWidget(object):
     def setupUi(self, DockWidget):
         DockWidget.setObjectName("DockWidget")
-        DockWidget.resize(652, 489)
+        DockWidget.resize(652, 491)
         self.dockWidgetContents = QtWidgets.QWidget()
         self.dockWidgetContents.setObjectName("dockWidgetContents")
         self.gridLayout = QtWidgets.QGridLayout(self.dockWidgetContents)
@@ -103,6 +103,9 @@ class Ui_DockWidget(object):
         self.toolButton.setObjectName("toolButton")
         self.gridLayout.addWidget(self.toolButton, 4, 1, 1, 1)
         self.toolButtonIcon = QtWidgets.QToolButton(self.dockWidgetContents)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/qss_icons/rc/window_undock@2x.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toolButtonIcon.setIcon(icon)
         self.toolButtonIcon.setObjectName("toolButtonIcon")
         self.gridLayout.addWidget(self.toolButtonIcon, 4, 2, 1, 1)
         self.toolButtonDis = QtWidgets.QToolButton(self.dockWidgetContents)
@@ -125,6 +128,9 @@ class Ui_DockWidget(object):
         self.toolButtonChecked.setObjectName("toolButtonChecked")
         self.gridLayout.addWidget(self.toolButtonChecked, 5, 1, 1, 1)
         self.toolButtonCheckedIcon = QtWidgets.QToolButton(self.dockWidgetContents)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/qss_icons/rc/window_undock.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toolButtonCheckedIcon.setIcon(icon1)
         self.toolButtonCheckedIcon.setCheckable(True)
         self.toolButtonCheckedIcon.setChecked(True)
         self.toolButtonCheckedIcon.setObjectName("toolButtonCheckedIcon")
@@ -496,3 +502,4 @@ class Ui_DockWidget(object):
         self.label_36.setStatusTip(_translate("DockWidget", "This is a status tip"))
         self.label_36.setWhatsThis(_translate("DockWidget", "This is \"what is this\""))
         self.label_36.setText(_translate("DockWidget", "Inside DockWidget"))
+from qdarkstyle import style_rc

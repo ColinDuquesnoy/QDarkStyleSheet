@@ -61,7 +61,12 @@ class Ui_DockWidget(object):
         self.comboBoxEdit.addItem("")
         self.comboBoxEdit.addItem("")
         self.comboBoxEdit.addItem("")
-        self.comboBoxEdit.setItemText(2, "")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/qss_icons/rc/window_undock.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.comboBoxEdit.addItem(icon, "")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/qss_icons/rc/window_undock_focus@2x.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.comboBoxEdit.addItem(icon1, "")
         self.gridLayout.addWidget(self.comboBoxEdit, 2, 1, 1, 1)
         self.comboBoxEditDis = QtWidgets.QComboBox(self.dockWidgetContents)
         self.comboBoxEditDis.setEnabled(False)
@@ -277,7 +282,10 @@ class Ui_DockWidget(object):
         self.fontComboBoxDis.setWhatsThis(_translate("DockWidget", "This is \"what is this\""))
         self.label_3.setText(_translate("DockWidget", "<html><head/><body><p><span style=\" font-weight:600;\">ComboBox</span></p></body></html>"))
         self.comboBoxEdit.setItemText(0, _translate("DockWidget", "ComboBoxEditable"))
-        self.comboBoxEdit.setItemText(1, _translate("DockWidget", "Second option"))
+        self.comboBoxEdit.setItemText(1, _translate("DockWidget", "Option 1 No Icon"))
+        self.comboBoxEdit.setItemText(2, _translate("DockWidget", "Option 2 No Icon"))
+        self.comboBoxEdit.setItemText(3, _translate("DockWidget", "Option 1 With Icon"))
+        self.comboBoxEdit.setItemText(4, _translate("DockWidget", "Option 2 With Icon"))
         self.comboBoxEditDis.setItemText(0, _translate("DockWidget", "ComboBoxEditable"))
         self.comboBoxEditDis.setItemText(1, _translate("DockWidget", "Second option"))
         self.label_13.setToolTip(_translate("DockWidget", "This is a tool tip"))
@@ -302,16 +310,16 @@ class Ui_DockWidget(object):
         self.textEdit.setHtml(_translate("DockWidget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Cantarell\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">TextEdit</p></body></html>"))
+"</style></head><body style=\" font-family:\'Sans Serif\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Cantarell\'; font-size:11pt;\">TextEdit</span></p></body></html>"))
         self.textEditDis.setToolTip(_translate("DockWidget", "This is a tool tip"))
         self.textEditDis.setStatusTip(_translate("DockWidget", "This is a status tip"))
         self.textEditDis.setWhatsThis(_translate("DockWidget", "This is \"what is this\""))
         self.textEditDis.setHtml(_translate("DockWidget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Cantarell\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">TextEdit</p></body></html>"))
+"</style></head><body style=\" font-family:\'Sans Serif\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Cantarell\'; font-size:11pt;\">TextEdit</span></p></body></html>"))
         self.label_15.setToolTip(_translate("DockWidget", "This is a tool tip"))
         self.label_15.setStatusTip(_translate("DockWidget", "This is a status tip"))
         self.label_15.setWhatsThis(_translate("DockWidget", "This is \"what is this\""))
@@ -378,3 +386,4 @@ class Ui_DockWidget(object):
         self.label_51.setStatusTip(_translate("DockWidget", "This is a status tip"))
         self.label_51.setWhatsThis(_translate("DockWidget", "This is \"what is this\""))
         self.label_51.setText(_translate("DockWidget", "Inside DockWidget"))
+from qdarkstyle import style_rc
