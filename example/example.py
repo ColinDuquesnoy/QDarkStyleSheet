@@ -165,13 +165,14 @@ def main():
     window.addDockWidget(Qt.RightDockWidgetArea, dw_buttons)
 
     # Add actions on popup toolbuttons
-    ui_buttons.toolButtonDelayedPopup.setMenu(QMenu())
-    ui_buttons.toolButtonInstantPopup.setMenu(QMenu())
-    ui_buttons.toolButtonMenuButtonPopup.setMenu(QMenu())
+    menu = QMenu()
+
     for action in ['Action A', 'Action B', 'Action C']:
-        ui_buttons.toolButtonDelayedPopup.menu().addAction(action)
-        ui_buttons.toolButtonInstantPopup.menu().addAction(action)
-        ui_buttons.toolButtonMenuButtonPopup.menu().addAction(action)
+        menu.addAction(action)
+
+    ui_buttons.toolButtonDelayedPopup.setMenu(menu)
+    ui_buttons.toolButtonInstantPopup.setMenu(menu)
+    ui_buttons.toolButtonMenuButtonPopup.setMenu(menu)
 
     # Create docks for buttons
     dw_displays = QDockWidget()
