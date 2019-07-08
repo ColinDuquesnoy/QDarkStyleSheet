@@ -71,7 +71,7 @@ def main(arguments):
         # calling external commands
         if args.create in ['pyqt', 'pyqtgraph', 'all']:
             try:
-                call(['pyuic4', '--from-imports', ui_file, '-o', py_file_pyqt])
+                call(['pyuic4', '--import-from=qdarkstyle', ui_file, '-o', py_file_pyqt])
             except Exception as er:
                 print("You must install pyuic4 %s" % str(er))
             else:
@@ -79,7 +79,7 @@ def main(arguments):
 
         if args.create in ['pyqt5', 'qtpy', 'all']:
             try:
-                call(['pyuic5', '--from-imports', ui_file, '-o', py_file_pyqt5])
+                call(['pyuic5', '--import-from=qdarkstyle', ui_file, '-o', py_file_pyqt5])
             except Exception as er:
                 print("You must install pyuic5 %s" % str(er))
             else:
@@ -87,7 +87,7 @@ def main(arguments):
 
         if args.create in ['pyside', 'all']:
             try:
-                call(['pyside-uic', '--from-imports', ui_file, '-o', py_file_pyside])
+                call(['pyside-uic', '--import-from=qdarkstyle', ui_file, '-o', py_file_pyside])
             except Exception as er:
                 print("You must install pyside-uic %s" % str(er))
             else:
@@ -95,7 +95,7 @@ def main(arguments):
 
         if args.create in ['pyside2', 'all']:
             try:
-                call(['pyside2-uic', '--from-imports', ui_file, '-o', py_file_pyside2])
+                call(['pyside2-uic', '--import-from=qdarkstyle', ui_file, '-o', py_file_pyside2])
             except Exception as er:
                 print("You must install pyside2-uic %s" % str(er))
             else:
