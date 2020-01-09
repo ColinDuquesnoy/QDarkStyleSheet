@@ -1036,10 +1036,6 @@ QPushButton {
             color: $COLOR_BACKGROUND_NORMAL;
         }
 
-        &:hover {
-            border: $BORDER_SELECTION_LIGHT;
-            color: $COLOR_FOREGROUND_LIGHT;
-        }
     }
 
     &::menu-indicator {
@@ -1066,6 +1062,16 @@ QPushButton {
         background: $COLOR_SELECTION_NORMAL;
         color: $COLOR_BACKGROUND_NORMAL;
     }
+        &:hover {
+            border: $BORDER_SELECTION_LIGHT;
+            color: $COLOR_FOREGROUND_LIGHT;
+        }
+
+    &:focus {
+        border: $BORDER_SELECTION_NORMAL;
+        color: $COLOR_FOREGROUND_LIGHT;
+    }
+
 }
 
 /* QToolButton ------------------------------------------------------------

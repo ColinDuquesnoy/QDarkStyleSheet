@@ -1010,11 +1010,6 @@ QPushButton:checked:selected {
   color: #32414B;
 }
 
-QPushButton:checked:hover {
-  border: 1px solid #148CD2;
-  color: #F0F0F0;
-}
-
 QPushButton::menu-indicator {
   subcontrol-origin: padding;
   subcontrol-position: bottom right;
@@ -1038,6 +1033,16 @@ QPushButton:hover {
 QPushButton:selected {
   background: #1464A0;
   color: #32414B;
+}
+
+QPushButton:hover {
+  border: 1px solid #148CD2;
+  color: #F0F0F0;
+}
+
+QPushButton:focus {
+  border: 1px solid #1464A0;
+  color: #F0F0F0;
 }
 
 /* QToolButton ------------------------------------------------------------
