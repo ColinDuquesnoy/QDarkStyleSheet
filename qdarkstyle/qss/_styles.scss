@@ -102,6 +102,11 @@ QStatusBar {
     /* Fixes Spyder #9120, #9121 */
     background: $COLOR_BACKGROUND_NORMAL;
 
+    /* Fixes #205, white vertical borders separating items */
+    &::item{
+        border: none;
+    }
+
     QToolTip {
         background-color: $COLOR_SELECTION_LIGHT;
         border: $BORDER_DARK;

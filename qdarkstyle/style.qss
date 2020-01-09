@@ -141,6 +141,11 @@ QStatusBar {
   border: 1px solid #32414B;
   /* Fixes Spyder #9120, #9121 */
   background: #32414B;
+  /* Fixes #205, white vertical borders separating items */
+}
+
+QStatusBar::item {
+  border: none;
 }
 
 QStatusBar QToolTip {
