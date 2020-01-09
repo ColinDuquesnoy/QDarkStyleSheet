@@ -2035,7 +2035,7 @@ QSplitter {
   margin: 0px;
 }
 
-QSplitter::separator {
+QSplitter::handle {
   background-color: #32414B;
   border: 0px solid #19232D;
   spacing: 0px;
@@ -2043,16 +2043,16 @@ QSplitter::separator {
   margin: 0px;
 }
 
-QSplitter::separator:hover {
+QSplitter::handle:hover {
   background-color: #787878;
 }
 
-QSplitter::separator:horizontal {
+QSplitter::handle:horizontal {
   width: 5px;
   image: url(":/qss_icons/rc/line_vertical.png");
 }
 
-QSplitter::separator:vertical {
+QSplitter::handle:vertical {
   height: 5px;
   image: url(":/qss_icons/rc/line_horizontal.png");
 }

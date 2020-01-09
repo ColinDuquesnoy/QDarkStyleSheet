@@ -2109,7 +2109,7 @@ QSplitter {
     padding: 0px;
     margin: 0px;
 
-    &::separator {
+    &::handle {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border: 0px solid $COLOR_BACKGROUND_DARK;
         spacing: 0px;
