@@ -50,7 +50,6 @@ setup(
     entry_points={"console_scripts": ["qdarkstyle=qdarkstyle.__main__:main"]},
     extras_require=extras_require,
     install_requires=install_requires,
-    include_package_data=True,
     project_urls={
         "Issues": "https://github.com/ColinDuquesnoy/QDarkStyleSheet/issues",
         "Docs": "https://qdarkstylesheet.readthedocs.io/en/stable",
