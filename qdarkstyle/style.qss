@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
 
-    Created by the qtsass compiler v0.1.1
+    Created by the qtsass compiler v0.1.2.dev0
 
     The definitions are in the "qdarkstyle.qss._styles.scss" module
 
@@ -1194,7 +1194,8 @@ QComboBox {
   border-radius: 4px;
   selection-background-color: #1464A0;
   padding-left: 4px;
-  padding-right: 4px;
+  padding-right: 36px;
+  /* See scrollbar size */
   /* Fixes #103, #111 */
   min-height: 1.5em;
   /* padding-top: 2px;     removed to fix #132 */

@@ -1223,7 +1223,7 @@ QComboBox {
     border-radius: $SIZE_BORDER_RADIUS;
     selection-background-color: $COLOR_SELECTION_NORMAL;
     padding-left: 4px;
-    padding-right: 4px;
+    padding-right: 36px;  /* 4 + 16*2 See scrollbar size */
 
     /* Fixes #103, #111 */
     min-height: 1.5em;
