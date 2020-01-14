@@ -534,6 +534,9 @@ QScrollBar {
                 border-radius: $SIZE_BORDER_RADIUS;
                 min-width: 8px;
             }
+            &:focus {
+                border: $BORDER_SELECTION_NORMAL;
+        }
         }
 
         &:vertical {
@@ -547,7 +550,9 @@ QScrollBar {
                 border: $BORDER_SELECTION_LIGHT;
                 border-radius: $SIZE_BORDER_RADIUS;
                 min-height: 8px;
-
+            }
+            &:focus {
+                border: $BORDER_SELECTION_NORMAL;
             }
         }
     }
@@ -666,6 +671,10 @@ QTextEdit {
         color: $COLOR_FOREGROUND_LIGHT;
     }
 
+    &:focus {
+        border: $BORDER_SELECTION_NORMAL;
+    }
+
     &:selected {
         background: $COLOR_SELECTION_NORMAL;
         color: $COLOR_BACKGROUND_NORMAL;
@@ -684,6 +693,10 @@ QPlainTextEdit {
     &:hover {
         border: $BORDER_SELECTION_LIGHT;
         color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+    &:focus {
+        border: $BORDER_SELECTION_NORMAL;
     }
 
     &:selected {
@@ -848,6 +861,10 @@ QAbstractSpinBox {
     &:hover {
         border: $BORDER_SELECTION_LIGHT;
         color: $COLOR_FOREGROUND_LIGHT;
+    }
+
+    &:focus {
+        border: $BORDER_SELECTION_NORMAL;
     }
 
     &:selected {
@@ -1069,7 +1086,6 @@ QPushButton {
 
     &:focus {
         border: $BORDER_SELECTION_NORMAL;
-        color: $COLOR_FOREGROUND_LIGHT;
     }
 
 }
@@ -1247,6 +1263,10 @@ QComboBox {
         border: $BORDER_SELECTION_LIGHT;
     }
 
+    &:focus {
+        border: $BORDER_SELECTION_NORMAL;
+    }
+
     &:on {
         selection-background-color: $COLOR_SELECTION_NORMAL;
     }
@@ -1378,6 +1398,10 @@ QSlider {
                 background: $COLOR_SELECTION_LIGHT;
                 border: $BORDER_SELECTION_LIGHT;
             }
+
+            &:focus {
+                border: $BORDER_SELECTION_NORMAL;
+        }
         }
 
         &:vertical {
@@ -1391,6 +1415,10 @@ QSlider {
             &:hover {
                 background: $COLOR_SELECTION_LIGHT;
                 border: $BORDER_SELECTION_LIGHT;
+            }
+
+            &:focus {
+                border: $BORDER_SELECTION_NORMAL;
             }
         }
     }
@@ -1424,8 +1452,12 @@ QLineEdit {
         color: $COLOR_FOREGROUND_LIGHT;
     }
 
+    &:focus {
+        border: $BORDER_SELECTION_NORMAL;
+    }
+
     &:selected {
-        background: $COLOR_SELECTION_NORMAL;
+        background-color: $COLOR_SELECTION_NORMAL;
         color: $COLOR_BACKGROUND_NORMAL;
     }
 }
