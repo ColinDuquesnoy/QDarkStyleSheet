@@ -103,7 +103,7 @@ QStatusBar {
     background: $COLOR_BACKGROUND_NORMAL;
 
     /* Fixes #205, white vertical borders separating items */
-    &::item{
+    &::item {
         border: none;
     }
 
@@ -534,9 +534,10 @@ QScrollBar {
                 border-radius: $SIZE_BORDER_RADIUS;
                 min-width: 8px;
             }
+
             &:focus {
                 border: $BORDER_SELECTION_NORMAL;
-        }
+            }
         }
 
         &:vertical {
@@ -551,6 +552,7 @@ QScrollBar {
                 border-radius: $SIZE_BORDER_RADIUS;
                 min-height: 8px;
             }
+
             &:focus {
                 border: $BORDER_SELECTION_NORMAL;
             }
@@ -915,7 +917,7 @@ QTextBrowser {
     }
 
     &:hover,
-    &:!hover,
+    &: !hover,
     &::selected,
     &::pressed {
         border: $BORDER_NORMAL;
@@ -939,7 +941,7 @@ QGraphicsView {
     }
 
     &:hover,
-    &:!hover,
+    &: !hover,
     &::selected,
     &::pressed {
         border: $BORDER_NORMAL;
@@ -1079,10 +1081,11 @@ QPushButton {
         background: $COLOR_SELECTION_NORMAL;
         color: $COLOR_BACKGROUND_NORMAL;
     }
-        &:hover {
-            border: $BORDER_SELECTION_LIGHT;
-            color: $COLOR_FOREGROUND_LIGHT;
-        }
+
+    &:hover {
+        border: $BORDER_SELECTION_LIGHT;
+        color: $COLOR_FOREGROUND_LIGHT;
+    }
 
     &:focus {
         border: $BORDER_SELECTION_NORMAL;
@@ -1140,9 +1143,9 @@ QToolButton {
             border: none;
 
             &:hover {
-                border:none;
+                border: none;
                 border-left: 1px solid $COLOR_SELECTION_LIGHT;
-                border-radius:0;
+                border-radius: 0;
             }
         }
     }
@@ -1186,7 +1189,7 @@ QToolButton {
         height: 8px;
         width: 8px;
 
-        &:hover{
+        &:hover {
             image: url($PATH_RESOURCES + '/rc/arrow_down_focus.png');
         }
     }
@@ -1223,7 +1226,8 @@ QComboBox {
     border-radius: $SIZE_BORDER_RADIUS;
     selection-background-color: $COLOR_SELECTION_NORMAL;
     padding-left: 4px;
-    padding-right: 36px;  /* 4 + 16*2 See scrollbar size */
+    padding-right: 36px;
+    /* 4 + 16*2 See scrollbar size */
 
     /* Fixes #103, #111 */
     min-height: 1.5em;
@@ -1239,7 +1243,7 @@ QComboBox {
         selection-background-color: $COLOR_SELECTION_NORMAL;
 
         &:hover {
-            background-color:  $COLOR_BACKGROUND_DARK;
+            background-color: $COLOR_BACKGROUND_DARK;
             color: $COLOR_FOREGROUND_LIGHT;
         }
 
@@ -1401,7 +1405,7 @@ QSlider {
 
             &:focus {
                 border: $BORDER_SELECTION_NORMAL;
-        }
+            }
         }
 
         &:vertical {
@@ -1554,47 +1558,47 @@ QTabBar {
         }
 
         /* !selected and disabled ----------------------------------------- */
-        &:top:!selected:disabled {
+        &:top: !selected:disabled {
             border-bottom: 3px solid $COLOR_BACKGROUND_DARK;
             color: $COLOR_FOREGROUND_DARK;
             background-color: $COLOR_BACKGROUND_DARK;
         }
 
-        &:bottom:!selected:disabled {
+        &:bottom: !selected:disabled {
             border-top: 3px solid $COLOR_BACKGROUND_DARK;
             color: $COLOR_FOREGROUND_DARK;
             background-color: $COLOR_BACKGROUND_DARK;
         }
 
-        &:left:!selected:disabled {
+        &:left: !selected:disabled {
             border-right: 3px solid $COLOR_BACKGROUND_DARK;
             color: $COLOR_FOREGROUND_DARK;
             background-color: $COLOR_BACKGROUND_DARK;
         }
 
-        &:right:!selected:disabled {
+        &:right: !selected:disabled {
             border-left: 3px solid $COLOR_BACKGROUND_DARK;
             color: $COLOR_FOREGROUND_DARK;
             background-color: $COLOR_BACKGROUND_DARK;
         }
 
         /* selected ------------------------------------------------------- */
-        &:top:!selected {
+        &:top: !selected {
             border-bottom: 2px solid $COLOR_BACKGROUND_DARK;
             margin-top: 2px;
         }
 
-        &:bottom:!selected {
+        &:bottom: !selected {
             border-top: 2px solid $COLOR_BACKGROUND_DARK;
             margin-bottom: 3px;
         }
 
-        &:left:!selected {
+        &:left: !selected {
             border-left: 2px solid $COLOR_BACKGROUND_DARK;
             margin-right: 2px;
         }
 
-        &:right:!selected {
+        &:right: !selected {
             border-right: 2px solid $COLOR_BACKGROUND_DARK;
             margin-left: 2px;
         }
@@ -1620,7 +1624,7 @@ QTabBar {
                 border-top-right-radius: 3px;
             }
 
-            &:!selected:hover {
+            &: !selected:hover {
                 border: $BORDER_SELECTION_LIGHT;
                 border-bottom: 3px solid $COLOR_SELECTION_LIGHT;
 
@@ -1651,7 +1655,7 @@ QTabBar {
                 border-bottom-right-radius: 3px;
             }
 
-            &:!selected:hover {
+            &: !selected:hover {
                 border: $BORDER_SELECTION_LIGHT;
                 border-top: 3px solid $COLOR_SELECTION_LIGHT;
 
@@ -1680,7 +1684,7 @@ QTabBar {
                 border-right: 3px solid $COLOR_SELECTION_NORMAL;
             }
 
-            &:!selected:hover {
+            &: !selected:hover {
                 border: $BORDER_SELECTION_LIGHT;
                 border-right: 3px solid $COLOR_SELECTION_LIGHT;
                 padding: 0px;
@@ -1706,7 +1710,7 @@ QTabBar {
 
             }
 
-            &:!selected:hover {
+            &: !selected:hover {
                 border: $BORDER_SELECTION_LIGHT;
                 border-left: 3px solid $COLOR_SELECTION_LIGHT;
                 padding: 0px;
@@ -1816,7 +1820,7 @@ QTreeView {
             background: url($PATH_RESOURCES + '/rc/transparent.png');
         }
 
-        &:has-siblings:!adjoins-item {
+        &:has-siblings: !adjoins-item {
             border-image: url($PATH_RESOURCES + '/rc/branch_line.png') 0;
         }
 
@@ -1824,28 +1828,28 @@ QTreeView {
             border-image: url($PATH_RESOURCES + '/rc/branch_more.png') 0;
         }
 
-        &:!has-children:!has-siblings:adjoins-item {
+        &: !has-children: !has-siblings:adjoins-item {
             border-image: url($PATH_RESOURCES + '/rc/branch_end.png') 0;
         }
 
-        &:has-children:!has-siblings:closed,
+        &:has-children: !has-siblings:closed,
         &:closed:has-children:has-siblings {
             border-image: none;
             image: url($PATH_RESOURCES + '/rc/branch_closed.png');
         }
 
-        &:open:has-children:!has-siblings,
+        &:open:has-children: !has-siblings,
         &:open:has-children:has-siblings {
             border-image: none;
             image: url($PATH_RESOURCES + '/rc/branch_open.png');
         }
 
-        &:has-children:!has-siblings:closed:hover,
+        &:has-children: !has-siblings:closed:hover,
         &:closed:has-children:has-siblings:hover {
             image: url($PATH_RESOURCES + '/rc/branch_closed_focus.png');
         }
 
-        &:open:has-children:!has-siblings:hover,
+        &:open:has-children: !has-siblings:hover,
         &:open:has-children:has-siblings:hover {
             image: url($PATH_RESOURCES + '/rc/branch_open_focus.png');
         }
@@ -1932,7 +1936,7 @@ QColumnView {
             }
         }
 
-        &:!selected {
+        &: !selected {
 
             &:hover {
                 outline: 0;
@@ -2076,7 +2080,7 @@ QToolBox {
             }
         }
 
-        &:!selected {
+        &: !selected {
             background-color: $COLOR_BACKGROUND_NORMAL;
             border-bottom: 2px solid $COLOR_BACKGROUND_NORMAL;
 
@@ -2121,14 +2125,14 @@ https://stackoverflow.com/questions/14581498/qt-stylesheet-for-hline-vline-color
     }
 
     /* HLine */
-    &[frameShape="4"]{
+    &[frameShape="4"] {
         max-height: 2px;
         border: none;
         background-color: $COLOR_BACKGROUND_NORMAL;
     }
 
     /* HLine */
-    &[frameShape="5"]{
+    &[frameShape="5"] {
         max-width: 2px;
         border: none;
         background-color: $COLOR_BACKGROUND_NORMAL;
