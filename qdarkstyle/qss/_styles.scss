@@ -891,7 +891,7 @@ QLabel {
     margin: 0px;
     color: $COLOR_FOREGROUND_LIGHT;
 
-    &::disabled {
+    &:disabled {
         background-color: $COLOR_BACKGROUND_DARK;
         border: 0px solid $COLOR_BACKGROUND_NORMAL;
         color: $COLOR_FOREGROUND_DARK;
@@ -917,9 +917,9 @@ QTextBrowser {
     }
 
     &:hover,
-    &: !hover,
-    &::selected,
-    &::pressed {
+    &:!hover,
+    &:selected,
+    &:pressed {
         border: $BORDER_NORMAL;
     }
 }
@@ -942,8 +942,8 @@ QGraphicsView {
 
     &:hover,
     &: !hover,
-    &::selected,
-    &::pressed {
+    &selected,
+    &:pressed {
         border: $BORDER_NORMAL;
     }
 }
@@ -1909,11 +1909,11 @@ QColumnView {
     }
 
     &:selected {
-        background: $COLOR_SELECTION_NORMAL;
+        background-color: $COLOR_SELECTION_NORMAL;
         color: $COLOR_BACKGROUND_NORMAL;
     }
 
-    &::hover {
+    &:hover {
         background-color: $COLOR_BACKGROUND_DARK;
         border: $BORDER_SELECTION_LIGHT;
     }
@@ -2054,7 +2054,7 @@ QToolBox {
     border: 0px;
     border: $BORDER_NORMAL;
 
-    &::selected {
+    &:selected {
         padding: 0px;
         border: 2px solid $COLOR_SELECTION_NORMAL;
     }
