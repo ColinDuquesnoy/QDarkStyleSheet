@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------------
 
-    Created by the qtsass compiler v0.1.2.dev0
+    Created by the qtsass compiler v0.1.1
 
     The definitions are in the "qdarkstyle.qss._styles.scss" module
 
@@ -872,7 +872,7 @@ QLabel {
   color: #F0F0F0;
 }
 
-QLabel::disabled {
+QLabel:disabled {
   background-color: #19232D;
   border: 0px solid #32414B;
   color: #787878;
@@ -897,7 +897,7 @@ QTextBrowser:disabled {
   border-radius: 4px;
 }
 
-QTextBrowser:hover, QTextBrowser:!hover, QTextBrowser::selected, QTextBrowser::pressed {
+QTextBrowser:hover, QTextBrowser:!hover, QTextBrowser:selected, QTextBrowser:pressed {
   border: 1px solid #32414B;
 }
 
@@ -918,7 +918,7 @@ QGraphicsView:disabled {
   border-radius: 4px;
 }
 
-QGraphicsView:hover, QGraphicsView:!hover, QGraphicsView::selected, QGraphicsView::pressed {
+QGraphicsView:hover, QGraphicsView:!hover, QGraphicsView:selected, QGraphicsView:pressed {
   border: 1px solid #32414B;
 }
 
@@ -1195,7 +1195,7 @@ QComboBox {
   selection-background-color: #1464A0;
   padding-left: 4px;
   padding-right: 36px;
-  /* See scrollbar size */
+  /* 4 + 16*2 See scrollbar size */
   /* Fixes #103, #111 */
   min-height: 1.5em;
   /* padding-top: 2px;     removed to fix #132 */
@@ -1855,25 +1855,12 @@ QColumnView::item:pressed {
   background-color: #1464A0;
 }
 
-QTreeView::item:hover,
-QListView::item:hover,
-QTableView::item:hover,
-QColumnView::item:hover {
-  border: 1px solid #148CD2;
-}
-
-QTreeView::item:focus,
-QListView::item:focus,
-QTableView::item:focus,
-QColumnView::item:focus {
-  border: 1px solid #1464A0;
-}
-
 QTreeView::item:selected:hover,
 QListView::item:selected:hover,
 QTableView::item:selected:hover,
 QColumnView::item:selected:hover {
-  border: 1px solid #148CD2;
+  background: #1464A0;
+  color: #19232D;
 }
 
 QTreeView::item:selected:active,
@@ -1883,18 +1870,13 @@ QColumnView::item:selected:active {
   background-color: #1464A0;
 }
 
-QTreeView::item:selected:focus,
-QListView::item:selected:focus,
-QTableView::item:selected:focus,
-QColumnView::item:selected:focus {
-  border: 1px solid #1464A0;
-}
-
 QTreeView::item:!selected:hover,
 QListView::item:!selected:hover,
 QTableView::item:!selected:hover,
 QColumnView::item:!selected:hover {
   outline: 0;
+  color: #148CD2;
+  background-color: #32414B;
 }
 
 QTableCornerButton::section {
@@ -2001,7 +1983,7 @@ QToolBox {
   border: 1px solid #32414B;
 }
 
-QToolBox::selected {
+QToolBox:selected {
   padding: 0px;
   border: 2px solid #1464A0;
 }
