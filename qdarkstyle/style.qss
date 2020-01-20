@@ -405,7 +405,7 @@ QMenu::separator {
 
 QMenu::icon {
   margin: 0px;
-  padding-left: 4px;
+  padding-left: 8px;
 }
 
 QMenu::item {
