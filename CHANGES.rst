@@ -1,5 +1,7 @@
 Changelog
 =========
+-  2.8.1:
+    -  Fix documentation
 -  2.8:
     -  Fix tooltip giant rectangle #174
     -  Fix QTextEdit wihout borders inside frame #188
