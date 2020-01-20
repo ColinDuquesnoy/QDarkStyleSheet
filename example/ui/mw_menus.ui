@@ -241,6 +241,9 @@
     </widget>
     <addaction name="actionActionA"/>
     <addaction name="menuMenuSub"/>
+    <addaction name="actionAction_with_icon_A"/>
+    <addaction name="actionAction_With_Icon_B"/>
+    <addaction name="actionAction_With_Icon_C"/>
    </widget>
    <widget class="QMenu" name="menuMenuDelayed">
     <property name="title">
@@ -295,6 +298,12 @@
    <property name="windowTitle">
     <string>Tool bar actions</string>
    </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
@@ -305,6 +314,10 @@
    <addaction name="separator"/>
    <addaction name="actionActionSubA"/>
    <addaction name="actionActionSubB"/>
+   <addaction name="separator"/>
+   <addaction name="actionAction_with_icon_A"/>
+   <addaction name="actionAction_With_Icon_B"/>
+   <addaction name="actionAction_With_Icon_C"/>
   </widget>
   <widget class="QToolBar" name="toolBarDelayed">
    <property name="windowTitle">
@@ -425,12 +438,41 @@
     <string>New E</string>
    </property>
   </action>
+  <action name="actionAction_with_icon_A">
+   <property name="icon">
+    <iconset resource="../../qdarkstyle/style.qrc">
+     <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Action With Icon A</string>
+   </property>
+  </action>
+  <action name="actionAction_With_Icon_B">
+   <property name="icon">
+    <iconset resource="../../qdarkstyle/style.qrc">
+     <normaloff>:/qss_icons/rc/window_close_focus.png</normaloff>:/qss_icons/rc/window_close_focus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Action With Icon B</string>
+   </property>
+  </action>
+  <action name="actionAction_With_Icon_C">
+   <property name="icon">
+    <iconset resource="../../qdarkstyle/style.qrc">
+     <normaloff>:/qss_icons/rc/arrow_right_focus.png</normaloff>:/qss_icons/rc/arrow_right_focus.png</iconset>
+   </property>
+   <property name="text">
+    <string>Action With Icon C</string>
+   </property>
+  </action>
  </widget>
  <tabstops>
   <tabstop>lineEdit</tabstop>
   <tabstop>tabWidget</tabstop>
   <tabstop>lineEdit_2</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="../../qdarkstyle/style.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'mw_menus.ui'
 #
-# Created by: PyQt5 UI code generator 5.14.1
+# Created by: PyQt5 UI code generator 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -149,6 +149,7 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.toolBar = QtWidgets.QToolBar(MainWindow)
+        self.toolBar.setIconSize(QtCore.QSize(16, 16))
         self.toolBar.setObjectName("toolBar")
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
         self.toolBarDelayed = QtWidgets.QToolBar(MainWindow)
@@ -186,10 +187,28 @@ class Ui_MainWindow(object):
         self.actionNewD.setObjectName("actionNewD")
         self.actionNewE = QtWidgets.QAction(MainWindow)
         self.actionNewE.setObjectName("actionNewE")
+        self.actionAction_with_icon_A = QtWidgets.QAction(MainWindow)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/qss_icons/rc/window_undock_focus.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionAction_with_icon_A.setIcon(icon)
+        self.actionAction_with_icon_A.setObjectName("actionAction_with_icon_A")
+        self.actionAction_With_Icon_B = QtWidgets.QAction(MainWindow)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/qss_icons/rc/window_close_focus.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionAction_With_Icon_B.setIcon(icon1)
+        self.actionAction_With_Icon_B.setObjectName("actionAction_With_Icon_B")
+        self.actionAction_With_Icon_C = QtWidgets.QAction(MainWindow)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/qss_icons/rc/arrow_right_focus.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionAction_With_Icon_C.setIcon(icon2)
+        self.actionAction_With_Icon_C.setObjectName("actionAction_With_Icon_C")
         self.menuMenuSub.addAction(self.actionActionSubA)
         self.menuMenuSub.addAction(self.actionActionSubB)
         self.menuMenu.addAction(self.actionActionA)
         self.menuMenu.addAction(self.menuMenuSub.menuAction())
+        self.menuMenu.addAction(self.actionAction_with_icon_A)
+        self.menuMenu.addAction(self.actionAction_With_Icon_B)
+        self.menuMenu.addAction(self.actionAction_With_Icon_C)
         self.menuMenuSubDelayed.addAction(self.actionActionDelayedSubA)
         self.menuMenuDelayed.addAction(self.actionActionDelayedA)
         self.menuMenuDelayed.addAction(self.menuMenuSubDelayed.menuAction())
@@ -211,6 +230,10 @@ class Ui_MainWindow(object):
         self.toolBar.addSeparator()
         self.toolBar.addAction(self.actionActionSubA)
         self.toolBar.addAction(self.actionActionSubB)
+        self.toolBar.addSeparator()
+        self.toolBar.addAction(self.actionAction_with_icon_A)
+        self.toolBar.addAction(self.actionAction_With_Icon_B)
+        self.toolBar.addAction(self.actionAction_With_Icon_C)
         self.toolBarDelayed.addAction(self.actionActionDelayedA)
         self.toolBarDelayed.addSeparator()
         self.toolBarDelayed.addAction(self.actionActionDelayedSubA)
@@ -289,3 +312,7 @@ class Ui_MainWindow(object):
         self.actionNewC.setText(_translate("MainWindow", "New C"))
         self.actionNewD.setText(_translate("MainWindow", "New D"))
         self.actionNewE.setText(_translate("MainWindow", "New E"))
+        self.actionAction_with_icon_A.setText(_translate("MainWindow", "Action With Icon A"))
+        self.actionAction_With_Icon_B.setText(_translate("MainWindow", "Action With Icon B"))
+        self.actionAction_With_Icon_C.setText(_translate("MainWindow", "Action With Icon C"))
+from qdarkstyle import style_rc
