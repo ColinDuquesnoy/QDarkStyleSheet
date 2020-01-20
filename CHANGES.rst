@@ -1,6 +1,6 @@
 Changelog
 =========
--  2.8.dev:
+-  2.8:
     -  Fix tooltip giant rectangle #174
     -  Fix QTextEdit wihout borders inside frame #188
     -  Fix PyQt5 issuies on dropbown #191
