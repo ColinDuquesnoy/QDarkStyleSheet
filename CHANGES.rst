@@ -1,6 +1,17 @@
 Changelog
 =========
-
+-  2.8.dev:
+    -  Fix tooltip giant rectangle #174
+    -  Fix QTextEdit wihout borders inside frame #188
+    -  Fix PyQt5 issuies on dropbown #191
+    -  Fix combo box with icons #169
+    -  Fix QToolbBar vertical handle #210
+    -  Fix pane tab labelcropped on activation #199
+    -  Enhance vertical/horiontal lines #184
+    -  Enhance tool button size and spacing #181, #183, #202
+    -  Enhance buttons and inputs with focus, blue border #194, #211
+    -  Enhance QSplitter #207
+    -  Removed QStatusBar vertical lines #205
 -  2.7:
     -  Remove utils from import in qdarkstyle, #170
     -  Fix border colors in tool button #176
