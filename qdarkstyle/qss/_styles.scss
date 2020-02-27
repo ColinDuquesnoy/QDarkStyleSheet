@@ -2174,10 +2174,10 @@ QSplitter {
     }
 }
 
-/* QDateEdit --------------------------------------------------------------
+/* QDateEdit, QDateTimeEdit -----------------------------------------------
 
 --------------------------------------------------------------------------- */
-QDateEdit {
+QDateEdit, QDateTimeEdit {
     selection-background-color: $COLOR_SELECTION_NORMAL;
     border-style: solid;
     border: $BORDER_NORMAL;
