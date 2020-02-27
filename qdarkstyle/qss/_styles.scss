@@ -226,6 +226,8 @@ QGroupBox {
         width: 12px;
 
         &:unchecked {
+            border: none;
+            image: url($PATH_RESOURCES + '/rc/checkbox_unchecked.png');
 
             &:hover,
             &:focus,
@@ -240,6 +242,8 @@ QGroupBox {
         }
 
         &:checked {
+            border: none;
+            image: url($PATH_RESOURCES + '/rc/checkbox_checked.png');
 
             &:hover,
             &:focus,
