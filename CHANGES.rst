@@ -1,5 +1,9 @@
 Changelog
 =========
+-  2.8.1:
+    -  Fix QGroupBox small indicator size #218
+    -  Fix QGroupBox incorrect indicator icon when unfocused #219
+    -  Fix QDateTimeEdit incorrect drop-down arrow icon #220
 -  2.8:
     -  Fix tooltip giant rectangle #174
     -  Fix QTextEdit wihout borders inside frame #188

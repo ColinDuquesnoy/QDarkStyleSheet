@@ -222,10 +222,12 @@ QGroupBox {
 
     &::indicator {
         margin-left: 2px;
-        height: 12px;
-        width: 12px;
+        height: 16px;
+        width: 16px;
 
         &:unchecked {
+            border: none;
+            image: url($PATH_RESOURCES + '/rc/checkbox_unchecked.png');
 
             &:hover,
             &:focus,
@@ -240,6 +242,9 @@ QGroupBox {
         }
 
         &:checked {
+            border: none;
+            image: url($PATH_RESOURCES + '/rc/checkbox_checked.png');
+
 
             &:hover,
             &:focus,
@@ -2174,10 +2179,10 @@ QSplitter {
     }
 }
 
-/* QDateEdit --------------------------------------------------------------
+/* QDateEdit, QDateTimeEdit -----------------------------------------------
 
 --------------------------------------------------------------------------- */
-QDateEdit {
+QDateEdit, QDateTimeEdit {
     selection-background-color: $COLOR_SELECTION_NORMAL;
     border-style: solid;
     border: $BORDER_NORMAL;
