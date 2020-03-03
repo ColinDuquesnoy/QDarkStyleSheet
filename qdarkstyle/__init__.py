@@ -56,7 +56,7 @@ import warnings
 # Local imports
 from qdarkstyle.palette import DarkPalette
 
-__version__ = "2.8"
+__version__ = "2.8.1"
 
 _logger = logging.getLogger(__name__)
 
