@@ -5,14 +5,13 @@ A dark style sheet for QtWidgets application.
 """
 
 # Standard library imports
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 # Local imports
-from qdarkstyle import __version__
 from qdarkstyle import __doc__ as long_desc
+from qdarkstyle import __version__
 
-
-install_requires = ['helpdev>=0.6.2', 'qtpy>=1.7']
+install_requires = ['helpdev>=0.6.10', 'qtpy>=1.9']
 
 extras_require = {
     'develop': ['qtsass', 'watchdog'],
@@ -44,6 +43,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Topic :: Software Development :: Libraries :: Application Frameworks'
     ],
     zip_safe=False,  # don't use eggs
