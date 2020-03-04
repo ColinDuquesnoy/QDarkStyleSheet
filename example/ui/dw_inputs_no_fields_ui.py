@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dw_inputs_no_fields.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.3
+# Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
 
