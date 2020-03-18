@@ -16,16 +16,24 @@ matrix:
       env: TOXENV=py36-pyqt5
     - python: 3.6
       env: TOXENV=py36-pyside2
-    - python: 3.6
-      env: TOXENV=py36-doc
+
+    - python: 3.8
+      env: TOXENV=py38
+    - python: 3.8
+      env: TOXENV=py38-pyqt5
+    - python: 3.8
+      env: TOXENV=py38-pyside2
+
+    - python: 3.8
+      env: TOXENV=py38-doc
 
 install:
   # to make sure it has everything up to date
-  - pip install -U setuptools
-  - pip install -U pip
-  - pip install -U wheel
-  - pip install -U virtualenv
-  - pip install -U tox
+  - python -m pip install -U setuptools
+  - python -m pip install -U pip
+  - python -m pip install -U wheel
+  - python -m pip install -U virtualenv
+  - python -m pip install -U tox
 
 script:
   - tox
