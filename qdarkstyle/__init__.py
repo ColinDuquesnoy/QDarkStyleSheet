@@ -292,7 +292,7 @@ def load_stylesheet(*args, **kwargs):
                         "(old) boolean type pyside='False'.")
 
     # No arguments
-    elif not kwargs and not args:
+    if not kwargs and not args:
         stylesheet = _load_stylesheet(qt_api='pyqt5')
 
     # Old API arguments
