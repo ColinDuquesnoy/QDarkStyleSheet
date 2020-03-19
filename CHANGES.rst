@@ -1,6 +1,9 @@
 Changelog
 =========
 -  2.8.1:
+    -  Add .gitattributes for generated and documentation files
+    -  Add more complete tox and Travis envs with many checks
+    -  Fix removing message format argument
     -  Fix QGroupBox small indicator size #218
     -  Fix QGroupBox incorrect indicator icon when unfocused #219
     -  Fix QDateTimeEdit incorrect drop-down arrow icon #220
