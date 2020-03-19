@@ -91,7 +91,7 @@ VARIABLES_SCSS_FILEPATH = os.path.join(QSS_PATH, VARIABLES_SCSS_FILE)
 DEPRECATION_MSG = '''This function will be deprecated in v3.0.
 Please, set the wanted binding by using QtPy environment variable QT_API,
 then use load_stylesheet() or use load_stylesheet()
-passing the argument qt_api= 'wanted_binding'.'''.format(__version__)
+passing the argument qt_api='wanted_binding'.'''
 
 
 def _apply_os_patches():
