@@ -6,6 +6,7 @@ build/
 
 *.egg-info/
 __pycache__
+.coverage
 
 *.tar
 *.tar.*
