@@ -6,7 +6,3 @@ pip
 wheel
 virtualenv
 pipdeptree
-
-# To generate documentation
-sphinx
-sphinx_rtd_theme
