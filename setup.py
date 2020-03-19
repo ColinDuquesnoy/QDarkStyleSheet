@@ -5,6 +5,8 @@ A dark style sheet for QtWidgets application.
 """
 
 # Standard library imports
+import glob
+import os
 from setuptools import find_packages, setup
 
 # Local imports
@@ -18,6 +20,12 @@ extras_require = {
     'docs': ['sphinx', 'sphinx_rtd_theme'],
     'example': ['pyqt5', 'pyside2']
 }
+
+
+def remove_all(dir_path, patterns='*.pyc'):
+    for pattern in patterns:
+        for filename in glob.iglob(dir_path + '/**/' + pattern, recursive=True):
+            os.remove(filename)
 
 setup(
     name='QDarkStyle',
