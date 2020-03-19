@@ -23,9 +23,17 @@ extras_require = {
 
 
 def remove_all(dir_path, patterns='*.pyc'):
+    """Remove all files from `dir_path` matching the `patterns`.
+
+    Args:
+        dir_path (str): Directory path.
+        patterns (str): Pattern using regex. Defaults to '*.pyc'.
+    """
+
     for pattern in patterns:
         for filename in glob.iglob(dir_path + '/**/' + pattern, recursive=True):
             os.remove(filename)
+
 
 setup(
     name='QDarkStyle',
