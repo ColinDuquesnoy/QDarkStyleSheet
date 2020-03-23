@@ -50,8 +50,9 @@ import time
 # Make the example runnable without the need to install and include ui
 sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/..'))
 sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/ui'))
+
 # Must be in this place, after setting path, to not need to install
-import qdarkstyle
+import qdarkstyle  # noqa: E402
 
 # Set log for debug
 logging.basicConfig(level=logging.DEBUG)
@@ -146,12 +147,12 @@ def main():
     ui = ui_main()
     ui.setupUi(window)
 
-    title = ("QDarkStyle Example - " +
-             "(QDarkStyle=v" + qdarkstyle.__version__ +
-             ", QtPy=v" + QTPY_VERSION +
-             ", " + API_NAME + "=v" + API_VERSION +
-             ", Qt=v" + QT_VERSION +
-             ", Python=v" + platform.python_version() + ")")
+    title = ("QDarkStyle Example - "
+             + "(QDarkStyle=v" + qdarkstyle.__version__
+             + ", QtPy=v" + QTPY_VERSION
+             + ", " + API_NAME + "=v" + API_VERSION
+             + ", Qt=v" + QT_VERSION
+             + ", Python=v" + platform.python_version() + ")")
 
     _logger.info(title)
 
