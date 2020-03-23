@@ -2,7 +2,7 @@ Contributing
 ============
 
 This file describes a path to contribute to this project. Check out our
-`CODE OF CONDUCT <./CODE_OF_CONDUCT.md>`__.
+`CODE OF CONDUCT <./CODE_OF_CONDUCT.rst>`__.
 
 Bug Reports and Feature Requests
 --------------------------------
@@ -31,8 +31,8 @@ by one of the manteiners before it is merged into the main repository.
    are changing the stylesheet evidencing the changes.
 
 -  Send a pull request and bug the maintainer until it gets merged and
-   published. Make sure to add yourself to `AUTHORS <./AUTHORS.md>`__
-   and the change(s) to `CHANGES <./CHANGES.md>`__.
+   published. Make sure to add yourself to `AUTHORS <./AUTHORS.rst>`__
+   and the change(s) to `CHANGES <./CHANGES.rst>`__.
 
 Getting Started
 ---------------
@@ -84,15 +84,15 @@ These are the basic steps needed to start developing on QDarkStyle.
 
 -  Add you and your changes
 
-   Please add a list item to `CHANGES <./CHANGES.md>`__ if the fix or
+   Please add a list item to `CHANGES <./CHANGES.rst>`__ if the fix or
    feature is not trivial (small doc updates, typo fixes). Please add
-   you as an author to `AUTHORS <./AUTHORS.md>`__.
+   you as an author to `AUTHORS <./AUTHORS.rst>`__.
 
 -  Add files to commit
 
    Add files that are part of your changes, remember that each commit
    must represent a small but functional change. Remember to add
-   CHANGES.md and AUTHORS.md too. To add all files changed do:
+   CHANGES.rst and AUTHORS.rst too. To add all files changed do:
 
    ::
 

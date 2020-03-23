@@ -45,6 +45,7 @@ setup(
     author_email='colin.duquesnoy@gmail.com',
     description='The most complete dark stylesheet for Python and Qt applications',
     long_description=long_desc,
+    long_description_content_type='text/x-rst',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: X11 Applications :: Qt',

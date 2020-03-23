@@ -251,7 +251,7 @@ Views and Inputs (no fields)
 Changelog
 ---------
 
-Please, see `CHANGES <CHANGES.md>`__ file.
+Please, see `CHANGES <CHANGES.rst>`__ file.
 
 
 License
@@ -260,13 +260,13 @@ License
 This project is licensed under the MIT license. Images contained in this
 project are licensed under CC-BY license.
 
-For more information see `LICENSE <LICENSE.md>`__ file.
+For more information see `LICENSE <LICENSE.rst>`__ file.
 
 
 Authors
 -------
 
-For more information see `AUTHORS <AUTHORS.md>`__ file.
+For more information see `AUTHORS <AUTHORS.rst>`__ file.
 
 
 Contributing
@@ -276,7 +276,7 @@ Most widgets have been styled. If you find a widget that has not been
 style, just open an issue on the issue tracker or, better, submit a pull
 request.
 
-If you want to contribute, see `CONTRIBUTING <CONTRIBUTING.md>`__ file.
+If you want to contribute, see `CONTRIBUTING <CONTRIBUTING.rst>`__ file.
 
 .. |Build Status| image:: https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet.png?branch=master
    :target: https://travis-ci.org/ColinDuquesnoy/QDarkStyleSheet
