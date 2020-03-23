@@ -1,6 +1,7 @@
 Changelog
 =========
 -  2.8.1:
+    -  Fix rst file formats and links
     -  Add .gitattributes for generated and documentation files
     -  Add more complete tox and Travis envs with many checks
     -  Fix removing message format argument
@@ -139,8 +140,7 @@ Changelog
 -  2.2.1:
     -  Remove border of status bar widgets
 -  2.2:
-    -  Major update of the color scheme based on the Breeze Dark theme of
-    KDE 5
+    -  Major update of the color scheme based on the Breeze Dark theme of KDE 5
     -  Fix issues #29, #30, #31, #32 and #35
 -  2.1:
     -  Add style for QPushButton:checked
@@ -154,8 +154,7 @@ Changelog
 -  1.15:
     -  Improve tristate checkbox graphics: undetermined state is now represented by a dash
 -  1.14:
-    -  Add support for tristate check boxes and for vertical and horizontal
-    lines
+    -  Add support for tristate check boxes and for vertical and horizontal lines
 -  1.13:
     -  Fix issue with horizontal scrollbar arrows, left and right were inversed.
 -  1.12:
