@@ -1,7 +1,7 @@
 Changelog
 =========
 -  2.8.1:
-    -  Fix rst file formats and links
+    -  Fix rst file formats and links #229
     -  Add .gitattributes for generated and documentation files
     -  Add more complete tox and Travis envs with many checks
     -  Fix removing message format argument
