@@ -21,6 +21,8 @@ matrix:
       env: TOXENV=py38-pyside2
 
     - python: 3.8
+      env: TOXENV=py38-test
+    - python: 3.8
       env: TOXENV=py38-lint
     - python: 3.8
       env: TOXENV=py38-safety
@@ -34,8 +36,6 @@ matrix:
 
     - python: 3.8
       env: TOXENV=py38-release
-      
-
 
 install:
   # to make sure it has everything up to date
