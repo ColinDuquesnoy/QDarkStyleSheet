@@ -385,7 +385,7 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
     warnings.warn(DEPRECATION_MSG, DeprecationWarning)
 
     if is_pyqtgraph:
-        stylesheet = _load_stylesheet(qt_api=os.environ('PYQTGRAPH_QT_LIB'))
+        stylesheet = _load_stylesheet(qt_api=os.environ.get('PYQTGRAPH_QT_LIB', None))
     else:
         stylesheet = _load_stylesheet()
 
