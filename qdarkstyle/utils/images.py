@@ -52,21 +52,12 @@ def _get_file_color_map(fname, palette):
     color_normal = palette.COLOR_FOREGROUND_DARK
 
     name, ext = fname.split('.')
-
-    files_map = {
-        fname: {
-            fname: color_normal,
-            name + '_disabled.' + ext: color_disabled,
-            name + '_focus.' + ext: color_focus,
-            name + '_pressed.' + ext: color_pressed,
-        }
+    file_colors = {
+        fname: color_normal,
+        name + '_disabled.' + ext: color_disabled,
+        name + '_focus.' + ext: color_focus,
+        name + '_pressed.' + ext: color_pressed,
     }
-
-    for f, file_colors in files_map.items():
-        if f == fname:
-            break
-
-    assert file_colors
 
     return file_colors
 
