@@ -42,82 +42,82 @@ class DarkPalette(object):
     
     # Color
     # Background
-    BACKGROUND_1 = 'GRAY_10'
-    BACKGROUND_2 = 'GRAY_20'
-    BACKGROUND_3 = 'GRAY_40'
-    BACKGROUND_4 = 'GRAY_60'
-    BACKGROUND_5 = 'GRAY_60'
+    COLOR_BACKGROUND_1 = 'GRAY_10'
+    COLOR_BACKGROUND_2 = 'GRAY_20'
+    COLOR_BACKGROUND_3 = 'GRAY_40'
+    COLOR_BACKGROUND_4 = 'GRAY_60'
+    COLOR_BACKGROUND_5 = 'GRAY_60'
 
     #Text
-    TEXT_1 = 'GRAY_150'
-    TEXT_2 = 'GRAY_140'
-    TEXT_3 = 'GRAY_120'
-    TEXT_4 = 'GRAY_100'
+    COLOR_TEXT_1 = 'GRAY_150'
+    COLOR_TEXT_2 = 'GRAY_140'
+    COLOR_TEXT_3 = 'GRAY_120'
+    COLOR_TEXT_4 = 'GRAY_100'
     
     #Inverse Text
-    INVERSE_TEXT_1 = 'GRAY_150'
-    INVERSE_TEXT_2 = 'GRAY_140'
-    INVERSE_TEXT_3 = 'GRAY_120'
-    INVERSE_TEXT_4 = 'GRAY_100'
+    COLOR_INVERSE_TEXT_1 = 'GRAY_150'
+    COLOR_INVERSE_TEXT_2 = 'GRAY_140'
+    COLOR_INVERSE_TEXT_3 = 'GRAY_120'
+    COLOR_INVERSE_TEXT_4 = 'GRAY_100'
 
     #Accent
-    ACCENT_1 = 'BLUE_50'
-    ACCENT_2 = 'BLUE_70'
-    ACCENT_3 = 'BLUE_90'
-    ACCENT_4 = 'BLUE_110'
+    COLOR_ACCENT_1 = 'BLUE_50'
+    COLOR_ACCENT_2 = 'BLUE_70'
+    COLOR_ACCENT_3 = 'BLUE_90'
+    COLOR_ACCENT_4 = 'BLUE_110'
 
     #Border
-    BORDER_1 = 'GRAY_40'
-    BORDER_2 = 'GRAY_50'
-    BORDER_3 = 'GRAY_60'
-    BORDER_4 = 'GRAY_70'
+    COLOR_BORDER_1 = 'GRAY_40'
+    COLOR_BORDER_2 = 'GRAY_50'
+    COLOR_BORDER_3 = 'GRAY_60'
+    COLOR_BORDER_4 = 'GRAY_70'
 
     #Below colors may belong only to Spyder?
 
     #Feedback
-    SUCCESS_1 = 'GREEN_40'
-    SUCCESS_2 = 'GREEN_70'
-    SUCCESS_3 = 'GREEN_110'
-    ERROR_1 = 'RED_40'
-    ERROR_2 = 'RED_70'
-    ERROR_3 = 'RED_110'
-    WARN_1 = 'ORANGE_40'
-    WARN_2 = 'ORANGE_70'
-    WARN_3 = 'ORANGE_110'
+    COLOR_SUCCESS_1 = 'GREEN_40'
+    COLOR_SUCCESS_2 = 'GREEN_70'
+    COLOR_SUCCESS_3 = 'GREEN_110'
+    COLOR_ERROR_1 = 'RED_40'
+    COLOR_ERROR_2 = 'RED_70'
+    COLOR_ERROR_3 = 'RED_110'
+    COLOR_WARN_1 = 'ORANGE_40'
+    COLOR_WARN_2 = 'ORANGE_70'
+    COLOR_WARN_3 = 'ORANGE_110'
 
     #Icon
-    ICON_1 = 'GRAY_140'
-    ICON_2 = 'BLUE_70'
-    ICON_3 = 'GREEN_70'
-    ICON_4 = 'RED_70'
-    ICON_5 = 'ORANGE_70'
-    ICON_6 = 'GRAY_30'
+    COLOR_ICON_1 = 'GRAY_140'
+    COLOR_ICON_2 = 'BLUE_70'
+    COLOR_ICON_3 = 'GREEN_70'
+    COLOR_ICON_4 = 'RED_70'
+    COLOR_ICON_5 = 'ORANGE_70'
+    COLOR_ICON_6 = 'GRAY_30'
 
     #Highlight
-    HIGHLIGHT_1 = 'GRAY_50' #90%
-    HIGHLIGHT_2 = 'GRAY_60' #90%
-    HIGHLIGHT_3 = 'GRAY_70' #90%
-    HIGHLIGHT_4 = 'GRAY_80' #90%
+    COLOR_HIGHLIGHT_1 = 'GRAY_50' #90%
+    COLOR_HIGHLIGHT_2 = 'GRAY_60' #90%
+    COLOR_HIGHLIGHT_3 = 'GRAY_70' #90%
+    COLOR_HIGHLIGHT_4 = 'GRAY_80' #90%
 
     #Find
-    FIND_1 = 'BLUE_50' #90
-    FIND_2 = 'BLUE_60' #90
-    FIND_3 = 'BLUE_70' #90
-    FIND_4 = 'BLUE_80' #90
+    COLOR_FIND_1 = 'BLUE_50' #90
+    COLOR_FIND_2 = 'BLUE_60' #90
+    COLOR_FIND_3 = 'BLUE_70' #90
+    COLOR_FIND_4 = 'BLUE_80' #90
 
     #Group
-    GROUP_1 = '#E11C1C'
-    GROUP_2 = '#FF8A00'
-    GROUP_3 = '#88BA00'
-    GROUP_4 = '#2DB500'
-    GROUP_5 = '#3FC6F0'
-    GROUP_6 = '#107EEC'
-    GROUP_7 = '#5C47E0'
-    GROUP_8 = '#7F27C5'
-    GROUP_9 = '#C88AFA'
-    GROUP_10 = '#AF2294'
-    GROUP_11 = '#DB4D8E'
-    GROUP_12 = '#38D4A4'
+    COLOR_GROUP_1 = '#E11C1C'
+    COLOR_GROUP_2 = '#FF8A00'
+    COLOR_GROUP_3 = '#88BA00'
+    COLOR_GROUP_4 = '#2DB500'
+    COLOR_GROUP_5 = '#3FC6F0'
+    COLOR_GROUP_6 = '#107EEC'
+    COLOR_GROUP_7 = '#5C47E0'
+    COLOR_GROUP_8 = '#7F27C5'
+    COLOR_GROUP_9 = '#C88AFA'
+    COLOR_GROUP_10 = '#AF2294'
+    COLOR_GROUP_11 = '#DB4D8E'
+    COLOR_GROUP_12 = '#38D4A4'
     
     # Paths
     PATH_RESOURCES = "':/qss_icons'"
@@ -126,63 +126,63 @@ class DarkPalette(object):
     def to_dict(cls, colors_only=False):
         """Convert variables to dictionary."""
         order = [
-            'BACKGROUND_1',
-            'BACKGROUND_2',
-            'BACKGROUND_3',
-            'BACKGROUND_4',
-            'BACKGROUND_5',
-            'TEXT_1',
-            'TEXT_2',
-            'TEXT_3',
-            'TEXT_4',
-            'INVERSE_TEXT_1',
-            'INVERSE_TEXT_2',
-            'INVERSE_TEXT_3',
-            'INVERSE_TEXT_4',
-            'ACCENT_1',
-            'ACCENT_2',
-            'ACCENT_3',
-            'ACCENT_4',
-            'BORDER_1',
-            'BORDER_2',
-            'BORDER_3',
-            'BORDER_4',
+            'COLOR_BACKGROUND_1',
+            'COLOR_BACKGROUND_2',
+            'COLOR_BACKGROUND_3',
+            'COLOR_BACKGROUND_4',
+            'COLOR_BACKGROUND_5',
+            'COLOR_TEXT_1',
+            'COLOR_TEXT_2',
+            'COLOR_TEXT_3',
+            'COLOR_TEXT_4',
+            'COLOR_INVERSE_TEXT_1',
+            'COLOR_INVERSE_TEXT_2',
+            'COLOR_INVERSE_TEXT_3',
+            'COLOR_INVERSE_TEXT_4',
+            'COLOR_ACCENT_1',
+            'COLOR_ACCENT_2',
+            'COLOR_ACCENT_3',
+            'COLOR_ACCENT_4',
+            'COLOR_BORDER_1',
+            'COLOR_BORDER_2',
+            'COLOR_BORDER_3',
+            'COLOR_BORDER_4',
     #Below colors may belong only to Spyder?
-            'SUCCESS_1',
-            'SUCCESS_2',
-            'SUCCESS_3',
-            'ERROR_1',
-            'ERROR_2',
-            'ERROR_3',
-            'WARN_1',
-            'WARN_2',
-            'WARN_3',
-            'ICON_1',
-            'ICON_2',
-            'ICON_3',
-            'ICON_4',
-            'ICON_5',
-            'ICON_6',
-            'HIGHLIGHT_1',
-            'HIGHLIGHT_2',
-            'HIGHLIGHT_3',
-            'HIGHLIGHT_4',
-            'FIND_1',
-            'FIND_2',
-            'FIND_3',
-            'FIND_4',
-            'GROUP_1',
-            'GROUP_2',
-            'GROUP_3',
-            'GROUP_4',
-            'GROUP_5',
-            'GROUP_6',
-            'GROUP_7',
-            'GROUP_8',
-            'GROUP_9',
-            'GROUP_10',
-            'GROUP_11',
-            'GROUP_12',
+            'COLOR_SUCCESS_1',
+            'COLOR_SUCCESS_2',
+            'COLOR_SUCCESS_3',
+            'COLOR_ERROR_1',
+            'COLOR_ERROR_2',
+            'COLOR_ERROR_3',
+            'COLOR_WARN_1',
+            'COLOR_WARN_2',
+            'COLOR_WARN_3',
+            'COLOR_ICON_1',
+            'COLOR_ICON_2',
+            'COLOR_ICON_3',
+            'COLOR_ICON_4',
+            'COLOR_ICON_5',
+            'COLOR_ICON_6',
+            'COLOR_HIGHLIGHT_1',
+            'COLOR_HIGHLIGHT_2',
+            'COLOR_HIGHLIGHT_3',
+            'COLOR_HIGHLIGHT_4',
+            'COLOR_FIND_1',
+            'COLOR_FIND_2',
+            'COLOR_FIND_3',
+            'COLOR_FIND_4',
+            'COLOR_GROUP_1',
+            'COLOR_GROUP_2',
+            'COLOR_GROUP_3',
+            'COLOR_GROUP_4',
+            'COLOR_GROUP_5',
+            'COLOR_GROUP_6',
+            'COLOR_GROUP_7',
+            'COLOR_GROUP_8',
+            'COLOR_GROUP_9',
+            'COLOR_GROUP_10',
+            'COLOR_GROUP_11',
+            'COLOR_GROUP_12',
         #Pre-existing non colors
             'OPACITY_TOOLTIP',
             'SIZE_BORDER_RADIUS',
