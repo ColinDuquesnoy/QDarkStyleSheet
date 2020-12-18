@@ -1,0 +1,236 @@
+# Colors
+## Color System
+The color system is the source of the colors that themes draw from. Each has a 
+range of values from `0` (black `#000000`) to `150` (white `#ffffff`). Not all 
+colors are or should be used in every theme, but the scales provide a chance to 
+see the colors in a larger context and makes it easy to switch out colors as desired.
+
+The number assigned to each estimates how light or dark that color is. For parts of 
+an interface that are interactive, have text, or have any other important information, 
+please use colors combinations that have at least a difference of 20 where colors 
+overlap. Depending on the colors, you may need more contrast to create a theme that 
+meets accessibility standards about contrast or color blindness.
+
+### Gray
+GRAY_0 `#000000`
+GRAY_10 `#19232D`
+GRAY_20 `#262E38`
+GRAY_30 `#37414F`
+GRAY_40 `#455364`
+GRAY_50 `#54687A`
+GRAY_60 `#60798B`
+GRAY_70 `#788D9C`
+GRAY_80 `#9DA9B5`
+GRAY_90 `#CBCACA`
+GRAY_100 `#D9D8D8`
+GRAY_110 `#E1E1E1`
+GRAY_120 `#EEEEEE`
+GRAY_130 `#F5F5F5`
+GRAY_140 `#FAFAFA`
+GRAY_150 `#FFFFFF`
+### Blue
+BLUE_0 `#000000`
+BLUE_10 `#062647`
+BLUE_20 `#26486B`
+BLUE_30 `#375A7F`
+BLUE_40 `#346792`
+BLUE_50 `#1A72BB`
+BLUE_60 `#057DCE`
+BLUE_70 `#259AE9`
+BLUE_80 `#37AEFE`
+BLUE_90 `#73C7FF`
+BLUE_100 `#9FD9FF`
+BLUE_110 `#C2E3FA`
+BLUE_120 `#CEEBFF`
+BLUE_130 `#DAF0FF`
+BLUE_140 `#F5FBFF`
+BLUE_150 `##FFFFFF`
+### Green
+GREEN_0 `#000000`
+GREEN_10 `#064738`
+GREEN_20 `#055C49`
+GREEN_30 `#007A5E`
+GREEN_40 `#008760`
+GREEN_50 `#019D70`
+GREEN_60 `#02BA85`
+GREEN_70 `#20C997`
+GREEN_80 `#44DEB0`
+GREEN_90 `#3BEBB7`
+GREEN_100 `#88F2D3`
+GREEN_110 `#B0F5E1`
+GREEN_120 `#D1FBEE`
+GREEN_130 `#E4FFF7`
+GREEN_140 `#F5FFFD`
+GREEN_150 `#FFFFFF`
+### Red
+RED_0 `#000000`
+RED_10 `#470606`
+RED_20 `#760B0B`
+RED_30 `#AF0F0F`
+RED_40 `#D4140B`
+RED_50 `#DE321F`
+RED_60 `#E24232`
+RED_70 `#E74C3C`
+RED_80 `#F66657`
+RED_90 `#F88478`
+RED_100 `#FFACA4`
+RED_110 `#FFC3BD`
+RED_120 `#FEDDDA`
+RED_130 `#FFEEEE`
+RED_140 `#FFF5F5`
+RED_150 `##FFFFFF`
+### Orange
+ORANGE_0 `#000000`
+ORANGE_10 `#471D06`
+ORANGE_20 `#692907`
+ORANGE_30 `#AB3E00`
+ORANGE_40 `#CE4B01`
+ORANGE_50 `#E05E15`
+ORANGE_60 `#E57004`
+ORANGE_70 `#F37E12`
+ORANGE_80 `#FF993B`
+ORANGE_90 `#FFB950`
+ORANGE_100 `#FFCF84`
+ORANGE_110 `#FFDDA7`
+ORANGE_120 `#FFEACA`
+ORANGE_130 `#FFF3E2`
+ORANGE_140 `#FFFBF5`
+ORANGE_150 `##FFFFFF`
+
+## Default Dark Mode
+### Background
+BACKGROUND_1 = 'GRAY_10' `#19232D`
+BACKGROUND_2 = 'GRAY_20' `#262E38`
+BACKGROUND_3 = 'GRAY_40' `#455364`
+BACKGROUND_4 = 'GRAY_60' `#60798B`
+BACKGROUND_5 = 'GRAY_60' `#60798B`
+### Text
+TEXT_1 = 'GRAY_150' `#FFFFFF`
+TEXT_2 = 'GRAY_140' `#FAFAFA`
+TEXT_3 = 'GRAY_120' `#EEEEEE`
+TEXT_4 = 'GRAY_100' `#D9D8D8`
+### Inverse Text
+INVERSE_TEXT_1 = 'GRAY_150' `#FFFFFF`
+INVERSE_TEXT_2 = 'GRAY_140' `#FAFAFA`
+INVERSE_TEXT_3 = 'GRAY_120' `#EEEEEE`
+INVERSE_TEXT_4 = 'GRAY_100' `#D9D8D8`
+### Accent
+ACCENT_1 = 'BLUE_50' `#1A72BB`
+ACCENT_2 = 'BLUE_70' `##259AE9`
+ACCENT_3 = 'BLUE_90' `#73C7FF`
+ACCENT_4 = 'BLUE_110' `#C2E3FA`
+### Border
+BORDER_1 = 'GRAY_40' `#455364`
+BORDER_2 = 'GRAY_50' `#54687A`
+BORDER_3 = 'GRAY_60' `#60798B`
+BORDER_4 = 'GRAY_70' `#788D9C`
+<!--Below colors may belong only to Spyder?-->
+### Feedback
+SUCCESS_1 = 'GREEN_40' `#008760`
+SUCCESS_2 = 'GREEN_70' `#20C997`
+SUCCESS_3 = 'GREEN_110' `#B0F5E1`
+ERROR_1 = 'RED_40' `#D4140B`
+ERROR_2 = 'RED_70' `#E74C3C`
+ERROR_3 = 'RED_110' `#FFC3BD`
+WARN_1 = 'ORANGE_40' `#CE4B01`
+WARN_2 = 'ORANGE_70' `#F37E12`
+WARN_3 = 'ORANGE_110' `#FFDDA7`
+### Icon
+ICON_1 = 'GRAY_140' `#FAFAFA`
+ICON_2 = 'BLUE_70' `#259AE9`
+ICON_3 = 'GREEN_70' `#20C997`
+ICON_4 = 'RED_70' `#E74C3C`
+ICON_5 = 'ORANGE_70' `#F37E12`
+ICON_6 = 'GRAY_30' `#37414F`
+### Highlight
+HIGHLIGHT_1 = 'GRAY_50' #90% `#54687A` `rgba(84,104,122,0.9)`
+HIGHLIGHT_2 = 'GRAY_60' #90% `#60798B` `rgba(96,121,139,0.9)`
+HIGHLIGHT_3 = 'GRAY_70' #90% `#788D9C` `rgba(120,141,156,0.9)`
+HIGHLIGHT_4 = 'GRAY_80' #90% `#9DA9B5` `rgba(157,169,181,0.9)`
+### Find
+FIND_1 = 'BLUE_50' #90% `#1A72BB` `rgba(26,114,187,0.9)`
+FIND_2 = 'BLUE_60' #90% `#057DCE` `rgba(5,125,206,0.9)`
+FIND_3 = 'BLUE_70' #90% `#259AE9` `rgba(37,154,233,0.9)`
+FIND_4 = 'BLUE_80' #90% `#37AEFE` `rgba(55,174,254,0.9)`
+### Group
+GROUP_1 `#E11C1C`
+GROUP_2 `#FF8A00`
+GROUP_3 `#88BA00`
+GROUP_4 `#2DB500`
+GROUP_5 `#3FC6F0`
+GROUP_6 `#107EEC`
+GROUP_7 `#5C47E0`
+GROUP_8 `#7F27C5`
+GROUP_9 `#C88AFA`
+GROUP_10 `#AF2294`
+GROUP_11 `#DB4D8E`
+GROUP_12 `#38D4A4`
+    
+## Deafult Light Mode
+### Background
+BACKGROUND_1 = 'GRAY_140' `#FAFAFA`
+BACKGROUND_2 = 'GRAY_120' `#EEEEEE`
+BACKGROUND_3 = 'GRAY_100' `#D9D8D8`
+BACKGROUND_4 = 'GRAY_80' `#9DA9B5`
+BACKGROUND_5 = 'GRAY_60' `#60798B`
+### Text
+TEXT_1 = 'GRAY_0' `#000000`
+TEXT_2 = 'GRAY_10' `#19232D`
+TEXT_3 = 'GRAY_20' `#262E38`
+TEXT_4 = 'GRAY_40' `#455364`   
+### Inverse Text
+INVERSE_TEXT_1 = 'GRAY_150' `#FFFFFF`
+INVERSE_TEXT_2 = 'GRAY_140' `#FAFAFA`
+INVERSE_TEXT_3 = 'GRAY_120' `#EEEEEE`
+INVERSE_TEXT_4 = 'GRAY_100' `#D9D8D8`
+### Accent
+ACCENT_1 = 'BLUE_50' `#1A72BB`
+ACCENT_2 = 'BLUE_70' `##259AE9`
+ACCENT_3 = 'BLUE_90' `#73C7FF`
+ACCENT_4 = 'BLUE_110' `#C2E3FA`
+### Border
+BORDER_1 = 'GRAY_40' `#455364`
+BORDER_2 = 'GRAY_50' `#54687A`
+BORDER_3 = 'GRAY_60' `#60798B`
+BORDER_4 = 'GRAY_70' `#788D9C`
+<!--Below colors may belong only to Spyder?-->
+### Feedback
+SUCCESS_1 = 'GREEN_40' `#008760`
+SUCCESS_2 = 'GREEN_70' `#20C997`
+SUCCESS_3 = 'GREEN_110' `#B0F5E1`
+ERROR_1 = 'RED_40' `#D4140B`
+ERROR_2 = 'RED_70' `#E74C3C`
+ERROR_3 = 'RED_110' `#FFC3BD`
+WARN_1 = 'ORANGE_40' `#CE4B01`
+WARN_2 = 'ORANGE_70' `#F37E12`
+WARN_3 = 'ORANGE_110' `#FFDDA7`
+### Icon
+ICON_1 = 'GRAY_30' `#37414F`
+ICON_2 = 'BLUE_70' `#259AE9`
+ICON_3 = 'GREEN_70' `#20C997`
+ICON_4 = 'RED_70' `#E74C3C`
+ICON_5 = 'ORANGE_70' `#F37E12`
+ICON_6 = 'GRAY_140' `#FAFAFA`
+### Highlight
+HIGHLIGHT_1 = 'GRAY_100' #90% `#E1E1E1` `rgba(225,225,225,0.9)`
+HIGHLIGHT_2 = 'GRAY_90' #90% `#CBCACA` `rgba(203,202,202,0.9)`
+HIGHLIGHT_3 = 'GRAY_80' #90% `#9DA9B5` `rgba(157,169,181,0.9)`
+HIGHLIGHT_4 = 'GRAY_70' #90% `#788D9C` `rgba(120,141,156,0.9)`
+### Find
+FIND_1 = 'BLUE_80' #90% `#37AEFE` `rgba(55,174,254,0.9)`
+FIND_2 = 'BLUE_70' #90% `#259AE9` `rgba(37,154,233,0.9)`
+FIND_3 = 'BLUE_60' #90% `#057DCE` `rgba(5,125,206,0.9)`
+FIND_4 = 'BLUE_50' #90% `#1A72BB` `rgba(26,114,187,0.9)`
+### Group
+GROUP_1 `#FF6700`
+GROUP_2 `#FFB000`
+GROUP_3 `#FFE600`
+GROUP_4 `#7FDD05`
+GROUP_5 `#00A585`
+GROUP_6 `#22BCF2`
+GROUP_7 `#1256CC`
+GROUP_8 `#803AD0`
+GROUP_9 `#B568F2`
+GROUP_10 `#CC2782`
+GROUP_11 `#FF71BF`
+GROUP_12 `#7EE8C7`
