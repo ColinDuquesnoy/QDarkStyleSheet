@@ -4,27 +4,26 @@
 """QDarkStyle default dark palette."""
 
 # Standard library imports
-from QDarkStyle import colorsystem.py #class?
+from QDarkStyle.colorsystem import Blue, Gray
 
 
 class DarkPalette(object):
     """Theme variables."""
 
     # Color
-    COLOR_BACKGROUND_LIGHT = 'B50'
-    COLOR_BACKGROUND_NORMAL = 'B30'
-    COLOR_BACKGROUND_DARK = 'B10'
+    COLOR_BACKGROUND_LIGHT = Gray.B50
+    COLOR_BACKGROUND_NORMAL = Gray.B30
+    COLOR_BACKGROUND_DARK = Gray.B10
 
-    COLOR_FOREGROUND_LIGHT = 'B120'
-    COLOR_FOREGROUND_NORMAL = 'B80'
-    COLOR_FOREGROUND_DARK = 'B60'
+    COLOR_FOREGROUND_LIGHT = Gray.B120
+    COLOR_FOREGROUND_NORMAL = Gray.B80
+    COLOR_FOREGROUND_DARK = Gray.B60
 
-    COLOR_SELECTION_LIGHT = 'B60'
-    COLOR_SELECTION_NORMAL = 'B40'
-    COLOR_SELECTION_DARK = 'B20'
+    COLOR_SELECTION_LIGHT = Blue.B60
+    COLOR_SELECTION_NORMAL = Blue.B40
+    COLOR_SELECTION_DARK = Blue.B20
 
     OPACITY_TOOLTIP = 230
-    OPACITY_HIGHLIGHT = 230
 
     # Size
     SIZE_BORDER_RADIUS = '4px'
@@ -67,7 +66,6 @@ class DarkPalette(object):
             'BORDER_SELECTION_DARK',
             'W_STATUS_BAR_BACKGROUND_COLOR',
             'PATH_RESOURCES',
-            'OPACITY_HIGHLIGHT',
         ]
         dic = OrderedDict()
         for var in order:
