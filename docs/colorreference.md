@@ -14,120 +14,39 @@ meets accessibility standards about contrast or color blindness.
 ### Gray
 | System Name | Value | Sample |
 | --- | --- | --- |
-| B0 | `#000000` | ![ ](/sample/) |
-| B10 | `#19232D` | ![ ]() |
-| B20 | `#262E38` | ![ ]() |
-| B30 | `#37414F` | ![ ]() |
-| B40 | `#455364` | ![ ]() |
-| B50 | `#54687A` | ![ ]() |
-| B60 | `#60798B` | ![ ]() |
-| B70 | `#788D9C` | ![ ]() |
-| B80 | `#9DA9B5` | ![ ]() | 
-| B90 | `#CBCACA` | ![ ]() |
-| B100 | `#D9D8D8` | ![ ]() |
-| B110 | `#E1E1E1` | ![ ]() |
-| B120 | `#EEEEEE` | ![ ]() |
-| B130 | `#F5F5F5` | ![ ]() |
-| B140 | `#FAFAFA` | ![ ]() |
-| B150 | `#FFFFFF` | ![ ]() |
+| B0 | `#000000` | ![ ](colorsamples/GrayB0.png) |
+| B10 | `#19232D` | ![ ](colorsamples/GrayB10.png) |
+| B20 | `#262E38` | ![ ](colorsamples/GrayB20.png) |
+| B30 | `#37414F` | ![ ](colorsamples/GrayB30.png) |
+| B40 | `#455364` | ![ ](colorsamples/GrayB40.png) |
+| B50 | `#54687A` | ![ ](colorsamples/GrayB50.png) |
+| B60 | `#60798B` | ![ ](colorsamples/GrayB60.png) |
+| B70 | `#788D9C` | ![ ](colorsamples/GrayB70.png) |
+| B80 | `#9DA9B5` | ![ ](colorsamples/GrayB80.png) | 
+| B90 | `#CBCACA` | ![ ](colorsamples/GrayB90.png) |
+| B100 | `#D9D8D8` | ![ ](colorsamples/GrayB100.png) |
+| B110 | `#E1E1E1` | ![ ](colorsamples/GrayB110.png) |
+| B120 | `#EEEEEE` | ![ ](colorsamples/GrayB120.png) |
+| B130 | `#F5F5F5` | ![ ](colorsamples/GrayB130.png) |
+| B140 | `#FAFAFA` | ![ ](colorsamples/GrayB140.png) |
+| B150 | `#FFFFFF` | ![ ](colorsamples/GrayB150.png) |
 
 ### Blue
 | System Name | Value | Sample |
 | --- | --- | --- |
-| B0 | `#000000` | |
-| B10 | `#062647` | |
-| B20 | `#26486B` | |
-| B30 | `#375A7F` | |
-| B40 | `#346792` | |
-| B50 | `#1A72BB` | |
-| B60 | `#057DCE` | |
-| B70 | `#259AE9` | |
-| B80 | `#37AEFE` | | 
-| B90 | `#73C7FF` | |
-| B100 | `#9FD9FF` | |
-| B110 | `#C2E3FA` | |
-| B120 | `#CEEBFF` | |
-| B130 | `#DAF0FF` | |
-| B140 | `#F5FBFF` | |
-| B150 | `#FFFFFF` | |
-
-## Default Dark Mode
-### Background
-| Palette Name | System Name | Value | Sample |
-| --- | --- | --- | --- |
-| BACKGROUND_1 | B10 | `#19232D` | |
-| BACKGROUND_2 | B20 | `#262E38` | |
-| BACKGROUND_3 | B40 | `#455364` | |
-| BACKGROUND_4 | B60 | `#60798B` | |
-| BACKGROUND_5 | B60 | `#60798B` | |
-
-### Text
-| Palette Name | System Name | Value | Sample |
-| --- | --- | --- | --- |
-| TEXT_1 | B150 | `#FFFFFF` | |
-| TEXT_2 | B140 | `#FAFAFA` | |
-| TEXT_3 | B120 | `#EEEEEE` | |
-| TEXT_4 | B100 | `#D9D8D8` | |
-
-### Inverse Text
-| Palette Name | System Name | Value | Sample |
-| --- | --- | --- | --- |
-| INVERSE_TEXT_1 | B150 | `#FFFFFF` | |
-| INVERSE_TEXT_2 | B140 | `#FAFAFA` | |
-| INVERSE_TEXT_3 | B120 | `#EEEEEE` | |
-| INVERSE_TEXT_4 | B100 | `#D9D8D8` | |
-
-### Accent
-| Palette Name | System Name | Value | Sample |
-| --- | --- | --- | --- |
-| ACCENT_1 | B50 | `#1A72BB` | |
-| ACCENT_2 | B70 | `#259AE9` | |
-| ACCENT_3 | B90 | `#73C7FF` | |
-| ACCENT_4 | B110 | `#C2E3FA` | |
-
-### Border
-| Palette Name | System Name | Value | Sample |
-| --- | --- | --- | --- |
-| BORDER_1 | B40 | `#455364` | |
-| BORDER_2 | B50 | `#54687A` | |
-| BORDER_3 | B60 | `#60798B` | |
-| BORDER_4 | B70 | `#788D9C` | |
-
-### Feedback
-| Palette Name | System Name | Value | Sample |
-| --- | --- | --- | --- |
-| SUCCESS_1 | B40 | `#008760` | |
-| SUCCESS_2 | B70 | `#20C997` | |
-| SUCCESS_3 | B110 | `#B0F5E1` | |
-| ERROR_1 | B40 | `#D4140B` | |
-| ERROR_2 | B70 | `#E74C3C` | |
-| ERROR_3 | B110 | `#FFC3BD` | |
-| WARN_1 | B40 | `#CE4B01` | |
-| WARN_2 | B70 | `#F37E12` | |
-| WARN_3 | B110 | `#FFDDA7` | |
-
-### Icon
-| Palette Name | System Name | Value | Sample |
-| --- | --- | --- | --- |
-| ICON_1 | B140 | `#FAFAFA` | |
-| ICON_2 | B70 | `#259AE9` | |
-| ICON_3 | B70 | `#20C997` | |
-| ICON_4 | B70 | `#E74C3C` | |
-| ICON_5 | B70 | `#F37E12` | |
-| ICON_6 | B30 | `#37414F` | |
-
-### Highlight
-| Palette Name | System Name | Value | Sample |
-| --- | --- | --- | --- |
-| HIGHLIGHT_1 | B50 | `#54687A` | |
-| HIGHLIGHT_2 | B60 | `#60798B` | |
-| HIGHLIGHT_3 | B70 | `#788D9C` | |
-| HIGHLIGHT_4 | B80 | `#9DA9B5` | |
-
-### Find
-| Palette Name | System Name | Value | Sample |
-| --- | --- | --- | --- |
-| FIND_1 | B50 | `#1A72BB` | |
-| FIND_2 | B60 | `#057DCE` | |
-| FIND_3 | B70 | `#259AE9` | |
-| FIND_4 | B80 | `#37AEFE` | |
+| B0 | `#000000` | ![ ](colorsamples/BlueB0.png) |
+| B10 | `#062647` | ![ ](colorsamples/BlueB10.png) |
+| B20 | `#26486B` | ![ ](colorsamples/BlueB20.png) |
+| B30 | `#375A7F` | ![ ](colorsamples/BlueB30.png) |
+| B40 | `#346792` | ![ ](colorsamples/BlueB40.png) |
+| B50 | `#1A72BB` | ![ ](colorsamples/BlueB50.png) |
+| B60 | `#057DCE` | ![ ](colorsamples/BlueB60.png) |
+| B70 | `#259AE9` | ![ ](colorsamples/BlueB70.png) |
+| B80 | `#37AEFE` | ![ ](colorsamples/BlueB80.png) | 
+| B90 | `#73C7FF` | ![ ](colorsamples/BlueB90.png) |
+| B100 | `#9FD9FF` | ![ ](colorsamples/BlueB100.png) |
+| B110 | `#C2E3FA` | ![ ](colorsamples/BlueB110.png) |
+| B120 | `#CEEBFF` | ![ ](colorsamples/BlueB120.png) |
+| B130 | `#DAF0FF` | ![ ](colorsamples/BlueB130.png) |
+| B140 | `#F5FBFF` | ![ ](colorsamples/BlueB140.png) |
+| B150 | `#FFFFFF` | ![ ](colorsamples/BlueB150.png) |
