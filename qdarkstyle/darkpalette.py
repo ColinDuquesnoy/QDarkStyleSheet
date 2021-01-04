@@ -1,26 +1,27 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""QDarkStyle default palette."""
+
+"""QDarkStyle default dark palette."""
 
 # Standard library imports
-from collections import OrderedDict
+from QDarkStyle.colorsystem import Blue, Gray
 
 
 class DarkPalette(object):
     """Theme variables."""
 
     # Color
-    COLOR_BACKGROUND_LIGHT = '#505F69'
-    COLOR_BACKGROUND_NORMAL = '#32414B'
-    COLOR_BACKGROUND_DARK = '#19232D'
+    COLOR_BACKGROUND_LIGHT = Gray.B50
+    COLOR_BACKGROUND_NORMAL = Gray.B30
+    COLOR_BACKGROUND_DARK = Gray.B10
 
-    COLOR_FOREGROUND_LIGHT = '#F0F0F0'
-    COLOR_FOREGROUND_NORMAL = '#AAAAAA'
-    COLOR_FOREGROUND_DARK = '#787878'
+    COLOR_FOREGROUND_LIGHT = Gray.B120
+    COLOR_FOREGROUND_NORMAL = Gray.B80
+    COLOR_FOREGROUND_DARK = Gray.B60
 
-    COLOR_SELECTION_LIGHT = '#148CD2'
-    COLOR_SELECTION_NORMAL = '#1464A0'
-    COLOR_SELECTION_DARK = '#14506E'
+    COLOR_SELECTION_LIGHT = Blue.B60
+    COLOR_SELECTION_NORMAL = Blue.B40
+    COLOR_SELECTION_DARK = Blue.B20
 
     OPACITY_TOOLTIP = 230
 
@@ -38,7 +39,7 @@ class DarkPalette(object):
 
     # Example of additional widget specific variables
     W_STATUS_BAR_BACKGROUND_COLOR = COLOR_SELECTION_DARK
-
+    
     # Paths
     PATH_RESOURCES = "':/qss_icons'"
 
