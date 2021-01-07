@@ -1,4 +1,4 @@
-# colorsystem.py is the full list of colors that can be used to easily create themes.
+"""Full color scale used for the default dark palette."""
 
 class Gray:
     B0 = '#000000'
