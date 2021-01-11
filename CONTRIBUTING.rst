@@ -17,14 +17,14 @@ Contributing to QDarkStyle
 The recommended way for new contributors to submit code to QDarkStyle is
 to fork the repository on GitHub and then submit a pull request after
 committing the changes. The pull request will then need to be approved
-by one of the manteiners before it is merged into the main repository.
+by one of the maintainers before it is merged into the main repository.
 
 -  Check for open issues or open a fresh issue to start a discussion
    around a feature idea or a bug.
 
 -  Fork `the
    repository <https://github.com/ColinDuquesnoy/QDarkStyleSheet>`__ on
-   GitHub to start making your changes to the master branch.
+   GitHub to start making your changes to the develop branch.
 
 -  Write a test which shows that the bug was fixed or that the feature
    works as expected if its a function, or create a screenshot if you
@@ -49,28 +49,41 @@ These are the basic steps needed to start developing on QDarkStyle.
 
    .. code:: bash
 
-          git clone https://github.com/USERNAME/qdarkstyle
-          cd qdarkstyle
+      git clone https://github.com/USERNAME/qdarkstyle
+      cd qdarkstyle
 
 -  Checkout the appropriate branch
 
    .. code:: bash
 
-          git checkout master
+      git checkout develop
 
--  Setup a virtual environment (not essential, but highly recommended)
+-  Setup a virtual environment (not essential, but highly recommended).
 
-   .. code:: bash
+   - Using virtualenv:
 
-          virtualenv ~/.venv
-          . ~/.venv/bin/activate
-          pip install -e .
+     .. code:: bash
+
+        virtualenv ~/.venv
+        . ~/.venv/bin/activate
+        pip install -e .[develop]
+
+   - Using conda (conda-forge):
+
+     .. code:: bash
+
+        conda create -n my-dev-env -c conda-forge python=3.8
+        conda activate my-dev-env
+        conda remove --force qdarkstyle # In case you have qdarkstyle installed
+        conda install -c conda-forge watchdog qtsass
+        pip install -e .[develop]
+
 
 -  Create a new working branch. Choose any name you like
 
    .. code:: bash
 
-          git checkout -b feature-xyz
+      git checkout -b feature-xyz
 
 -  Hands on
 
@@ -94,34 +107,26 @@ These are the basic steps needed to start developing on QDarkStyle.
    must represent a small but functional change. Remember to add
    CHANGES.rst and AUTHORS.rst too. To add all files changed do:
 
-   ::
+   .. code:: bash
 
-       ```bash
-          git add .
-       ```
+      git add .
 
--  Commiting changes.
+-  Committing changes.
 
    GitHub recognizes certain phrases that can be used to automatically
    update the issue tracker, so you can commit like this:
 
-   ::
+   .. code:: bash
 
-       ```bash
-          git commit -m "Add useful new feature that does this, close #42"
-       ```
+      git commit -m "Add useful new feature that does this, close #42"
 
-       ```bash
-          git commit -m "Fix returning problem for get_style(), fix #78"
-       ```
+      git commit -m "Fix returning problem for get_style(), fix #78"
 
 -  Push changes in the branch to your forked repository on GitHub.
 
-   ::
+   .. code:: bash
 
-       ```bash
-          git push origin feature-xyz
-       ```
+      git push origin feature-xyz
 
 -  Submit a pull request (PR).
 
@@ -129,7 +134,7 @@ These are the basic steps needed to start developing on QDarkStyle.
    PR <https://github.com/ColinDuquesnoy/QDarkStyleSheet/pulls>`__
    interface.
 
--  Wait for a mainteiner to review your changes.
+-  Wait for a maintainer to review your changes.
 
 Logging
 -------
@@ -138,11 +143,11 @@ Inside modules we provided a logging that should be used to inform the
 user. Please, follow the levels bellow.
 
 -  debug: for debug information, high detailed one, directed to
-   programers;
+   programmers;
 
 -  info: something important for common user to know;
 
--  warning: something that should not be a big problem or a desicision
+-  warning: something that should not be a big problem or a decision
    changed;
 
 -  error: some error, but not capable of stop program;
@@ -157,7 +162,7 @@ instructions to others. We use the reStructured text format (rst) for
 all docs.
 
 All new functions, classes, files, must be documented with all
-arguments, returns, exceptions. Whithout this it should not pass the
+arguments, returns, exceptions. Without this it should not pass the
 tests.
 
 The better example is to see the current files to get the style. We are
@@ -187,7 +192,7 @@ To simplify the structure, there are separated files in
 -  ``dw_widgets.ui``: all types of widgets;
 -  ``mw_menus.ui``: main window with all menus and toolbars.
 
-*Obs.: ``dw`` stands for dock widget and ``mw`` for main window.*
+*Note*: ``dw`` stands for dock widget and ``mw`` for main window.
 
 The entire example is built at runtime, in
 `example.py <./example/example.py>`__. To see more information about it,
@@ -200,11 +205,9 @@ Feel free to modify `ui <./example/ui>`__ files with Qt Designer and
 recompile UI using `process\_ui.py <./script/process_ui.py>`__ script,
 inside script folder, using:
 
-::
+.. code:: bash
 
-    ```bash
-       python process_ui.py
-    ```
+   python scripts/process_ui.py
 
 It will generate all ``_ui.py`` files for PyQt4, PyQt5, PySide, QtPy,
 PyQtGraph.
@@ -217,11 +220,9 @@ will need to recompile the QRC files using
 `process\_qrc.py <./script/process_qrc.py>`__ script, inside script
 folder.
 
-::
+.. code:: bash
 
-    ```bash
-       python process_qrc.py
-    ```
+   python scripts/process_qrc.py
 
 This generates all ``_rc.py`` files for PyQt4, PyQt5, PySide, QtPy,
 PyQtGraph.
@@ -233,11 +234,9 @@ To simplify this process for the developer, if you are changing many
 things, use the script
 `run\_ui\_css\_edition.py <./script/run_ui_css_edition.py>`__:
 
-::
+.. code:: bash
 
-    ```bash
-       python run_ui_css_edition.py
-    ```
+   python scripts/run_ui_css_edition.py
 
 This creates a loop that restarts the application, process ui and css
 files.
@@ -258,8 +257,8 @@ Qt, Stylesheets, Palettes and Icons
 -  `References <http://doc.qt.io/qt-5/stylesheet.html>`__
 
 Create good palettes with these tools. For example, on paletton, choose
-three colors from greyish light (foreground), greyish dark (background)
-and three more colorfull colors (selection). Greyish colors have a litle
+three colors from grayish light (foreground), grayish dark (background)
+and three more colorful colors (selection). Grayish colors have a little
 bit of the main color, so it is nice to change it if you change the main
 color.
 
@@ -280,7 +279,7 @@ Main characteristics of SVG images are:
 -  Line: 2px minimum thickness. Complementary thickness using multiples
    of 2px;
 -  Spacing: 4px when needed;
--  Color: #ff0000, red for all images - programatically changed;
+-  Color: #ff0000, red for all images - programmatically changed;
 -  Keep only structural changes in images, not colors, e.g, states hover
    and disabled;
 -  Lines and shapes should align with the grid centralized;
@@ -340,12 +339,12 @@ file for it.
 Check `test <./test>`__ files to more details. Tests will keep our
 application stable.
 
-If You Are a Mantainer, Go Ahead to Production
+If You Are a Maintainer, Go Ahead to Production
 ----------------------------------------------
 
 Of course, until you start these steps, make sure the package have
-passed all tests and checkers before continue. You must have accoutns to
-both test and oficial PyPI website below along with be inserted as a
+passed all tests and checkers before continue. You must have accounts to
+both test and official PyPI website below along with be inserted as a
 maintainer in both.
 
 1. Install ``twine``
@@ -386,6 +385,6 @@ maintainer in both.
 You can also use the tox environment to produce the release and upload
 the distribution.
 
-::
+.. code:: bash
 
-    `tox -e release`
+   tox -e release
