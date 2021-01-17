@@ -20,7 +20,7 @@ from qtpy.QtWidgets import QApplication
 # Local imports
 from qdarkstyle import (IMAGES_PATH, STYLES_SCSS_FILEPATH, QRC_FILEPATH, RC_PATH,
                         SVG_PATH)
-from qdarkstyle.palette import DarkPalette
+from qdarkstyle.darkpalette import DarkPalette
 
 IMAGE_BLACKLIST = ['base_palette']
 
