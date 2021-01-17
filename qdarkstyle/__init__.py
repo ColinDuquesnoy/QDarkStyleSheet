@@ -54,7 +54,7 @@ import platform
 import warnings
 
 # Local imports
-from qdarkstyle.palette import DarkPalette
+from qdarkstyle.darkpalette import DarkPalette
 
 __version__ = "2.9"
 

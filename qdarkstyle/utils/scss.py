@@ -17,7 +17,7 @@ import qtsass
 from qdarkstyle import (MAIN_SCSS_FILE, MAIN_SCSS_FILEPATH, QSS_PATH,
                         QSS_FILEPATH, RC_PATH, QSS_FILE,
                         VARIABLES_SCSS_FILE, VARIABLES_SCSS_FILEPATH)
-from qdarkstyle.palette import DarkPalette
+from qdarkstyle.darkpalette import DarkPalette
 from qdarkstyle.utils.images import create_images, create_palette_image
 
 # Constants
