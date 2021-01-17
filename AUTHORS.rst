@@ -28,5 +28,6 @@ insert your information after the last one.
 -  2018 - `KcHNST <https://github.com/KcHNST>`__ - bug fixes.
 -  2019 - `goanpeca <https://github.com/goanpeca>`__ - bug fixes, improvements, features.
 -  2020 - `tsilia <https://github.com/tsilia>`__ - bug fixes.
+-  2021 - `isabela-pf <https://github.com/isabela-pf>`__ - New palette design.
 
 And all people that reported bugs, thank you all!
