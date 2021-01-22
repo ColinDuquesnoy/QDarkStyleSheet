@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -14,7 +12,7 @@
    viewBox="0 0 32 32.000001"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    inkscape:export-filename="/home/colin/checkbox_indeterminate.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
@@ -28,20 +26,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.140624"
-     inkscape:cx="24.670989"
-     inkscape:cy="12.160767"
+     inkscape:zoom="15.655785"
+     inkscape:cx="19.563202"
+     inkscape:cy="17.02031"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
-     inkscape:window-width="1853"
-     inkscape:window-height="1025"
-     inkscape:window-x="1987"
-     inkscape:window-y="27"
+     inkscape:window-width="1366"
+     inkscape:window-height="700"
+     inkscape:window-x="243"
+     inkscape:window-y="1072"
      inkscape:window-maximized="1"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid4203" />
@@ -83,13 +82,9 @@
        ry="4"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
-    <rect
-       style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:1.68144774;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect817"
-       width="14.318552"
-       height="6.3185525"
-       x="8.8411322"
-       y="1033.2183"
-       ry="2" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 9.8378285,1036.3622 H 22.162171"
+       id="path837" />
   </g>
 </svg>
