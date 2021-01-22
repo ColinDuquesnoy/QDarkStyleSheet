@@ -762,6 +762,10 @@ QToolBar QToolButton:checked:hover {
   border: 1px solid #057DCE;
 }
 
+QToolBar QToolButton:disabled {
+  border: 1px solid #19232D;
+}
+
 QToolBar::handle:horizontal {
   width: 16px;
   image: url(":/qss_icons/rc/toolbar_move_horizontal.png");
