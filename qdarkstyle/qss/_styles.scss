@@ -761,6 +761,11 @@ QToolBar {
                 border: $BORDER_SELECTION_LIGHT;
             }
         }
+
+        /* This fixes 202 */
+        &:disabled {
+            border: $BORDER_DARK;
+        }
     }
 
     &::handle {
