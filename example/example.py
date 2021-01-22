@@ -165,6 +165,10 @@ def main():
     ui_buttons.setupUi(dw_buttons)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_buttons)
 
+    # Set state indeterminate (value=1)
+    ui_buttons.checkBoxTristate.stateChanged.connect(ui_buttons.checkBoxTristateDis.setCheckState)
+    ui_buttons.checkBoxTristate.setCheckState(1)
+
     # Add actions on popup toolbuttons
     menu = QMenu()
 

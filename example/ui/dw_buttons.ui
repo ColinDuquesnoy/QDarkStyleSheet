@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>652</width>
-    <height>491</height>
+    <height>493</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -290,7 +290,7 @@
       </property>
       <property name="icon">
        <iconset resource="../../qdarkstyle/style.qrc">
-        <normaloff>:/qss_icons/rc/window_undock@2x.png</normaloff>:/qss_icons/rc/window_undock@2x.png</iconset>
+        <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
       </property>
      </widget>
     </item>
@@ -333,6 +333,10 @@
       <property name="text">
        <string>Icon</string>
       </property>
+      <property name="icon">
+       <iconset resource="../../qdarkstyle/style.qrc">
+        <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
+      </property>
      </widget>
     </item>
     <item row="5" column="0">
@@ -365,7 +369,7 @@
       </property>
       <property name="icon">
        <iconset resource="../../qdarkstyle/style.qrc">
-        <normaloff>:/qss_icons/rc/window_undock.png</normaloff>:/qss_icons/rc/window_undock.png</iconset>
+        <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -401,6 +405,10 @@
       </property>
       <property name="text">
        <string>Icon Checked</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../qdarkstyle/style.qrc">
+        <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -909,6 +917,9 @@
       <property name="text">
        <string>Tristate</string>
       </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
       <property name="checked">
        <bool>false</bool>
       </property>
@@ -1138,12 +1149,12 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>289</x>
-     <y>202</y>
+     <x>396</x>
+     <y>279</y>
     </hint>
     <hint type="destinationlabel">
-     <x>379</x>
-     <y>211</y>
+     <x>546</x>
+     <y>279</y>
     </hint>
    </hints>
   </connection>
@@ -1154,12 +1165,12 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>239</x>
-     <y>233</y>
+     <x>396</x>
+     <y>303</y>
     </hint>
     <hint type="destinationlabel">
-     <x>391</x>
-     <y>243</y>
+     <x>546</x>
+     <y>303</y>
     </hint>
    </hints>
   </connection>
@@ -1170,12 +1181,12 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>217</x>
-     <y>266</y>
+     <x>396</x>
+     <y>327</y>
     </hint>
     <hint type="destinationlabel">
-     <x>374</x>
-     <y>270</y>
+     <x>546</x>
+     <y>327</y>
     </hint>
    </hints>
   </connection>
@@ -1186,28 +1197,12 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>237</x>
-     <y>300</y>
+     <x>396</x>
+     <y>351</y>
     </hint>
     <hint type="destinationlabel">
-     <x>362</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>checkBoxTristate</sender>
-   <signal>clicked(bool)</signal>
-   <receiver>checkBoxTristateDis</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>222</x>
-     <y>333</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>364</x>
-     <y>333</y>
+     <x>546</x>
+     <y>351</y>
     </hint>
    </hints>
   </connection>
@@ -1218,12 +1213,12 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>230</x>
-     <y>372</y>
+     <x>450</x>
+     <y>426</y>
     </hint>
     <hint type="destinationlabel">
-     <x>376</x>
-     <y>378</y>
+     <x>642</x>
+     <y>426</y>
     </hint>
    </hints>
   </connection>
@@ -1234,12 +1229,12 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>190</x>
-     <y>171</y>
+     <x>305</x>
+     <y>165</y>
     </hint>
     <hint type="destinationlabel">
-     <x>364</x>
-     <y>171</y>
+     <x>495</x>
+     <y>165</y>
     </hint>
    </hints>
   </connection>
@@ -1250,12 +1245,12 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>227</x>
-     <y>108</y>
+     <x>396</x>
+     <y>107</y>
     </hint>
     <hint type="destinationlabel">
-     <x>372</x>
-     <y>110</y>
+     <x>546</x>
+     <y>107</y>
     </hint>
    </hints>
   </connection>
@@ -1266,12 +1261,12 @@
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>265</x>
-     <y>139</y>
+     <x>396</x>
+     <y>138</y>
     </hint>
     <hint type="destinationlabel">
-     <x>373</x>
-     <y>143</y>
+     <x>546</x>
+     <y>138</y>
     </hint>
    </hints>
   </connection>
@@ -1282,12 +1277,12 @@
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>264</x>
-     <y>71</y>
+     <x>396</x>
+     <y>76</y>
     </hint>
     <hint type="destinationlabel">
-     <x>381</x>
-     <y>73</y>
+     <x>546</x>
+     <y>76</y>
     </hint>
    </hints>
   </connection>
