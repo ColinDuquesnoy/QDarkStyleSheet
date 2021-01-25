@@ -9,6 +9,7 @@ from collections import OrderedDict
 # Local imports
 from qdarkstyle.colorsystem import Blue, Gray
 
+
 class DarkPalette(object):
     """Theme variables."""
 

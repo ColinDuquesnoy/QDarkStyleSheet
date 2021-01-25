@@ -17,7 +17,8 @@ class Gray:
     B130 = '#F5F5F5'
     B140 = '#FAFAFA'
     B150 = '#FFFFFF'
-    
+
+
 class Blue:
     B0 = '#000000'
     B10 = '#062647'
