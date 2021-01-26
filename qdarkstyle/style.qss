@@ -747,6 +747,7 @@ QToolBar {
 QToolBar QToolButton {
   background-color: #37414F;
   border: 1px solid #37414F;
+  /* This fixes 202 */
 }
 
 QToolBar QToolButton:hover {
