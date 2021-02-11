@@ -672,11 +672,6 @@ QTextEdit {
   border: 1px solid #37414F;
 }
 
-QTextEdit:hover {
-  border: 1px solid #057DCE;
-  color: #EEEEEE;
-}
-
 QTextEdit:focus {
   border: 1px solid #346792;
 }
@@ -694,11 +689,6 @@ QPlainTextEdit {
   color: #EEEEEE;
   border-radius: 4px;
   border: 1px solid #37414F;
-}
-
-QPlainTextEdit:hover {
-  border: 1px solid #057DCE;
-  color: #EEEEEE;
 }
 
 QPlainTextEdit:focus {
@@ -1855,12 +1845,11 @@ QColumnView:selected {
   color: #37414F;
 }
 
-QTreeView:hover,
-QListView:hover,
-QTableView:hover,
-QColumnView:hover {
-  background-color: #19232D;
-  border: 1px solid #057DCE;
+QTreeView:focus,
+QListView:focus,
+QTableView:focus,
+QColumnView:focus {
+  border: 1px solid #346792;
 }
 
 QTreeView::item:pressed,
