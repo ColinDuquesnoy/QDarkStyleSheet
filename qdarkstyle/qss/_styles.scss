@@ -673,11 +673,6 @@ QTextEdit {
     border-radius: $SIZE_BORDER_RADIUS;
     border: $BORDER_NORMAL;
 
-    &:hover {
-        border: $BORDER_SELECTION_LIGHT;
-        color: $COLOR_FOREGROUND_LIGHT;
-    }
-
     &:focus {
         border: $BORDER_SELECTION_NORMAL;
     }
@@ -696,11 +691,6 @@ QPlainTextEdit {
     color: $COLOR_FOREGROUND_LIGHT;
     border-radius: $SIZE_BORDER_RADIUS;
     border: $BORDER_NORMAL;
-
-    &:hover {
-        border: $BORDER_SELECTION_LIGHT;
-        color: $COLOR_FOREGROUND_LIGHT;
-    }
 
     &:focus {
         border: $BORDER_SELECTION_NORMAL;
@@ -1923,9 +1913,8 @@ QColumnView {
         color: $COLOR_BACKGROUND_NORMAL;
     }
 
-    &:hover {
-        background-color: $COLOR_BACKGROUND_DARK;
-        border: $BORDER_SELECTION_LIGHT;
+    &:focus {
+        border: $BORDER_SELECTION_NORMAL;
     }
 
     &::item {
