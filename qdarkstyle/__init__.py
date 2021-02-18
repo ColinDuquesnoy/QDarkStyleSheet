@@ -112,7 +112,7 @@ def _apply_os_patches():
             text-align: center;
             height: 12px;
         }}
-        '''.format(color=DarkPalette.COLOR_BACKGROUND_NORMAL)
+        '''.format(color=DarkPalette.COLOR_BACKGROUND_4)
 
     # Only open the QSS file if any patch is needed
     if os_fix:
@@ -160,7 +160,7 @@ def _apply_application_patches(QCoreApplication, QPalette, QColor):
     that moment for setting reasons.
     """
     # See issue #139
-    color = DarkPalette.COLOR_SELECTION_LIGHT
+    color = DarkPalette.COLOR_ACCENT_3
     qcolor = QColor(color)
 
     # Todo: check if it is qcoreapplication indeed
