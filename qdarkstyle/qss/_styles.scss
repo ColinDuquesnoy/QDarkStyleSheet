@@ -674,11 +674,6 @@ QTextEdit {
     border-radius: $SIZE_BORDER_RADIUS;
     border: $BORDER_2;
 
-    &:hover {
-        border: $BORDER_SELECTION_2;
-        color: $COLOR_TEXT_1;
-    }
-
     &:focus {
         border: $BORDER_SELECTION_3;
     }
@@ -697,11 +692,6 @@ QPlainTextEdit {
     color: $COLOR_TEXT_1;
     border-radius: $SIZE_BORDER_RADIUS;
     border: $BORDER_2;
-
-    &:hover {
-        border: $BORDER_SELECTION_2;
-        color: $COLOR_TEXT_1;
-    }
 
     &:focus {
         border: $BORDER_SELECTION_3;
@@ -1930,9 +1920,8 @@ QColumnView {
         color: $COLOR_BACKGROUND_4;
     }
 
-    &:hover {
-        background-color: $COLOR_BACKGROUND_1;
-        border: $BORDER_SELECTION_2;
+    &:focus {
+        border: $BORDER_SELECTION_3;
     }
 
     &::item {
