@@ -1626,7 +1626,7 @@ QTabBar {
             &:selected {
                 background-color: $COLOR_BACKGROUND_6;
                 color: $COLOR_TEXT_1;
-                border-bottom: 3px solid $COLOR_ACCENT_2;
+                border-bottom: 3px solid $COLOR_ACCENT_4;
                 border-top-left-radius: 3px;
                 border-top-right-radius: 3px;
             }
@@ -1657,7 +1657,7 @@ QTabBar {
             &:selected {
                 color: $COLOR_TEXT_1;
                 background-color: $COLOR_BACKGROUND_6;
-                border-top: 3px solid $COLOR_ACCENT_2;
+                border-top: 3px solid $COLOR_ACCENT_4;
                 border-bottom-left-radius: 3px;
                 border-bottom-right-radius: 3px;
             }
@@ -1688,7 +1688,7 @@ QTabBar {
             &:selected {
                 color: $COLOR_TEXT_1;
                 background-color: $COLOR_BACKGROUND_6;
-                border-right: 3px solid $COLOR_ACCENT_2;
+                border-right: 3px solid $COLOR_ACCENT_4;
             }
 
             &:!selected:hover {
@@ -1713,7 +1713,7 @@ QTabBar {
             &:selected {
                 color: $COLOR_TEXT_1;
                 background-color: $COLOR_BACKGROUND_6;
-                border-left: 3px solid $COLOR_ACCENT_2;
+                border-left: 3px solid $COLOR_ACCENT_4;
 
             }
 
