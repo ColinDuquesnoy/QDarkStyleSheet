@@ -26,7 +26,7 @@ class DarkPalette(object):
     COLOR_TEXT_3 = Gray.B90
     COLOR_TEXT_4 = Gray.B70
 
-    COLOR_ACCENT_1 = Blue.B10
+    COLOR_ACCENT_1 = Blue.B20
     COLOR_ACCENT_2 = Blue.B40
     COLOR_ACCENT_3 = Blue.B50
     COLOR_ACCENT_4 = Blue.B70

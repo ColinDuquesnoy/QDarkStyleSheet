@@ -33,9 +33,8 @@ QWidget {
             background-color: $COLOR_ACCENT_2;
         }
 
-        &:hover {
+        &:hover:!selected {
             background-color: $COLOR_ACCENT_3;
-            color: $COLOR_BACKGROUND_4;
         }
     }
 }
@@ -515,7 +514,7 @@ QScrollBar {
         margin: 2px 16px 2px 16px;
         border: $BORDER_2;
         border-radius: $SIZE_BORDER_RADIUS;
-        background-color: $COLOR_BACKGROUND_6;
+        background-color: $COLOR_BACKGROUND_1;
     }
 
     &:vertical {
@@ -746,11 +745,22 @@ QToolBar {
         }
 
         &:checked {
-            border: $BORDER_1;
+            border: $COLOR_BACKGROUND_6;
             background-color: $COLOR_BACKGROUND_6;
 
             &:hover {
-                border: $BORDER_SELECTION_2;
+                background-color: $COLOR_BACKGROUND_6;
+                border: $COLOR_BACKGROUND_6;
+            }
+        }
+
+        &:pressed {
+            border: $COLOR_BACKGROUND_6;
+            background-color: $COLOR_BACKGROUND_6;
+
+            &:hover {
+                background-color: $COLOR_BACKGROUND_6;
+                border: $COLOR_BACKGROUND_6;
             }
         }
 
@@ -1082,10 +1092,6 @@ QPushButton {
         color: $COLOR_TEXT_1;
     }
 
-    &:focus {
-        border: $BORDER_SELECTION_3;
-    }
-
 }
 
 /* QToolButton ------------------------------------------------------------
@@ -1406,7 +1412,7 @@ QSlider {
             border-radius: $SIZE_BORDER_RADIUS;
 
             &:hover {
-                background: $COLOR_ACCENT_3;
+                background: $COLOR_ACCENT_2;
                 border: $BORDER_SELECTION_2;
             }
 
@@ -1424,7 +1430,7 @@ QSlider {
             border-radius: $SIZE_BORDER_RADIUS;
 
             &:hover {
-                background: $COLOR_ACCENT_3;
+                background: $COLOR_ACCENT_2;
                 border: $BORDER_SELECTION_2;
             }
 
@@ -1632,7 +1638,7 @@ QTabBar {
             }
 
             &:!selected:hover {
-                border: $BORDER_SELECTION_2;
+                border: $BORDER_SELECTION_3;
                 border-bottom: 3px solid $COLOR_ACCENT_3;
 
                 /* Fixes spyder-ide/spyder#9766 */
@@ -1663,7 +1669,7 @@ QTabBar {
             }
 
             &:!selected:hover {
-                border: $BORDER_SELECTION_2;
+                border: $BORDER_SELECTION_3;
                 border-top: 3px solid $COLOR_ACCENT_3;
 
                 /* Fixes spyder-ide/spyder#9766 */
@@ -1692,7 +1698,7 @@ QTabBar {
             }
 
             &:!selected:hover {
-                border: $BORDER_SELECTION_2;
+                border: $BORDER_SELECTION_3;
                 border-right: 3px solid $COLOR_ACCENT_3;
                 padding: 0px;
             }
@@ -1718,7 +1724,7 @@ QTabBar {
             }
 
             &:!selected:hover {
-                border: $BORDER_SELECTION_2;
+                border: $BORDER_SELECTION_3;
                 border-left: 3px solid $COLOR_ACCENT_3;
                 padding: 0px;
             }
@@ -1931,11 +1937,6 @@ QColumnView {
         }
 
         &:selected {
-
-            &:hover {
-                background: $COLOR_BACKGROUND_5;
-                color: $COLOR_TEXT_1;
-            }
 
             &:active {
                 background-color: $COLOR_ACCENT_2;

@@ -47,7 +47,7 @@ def _get_file_color_map(fname, palette):
     Return map of files (i.e states) to color from given palette.
     """
     color_disabled = palette.COLOR_BACKGROUND_4
-    color_focus = palette.COLOR_ACCENT_3
+    color_focus = palette.COLOR_ACCENT_4
     color_pressed = palette.COLOR_ACCENT_2
     color_normal = palette.COLOR_TEXT_1
 
