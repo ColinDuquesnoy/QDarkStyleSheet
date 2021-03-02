@@ -1794,11 +1794,11 @@ QDockWidget {
         border: none;
 
         &:hover {
-            image: url($PATH_RESOURCES + '/rc/window_close_focus.png');
+            background-color: $COLOR_BACKGROUND_5;
         }
 
         &:pressed {
-            image: url($PATH_RESOURCES + '/rc/window_close_pressed.png');
+            background-color: $COLOR_BACKGROUND_6;
         }
     }
 
@@ -1808,11 +1808,11 @@ QDockWidget {
         border: none;
 
         &:hover {
-            image: url($PATH_RESOURCES + '/rc/window_undock_focus.png');
+            background-color: $COLOR_BACKGROUND_5;
         }
 
         &:pressed {
-            image: url($PATH_RESOURCES + '/rc/window_undock_pressed.png');
+            background-color: $COLOR_BACKGROUND_6;
         }
     }
 }
