@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -14,7 +12,7 @@
    viewBox="0 0 32 32.000001"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    inkscape:export-filename="/home/colin/checkbox_indeterminate.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
@@ -28,20 +26,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32"
-     inkscape:cx="17.028458"
-     inkscape:cy="14.218492"
+     inkscape:zoom="11.313709"
+     inkscape:cx="-1.3521336"
+     inkscape:cy="18.782365"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g828"
      showgrid="true"
      units="px"
-     inkscape:window-width="1853"
-     inkscape:window-height="1025"
-     inkscape:window-x="1987"
-     inkscape:window-y="27"
+     inkscape:window-width="1366"
+     inkscape:window-height="700"
+     inkscape:window-x="243"
+     inkscape:window-y="1072"
      inkscape:window-maximized="1"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid4203" />
@@ -82,13 +81,7 @@
          inkscape:connector-curvature="0"
          id="path822"
          d="M 3.0068297,1035.3672 16,1023.3622 l 12.99317,12.005"
-         style="fill:#ff0000;fill-opacity:0.99215686;stroke:#ff0000;stroke-width:3.84843516;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="path824"
-         d="M 28.99317,1035.3672 H 3.0068297"
-         style="fill:#ff0000;fill-opacity:0.99215686;stroke:#ff0000;stroke-width:3.84843516;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:none;fill-opacity:0.99215686;stroke:#ff0000;stroke-width:3.84843516;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
   </g>
 </svg>
