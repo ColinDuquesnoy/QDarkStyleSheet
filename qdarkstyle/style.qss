@@ -1207,6 +1207,7 @@ QComboBox {
   /* padding-bottom: 2px;  removed to fix #132 */
   /* min-width: 75px;      removed to fix #109 */
   /* Needed to remove indicator - fix #132 */
+  /* Remove 'item' to fix height of selected item - fix #200 #259 */
 }
 
 QComboBox QAbstractItemView {
@@ -1259,18 +1260,6 @@ QComboBox::indicator {
 
 QComboBox::indicator:alternate {
   background: #19232D;
-}
-
-QComboBox::item:alternate {
-  background: #19232D;
-}
-
-QComboBox::item:checked {
-  font-weight: bold;
-}
-
-QComboBox::item:selected {
-  border: 0px solid transparent;
 }
 
 QComboBox::drop-down {
