@@ -6,221 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>497</width>
-    <height>566</height>
+    <width>416</width>
+    <height>583</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Containers - No Tabs</string>
   </property>
   <widget class="QWidget" name="dockWidgetContents">
-   <layout class="QGridLayout" name="gridLayout_45">
-    <item row="0" column="3" rowspan="2">
-     <widget class="QLabel" name="label_126">
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Disabled</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2" rowspan="2">
-     <widget class="QLabel" name="label_124">
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Enabled</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0" colspan="2">
-     <widget class="QLabel" name="label_133">
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>MDI Area</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="3">
-     <widget class="QGroupBox" name="groupBoxDis_2">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="title">
-       <string>GroupBox</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QLabel" name="label_7">
-         <property name="text">
-          <string>Inside GroupBox</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="5" column="2">
-     <widget class="QStackedWidget" name="stackedWidget_2">
-      <property name="toolTip">
-       <string>This is a tool tip</string>
-      </property>
-      <property name="statusTip">
-       <string>This is a status tip</string>
-      </property>
-      <property name="whatsThis">
-       <string>This is &quot;what is this&quot;</string>
-      </property>
-      <property name="currentIndex">
-       <number>1</number>
-      </property>
-      <widget class="QWidget" name="page1_2">
-       <layout class="QGridLayout" name="gridLayout_35">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_57">
-          <property name="text">
-           <string>Inside Stacked Page 1</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="page2_2">
-       <layout class="QGridLayout" name="gridLayout_36">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_58">
-          <property name="toolTip">
-           <string>This is a tool tip</string>
-          </property>
-          <property name="statusTip">
-           <string>This is a status tip</string>
-          </property>
-          <property name="whatsThis">
-           <string>This is &quot;what is this&quot;</string>
-          </property>
-          <property name="text">
-           <string>Inside Stacked Page 2</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </item>
-    <item row="5" column="3">
-     <widget class="QStackedWidget" name="stackedWidgetDis_2">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <property name="toolTip">
-       <string>This is a tool tip</string>
-      </property>
-      <property name="statusTip">
-       <string>This is a status tip</string>
-      </property>
-      <property name="whatsThis">
-       <string>This is &quot;what is this&quot;</string>
-      </property>
-      <property name="currentIndex">
-       <number>1</number>
-      </property>
-      <widget class="QWidget" name="page1Dis_2">
-       <layout class="QGridLayout" name="gridLayout_37">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_113">
-          <property name="text">
-           <string>Inside Stacked Page 1</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="page2Dis_2">
-       <layout class="QGridLayout" name="gridLayout_38">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_114">
-          <property name="toolTip">
-           <string>This is a tool tip</string>
-          </property>
-          <property name="statusTip">
-           <string>This is a status tip</string>
-          </property>
-          <property name="whatsThis">
-           <string>This is &quot;what is this&quot;</string>
-          </property>
-          <property name="text">
-           <string>Inside Stacked Page 2</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="label_131">
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Frame</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="2">
-     <widget class="QFrame" name="frame_2">
-      <property name="toolTip">
-       <string>This is a tool tip</string>
-      </property>
-      <property name="statusTip">
-       <string>This is a status tip</string>
-      </property>
-      <property name="whatsThis">
-       <string>This is &quot;what is this&quot;</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_43">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_9">
-         <property name="toolTip">
-          <string>This is a tool tip</string>
-         </property>
-         <property name="statusTip">
-          <string>This is a status tip</string>
-         </property>
-         <property name="whatsThis">
-          <string>This is &quot;what is this&quot;</string>
-         </property>
-         <property name="text">
-          <string>Inside Frame</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="6" column="3">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="8" column="3" colspan="2">
      <widget class="QFrame" name="frameDis_2">
       <property name="enabled">
        <bool>false</bool>
@@ -260,20 +55,38 @@
       </layout>
      </widget>
     </item>
-    <item row="7" column="0" colspan="2">
-     <widget class="QLabel" name="label_132">
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+    <item row="9" column="2">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="toolTip">
+       <string>This is a tool tip</string>
       </property>
-      <property name="text">
-       <string>Widget</string>
+      <property name="statusTip">
+       <string>This is a status tip</string>
       </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_39">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_59">
+         <property name="toolTip">
+          <string>This is a tool tip</string>
+         </property>
+         <property name="statusTip">
+          <string>This is a status tip</string>
+         </property>
+         <property name="whatsThis">
+          <string>This is &quot;what is this&quot;</string>
+         </property>
+         <property name="text">
+          <string>Inside Widget</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
-    <item row="2" column="2">
+    <item row="1" column="2">
      <widget class="QGroupBox" name="groupBox_2">
       <property name="toolTip">
        <string>This is a tool tip</string>
@@ -307,56 +120,8 @@
       </layout>
      </widget>
     </item>
-    <item row="8" column="3">
-     <widget class="QMdiArea" name="mdiAreaDis_2">
-      <property name="enabled">
-       <bool>false</bool>
-      </property>
-      <widget class="QWidget" name="subwindow1Dis_2">
-       <property name="windowTitle">
-        <string>Subwindow</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_9">
-        <item>
-         <widget class="QLabel" name="label_111">
-          <property name="text">
-           <string>Inside MDI Area 1</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="subwindow2Dis_2">
-       <property name="windowTitle">
-        <string>Subwindow</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_10">
-        <item>
-         <widget class="QLabel" name="label_112">
-          <property name="text">
-           <string>Inside MDI Area 2 </string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </item>
-    <item row="2" column="0" colspan="2">
-     <widget class="QLabel" name="label_127">
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>GroupBox</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="2">
-     <widget class="QWidget" name="widget_2" native="true">
+    <item row="8" column="2">
+     <widget class="QFrame" name="frame_2">
       <property name="toolTip">
        <string>This is a tool tip</string>
       </property>
@@ -366,9 +131,15 @@
       <property name="whatsThis">
        <string>This is &quot;what is this&quot;</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_39">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_43">
        <item row="0" column="0">
-        <widget class="QLabel" name="label_59">
+        <widget class="QLabel" name="label_9">
          <property name="toolTip">
           <string>This is a tool tip</string>
          </property>
@@ -379,14 +150,14 @@
           <string>This is &quot;what is this&quot;</string>
          </property>
          <property name="text">
-          <string>Inside Widget</string>
+          <string>Inside Frame</string>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
     </item>
-    <item row="7" column="3">
+    <item row="9" column="3" colspan="2">
      <widget class="QWidget" name="widgetDis_2" native="true">
       <property name="enabled">
        <bool>false</bool>
@@ -420,39 +191,83 @@
       </layout>
      </widget>
     </item>
-    <item row="8" column="2">
-     <widget class="QMdiArea" name="mdiArea_2">
-      <widget class="QWidget" name="subwindow1_2">
-       <property name="windowTitle">
-        <string>Subwindow</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_11">
-        <item>
-         <widget class="QLabel" name="label_29">
-          <property name="text">
-           <string>Inside MDI Area 1</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="subwindow2_2">
-       <property name="windowTitle">
-        <string>Subwindow</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_12">
-        <item>
-         <widget class="QLabel" name="label_56">
-          <property name="text">
-           <string>Inside MDI Area 2 </string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+    <item row="2" column="2">
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="title">
+       <string>GroupBox Checkable</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="toolTip">
+          <string>This is a tool tip</string>
+         </property>
+         <property name="statusTip">
+          <string>This is a status tip</string>
+         </property>
+         <property name="whatsThis">
+          <string>This is &quot;what is this&quot;</string>
+         </property>
+         <property name="text">
+          <string>Inside GroupBox</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
-    <item row="3" column="0" colspan="2">
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_124">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Enabled</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3" colspan="2">
+     <widget class="QLabel" name="label_126">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Disabled</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_127">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>GroupBox</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
      <widget class="QLabel" name="label_128">
       <property name="font">
        <font>
@@ -465,7 +280,7 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="2">
+    <item row="4" column="2">
      <widget class="QScrollArea" name="scrollArea_2">
       <property name="toolTip">
        <string>This is a tool tip</string>
@@ -484,8 +299,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>181</width>
-         <height>246</height>
+         <width>139</width>
+         <height>192</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -637,7 +452,7 @@
       </widget>
      </widget>
     </item>
-    <item row="3" column="3">
+    <item row="4" column="3" colspan="2">
      <widget class="QScrollArea" name="scrollAreaDis_2">
       <property name="enabled">
        <bool>false</bool>
@@ -659,8 +474,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>181</width>
-         <height>246</height>
+         <width>139</width>
+         <height>192</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_13">
@@ -812,8 +627,8 @@
       </widget>
      </widget>
     </item>
-    <item row="4" column="0" colspan="2">
-     <widget class="QLabel" name="label_129">
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_134">
       <property name="font">
        <font>
         <weight>75</weight>
@@ -821,12 +636,12 @@
        </font>
       </property>
       <property name="text">
-       <string>ToolBox</string>
+       <string>GroupBox</string>
       </property>
      </widget>
     </item>
-    <item row="4" column="2">
-     <widget class="QToolBox" name="toolBox_2">
+    <item row="7" column="2">
+     <widget class="QStackedWidget" name="stackedWidget_2">
       <property name="toolTip">
        <string>This is a tool tip</string>
       </property>
@@ -837,45 +652,23 @@
        <string>This is &quot;what is this&quot;</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="page_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>196</width>
-         <height>73</height>
-        </rect>
-       </property>
-       <attribute name="label">
-        <string>Page 1</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_41">
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_60">
+      <widget class="QWidget" name="page1_2">
+       <layout class="QGridLayout" name="gridLayout_35">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_57">
           <property name="text">
-           <string>Inside ToolBox Page 1</string>
+           <string>Inside Stacked Page 1</string>
           </property>
          </widget>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_8">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>163</width>
-         <height>38</height>
-        </rect>
-       </property>
-       <attribute name="label">
-        <string>Page 2</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_42">
+      <widget class="QWidget" name="page2_2">
+       <layout class="QGridLayout" name="gridLayout_36">
         <item row="0" column="0">
-         <widget class="QLabel" name="label_61">
+         <widget class="QLabel" name="label_58">
           <property name="toolTip">
            <string>This is a tool tip</string>
           </property>
@@ -886,7 +679,7 @@
            <string>This is &quot;what is this&quot;</string>
           </property>
           <property name="text">
-           <string>Inside ToolBox Page 2</string>
+           <string>Inside Stacked Page 2</string>
           </property>
          </widget>
         </item>
@@ -894,7 +687,7 @@
       </widget>
      </widget>
     </item>
-    <item row="4" column="3">
+    <item row="6" column="3" colspan="2">
      <widget class="QToolBox" name="toolBoxDis_2">
       <property name="enabled">
        <bool>false</bool>
@@ -916,8 +709,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>196</width>
-         <height>73</height>
+         <width>160</width>
+         <height>76</height>
         </rect>
        </property>
        <attribute name="label">
@@ -938,8 +731,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>163</width>
-         <height>38</height>
+         <width>140</width>
+         <height>32</height>
         </rect>
        </property>
        <attribute name="label">
@@ -966,7 +759,83 @@
       </widget>
      </widget>
     </item>
-    <item row="5" column="0" colspan="2">
+    <item row="10" column="0">
+     <widget class="QLabel" name="label_133">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>MDI Area</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3" colspan="2">
+     <widget class="QStackedWidget" name="stackedWidgetDis_2">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page1Dis_2">
+       <layout class="QGridLayout" name="gridLayout_37">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_113">
+          <property name="text">
+           <string>Inside Stacked Page 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page2Dis_2">
+       <layout class="QGridLayout" name="gridLayout_38">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_114">
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="text">
+           <string>Inside Stacked Page 2</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_131">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Frame</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
      <widget class="QLabel" name="label_130">
       <property name="font">
        <font>
@@ -977,6 +846,209 @@
       <property name="text">
        <string>Stacked</string>
       </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_129">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>ToolBox</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="2">
+     <widget class="QMdiArea" name="mdiArea_2">
+      <widget class="QWidget" name="subwindow1_2">
+       <property name="windowTitle">
+        <string>Subwindow</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <widget class="QLabel" name="label_29">
+          <property name="text">
+           <string>Inside MDI Area 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="subwindow2_2">
+       <property name="windowTitle">
+        <string>Subwindow</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item>
+         <widget class="QLabel" name="label_56">
+          <property name="text">
+           <string>Inside MDI Area 2 </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QToolBox" name="toolBox_2">
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>160</width>
+         <height>76</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Page 1</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_41">
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_60">
+          <property name="text">
+           <string>Inside ToolBox Page 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>140</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Page 2</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_42">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_61">
+          <property name="toolTip">
+           <string>This is a tool tip</string>
+          </property>
+          <property name="statusTip">
+           <string>This is a status tip</string>
+          </property>
+          <property name="whatsThis">
+           <string>This is &quot;what is this&quot;</string>
+          </property>
+          <property name="text">
+           <string>Inside ToolBox Page 2</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_132">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Widget</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="3" colspan="2">
+     <widget class="QMdiArea" name="mdiAreaDis_2">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="subwindow1Dis_2">
+       <property name="windowTitle">
+        <string>Subwindow</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QLabel" name="label_111">
+          <property name="text">
+           <string>Inside MDI Area 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="subwindow2Dis_2">
+       <property name="windowTitle">
+        <string>Subwindow</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QLabel" name="label_112">
+          <property name="text">
+           <string>Inside MDI Area 2 </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="3" colspan="2">
+     <widget class="QGroupBox" name="groupBoxDis_3">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string>GroupBox Checkeable</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Inside GroupBox</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="3" colspan="2">
+     <widget class="QGroupBox" name="groupBoxDis_2">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Inside GroupBox</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
