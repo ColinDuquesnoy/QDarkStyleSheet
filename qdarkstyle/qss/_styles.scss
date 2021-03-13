@@ -207,21 +207,22 @@ QGroupBox {
     font-weight: bold;
     border: $BORDER_NORMAL;
     border-radius: $SIZE_BORDER_RADIUS;
-    padding: 4px;
-    margin-top: 16px;
+    padding: 2px;
+    margin-top: 6px;
+    margin-bottom: 4px;
 
     &::title {
         subcontrol-origin: margin;
         subcontrol-position: top left;
-        left: 3px;
-        padding-left: 3px;
-        padding-right: 5px;
-        padding-top: 8px;
-        padding-bottom: 16px;
+        left: 4px;
+        padding-left: 2px;
+        padding-right: 4px;
+        padding-top: -4px;
     }
 
     &::indicator {
-        margin-left: 2px;
+        margin: 0;
+        padding: 0;
         height: 16px;
         width: 16px;
 
