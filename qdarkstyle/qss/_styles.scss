@@ -269,7 +269,8 @@ QRadioButton {
     background-color: $COLOR_BACKGROUND_DARK;
     color: $COLOR_FOREGROUND_LIGHT;
     spacing: 4px;
-    padding: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     border: none;
     outline: none;
 
