@@ -1024,8 +1024,6 @@ QPushButton {
     border-radius: $SIZE_BORDER_RADIUS;
     padding: 3px;
     outline: none;
-    /* Issue #194 - Special case of QPushButton inside dialogs, for better UI */
-    min-width: 80px;
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_NORMAL;
@@ -1094,6 +1092,10 @@ QPushButton {
 
 }
 
+QDialogButtonBox QPushButton {
+    /* Issue #194 #248 - Special case of QPushButton inside dialogs, for better UI */
+    min-width: 80px;
+}
 /* QToolButton ------------------------------------------------------------
 
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbutton
