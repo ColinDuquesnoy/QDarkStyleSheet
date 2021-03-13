@@ -420,7 +420,7 @@ QMenu::icon {
 
 QMenu::item {
   background-color: #37414F;
-  padding: 4px 24px 4px 24px;
+  padding: 4px 8px 4px 8px;
   /* Reserve space for selection border */
   border: 1px transparent #37414F;
 }
@@ -471,6 +471,7 @@ QMenu::indicator:exclusive:checked:selected {
 
 QMenu::right-arrow {
   margin: 5px;
+  padding-left: 12px;
   image: url(":/qss_icons/rc/arrow_right.png");
   height: 12px;
   width: 12px;
@@ -1001,8 +1002,6 @@ QPushButton {
   border-radius: 4px;
   padding: 3px;
   outline: none;
-  /* Issue #194 - Special case of QPushButton inside dialogs, for better UI */
-  min-width: 80px;
 }
 
 QPushButton:disabled {
@@ -1067,6 +1066,11 @@ QPushButton:hover {
 
 QPushButton:focus {
   border: 1px solid #346792;
+}
+
+QDialogButtonBox QPushButton {
+  /* Issue #194 - Special case of QPushButton inside dialogs, for better UI */
+  min-width: 80px;
 }
 
 /* QToolButton ------------------------------------------------------------
@@ -1199,8 +1203,9 @@ QComboBox {
   border-radius: 4px;
   selection-background-color: #346792;
   padding-left: 4px;
-  padding-right: 36px;
-  /* 4 + 16*2 See scrollbar size */
+  padding-right: 4px;
+  /* padding-right = 36; 4 + 16*2 See scrollbar size */
+  /* changed to 4px to fix #239 */
   /* Fixes #103, #111 */
   min-height: 1.5em;
   /* padding-top: 2px;     removed to fix #132 */
