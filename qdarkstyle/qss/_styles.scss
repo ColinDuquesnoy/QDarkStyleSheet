@@ -1290,20 +1290,7 @@ QComboBox {
         }
     }
 
-    &::item {
-
-        &:alternate {
-            background: $COLOR_BACKGROUND_DARK;
-        }
-
-        &:checked {
-            font-weight: bold;
-        }
-
-        &:selected {
-            border: 0px solid transparent;
-        }
-    }
+    /* Remove 'item' to fix height of selected item - fix #200 #259 */
 
     &::drop-down {
         subcontrol-origin: padding;
