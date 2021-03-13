@@ -396,7 +396,7 @@ QMenu {
 
     &::item {
         background-color: $COLOR_BACKGROUND_NORMAL;
-        padding: 4px 24px 4px 24px;
+        padding: 4px 8px 4px 8px;
         /* Reserve space for selection border */
         border: 1px transparent $COLOR_BACKGROUND_NORMAL;
 
@@ -453,6 +453,7 @@ QMenu {
 
     &::right-arrow {
         margin: 5px;
+        padding-left:12px;
         image: url($PATH_RESOURCES + '/rc/arrow_right.png');
         height: 12px;
         width: 12px;
