@@ -187,7 +187,7 @@ QCheckBox QWidget:disabled {
 }
 
 QCheckBox::indicator {
-  margin-left: 4px;
+  margin-left: 2px;
   height: 16px;
   width: 16px;
 }
@@ -239,22 +239,23 @@ QGroupBox {
   font-weight: bold;
   border: 1px solid #37414F;
   border-radius: 4px;
-  padding: 4px;
-  margin-top: 16px;
+  padding: 2px;
+  margin-top: 6px;
+  margin-bottom: 4px;
 }
 
 QGroupBox::title {
   subcontrol-origin: margin;
   subcontrol-position: top left;
-  left: 3px;
-  padding-left: 3px;
-  padding-right: 5px;
-  padding-top: 8px;
-  padding-bottom: 16px;
+  left: 4px;
+  padding-left: 2px;
+  padding-right: 4px;
+  padding-top: -4px;
 }
 
 QGroupBox::indicator {
-  margin-left: 2px;
+  margin: 0;
+  padding: 0;
   height: 16px;
   width: 16px;
 }
@@ -296,7 +297,8 @@ QRadioButton {
   background-color: #19232D;
   color: #EEEEEE;
   spacing: 4px;
-  padding: 0px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   border: none;
   outline: none;
 }
@@ -324,7 +326,7 @@ QRadioButton QWidget {
 QRadioButton::indicator {
   border: none;
   outline: none;
-  margin-left: 4px;
+  margin-left: 2px;
   height: 16px;
   width: 16px;
 }
@@ -1069,7 +1071,7 @@ QPushButton:focus {
 }
 
 QDialogButtonBox QPushButton {
-  /* Issue #194 - Special case of QPushButton inside dialogs, for better UI */
+  /* Issue #194 #248 - Special case of QPushButton inside dialogs, for better UI */
   min-width: 80px;
 }
 
