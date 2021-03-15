@@ -1522,8 +1522,8 @@ QTabBar {
 
     &::close-button {
         border: 0;
-        margin: 2px;
-        padding: 2px;
+        margin: 1px;
+        padding: 1px;
 
         image: url($PATH_RESOURCES + '/rc/window_close.png');
 
@@ -1782,13 +1782,15 @@ QDockWidget {
 
     &::title {
         /* Better size for title bar */
-        padding: 6px;
+        padding: 3px;
         spacing: 4px;
         border: none;
         background-color: $COLOR_BACKGROUND_4;
     }
 
     &::close-button {
+        margin: 1px;
+        padding: 3px;
         background-color: $COLOR_BACKGROUND_4;
         border-radius: $SIZE_BORDER_RADIUS;
         border: none;
@@ -1803,6 +1805,8 @@ QDockWidget {
     }
 
     &::float-button {
+        margin: 1px;
+        padding: 1px;
         background-color: $COLOR_BACKGROUND_4;
         border-radius: $SIZE_BORDER_RADIUS;
         border: none;
@@ -1986,6 +1990,7 @@ QHeaderView {
         padding: 2px;
         border-radius: 0px;
         text-align: left;
+        font-size: 13px;
 
         &:checked {
             color: $COLOR_TEXT_1;

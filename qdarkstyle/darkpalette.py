@@ -30,7 +30,7 @@ class DarkPalette(object):
     COLOR_ACCENT_2 = Blue.B40
     COLOR_ACCENT_3 = Blue.B50
     COLOR_ACCENT_4 = Blue.B70
-    COLOR_ACCENT_5 = Blue.B90
+    COLOR_ACCENT_5 = Blue.B80
 
     OPACITY_TOOLTIP = 230
 
