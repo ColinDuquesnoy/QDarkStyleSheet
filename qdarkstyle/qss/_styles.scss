@@ -1136,7 +1136,7 @@ QToolButton {
     /* The subcontrols below are used only in the DelayedPopup mode */
     &[popupMode="0"] {
         /* Only for DelayedPopup */
-        padding-right: 2px;
+        padding-right: 6px;
     }
 
     /* The subcontrols below are used only in the MenuButtonPopup mode */
@@ -1158,7 +1158,7 @@ QToolButton {
     /* The subcontrol below is used only in the InstantPopup or DelayedPopup mode */
     &[popupMode="2"] {
         /* Only for InstantPopup */
-        padding-right: 2px;
+        padding-right: 6px;
     }
 
     &::menu-button {
