@@ -1955,21 +1955,20 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qheaderview
 QHeaderView {
     background-color: $COLOR_BACKGROUND_NORMAL;
     border: 0px transparent $COLOR_BACKGROUND_NORMAL;
-    padding: 0px;
-    margin: 0px;
-    border-radius: 0px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_NORMAL;
         border: 1px transparent $COLOR_BACKGROUND_NORMAL;
-        padding: 2px;
+
     }
 
     &::section {
         background-color: $COLOR_BACKGROUND_NORMAL;
         color: $COLOR_FOREGROUND_LIGHT;
-        padding: 2px;
-        border-radius: 0px;
+        border-radius: 0;
         text-align: left;
 
         &:checked {
@@ -1983,6 +1982,8 @@ QHeaderView {
         }
 
         &::horizontal {
+            padding-top: 0;
+            padding-bottom: 0;
             padding-left: 4px;
             padding-right: 4px;
             border-left: $BORDER_DARK;
@@ -1998,6 +1999,8 @@ QHeaderView {
         }
 
         &::vertical {
+            padding-top: 0;
+            padding-bottom: 0;
             padding-left: 4px;
             padding-right: 4px;
             border-top: $BORDER_DARK;
