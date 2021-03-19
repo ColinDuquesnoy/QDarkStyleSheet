@@ -187,7 +187,7 @@ QCheckBox QWidget:disabled {
 }
 
 QCheckBox::indicator {
-  margin-left: 4px;
+  margin-left: 2px;
   height: 16px;
   width: 16px;
 }
@@ -239,22 +239,23 @@ QGroupBox {
   font-weight: bold;
   border: 1px solid #37414F;
   border-radius: 4px;
-  padding: 4px;
-  margin-top: 16px;
+  padding: 2px;
+  margin-top: 6px;
+  margin-bottom: 4px;
 }
 
 QGroupBox::title {
   subcontrol-origin: margin;
   subcontrol-position: top left;
-  left: 3px;
-  padding-left: 3px;
-  padding-right: 5px;
-  padding-top: 8px;
-  padding-bottom: 16px;
+  left: 4px;
+  padding-left: 2px;
+  padding-right: 4px;
+  padding-top: -4px;
 }
 
 QGroupBox::indicator {
-  margin-left: 2px;
+  margin: 0;
+  padding: 0;
   height: 16px;
   width: 16px;
 }
@@ -296,7 +297,8 @@ QRadioButton {
   background-color: #19232D;
   color: #EEEEEE;
   spacing: 4px;
-  padding: 0px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   border: none;
   outline: none;
 }
@@ -324,7 +326,7 @@ QRadioButton QWidget {
 QRadioButton::indicator {
   border: none;
   outline: none;
-  margin-left: 4px;
+  margin-left: 2px;
   height: 16px;
   width: 16px;
 }
@@ -420,7 +422,7 @@ QMenu::icon {
 
 QMenu::item {
   background-color: #37414F;
-  padding: 4px 24px 4px 24px;
+  padding: 4px 8px 4px 8px;
   /* Reserve space for selection border */
   border: 1px transparent #37414F;
 }
@@ -471,6 +473,7 @@ QMenu::indicator:exclusive:checked:selected {
 
 QMenu::right-arrow {
   margin: 5px;
+  padding-left: 12px;
   image: url(":/qss_icons/rc/arrow_right.png");
   height: 12px;
   width: 12px;
@@ -1001,8 +1004,6 @@ QPushButton {
   border-radius: 4px;
   padding: 3px;
   outline: none;
-  /* Issue #194 - Special case of QPushButton inside dialogs, for better UI */
-  min-width: 80px;
 }
 
 QPushButton:disabled {
@@ -1069,6 +1070,11 @@ QPushButton:focus {
   border: 1px solid #346792;
 }
 
+QDialogButtonBox QPushButton {
+  /* Issue #194 #248 - Special case of QPushButton inside dialogs, for better UI */
+  min-width: 80px;
+}
+
 /* QToolButton ------------------------------------------------------------
 
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbutton
@@ -1110,7 +1116,7 @@ QToolButton:hover {
 
 QToolButton[popupMode="0"] {
   /* Only for DelayedPopup */
-  padding-right: 2px;
+  padding-right: 6px;
 }
 
 QToolButton[popupMode="1"] {
@@ -1130,7 +1136,7 @@ QToolButton[popupMode="1"]::menu-button:hover {
 
 QToolButton[popupMode="2"] {
   /* Only for InstantPopup */
-  padding-right: 2px;
+  padding-right: 6px;
 }
 
 QToolButton::menu-button {
@@ -1199,14 +1205,16 @@ QComboBox {
   border-radius: 4px;
   selection-background-color: #346792;
   padding-left: 4px;
-  padding-right: 36px;
-  /* 4 + 16*2 See scrollbar size */
+  padding-right: 4px;
+  /* padding-right = 36; 4 + 16*2 See scrollbar size */
+  /* changed to 4px to fix #239 */
   /* Fixes #103, #111 */
   min-height: 1.5em;
   /* padding-top: 2px;     removed to fix #132 */
   /* padding-bottom: 2px;  removed to fix #132 */
   /* min-width: 75px;      removed to fix #109 */
   /* Needed to remove indicator - fix #132 */
+  /* Remove 'item' to fix height of selected item - fix #200 #259 */
 }
 
 QComboBox QAbstractItemView {
@@ -1259,18 +1267,6 @@ QComboBox::indicator {
 
 QComboBox::indicator:alternate {
   background: #19232D;
-}
-
-QComboBox::item:alternate {
-  background: #19232D;
-}
-
-QComboBox::item:checked {
-  font-weight: bold;
-}
-
-QComboBox::item:selected {
-  border: 0px solid transparent;
 }
 
 QComboBox::drop-down {
@@ -1707,7 +1703,7 @@ QDockWidget {
 
 QDockWidget::title {
   /* Better size for title bar */
-  padding: 6px;
+  padding: 4px;
   spacing: 4px;
   border: none;
   background-color: #37414F;
@@ -1897,22 +1893,20 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qheaderview
 QHeaderView {
   background-color: #37414F;
   border: 0px transparent #37414F;
-  padding: 0px;
-  margin: 0px;
-  border-radius: 0px;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
 }
 
 QHeaderView:disabled {
   background-color: #37414F;
   border: 1px transparent #37414F;
-  padding: 2px;
 }
 
 QHeaderView::section {
   background-color: #37414F;
   color: #EEEEEE;
-  padding: 2px;
-  border-radius: 0px;
+  border-radius: 0;
   text-align: left;
 }
 
@@ -1927,6 +1921,8 @@ QHeaderView::section:checked:disabled {
 }
 
 QHeaderView::section::horizontal {
+  padding-top: 0;
+  padding-bottom: 0;
   padding-left: 4px;
   padding-right: 4px;
   border-left: 1px solid #19232D;
@@ -1941,6 +1937,8 @@ QHeaderView::section::horizontal:disabled {
 }
 
 QHeaderView::section::vertical {
+  padding-top: 0;
+  padding-bottom: 0;
   padding-left: 4px;
   padding-right: 4px;
   border-top: 1px solid #19232D;

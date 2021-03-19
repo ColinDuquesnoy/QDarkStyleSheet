@@ -241,7 +241,7 @@
     </widget>
     <addaction name="actionActionA"/>
     <addaction name="menuMenuSub"/>
-    <addaction name="actionActionIconA"/>
+    <addaction name="actionActionIconADis"/>
     <addaction name="actionActionIconB"/>
     <addaction name="actionActionIconC"/>
    </widget>
@@ -256,6 +256,7 @@
      <addaction name="actionActionDelayedSubA"/>
     </widget>
     <addaction name="actionActionDelayedA"/>
+    <addaction name="actionActionCheckableA"/>
     <addaction name="menuMenuSubDelayed"/>
    </widget>
    <widget class="QMenu" name="menuMenuCheckale">
@@ -274,6 +275,9 @@
      <addaction name="actionNewE"/>
     </widget>
     <addaction name="actionActionCheckableA"/>
+    <addaction name="actionActionIconADis"/>
+    <addaction name="actionActionIconB"/>
+    <addaction name="actionActionIconC"/>
     <addaction name="separator"/>
     <addaction name="menuNew"/>
    </widget>
@@ -297,6 +301,9 @@
     <addaction name="actionActionDis"/>
     <addaction name="actionActionCheckableCheckedDis"/>
     <addaction name="actionActionCheckableUncheckedDis"/>
+    <addaction name="actionActionIconADis"/>
+    <addaction name="actionActionIconB"/>
+    <addaction name="actionActionIconC"/>
    </widget>
    <widget class="QMenu" name="menuMenuDisabled">
     <property name="enabled">
@@ -316,6 +323,9 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="windowTitle">
     <string>Tool bar actions</string>
    </property>
@@ -336,7 +346,7 @@
    <addaction name="actionActionSubA"/>
    <addaction name="actionActionSubB"/>
    <addaction name="separator"/>
-   <addaction name="actionActionIconA"/>
+   <addaction name="actionActionIconADis"/>
    <addaction name="actionActionIconB"/>
    <addaction name="actionActionIconC"/>
   </widget>
@@ -473,7 +483,10 @@
     <string>New E</string>
    </property>
   </action>
-  <action name="actionActionIconA">
+  <action name="actionActionIconADis">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="../../qdarkstyle/style.qrc">
      <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
@@ -483,12 +496,18 @@
    </property>
   </action>
   <action name="actionActionIconB">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../../qdarkstyle/style.qrc">
      <normaloff>:/qss_icons/rc/window_close_focus.png</normaloff>:/qss_icons/rc/window_close_focus.png</iconset>
    </property>
    <property name="text">
     <string>Action IconB</string>
+   </property>
+   <property name="toolTip">
+    <string>Action Icon B</string>
    </property>
   </action>
   <action name="actionActionIconC">

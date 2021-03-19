@@ -147,7 +147,7 @@ QCheckBox {
     }
 
     &::indicator {
-        margin-left: 4px;
+        margin-left: 2px;
         height: 16px;
         width: 16px;
 
@@ -206,21 +206,22 @@ QGroupBox {
     font-weight: bold;
     border: $BORDER_2;
     border-radius: $SIZE_BORDER_RADIUS;
-    padding: 4px;
-    margin-top: 16px;
+    padding: 2px;
+    margin-top: 6px;
+    margin-bottom: 4px;
 
     &::title {
         subcontrol-origin: margin;
         subcontrol-position: top left;
-        left: 3px;
-        padding-left: 3px;
-        padding-right: 5px;
-        padding-top: 8px;
-        padding-bottom: 16px;
+        left: 4px;
+        padding-left: 2px;
+        padding-right: 4px;
+        padding-top: -4px;
     }
 
     &::indicator {
-        margin-left: 2px;
+        margin: 0;
+        padding: 0;
         height: 16px;
         width: 16px;
 
@@ -268,7 +269,8 @@ QRadioButton {
     background-color: $COLOR_BACKGROUND_1;
     color: $COLOR_TEXT_1;
     spacing: 4px;
-    padding: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     border: none;
     outline: none;
 
@@ -295,7 +297,7 @@ QRadioButton {
     &::indicator {
         border: none;
         outline: none;
-        margin-left: 4px;
+        margin-left: 2px;
         height: 16px;
         width: 16px;
 
@@ -396,7 +398,7 @@ QMenu {
 
     &::item {
         background-color: $COLOR_BACKGROUND_4;
-        padding: 4px 24px 4px 24px;
+        padding: 4px 24px 4px 8px;
         /* Reserve space for selection border */
         border: 1px transparent $COLOR_BACKGROUND_4;
 
@@ -453,6 +455,7 @@ QMenu {
 
     &::right-arrow {
         margin: 5px;
+        padding-left:12px;
         image: url($PATH_RESOURCES + '/rc/arrow_right.png');
         height: 12px;
         width: 12px;
@@ -1037,8 +1040,6 @@ QPushButton {
     border-radius: $SIZE_BORDER_RADIUS;
     padding: 3px;
     outline: none;
-    /* Issue #194 - Special case of QPushButton inside dialogs, for better UI */
-    min-width: 80px;
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_4;
@@ -1094,6 +1095,10 @@ QPushButton {
 
 }
 
+QDialogButtonBox QPushButton {
+    /* Issue #194 #248 - Special case of QPushButton inside dialogs, for better UI */
+    min-width: 80px;
+}
 /* QToolButton ------------------------------------------------------------
 
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbutton
@@ -1144,7 +1149,7 @@ QToolButton {
     /* The subcontrols below are used only in the DelayedPopup mode */
     &[popupMode="0"] {
         /* Only for DelayedPopup */
-        padding-right: 2px;
+        padding-right: 6px;
     }
 
     /* The subcontrols below are used only in the MenuButtonPopup mode */
@@ -1166,7 +1171,7 @@ QToolButton {
     /* The subcontrol below is used only in the InstantPopup or DelayedPopup mode */
     &[popupMode="2"] {
         /* Only for InstantPopup */
-        padding-right: 2px;
+        padding-right: 6px;
     }
 
     &::menu-button {
@@ -1239,8 +1244,9 @@ QComboBox {
     border-radius: $SIZE_BORDER_RADIUS;
     selection-background-color: $COLOR_ACCENT_2;
     padding-left: 4px;
-    padding-right: 36px;
-    /* 4 + 16*2 See scrollbar size */
+    padding-right: 4px;
+    /* padding-right = 36; 4 + 16*2 See scrollbar size */
+    /* changed to 4px to fix #239 */
 
     /* Fixes #103, #111 */
     min-height: 1.5em;
@@ -1974,21 +1980,19 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qheaderview
 QHeaderView {
     background-color: $COLOR_BACKGROUND_4;
     border: 0px transparent $COLOR_BACKGROUND_4;
-    padding: 0px;
-    margin: 0px;
-    border-radius: 0px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_4;
         border: 1px transparent $COLOR_BACKGROUND_4;
-        padding: 2px;
     }
 
     &::section {
         background-color: $COLOR_BACKGROUND_4;
         color: $COLOR_TEXT_1;
-        padding: 2px;
-        border-radius: 0px;
+        border-radius: 0;
         text-align: left;
         font-size: 13px;
 
@@ -2003,6 +2007,8 @@ QHeaderView {
         }
 
         &::horizontal {
+            padding-top: 0;
+            padding-bottom: 0;
             padding-left: 4px;
             padding-right: 4px;
             border-left: $BORDER_1;
@@ -2018,6 +2024,8 @@ QHeaderView {
         }
 
         &::vertical {
+            padding-top: 0;
+            padding-bottom: 0;
             padding-left: 4px;
             padding-right: 4px;
             border-top: $BORDER_1;
