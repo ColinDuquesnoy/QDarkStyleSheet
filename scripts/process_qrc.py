@@ -38,6 +38,7 @@ from watchdog.observers import Observer
 
 # Local imports
 from qdarkstyle import PACKAGE_PATH
+from qdarkstyle.darkpalette import DarkPalette
 from qdarkstyle.utils.images import create_images, create_palette_image, generate_qrc_file
 from qdarkstyle.utils.scss import create_qss
 
@@ -97,7 +98,7 @@ def run_process(args):
 
     # Create palette and resources png images
     print('Generating palette image ...')
-    create_palette_image()
+    create_palette_image(palette=DarkPalette)
 
     print('Generating images ...')
     create_images()

@@ -10,6 +10,7 @@ from __future__ import absolute_import, division, print_function
 import logging
 import os
 import re
+import sys
 import tempfile
 
 # Third party imports
@@ -88,16 +89,25 @@ def convert_svg_to_png(svg_path, png_path, height, width):
 
 
 def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
-                         palette=DarkPalette):
+                         palette=None):
     """
     Create palette image svg and png image on specified path.
     """
     # Needed to use QPixmap
     _ = QApplication([])
 
+    if palette is None:
+        print("Please pass a palette class in order to create its "
+              "associaciated images")
+        sys.exit(1)
+
+    if palette.ID is None:
+        print("A QDarkStyle palette requires and ID!")
+        sys.exit(1)
+
     base_palette_svg_path = os.path.join(base_svg_path, 'base_palette.svg')
-    palette_svg_path = os.path.join(path, 'palette.svg')
-    palette_png_path = os.path.join(path, 'palette.png')
+    palette_svg_path = os.path.join(path, palette.ID, 'palette.svg')
+    palette_png_path = os.path.join(path, palette.ID, 'palette.png')
 
     _logger.info("Creating palette image ...")
     _logger.info("Base SVG: %s" % base_palette_svg_path)

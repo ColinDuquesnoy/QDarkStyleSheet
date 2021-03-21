@@ -11,6 +11,9 @@ from qdarkstyle.utils.palette import PaletteMixin
 class DarkPalette(PaletteMixin):
     """Theme variables."""
 
+    # Identifier
+    ID = 'dark'
+
     # Color
     COLOR_BACKGROUND_1 = Gray.B10
     COLOR_BACKGROUND_2 = Gray.B20

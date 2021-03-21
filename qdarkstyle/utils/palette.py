@@ -9,6 +9,8 @@ from collections import OrderedDict
 
 class PaletteMixin(object):
 
+    ID = None
+
     @classmethod
     def to_dict(cls, colors_only=False):
         """Convert variables to dictionary."""
