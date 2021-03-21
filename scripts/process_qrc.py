@@ -63,7 +63,7 @@ def main(arguments):
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--qrc_dir',
-                        default=PACKAGE_PATH,
+                        default=None,
                         type=str,
                         help="QRC file directory, relative to current directory.",)
     parser.add_argument('--create',
@@ -107,7 +107,10 @@ def run_process(args):
     generate_qrc_file(palette=DarkPalette)
 
     print('Converting .qrc to _rc.py and/or .rcc ...')
-    os.chdir(args.qrc_dir)
+
+    if not args.qrc_dir:
+        main_dir = os.path.join(PACKAGE_PATH, DarkPalette.ID)
+        os.chdir(main_dir)
 
     for qrc_file in glob.glob('*.qrc'):
         # get name without extension
@@ -119,7 +122,7 @@ def run_process(args):
 
         # Create variables SCSS files and compile SCSS files to QSS
         print('Compiling SCSS/SASS files to QSS ...')
-        create_qss()
+        create_qss(palette=DarkPalette)
 
         # creating names
         py_file_pyqt5 = 'pyqt5_' + filename + ext

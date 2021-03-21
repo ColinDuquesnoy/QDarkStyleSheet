@@ -16,7 +16,8 @@ import qtsass
 # Local imports
 from qdarkstyle import (MAIN_SCSS_FILE, MAIN_SCSS_FILEPATH, QSS_PATH,
                         QSS_FILEPATH, RC_PATH, QSS_FILE,
-                        VARIABLES_SCSS_FILE, VARIABLES_SCSS_FILEPATH)
+                        VARIABLES_SCSS_FILE, VARIABLES_SCSS_FILEPATH,
+                        PACKAGE_PATH)
 from qdarkstyle.darkpalette import DarkPalette
 from qdarkstyle.utils.images import create_images, create_palette_image
 
@@ -106,10 +107,23 @@ def _create_qss(main_scss_path, qss_filepath, header=HEADER_QSS):
     return data
 
 
-def create_qss(qss_filepath=QSS_FILEPATH, main_scss_filepath=MAIN_SCSS_FILEPATH,
-               variables_scss_filepath=VARIABLES_SCSS_FILEPATH,
-               palette=DarkPalette):
+def create_qss(palette=None):
     """Create variables files and run qtsass compilation."""
+
+    if palette is None:
+        print("Please pass a palette class in order to create its "
+              "qrc file")
+        sys.exit(1)
+
+    if palette.ID is None:
+        print("A QDarkStyle palette requires an ID!")
+        sys.exit(1)
+
+    palette_path = os.path.join(PACKAGE_PATH, palette.ID)
+    variables_scss_filepath = os.path.join(palette_path, VARIABLES_SCSS_FILE)
+    main_scss_filepath = os.path.join(palette_path, MAIN_SCSS_FILE)
+    qss_filepath = os.path.join(palette_path, QSS_FILE)
+
     _create_scss_variables(variables_scss_filepath, palette)
     stylesheet = _create_qss(main_scss_filepath, qss_filepath)
 
