@@ -19,8 +19,8 @@ from qtpy.QtGui import QIcon
 from qtpy.QtWidgets import QApplication
 
 # Local imports
-from qdarkstyle import (IMAGES_PATH, STYLES_SCSS_FILEPATH, QRC_FILEPATH, RC_PATH,
-                        SVG_PATH, PACKAGE_PATH)
+from qdarkstyle import (IMAGES_PATH, STYLES_SCSS_FILEPATH, SVG_PATH,
+                        PACKAGE_PATH, QRC_FILE)
 from qdarkstyle.darkpalette import DarkPalette
 
 IMAGE_BLACKLIST = ['base_palette']
@@ -102,7 +102,7 @@ def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
         sys.exit(1)
 
     if palette.ID is None:
-        print("A QDarkStyle palette requires and ID!")
+        print("A QDarkStyle palette requires an ID!")
         sys.exit(1)
 
     base_palette_svg_path = os.path.join(base_svg_path, 'base_palette.svg')
@@ -152,7 +152,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
         sys.exit(1)
 
     if palette.ID is None:
-        print("A QDarkStyle palette requires and ID!")
+        print("A QDarkStyle palette requires an ID!")
         sys.exit(1)
 
     if not rc_path:
@@ -232,7 +232,8 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
     _logger.info("RC links not in RC: %s" % rc_list)
 
 
-def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
+def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
+                      palette=None):
     """
     Generate the QRC file programmaticaly.
 
@@ -243,18 +244,31 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
             Defaults to 'qss_icons'.
         style_prefix (str, optional): Prefix used to this style.
             Defaults to 'qdarkstyle'.
+        palette (DarkPalette, optional): Palette.
     """
 
     files = []
+
+    if palette is None:
+        print("Please pass a palette class in order to create its "
+              "qrc file")
+        sys.exit(1)
+
+    if palette.ID is None:
+        print("A QDarkStyle palette requires an ID!")
+        sys.exit(1)
 
     _logger.info("Generating QRC file ...")
     _logger.info("Resource prefix: %s" % resource_prefix)
     _logger.info("Style prefix: %s" % style_prefix)
 
-    _logger.info("Searching in: %s" % RC_PATH)
+    rc_path = os.path.join(PACKAGE_PATH, palette.ID, 'rc')
+    qrc_filepath = os.path.join(PACKAGE_PATH, palette.ID, QRC_FILE)
+
+    _logger.info("Searching in: %s" % rc_path)
 
     # Search by png images
-    for fname in sorted(os.listdir(RC_PATH)):
+    for fname in sorted(os.listdir(rc_path)):
         files.append(TEMPLATE_QRC_FILE.format(fname=fname))
 
     # Join parts
@@ -262,10 +276,10 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle'):
                    + '\n'.join(files)
                    + TEMPLATE_QRC_FOOTER.format(style_prefix=style_prefix))
 
-    _logger.info("Writing in: %s" % QRC_FILEPATH)
+    _logger.info("Writing in: %s" % qrc_filepath)
 
     # Write qrc file
-    with open(QRC_FILEPATH, 'w') as fh:
+    with open(qrc_filepath, 'w') as fh:
         fh.write(qrc_content)
 
 

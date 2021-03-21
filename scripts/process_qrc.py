@@ -104,7 +104,7 @@ def run_process(args):
     create_images(palette=DarkPalette)
 
     print('Generating qrc ...')
-    generate_qrc_file()
+    generate_qrc_file(palette=DarkPalette)
 
     print('Converting .qrc to _rc.py and/or .rcc ...')
     os.chdir(args.qrc_dir)
