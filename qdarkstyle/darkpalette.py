@@ -5,11 +5,11 @@
 
 # Local imports
 from qdarkstyle.colorsystem import Blue, Gray
-from qdarkstyle.utils.palette import PaletteMixin
+from qdarkstyle.utils.palette import QDarkStylePalette
 
 
-class DarkPalette(PaletteMixin):
-    """Theme variables."""
+class DarkPalette(QDarkStylePalette):
+    """Dark palette variables."""
 
     # Identifier
     ID = 'dark'
@@ -34,21 +34,3 @@ class DarkPalette(PaletteMixin):
     COLOR_ACCENT_5 = Blue.B80
 
     OPACITY_TOOLTIP = 230
-
-    # Size
-    SIZE_BORDER_RADIUS = '4px'
-
-    # Borders
-    BORDER_1 = '1px solid $COLOR_BACKGROUND_1'
-    BORDER_2 = '1px solid $COLOR_BACKGROUND_4'
-    BORDER_3 = '1px solid $COLOR_BACKGROUND_6'
-
-    BORDER_SELECTION_3 = '1px solid $COLOR_ACCENT_3'
-    BORDER_SELECTION_2 = '1px solid $COLOR_ACCENT_2'
-    BORDER_SELECTION_1 = '1px solid $COLOR_ACCENT_1'
-
-    # Example of additional widget specific variables
-    W_STATUS_BAR_BACKGROUND_COLOR = COLOR_ACCENT_1
-
-    # Paths
-    PATH_RESOURCES = "':/qss_icons'"
