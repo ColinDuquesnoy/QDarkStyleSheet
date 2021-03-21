@@ -101,7 +101,7 @@ def run_process(args):
     create_palette_image(palette=DarkPalette)
 
     print('Generating images ...')
-    create_images()
+    create_images(palette=DarkPalette)
 
     print('Generating qrc ...')
     generate_qrc_file()

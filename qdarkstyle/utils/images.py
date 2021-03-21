@@ -20,7 +20,7 @@ from qtpy.QtWidgets import QApplication
 
 # Local imports
 from qdarkstyle import (IMAGES_PATH, STYLES_SCSS_FILEPATH, QRC_FILEPATH, RC_PATH,
-                        SVG_PATH)
+                        SVG_PATH, PACKAGE_PATH)
 from qdarkstyle.darkpalette import DarkPalette
 
 IMAGE_BLACKLIST = ['base_palette']
@@ -98,7 +98,7 @@ def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
 
     if palette is None:
         print("Please pass a palette class in order to create its "
-              "associaciated images")
+              "associated images")
         sys.exit(1)
 
     if palette.ID is None:
@@ -130,8 +130,7 @@ def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
     return palette_svg_path, palette_png_path
 
 
-def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
-                  palette=DarkPalette):
+def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
     """Create resources `rc` png image files from base svg files and palette.
 
     Search all SVG files in `base_svg_path` excluding IMAGE_BLACKLIST,
@@ -140,12 +139,24 @@ def create_images(base_svg_path=SVG_PATH, rc_path=RC_PATH,
 
     Args:
         base_svg_path (str, optional): [description]. Defaults to SVG_PATH.
-        rc_path (str, optional): [description]. Defaults to RC_PATH.
-        palette (DarkPalette, optional): Palette . Defaults to DarkPalette.
+        rc_path (str, optional): [description].
+        palette (DarkPalette, optional): Palette.
     """
 
     # Needed to use QPixmap
     _ = QApplication([])
+
+    if palette is None:
+        print("Please pass a palette class in order to create its "
+              "associated file")
+        sys.exit(1)
+
+    if palette.ID is None:
+        print("A QDarkStyle palette requires and ID!")
+        sys.exit(1)
+
+    if not rc_path:
+        rc_path = os.path.join(PACKAGE_PATH, palette.ID, 'rc')
 
     temp_dir = tempfile.mkdtemp()
     svg_fnames = [f for f in os.listdir(base_svg_path) if f.endswith('.svg')]

@@ -15,6 +15,7 @@ class PaletteMixin(object):
     def to_dict(cls, colors_only=False):
         """Convert variables to dictionary."""
         order = [
+            'ID',
             'COLOR_BACKGROUND_6',
             'COLOR_BACKGROUND_5',
             'COLOR_BACKGROUND_4',
@@ -43,6 +44,9 @@ class PaletteMixin(object):
         dic = OrderedDict()
         for var in order:
             value = getattr(cls, var)
+
+            if var == 'ID':
+                value = "'{}'".format(value)
 
             if colors_only:
                 if not var.startswith('COLOR'):
