@@ -289,8 +289,8 @@
        <string>Icon</string>
       </property>
       <property name="icon">
-       <iconset resource="../../qdarkstyle/style.qrc">
-        <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
+       <iconset resource="../../qdarkstyle/${ID}/style.qrc">
+        <normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</iconset>
       </property>
      </widget>
     </item>
@@ -334,8 +334,8 @@
        <string>Icon</string>
       </property>
       <property name="icon">
-       <iconset resource="../../qdarkstyle/style.qrc">
-        <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
+       <iconset resource="../../qdarkstyle/${ID}/style.qrc">
+        <normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</iconset>
       </property>
      </widget>
     </item>
@@ -368,8 +368,8 @@
        <string>Icon Checked</string>
       </property>
       <property name="icon">
-       <iconset resource="../../qdarkstyle/style.qrc">
-        <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
+       <iconset resource="../../qdarkstyle/${ID}/style.qrc">
+        <normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</iconset>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -407,8 +407,8 @@
        <string>Icon Checked</string>
       </property>
       <property name="icon">
-       <iconset resource="../../qdarkstyle/style.qrc">
-        <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
+       <iconset resource="../../qdarkstyle/${ID}/style.qrc">
+        <normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</iconset>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -1139,7 +1139,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../../qdarkstyle/style.qrc"/>
+  <include location="../../qdarkstyle/${ID}/style.qrc"/>
  </resources>
  <connections>
   <connection>

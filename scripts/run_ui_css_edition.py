@@ -6,17 +6,34 @@ Process qrc, ui, image, and screenshot files, then run example in while loop.
 
 # Standard library imports
 from __future__ import absolute_import, print_function
+
+import argparse
 from subprocess import call
 import os
 import sys
+import tempfile
 
 # Constants
 SCRIPTS_PATH = os.path.abspath(os.path.dirname(__file__))
-REPO_PATH = os.path.dirname(SCRIPTS_PATH)
+
+# This needs to be the same one defined in process_ui.py
+EXAMPLE_TMP_DIR = os.path.join(tempfile.gettempdir(), 'qdarkstyle_example')
 
 
 def main():
     """Process qrc and ui files, then run example in while loop."""
+    parser = argparse.ArgumentParser(description=__doc__,
+                                     formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--palette',
+                        default='dark',
+                        choices=['dark', 'light'],
+                        type=str,
+                        help="Palette to display",)
+
+    # Parsing arguments from command line
+    args = parser.parse_args()
+    palette = args.palette
+
     dark = None
     no_dark = None
     themes = {'Dark': dark, 'No Dark': no_dark}
@@ -33,21 +50,17 @@ def main():
 
         print(sys.argv)
 
-        # Process images
-        process_images = os.path.join(SCRIPTS_PATH, 'process_images.py')
-        call(['python', process_images])
-
         # Process qrc files
         process_qrc = os.path.join(SCRIPTS_PATH, 'process_qrc.py')
         call(['python', process_qrc])
 
         # Process ui files
         process_ui = os.path.join(SCRIPTS_PATH, 'process_ui.py')
-        call(['python', process_ui])
+        call(['python', process_ui, '--palette', palette])
 
-        # Create screenshots
-        example = os.path.join(REPO_PATH, 'example', 'example.py')
-        call(['python', example, '--screenshots'])
+        # Show window
+        example = os.path.join(EXAMPLE_TMP_DIR, 'example.py')
+        call(['python', example, '--screenshots', '--palette', palette])
         call(['python', example, '--no_dark', '--screenshots'])
 
         # Open dark example

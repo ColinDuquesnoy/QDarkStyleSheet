@@ -53,6 +53,8 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + 
 
 # Must be in this place, after setting path, to not need to install
 import qdarkstyle  # noqa: E402
+from qdarkstyle.darkpalette import DarkPalette
+from qdarkstyle.lightpalette import LightPalette
 
 # Set log for debug
 logging.basicConfig(level=logging.DEBUG)
@@ -77,6 +79,11 @@ def main():
                         help="Reset GUI settings (position, size) then opens.")
     parser.add_argument('--screenshots', action='store_true',
                         help="Generate screenshots on images folder.")
+    parser.add_argument('--palette',
+                        default='dark',
+                        choices=['dark', 'light'],
+                        type=str,
+                        help="Palette to display",)
 
     # Parsing arguments from command line
     args = parser.parse_args()
@@ -136,7 +143,10 @@ def main():
     style = ''
 
     if not args.no_dark:
-        style = qdarkstyle.load_stylesheet()
+        if args.palette == 'dark':
+            style = qdarkstyle.load_stylesheet(palette=DarkPalette)
+        else:
+            style = qdarkstyle.load_stylesheet(palette=LightPalette)
 
     app.setStyleSheet(style)
 
@@ -263,7 +273,7 @@ def main():
     # Save screenshots for different displays and quit
     if args.screenshots:
         window.showFullScreen()
-        create_screenshots(app, window, args.no_dark)
+        create_screenshots(app, window, args)
     # Do not read settings when taking screenshots - like reset
     else:
         _read_settings(window, args.reset, QSettings)
@@ -300,13 +310,19 @@ def _read_settings(window, reset, QSettings):
         window.move(pos)
 
 
-def create_screenshots(app, window, no_dark):
+def create_screenshots(app, window, args):
     """Save screenshots for different application views and quit."""
     from qtpy.QtCore import QCoreApplication
     from qtpy.QtGui import QGuiApplication
     from qtpy.QtWidgets import QDockWidget, QTabWidget
 
-    theme = 'no_dark' if no_dark else 'dark'
+    if args.no_dark:
+        theme = 'no_dark'
+    elif args.palette == 'dark':
+        theme = 'dark'
+    else:
+        theme = 'light'
+
     print('\nCreating {} screenshots'.format(theme))
 
     docks = window.findChildren(QDockWidget)
