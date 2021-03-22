@@ -21,7 +21,6 @@ from qtpy.QtWidgets import QApplication
 # Local imports
 from qdarkstyle import (IMAGES_PATH, STYLES_SCSS_FILEPATH, SVG_PATH,
                         PACKAGE_PATH, QRC_FILE)
-from qdarkstyle.darkpalette import DarkPalette
 
 IMAGE_BLACKLIST = ['base_palette']
 
@@ -140,7 +139,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
     Args:
         base_svg_path (str, optional): [description]. Defaults to SVG_PATH.
         rc_path (str, optional): [description].
-        palette (DarkPalette, optional): Palette.
+        palette (QDarkStylePalette, optional): Palette.
     """
 
     # Needed to use QPixmap
@@ -244,7 +243,7 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
             Defaults to 'qss_icons'.
         style_prefix (str, optional): Prefix used to this style.
             Defaults to 'qdarkstyle'.
-        palette (DarkPalette, optional): Palette.
+        palette (QDarkStylePalette, optional): Palette.
     """
 
     files = []

@@ -51,10 +51,12 @@ Enjoy!
 import logging
 import os
 import platform
+import sys
 import warnings
 
 # Local imports
 from qdarkstyle.darkpalette import DarkPalette
+from qdarkstyle.lightpalette import LightPalette
 from qdarkstyle.utils.palette import QDarkStylePalette
 
 __version__ = "3.0.dev"
@@ -221,6 +223,12 @@ def _load_stylesheet(qt_api='', palette=None):
     elif palette.ID == 'dark':
         from qdarkstyle.dark import style_rc
         palette = DarkPalette
+    elif palette.ID == 'light':
+        from qdarkstyle.light import style_rc
+        palette = LightPalette
+    else:
+        print("Not recognized ID for palette! Exiting!")
+        sys.exit(1)
 
     # Thus, by importing the binary we can access the resources
     package_dir = os.path.basename(PACKAGE_PATH)
@@ -337,7 +345,7 @@ def load_stylesheet(*args, **kwargs):
     else:
         raise TypeError("load_stylesheet() takes only zero, one or two arguments: "
                         "(new) string type qt_api='pyqt5' or "
-                        "(new) palette type palette=DarkPalette or "
+                        "(new) palette type palette=QDarkStylePalette or "
                         "(old) boolean type pyside='False'.")
 
     return stylesheet
