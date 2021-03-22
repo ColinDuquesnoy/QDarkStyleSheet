@@ -284,6 +284,11 @@ def load_stylesheet(*args, **kwargs):
                       Possible values are pyside, pyside2 pyqt4, pyqt5.
                       Not case sensitive.
 
+        or
+
+        palette (QDarkStylePalette): Class (not instance) that inherits from
+                                     QDarkStylePalette.
+
     Raises:
         TypeError: If arguments do not match: type, keyword name nor quantity.
 
@@ -337,7 +342,7 @@ def load_stylesheet(*args, **kwargs):
         stylesheet = _load_stylesheet(qt_api=qt_api, palette=palette)
 
     # Palette arg
-    elif 'palette' in kwargs or isinstance(arg, QDarkStylePalette):
+    elif 'palette' in kwargs or issubclass(arg, QDarkStylePalette):
         palette_arg = kwargs.get('palette', arg)
         stylesheet = _load_stylesheet(palette=palette_arg)
 
