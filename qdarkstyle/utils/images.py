@@ -258,12 +258,14 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
         print("A QDarkStyle palette requires an ID!")
         sys.exit(1)
 
+    rc_path = os.path.join(PACKAGE_PATH, palette.ID, 'rc')
+    qrc_filepath = os.path.join(PACKAGE_PATH, palette.ID, QRC_FILE)
+    resource_prefix = resource_prefix + '/' + palette.ID
+    style_prefix = style_prefix + '/' + palette.ID
+
     _logger.info("Generating QRC file ...")
     _logger.info("Resource prefix: %s" % resource_prefix)
     _logger.info("Style prefix: %s" % style_prefix)
-
-    rc_path = os.path.join(PACKAGE_PATH, palette.ID, 'rc')
-    qrc_filepath = os.path.join(PACKAGE_PATH, palette.ID, QRC_FILE)
 
     _logger.info("Searching in: %s" % rc_path)
 
