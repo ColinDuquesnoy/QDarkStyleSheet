@@ -26,10 +26,10 @@ class LightPalette(QDarkStylePalette):
     COLOR_TEXT_3 = Gray.B50
     COLOR_TEXT_4 = Gray.B70
 
-    COLOR_ACCENT_1 = Blue.B120
-    COLOR_ACCENT_2 = Blue.B90
-    COLOR_ACCENT_3 = Blue.B80
-    COLOR_ACCENT_4 = Blue.B70
-    COLOR_ACCENT_5 = Blue.B60
+    COLOR_ACCENT_1 = Blue.B130
+    COLOR_ACCENT_2 = Blue.B100
+    COLOR_ACCENT_3 = Blue.B90
+    COLOR_ACCENT_4 = Blue.B80
+    COLOR_ACCENT_5 = Blue.B70
 
     OPACITY_TOOLTIP = 230
