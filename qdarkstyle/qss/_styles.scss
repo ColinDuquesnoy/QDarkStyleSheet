@@ -1825,8 +1825,9 @@ QDockWidget {
     background-color: $COLOR_BACKGROUND_1;
     border: $BORDER_2;
     border-radius: $SIZE_BORDER_RADIUS;
-    titlebar-close-icon: url($PATH_RESOURCES + '/rc/window_close.png');
-    titlebar-normal-icon: url($PATH_RESOURCES + '/rc/window_undock.png');
+    // See discussion here: https://stackoverflow.com/questions/32145080/qdockwidget-float-close-button-hover-images
+    titlebar-close-icon: url($PATH_RESOURCES + '/rc/transparent.png');
+    titlebar-normal-icon: url($PATH_RESOURCES + '/rc/transparent.png');
 
 
 
@@ -1839,34 +1840,45 @@ QDockWidget {
     }
 
     &::close-button {
-        margin: 1px;
-        padding: 3px;
-        background-color: $COLOR_BACKGROUND_4;
-        border-radius: $SIZE_BORDER_RADIUS;
+        icon-size: 12px;
         border: none;
+        background: transparent;
+        background-image: transparent;
+        border: 0;
+        margin: 0;
+        padding: 0;
+
+        image: url($PATH_RESOURCES + '/rc/window_close.png');
 
         &:hover {
-            background-color: $COLOR_BACKGROUND_5;
+            image: url($PATH_RESOURCES + '/rc/window_close_focus.png');
         }
 
         &:pressed {
-            background-color: $COLOR_BACKGROUND_6;
+            image: url($PATH_RESOURCES + '/rc/window_close_pressed.png');
         }
     }
 
     &::float-button {
-        margin: 1px;
-        padding: 1px;
-        background-color: $COLOR_BACKGROUND_4;
-        border-radius: $SIZE_BORDER_RADIUS;
+        icon-size: 12px;
         border: none;
+        background: transparent;
+        background-image: transparent;
+        // float button has an issue that if you change any of those
+        // parameters bellow there will be a duplication in the icon
+        // actually it seems that they are always there (duplication)
+        border: 0;
+        margin: 0;
+        padding: 0;
+
+        image: url($PATH_RESOURCES + '/rc/window_undock.png');
 
         &:hover {
-            background-color: $COLOR_BACKGROUND_5;
+            image: url($PATH_RESOURCES + '/rc/window_undock_focus.png');
         }
 
         &:pressed {
-            background-color: $COLOR_BACKGROUND_6;
+            image: url($PATH_RESOURCES + '/rc/window_undock_pressed.png');
         }
     }
 }
