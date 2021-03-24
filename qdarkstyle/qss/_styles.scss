@@ -541,10 +541,9 @@ QAbstractScrollArea {
     background-color: $COLOR_BACKGROUND_1;
     border: $BORDER_2;
     border-radius: $SIZE_BORDER_RADIUS;
+    /* fix #159 */
     padding: 2px;
-    /* fix #159 */
-    min-height: 1.25em;
-    /* fix #159 */
+    /* remove min-height to fix #244 */
     color: $COLOR_TEXT_1;
 
     &:disabled {
