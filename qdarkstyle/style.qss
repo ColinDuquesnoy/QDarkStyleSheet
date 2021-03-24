@@ -125,6 +125,8 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtooltip
 QToolTip {
   background-color: #346792;
   color: #E0E1E3;
+  /* If you remove the border property, background stops working on Windows */
+  border: none;
   /* Remove padding, for fix combo box tooltip */
   padding: 0px;
   /* Remove opacity, fix #174 - may need to use RGBA */
@@ -186,8 +188,8 @@ QCheckBox QWidget:disabled {
 
 QCheckBox::indicator {
   margin-left: 2px;
-  height: 16px;
-  width: 16px;
+  height: 14px;
+  width: 14px;
 }
 
 QCheckBox::indicator:unchecked {
@@ -252,10 +254,11 @@ QGroupBox::title {
 }
 
 QGroupBox::indicator {
-  margin: 0;
+  margin-left: 2px;
+  margin-top: 2px;
   padding: 0;
-  height: 16px;
-  width: 16px;
+  height: 14px;
+  width: 14px;
 }
 
 QGroupBox::indicator:unchecked {
@@ -325,8 +328,8 @@ QRadioButton::indicator {
   border: none;
   outline: none;
   margin-left: 2px;
-  height: 16px;
-  width: 16px;
+  height: 14px;
+  width: 14px;
 }
 
 QRadioButton::indicator:unchecked {
@@ -439,8 +442,8 @@ QMenu::item:pressed {
 }
 
 QMenu::indicator {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   padding-left: 6px;
   /* non-exclusive indicator = check box style indicator (see QActionGroup::setExclusive) */
   /* exclusive indicator = radio button style indicator (see QActionGroup::setExclusive) */
@@ -450,7 +453,12 @@ QMenu::indicator:non-exclusive:unchecked {
   image: url(":/qss_icons/rc/checkbox_unchecked.png");
 }
 
-QMenu::indicator:non-exclusive:unchecked:selected {
+QMenu::indicator:non-exclusive:unchecked:hover, QMenu::indicator:non-exclusive:unchecked:focus, QMenu::indicator:non-exclusive:unchecked:pressed {
+  border: none;
+  image: url(":/qss_icons/rc/checkbox_unchecked_focus.png");
+}
+
+QMenu::indicator:non-exclusive:unchecked:disabled {
   image: url(":/qss_icons/rc/checkbox_unchecked_disabled.png");
 }
 
@@ -458,23 +466,55 @@ QMenu::indicator:non-exclusive:checked {
   image: url(":/qss_icons/rc/checkbox_checked.png");
 }
 
-QMenu::indicator:non-exclusive:checked:selected {
+QMenu::indicator:non-exclusive:checked:hover, QMenu::indicator:non-exclusive:checked:focus, QMenu::indicator:non-exclusive:checked:pressed {
+  border: none;
+  image: url(":/qss_icons/rc/checkbox_checked_focus.png");
+}
+
+QMenu::indicator:non-exclusive:checked:disabled {
   image: url(":/qss_icons/rc/checkbox_checked_disabled.png");
+}
+
+QMenu::indicator:non-exclusive:indeterminate {
+  image: url(":/qss_icons/rc/checkbox_indeterminate.png");
+}
+
+QMenu::indicator:non-exclusive:indeterminate:disabled {
+  image: url(":/qss_icons/rc/checkbox_indeterminate_disabled.png");
+}
+
+QMenu::indicator:non-exclusive:indeterminate:focus, QMenu::indicator:non-exclusive:indeterminate:hover, QMenu::indicator:non-exclusive:indeterminate:pressed {
+  image: url(":/qss_icons/rc/checkbox_indeterminate_focus.png");
 }
 
 QMenu::indicator:exclusive:unchecked {
   image: url(":/qss_icons/rc/radio_unchecked.png");
 }
 
-QMenu::indicator:exclusive:unchecked:selected {
+QMenu::indicator:exclusive:unchecked:hover, QMenu::indicator:exclusive:unchecked:focus, QMenu::indicator:exclusive:unchecked:pressed {
+  border: none;
+  outline: none;
+  image: url(":/qss_icons/rc/radio_unchecked_focus.png");
+}
+
+QMenu::indicator:exclusive:unchecked:disabled {
   image: url(":/qss_icons/rc/radio_unchecked_disabled.png");
 }
 
 QMenu::indicator:exclusive:checked {
+  border: none;
+  outline: none;
   image: url(":/qss_icons/rc/radio_checked.png");
 }
 
-QMenu::indicator:exclusive:checked:selected {
+QMenu::indicator:exclusive:checked:hover, QMenu::indicator:exclusive:checked:focus, QMenu::indicator:exclusive:checked:pressed {
+  border: none;
+  outline: none;
+  image: url(":/qss_icons/rc/radio_checked_focus.png");
+}
+
+QMenu::indicator:exclusive:checked:disabled {
+  outline: none;
   image: url(":/qss_icons/rc/radio_checked_disabled.png");
 }
 
@@ -511,10 +551,9 @@ QAbstractScrollArea {
   background-color: #19232D;
   border: 1px solid #455364;
   border-radius: 4px;
+  /* fix #159 */
   padding: 2px;
-  /* fix #159 */
-  min-height: 1.25em;
-  /* fix #159 */
+  /* remove min-height to fix #244 */
   color: #E0E1E3;
 }
 
@@ -1487,8 +1526,8 @@ QTabBar {
 
 QTabBar::close-button {
   border: 0;
-  margin: 1px;
-  padding: 1px;
+  margin: 0;
+  padding: 4px;
   image: url(":/qss_icons/rc/window_close.png");
 }
 
@@ -1500,11 +1539,6 @@ QTabBar::close-button:pressed {
   image: url(":/qss_icons/rc/window_close_pressed.png");
 }
 
-/* QTabBar::tab - selected ------------------------------------------------
-
-https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabbar
-
---------------------------------------------------------------------------- */
 QTabBar::tab {
   /* !selected and disabled ----------------------------------------- */
   /* selected ------------------------------------------------------- */
@@ -1593,7 +1627,7 @@ QTabBar::tab:top {
 }
 
 QTabBar::tab:top:selected {
-  background-color: #60798B;
+  background-color: #455364;
   color: #E0E1E3;
   border-bottom: 3px solid #259AE9;
   border-top-left-radius: 3px;
@@ -1624,7 +1658,7 @@ QTabBar::tab:bottom {
 
 QTabBar::tab:bottom:selected {
   color: #E0E1E3;
-  background-color: #60798B;
+  background-color: #455364;
   border-top: 3px solid #259AE9;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -1653,7 +1687,7 @@ QTabBar::tab:left {
 
 QTabBar::tab:left:selected {
   color: #E0E1E3;
-  background-color: #60798B;
+  background-color: #455364;
   border-right: 3px solid #259AE9;
 }
 
@@ -1678,7 +1712,7 @@ QTabBar::tab:right {
 
 QTabBar::tab:right:selected {
   color: #E0E1E3;
-  background-color: #60798B;
+  background-color: #455364;
   border-left: 3px solid #259AE9;
 }
 
@@ -1727,8 +1761,8 @@ QDockWidget {
   background-color: #19232D;
   border: 1px solid #455364;
   border-radius: 4px;
-  titlebar-close-icon: url(":/qss_icons/rc/window_close.png");
-  titlebar-normal-icon: url(":/qss_icons/rc/window_undock.png");
+  titlebar-close-icon: url(":/qss_icons/rc/transparent.png");
+  titlebar-normal-icon: url(":/qss_icons/rc/transparent.png");
 }
 
 QDockWidget::title {
@@ -1740,35 +1774,41 @@ QDockWidget::title {
 }
 
 QDockWidget::close-button {
-  margin: 1px;
-  padding: 3px;
-  background-color: #455364;
-  border-radius: 4px;
+  icon-size: 12px;
   border: none;
+  background: transparent;
+  background-image: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  image: url(":/qss_icons/rc/window_close.png");
 }
 
 QDockWidget::close-button:hover {
-  background-color: #54687A;
+  image: url(":/qss_icons/rc/window_close_focus.png");
 }
 
 QDockWidget::close-button:pressed {
-  background-color: #60798B;
+  image: url(":/qss_icons/rc/window_close_pressed.png");
 }
 
 QDockWidget::float-button {
-  margin: 1px;
-  padding: 1px;
-  background-color: #455364;
-  border-radius: 4px;
+  icon-size: 12px;
   border: none;
+  background: transparent;
+  background-image: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  image: url(":/qss_icons/rc/window_undock.png");
 }
 
 QDockWidget::float-button:hover {
-  background-color: #54687A;
+  image: url(":/qss_icons/rc/window_undock_focus.png");
 }
 
 QDockWidget::float-button:pressed {
-  background-color: #60798B;
+  image: url(":/qss_icons/rc/window_undock_pressed.png");
 }
 
 /* QTreeView QListView QTableView -----------------------------------------
