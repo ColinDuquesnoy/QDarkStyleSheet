@@ -488,8 +488,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="../../qdarkstyle/style.qrc">
-     <normaloff>:/qss_icons/rc/window_undock_focus.png</normaloff>:/qss_icons/rc/window_undock_focus.png</iconset>
+    <iconset resource="../../qdarkstyle/${ID}/style.qrc">
+     <normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</normaloff>:/qss_icons/${ID}/rc/window_undock_focus.png</iconset>
    </property>
    <property name="text">
     <string>Action Icon A</string>
@@ -500,8 +500,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="../../qdarkstyle/style.qrc">
-     <normaloff>:/qss_icons/rc/window_close_focus.png</normaloff>:/qss_icons/rc/window_close_focus.png</iconset>
+    <iconset resource="../../qdarkstyle/${ID}/style.qrc">
+     <normaloff>:/qss_icons/${ID}/rc/window_close_focus.png</normaloff>:/qss_icons/${ID}/rc/window_close_focus.png</iconset>
    </property>
    <property name="text">
     <string>Action IconB</string>
@@ -512,8 +512,8 @@
   </action>
   <action name="actionActionIconC">
    <property name="icon">
-    <iconset resource="../../qdarkstyle/style.qrc">
-     <normaloff>:/qss_icons/rc/arrow_right_focus.png</normaloff>:/qss_icons/rc/arrow_right_focus.png</iconset>
+    <iconset resource="../../qdarkstyle/${ID}/style.qrc">
+     <normaloff>:/qss_icons/${ID}/rc/arrow_right_focus.png</normaloff>:/qss_icons/${ID}/rc/arrow_right_focus.png</iconset>
    </property>
    <property name="text">
     <string>Action Icon C</string>
@@ -568,7 +568,7 @@
   <tabstop>lineEdit_2</tabstop>
  </tabstops>
  <resources>
-  <include location="../../qdarkstyle/style.qrc"/>
+  <include location="../../qdarkstyle/${ID}/style.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -483,8 +483,8 @@
         <string>Option 1 With Icon</string>
        </property>
        <property name="icon">
-        <iconset resource="../../qdarkstyle/style.qrc">
-         <normaloff>:/qss_icons/rc/window_undock.png</normaloff>:/qss_icons/rc/window_undock.png</iconset>
+        <iconset resource="../../qdarkstyle/${ID}/style.qrc">
+         <normaloff>:/qss_icons/${ID}/rc/window_undock.png</normaloff>:/qss_icons/${ID}/rc/window_undock.png</iconset>
        </property>
       </item>
       <item>
@@ -492,8 +492,8 @@
         <string>Option 2 With Icon</string>
        </property>
        <property name="icon">
-        <iconset resource="../../qdarkstyle/style.qrc">
-         <normaloff>:/qss_icons/rc/window_undock_focus@2x.png</normaloff>:/qss_icons/rc/window_undock_focus@2x.png</iconset>
+        <iconset resource="../../qdarkstyle/${ID}/style.qrc">
+         <normaloff>:/qss_icons/${ID}/rc/window_undock_focus@2x.png</normaloff>:/qss_icons/${ID}/rc/window_undock_focus@2x.png</iconset>
        </property>
       </item>
      </widget>
@@ -710,7 +710,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../../qdarkstyle/style.qrc"/>
+  <include location="../../qdarkstyle/${ID}/style.qrc"/>
  </resources>
  <connections>
   <connection>

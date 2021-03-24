@@ -26,11 +26,17 @@ from subprocess import call
 import argparse
 import glob
 import os
+import shutil
+import string
 import sys
+import tempfile
 
 # Constants
 HERE = os.path.abspath(os.path.dirname(__file__))
 REPO_ROOT = os.path.dirname(HERE)
+DEFAULT_EXAMPLE_DIR = os.path.join(REPO_ROOT, 'example')
+DEFAULT_UI_DIR = os.path.join(DEFAULT_EXAMPLE_DIR, 'ui')
+EXAMPLE_TMP_DIR = os.path.join(tempfile.gettempdir(), 'qdarkstyle_example')
 
 
 def main(arguments):
@@ -38,7 +44,7 @@ def main(arguments):
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--ui_dir',
-                        default=os.path.join(REPO_ROOT, 'example', 'ui'),
+                        default=DEFAULT_UI_DIR,
                         type=str,
                         help="UI files directory, relative to current directory.",)
     parser.add_argument('--create',
@@ -46,15 +52,38 @@ def main(arguments):
                         choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'all'],
                         type=str,
                         help="Choose which one would be generated.")
+    parser.add_argument('--palette',
+                        default='dark',
+                        choices=['dark', 'light'],
+                        type=str,
+                        help="Palette to display",)
 
     args = parser.parse_args(arguments)
 
-    print('Changing directory to: ', args.ui_dir)
-    os.chdir(args.ui_dir)
+    if args.ui_dir == DEFAULT_UI_DIR:
+        shutil.rmtree(EXAMPLE_TMP_DIR, ignore_errors=True)
+        shutil.copytree(DEFAULT_EXAMPLE_DIR, EXAMPLE_TMP_DIR)
+        ui_dir = os.path.join(EXAMPLE_TMP_DIR, 'ui')
+    else:
+        ui_dir = args.ui_dir
+
+    print('Changing directory to: ', ui_dir)
+    os.chdir(ui_dir)
 
     print('Converting .ui to .py ...')
 
     for ui_file in glob.glob('*.ui'):
+
+        # Replace palette identifier placeholders
+        if args.ui_dir == DEFAULT_UI_DIR:
+            with open(ui_file, 'r+') as f:
+                contents = f.read()
+                template = string.Template(contents)
+                contents = template.substitute(ID=args.palette)
+                f.seek(0)
+                f.write(contents)
+                f.truncate()
+
         # get name without extension
         filename = os.path.splitext(ui_file)[0]
         print(filename, '...')
