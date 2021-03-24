@@ -147,12 +147,19 @@ def main():
     ui = ui_main()
     ui.setupUi(window)
 
-    title = ("QDarkStyle Example - "
-             + "(QDarkStyle=v" + qdarkstyle.__version__
-             + ", QtPy=v" + QTPY_VERSION
-             + ", " + API_NAME + "=v" + API_VERSION
-             + ", Qt=v" + QT_VERSION
-             + ", Python=v" + platform.python_version() + ")")
+    title = ("QDarkStyle Example - ("
+             + f"QDarkStyle=v{qdarkstyle.__version__}, "
+             + f"QtPy=v{QTPY_VERSION}, "
+             + f"{API_NAME}=v{API_VERSION}, "
+             + f"Qt=v{QT_VERSION}, "
+             + f"Python=v{platform.python_version()}, "
+             # Operating system info are maybe too much,
+             # but different OS add info in different places
+             + f"System={platform.system()}, "
+             + f"Release={platform.release()}, "
+             + f"Version={platform.version()}, "
+             + f"Platform={platform.platform()}"
+             + ")")
 
     _logger.info(title)
 
