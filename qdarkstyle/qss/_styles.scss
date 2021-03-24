@@ -220,10 +220,11 @@ QGroupBox {
     }
 
     &::indicator {
-        margin: 0;
+        margin-left: 2px;
+        margin-top: 2px;
         padding: 0;
-        height: 16px;
-        width: 16px;
+        height: 14px;
+        width: 14px;
 
         &:unchecked {
             border: none;
