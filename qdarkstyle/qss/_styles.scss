@@ -82,7 +82,8 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtooltip
 QToolTip {
     background-color: $COLOR_ACCENT_2;
     color: $COLOR_TEXT_1;
-
+    /* If you remove the border property, background stops working on Windows */
+    border: none;
     /* Remove padding, for fix combo box tooltip */
     padding: 0px;
 
