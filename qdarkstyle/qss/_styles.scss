@@ -413,8 +413,8 @@ QMenu {
     }
 
     &::indicator {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         padding-left: 6px;
 
         /* non-exclusive indicator = check box style indicator (see QActionGroup::setExclusive) */
@@ -423,7 +423,14 @@ QMenu {
             &:unchecked {
                 image: url($PATH_RESOURCES + '/rc/checkbox_unchecked.png');
 
-                &:selected {
+                &:hover,
+                &:focus,
+                &:pressed {
+                    border: none;
+                    image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_focus.png');
+                }
+
+                &:disabled {
                     image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_disabled.png');
                 }
             }
@@ -431,8 +438,29 @@ QMenu {
             &:checked {
                 image: url($PATH_RESOURCES + '/rc/checkbox_checked.png');
 
-                &:selected {
+                &:hover,
+                &:focus,
+                &:pressed {
+                    border: none;
+                    image: url($PATH_RESOURCES + '/rc/checkbox_checked_focus.png');
+                }
+
+                &:disabled {
                     image: url($PATH_RESOURCES + '/rc/checkbox_checked_disabled.png');
+                }
+            }
+
+            &:indeterminate {
+                image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate.png');
+
+                &:disabled {
+                    image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_disabled.png');
+                }
+
+                &:focus,
+                &:hover,
+                &:pressed {
+                    image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_focus.png');
                 }
             }
         }
@@ -443,15 +471,34 @@ QMenu {
             &:unchecked {
                 image: url($PATH_RESOURCES + '/rc/radio_unchecked.png');
 
-                &:selected {
+                &:hover,
+                &:focus,
+                &:pressed {
+                    border: none;
+                    outline: none;
+                    image: url($PATH_RESOURCES + '/rc/radio_unchecked_focus.png');
+                }
+
+                &:disabled {
                     image: url($PATH_RESOURCES + '/rc/radio_unchecked_disabled.png');
                 }
             }
 
             &:checked {
+                border: none;
+                outline: none;
                 image: url($PATH_RESOURCES + '/rc/radio_checked.png');
 
-                &:selected {
+                &:hover,
+                &:focus,
+                &:pressed {
+                    border: none;
+                    outline: none;
+                    image: url($PATH_RESOURCES + '/rc/radio_checked_focus.png');
+                }
+
+                &:disabled {
+                    outline: none;
                     image: url($PATH_RESOURCES + '/rc/radio_checked_disabled.png');
                 }
             }
