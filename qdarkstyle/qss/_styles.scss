@@ -1580,8 +1580,8 @@ QTabBar {
 
     &::close-button {
         border: 0;
-        margin: 1px;
-        padding: 1px;
+        margin: 0;
+        padding: 4px;
 
         image: url($PATH_RESOURCES + '/rc/window_close.png');
 
@@ -1593,14 +1593,6 @@ QTabBar {
             image: url($PATH_RESOURCES + '/rc/window_close_pressed.png');
         }
     }
-}
-
-/* QTabBar::tab - selected ------------------------------------------------
-
-https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabbar
-
---------------------------------------------------------------------------- */
-QTabBar {
 
     &::tab {
 
