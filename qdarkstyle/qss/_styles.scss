@@ -347,7 +347,7 @@ QMenuBar {
     padding: 2px;
     border: $BORDER_1;
     color: $COLOR_TEXT_1;
-
+    selection-background-color: $COLOR_ACCENT_3;
     &:focus {
         border: $BORDER_SELECTION_2;
     }
@@ -360,6 +360,7 @@ QMenuBar {
             padding: 4px;
             background: transparent;
             border: 0px solid $COLOR_BACKGROUND_4;
+            background-color: $COLOR_ACCENT_3;
         }
 
         &:pressed {
@@ -383,6 +384,7 @@ QMenu {
     color: $COLOR_TEXT_1;
     margin: 0px;
     background-color: $COLOR_BACKGROUND_3;
+    selection-background-color: $COLOR_ACCENT_3;
 
     &::separator {
         height: 1px;
@@ -403,6 +405,10 @@ QMenu {
 
         &:selected {
             color: $COLOR_TEXT_1;
+            background-color: $COLOR_ACCENT_3;
+        }
+        &:pressed {
+            background-color: $COLOR_ACCENT_3;
         }
     }
 
