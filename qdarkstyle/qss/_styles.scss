@@ -148,8 +148,8 @@ QCheckBox {
 
     &::indicator {
         margin-left: 2px;
-        height: 16px;
-        width: 16px;
+        height: 14px;
+        width: 14px;
 
         &:unchecked {
             image: url($PATH_RESOURCES + '/rc/checkbox_unchecked.png');
@@ -299,8 +299,8 @@ QRadioButton {
         border: none;
         outline: none;
         margin-left: 2px;
-        height: 16px;
-        width: 16px;
+        height: 14px;
+        width: 14px;
 
         &:unchecked {
             image: url($PATH_RESOURCES + '/rc/radio_unchecked.png');
