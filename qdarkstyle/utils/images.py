@@ -46,10 +46,10 @@ def _get_file_color_map(fname, palette):
     """
     Return map of files (i.e states) to color from given palette.
     """
-    color_disabled = palette.COLOR_BACKGROUND_NORMAL
-    color_focus = palette.COLOR_SELECTION_LIGHT
-    color_pressed = palette.COLOR_SELECTION_NORMAL
-    color_normal = palette.COLOR_FOREGROUND_DARK
+    color_disabled = palette.COLOR_BACKGROUND_4
+    color_focus = palette.COLOR_ACCENT_5
+    color_pressed = palette.COLOR_ACCENT_2
+    color_normal = palette.COLOR_TEXT_1
 
     name, ext = fname.split('.')
     file_colors = {
