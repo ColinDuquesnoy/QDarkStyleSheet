@@ -53,12 +53,14 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + 
 
 # Must be in this place, after setting path, to not need to install
 import qdarkstyle  # noqa: E402
-from qdarkstyle.darkpalette import DarkPalette
-from qdarkstyle.lightpalette import LightPalette
+from qdarkstyle.dark.palette import DarkPalette
+from qdarkstyle.light.palette import LightPalette
 
 # Set log for debug
 logging.basicConfig(level=logging.DEBUG)
 _logger = logging.getLogger(__name__)
+
+here = os.path.abspath(os.path.dirname(__file__))
 
 # Constants
 SCREENSHOTS_PATH = qdarkstyle.IMAGES_PATH
@@ -77,7 +79,7 @@ def main():
                         help="Auto close window after 2s.")
     parser.add_argument('--reset', action='store_true',
                         help="Reset GUI settings (position, size) then opens.")
-    parser.add_argument('--screenshots', action='store_true',
+    parser.add_argument('--screenshots', action='store_false',
                         help="Generate screenshots on images folder.")
     parser.add_argument('--palette',
                         default='dark',
@@ -106,7 +108,7 @@ def main():
             os.environ['QT_API'] = Qt.__binding__
 
     # QtPy imports
-    from qtpy import API_NAME, QT_VERSION, PYQT_VERSION, PYSIDE_VERSION
+    from qtpy import API_NAME, QT_VERSION, PYQT_VERSION, PYSIDE_VERSION, uic
     from qtpy import __version__ as QTPY_VERSION
     from qtpy.QtWidgets import (QApplication, QMainWindow, QDockWidget,
                                 QStatusBar, QLabel, QPushButton, QMenu)
@@ -121,19 +123,6 @@ def main():
         API_VERSION = PYSIDE_VERSION
     else:
         API_VERSION = 'Not found'
-
-    # Import examples UI
-    from mw_menus_ui import Ui_MainWindow as ui_main
-
-    from dw_buttons_ui import Ui_DockWidget as ui_buttons
-    from dw_displays_ui import Ui_DockWidget as ui_displays
-    from dw_inputs_fields_ui import Ui_DockWidget as ui_inputs_fields
-    from dw_inputs_no_fields_ui import Ui_DockWidget as ui_inputs_no_fields
-
-    from dw_widgets_ui import Ui_DockWidget as ui_widgets
-    from dw_views_ui import Ui_DockWidget as ui_views
-    from dw_containers_tabs_ui import Ui_DockWidget as ui_containers_tabs
-    from dw_containers_no_tabs_ui import Ui_DockWidget as ui_containers_no_tabs
 
     # create the application
     app = QApplication(sys.argv)
@@ -153,9 +142,7 @@ def main():
     # create main window
     window = QMainWindow()
     window.setObjectName('mainwindow')
-
-    ui = ui_main()
-    ui.setupUi(window)
+    uic.loadUi(os.path.join(here, 'ui\mw_menus.ui'), window)
 
     title = ("QDarkStyle Example - ("
              + f"QDarkStyle=v{qdarkstyle.__version__}, "
@@ -172,19 +159,17 @@ def main():
              + ")")
 
     _logger.info(title)
-
     window.setWindowTitle(title)
 
     # Create docks for buttons
     dw_buttons = QDockWidget()
     dw_buttons.setObjectName('buttons')
-    ui_buttons = ui_buttons()
-    ui_buttons.setupUi(dw_buttons)
+    uic.loadUi(os.path.join(here, 'ui\dw_buttons.ui'), dw_buttons)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_buttons)
 
     # Set state indeterminate (value=1)
-    ui_buttons.checkBoxTristate.stateChanged.connect(ui_buttons.checkBoxTristateDis.setCheckState)
-    ui_buttons.checkBoxTristate.setCheckState(1)
+    dw_buttons.checkBoxTristate.stateChanged.connect(dw_buttons.checkBoxTristateDis.setCheckState)
+    dw_buttons.checkBoxTristate.setCheckState(1)
 
     # Add actions on popup toolbuttons
     menu = QMenu()
@@ -192,57 +177,50 @@ def main():
     for action in ['Action A', 'Action B', 'Action C']:
         menu.addAction(action)
 
-    ui_buttons.toolButtonDelayedPopup.setMenu(menu)
-    ui_buttons.toolButtonInstantPopup.setMenu(menu)
-    ui_buttons.toolButtonMenuButtonPopup.setMenu(menu)
+    dw_buttons.toolButtonDelayedPopup.setMenu(menu)
+    dw_buttons.toolButtonInstantPopup.setMenu(menu)
+    dw_buttons.toolButtonMenuButtonPopup.setMenu(menu)
 
     # Create docks for buttons
     dw_displays = QDockWidget()
     dw_displays.setObjectName('displays')
-    ui_displays = ui_displays()
-    ui_displays.setupUi(dw_displays)
+    uic.loadUi(os.path.join(here, 'ui\dw_displays.ui'), dw_displays)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_displays)
 
     # Create docks for inputs - no fields
     dw_inputs_no_fields = QDockWidget()
     dw_inputs_no_fields.setObjectName('inputs_no_fields')
-    ui_inputs_no_fields = ui_inputs_no_fields()
-    ui_inputs_no_fields.setupUi(dw_inputs_no_fields)
+    uic.loadUi(os.path.join(here, 'ui\dw_inputs_no_fields.ui'), dw_inputs_no_fields)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_no_fields)
 
     # Create docks for inputs - fields
     dw_inputs_fields = QDockWidget()
     dw_inputs_fields.setObjectName('inputs_fields')
-    ui_inputs_fields = ui_inputs_fields()
-    ui_inputs_fields.setupUi(dw_inputs_fields)
+    uic.loadUi(os.path.join(here, 'ui\dw_inputs_fields.ui'), dw_inputs_fields)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_fields)
 
     # Create docks for widgets
     dw_widgets = QDockWidget()
     dw_widgets.setObjectName('widgets')
-    ui_widgets = ui_widgets()
-    ui_widgets.setupUi(dw_widgets)
+    uic.loadUi(os.path.join(here, 'ui\dw_widgets.ui'), dw_widgets)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_widgets)
 
     # Create docks for views
     dw_views = QDockWidget()
     dw_views.setObjectName('views')
-    ui_views = ui_views()
-    ui_views.setupUi(dw_views)
+    uic.loadUi(os.path.join(here, 'ui\dw_views.ui'), dw_views)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_views)
 
     # Create docks for containers - no tabs
     dw_containers_no_tabs = QDockWidget()
     dw_containers_no_tabs.setObjectName('containers_no_tabs')
-    ui_containers_no_tabs = ui_containers_no_tabs()
-    ui_containers_no_tabs.setupUi(dw_containers_no_tabs)
+    uic.loadUi(os.path.join(here, 'ui\dw_containers_no_tabs.ui'), dw_containers_no_tabs)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_no_tabs)
 
     # Create docks for containters - tabs
     dw_containers_tabs = QDockWidget()
     dw_containers_tabs.setObjectName('containers_tabs')
-    ui_containers_tabs = ui_containers_tabs()
-    ui_containers_tabs.setupUi(dw_containers_tabs)
+    uic.loadUi(os.path.join(here, 'ui\dw_containers_tabs.ui'), dw_containers_tabs)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_tabs)
 
     # Tabify right docks
