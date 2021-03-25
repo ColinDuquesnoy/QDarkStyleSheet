@@ -26,22 +26,22 @@ PY2 = sys.version[0] == '2'
 
 HEADER_SCSS = '''// ---------------------------------------------------------------------------
 //
-//    File created programmatically
+//    WARNING! File created programmatically. All changes made in this file will be lost!
+//
+//    Created by the qtsass compiler v{}
 //
 //    The definitions are in the "qdarkstyle.palette" module
-//
-//    WARNING! All changes made in this file will be lost!
 //
 //----------------------------------------------------------------------------
 '''
 
 HEADER_QSS = '''/* ---------------------------------------------------------------------------
 
+    WARNING! File created programmatically. All changes made in this file will be lost!
+
     Created by the qtsass compiler v{}
 
     The definitions are in the "qdarkstyle.qss._styles.scss" module
-
-    WARNING! All changes made in this file will be lost!
 
 --------------------------------------------------------------------------- */
 '''

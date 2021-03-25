@@ -25,7 +25,7 @@ from qdarkstyle import (IMAGES_PATH, STYLES_SCSS_FILEPATH, SVG_PATH,
 IMAGE_BLACKLIST = ['base_palette']
 
 TEMPLATE_QRC_HEADER = '''
-<RCC warning="File created programmatically. All changes made in this file will be lost!">
+<RCC warning="WARNING! File created programmatically. All changes made in this file will be lost!">
   <qresource prefix="{resource_prefix}">
 '''
 
