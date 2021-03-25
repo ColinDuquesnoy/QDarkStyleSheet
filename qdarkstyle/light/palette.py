@@ -5,10 +5,10 @@
 
 # Local imports
 from qdarkstyle.colorsystem import Blue, Gray
-from qdarkstyle.utils.palette import QDarkStylePalette
+from qdarkstyle.utils.palette import Palette
 
 
-class LightPalette(QDarkStylePalette):
+class LightPalette(Palette):
     """Theme variables."""
 
     ID = 'light'

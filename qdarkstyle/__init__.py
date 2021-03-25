@@ -55,6 +55,8 @@ import sys
 import warnings
 
 # Local imports
+from qdarkstyle.dark.palette import DarkPalette
+from qdarkstyle.light.palette import LightPalette
 from qdarkstyle.utils.palette import Palette
 
 __version__ = "3.0.dev"
