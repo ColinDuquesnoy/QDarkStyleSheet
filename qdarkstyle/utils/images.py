@@ -139,7 +139,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
     Args:
         base_svg_path (str, optional): [description]. Defaults to SVG_PATH.
         rc_path (str, optional): [description].
-        palette (QDarkStylePalette, optional): Palette.
+        palette (Palette, optional): Palette.
     """
 
     # Needed to use QPixmap
@@ -243,7 +243,7 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
             Defaults to 'qss_icons'.
         style_prefix (str, optional): Prefix used to this style.
             Defaults to 'qdarkstyle'.
-        palette (QDarkStylePalette, optional): Palette.
+        palette (Palette, optional): Palette.
     """
 
     files = []

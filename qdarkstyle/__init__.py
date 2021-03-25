@@ -55,9 +55,7 @@ import sys
 import warnings
 
 # Local imports
-from qdarkstyle.darkpalette import DarkPalette
-from qdarkstyle.lightpalette import LightPalette
-from qdarkstyle.utils.palette import QDarkStylePalette
+from qdarkstyle.utils.palette import Palette
 
 __version__ = "3.0.dev"
 
@@ -197,7 +195,7 @@ def _load_stylesheet(qt_api='', palette=None):
         qt_api (str): qt binding name to set QT_API environment variable.
                       Default is ''. Possible values are pyside, pyside2
                       pyqt4, pyqt5. Not case sensitive.
-        palette (Palette): Palette class that inherits from QDarkStylePalette.
+        palette (Palette): Palette class that inherits from Palette.
 
     Note:
         - Note that the variable QT_API is read when first imported. So,
@@ -289,8 +287,7 @@ def load_stylesheet(*args, **kwargs):
 
         or
 
-        palette (QDarkStylePalette): Class (not instance) that inherits from
-                                     QDarkStylePalette.
+        palette (Palette): Class (not instance) that inherits from Palette.
 
     Raises:
         TypeError: If arguments do not match: type, keyword name nor quantity.
@@ -316,7 +313,7 @@ def load_stylesheet(*args, **kwargs):
         raise TypeError("load_stylesheet() takes zero, one or two arguments: "
                         "(new) string type qt_api='pyqt5' or "
                         "(old) boolean type pyside='False' or "
-                        "(new) palette type palette=QDarkStylePalette.")
+                        "(new) palette type palette=Palette.")
 
     # No arguments
     if not kwargs and not args:
@@ -345,7 +342,7 @@ def load_stylesheet(*args, **kwargs):
         stylesheet = _load_stylesheet(qt_api=qt_api, palette=palette)
 
     # Palette arg
-    elif 'palette' in kwargs or issubclass(arg, QDarkStylePalette):
+    elif 'palette' in kwargs or issubclass(arg, Palette):
         palette_arg = kwargs.get('palette', arg)
         stylesheet = _load_stylesheet(palette=palette_arg)
 
@@ -353,7 +350,7 @@ def load_stylesheet(*args, **kwargs):
     else:
         raise TypeError("load_stylesheet() takes only zero, one or two arguments: "
                         "(new) string type qt_api='pyqt5' or "
-                        "(new) palette type palette=QDarkStylePalette or "
+                        "(new) palette type palette=Palette or "
                         "(old) boolean type pyside='False'.")
 
     return stylesheet

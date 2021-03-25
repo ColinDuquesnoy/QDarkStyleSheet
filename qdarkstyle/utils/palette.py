@@ -7,7 +7,7 @@
 from collections import OrderedDict
 
 
-class QDarkStylePalette(object):
+class Palette(object):
 
     ID = None
 
