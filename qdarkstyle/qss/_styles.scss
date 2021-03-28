@@ -82,7 +82,8 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtooltip
 QToolTip {
     background-color: $COLOR_ACCENT_2;
     color: $COLOR_TEXT_1;
-
+    /* If you remove the border property, background stops working on Windows */
+    border: none;
     /* Remove padding, for fix combo box tooltip */
     padding: 0px;
 
@@ -427,11 +428,11 @@ QMenu {
                 &:focus,
                 &:pressed {
                     border: none;
-                    image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_unchecked_focus.png');
                 }
 
                 &:disabled {
-                    image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_unchecked_disabled.png');
                 }
             }
 
@@ -442,25 +443,25 @@ QMenu {
                 &:focus,
                 &:pressed {
                     border: none;
-                    image: url($PATH_RESOURCES + '/rc/checkbox_checked_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_checked_focus.png');
                 }
 
                 &:disabled {
-                    image: url($PATH_RESOURCES + '/rc/checkbox_checked_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_checked_disabled.png');
                 }
             }
 
             &:indeterminate {
-                image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate.png');
+                image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_indeterminate.png');
 
                 &:disabled {
-                    image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_indeterminate_disabled.png');
                 }
 
                 &:focus,
                 &:hover,
                 &:pressed {
-                    image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_indeterminate_focus.png');
                 }
             }
         }
@@ -476,30 +477,30 @@ QMenu {
                 &:pressed {
                     border: none;
                     outline: none;
-                    image: url($PATH_RESOURCES + '/rc/radio_unchecked_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_unchecked_focus.png');
                 }
 
                 &:disabled {
-                    image: url($PATH_RESOURCES + '/rc/radio_unchecked_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_unchecked_disabled.png');
                 }
             }
 
             &:checked {
                 border: none;
                 outline: none;
-                image: url($PATH_RESOURCES + '/rc/radio_checked.png');
+                image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_checked.png');
 
                 &:hover,
                 &:focus,
                 &:pressed {
                     border: none;
                     outline: none;
-                    image: url($PATH_RESOURCES + '/rc/radio_checked_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_checked_focus.png');
                 }
 
                 &:disabled {
                     outline: none;
-                    image: url($PATH_RESOURCES + '/rc/radio_checked_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_checked_disabled.png');
                 }
             }
         }
@@ -1580,8 +1581,8 @@ QTabBar {
 
     &::close-button {
         border: 0;
-        margin: 1px;
-        padding: 1px;
+        margin: 0;
+        padding: 4px;
 
         image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_close.png');
 
@@ -1593,14 +1594,6 @@ QTabBar {
             image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_close_pressed.png');
         }
     }
-}
-
-/* QTabBar::tab - selected ------------------------------------------------
-
-https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabbar
-
---------------------------------------------------------------------------- */
-QTabBar {
 
     &::tab {
 
@@ -1688,7 +1681,7 @@ QTabBar {
             border-top-right-radius: 3px;
 
             &:selected {
-                background-color: $COLOR_BACKGROUND_6;
+                background-color: $COLOR_BACKGROUND_4;
                 color: $COLOR_TEXT_1;
                 border-bottom: 3px solid $COLOR_ACCENT_4;
                 border-top-left-radius: 3px;
@@ -1720,7 +1713,7 @@ QTabBar {
 
             &:selected {
                 color: $COLOR_TEXT_1;
-                background-color: $COLOR_BACKGROUND_6;
+                background-color: $COLOR_BACKGROUND_4;
                 border-top: 3px solid $COLOR_ACCENT_4;
                 border-bottom-left-radius: 3px;
                 border-bottom-right-radius: 3px;
@@ -1751,7 +1744,7 @@ QTabBar {
 
             &:selected {
                 color: $COLOR_TEXT_1;
-                background-color: $COLOR_BACKGROUND_6;
+                background-color: $COLOR_BACKGROUND_4;
                 border-right: 3px solid $COLOR_ACCENT_4;
             }
 
@@ -1776,7 +1769,7 @@ QTabBar {
 
             &:selected {
                 color: $COLOR_TEXT_1;
-                background-color: $COLOR_BACKGROUND_6;
+                background-color: $COLOR_BACKGROUND_4;
                 border-left: 3px solid $COLOR_ACCENT_4;
 
             }
@@ -1833,8 +1826,9 @@ QDockWidget {
     background-color: $COLOR_BACKGROUND_1;
     border: $BORDER_2;
     border-radius: $SIZE_BORDER_RADIUS;
-    titlebar-close-icon: url($PATH_RESOURCES + '/' + $ID + '/rc/window_close.png');
-    titlebar-normal-icon: url($PATH_RESOURCES + '/' + $ID + '/rc/window_undock.png');
+    // See discussion here: https://stackoverflow.com/questions/32145080/qdockwidget-float-close-button-hover-images
+    titlebar-close-icon: url($PATH_RESOURCES + '/' + $ID + '/rc/transparent.png');
+    titlebar-normal-icon: url($PATH_RESOURCES + '/' + $ID + '/rc/transparent.png');
 
 
 
@@ -1847,34 +1841,45 @@ QDockWidget {
     }
 
     &::close-button {
-        margin: 1px;
-        padding: 3px;
-        background-color: $COLOR_BACKGROUND_4;
-        border-radius: $SIZE_BORDER_RADIUS;
+        icon-size: 12px;
         border: none;
+        background: transparent;
+        background-image: transparent;
+        border: 0;
+        margin: 0;
+        padding: 0;
+
+        image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_close.png');
 
         &:hover {
-            background-color: $COLOR_BACKGROUND_5;
+            image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_close_focus.png');
         }
 
         &:pressed {
-            background-color: $COLOR_BACKGROUND_6;
+            image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_close_pressed.png');
         }
     }
 
     &::float-button {
-        margin: 1px;
-        padding: 1px;
-        background-color: $COLOR_BACKGROUND_4;
-        border-radius: $SIZE_BORDER_RADIUS;
+        icon-size: 12px;
         border: none;
+        background: transparent;
+        background-image: transparent;
+        // float button has an issue that if you change any of those
+        // parameters bellow there will be a duplication in the icon
+        // actually it seems that they are always there (duplication)
+        border: 0;
+        margin: 0;
+        padding: 0;
+
+        image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_undock.png');
 
         &:hover {
-            background-color: $COLOR_BACKGROUND_5;
+            image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_undock_focus.png');
         }
 
         &:pressed {
-            background-color: $COLOR_BACKGROUND_6;
+            image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_undock_pressed.png');
         }
     }
 }

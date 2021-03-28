@@ -107,13 +107,16 @@ def _apply_os_patches(palette):
     os_fix = ""
 
     if platform.system().lower() == 'darwin':
-        # See issue #12
+        # See issue #12, #267
         os_fix = '''
         QDockWidget::title
         {{
             background-color: {color};
             text-align: center;
             height: 12px;
+        }}
+        QTabBar::close-button {{
+            padding: 2px;
         }}
         '''.format(color=palette.COLOR_BACKGROUND_4)
 
