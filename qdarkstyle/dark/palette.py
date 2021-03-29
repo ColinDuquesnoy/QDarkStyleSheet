@@ -5,7 +5,7 @@
 
 # Local imports
 from qdarkstyle.colorsystem import Blue, Gray
-from qdarkstyle.utils.palette import Palette
+from qdarkstyle.palette import Palette
 
 
 class DarkPalette(Palette):
