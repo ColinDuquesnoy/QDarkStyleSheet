@@ -429,11 +429,11 @@ QMenu {
                 &:focus,
                 &:pressed {
                     border: none;
-                    image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_unchecked_focus.png');
                 }
 
                 &:disabled {
-                    image: url($PATH_RESOURCES + '/rc/checkbox_unchecked_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_unchecked_disabled.png');
                 }
             }
 
@@ -444,25 +444,25 @@ QMenu {
                 &:focus,
                 &:pressed {
                     border: none;
-                    image: url($PATH_RESOURCES + '/rc/checkbox_checked_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_checked_focus.png');
                 }
 
                 &:disabled {
-                    image: url($PATH_RESOURCES + '/rc/checkbox_checked_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_checked_disabled.png');
                 }
             }
 
             &:indeterminate {
-                image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate.png');
+                image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_indeterminate.png');
 
                 &:disabled {
-                    image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_indeterminate_disabled.png');
                 }
 
                 &:focus,
                 &:hover,
                 &:pressed {
-                    image: url($PATH_RESOURCES + '/rc/checkbox_indeterminate_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/checkbox_indeterminate_focus.png');
                 }
             }
         }
@@ -478,30 +478,30 @@ QMenu {
                 &:pressed {
                     border: none;
                     outline: none;
-                    image: url($PATH_RESOURCES + '/rc/radio_unchecked_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_unchecked_focus.png');
                 }
 
                 &:disabled {
-                    image: url($PATH_RESOURCES + '/rc/radio_unchecked_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_unchecked_disabled.png');
                 }
             }
 
             &:checked {
                 border: none;
                 outline: none;
-                image: url($PATH_RESOURCES + '/rc/radio_checked.png');
+                image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_checked.png');
 
                 &:hover,
                 &:focus,
                 &:pressed {
                     border: none;
                     outline: none;
-                    image: url($PATH_RESOURCES + '/rc/radio_checked_focus.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_checked_focus.png');
                 }
 
                 &:disabled {
                     outline: none;
-                    image: url($PATH_RESOURCES + '/rc/radio_checked_disabled.png');
+                    image: url($PATH_RESOURCES + '/' + $ID + '/rc/radio_checked_disabled.png');
                 }
             }
         }
@@ -1827,8 +1827,8 @@ QDockWidget {
     border: $BORDER_2;
     border-radius: $SIZE_BORDER_RADIUS;
     // See discussion here: https://stackoverflow.com/questions/32145080/qdockwidget-float-close-button-hover-images
-    titlebar-close-icon: url($PATH_RESOURCES + '/rc/transparent.png');
-    titlebar-normal-icon: url($PATH_RESOURCES + '/rc/transparent.png');
+    titlebar-close-icon: url($PATH_RESOURCES + '/' + $ID + '/rc/transparent.png');
+    titlebar-normal-icon: url($PATH_RESOURCES + '/' + $ID + '/rc/transparent.png');
 
     &::title {
         /* Better size for title bar */
@@ -1847,14 +1847,14 @@ QDockWidget {
         margin: 0;
         padding: 0;
 
-        image: url($PATH_RESOURCES + '/rc/window_close.png');
+        image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_close.png');
 
         &:hover {
-            image: url($PATH_RESOURCES + '/rc/window_close_focus.png');
+            image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_close_focus.png');
         }
 
         &:pressed {
-            image: url($PATH_RESOURCES + '/rc/window_close_pressed.png');
+            image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_close_pressed.png');
         }
     }
 
@@ -1870,14 +1870,14 @@ QDockWidget {
         margin: 0;
         padding: 0;
 
-        image: url($PATH_RESOURCES + '/rc/window_undock.png');
+        image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_undock.png');
 
         &:hover {
-            image: url($PATH_RESOURCES + '/rc/window_undock_focus.png');
+            image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_undock_focus.png');
         }
 
         &:pressed {
-            image: url($PATH_RESOURCES + '/rc/window_undock_pressed.png');
+            image: url($PATH_RESOURCES + '/' + $ID + '/rc/window_undock_pressed.png');
         }
     }
 }

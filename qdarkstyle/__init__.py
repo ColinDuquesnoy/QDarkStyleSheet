@@ -118,7 +118,7 @@ def _apply_os_patches(palette):
         QTabBar::close-button {{
             padding: 2px;
         }}
-        '''.format(color=DarkPalette.COLOR_BACKGROUND_4)
+        '''.format(color=palette.COLOR_BACKGROUND_4)
 
     # Only open the QSS file if any patch is needed
     if os_fix:
