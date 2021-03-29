@@ -16,10 +16,6 @@ import tempfile
 # Constants
 SCRIPTS_PATH = os.path.abspath(os.path.dirname(__file__))
 
-# This needs to be the same one defined in process_ui.py
-EXAMPLE_TMP_DIR = os.path.join(tempfile.gettempdir(), 'qdarkstyle_example')
-
-
 def main():
     """Process qrc and ui files, then run example in while loop."""
     parser = argparse.ArgumentParser(description=__doc__,
@@ -51,11 +47,11 @@ def main():
         print(sys.argv)
 
         # Process qrc files
-        process_qrc = os.path.join(SCRIPTS_PATH, 'process_qrc.py')
+        process_qrc = os.path.join(SCRIPTS_PATH, '../qdarkstyle/utils/__main__.py')
         call(['python', process_qrc])
 
         # Show window
-        example = os.path.join(EXAMPLE_TMP_DIR, 'example.py')
+        example = os.path.join(SCRIPTS_PATH, '../qdarkstyle/example/__main__.py')
         call(['python', example, '--screenshots', '--palette', palette])
         call(['python', example, '--no_dark', '--screenshots'])
 
