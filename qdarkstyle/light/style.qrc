@@ -1,5 +1,5 @@
 
-<RCC warning="File created programmatically. All changes made in this file will be lost!">
+<RCC warning="WARNING! File created programmatically. All changes made in this file will be lost!">
   <qresource prefix="qss_icons/light">
     <file>rc/.keep</file>
     <file>rc/arrow_down.png</file>

@@ -1,10 +1,10 @@
 /* ---------------------------------------------------------------------------
 
+    WARNING! File created programmatically. All changes made in this file will be lost!
+
     Created by the qtsass compiler v0.3.0
 
     The definitions are in the "qdarkstyle.qss._styles.scss" module
-
-    WARNING! All changes made in this file will be lost!
 
 --------------------------------------------------------------------------- */
 /* QDarkStyleSheet -----------------------------------------------------------
@@ -455,11 +455,11 @@ QMenu::indicator:non-exclusive:unchecked {
 
 QMenu::indicator:non-exclusive:unchecked:hover, QMenu::indicator:non-exclusive:unchecked:focus, QMenu::indicator:non-exclusive:unchecked:pressed {
   border: none;
-  image: url(":/qss_icons/rc/checkbox_unchecked_focus.png");
+  image: url(":/qss_icons/light/rc/checkbox_unchecked_focus.png");
 }
 
 QMenu::indicator:non-exclusive:unchecked:disabled {
-  image: url(":/qss_icons/rc/checkbox_unchecked_disabled.png");
+  image: url(":/qss_icons/light/rc/checkbox_unchecked_disabled.png");
 }
 
 QMenu::indicator:non-exclusive:checked {
@@ -468,23 +468,23 @@ QMenu::indicator:non-exclusive:checked {
 
 QMenu::indicator:non-exclusive:checked:hover, QMenu::indicator:non-exclusive:checked:focus, QMenu::indicator:non-exclusive:checked:pressed {
   border: none;
-  image: url(":/qss_icons/rc/checkbox_checked_focus.png");
+  image: url(":/qss_icons/light/rc/checkbox_checked_focus.png");
 }
 
 QMenu::indicator:non-exclusive:checked:disabled {
-  image: url(":/qss_icons/rc/checkbox_checked_disabled.png");
+  image: url(":/qss_icons/light/rc/checkbox_checked_disabled.png");
 }
 
 QMenu::indicator:non-exclusive:indeterminate {
-  image: url(":/qss_icons/rc/checkbox_indeterminate.png");
+  image: url(":/qss_icons/light/rc/checkbox_indeterminate.png");
 }
 
 QMenu::indicator:non-exclusive:indeterminate:disabled {
-  image: url(":/qss_icons/rc/checkbox_indeterminate_disabled.png");
+  image: url(":/qss_icons/light/rc/checkbox_indeterminate_disabled.png");
 }
 
 QMenu::indicator:non-exclusive:indeterminate:focus, QMenu::indicator:non-exclusive:indeterminate:hover, QMenu::indicator:non-exclusive:indeterminate:pressed {
-  image: url(":/qss_icons/rc/checkbox_indeterminate_focus.png");
+  image: url(":/qss_icons/light/rc/checkbox_indeterminate_focus.png");
 }
 
 QMenu::indicator:exclusive:unchecked {
@@ -494,28 +494,28 @@ QMenu::indicator:exclusive:unchecked {
 QMenu::indicator:exclusive:unchecked:hover, QMenu::indicator:exclusive:unchecked:focus, QMenu::indicator:exclusive:unchecked:pressed {
   border: none;
   outline: none;
-  image: url(":/qss_icons/rc/radio_unchecked_focus.png");
+  image: url(":/qss_icons/light/rc/radio_unchecked_focus.png");
 }
 
 QMenu::indicator:exclusive:unchecked:disabled {
-  image: url(":/qss_icons/rc/radio_unchecked_disabled.png");
+  image: url(":/qss_icons/light/rc/radio_unchecked_disabled.png");
 }
 
 QMenu::indicator:exclusive:checked {
   border: none;
   outline: none;
-  image: url(":/qss_icons/rc/radio_checked.png");
+  image: url(":/qss_icons/light/rc/radio_checked.png");
 }
 
 QMenu::indicator:exclusive:checked:hover, QMenu::indicator:exclusive:checked:focus, QMenu::indicator:exclusive:checked:pressed {
   border: none;
   outline: none;
-  image: url(":/qss_icons/rc/radio_checked_focus.png");
+  image: url(":/qss_icons/light/rc/radio_checked_focus.png");
 }
 
 QMenu::indicator:exclusive:checked:disabled {
   outline: none;
-  image: url(":/qss_icons/rc/radio_checked_disabled.png");
+  image: url(":/qss_icons/light/rc/radio_checked_disabled.png");
 }
 
 QMenu::right-arrow {
@@ -1761,8 +1761,8 @@ QDockWidget {
   background-color: #FAFAFA;
   border: 1px solid #C9CDD0;
   border-radius: 4px;
-  titlebar-close-icon: url(":/qss_icons/rc/transparent.png");
-  titlebar-normal-icon: url(":/qss_icons/rc/transparent.png");
+  titlebar-close-icon: url(":/qss_icons/light/rc/transparent.png");
+  titlebar-normal-icon: url(":/qss_icons/light/rc/transparent.png");
 }
 
 QDockWidget::title {
@@ -1781,15 +1781,15 @@ QDockWidget::close-button {
   border: 0;
   margin: 0;
   padding: 0;
-  image: url(":/qss_icons/rc/window_close.png");
+  image: url(":/qss_icons/light/rc/window_close.png");
 }
 
 QDockWidget::close-button:hover {
-  image: url(":/qss_icons/rc/window_close_focus.png");
+  image: url(":/qss_icons/light/rc/window_close_focus.png");
 }
 
 QDockWidget::close-button:pressed {
-  image: url(":/qss_icons/rc/window_close_pressed.png");
+  image: url(":/qss_icons/light/rc/window_close_pressed.png");
 }
 
 QDockWidget::float-button {
@@ -1800,15 +1800,15 @@ QDockWidget::float-button {
   border: 0;
   margin: 0;
   padding: 0;
-  image: url(":/qss_icons/rc/window_undock.png");
+  image: url(":/qss_icons/light/rc/window_undock.png");
 }
 
 QDockWidget::float-button:hover {
-  image: url(":/qss_icons/rc/window_undock_focus.png");
+  image: url(":/qss_icons/light/rc/window_undock_focus.png");
 }
 
 QDockWidget::float-button:pressed {
-  image: url(":/qss_icons/rc/window_undock_pressed.png");
+  image: url(":/qss_icons/light/rc/window_undock_pressed.png");
 }
 
 /* QTreeView QListView QTableView -----------------------------------------
@@ -1853,38 +1853,62 @@ QTreeView:branch:open:has-children:!has-siblings:hover, QTreeView:branch:open:ha
 }
 
 QTreeView::indicator:checked,
-QListView::indicator:checked {
+QListView::indicator:checked,
+QTableView::indicator:checked,
+QColumnView::indicator:checked {
   image: url(":/qss_icons/light/rc/checkbox_checked.png");
 }
 
 QTreeView::indicator:checked:hover, QTreeView::indicator:checked:focus, QTreeView::indicator:checked:pressed,
 QListView::indicator:checked:hover,
 QListView::indicator:checked:focus,
-QListView::indicator:checked:pressed {
+QListView::indicator:checked:pressed,
+QTableView::indicator:checked:hover,
+QTableView::indicator:checked:focus,
+QTableView::indicator:checked:pressed,
+QColumnView::indicator:checked:hover,
+QColumnView::indicator:checked:focus,
+QColumnView::indicator:checked:pressed {
   image: url(":/qss_icons/light/rc/checkbox_checked_focus.png");
 }
 
 QTreeView::indicator:unchecked,
-QListView::indicator:unchecked {
+QListView::indicator:unchecked,
+QTableView::indicator:unchecked,
+QColumnView::indicator:unchecked {
   image: url(":/qss_icons/light/rc/checkbox_unchecked.png");
 }
 
 QTreeView::indicator:unchecked:hover, QTreeView::indicator:unchecked:focus, QTreeView::indicator:unchecked:pressed,
 QListView::indicator:unchecked:hover,
 QListView::indicator:unchecked:focus,
-QListView::indicator:unchecked:pressed {
+QListView::indicator:unchecked:pressed,
+QTableView::indicator:unchecked:hover,
+QTableView::indicator:unchecked:focus,
+QTableView::indicator:unchecked:pressed,
+QColumnView::indicator:unchecked:hover,
+QColumnView::indicator:unchecked:focus,
+QColumnView::indicator:unchecked:pressed {
   image: url(":/qss_icons/light/rc/checkbox_unchecked_focus.png");
 }
 
 QTreeView::indicator:indeterminate,
-QListView::indicator:indeterminate {
+QListView::indicator:indeterminate,
+QTableView::indicator:indeterminate,
+QColumnView::indicator:indeterminate {
   image: url(":/qss_icons/light/rc/checkbox_indeterminate.png");
 }
 
 QTreeView::indicator:indeterminate:hover, QTreeView::indicator:indeterminate:focus, QTreeView::indicator:indeterminate:pressed,
 QListView::indicator:indeterminate:hover,
 QListView::indicator:indeterminate:focus,
-QListView::indicator:indeterminate:pressed {
+QListView::indicator:indeterminate:pressed,
+QTableView::indicator:indeterminate:hover,
+QTableView::indicator:indeterminate:focus,
+QTableView::indicator:indeterminate:pressed,
+QColumnView::indicator:indeterminate:hover,
+QColumnView::indicator:indeterminate:focus,
+QColumnView::indicator:indeterminate:pressed {
   image: url(":/qss_icons/light/rc/checkbox_indeterminate_focus.png");
 }
 
