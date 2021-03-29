@@ -30,9 +30,9 @@ def main():
     args = parser.parse_args()
     palette = args.palette
 
-    dark = None
-    no_dark = None
-    themes = {'Dark': dark, 'No Dark': no_dark}
+    styled = None
+    no_styled = None
+    themes = {'Styled': styled, 'No styled': no_styled}
     while True:
         for theme_name, theme_process in themes.items():
             try:
@@ -53,15 +53,15 @@ def main():
         # Show window
         example = os.path.join(SCRIPTS_PATH, '../qdarkstyle/example/__main__.py')
         call(['python', example, '--screenshots', '--palette', palette])
-        call(['python', example, '--no_dark', '--screenshots'])
+        call(['python', example, '--screenshots', '--palette', 'none'])
 
-        # Open dark example
-        dark = call(['python', example] + sys.argv[1:])
+        # Open styled window
+        styled = call(['python', example, '--palette', palette] + sys.argv[1:])
 
-        # Open no dark example
-        no_dark = call(['python', example, '--no_dark'] + sys.argv[1:])
+        # Open unstyled window
+        no_styled = call(['python', example, '--palette', 'none'] + sys.argv[1:])
 
-        if dark or no_dark:
+        if styled or no_styled:
             print('Unf! It not worked! Please, check the error(s).')
             break
 
