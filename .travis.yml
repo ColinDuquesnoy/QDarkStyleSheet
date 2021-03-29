@@ -22,10 +22,10 @@ matrix:
 
     - python: 3.8
       env: TOXENV=py38-test
-    - python: 3.8
-      env: TOXENV=py38-lint
-    - python: 3.8
-      env: TOXENV=py38-safety
+    # - python: 3.8
+    #   env: TOXENV=py38-lint
+    # - python: 3.8
+    #   env: TOXENV=py38-safety
     - python: 3.8
       env: TOXENV=py38-metric
     - python: 3.8
