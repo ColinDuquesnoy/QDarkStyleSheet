@@ -7,10 +7,8 @@ Utilities for processing SASS and images from default and custom palette.
 # Standard library imports
 from __future__ import absolute_import, print_function
 
-import argparse
 import glob
 import os
-import sys
 from subprocess import call
 
 # Local imports
@@ -66,28 +64,28 @@ def run_process(args, palette):
         if args.create in ['pyqt', 'pyqtgraph', 'all']:
             print("Compiling for PyQt4 ...")
             try:
-                call(['pyrcc4', '-py3', qrc_file, '-o', py_file_pyqt])
+                call(['pyrcc4', '-py3', qrc_file, '-o', py_file_pyqt], shell=True)
             except FileNotFoundError:
                 print("You must install pyrcc4")
 
         if args.create in ['pyqt5', 'qtpy', 'all']:
             print("Compiling for PyQt5 ...")
             try:
-                call(['pyrcc5', qrc_file, '-o', py_file_pyqt5])
+                call(['pyrcc5', qrc_file, '-o', py_file_pyqt5], shell=True)
             except FileNotFoundError:
                 print("You must install pyrcc5")
 
         if args.create in ['pyside', 'all']:
             print("Compiling for PySide ...")
             try:
-                call(['pyside-rcc', '-py3', qrc_file, '-o', py_file_pyside])
+                call(['pyside-rcc', '-py3', qrc_file, '-o', py_file_pyside], shell=True)
             except FileNotFoundError:
                 print("You must install pyside-rcc")
 
         if args.create in ['pyside2', 'all']:
             print("Compiling for PySide 2...")
             try:
-                call(['pyside2-rcc', qrc_file, '-o', py_file_pyside2])
+                call(['pyside2-rcc', qrc_file, '-o', py_file_pyside2], shell=True)
             except FileNotFoundError:
                 print("You must install pyside2-rcc")
 

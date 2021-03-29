@@ -16,6 +16,7 @@ import tempfile
 # Constants
 SCRIPTS_PATH = os.path.abspath(os.path.dirname(__file__))
 
+
 def main():
     """Process qrc and ui files, then run example in while loop."""
     parser = argparse.ArgumentParser(description=__doc__,
@@ -48,18 +49,18 @@ def main():
 
         # Process qrc files
         process_qrc = os.path.join(SCRIPTS_PATH, '../qdarkstyle/utils/__main__.py')
-        call(['python', process_qrc])
+        call(['python', process_qrc], shell=True)
 
         # Show window
         example = os.path.join(SCRIPTS_PATH, '../qdarkstyle/example/__main__.py')
-        call(['python', example, '--screenshots', '--palette', palette])
-        call(['python', example, '--screenshots', '--palette', 'none'])
+        call(['python', example, '--screenshots', '--palette', palette], shell=True)
+        call(['python', example, '--screenshots', '--palette', 'none'], shell=True)
 
         # Open styled window
-        styled = call(['python', example, '--palette', palette] + sys.argv[1:])
+        styled = call(['python', example, '--palette', palette] + sys.argv[1:], shell=True)
 
         # Open unstyled window
-        no_styled = call(['python', example, '--palette', 'none'] + sys.argv[1:])
+        no_styled = call(['python', example, '--palette', 'none'] + sys.argv[1:], shell=True)
 
         if styled or no_styled:
             print('Unf! It not worked! Please, check the error(s).')

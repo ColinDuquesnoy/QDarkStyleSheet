@@ -53,8 +53,8 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + 
 
 # Must be in this place, after setting path, to not need to install
 import qdarkstyle  # noqa: E402
-from qdarkstyle.dark.palette import DarkPalette
-from qdarkstyle.light.palette import LightPalette
+from qdarkstyle.dark.palette import DarkPalette  # noqa: E402
+from qdarkstyle.light.palette import LightPalette  # noqa: E402
 
 # Set log for debug
 logging.basicConfig(level=logging.DEBUG)
@@ -137,7 +137,7 @@ def main():
     # create main window
     window = QMainWindow()
     window.setObjectName('mainwindow')
-    uic.loadUi(os.path.join(here, 'ui\mw_menus.ui'), window)
+    uic.loadUi(os.path.join(here, 'ui/mw_menus.ui'), window)
 
     title = ("QDarkStyle Example - ("
              + f"QDarkStyle=v{qdarkstyle.__version__}, "
@@ -159,7 +159,7 @@ def main():
     # Create docks for buttons
     dw_buttons = QDockWidget()
     dw_buttons.setObjectName('buttons')
-    uic.loadUi(os.path.join(here, 'ui\dw_buttons.ui'), dw_buttons)
+    uic.loadUi(os.path.join(here, 'ui/dw_buttons.ui'), dw_buttons)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_buttons)
 
     # Set state indeterminate (value=1)
@@ -179,43 +179,43 @@ def main():
     # Create docks for buttons
     dw_displays = QDockWidget()
     dw_displays.setObjectName('displays')
-    uic.loadUi(os.path.join(here, 'ui\dw_displays.ui'), dw_displays)
+    uic.loadUi(os.path.join(here, 'ui/dw_displays.ui'), dw_displays)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_displays)
 
     # Create docks for inputs - no fields
     dw_inputs_no_fields = QDockWidget()
     dw_inputs_no_fields.setObjectName('inputs_no_fields')
-    uic.loadUi(os.path.join(here, 'ui\dw_inputs_no_fields.ui'), dw_inputs_no_fields)
+    uic.loadUi(os.path.join(here, 'ui/dw_inputs_no_fields.ui'), dw_inputs_no_fields)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_no_fields)
 
     # Create docks for inputs - fields
     dw_inputs_fields = QDockWidget()
     dw_inputs_fields.setObjectName('inputs_fields')
-    uic.loadUi(os.path.join(here, 'ui\dw_inputs_fields.ui'), dw_inputs_fields)
+    uic.loadUi(os.path.join(here, 'ui/dw_inputs_fields.ui'), dw_inputs_fields)
     window.addDockWidget(Qt.RightDockWidgetArea, dw_inputs_fields)
 
     # Create docks for widgets
     dw_widgets = QDockWidget()
     dw_widgets.setObjectName('widgets')
-    uic.loadUi(os.path.join(here, 'ui\dw_widgets.ui'), dw_widgets)
+    uic.loadUi(os.path.join(here, 'ui/dw_widgets.ui'), dw_widgets)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_widgets)
 
     # Create docks for views
     dw_views = QDockWidget()
     dw_views.setObjectName('views')
-    uic.loadUi(os.path.join(here, 'ui\dw_views.ui'), dw_views)
+    uic.loadUi(os.path.join(here, 'ui/dw_views.ui'), dw_views)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_views)
 
     # Create docks for containers - no tabs
     dw_containers_no_tabs = QDockWidget()
     dw_containers_no_tabs.setObjectName('containers_no_tabs')
-    uic.loadUi(os.path.join(here, 'ui\dw_containers_no_tabs.ui'), dw_containers_no_tabs)
+    uic.loadUi(os.path.join(here, 'ui/dw_containers_no_tabs.ui'), dw_containers_no_tabs)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_no_tabs)
 
     # Create docks for containters - tabs
     dw_containers_tabs = QDockWidget()
     dw_containers_tabs.setObjectName('containers_tabs')
-    uic.loadUi(os.path.join(here, 'ui\dw_containers_tabs.ui'), dw_containers_tabs)
+    uic.loadUi(os.path.join(here, 'ui/dw_containers_tabs.ui'), dw_containers_tabs)
     window.addDockWidget(Qt.LeftDockWidgetArea, dw_containers_tabs)
 
     # Tabify right docks
