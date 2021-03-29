@@ -27,11 +27,11 @@ or
     python example.py  --qt_from=pyqt5
 
 Other options for qt_from are: pyqt5, pyside2, pyqt, pyside, qtpy, pyqtgraph, and qt.py.
-Also, you can run the example without dark theme (no_dark), to check for problems.
+Also, you can run the example without any theme (none), to check for problems.
 
 .. code-block:: python
 
-    python example.py  --qt_from=pyqt5 --no_dark
+    python example.py  --qt_from=pyqt5 --palette=none
 
 Note:
     qdarkstyle does not have to be installed to run the example.
@@ -70,22 +70,18 @@ def main():
     """Execute QDarkStyle example."""
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--palette', default='dark', type=str,
+                        choices=['dark', 'light', 'none'],
+                        help="Palette to display. Using 'none' there is no style sheet applied, OS like.")
     parser.add_argument('--qt_from', default='qtpy', type=str,
                         choices=['pyqt5', 'pyqt', 'pyside2', 'pyside', 'qtpy', 'pyqtgraph', 'qt.py'],
-                        help="Choose which binding and/or abstraction is to be used to run the example.")
-    parser.add_argument('--no_dark', action='store_true',
-                        help="Exihibts the original window (without qdarkstyle).")
+                        help="Choose which binding and/or abstraction is to be used to run the example. Default is 'qtpy'")
     parser.add_argument('--test', action='store_true',
                         help="Auto close window after 2s.")
-    parser.add_argument('--reset', action='store_true',
-                        help="Reset GUI settings (position, size) then opens.")
     parser.add_argument('--screenshots', action='store_true',
                         help="Generate screenshots on images folder.")
-    parser.add_argument('--palette',
-                        default='dark',
-                        choices=['dark', 'light'],
-                        type=str,
-                        help="Palette to display",)
+    parser.add_argument('--reset', action='store_true',
+                        help="Reset GUI settings (position, size) then opens.")
 
     # Parsing arguments from command line
     args = parser.parse_args()
@@ -131,11 +127,10 @@ def main():
 
     style = ''
 
-    if not args.no_dark:
-        if args.palette == 'dark':
-            style = qdarkstyle.load_stylesheet(palette=DarkPalette)
-        else:
-            style = qdarkstyle.load_stylesheet(palette=LightPalette)
+    if args.palette == 'dark':
+        style = qdarkstyle.load_stylesheet(palette=DarkPalette)
+    elif args.palette == 'light':
+        style = qdarkstyle.load_stylesheet(palette=LightPalette)
 
     app.setStyleSheet(style)
 
@@ -294,12 +289,7 @@ def create_screenshots(app, window, args):
     from qtpy.QtGui import QGuiApplication
     from qtpy.QtWidgets import QDockWidget, QTabWidget
 
-    if args.no_dark:
-        theme = 'no_dark'
-    elif args.palette == 'dark':
-        theme = 'dark'
-    else:
-        theme = 'light'
+    theme = args.palette
 
     print('\nCreating {} screenshots'.format(theme))
 
