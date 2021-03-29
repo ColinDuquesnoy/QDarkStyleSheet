@@ -13,7 +13,7 @@ from setuptools import find_packages, setup
 from qdarkstyle import __doc__ as long_desc
 from qdarkstyle import __version__
 
-install_requires = ['helpdev>=0.6.10', 'qtpy>=1.9']
+install_requires = ['qtpy>=1.9']
 
 extras_require = {
     'develop': ['qtsass', 'watchdog'],
