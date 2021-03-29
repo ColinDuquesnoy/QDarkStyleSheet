@@ -61,7 +61,7 @@ class QSSFileHandler(FileSystemEventHandler):
             print('\n')
 
 
-def main(arguments):
+def main():
     """Process QRC files."""
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -78,7 +78,7 @@ def main(arguments):
                         action='store_true',
                         help="Watch for file changes.")
 
-    args = parser.parse_args(arguments)
+    args = parser.parse_args()
 
     if args.watch:
         path = PACKAGE_PATH
@@ -96,5 +96,5 @@ def main(arguments):
             run_process(args, palette)
 
 
-if __name__ == '__main__':
-    sys.exit(main(sys.argv[1:]))
+if __name__ == "__main__":
+    sys.exit(main())

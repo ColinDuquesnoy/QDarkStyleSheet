@@ -64,7 +64,8 @@ setup(
     ],
     zip_safe=False,  # don't use eggs
     entry_points={"console_scripts": ["qdarkstyle=qdarkstyle.__main__:main",
-                                      "qdarkstyle.example=qdarkstyle.example.__main__:main"]},
+                                      "qdarkstyle.example=qdarkstyle.example.__main__:main",
+                                      "qdarkstyle.utils=qdarkstyle.utils.__main__:main"]},
     extras_require=extras_require,
     install_requires=install_requires,
     project_urls={
