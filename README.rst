@@ -265,41 +265,41 @@ default style. Click in the image to zoom.
 Containers (no tabs) and Buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/dark_containers_buttons.png
+.. image:: docs/images/dark/containers_no_tabs_buttons.png
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/light_containers_buttons.png
+.. image:: docs/images/light/containers_no_tabs_buttons.png
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/images/none_containers_buttons.png
+.. image:: docs/images/none/containers_no_tabs_buttons.png
 
 
 Containers (tabs) and Displays
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/dark_containers_tabs_displays.png
+.. image:: docs/images/dark/containers_tabs_displays.png
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/light_containers_tabs_displays.png
+.. image:: docs/images/light/containers_tabs_displays.png
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/none_containers_tabs_displays.png
+.. image:: docs/images/none/containers_tabs_displays.png
 
 
 Widgets and Inputs (fields)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/dark_widgets_inputs_fields.png
+.. image:: docs/images/dark/widgets_inputs_fields.png
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/light_widgets_inputs_fields.png
+.. image:: docs/images/light/widgets_inputs_fields.png
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/none_widgets_inputs_fields.png
+.. image:: docs/images/none/widgets_inputs_fields.png
 
 
 Views and Inputs (no fields)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/dark_views_inputs_no_fields.png
+.. image:: docs/images/dark/views_inputs_no_fields.png
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/light_views_inputs_no_fields.png
+.. image:: docs/images/light/views_inputs_no_fields.png
 
-.. image:: https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/images/none_views_inputs_no_fields.png
+.. image:: docs/images/none/views_inputs_no_fields.png
 
 
 Changelog

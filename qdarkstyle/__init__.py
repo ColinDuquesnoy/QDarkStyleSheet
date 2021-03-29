@@ -67,7 +67,7 @@ _logger = logging.getLogger(__name__)
 REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 
 EXAMPLE_PATH = os.path.join(REPO_PATH, 'example')
-IMAGES_PATH = os.path.join(REPO_PATH, 'images')
+IMAGES_PATH = os.path.join(REPO_PATH, 'docs/images')
 PACKAGE_PATH = os.path.join(REPO_PATH, 'qdarkstyle')
 
 QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
