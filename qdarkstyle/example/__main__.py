@@ -79,7 +79,7 @@ def main():
                         help="Auto close window after 2s.")
     parser.add_argument('--reset', action='store_true',
                         help="Reset GUI settings (position, size) then opens.")
-    parser.add_argument('--screenshots', action='store_false',
+    parser.add_argument('--screenshots', action='store_true',
                         help="Generate screenshots on images folder.")
     parser.add_argument('--palette',
                         default='dark',
