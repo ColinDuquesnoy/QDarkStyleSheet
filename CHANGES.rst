@@ -1,5 +1,15 @@
 Changelog
 =========
+
+-  3.0:
+    -  New structure to create different palettes #268, #164
+    -  New light palette #240, #268
+    -  Improved dark palette #252, #266, #264, #265, #248
+    -  Improved tool butons #260
+    -  Improved tabs #270
+    -  Improved close/float sizes os-dependent #267
+    -  Fix checkbox problems #200, #259, #239
+    -  Fix indicators' colors in menus and tables #242
 -  2.8.1:
     -  Fix rst file formats and links #229
     -  Add .gitattributes for generated and documentation files
