@@ -17,6 +17,26 @@ See Qt documentation:
   - https://doc.qt.io/qt-5/stylesheet-examples.html
 
 --------------------------------------------------------------------------- */
+/* Reset elements ------------------------------------------------------------
+
+Resetting everything helps to unify styles across different operating systems
+
+--------------------------------------------------------------------------- */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  border-style: none;
+  border-image: none;
+  outline: 0;
+}
+
+/* specific reset for elements inside QToolBar */
+QToolBar * {
+  margin: 0px;
+  padding: 0px;
+}
+
 /* QWidget ----------------------------------------------------------------
 
 --------------------------------------------------------------------------- */
@@ -1586,7 +1606,7 @@ QTabBar::tab:top {
 }
 
 QTabBar::tab:top:selected {
-  background-color: #455364;
+  background-color: #54687A;
   color: #E0E1E3;
   border-bottom: 3px solid #259AE9;
   border-top-left-radius: 3px;
@@ -1617,7 +1637,7 @@ QTabBar::tab:bottom {
 
 QTabBar::tab:bottom:selected {
   color: #E0E1E3;
-  background-color: #455364;
+  background-color: #54687A;
   border-top: 3px solid #259AE9;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -1646,7 +1666,7 @@ QTabBar::tab:left {
 
 QTabBar::tab:left:selected {
   color: #E0E1E3;
-  background-color: #455364;
+  background-color: #54687A;
   border-right: 3px solid #259AE9;
 }
 
@@ -1671,7 +1691,7 @@ QTabBar::tab:right {
 
 QTabBar::tab:right:selected {
   color: #E0E1E3;
-  background-color: #455364;
+  background-color: #54687A;
   border-left: 3px solid #259AE9;
 }
 
