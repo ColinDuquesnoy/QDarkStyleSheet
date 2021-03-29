@@ -9,7 +9,7 @@ Qt Design (common ones) in the basic states (enabled/disabled), and
 
 Requirements:
 
-    - Python 2 or Python 3
+    - Python 3
     - QtPy
     - PyQt5 or PyQt4 or PySide2 or PySide
     - PyQtGraph or Qt.Py (if choosen)
@@ -48,8 +48,8 @@ import platform
 import time
 
 # Make the example runnable without the need to install and include ui
-sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/..'))
-sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/ui'))
+sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/../..'))
+sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/../ui'))
 
 # Must be in this place, after setting path, to not need to install
 import qdarkstyle  # noqa: E402
