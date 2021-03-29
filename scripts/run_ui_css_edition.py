@@ -54,10 +54,6 @@ def main():
         process_qrc = os.path.join(SCRIPTS_PATH, 'process_qrc.py')
         call(['python', process_qrc])
 
-        # Process ui files
-        process_ui = os.path.join(SCRIPTS_PATH, 'process_ui.py')
-        call(['python', process_ui, '--palette', palette])
-
         # Show window
         example = os.path.join(EXAMPLE_TMP_DIR, 'example.py')
         call(['python', example, '--screenshots', '--palette', palette])
