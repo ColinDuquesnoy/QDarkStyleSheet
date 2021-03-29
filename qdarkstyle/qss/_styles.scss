@@ -1935,7 +1935,9 @@ QTreeView {
 }
 
 QTreeView,
-QListView {
+QListView,
+QTableView,
+QColumnView {
 
     &::indicator {
 
