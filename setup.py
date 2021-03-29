@@ -55,7 +55,6 @@ setup(
         'Operating System :: Microsoft :: Windows',
         'Operating System :: POSIX :: Linux',
         'Operating System :: MacOS',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
@@ -64,7 +63,8 @@ setup(
         'Topic :: Software Development :: Libraries :: Application Frameworks'
     ],
     zip_safe=False,  # don't use eggs
-    entry_points={"console_scripts": ["qdarkstyle=qdarkstyle.__main__:main"]},
+    entry_points={"console_scripts": ["qdarkstyle=qdarkstyle.__main__:main",
+                                      "qdarkstyle.example=qdarkstyle.example.example:main"]},
     extras_require=extras_require,
     install_requires=install_requires,
     project_urls={
