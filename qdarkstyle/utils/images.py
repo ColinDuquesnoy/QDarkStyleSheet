@@ -19,8 +19,9 @@ from qtpy.QtGui import QIcon
 from qtpy.QtWidgets import QApplication
 
 # Local imports
-from qdarkstyle import (IMAGES_PATH, STYLES_SCSS_FILEPATH, SVG_PATH,
-                        PACKAGE_PATH, QRC_FILE)
+from qdarkstyle import (IMAGES_PATH, PACKAGE_PATH, QRC_FILE,
+                        STYLES_SCSS_FILEPATH, SVG_PATH)
+
 
 IMAGE_BLACKLIST = ['base_palette']
 
