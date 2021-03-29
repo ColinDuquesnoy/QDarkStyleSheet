@@ -80,6 +80,8 @@ def main():
                         help="Auto close window after 2s.")
     parser.add_argument('--screenshots', action='store_true',
                         help="Generate screenshots on images folder.")
+    parser.add_argument('--offscreen', action='store_true',
+                        help="Do not try to show the screen (running on server).")
     parser.add_argument('--reset', action='store_true',
                         help="Reset GUI settings (position, size) then opens.")
 
@@ -87,7 +89,7 @@ def main():
     args = parser.parse_args()
 
     # To avoid problems when testing without screen
-    if args.test or args.screenshots:
+    if args.test or args.offscreen:
         os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 
     # Set QT_API variable before importing QtPy
@@ -322,7 +324,7 @@ def create_screenshots(app, window, args):
     QCoreApplication.processEvents()
 
     for fname_suffix, dw_titles in widget_data.items():
-        png_path = os.path.join(SCREENSHOTS_PATH, theme + '_' + fname_suffix)
+        png_path = os.path.join(SCREENSHOTS_PATH, theme, fname_suffix)
         print('\t' + png_path)
 
         for dw in docks:
