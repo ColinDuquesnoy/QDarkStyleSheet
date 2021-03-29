@@ -9,6 +9,30 @@ See Qt documentation:
 --------------------------------------------------------------------------- */
 
 
+
+/* Reset elements ------------------------------------------------------------
+
+Resetting everything helps to unify styles across different operating systems
+
+--------------------------------------------------------------------------- */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-style: none;
+    border-image: none;
+    outline: 0;
+}
+
+/* specific reset for elements inside QToolBar */
+QToolBar * {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
 /* QWidget ----------------------------------------------------------------
 
 --------------------------------------------------------------------------- */
