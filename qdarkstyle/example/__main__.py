@@ -184,6 +184,16 @@ def main():
     action_menu.setMenu(menu)
     window.toolBarMenus.addAction(action_menu)
 
+    # Connect dialogs to buttons
+    window.toolButtonColorDialog.clicked.connect(lambda: QtWidgets.QColorDialog().exec())
+    window.toolButtonFileDialog.clicked.connect(lambda: QtWidgets.QFileDialog().exec())
+    window.toolButtonFileDialogStatic.clicked.connect(lambda: QtWidgets.QFileDialog.getOpenFileNames())
+    window.toolButtonFontDialog.clicked.connect(lambda: QtWidgets.QFontDialog().exec())
+    window.toolButtonInputDialog.clicked.connect(lambda: QtWidgets.QInputDialog().exec())
+    window.toolButtonMessageBox.clicked.connect(lambda: QtWidgets.QMessageBox().exec())
+    window.toolButtonMessageBoxStatic.clicked.connect(lambda: QtWidgets.QMessageBox.critical(window, "Critical title", "Critical message"))
+    window.toolButtonProgressDialog.clicked.connect(lambda: QtWidgets.QProgressDialog().exec())
+
     # Create docks for buttons
     dw_displays = QDockWidget()
     dw_displays.setObjectName('displays')
