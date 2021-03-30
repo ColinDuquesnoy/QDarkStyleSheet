@@ -388,11 +388,19 @@
      <string>Menu Disabled</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuMenuTranspIcon">
+    <property name="title">
+     <string>Menu Transp. Icon</string>
+    </property>
+    <addaction name="actionActionCheckableA"/>
+    <addaction name="actionActionTranspIcon"/>
+   </widget>
    <addaction name="menuMenu"/>
    <addaction name="menuMenuDelayed"/>
    <addaction name="menuMenuCheckale"/>
    <addaction name="menuMenuActionDis"/>
    <addaction name="menuMenuDisabled"/>
+   <addaction name="menuMenuTranspIcon"/>
    <addaction name="menuHelp"/>
    <addaction name="menuAbout"/>
   </widget>
@@ -512,7 +520,6 @@
    </attribute>
    <addaction name="actionActionA"/>
    <addaction name="actionActionSubA"/>
-   <addaction name="actionActionCheckableA"/>
    <addaction name="actionActionCheckableCheckedDis"/>
   </widget>
   <action name="actionActionA">
@@ -554,7 +561,7 @@
     <bool>true</bool>
    </property>
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>Action Checkable A</string>
@@ -684,6 +691,15 @@
    </property>
    <property name="toolTip">
     <string>Action Checkable Unchecked Disabled</string>
+   </property>
+  </action>
+  <action name="actionActionTranspIcon">
+   <property name="icon">
+    <iconset resource="../../dark/style.qrc">
+     <normaloff>:/qss_icons/dark/rc/transparent.png</normaloff>:/qss_icons/dark/rc/transparent.png</iconset>
+   </property>
+   <property name="text">
+    <string>Action Transp. Icon</string>
    </property>
   </action>
  </widget>
