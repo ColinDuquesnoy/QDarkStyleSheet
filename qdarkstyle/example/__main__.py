@@ -109,7 +109,7 @@ def main():
     from qtpy import API_NAME, QT_VERSION, PYQT_VERSION, PYSIDE_VERSION, uic
     from qtpy import __version__ as QTPY_VERSION
     from qtpy.QtWidgets import (QApplication, QMainWindow, QDockWidget,
-                                QStatusBar, QLabel, QPushButton, QMenu)
+                                QStatusBar, QLabel, QPushButton, QMenu, QAction)
     from qtpy.QtCore import QTimer, Qt, QSettings
 
     # Set API_VERSION variable
@@ -174,9 +174,15 @@ def main():
     for action in ['Action A', 'Action B', 'Action C']:
         menu.addAction(action)
 
+    # Add menu in special tool buttons
     dw_buttons.toolButtonDelayedPopup.setMenu(menu)
     dw_buttons.toolButtonInstantPopup.setMenu(menu)
     dw_buttons.toolButtonMenuButtonPopup.setMenu(menu)
+
+    # Add menu in toolbar
+    action_menu = QAction(u'Menu action', window.toolBarMenus)
+    action_menu.setMenu(menu)
+    window.toolBarMenus.addAction(action_menu)
 
     # Create docks for buttons
     dw_displays = QDockWidget()
