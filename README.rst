@@ -7,6 +7,8 @@ QDarkStyleSheet
 The most complete dark/light style sheet for Qt applications (Qt4, Qt5,
 PySide, PySide2, PyQt4, PyQt5, QtPy, PyQtGraph, Qt.Py).
 
+`Check the documentation <https://qdarkstylesheet.readthedocs.io/en/latest/screenshots.html>`__
+
 
 What is new?
 ------------
@@ -21,7 +23,7 @@ theme colors.
 
 The palette has been redefined and improved (UI/UX) to accept more colors
 and to be able to implement new themes thanks to the
-`Spyder team `__ collaboration.
+`Spyder team <https://github.com/spyder-ide/spyder>`__ collaboration.
 
 v2.8
 ~~~~
@@ -253,53 +255,6 @@ PyQt5 installed on your system.
 
     # check all options included
     $ qdarkstyle.example --help
-
-
-Screenshots
------------
-
-Here are a few snapshots comparing the use of QDarkStyle and the
-default style. Click in the image to zoom.
-
-
-Containers (no tabs) and Buttons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: docs/images/dark/containers_no_tabs_buttons.png
-
-.. image:: docs/images/light/containers_no_tabs_buttons.png
-
-.. image:: docs/images/none/containers_no_tabs_buttons.png
-
-
-Containers (tabs) and Displays
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: docs/images/dark/containers_tabs_displays.png
-
-.. image:: docs/images/light/containers_tabs_displays.png
-
-.. image:: docs/images/none/containers_tabs_displays.png
-
-
-Widgets and Inputs (fields)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: docs/images/dark/widgets_inputs_fields.png
-
-.. image:: docs/images/light/widgets_inputs_fields.png
-
-.. image:: docs/images/none/widgets_inputs_fields.png
-
-
-Views and Inputs (no fields)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: docs/images/dark/views_inputs_no_fields.png
-
-.. image:: docs/images/light/views_inputs_no_fields.png
-
-.. image:: docs/images/none/views_inputs_no_fields.png
 
 
 Changelog
