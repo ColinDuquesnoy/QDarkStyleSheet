@@ -762,6 +762,11 @@ QToolBar {
   spacing: 2px;
 }
 
+QToolBar:disabled {
+  /* Fixes #272 */
+  background-color: #C9CDD0;
+}
+
 QToolBar QToolButton {
   background-color: #C9CDD0;
   border: 1px solid #C9CDD0;
