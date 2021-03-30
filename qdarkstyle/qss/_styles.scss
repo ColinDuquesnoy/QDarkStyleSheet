@@ -815,6 +815,11 @@ QToolBar {
     font-weight: bold;
     spacing: 2px;
 
+    &:disabled{
+        /* Fixes #272 */
+        background-color: $COLOR_BACKGROUND_4;
+    }
+
     QToolButton {
         background-color: $COLOR_BACKGROUND_4;
         border: $BORDER_2;
