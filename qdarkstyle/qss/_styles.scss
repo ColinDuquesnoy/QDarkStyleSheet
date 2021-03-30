@@ -1595,7 +1595,7 @@ QTabWidget {
 https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtabwidget-and-qtabbar
 
 --------------------------------------------------------------------------- */
-QTabBar {
+QTabBar, QDockWidget QTabBar {
     qproperty-drawBase: 0;
     border-radius: $SIZE_BORDER_RADIUS;
     margin: 0px;
@@ -1715,10 +1715,9 @@ QTabBar {
             &:!selected:hover {
                 border: $BORDER_SELECTION_3;
                 border-bottom: 3px solid $COLOR_ACCENT_3;
-
-                /* Fixes spyder-ide/spyder#9766 */
-                padding-left: 4px;
-                padding-right: 4px;
+                /* Fixes spyder-ide/spyder#9766 and #243 */
+                padding-left: 3px;
+                padding-right: 3px;
             }
         }
 
@@ -1746,10 +1745,9 @@ QTabBar {
             &:!selected:hover {
                 border: $BORDER_SELECTION_3;
                 border-top: 3px solid $COLOR_ACCENT_3;
-
-                /* Fixes spyder-ide/spyder#9766 */
-                padding-left: 4px;
-                padding-right: 4px;
+                /* Fixes spyder-ide/spyder#9766 and #243 */
+                padding-left: 3px;
+                padding-right: 3px;
             }
 
         }
