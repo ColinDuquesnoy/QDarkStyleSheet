@@ -1773,7 +1773,9 @@ QTabBar, QDockWidget QTabBar {
             &:!selected:hover {
                 border: $BORDER_SELECTION_3;
                 border-right: 3px solid $COLOR_ACCENT_3;
-                padding: 0px;
+                /* Fixes different behavior #271 */
+                margin-right: 0px;
+                padding-right: -1px;
             }
         }
 
@@ -1799,7 +1801,9 @@ QTabBar, QDockWidget QTabBar {
             &:!selected:hover {
                 border: $BORDER_SELECTION_3;
                 border-left: 3px solid $COLOR_ACCENT_3;
-                padding: 0px;
+                /* Fixes different behavior #271 */
+                margin-left: 0px;
+                padding-left: 0px;
             }
         }
     }
