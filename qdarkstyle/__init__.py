@@ -67,7 +67,7 @@ _logger = logging.getLogger(__name__)
 REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 
 EXAMPLE_PATH = os.path.join(REPO_PATH, 'example')
-IMAGES_PATH = os.path.join(REPO_PATH, 'images')
+IMAGES_PATH = os.path.join(REPO_PATH, 'docs/images')
 PACKAGE_PATH = os.path.join(REPO_PATH, 'qdarkstyle')
 
 QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
@@ -142,14 +142,28 @@ def _apply_binding_patches():
     return binding_fix
 
 
-def _apply_version_patches():
+def _apply_version_patches(qt_version):
     """
     Apply version-only specific stylesheet patches for the same binding.
+
+    Args:
+        qt_version (str): Qt string version.
 
     Returns:
         str: stylesheet string (css).
     """
     version_fix = ""
+
+    major, minor, patch = qt_version.split('.')
+    major, minor, patch = int(major), int(minor), int(patch)
+
+    if major == 5 and minor >= 14:
+        # See issue #214
+        version_fix = '''
+        QMenu::item {
+            padding: 4px 24px 4px 6px;
+        }
+        '''
 
     if version_fix:
         _logger.info("Found version patches to be applied.")
@@ -218,6 +232,7 @@ def _load_stylesheet(qt_api='', palette=None):
     # Import is made after setting QT_API
     from qtpy.QtCore import QCoreApplication, QFile, QTextStream
     from qtpy.QtGui import QColor, QPalette
+    from qtpy import QT_VERSION
 
     # Then we import resources - binary qrc content
     if palette is None:
@@ -264,7 +279,7 @@ def _load_stylesheet(qt_api='', palette=None):
     stylesheet += _apply_binding_patches()
 
     # 3. Apply binding version specific patches
-    stylesheet += _apply_version_patches()
+    stylesheet += _apply_version_patches(QT_VERSION)
 
     # 4. Apply palette fix. See issue #139
     _apply_application_patches(QCoreApplication, QPalette, QColor, palette)

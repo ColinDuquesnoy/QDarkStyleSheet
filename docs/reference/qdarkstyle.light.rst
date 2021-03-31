@@ -1,7 +1,7 @@
-qdarkstyle.utils package
+qdarkstyle.light package
 ========================
 
-.. automodule:: qdarkstyle.utils
+.. automodule:: qdarkstyle.light
    :members:
    :undoc-members:
    :show-inheritance:
@@ -13,6 +13,5 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   qdarkstyle.utils.__main__
-   qdarkstyle.utils.images
-   qdarkstyle.utils.scss
+   qdarkstyle.light.palette
+   qdarkstyle.light.style_rc
