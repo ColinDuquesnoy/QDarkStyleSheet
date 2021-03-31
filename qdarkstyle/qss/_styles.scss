@@ -418,14 +418,9 @@ QMenu {
         color: $COLOR_TEXT_1;
     }
 
-    &::icon {
-        margin: 0px;
-        padding-left: 8px;
-    }
-
     &::item {
         background-color: $COLOR_BACKGROUND_3;
-        padding: 4px 24px 4px 8px;
+        padding: 4px 24px 4px 28px;
         /* Reserve space for selection border */
         border: 1px transparent $COLOR_BACKGROUND_4;
 
@@ -438,10 +433,16 @@ QMenu {
         }
     }
 
-    &::indicator {
+    &::icon {
+        padding-left: 10px;
         width: 14px;
         height: 14px;
-        padding-left: 6px;
+    }
+
+    &::indicator {
+        padding-left: 8px;
+        width: 12px;
+        height: 12px;
 
         /* non-exclusive indicator = check box style indicator (see QActionGroup::setExclusive) */
         &:non-exclusive {
