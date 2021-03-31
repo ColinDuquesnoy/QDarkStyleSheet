@@ -2015,6 +2015,11 @@ QColumnView {
             &:active {
                 background-color: $COLOR_ACCENT_2;
             }
+
+            &:!active {
+                color: $COLOR_TEXT_1;
+                background-color: $COLOR_BACKGROUND_3;
+            }
         }
 
         &:!selected {
@@ -2059,16 +2064,6 @@ QHeaderView {
         border-radius: 0;
         text-align: left;
         font-size: 13px;
-
-        &:checked {
-            color: $COLOR_TEXT_1;
-            background-color: $COLOR_ACCENT_2;
-
-            &:disabled {
-                color: $COLOR_TEXT_4;
-                background-color: $COLOR_ACCENT_1;
-            }
-        }
 
         &::horizontal {
             padding-top: 0;
