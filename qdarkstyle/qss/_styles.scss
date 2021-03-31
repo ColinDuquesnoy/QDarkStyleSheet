@@ -820,43 +820,6 @@ QToolBar {
         background-color: $COLOR_BACKGROUND_4;
     }
 
-    QToolButton {
-        background-color: $COLOR_BACKGROUND_4;
-        border: $BORDER_2;
-
-        &:hover {
-            background-color: $COLOR_BACKGROUND_5;
-            border: $COLOR_BACKGROUND_5;
-        }
-
-        &:checked {
-            border: $COLOR_BACKGROUND_6;
-            background-color: $COLOR_BACKGROUND_6;
-
-            &:hover {
-                background-color: $COLOR_BACKGROUND_6;
-                border: $COLOR_BACKGROUND_6;
-            }
-        }
-
-        &:pressed {
-            border: $COLOR_BACKGROUND_6;
-            background-color: $COLOR_BACKGROUND_6;
-
-            &:hover {
-                background-color: $COLOR_BACKGROUND_6;
-                border: $COLOR_BACKGROUND_6;
-            }
-        }
-
-        /* This fixes 202 */
-        &:disabled {
-            border: $COLOR_BACKGROUND_4;
-            background-color: $COLOR_BACKGROUND_4;
-
-        }
-    }
-
     &::handle {
 
         &:horizontal {
@@ -1117,33 +1080,30 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qpushbutton
 --------------------------------------------------------------------------- */
 QPushButton {
     background-color: $COLOR_BACKGROUND_4;
-    border: $BORDER_2;
     color: $COLOR_TEXT_1;
     border-radius: $SIZE_BORDER_RADIUS;
-    padding: 3px;
+    padding: 2px;
     outline: none;
+    border: none;
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_4;
-        border: $BORDER_2;
         color: $COLOR_TEXT_4;
         border-radius: $SIZE_BORDER_RADIUS;
-        padding: 3px;
+        padding: 2px;
     }
 
     &:checked {
         background-color: $COLOR_BACKGROUND_6;
-        border: $COLOR_BACKGROUND_6;
         border-radius: $SIZE_BORDER_RADIUS;
-        padding: 3px;
+        padding: 2px;
         outline: none;
 
         &:disabled {
             background-color: $COLOR_BACKGROUND_6;
-            border: $COLOR_BACKGROUND_6;
             color: $COLOR_TEXT_4;
             border-radius: $SIZE_BORDER_RADIUS;
-            padding: 3px;
+            padding: 2px;
             outline: none;
         }
 
@@ -1153,26 +1113,24 @@ QPushButton {
 
     }
 
-    &::menu-indicator {
-        subcontrol-origin: padding;
-        subcontrol-position: bottom right;
-        bottom: 4px;
-    }
-
     &:hover {
         background-color: $COLOR_BACKGROUND_5;
-        border: $COLOR_BACKGROUND_5;
         color: $COLOR_TEXT_1;
     }
 
     &:pressed {
         background-color: $COLOR_BACKGROUND_6;
-        border: $COLOR_BACKGROUND_6;
     }
 
     &:selected {
         background: $COLOR_BACKGROUND_6;
         color: $COLOR_TEXT_1;
+    }
+
+    &::menu-indicator {
+        subcontrol-origin: padding;
+        subcontrol-position: bottom right;
+        bottom: 4px;
     }
 
 }
@@ -1187,45 +1145,62 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbutton
 
 --------------------------------------------------------------------------- */
 QToolButton {
-    background-color: transparent;
-    border: 1px solid transparent;
+    background-color: $COLOR_BACKGROUND_4;
+    color: $COLOR_TEXT_1;
     border-radius: $SIZE_BORDER_RADIUS;
-    margin: 0px;
     padding: 2px;
-
-    &:checked {
-        background-color: $COLOR_BACKGROUND_3;
-        border: $COLOR_BACKGROUND_3;
-
-        &:disabled {
-            background-color: $COLOR_BACKGROUND_4;
-            border: $COLOR_BACKGROUND_4;
-        }
-        &:hover {
-            background-color: $COLOR_BACKGROUND_3;
-            border: $COLOR_BACKGROUND_3;
-        }
-    }
-
-    &:pressed {
-        margin: 1px;
-        background-color: $COLOR_BACKGROUND_3;
-        border: $COLOR_BACKGROUND_3;
-        &:hover {
-            background-color: $COLOR_BACKGROUND_3;
-            border: $COLOR_BACKGROUND_3;
-        }
-    }
+    outline: none;
+    border: none;
 
     &:disabled {
-        border: none;
+        background-color: $COLOR_BACKGROUND_4;
+        color: $COLOR_TEXT_4;
+        border-radius: $SIZE_BORDER_RADIUS;
+        padding: 2px;
+    }
+
+    &:checked {
+        background-color: $COLOR_BACKGROUND_6;
+        border-radius: $SIZE_BORDER_RADIUS;
+        padding: 2px;
+        outline: none;
+
+        &:disabled {
+            background-color: $COLOR_BACKGROUND_6;
+            color: $COLOR_TEXT_4;
+            border-radius: $SIZE_BORDER_RADIUS;
+            padding: 2px;
+            outline: none;
+        }
+
+        &:hover {
+            background-color: $COLOR_BACKGROUND_5;
+            color: $COLOR_TEXT_1;
+        }
+
+        &:pressed {
+            background-color: $COLOR_BACKGROUND_6;
+        }
+
+        &:selected {
+            background: $COLOR_BACKGROUND_6;
+            color: $COLOR_TEXT_1;
+        }
 
     }
 
     &:hover {
-        background-color: $COLOR_BACKGROUND_2;
-        border: $COLOR_BACKGROUND_2;
+        background-color: $COLOR_BACKGROUND_5;
+        color: $COLOR_TEXT_1;
+    }
 
+    &:pressed {
+        background-color: $COLOR_BACKGROUND_6;
+    }
+
+    &:selected {
+        background: $COLOR_BACKGROUND_6;
+        color: $COLOR_TEXT_1;
     }
 
     /* The subcontrols below are used only in the DelayedPopup mode */
@@ -1244,7 +1219,7 @@ QToolButton {
 
             &:hover {
                 border: none;
-                border-left: 1px solid $COLOR_ACCENT_3;
+                border-left: 1px solid $COLOR_BACKGROUND_4;
                 border-radius: 0;
             }
         }
@@ -1259,8 +1234,8 @@ QToolButton {
     &::menu-button {
         padding: 2px;
         border-radius: $SIZE_BORDER_RADIUS;
-        border: $BORDER_2;
         width: 12px;
+        border: none;
         outline: none;
 
         &:hover {
