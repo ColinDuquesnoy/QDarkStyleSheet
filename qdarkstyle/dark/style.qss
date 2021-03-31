@@ -399,14 +399,9 @@ QMenu::separator {
   color: #E0E1E3;
 }
 
-QMenu::icon {
-  margin: 0px;
-  padding-left: 8px;
-}
-
 QMenu::item {
   background-color: #37414F;
-  padding: 4px 24px 4px 8px;
+  padding: 4px 24px 4px 28px;
   /* Reserve space for selection border */
   border: 1px transparent #455364;
 }
@@ -420,10 +415,16 @@ QMenu::item:pressed {
   background-color: #1A72BB;
 }
 
-QMenu::indicator {
+QMenu::icon {
+  padding-left: 10px;
   width: 14px;
   height: 14px;
-  padding-left: 6px;
+}
+
+QMenu::indicator {
+  padding-left: 8px;
+  width: 12px;
+  height: 12px;
   /* non-exclusive indicator = check box style indicator (see QActionGroup::setExclusive) */
   /* exclusive indicator = radio button style indicator (see QActionGroup::setExclusive) */
 }
@@ -767,42 +768,6 @@ QToolBar:disabled {
   background-color: #455364;
 }
 
-QToolBar QToolButton {
-  background-color: #455364;
-  border: 1px solid #455364;
-  /* This fixes 202 */
-}
-
-QToolBar QToolButton:hover {
-  background-color: #54687A;
-  border: #54687A;
-}
-
-QToolBar QToolButton:checked {
-  border: #60798B;
-  background-color: #60798B;
-}
-
-QToolBar QToolButton:checked:hover {
-  background-color: #60798B;
-  border: #60798B;
-}
-
-QToolBar QToolButton:pressed {
-  border: #60798B;
-  background-color: #60798B;
-}
-
-QToolBar QToolButton:pressed:hover {
-  background-color: #60798B;
-  border: #60798B;
-}
-
-QToolBar QToolButton:disabled {
-  border: #455364;
-  background-color: #455364;
-}
-
 QToolBar::handle:horizontal {
   width: 16px;
   image: url(":/qss_icons/dark/rc/toolbar_move_horizontal.png");
@@ -1042,35 +1007,32 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qpushbutton
 --------------------------------------------------------------------------- */
 QPushButton {
   background-color: #455364;
-  border: 1px solid #455364;
   color: #E0E1E3;
   border-radius: 4px;
-  padding: 3px;
+  padding: 2px;
   outline: none;
+  border: none;
 }
 
 QPushButton:disabled {
   background-color: #455364;
-  border: 1px solid #455364;
   color: #9DA9B5;
   border-radius: 4px;
-  padding: 3px;
+  padding: 2px;
 }
 
 QPushButton:checked {
   background-color: #60798B;
-  border: #60798B;
   border-radius: 4px;
-  padding: 3px;
+  padding: 2px;
   outline: none;
 }
 
 QPushButton:checked:disabled {
   background-color: #60798B;
-  border: #60798B;
   color: #9DA9B5;
   border-radius: 4px;
-  padding: 3px;
+  padding: 2px;
   outline: none;
 }
 
@@ -1078,26 +1040,24 @@ QPushButton:checked:selected {
   background: #60798B;
 }
 
-QPushButton::menu-indicator {
-  subcontrol-origin: padding;
-  subcontrol-position: bottom right;
-  bottom: 4px;
-}
-
 QPushButton:hover {
   background-color: #54687A;
-  border: #54687A;
   color: #E0E1E3;
 }
 
 QPushButton:pressed {
   background-color: #60798B;
-  border: #60798B;
 }
 
 QPushButton:selected {
   background: #60798B;
   color: #E0E1E3;
+}
+
+QPushButton::menu-indicator {
+  subcontrol-origin: padding;
+  subcontrol-position: bottom right;
+  bottom: 4px;
 }
 
 QDialogButtonBox QPushButton {
@@ -1111,49 +1071,65 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qtoolbutton
 
 --------------------------------------------------------------------------- */
 QToolButton {
-  background-color: transparent;
-  border: 1px solid transparent;
+  background-color: #455364;
+  color: #E0E1E3;
   border-radius: 4px;
-  margin: 0px;
   padding: 2px;
+  outline: none;
+  border: none;
   /* The subcontrols below are used only in the DelayedPopup mode */
   /* The subcontrols below are used only in the MenuButtonPopup mode */
   /* The subcontrol below is used only in the InstantPopup or DelayedPopup mode */
 }
 
+QToolButton:disabled {
+  background-color: #455364;
+  color: #9DA9B5;
+  border-radius: 4px;
+  padding: 2px;
+}
+
 QToolButton:checked {
-  background-color: #37414F;
-  border: #37414F;
+  background-color: #60798B;
+  border-radius: 4px;
+  padding: 2px;
+  outline: none;
 }
 
 QToolButton:checked:disabled {
-  background-color: #455364;
-  border: #455364;
+  background-color: #60798B;
+  color: #9DA9B5;
+  border-radius: 4px;
+  padding: 2px;
+  outline: none;
 }
 
 QToolButton:checked:hover {
-  background-color: #37414F;
-  border: #37414F;
+  background-color: #54687A;
+  color: #E0E1E3;
 }
 
-QToolButton:pressed {
-  margin: 1px;
-  background-color: #37414F;
-  border: #37414F;
+QToolButton:checked:pressed {
+  background-color: #60798B;
 }
 
-QToolButton:pressed:hover {
-  background-color: #37414F;
-  border: #37414F;
-}
-
-QToolButton:disabled {
-  border: none;
+QToolButton:checked:selected {
+  background: #60798B;
+  color: #E0E1E3;
 }
 
 QToolButton:hover {
-  background-color: #293544;
-  border: #293544;
+  background-color: #54687A;
+  color: #E0E1E3;
+}
+
+QToolButton:pressed {
+  background-color: #60798B;
+}
+
+QToolButton:selected {
+  background: #60798B;
+  color: #E0E1E3;
 }
 
 QToolButton[popupMode="0"] {
@@ -1172,7 +1148,7 @@ QToolButton[popupMode="1"]::menu-button {
 
 QToolButton[popupMode="1"]::menu-button:hover {
   border: none;
-  border-left: 1px solid #1A72BB;
+  border-left: 1px solid #455364;
   border-radius: 0;
 }
 
@@ -1184,8 +1160,8 @@ QToolButton[popupMode="2"] {
 QToolButton::menu-button {
   padding: 2px;
   border-radius: 4px;
-  border: 1px solid #455364;
   width: 12px;
+  border: none;
   outline: none;
 }
 
