@@ -57,7 +57,7 @@ from qdarkstyle.dark.palette import DarkPalette  # noqa: E402
 from qdarkstyle.light.palette import LightPalette  # noqa: E402
 
 # Set log for debug
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 _logger = logging.getLogger(__name__)
 
 here = os.path.abspath(os.path.dirname(__file__))
