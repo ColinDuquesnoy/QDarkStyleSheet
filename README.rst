@@ -4,10 +4,11 @@ QDarkStyleSheet
 |Build Status| |Docs Status| |Latest PyPI version| |License: MIT|
 |License: CC BY 4.0| |Conduct|
 
-The most complete dark/light style sheet for Qt applications (Qt4[*]_, Qt5,
-PySide[*]_, PySide2, PyQt4[*]_, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python 2[*]_/3 and C++.
+The most complete dark/light style sheet for Qt applications (Qt4*, Qt5,
+PySide*, PySide2, PyQt4*, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python
+2*/3 and C++.
 
-`Check the documentation <https://qdarkstylesheet.readthedocs.io/en/latest/screenshots.html>`__
+`Check out the complete documentation. <https://qdarkstylesheet.readthedocs.io/en/latest/screenshots.html>`__
 
 
 What is new?
@@ -31,7 +32,7 @@ The current stable version is using Python 3 (preferable 3.6+) and Qt5
 We still preparing the portability to Qt6 since we need changes in
 `QtPy <https://github.com/spyder-ide/qtpy>`__ dependency project.
 
-.. [*] Python 2, as well as Qt4 (PyQt4 and PySide), will not be supported anymore.
+[*] Python 2, as well as Qt4 (PyQt4 and PySide), will not be supported anymore.
 They still there as it is, but no back-compatibility, fixes, nor features
 will be implemented.
 
