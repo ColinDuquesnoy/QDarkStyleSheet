@@ -1674,7 +1674,6 @@ QTabBar, QDockWidget QTabBar {
 
         &:top {
             background-color: $COLOR_BACKGROUND_4;
-            color: $COLOR_TEXT_1;
             margin-left: 2px;
             padding-left: 4px;
             padding-right: 4px;
@@ -1687,7 +1686,6 @@ QTabBar, QDockWidget QTabBar {
 
             &:selected {
                 background-color: $COLOR_BACKGROUND_5;
-                color: $COLOR_TEXT_1;
                 border-bottom: 3px solid $COLOR_ACCENT_4;
                 border-top-left-radius: $SIZE_BORDER_RADIUS;
                 border-top-right-radius: $SIZE_BORDER_RADIUS;
@@ -1703,7 +1701,6 @@ QTabBar, QDockWidget QTabBar {
         }
 
         &:bottom {
-            color: $COLOR_TEXT_1;
             border-top: 3px solid $COLOR_BACKGROUND_4;
             background-color: $COLOR_BACKGROUND_4;
             margin-left: 2px;
@@ -1716,7 +1713,6 @@ QTabBar, QDockWidget QTabBar {
             min-width: 5px;
 
             &:selected {
-                color: $COLOR_TEXT_1;
                 background-color: $COLOR_BACKGROUND_5;
                 border-top: 3px solid $COLOR_ACCENT_4;
                 border-bottom-left-radius: $SIZE_BORDER_RADIUS;
@@ -1734,7 +1730,6 @@ QTabBar, QDockWidget QTabBar {
         }
 
         &:left {
-            color: $COLOR_TEXT_1;
             background-color: $COLOR_BACKGROUND_4;
             margin-top: 2px;
             padding-left: 2px;
@@ -1746,7 +1741,6 @@ QTabBar, QDockWidget QTabBar {
             min-height: 5px;
 
             &:selected {
-                color: $COLOR_TEXT_1;
                 background-color: $COLOR_BACKGROUND_5;
                 border-right: 3px solid $COLOR_ACCENT_4;
             }
@@ -1761,7 +1755,6 @@ QTabBar, QDockWidget QTabBar {
         }
 
         &:right {
-            color: $COLOR_TEXT_1;
             background-color: $COLOR_BACKGROUND_4;
             margin-top: 2px;
             padding-left: 2px;
@@ -1773,7 +1766,6 @@ QTabBar, QDockWidget QTabBar {
             min-height: 5px;
 
             &:selected {
-                color: $COLOR_TEXT_1;
                 background-color: $COLOR_BACKGROUND_5;
                 border-left: 3px solid $COLOR_ACCENT_4;
 
