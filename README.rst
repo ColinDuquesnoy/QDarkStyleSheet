@@ -4,8 +4,8 @@ QDarkStyleSheet
 |Build Status| |Docs Status| |Latest PyPI version| |License: MIT|
 |License: CC BY 4.0| |Conduct|
 
-The most complete dark/light style sheet for Qt applications (Qt4, Qt5,
-PySide, PySide2, PyQt4, PyQt5, QtPy, PyQtGraph, Qt.Py).
+The most complete dark/light style sheet for Qt applications (Qt4[*]_, Qt5,
+PySide[*]_, PySide2, PyQt4[*]_, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python 2[*]_/3 and C++.
 
 `Check the documentation <https://qdarkstylesheet.readthedocs.io/en/latest/screenshots.html>`__
 
@@ -14,8 +14,8 @@ What is new?
 ------------
 
 
-v3.0
-~~~~
+Version 3
+~~~~~~~~~
 
 In the current version 3, `qdarkstyle` is now working as a theme framework,
 currently for dark/light themes, keeping styled widgets identical throughout
@@ -25,32 +25,43 @@ The palette has been redefined and improved (UI/UX) to accept more colors
 and to be able to implement new themes thanks to the
 `Spyder team <https://github.com/spyder-ide/spyder>`__ collaboration.
 
-v2.8
-~~~~
+The current stable version is using Python 3 (preferable 3.6+) and Qt5
+(PyQt5 and PySide 2).
 
-We moved to QtPy to simplify your code, thus this is a required dependency
-now. We included special patches in three main categories: operating system,
-Qt/binding version, application.
+We still preparing the portability to Qt6 since we need changes in
+`QtPy <https://github.com/spyder-ide/qtpy>`__ dependency project.
 
-Included in that, lots of widgets' styles were included/fixed. A Qt application
-example with almost all types of widgets and combinations was included to
-serve as a portfolio and a checklist for new styles.
+.. [*] Python 2, as well as Qt4 (PyQt4 and PySide), will not be supported anymore.
+They still there as it is, but no back-compatibility, fixes, nor features
+will be implemented.
 
-v2.7
-~~~~
+Version 2
+~~~~~~~~~
 
-We have added SCSS, so the palette can be accessed programmatically.
+We moved to QtPy to simplify your code in v2.8, thus this is a required
+dependency now. We included special patches in three main categories:
+operating system, Qt/binding version, application.
+
+Included in that, lots of widgets' styles were included/fixed. A Qt
+application example (Python only) with almost all types of widgets and
+combinations were included to serve as a portfolio and a checklist for
+new styles.
+
+We have added SCSS in v2.7, so the palette can be accessed programmatically.
 Also, many scripts were added to give freedom to developers who want to
 change the colors of our palette. All images and icons were revised, also
 creating SVG files for all of them.
 
-v2.6
-~~~~
-
 In version 2.6 and later, a restructure stylesheet is provided. The
 palette has only 9 colors. Most widgets are revised and their styles
-were improved. We also provide a command-line (script) to get info that
+were improved. We also provide a command line (script) to get info that
 could be used when opening issues. See the image below.
+
+
+Version 1
+~~~~~~~~~
+
+First stable release of QDarkStyle.
 
 
 Installation

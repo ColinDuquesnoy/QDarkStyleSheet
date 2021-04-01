@@ -1,7 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""QDarkStyle is a dark stylesheet for Python and Qt applications.
+"""The most complete dark/light style sheet for Qt applications (Qt4[*]_, Qt5,
+PySide[*]_, PySide2, PyQt4[*]_, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python 2[*]_/3 and C++.
+
+.. [*] Python 2, as well as Qt4 (PyQt4 and PySide), will not be supported anymore.
+They still there as it is, but no back-compatibility, fixes, nor features
+will be implemented.
+
+We still preparing the portability to Qt6 since we need changes in
+`QtPy <https://github.com/spyder-ide/qtpy>`__ dependency project.
+
+Check the `documentation <https://qdarkstylesheet.readthedocs.io/en/stable>`__
+to see how to set the desirable theme palette.
 
 This module provides a function to load the stylesheets transparently
 with the right resources file.
