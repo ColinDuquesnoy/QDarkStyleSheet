@@ -182,6 +182,8 @@ def main():
     action_menu.setMenu(menu)
     window.toolBarMenus.addAction(action_menu)
 
+    # Add color to tab title text #212
+    window.tabWidget.tabBar().setTabTextColor(3, QtGui.QColor('red'))
 
     # Connect dialogs to buttons
     window.toolButtonColorDialog.clicked.connect(lambda: QtWidgets.QColorDialog().exec())

@@ -134,7 +134,7 @@
          </widget>
          <widget class="QWidget" name="tab_4">
           <attribute name="title">
-           <string>Page</string>
+           <string>Colored tab text</string>
           </attribute>
          </widget>
          <widget class="QWidget" name="tab_5">
