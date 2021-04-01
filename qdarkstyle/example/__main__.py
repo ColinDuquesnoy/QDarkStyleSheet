@@ -177,9 +177,11 @@ def main():
     dw_buttons.toolButtonInstantPopup.setMenu(menu)
     dw_buttons.toolButtonMenuButtonPopup.setMenu(menu)
 
-    # Add menu in toolbar
+    # Add menu in toolbar #251
     action_menu = QtWidgets.QAction(u'Menu action', window.toolBarMenus)
     action_menu.setMenu(menu)
+    window.toolBarMenus.addAction(action_menu)
+
 
     # Connect dialogs to buttons
     window.toolButtonColorDialog.clicked.connect(lambda: QtWidgets.QColorDialog().exec())
