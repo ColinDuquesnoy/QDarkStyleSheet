@@ -1574,7 +1574,6 @@ QTabBar::tab:right:!selected, QDockWidget QTabBar::tab:right:!selected {
 
 QTabBar::tab:top, QDockWidget QTabBar::tab:top {
   background-color: #C9CDD0;
-  color: #19232D;
   margin-left: 2px;
   padding-left: 4px;
   padding-right: 4px;
@@ -1588,7 +1587,6 @@ QTabBar::tab:top, QDockWidget QTabBar::tab:top {
 
 QTabBar::tab:top:selected, QDockWidget QTabBar::tab:top:selected {
   background-color: #B9BDC1;
-  color: #19232D;
   border-bottom: 3px solid #37AEFE;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -1603,7 +1601,6 @@ QTabBar::tab:top:!selected:hover, QDockWidget QTabBar::tab:top:!selected:hover {
 }
 
 QTabBar::tab:bottom, QDockWidget QTabBar::tab:bottom {
-  color: #19232D;
   border-top: 3px solid #C9CDD0;
   background-color: #C9CDD0;
   margin-left: 2px;
@@ -1617,7 +1614,6 @@ QTabBar::tab:bottom, QDockWidget QTabBar::tab:bottom {
 }
 
 QTabBar::tab:bottom:selected, QDockWidget QTabBar::tab:bottom:selected {
-  color: #19232D;
   background-color: #B9BDC1;
   border-top: 3px solid #37AEFE;
   border-bottom-left-radius: 4px;
@@ -1633,7 +1629,6 @@ QTabBar::tab:bottom:!selected:hover, QDockWidget QTabBar::tab:bottom:!selected:h
 }
 
 QTabBar::tab:left, QDockWidget QTabBar::tab:left {
-  color: #19232D;
   background-color: #C9CDD0;
   margin-top: 2px;
   padding-left: 2px;
@@ -1646,7 +1641,6 @@ QTabBar::tab:left, QDockWidget QTabBar::tab:left {
 }
 
 QTabBar::tab:left:selected, QDockWidget QTabBar::tab:left:selected {
-  color: #19232D;
   background-color: #B9BDC1;
   border-right: 3px solid #37AEFE;
 }
@@ -1660,7 +1654,6 @@ QTabBar::tab:left:!selected:hover, QDockWidget QTabBar::tab:left:!selected:hover
 }
 
 QTabBar::tab:right, QDockWidget QTabBar::tab:right {
-  color: #19232D;
   background-color: #C9CDD0;
   margin-top: 2px;
   padding-left: 2px;
@@ -1673,7 +1666,6 @@ QTabBar::tab:right, QDockWidget QTabBar::tab:right {
 }
 
 QTabBar::tab:right:selected, QDockWidget QTabBar::tab:right:selected {
-  color: #19232D;
   background-color: #B9BDC1;
   border-left: 3px solid #37AEFE;
 }
