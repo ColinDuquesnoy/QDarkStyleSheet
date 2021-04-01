@@ -4,8 +4,9 @@ QDarkStyleSheet
 |Build Status| |Docs Status| |Latest PyPI version| |License: MIT|
 |License: CC BY 4.0| |Conduct|
 
-The most complete dark/light style sheet for Qt applications (Qt4[*]_, Qt5,
-PySide[*]_, PySide2, PyQt4[*]_, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python 2[*]_/3 and C++.
+The most complete dark/light style sheet for Qt applications (Qt4 [*]_, Qt5,
+PySide [*]_, PySide2, PyQt4 [*]_, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python
+2 [*]_ /3 and C++.
 
 `Check the documentation <https://qdarkstylesheet.readthedocs.io/en/latest/screenshots.html>`__
 
