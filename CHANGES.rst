@@ -1,6 +1,10 @@
 Changelog
 =========
 
+- 3.0.2:
+    - Enable the use of setTabColor and add example, fixes #212
+    - Update description to inform about Python 2 and Qt4 unsupported versions
+    - Add missing examples #251
 - 3.0.1:
     - Enhacement of state of active/non active itens in views #209
     - Update manifest to include UI files
