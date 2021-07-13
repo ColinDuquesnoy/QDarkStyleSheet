@@ -1290,10 +1290,6 @@ QComboBox::item:alternate {
   background: #19232D;
 }
 
-QComboBox::item:checked {
-  font-weight: bold;
-}
-
 QComboBox::item:selected {
   border: 0px solid transparent;
 }
