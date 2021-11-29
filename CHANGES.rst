@@ -1,6 +1,11 @@
 Changelog
 =========
 
+- 3.0.3:
+    - Temporary fix for expanded combo box in Qt 5.15, fixes #282, #285, MR #288
+    - Fix generating assets in Posix
+    - Fix tristate value for checkbox #275
+    - Minor fixes and improvements
 - 3.0.2:
     - Enable the use of setTabColor and add example, fixes #212
     - Update description to inform about Python 2 and Qt4 unsupported versions
