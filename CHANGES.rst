@@ -6,6 +6,7 @@ Changelog
     - Fix generating assets in Posix
     - Fix tristate value for checkbox #275
     - Minor fixes and improvements
+    - Include data files when installing package #299
 - 3.0.2:
     - Enable the use of setTabColor and add example, fixes #212
     - Update description to inform about Python 2 and Qt4 unsupported versions
