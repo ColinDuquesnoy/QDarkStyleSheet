@@ -214,10 +214,10 @@ def _apply_application_patches(QCoreApplication, QPalette, QColor, palette):
         app_palette.setColor(QPalette.Normal, QPalette.Link, qcolor)
         app.setPalette(app_palette)
     else:
-        _logger.warn("No QCoreApplication instance found. "
-                     "Application patches not applied. "
-                     "You have to call load_stylesheet function after "
-                     "instantiation of QApplication to take effect. ")
+        _logger.warning("No QCoreApplication instance found. "
+                        "Application patches not applied. "
+                        "You have to call load_stylesheet function after "
+                        "instantiation of QApplication to take effect. ")
 
 
 def _load_stylesheet(qt_api='', palette=None):
