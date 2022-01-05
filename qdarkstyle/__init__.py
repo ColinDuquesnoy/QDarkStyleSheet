@@ -91,7 +91,7 @@ def _set_global_paths(palette='dark'):
 
     # File names
     global QSS_FILE, QRC_FILE
-    QSS_FILE = 'style.qss'
+    QSS_FILE = palette + 'style.qss'
     QRC_FILE = QSS_FILE.replace('.qss', '.qrc')
 
     global MAIN_SCSS_FILE, STYLES_SCSS_FILE, VARIABLES_SCSS_FILE
