@@ -286,7 +286,7 @@ def _load_stylesheet(qt_api='', palette=None):
         qss_file.open(QFile.ReadOnly | QFile.Text)
         text_stream = QTextStream(qss_file)
         stylesheet = text_stream.readAll()
-        _logger.info("QSS file sucessfuly loaded.")
+        _logger.info("QSS file successfully loaded.")
     else:
         stylesheet = ""
         # Todo: check this raise type and add to docs
