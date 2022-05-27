@@ -12,7 +12,7 @@ Requirements:
     - Python 3
     - QtPy
     - PyQt5 or PyQt4 or PySide2 or PySide
-    - PyQtGraph or Qt.Py (if choosen)
+    - PyQtGraph or Qt.Py (if chosen)
 
 To run this example using PyQt5, simple do
 

@@ -11,7 +11,7 @@ Changelog
     - Update description to inform about Python 2 and Qt4 unsupported versions
     - Add missing examples #251
 - 3.0.1:
-    - Enhacement of state of active/non active itens in views #209
+    - Enhancement of state of active/non active items in views #209
     - Update manifest to include UI files
 - **3.0.0**:
     - New structure to create different palettes #268, #164

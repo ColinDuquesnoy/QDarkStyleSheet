@@ -140,7 +140,7 @@ Logging
 -------
 
 Inside modules we provided a logging that should be used to inform the
-user. Please, follow the levels bellow.
+user. Please, follow the levels below.
 
 -  debug: for debug information, high detailed one, directed to
    programmers;
@@ -347,7 +347,7 @@ maintainer in both.
 
 4. Try upload in `PyPI test
    page <https://test.pypi.org/project/QDarkStyle>`__ platform before
-   the oficial
+   the official
 
    ``twine upload --repository-url https://test.pypi.org/legacy/ dist/*``
 
@@ -364,7 +364,7 @@ maintainer in both.
 
    ``twine upload --repository-url https://upload.pypi.org/legacy/ dist/*``
 
-8. Try to install from oficial
+8. Try to install from official
 
    ``pip install qdarkstyle``
 

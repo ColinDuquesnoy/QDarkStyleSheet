@@ -162,7 +162,7 @@ def create_custom_qss(
     The `name` must be a valid Python identifier and will be stored
     as a lowercased folder (even if the identifier had uppercase letters).
 
-    This fuction returns the custom stylesheet pointing to resources stored at
+    This function returns the custom stylesheet pointing to resources stored at
     .../path/name/.
     """
     stylesheet = ''
@@ -272,7 +272,7 @@ def create_custom_qss_from_dict(name, path, palette_dict):
 
 if __name__ == '__main__':
     # Example of a custom palette
-    # TODO: change to not use a specfic path
+    # TODO: change to not use a specific path
     # TODO: may move to other place, e.g., example.py
     qss = create_custom_qss(
         'MyAwesomePalette',

@@ -235,7 +235,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
 def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
                       palette=None):
     """
-    Generate the QRC file programmaticaly.
+    Generate the QRC file programmatically.
 
     Search all RC folder for PNG images and create a QRC file.
 
