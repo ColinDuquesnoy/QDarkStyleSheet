@@ -375,7 +375,7 @@ def load_stylesheet(*args, **kwargs):
                 stylesheet = _load_stylesheet(qt_api='pyqt4', palette=palette)
 
         # Deprecation warning only for old API
-        warnings.warn(DEPRECATION_MSG, DeprecationWarning)
+        warnings.warning(DEPRECATION_MSG, DeprecationWarning)
 
     # New API arguments
     elif 'qt_api' in kwargs or isinstance(arg, str):
@@ -453,7 +453,7 @@ def load_stylesheet_from_environment(is_pyqtgraph=False):
     Returns:
         str: the stylesheet string.
     """
-    warnings.warn(DEPRECATION_MSG, DeprecationWarning)
+    warnings.warning(DEPRECATION_MSG, DeprecationWarning)
 
     if is_pyqtgraph:
         stylesheet = _load_stylesheet(qt_api=os.environ.get('PYQTGRAPH_QT_LIB', None))
