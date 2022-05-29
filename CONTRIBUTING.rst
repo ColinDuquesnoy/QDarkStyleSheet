@@ -26,8 +26,8 @@ by one of the maintainers before it is merged into the main repository.
    repository <https://github.com/ColinDuquesnoy/QDarkStyleSheet>`__ on
    GitHub to start making your changes to the develop branch.
 
--  Write a test which shows that the bug was fixed or that the feature
-   works as expected if its a function, or create a screenshot if you
+-  Write a test that shows that the bug was fixed or that the feature
+   works as expected, or create a screenshot if you
    are changing the stylesheet evidencing the changes.
 
 -  Send a pull request and bug the maintainer until it gets merged and
@@ -85,13 +85,13 @@ These are the basic steps needed to start developing on QDarkStyle.
 
       git checkout -b feature-xyz
 
--  Hands on
+-  Hands-on
 
    For tips on working with the code, see the Code Guide.
 
 -  Test, test, test
 
-   Testing is best done through ``tox``, which provides a number of
+   Testing is best done through ``tox``, which provides several
    targets and allows testing against multiple different Python
    environments:
 
@@ -139,18 +139,18 @@ These are the basic steps needed to start developing on QDarkStyle.
 Logging
 -------
 
-Inside modules we provided a logging that should be used to inform the
+Inside modules, we provided logging that should be used to inform the
 user. Please, follow the levels below.
 
--  debug: for debug information, high detailed one, directed to
+-  debug: for debug information, a highly detailed one, directed to
    programmers;
 
--  info: something important for common user to know;
+-  info: something important for a common user to know;
 
 -  warning: something that should not be a big problem or a decision
    changed;
 
--  error: some error, but not capable of stop program;
+-  error: some error, but not capable of stopping program;
 
 -  critical: something that could stop the running program.
 
@@ -162,11 +162,11 @@ instructions to others. We use the reStructured text format (rst) for
 all docs.
 
 All new functions, classes, files, must be documented with all
-arguments, returns, exceptions. Without this it should not pass the
+arguments, returns, exceptions. Without this, it should not pass the
 tests.
 
-The better example is to see the current files to get the style. We are
-using the Google Format and Sphinx for generating the docs.
+A better example is to see the current files to get the style. We are
+using Google Format and Sphinx for generating the docs.
 
 Guide to QDarkStyle
 -------------------
@@ -175,7 +175,7 @@ Structure of the Example
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now you can use our example to work on the stylesheet. It has all
-possible widget provided by Qt - common ones. Feel free to add more to
+possible widgets provided by Qt - common ones. Feel free to add more to
 them.
 
 To simplify the structure, there are separated files in
@@ -193,7 +193,7 @@ folder.
 -  ``dw_widgets.ui``: all types of widgets;
 -  ``mw_menus.ui``: main window with all menus and toolbars.
 
-*Note*: ``dw`` stands for dock widget and ``mw`` for main window.
+*Note*: ``dw`` stands for dock widget and ``mw`` for the main window.
 
 The entire example is built at runtime, in
 `qdarkstyle.example <https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/qdarkstyle/example/__main__.py>`__.
@@ -224,7 +224,7 @@ things, use the script
 
    python scripts/run_ui_css_edition.py
 
-This creates a loop that restarts the application, process ui and css
+This creates a loop that restarts the application, processes ui and css
 files.
 
 For more information about those scripts, see their documentation.
@@ -242,7 +242,7 @@ Qt, Stylesheets, Palettes and Icons
 -  `QMainWindow <http://doc.qt.io/qt-5/qmainwindow.html>`__
 -  `References <http://doc.qt.io/qt-5/stylesheet.html>`__
 
-Create good palettes with these tools. For example, on paletton, choose
+Create good palettes with these tools. For example, on Paletton, choose
 three colors from grayish light (foreground), grayish dark (background)
 and three more colorful colors (selection). Grayish colors have a little
 bit of the main color, so it is nice to change it if you change the main
@@ -272,7 +272,7 @@ Main characteristics of SVG images are:
 -  Names: from basic form to specific, so they keep grouped. Ex.:
    arrow\_left, arrow\_up.
 
-Some example are given below for the horizontal Handle, Minimize, and
+Some examples are given below for the horizontal Handle, Minimize, and
 checked Checkbox.
 
 .. raw:: html
@@ -317,7 +317,7 @@ fixing something related to those functions (not style), that you
 provide a test for it.
 
 If you are fixing something about style, please, at least, provide an
-screenshot before and after the fix to comparison. This could be
+screenshot before and after the fix for comparison. This could be
 inserted in the issue tracker, as a message. Better than that, use
 modules provided in test folder to create a GUI test, creating a new
 file for it.
@@ -329,7 +329,7 @@ If You Are a Maintainer, Go Ahead to Production
 ----------------------------------------------
 
 Of course, until you start these steps, make sure the package have
-passed all tests and checkers before continue. You must have accounts to
+passed all tests and checkers before continuing. You must have accounts to
 both test and official PyPI website below along with be inserted as a
 maintainer in both.
 

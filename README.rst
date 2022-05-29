@@ -33,7 +33,7 @@ We still preparing the portability to Qt6 since we need changes in
 `QtPy <https://github.com/spyder-ide/qtpy>`__ dependency project.
 
 [*] Python 2, as well as Qt4 (PyQt4 and PySide), will not be supported anymore.
-They still there as it is, but no back-compatibility, fixes, nor features
+They are still there as it is, but no back compatibility, fixes, nor features
 will be implemented.
 
 Version 2
@@ -252,7 +252,7 @@ Usage of example/portfolio
 
 
 There is an example included in the package. You only need to have PySide2 or
-PyQt5 installed on your system.
+PyQt5 is installed on your system.
 
 .. code:: bash
 

@@ -14,7 +14,7 @@ Changelog
     - Update description to inform about Python 2 and Qt4 unsupported versions
     - Add missing examples #251
 - 3.0.1:
-    - Enhancement of state of active/non active items in views #209
+    - Enhancement of state of active/non-active items in views #209
     - Update manifest to include UI files
 - **3.0.0**:
     - New structure to create different palettes #268, #164
@@ -92,7 +92,7 @@ Changelog
     - Python 2.7 compatibility, #121
     - Fix MANIFEST
 - 2.6.3:
-    - Palette color enhance, better contrast, contribute to #118
+    - Palette color enhances, better contrast, contribute to #118
     - Fixes Qslider background
     - Better colors and format for tab and toolbox, contribute to #118
 - 2.6.2:
@@ -113,25 +113,25 @@ Changelog
     - Fix slider disabled and enhance size
     - Fix the wrong upload of style.qss - sorry
     - Fix almost all widgets backgrounds and other not previously covered widgets with new style
-    - New palette color, almost whole new qss file, simplify configuration, partially #112, #101, #109,
+    - New palette color, almost whole new qss file, simplifies configuration, partially #112, #101, #109,
     - Add changes made by other people in the new style - merge does not work there #93, #92, #102
     - Update README with Qt.py and PySide 2 information #110, #107, #83
     - Update **init** info
     - Improve scripts for processing ui and qrc
-    - Add **main** and setup entry, to access function directly
+    - Add **main** and setup entry, to access the function directly
     - Add function to get information about bindings and abstraction layers for debugging and/or issue tracker
     - PySide 2 support
     - Improve menu indicator position on QPushButton, #102
 - 2.5.4
     - Fix indicator image of checkable QGroupBox for a check/uncheck states, #93
-    - Fix wrong comma position, #95
+    - Fix the wrong comma position, #95
     - Added image for the missing QTreeView/QListView undetermined state, fix #92
 - 2.5.3
     - Add future warning and pending deprecation for 3.0 version preparation #89
     - Add ISSUE\_TEMPLATE to ask for default information on the issue tracker
 - 2.5.2:
     - Modularize files from example/ui to simplify edition (developers)
-    - Add scripts to process files and run example more easily (developers)
+    - Add scripts to process files and run examples more easily (developers)
     - Better documentation (developers)
     - Add CONTRIBUTE, CODE\_OF\_CONDUCT, and PRODUCTION files
     - Lint markdown to standardize files
@@ -146,7 +146,7 @@ Changelog
     - Add new screenshots for new example
     - Update Travis files
     - Add support to the example of QtPy and PyQtGraph
-    - Move scripts for compiling to scrip folder
+    - Move scripts for compiling to script folder
     - Update README, CHANGES
 - 2.4:
     - Add function to get Qt information from environment variable #69, #70, #73
@@ -156,7 +156,7 @@ Changelog
 - 2.3.1:
     - Improve checkbox color (use accent color used in other widgets) and
     darken view hover/selected colors to play nicer with other widget colors
-    - Shift to the right the first tab
+    - Shift to the right of the first tab
     - Update license year
     - Update README (fix snapshots links and formatting)
     - Removed QLineEdit top/bottom padding which cut off a text while editing QListView items
@@ -201,15 +201,15 @@ Changelog
     - Add support for QToolBox
     - Fix issue with grid line in QTableView if there is only ONE row/column
 - 1.7:
-    - Fix appearance of bottom tab bars (invert gradient)
+    - Fix the appearance of bottom tab bars (invert gradient)
     - Improve QTableView: add grid line and fix section borders
     - Fix bug #7: bug when resizing QTableView
-    - Fix bug #8: text validation no working on QDockWidget
+    - Fix bug #8: text validation not working on QDockWidget
 - 1.6:
     - Improve QToolButton style
     - Add support for InstantPopup and MenuButtonPopup
     - Improve QMenu style (better spacing with icons)
-    - Add \_\_version\_\_ to python package.
+    - Add \_\_version\_\_ to Python package.
 - 1.5:
     - Improve QTabBar style: now works with all tab bar positions (North, South, West and East)
     - Fix bug #6: hide QTabBar base to avoid strange lines at the base of the tab bar.

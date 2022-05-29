@@ -4,7 +4,7 @@ Authors
 Maintainer(s)
 -------------
 
-These people were/are mainteiners of this project.
+These people were/are maintainers of this project.
 
 -  2013-current `Colin Duquesnoy <https://github.com/ColinDuquesnoy>`__ - colin.duquesnoy@gmail.com - original author.
 
