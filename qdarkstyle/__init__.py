@@ -78,15 +78,10 @@ _logger = logging.getLogger(__name__)
 def _set_global_paths(palette='dark'):
     global REPO_PATH
     REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
-
-    global EXAMPLE_PATH, IMAGES_PATH, PACKAGE_PATH
     EXAMPLE_PATH = os.path.join(REPO_PATH, 'example')
-    IMAGES_PATH = os.path.join(REPO_PATH, 'docs/images')
+IMAGES_PATH = os.path.join(REPO_PATH, 'docs', 'images')
     PACKAGE_PATH = os.path.join(REPO_PATH, 'qdarkstyle')
-
-    global QSS_PATH, RC_PATH, SVG_PATH
     QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
-    RC_PATH = os.path.join(PACKAGE_PATH, palette, 'rc')
     SVG_PATH = os.path.join(PACKAGE_PATH, 'svg')
 
     # File names
