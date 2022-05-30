@@ -81,8 +81,12 @@ def _scss_to_dict(string):
 def _create_scss_variables(variables_scss_filepath, palette,
                            header=HEADER_SCSS):
     """Create a scss variables file."""
+
     scss = _dict_to_scss(palette.to_dict())
     data = header.format(qtsass.__version__) + scss + '\n'
+
+    _logger.info("Generating SCSS variables file ...")
+    _logger.info("File path: %s" % variables_scss_filepath)
 
     with open(variables_scss_filepath, 'w') as f:
         f.write(data)
@@ -90,7 +94,11 @@ def _create_scss_variables(variables_scss_filepath, palette,
 
 def _create_qss(main_scss_path, qss_filepath, header=HEADER_QSS):
     """Create a styles.qss file from qtsass."""
+
     data = ''
+
+    _logger.info("Generating QSS file ...")
+    _logger.info("File path: %s" % os.path.join(main_scss_path, qss_filepath))
 
     qtsass.compile_filename(main_scss_path, qss_filepath,
                             output_style='expanded')
