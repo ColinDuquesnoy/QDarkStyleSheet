@@ -181,6 +181,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
     num_svg = len(svg_fnames)
     num_png = 0
     num_ignored = 0
+    num_ignored_list = []
 
     # Get rc links from scss to check matches
     rc_list = get_rc_links_from_scss()
@@ -219,7 +220,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
                     if height == base_height:
                         rc_base = os.path.basename(rc_path)
                         png_base = os.path.basename(png_fname)
-                        rc_name = '/' + os.path.join(rc_base, png_base)
+                        rc_name = '/' + rc_base + '/' + png_base
                         try:
                             rc_list.remove(rc_name)
                         except ValueError:
@@ -228,13 +229,15 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
                 num_ignored += 1
                 _logger.debug("  Ignored blacklist: %s"
                               % os.path.basename(svg_fname))
+                num_ignored_list.append(svg_fname)
 
     _logger.info("# SVG files: %s" % num_svg)
     _logger.info("# SVG ignored: %s" % num_ignored)
+    _logger.info("SVG ignored: %s" % num_ignored_list)
     _logger.info("# PNG files: %s" % num_png)
     _logger.info("# RC links: %s" % num_rc_list)
-    _logger.info("# RC links not in RC: %s" % len(rc_list))
-    _logger.info("RC links not in RC: %s" % rc_list)
+    _logger.info("# RC links in _style.scss not in RC: %s" % len(rc_list))
+    _logger.info("RC links in _style.scss not in RC: %s" % rc_list)
 
 
 def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
