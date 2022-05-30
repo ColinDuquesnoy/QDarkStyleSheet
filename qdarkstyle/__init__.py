@@ -240,13 +240,13 @@ def _load_stylesheet(qt_api='', palette=None):
 
     # Then we import resources - binary qrc content
     if palette is None:
-        from qdarkstyle.dark import style_rc
+        from qdarkstyle.dark import darkstyle_rc
         palette = DarkPalette
     elif palette.ID == 'dark':
-        from qdarkstyle.dark import style_rc
+        from qdarkstyle.dark import darkstyle_rc
         palette = DarkPalette
     elif palette.ID == 'light':
-        from qdarkstyle.light import style_rc
+        from qdarkstyle.light import lightstyle_rc
         palette = LightPalette
     else:
         print("Not recognized ID for palette! Exiting!")
@@ -254,7 +254,8 @@ def _load_stylesheet(qt_api='', palette=None):
 
     # Thus, by importing the binary we can access the resources
     package_dir = os.path.basename(PACKAGE_PATH)
-    qss_rc_path = ":" + os.path.join(package_dir, palette.ID, QSS_FILE)
+    palette_dir = os.path.join(package_dir, palette.ID)
+    qss_rc_path = ":" + os.path.join(palette_dir, palette.ID + QSS_FILE)
 
     _logger.debug("Reading QSS file in: %s" % qss_rc_path)
 

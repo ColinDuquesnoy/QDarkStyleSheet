@@ -128,7 +128,7 @@ def create_qss(palette=None):
     palette_path = os.path.join(PACKAGE_PATH, palette.ID)
     variables_scss_filepath = os.path.join(palette_path, VARIABLES_SCSS_FILE)
     main_scss_filepath = os.path.join(palette_path, MAIN_SCSS_FILE)
-    qss_filepath = os.path.join(palette_path, QSS_FILE)
+    qss_filepath = os.path.join(palette_path, palette.ID + QSS_FILE)
 
     _create_scss_variables(variables_scss_filepath, palette)
     stylesheet = _create_qss(main_scss_filepath, qss_filepath)
@@ -224,7 +224,7 @@ def create_custom_qss(
     # Compile SCSS
     variables_scss_filepath = os.path.join(theme_qss_path, VARIABLES_SCSS_FILE)
     theme_main_scss_filepath = os.path.join(theme_qss_path, MAIN_SCSS_FILE)
-    theme_qss_filepath = os.path.join(theme_root_path, QSS_FILE)
+    theme_qss_filepath = os.path.join(theme_root_path, palette.ID + QSS_FILE)
     stylesheet = create_qss(
         qss_filepath=theme_qss_filepath,
         main_scss_filepath=theme_main_scss_filepath,

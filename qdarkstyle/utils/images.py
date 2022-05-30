@@ -269,7 +269,9 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
 
     palette_path = os.path.join(PACKAGE_PATH, palette.ID)
     rc_path = os.path.join(palette_path, 'rc')
-    qrc_filepath = os.path.join(palette_path, QRC_FILE)
+    qss_file = palette.ID + QSS_FILE
+    qrc_file = palette.ID + QRC_FILE
+    qrc_filepath = os.path.join(palette_path, qrc_file)
     resource_prefix = resource_prefix + '/' + palette.ID
     style_prefix = style_prefix + '/' + palette.ID
 
@@ -287,7 +289,7 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
     # Join parts
     qrc_content = (TEMPLATE_QRC_HEADER.format(resource_prefix=resource_prefix)
                    + '\n'.join(files)
-                   + TEMPLATE_QRC_FOOTER.format(style_prefix=style_prefix, qss_file=QSS_FILE))
+                   + TEMPLATE_QRC_FOOTER.format(style_prefix=style_prefix, qss_file=qss_file))
 
     _logger.info("Writing in: %s" % qrc_filepath)
 
