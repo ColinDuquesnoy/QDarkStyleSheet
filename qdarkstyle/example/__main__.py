@@ -140,6 +140,7 @@ def main():
     uic.loadUi(os.path.join(here, 'ui/mw_menus.ui'), window)
 
     title = ("QDarkStyle Example - ("
+             + f"Palette={args.palette}, "
              + f"QDarkStyle=v{qdarkstyle.__version__}, "
              + f"QtPy=v{QTPY_VERSION}, "
              + f"{API_NAME}=v{API_VERSION}, "
