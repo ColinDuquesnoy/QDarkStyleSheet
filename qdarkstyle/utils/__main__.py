@@ -40,7 +40,7 @@ from watchdog.observers import Observer
 from qdarkstyle import PACKAGE_PATH
 from qdarkstyle.dark.palette import DarkPalette
 from qdarkstyle.light.palette import LightPalette
-from qdarkstyle.utils import run_process
+from qdarkstyle.utils import process_palette, run_process
 from qdarkstyle.utils.images import (create_images, create_palette_image,
                                      generate_qrc_file)
 from qdarkstyle.utils.scss import create_qss
@@ -93,7 +93,7 @@ def main():
         observer.join()
     else:
         for palette in [DarkPalette, LightPalette]:
-            run_process(args, palette)
+            process_palette(palette=palette, compile_for=args.create)
 
 
 if __name__ == "__main__":
