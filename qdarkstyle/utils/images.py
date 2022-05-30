@@ -36,7 +36,7 @@ TEMPLATE_QRC_FILE = '    <file>rc/{fname}</file>'
 TEMPLATE_QRC_FOOTER = '''
   </qresource>
   <qresource prefix="{style_prefix}">
-      <file>style.qss</file>
+      <file>{qss_file}</file>
   </qresource>
 </RCC>
 '''
@@ -286,7 +286,7 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
     # Join parts
     qrc_content = (TEMPLATE_QRC_HEADER.format(resource_prefix=resource_prefix)
                    + '\n'.join(files)
-                   + TEMPLATE_QRC_FOOTER.format(style_prefix=style_prefix))
+                   + TEMPLATE_QRC_FOOTER.format(style_prefix=style_prefix, qss_file=QSS_FILE))
 
     _logger.info("Writing in: %s" % qrc_filepath)
 
