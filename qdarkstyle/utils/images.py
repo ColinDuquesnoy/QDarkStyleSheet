@@ -294,7 +294,7 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
         fh.write(qrc_content)
 
 
-def get_rc_links_from_scss(pattern=r"\/.*\.png"):
+def get_rc_links_from_scss(pattern=r"\/rc.*\.png"):
     """
     Get all rc links from scss file returning the list of unique links.
 
@@ -316,6 +316,7 @@ def get_rc_links_from_scss(pattern=r"\/.*\.png"):
     for line in lines:
         match = re.search(compiled_exp, line)
         if match:
+            path = match.group(1)
             rc_list.append(match.group(1))
 
     rc_list = list(set(rc_list))
