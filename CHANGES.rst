@@ -1,7 +1,11 @@
 Changelog
 =========
 
-- 3.0.4:
+- 3.1:
+    - Fixes generating resources
+    - Correct spelling mistakes
+    - Refactoring functions from qdarkstyle.utils
+    - Include prefix of palette.ID for qrc, qss, _rc files, keep working on C++ #273
     - Fix global variables issue #298
     - Include data files when installing package #299
 - 3.0.3:
