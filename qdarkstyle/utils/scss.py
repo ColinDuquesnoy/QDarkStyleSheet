@@ -172,6 +172,9 @@ def create_custom_qss(
     This function returns the custom stylesheet pointing to resources stored at
     .../path/name/.
     """
+    # TODO: update this function for the new Palette class
+    raise NotImplementedError("Update this function for the new Palette class")
+
     stylesheet = ''
 
     # Check if name is valid
