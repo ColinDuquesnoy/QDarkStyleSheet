@@ -85,7 +85,12 @@ def convert_svg_to_png(svg_path, png_path, height, width):
     icon = QIcon(svg_path)
     pixmap = icon.pixmap(size)
     img = pixmap.toImage()
-    img.save(png_path)
+    dirname = os.path.dirname(png_path)
+
+    if not os.path.exists(dirname):
+        os.makedirs(dirname)
+
+    img.save(os.path.abspath(png_path))
 
 
 def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
