@@ -12,6 +12,7 @@ import os
 import re
 import sys
 import tempfile
+import subprocess
 
 # Third party imports
 from qtpy.QtCore import QSize
@@ -322,3 +323,119 @@ def get_rc_links_from_scss(pattern=r"\/rc.*\.png"):
     rc_list = list(set(rc_list))
 
     return rc_list
+
+
+def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
+    """
+    Compile the QRC file converting it to _rc.py nad/or .rcc.
+
+    When using an abstraction laywer (QtPy/pyqtgraph) over a binging
+    (PySide/PyQt), at the end, it changes the importing name.
+
+    For all other `compile_for` that not 'qtpy', it prefixes the file name
+    with `compile_for` value.
+
+    Args:
+        compile_for (list, optional): Prefix used in resources.
+            Defaults to 'qtpy'. Possible values are 'qtpy', 'pyqtgraph',
+            'pyqt', 'pyqt5', 'pyside', 'pyside2', 'qt', 'qt5', 'all'.
+        qrc_path (str, optional): .qrc folder path.
+            Defaults to None.
+        palette (Palette, optional): Palette.
+    """
+
+    if palette is None:
+        _logger.error("Please pass a palette class in order to create its "
+                      "associated file")
+        sys.exit(1)
+
+    if palette.ID is None:
+        _logger.error("A QDarkStyle palette requires an ID!")
+        sys.exit(1)
+
+    if not qrc_path:
+        qrc_path = os.path.join(PACKAGE_PATH, palette.ID)
+
+    qrc_file = palette.ID + QRC_FILE
+
+    # get name without extension
+    filename = os.path.splitext(qrc_file)[0]
+
+    ext = '_rc.py'
+    ext_c = '.rcc'
+
+    # creating names
+    py_file_pyqt5 = 'pyqt5_' + filename + ext
+    py_file_pyqt = 'pyqt_' + filename + ext
+    py_file_pyside = 'pyside_' + filename + ext
+    py_file_pyside2 = 'pyside2_' + filename + ext
+    py_file_qtpy = '' + filename + ext
+    py_file_pyqtgraph = 'pyqtgraph_' + filename + ext
+
+    # it is simple to change the directory, otherwise we need to add
+    # more arguments for each compiler
+    old_cwd = os.getcwd()
+    os.chdir(qrc_path)
+
+    # Shell kwarg to pass to subprocess
+    shell = True if os.name == 'nt' else False
+
+    # calling external commands
+    if compile_for in ['pyqt', 'pyqtgraph', 'all']:
+        _logger.info("Compiling for PyQt4 ...")
+        try:
+            subprocess.call(['pyrcc4', '-py3', qrc_file, '-o', py_file_pyqt], shell=shell)
+        except FileNotFoundError:
+            _logger.error("You must install pyrcc4")
+
+    if compile_for in ['pyqt5', 'qtpy', 'all']:
+        _logger.info("Compiling for PyQt5 ...")
+        try:
+            subprocess.call(['pyrcc5', qrc_file, '-o', py_file_pyqt5], shell=shell)
+        except FileNotFoundError:
+            _logger.error("You must install pyrcc5")
+
+    if compile_for in ['pyside', 'all']:
+        _logger.info("Compiling for PySide ...")
+        try:
+            subprocess.call(['pyside-rcc', '-py3', qrc_file, '-o', py_file_pyside], shell=shell)
+        except FileNotFoundError:
+            _logger.error("You must install pyside-rcc")
+
+    if compile_for in ['pyside2', 'all']:
+        _logger.info("Compiling for PySide 2...")
+        try:
+            subprocess.call(['pyside2-rcc', qrc_file, '-o', py_file_pyside2], shell=shell)
+        except FileNotFoundError:
+            _logger.error("You must install pyside2-rcc")
+
+    if compile_for in ['qtpy', 'all']:
+        _logger.info("Compiling for QtPy ...")
+        # special case - qtpy - syntax is PyQt5
+        with open(py_file_pyqt5, 'r') as file:
+            filedata = file.read()
+
+        # replace the target string
+        filedata = filedata.replace('from PyQt5', 'from qtpy')
+
+        with open(py_file_qtpy, 'w+') as file:
+            # write the file out again
+            file.write(filedata)
+
+        if compile_for not in ['pyqt5']:
+            os.remove(py_file_pyqt5)
+
+    if compile_for in ['pyqtgraph', 'all']:
+        _logger.info("Compiling for PyQtGraph ...")
+        # special case - pyqtgraph - syntax is PyQt4
+        with open(py_file_pyqt, 'r') as file:
+            filedata = file.read()
+
+        # replace the target string
+        filedata = filedata.replace('from PyQt4', 'from pyqtgraph.Qt')
+
+        with open(py_file_pyqtgraph, 'w+') as file:
+            # write the file out again
+            file.write(filedata)
+
+    os.chdir(old_cwd)
