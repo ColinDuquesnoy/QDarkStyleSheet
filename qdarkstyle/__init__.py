@@ -76,23 +76,23 @@ _logger = logging.getLogger(__name__)
 
 
 # Dir names
-    REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
-    EXAMPLE_PATH = os.path.join(REPO_PATH, 'example')
+REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
+EXAMPLE_PATH = os.path.join(REPO_PATH, 'example')
 IMAGES_PATH = os.path.join(REPO_PATH, 'docs', 'images')
-    PACKAGE_PATH = os.path.join(REPO_PATH, 'qdarkstyle')
-    QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
-    SVG_PATH = os.path.join(PACKAGE_PATH, 'svg')
+PACKAGE_PATH = os.path.join(REPO_PATH, 'qdarkstyle')
+QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
+SVG_PATH = os.path.join(PACKAGE_PATH, 'svg')
 
-    # File names
+# File names
 QSS_FILE = 'style.qss'
-    QRC_FILE = QSS_FILE.replace('.qss', '.qrc')
+QRC_FILE = QSS_FILE.replace('.qss', '.qrc')
 
-    MAIN_SCSS_FILE = 'main.scss'
-    STYLES_SCSS_FILE = '_styles.scss'
-    VARIABLES_SCSS_FILE = '_variables.scss'
+MAIN_SCSS_FILE = 'main.scss'
+STYLES_SCSS_FILE = '_styles.scss'
+VARIABLES_SCSS_FILE = '_variables.scss'
 
-    # File paths
-    STYLES_SCSS_FILEPATH = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
+# File paths
+STYLES_SCSS_FILEPATH = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
 
 # Todo: check if we are deprecate all those functions or keep them
 DEPRECATION_MSG = '''This function will be deprecated in v3.0.
