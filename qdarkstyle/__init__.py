@@ -74,9 +74,8 @@ __version__ = "3.0.3"
 
 _logger = logging.getLogger(__name__)
 
-# Folder's path
-def _set_global_paths(palette='dark'):
-    global REPO_PATH
+
+# Dir names
     REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
     EXAMPLE_PATH = os.path.join(REPO_PATH, 'example')
 IMAGES_PATH = os.path.join(REPO_PATH, 'docs', 'images')
@@ -85,26 +84,15 @@ IMAGES_PATH = os.path.join(REPO_PATH, 'docs', 'images')
     SVG_PATH = os.path.join(PACKAGE_PATH, 'svg')
 
     # File names
-    global QSS_FILE, QRC_FILE
-    QSS_FILE = palette + 'style.qss'
+QSS_FILE = 'style.qss'
     QRC_FILE = QSS_FILE.replace('.qss', '.qrc')
 
-    global MAIN_SCSS_FILE, STYLES_SCSS_FILE, VARIABLES_SCSS_FILE
     MAIN_SCSS_FILE = 'main.scss'
     STYLES_SCSS_FILE = '_styles.scss'
     VARIABLES_SCSS_FILE = '_variables.scss'
 
     # File paths
-    global QSS_FILEPATH, QRC_FILEPATH
-    QSS_FILEPATH = os.path.join(PACKAGE_PATH, palette, QSS_FILE)
-    QRC_FILEPATH = os.path.join(PACKAGE_PATH, palette, QRC_FILE)
-
-    global MAIN_SCSS_FILEPATH, STYLES_SCSS_FILEPATH, VARIABLES_SCSS_FILEPATH
-    MAIN_SCSS_FILEPATH = os.path.join(QSS_PATH, palette, MAIN_SCSS_FILE)
     STYLES_SCSS_FILEPATH = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
-    VARIABLES_SCSS_FILEPATH = os.path.join(QSS_PATH, palette, VARIABLES_SCSS_FILE)
-
-_set_global_paths()
 
 # Todo: check if we are deprecate all those functions or keep them
 DEPRECATION_MSG = '''This function will be deprecated in v3.0.
@@ -254,15 +242,12 @@ def _load_stylesheet(qt_api='', palette=None):
     if palette is None:
         from qdarkstyle.dark import style_rc
         palette = DarkPalette
-        _set_global_paths('dark')
     elif palette.ID == 'dark':
         from qdarkstyle.dark import style_rc
         palette = DarkPalette
-        _set_global_paths('dark')
     elif palette.ID == 'light':
         from qdarkstyle.light import style_rc
         palette = LightPalette
-        _set_global_paths('light')
     else:
         print("Not recognized ID for palette! Exiting!")
         sys.exit(1)
