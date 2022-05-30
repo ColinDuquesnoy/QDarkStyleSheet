@@ -27,10 +27,8 @@ Links to understand those tools:
 from __future__ import absolute_import, print_function
 
 import argparse
-import glob
-import os
+import logging
 import sys
-from subprocess import call
 
 # Third party imports
 from watchdog.events import FileSystemEventHandler
@@ -40,11 +38,11 @@ from watchdog.observers import Observer
 from qdarkstyle import PACKAGE_PATH
 from qdarkstyle.dark.palette import DarkPalette
 from qdarkstyle.light.palette import LightPalette
-from qdarkstyle.utils import process_palette, run_process
-from qdarkstyle.utils.images import (create_images, create_palette_image,
-                                     generate_qrc_file)
-from qdarkstyle.utils.scss import create_qss
+from qdarkstyle.utils import process_palette
 
+_logger = logging.getLogger(__name__)
+
+# logging.basicConfig(level=logging.DEBUG)
 
 class QSSFileHandler(FileSystemEventHandler):
     """QSS File observer."""
@@ -57,7 +55,8 @@ class QSSFileHandler(FileSystemEventHandler):
     def on_modified(self, event):
         """Handle file system events."""
         if event.src_path.endswith('.qss'):
-            run_process(self.args)
+            # TODO: needs implementation for new palettes
+            process_palette(compile_for=self.args.create)
             print('\n')
 
 
