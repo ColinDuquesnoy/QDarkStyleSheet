@@ -279,6 +279,7 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
 
     # Search by png images
     for fname in sorted(os.listdir(rc_path)):
+        if os.path.splitext(fname)[1] == '.png':
         files.append(TEMPLATE_QRC_FILE.format(fname=fname))
 
     # Join parts
