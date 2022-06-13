@@ -14,7 +14,7 @@ import sys
 import qtsass
 
 # Local imports
-from qdarkstyle import (MAIN_SCSS_FILE, PACKAGE_PATH, QSS_FILE, QSS_PATH,
+from qdarkstyle import (MAIN_SCSS_FILE, PACKAGE_PATH, QSS_FILE_SUFFIX, QSS_PATH,
                         VARIABLES_SCSS_FILE)
 from qdarkstyle.palette import Palette
 from qdarkstyle.utils.images import create_images, create_palette_image

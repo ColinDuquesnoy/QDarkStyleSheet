@@ -11,7 +11,7 @@ import logging
 import sys
 
 # Local imports
-from qdarkstyle import PACKAGE_PATH, QRC_FILE
+from qdarkstyle import PACKAGE_PATH, QRC_FILE_SUFFIX
 from qdarkstyle.utils.images import (compile_qrc_file, create_images,
                                      create_palette_image, generate_qrc_file)
 from qdarkstyle.utils.scss import create_qss

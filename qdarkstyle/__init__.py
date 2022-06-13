@@ -74,7 +74,6 @@ __version__ = "3.1"
 
 _logger = logging.getLogger(__name__)
 
-
 # Dir names
 REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 EXAMPLE_PATH = os.path.join(REPO_PATH, 'example')
@@ -84,15 +83,15 @@ QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
 SVG_PATH = os.path.join(PACKAGE_PATH, 'svg')
 
 # File names
-QSS_FILE = 'style.qss'
-QRC_FILE = QSS_FILE.replace('.qss', '.qrc')
-
 MAIN_SCSS_FILE = 'main.scss'
 STYLES_SCSS_FILE = '_styles.scss'
 VARIABLES_SCSS_FILE = '_variables.scss'
 
-# File paths
-STYLES_SCSS_FILEPATH = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
+# Prefixes and suffixes
+RESOURCE_PREFIX = "qss_icons"
+STYLE_PREFIX = "qdarkstyle"
+QSS_FILE_SUFFIX = 'style.qss'
+QRC_FILE_SUFFIX = 'style.qrc'
 
 # Todo: check if we are deprecate all those functions or keep them
 DEPRECATION_MSG = '''This function will be deprecated in v3.0.
@@ -255,7 +254,7 @@ def _load_stylesheet(qt_api='', palette=None):
     # Thus, by importing the binary we can access the resources
     package_dir = os.path.basename(PACKAGE_PATH)
     palette_dir = os.path.join(package_dir, palette.ID)
-    qss_rc_path = ":" + os.path.join(palette_dir, palette.ID + QSS_FILE)
+    qss_rc_path = ":" + os.path.join(palette_dir, palette.ID + QSS_FILE_SUFFIX)
 
     _logger.debug("Reading QSS file in: %s" % qss_rc_path)
 

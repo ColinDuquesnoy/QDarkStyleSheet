@@ -20,8 +20,8 @@ from qtpy.QtGui import QIcon
 from qtpy.QtWidgets import QApplication
 
 # Local imports
-from qdarkstyle import (IMAGES_PATH, PACKAGE_PATH, QRC_FILE, QSS_FILE,
-                        STYLES_SCSS_FILEPATH, SVG_PATH)
+from qdarkstyle import (IMAGES_PATH, PACKAGE_PATH, QRC_FILE_SUFFIX, QSS_FILE_SUFFIX, QSS_PATH,
+                        STYLES_SCSS_FILE, SVG_PATH)
 
 
 IMAGE_BLACKLIST = ['base_palette']
@@ -269,8 +269,8 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
 
     palette_path = os.path.join(PACKAGE_PATH, palette.ID)
     rc_path = os.path.join(palette_path, 'rc')
-    qss_file = palette.ID + QSS_FILE
-    qrc_file = palette.ID + QRC_FILE
+    qss_file = palette.ID + QSS_FILE_SUFFIX
+    qrc_file = palette.ID + QRC_FILE_SUFFIX
     qrc_filepath = os.path.join(palette_path, qrc_file)
     resource_prefix = resource_prefix + '/' + palette.ID
     style_prefix = style_prefix + '/' + palette.ID
@@ -309,7 +309,9 @@ def get_rc_links_from_scss(pattern=r"\/rc.*\.png"):
         list(str): list of unique links found.
     """
 
-    with open(STYLES_SCSS_FILEPATH, 'r') as fh:
+    style_scss_filepath = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
+
+    with open(style_scss_filepath, 'r') as fh:
         data = fh.read()
 
     lines = data.split("\n")
@@ -359,7 +361,7 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
     if not qrc_path:
         qrc_path = os.path.join(PACKAGE_PATH, palette.ID)
 
-    qrc_file = palette.ID + QRC_FILE
+    qrc_file = palette.ID + QRC_FILE_SUFFIX
 
     # get name without extension
     filename = os.path.splitext(qrc_file)[0]
