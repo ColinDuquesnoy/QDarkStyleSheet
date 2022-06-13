@@ -5,7 +5,7 @@
 PySide, PySide2, PyQt4, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python 2/3 and C++.
 
 Python 2, as well as Qt4 (PyQt4 and PySide), will not be supported anymore.
-They still there as it is, but no back-compatibility, fixes, nor features
+They are still there as it is, but no back-compatibility, fixes, nor features
 will be implemented.
 
 We still preparing the portability to Qt6 since we need changes in
@@ -23,7 +23,7 @@ First, start importing our module
 
     import qdarkstyle
 
-Then you can get stylesheet provided by QDarkStyle for various Qt wrappers
+Then you can get the stylesheet provided by QDarkStyle for various Qt wrappers
 as shown below
 
 .. code-block:: python
@@ -103,7 +103,7 @@ passing the argument qt_api='wanted_binding'.'''
 
 def _apply_os_patches(palette):
     """
-    Apply OS-only specific stylesheet pacthes.
+    Apply OS-only specific stylesheet patches.
 
     Returns:
         str: stylesheet string (css).
@@ -209,7 +209,7 @@ def _load_stylesheet(qt_api='', palette=None):
 
     If the argument is not passed, it uses the current QT_API environment
     variable to make the imports of Qt bindings. If passed, it sets this
-    variable then make the imports.
+    variable and then makes the imports.
 
     Args:
         qt_api (str): qt binding name to set QT_API environment variable.

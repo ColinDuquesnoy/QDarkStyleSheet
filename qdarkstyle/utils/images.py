@@ -332,8 +332,8 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
     """
     Compile the QRC file converting it to _rc.py nad/or .rcc.
 
-    When using an abstraction laywer (QtPy/pyqtgraph) over a binging
-    (PySide/PyQt), at the end, it changes the importing name.
+    When using an abstraction layer (QtPy/pyqtgraph) over a binging
+    (PySide/PyQt), in the end, it changes the importing name.
 
     For all other `compile_for` that not 'qtpy', it prefixes the file name
     with `compile_for` value.
