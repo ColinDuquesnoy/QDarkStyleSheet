@@ -256,7 +256,7 @@ def _load_stylesheet(qt_api='', palette=None):
     palette_dir = os.path.join(package_dir, palette.ID)
     qss_rc_path = ":" + os.path.join(palette_dir, palette.ID + QSS_FILE_SUFFIX)
 
-    _logger.debug("Reading QSS file in: %s" % qss_rc_path)
+    _logger.debug(f"Reading QSS file in: {qss_rc_path}")
 
     # It gets the qss file from compiled style_rc that was imported,
     # not from the file QSS as we are using resources

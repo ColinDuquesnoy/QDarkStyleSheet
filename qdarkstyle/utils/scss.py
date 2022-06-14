@@ -85,7 +85,7 @@ def _create_scss_variables(variables_scss_filepath, palette,
     data = header.format(qtsass.__version__) + scss + '\n'
 
     _logger.info("Generating SCSS variables file ...")
-    _logger.info("File path: %s" % variables_scss_filepath)
+    _logger.info(f"File path: {variables_scss_filepath}")
 
     with open(variables_scss_filepath, 'w') as f:
         f.write(data)
@@ -97,7 +97,8 @@ def _create_qss(main_scss_path, qss_filepath, header=HEADER_QSS):
     data = ''
 
     _logger.info("Generating QSS file ...")
-    _logger.info("File path: %s" % os.path.join(main_scss_path, qss_filepath))
+    _logger.info(f"SCSS path: {main_scss_path}")
+    _logger.info(f"QSS path: {qss_filepath}")
 
     qtsass.compile_filename(main_scss_path, qss_filepath,
                             output_style='expanded')
