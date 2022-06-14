@@ -112,9 +112,17 @@ def _create_qss(main_scss_path, qss_filepath, header=HEADER_QSS):
 
     return data
 
+def _is_identifier(name):
+    """Check that `name` string is a valid identifier in Python."""
+    if PY2:
+        is_not_keyword = name not in keyword.kwlist
+        pattern = re.compile(r'^[a-z_][a-z0-9_]*$', re.I)
+        matches_pattern = bool(pattern.match(name))
+        check = is_not_keyword and matches_pattern
+    else:
+        check = name.isidentifier()
+    return check
 
-def create_qss(palette=None):
-    """Create variables files and run qtsass compilation."""
 
     if palette is None:
         print("Please pass a palette class in order to create its "
@@ -134,19 +142,6 @@ def create_qss(palette=None):
     stylesheet = _create_qss(main_scss_filepath, qss_filepath)
 
     return stylesheet
-
-
-def is_identifier(name):
-    """Check that `name` string is a valid identifier in Python."""
-    if PY2:
-        is_not_keyword = name not in keyword.kwlist
-        pattern = re.compile(r'^[a-z_][a-z0-9_]*$', re.I)
-        matches_pattern = bool(pattern.match(name))
-        check = is_not_keyword and matches_pattern
-    else:
-        check = name.isidentifier()
-
-    return check
 
 
 def create_custom_qss(
