@@ -18,6 +18,7 @@ from qdarkstyle.utils.scss import create_qss
 
 _logger = logging.getLogger(__name__)
 
+
 def process_palette(palette, compile_for='qtpy'):
     """Process palette class to create a new palette file/folders.
 

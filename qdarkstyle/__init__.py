@@ -74,7 +74,7 @@ __version__ = "3.1"
 
 _logger = logging.getLogger(__name__)
 
-# Dir names
+# Base directory paths
 REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 EXAMPLE_PATH = os.path.join(REPO_PATH, 'example')
 IMAGES_PATH = os.path.join(REPO_PATH, 'docs', 'images')
@@ -176,7 +176,7 @@ def _apply_version_patches(qt_version):
 
 def _apply_application_patches(QCoreApplication, QPalette, QColor, palette):
     """
-    Apply application level fixes on the QPalette.
+    Apply application-level fixes on the QPalette.
 
     The import names args must be passed here because the import is done
     inside the load_stylesheet() function, as QtPy is only imported in
@@ -222,7 +222,7 @@ def _load_stylesheet(qt_api='', palette=None):
         - If you are using another abstraction layer, i.e PyQtGraph to do
           imports on Qt things you must set both to use the same Qt
           binding (PyQt, PySide).
-        - OS, binding and binding version number, and application specific
+        - OS, binding and binding version number, and application-specific
           patches are applied in this order.
 
     Returns:
