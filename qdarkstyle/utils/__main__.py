@@ -3,23 +3,22 @@
 
 The script will attempt to compile the qrc file using the following tools:
 
-    - pyrcc4 for PyQt4 and PyQtGraph (Python)
-    - pyrcc5 for PyQt5 and QtPy (Python)
-    - pyside-rcc for PySide (Python)
-    - pyside2-rcc for PySide2 (Python)
-    - rcc for Qt4 and Qt5 (C++)
+    - `pyside6-rcc` for PySide6 and QtPy (Python) (Official)
+    - There is no specific rcc compiler for PyQt6, use `pyside6-rcc` (Python)
+    - `pyrcc5` for PyQt5 (Python)
+    - `pyside2-rcc` for PySide2 (Python)
+    - `rcc` for Qt5/Qt6 (C++)
 
 Delete the compiled files that you don't want to use manually after
 running this script.
 
 Links to understand those tools:
 
-    - pyrcc4: http://pyqt.sourceforge.net/Docs/PyQt4/resources.html#pyrcc4
-    - pyrcc5: http://pyqt.sourceforge.net/Docs/PyQt5/resources.html#pyrcc5
-    - pyside-rcc: https://www.mankier.com/1/pyside-rcc
-    - pyside2-rcc: https://doc.qt.io/qtforpython/overviews/resources.html (Documentation Incomplete)
-    - rcc on Qt4: http://doc.qt.io/archives/qt-4.8/rcc.html
-    - rcc on Qt5: http://doc.qt.io/qt-5/rcc.html
+    - `pyside6-rcc`: https://doc.qt.io/qtforpython/tutorials/basictutorial/qrcfiles.html (Official)
+    - `pyrcc5`: http://pyqt.sourceforge.net/Docs/PyQt5/resources.html#pyrcc5
+    - `pyside2-rcc: https://doc.qt.io/qtforpython/overviews/resources.html (Documentation Incomplete)
+    - `rcc` on Qt6: https://doc.qt.io/qt-6/resources.html
+    - `rcc` on Qt5: http://doc.qt.io/qt-5/rcc.html
 
 """
 
@@ -43,6 +42,7 @@ from qdarkstyle.utils import process_palette
 _logger = logging.getLogger(__name__)
 
 # logging.basicConfig(level=logging.DEBUG)
+
 
 class QSSFileHandler(FileSystemEventHandler):
     """QSS File observer."""
@@ -70,7 +70,7 @@ def main():
                         help="QRC file directory, relative to current directory.",)
     parser.add_argument('--create',
                         default='qtpy',
-                        choices=['pyqt', 'pyqt5', 'pyside', 'pyside2', 'qtpy', 'pyqtgraph', 'qt', 'qt5', 'all'],
+                        choices=['pyqt5', 'pyqt6', 'pyside2', 'pyside6', 'qtpy', 'pyqtgraph', 'qt', 'qt5', 'all'],
                         type=str,
                         help="Choose which one would be generated.")
     parser.add_argument('--watch', '-w',

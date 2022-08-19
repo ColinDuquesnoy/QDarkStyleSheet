@@ -40,7 +40,9 @@ def process_palette(palette, compile_for='qtpy'):
         palette (Palette): Palette.
         compile_for (list, optional): Prefix used in resources.
             Defaults to 'qtpy'. Possible values are 'qtpy', 'pyqtgraph',
-            'pyqt', 'pyqt5', 'pyside', 'pyside2', 'qt', 'qt5', 'all'.
+            'pyqt', 'pyqt5', 'pyqt6',
+            'pyside', 'pyside2', 'pyside6',
+            'qt', 'qt5', qt6, 'all'.
     """
 
     if palette is None:

@@ -367,10 +367,12 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
     ext_c = '.rcc'
 
     # creating names
+    py_file_pyqt6 = 'pyqt6_' + filename + ext
     py_file_pyqt5 = 'pyqt5_' + filename + ext
     py_file_pyqt = 'pyqt_' + filename + ext
-    py_file_pyside = 'pyside_' + filename + ext
+    py_file_pyside6 = 'pyside6_' + filename + ext
     py_file_pyside2 = 'pyside2_' + filename + ext
+    py_file_pyside = 'pyside_' + filename + ext
     py_file_qtpy = '' + filename + ext
     py_file_pyqtgraph = 'pyqtgraph_' + filename + ext
 
@@ -390,7 +392,7 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
         except FileNotFoundError:
             _logger.error("You must install pyrcc4")
 
-    if compile_for in ['pyqt5', 'qtpy', 'all']:
+    if compile_for in ['pyqt5', 'all']:
         _logger.info("Compiling using PyQt5 ...")
         try:
             subprocess.call(['pyrcc5', qrc_file, '-o', py_file_pyqt5], shell=shell)
@@ -411,21 +413,28 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
         except FileNotFoundError:
             _logger.error("You must install pyside2-rcc")
 
+    if compile_for in ['pyside6', 'qtpy', 'all']:
+        _logger.info("Compiling using PySide 6...")
+        try:
+            subprocess.call(['pyside6-rcc', '-g', 'python', qrc_file, '-o', py_file_pyside6], shell=shell)
+        except FileNotFoundError:
+            _logger.error("You must install pyside6-rcc")
+
     if compile_for in ['qtpy', 'all']:
         _logger.info("Converting for QtPy ...")
         # special case - qtpy - syntax is PyQt5
-        with open(py_file_pyqt5, 'r') as file:
+        with open(py_file_pyside6, 'r') as file:
             filedata = file.read()
 
         # replace the target string
-        filedata = filedata.replace('from PyQt5', 'from qtpy')
+        filedata = filedata.replace('from PySide6', 'from qtpy')
 
         with open(py_file_qtpy, 'w+') as file:
             # write the file out again
             file.write(filedata)
 
-        if compile_for not in ['pyqt5']:
-            os.remove(py_file_pyqt5)
+        if compile_for not in ['pyside6']:
+            os.remove(py_file_pyside6)
 
     if compile_for in ['pyqtgraph', 'all']:
         _logger.info("Converting for PyQtGraph ...")

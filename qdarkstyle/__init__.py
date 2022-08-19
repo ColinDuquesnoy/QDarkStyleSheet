@@ -93,12 +93,13 @@ STYLE_PREFIX = "qdarkstyle"
 QSS_FILE_SUFFIX = 'style.qss'
 QRC_FILE_SUFFIX = 'style.qrc'
 
-# Todo: check if we are deprecate all those functions or keep them
-DEPRECATION_MSG = '''This function will be deprecated in v3.0.
+DEPRECATION_MSG = '''This function will be deprecated in v4.0.
 Please, set the wanted binding by using QtPy environment variable QT_API,
-then use load_stylesheet() or use load_stylesheet()
-passing the argument qt_api='wanted_binding'.'''
+then use load_stylesheet() passing the argument qt_api='wanted_binding'.'''
 
+DEPRECATION_MSG_UNSUPPORTED = '''PyQt4/PySide use will be deprecated in v4.0,
+by the lack of support. We will follow the minimum requirements given by QtPy,
+project since QDarkStyle is dependent on it.'''
 
 def _apply_os_patches(palette):
     """
@@ -397,6 +398,16 @@ def load_stylesheet_pyside2():
     return _load_stylesheet(qt_api='pyside2')
 
 
+def load_stylesheet_pyside6():
+    """
+    Load the stylesheet for use in a PySide6 application.
+
+    Returns:
+        str: the stylesheet string.
+    """
+    return _load_stylesheet(qt_api='pyside6')
+
+
 def load_stylesheet_pyqt():
     """
     Load the stylesheet for use in a PyQt4 application.
@@ -415,6 +426,16 @@ def load_stylesheet_pyqt5():
         str: the stylesheet string.
     """
     return _load_stylesheet(qt_api='pyqt5')
+
+
+def load_stylesheet_pyqt6():
+    """
+    Load the stylesheet for use in a PyQt6 application.
+
+    Returns:
+        str: the stylesheet string.
+    """
+    return _load_stylesheet(qt_api='pyqt6')
 
 
 # Deprecation Warning --------------------------------------------------------
