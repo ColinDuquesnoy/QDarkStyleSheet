@@ -24,8 +24,6 @@ Links to understand those tools:
 """
 
 # Standard library imports
-from __future__ import absolute_import, print_function
-
 import argparse
 import logging
 import sys

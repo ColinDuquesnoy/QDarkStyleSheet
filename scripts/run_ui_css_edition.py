@@ -5,8 +5,6 @@ Process qrc, ui, image, and screenshot files, then run example in while loop.
 """
 
 # Standard library imports
-from __future__ import absolute_import, print_function
-
 import argparse
 from subprocess import call
 import os

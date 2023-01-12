@@ -5,8 +5,6 @@ Utilities for processing SASS and images from default and custom palette.
 """
 
 # Standard library imports
-from __future__ import absolute_import, print_function
-
 import logging
 import sys
 
