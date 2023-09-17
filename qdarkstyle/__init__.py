@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """The most complete dark/light style sheet for Qt applications (Qt4, Qt5,
