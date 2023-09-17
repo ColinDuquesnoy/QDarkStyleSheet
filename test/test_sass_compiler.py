@@ -1,4 +1,3 @@
-#!python
 # -*- coding: utf-8 -*-
 """Test the qtsass is compiling the SCSS files to QSS."""
 
