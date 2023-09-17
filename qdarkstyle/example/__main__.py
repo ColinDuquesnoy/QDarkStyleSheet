@@ -1,4 +1,4 @@
-#!python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """Example of qdarkstyle use for Python and Qt applications.
