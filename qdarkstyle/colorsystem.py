@@ -35,4 +35,4 @@ class Blue:
     B120 = '#CEE8FF'
     B130 = '#DAEDFF'
     B140 = '#F5FAFF'
-    B150 = '##FFFFFF'
+    B150 = '#FFFFFF'
