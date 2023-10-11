@@ -11,11 +11,11 @@ class Gray:
     B70 = '#788D9C'
     B80 = '#9DA9B5'
     B90 = '#ACB1B6'
-    B100 = '#B9BDC1'
-    B110 = '#C9CDD0'
-    B120 = '#CED1D4'
-    B130 = '#E0E1E3'
-    B140 = '#FAFAFA'
+    B100 = '#B4B8BC'
+    B110 = '#C0C4C8'
+    B120 = '#CCD0D4'
+    B130 = '#D8DADC'
+    B140 = '#E3E7EB'
     B150 = '#FFFFFF'
 
 
@@ -35,4 +35,4 @@ class Blue:
     B120 = '#CEE8FF'
     B130 = '#DAEDFF'
     B140 = '#F5FAFF'
-    B150 = '##FFFFFF'
+    B150 = '#FFFFFF'
