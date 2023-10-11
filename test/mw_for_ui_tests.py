@@ -1,4 +1,3 @@
-#!python
 # -*- coding: utf-8 -*-
 
 """This module provides a main window for UI tests.
