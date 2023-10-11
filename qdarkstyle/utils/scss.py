@@ -191,8 +191,8 @@ def create_custom_qss(
     stylesheet = ''
 
     # Check if name/id is valid
-    if name.isidentifier():
-        name = name if name[0].isupper() else name.capitalize()
+    if id.isidentifier():
+        name = id if id[0].isupper() else id.capitalize()
     else:
         raise Exception('The custom palette name must be a valid Python '
                         'identifier!')
