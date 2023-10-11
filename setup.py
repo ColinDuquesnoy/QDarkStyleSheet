@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 A dark style sheet for QtWidgets application.
@@ -11,7 +11,7 @@ from setuptools import find_packages, setup
 from qdarkstyle import __doc__ as long_desc
 from qdarkstyle import __version__
 
-install_requires = ['qtpy>=1.9']
+install_requires = ['qtpy>=2']
 
 extras_require = {
     'develop': ['qtsass', 'watchdog'],
@@ -28,10 +28,12 @@ classifiers = [
     'Operating System :: Microsoft :: Windows',
     'Operating System :: POSIX :: Linux',
     'Operating System :: MacOS',
+    'Programming Language :: Python :: 3',
     'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
     'Topic :: Software Development :: Libraries :: Application Frameworks'
 ]
 

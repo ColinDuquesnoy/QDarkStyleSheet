@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """QDarkStyle default light palette."""
@@ -31,5 +30,8 @@ class LightPalette(Palette):
     COLOR_ACCENT_3 = Blue.B90
     COLOR_ACCENT_4 = Blue.B80
     COLOR_ACCENT_5 = Blue.B70
+    
+    # Color for disabled elements
+    COLOR_DISABLED = Gray.B80
 
     OPACITY_TOOLTIP = 230

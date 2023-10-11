@@ -1,4 +1,4 @@
-#!python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """Example of qdarkstyle use for Python and Qt applications.
@@ -73,8 +73,8 @@ def main():
     parser.add_argument('--palette', default='dark', type=str,
                         choices=['dark', 'light', 'none'],
                         help="Palette to display. Using 'none' there is no style sheet applied, OS like.")
-    parser.add_argument('--qt_from', default='qtpy', type=str,
-                        choices=['pyqt5', 'pyqt', 'pyside2', 'pyside', 'qtpy', 'pyqtgraph', 'qt.py'],
+    parser.add_argument('--qt_from', default='pyside6', type=str,
+                        choices=['pyqt6', 'pyqt5', 'pyqt', 'pyside6', 'pyside2', 'pyside', 'qtpy', 'pyqtgraph', 'qt.py'],
                         help="Choose which binding and/or abstraction is to be used to run the example. Default is 'qtpy'")
     parser.add_argument('--test', action='store_true',
                         help="Auto close window after 2s.")
@@ -93,7 +93,7 @@ def main():
         os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 
     # Set QT_API variable before importing QtPy
-    if args.qt_from in ['pyqt', 'pyqt5', 'pyside', 'pyside2']:
+    if args.qt_from in ['pyqt', 'pyqt5', 'pyqt6', 'pyside', 'pyside2', 'pyside6']:
         os.environ['QT_API'] = args.qt_from
     elif args.qt_from == 'pyqtgraph':
         os.environ['QT_API'] = os.environ['PYQTGRAPH_QT_LIB']

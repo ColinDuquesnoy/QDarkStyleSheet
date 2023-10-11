@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Utilities for processing SASS and images from default and custom palette.
@@ -9,12 +8,13 @@ import logging
 import sys
 
 # Local imports
-from qdarkstyle import PACKAGE_PATH, QRC_FILE
+from qdarkstyle import PACKAGE_PATH, QRC_FILE_SUFFIX
 from qdarkstyle.utils.images import (compile_qrc_file, create_images,
                                      create_palette_image, generate_qrc_file)
 from qdarkstyle.utils.scss import create_qss
 
 _logger = logging.getLogger(__name__)
+
 
 def process_palette(palette, compile_for='qtpy'):
     """Process palette class to create a new palette file/folders.
@@ -37,7 +37,9 @@ def process_palette(palette, compile_for='qtpy'):
         palette (Palette): Palette.
         compile_for (list, optional): Prefix used in resources.
             Defaults to 'qtpy'. Possible values are 'qtpy', 'pyqtgraph',
-            'pyqt', 'pyqt5', 'pyside', 'pyside2', 'qt', 'qt5', 'all'.
+            'pyqt', 'pyqt5', 'pyqt6',
+            'pyside', 'pyside2', 'pyside6',
+            'qt', 'qt5', qt6, 'all'.
     """
 
     if palette is None:

@@ -32,5 +32,6 @@ insert your information after the last one.
 -  2021 - `juanis2112 <https://github.com/juanis2112>`__ - improvements.
 -  2021 - `ccordoba12 <https://github.com/ccordoba12>`__ - mainteiner/improvements.
 -  2021 - Julian Gilbey ``jdg@debian.org`` - bug fixes.
+-  2023 - Andrés Conrado Montoya Acosta `conradolandia <https://github.com/conradolandia>` - improvements.
 
 And all people that reported bugs, thank you all!

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Utilities to process and convert svg images to png using palette colors.
@@ -18,8 +17,8 @@ from qtpy.QtGui import QIcon
 from qtpy.QtWidgets import QApplication
 
 # Local imports
-from qdarkstyle import (IMAGES_PATH, PACKAGE_PATH, QRC_FILE, QSS_FILE,
-                        STYLES_SCSS_FILEPATH, SVG_PATH)
+from qdarkstyle import (IMAGES_PATH, PACKAGE_PATH, QRC_FILE_SUFFIX, QSS_FILE_SUFFIX, QSS_PATH,
+                        STYLES_SCSS_FILE, SVG_PATH)
 
 
 IMAGE_BLACKLIST = ['base_palette']
@@ -114,9 +113,9 @@ def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
     palette_png_path = os.path.join(path, palette.ID, 'palette.png')
 
     _logger.info("Creating palette image ...")
-    _logger.info("Base SVG: %s" % base_palette_svg_path)
-    _logger.info("To SVG: %s" % palette_svg_path)
-    _logger.info("To PNG: %s" % palette_png_path)
+    _logger.info(f"Base SVG: {base_palette_svg_path}")
+    _logger.info(f"To SVG: {palette_svg_path}")
+    _logger.info(f"To PNG: {palette_png_path}")
 
     with open(base_palette_svg_path, 'r') as fh:
         data = fh.read()
@@ -173,9 +172,9 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
     }
 
     _logger.info("Creating images ...")
-    _logger.info("SVG folder: %s" % base_svg_path)
-    _logger.info("TMP folder: %s" % temp_dir)
-    _logger.info("PNG folder: %s" % rc_path)
+    _logger.info(f"SVG folder: {base_svg_path}")
+    _logger.info(f"TMP folder: {temp_dir}")
+    _logger.info(f"PNG folder: {rc_path}")
 
     num_svg = len(svg_fnames)
     num_png = 0
@@ -189,7 +188,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
     for height, ext in heights.items():
         width = height
 
-        _logger.debug(" Size HxW (px): %s X %s" % (height, width))
+        _logger.debug(f" Size HxW (px): {height} X {width}")
 
         for svg_fname in svg_fnames:
             svg_name = svg_fname.split('.')[0]
@@ -199,8 +198,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
                 svg_path = os.path.join(base_svg_path, svg_fname)
                 color_files = _get_file_color_map(svg_fname, palette=palette)
 
-                _logger.log(logging.NOTSET, "  Working on: %s"
-                            % os.path.basename(svg_fname))
+                _logger.log(logging.NOTSET, f"  Working on: {os.path.basename(svg_fname)}")
 
                 # Replace colors and create all file for different states
                 for color_svg_name, color in color_files.items():
@@ -211,8 +209,7 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
                     png_path = os.path.join(rc_path, png_fname)
                     convert_svg_to_png(temp_svg_path, png_path, height, width)
                     num_png += 1
-                    _logger.log(logging.NOTSET, "   Creating: %s"
-                                % os.path.basename(png_fname))
+                    _logger.log(logging.NOTSET, f"   Creating: {os.path.basename(png_fname)}")
 
                     # Check if the rc_name is in the rc_list from scss
                     # only for the base size
@@ -226,17 +223,16 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
                             pass
             else:
                 num_ignored += 1
-                _logger.debug("  Ignored blacklist: %s"
-                              % os.path.basename(svg_fname))
+                _logger.debug(f"  Ignored blacklist: {os.path.basename(svg_fname)}")
                 num_ignored_list.append(svg_fname)
 
-    _logger.info("# SVG files: %s" % num_svg)
-    _logger.info("# SVG ignored: %s" % num_ignored)
-    _logger.info("SVG ignored: %s" % num_ignored_list)
-    _logger.info("# PNG files: %s" % num_png)
-    _logger.info("# RC links: %s" % num_rc_list)
-    _logger.info("# RC links in _style.scss not in RC: %s" % len(rc_list))
-    _logger.info("RC links in _style.scss not in RC: %s" % rc_list)
+    _logger.info(f"# SVG files: {num_svg}")
+    _logger.info(f"# SVG ignored: {num_ignored}")
+    _logger.info(f"SVG ignored: {num_ignored_list}")
+    _logger.info(f"# PNG files: {num_png}")
+    _logger.info(f"# RC links: {num_rc_list}")
+    _logger.info(f"# RC links in _style.scss not in RC: {len(rc_list)}")
+    _logger.info(f"RC links in _style.scss not in RC: {rc_list}")
 
 
 def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
@@ -267,17 +263,17 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
 
     palette_path = os.path.join(PACKAGE_PATH, palette.ID)
     rc_path = os.path.join(palette_path, 'rc')
-    qss_file = palette.ID + QSS_FILE
-    qrc_file = palette.ID + QRC_FILE
+    qss_file = palette.ID + QSS_FILE_SUFFIX
+    qrc_file = palette.ID + QRC_FILE_SUFFIX
     qrc_filepath = os.path.join(palette_path, qrc_file)
     resource_prefix = resource_prefix + '/' + palette.ID
     style_prefix = style_prefix + '/' + palette.ID
 
     _logger.info("Generating QRC file ...")
-    _logger.info("Resource prefix: %s" % resource_prefix)
-    _logger.info("Style prefix: %s" % style_prefix)
+    _logger.info(f"Resource prefix: {resource_prefix}")
+    _logger.info(f"Style prefix: {style_prefix}")
 
-    _logger.info("Searching in: %s" % rc_path)
+    _logger.info(f"Searching in: {rc_path}")
 
     # Search by png images
     for fname in sorted(os.listdir(rc_path)):
@@ -289,7 +285,7 @@ def generate_qrc_file(resource_prefix='qss_icons', style_prefix='qdarkstyle',
                    + '\n'.join(files)
                    + TEMPLATE_QRC_FOOTER.format(style_prefix=style_prefix, qss_file=qss_file))
 
-    _logger.info("Writing in: %s" % qrc_filepath)
+    _logger.info(f"Writing in: {qrc_filepath}")
 
     # Write qrc file
     with open(qrc_filepath, 'w') as fh:
@@ -307,7 +303,9 @@ def get_rc_links_from_scss(pattern=r"\/rc.*\.png"):
         list(str): list of unique links found.
     """
 
-    with open(STYLES_SCSS_FILEPATH, 'r') as fh:
+    style_scss_filepath = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
+
+    with open(style_scss_filepath, 'r') as fh:
         data = fh.read()
 
     lines = data.split("\n")
@@ -330,8 +328,8 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
     """
     Compile the QRC file converting it to _rc.py nad/or .rcc.
 
-    When using an abstraction laywer (QtPy/pyqtgraph) over a binging
-    (PySide/PyQt), at the end, it changes the importing name.
+    When using an abstraction layer (QtPy/pyqtgraph) over a binging
+    (PySide/PyQt), in the end, it changes the importing name.
 
     For all other `compile_for` that not 'qtpy', it prefixes the file name
     with `compile_for` value.
@@ -357,7 +355,7 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
     if not qrc_path:
         qrc_path = os.path.join(PACKAGE_PATH, palette.ID)
 
-    qrc_file = palette.ID + QRC_FILE
+    qrc_file = palette.ID + QRC_FILE_SUFFIX
 
     # get name without extension
     filename = os.path.splitext(qrc_file)[0]
@@ -366,10 +364,12 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
     ext_c = '.rcc'
 
     # creating names
+    py_file_pyqt6 = 'pyqt6_' + filename + ext
     py_file_pyqt5 = 'pyqt5_' + filename + ext
     py_file_pyqt = 'pyqt_' + filename + ext
-    py_file_pyside = 'pyside_' + filename + ext
+    py_file_pyside6 = 'pyside6_' + filename + ext
     py_file_pyside2 = 'pyside2_' + filename + ext
+    py_file_pyside = 'pyside_' + filename + ext
     py_file_qtpy = '' + filename + ext
     py_file_pyqtgraph = 'pyqtgraph_' + filename + ext
 
@@ -389,7 +389,7 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
         except FileNotFoundError:
             _logger.error("You must install pyrcc4")
 
-    if compile_for in ['pyqt5', 'qtpy', 'all']:
+    if compile_for in ['pyqt5', 'all']:
         _logger.info("Compiling using PyQt5 ...")
         try:
             subprocess.call(['pyrcc5', qrc_file, '-o', py_file_pyqt5], shell=shell)
@@ -410,21 +410,28 @@ def compile_qrc_file(compile_for='qtpy', qrc_path=None, palette=None):
         except FileNotFoundError:
             _logger.error("You must install pyside2-rcc")
 
+    if compile_for in ['pyside6', 'qtpy', 'all']:
+        _logger.info("Compiling using PySide 6...")
+        try:
+            subprocess.call(['pyside6-rcc', '-g', 'python', qrc_file, '-o', py_file_pyside6], shell=shell)
+        except FileNotFoundError:
+            _logger.error("You must install pyside6-rcc")
+
     if compile_for in ['qtpy', 'all']:
         _logger.info("Converting for QtPy ...")
         # special case - qtpy - syntax is PyQt5
-        with open(py_file_pyqt5, 'r') as file:
+        with open(py_file_pyside6, 'r') as file:
             filedata = file.read()
 
         # replace the target string
-        filedata = filedata.replace('from PyQt5', 'from qtpy')
+        filedata = filedata.replace('from PySide6', 'from qtpy')
 
         with open(py_file_qtpy, 'w+') as file:
             # write the file out again
             file.write(filedata)
 
-        if compile_for not in ['pyqt5']:
-            os.remove(py_file_pyqt5)
+        if compile_for not in ['pyside6']:
+            os.remove(py_file_pyside6)
 
     if compile_for in ['pyqtgraph', 'all']:
         _logger.info("Converting for PyQtGraph ...")

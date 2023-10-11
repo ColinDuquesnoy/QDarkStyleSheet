@@ -1,11 +1,10 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """The most complete dark/light style sheet for Qt applications (Qt4, Qt5,
 PySide, PySide2, PyQt4, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python 2/3 and C++.
 
 Python 2, as well as Qt4 (PyQt4 and PySide), will not be supported anymore.
-They still there as it is, but no back-compatibility, fixes, nor features
+They are still there as it is, but no back-compatibility, fixes, nor features
 will be implemented.
 
 We still preparing the portability to Qt6 since we need changes in
@@ -23,7 +22,7 @@ First, start importing our module
 
     import qdarkstyle
 
-Then you can get stylesheet provided by QDarkStyle for various Qt wrappers
+Then you can get the stylesheet provided by QDarkStyle for various Qt wrappers
 as shown below
 
 .. code-block:: python
@@ -74,8 +73,7 @@ __version__ = "3.1"
 
 _logger = logging.getLogger(__name__)
 
-
-# Dir names
+# Base directory paths
 REPO_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 EXAMPLE_PATH = os.path.join(REPO_PATH, 'example')
 IMAGES_PATH = os.path.join(REPO_PATH, 'docs', 'images')
@@ -84,26 +82,27 @@ QSS_PATH = os.path.join(PACKAGE_PATH, 'qss')
 SVG_PATH = os.path.join(PACKAGE_PATH, 'svg')
 
 # File names
-QSS_FILE = 'style.qss'
-QRC_FILE = QSS_FILE.replace('.qss', '.qrc')
-
 MAIN_SCSS_FILE = 'main.scss'
 STYLES_SCSS_FILE = '_styles.scss'
 VARIABLES_SCSS_FILE = '_variables.scss'
 
-# File paths
-STYLES_SCSS_FILEPATH = os.path.join(QSS_PATH, STYLES_SCSS_FILE)
+# Prefixes and suffixes
+RESOURCE_PREFIX = "qss_icons"
+STYLE_PREFIX = "qdarkstyle"
+QSS_FILE_SUFFIX = 'style.qss'
+QRC_FILE_SUFFIX = 'style.qrc'
 
-# Todo: check if we are deprecate all those functions or keep them
-DEPRECATION_MSG = '''This function will be deprecated in v3.0.
+DEPRECATION_MSG = '''This function will be deprecated in v4.0.
 Please, set the wanted binding by using QtPy environment variable QT_API,
-then use load_stylesheet() or use load_stylesheet()
-passing the argument qt_api='wanted_binding'.'''
+then use load_stylesheet() passing the argument qt_api='wanted_binding'.'''
 
+DEPRECATION_MSG_UNSUPPORTED = '''PyQt4/PySide use will be deprecated in v4.0,
+by the lack of support. We will follow the minimum requirements given by QtPy,
+project since QDarkStyle is dependent on it.'''
 
 def _apply_os_patches(palette):
     """
-    Apply OS-only specific stylesheet pacthes.
+    Apply OS-only specific stylesheet patches.
 
     Returns:
         str: stylesheet string (css).
@@ -177,7 +176,7 @@ def _apply_version_patches(qt_version):
 
 def _apply_application_patches(QCoreApplication, QPalette, QColor, palette):
     """
-    Apply application level fixes on the QPalette.
+    Apply application-level fixes on the QPalette.
 
     The import names args must be passed here because the import is done
     inside the load_stylesheet() function, as QtPy is only imported in
@@ -209,7 +208,7 @@ def _load_stylesheet(qt_api='', palette=None):
 
     If the argument is not passed, it uses the current QT_API environment
     variable to make the imports of Qt bindings. If passed, it sets this
-    variable then make the imports.
+    variable and then makes the imports.
 
     Args:
         qt_api (str): qt binding name to set QT_API environment variable.
@@ -223,7 +222,7 @@ def _load_stylesheet(qt_api='', palette=None):
         - If you are using another abstraction layer, i.e PyQtGraph to do
           imports on Qt things you must set both to use the same Qt
           binding (PyQt, PySide).
-        - OS, binding and binding version number, and application specific
+        - OS, binding and binding version number, and application-specific
           patches are applied in this order.
 
     Returns:
@@ -255,9 +254,9 @@ def _load_stylesheet(qt_api='', palette=None):
     # Thus, by importing the binary we can access the resources
     package_dir = os.path.basename(PACKAGE_PATH)
     palette_dir = os.path.join(package_dir, palette.ID)
-    qss_rc_path = ":" + os.path.join(palette_dir, palette.ID + QSS_FILE)
+    qss_rc_path = ":" + os.path.join(palette_dir, palette.ID + QSS_FILE_SUFFIX)
 
-    _logger.debug("Reading QSS file in: %s" % qss_rc_path)
+    _logger.debug(f"Reading QSS file in: {qss_rc_path}")
 
     # It gets the qss file from compiled style_rc that was imported,
     # not from the file QSS as we are using resources
@@ -398,6 +397,16 @@ def load_stylesheet_pyside2():
     return _load_stylesheet(qt_api='pyside2')
 
 
+def load_stylesheet_pyside6():
+    """
+    Load the stylesheet for use in a PySide6 application.
+
+    Returns:
+        str: the stylesheet string.
+    """
+    return _load_stylesheet(qt_api='pyside6')
+
+
 def load_stylesheet_pyqt():
     """
     Load the stylesheet for use in a PyQt4 application.
@@ -416,6 +425,16 @@ def load_stylesheet_pyqt5():
         str: the stylesheet string.
     """
     return _load_stylesheet(qt_api='pyqt5')
+
+
+def load_stylesheet_pyqt6():
+    """
+    Load the stylesheet for use in a PyQt6 application.
+
+    Returns:
+        str: the stylesheet string.
+    """
+    return _load_stylesheet(qt_api='pyqt6')
 
 
 # Deprecation Warning --------------------------------------------------------
