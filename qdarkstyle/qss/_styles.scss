@@ -46,9 +46,9 @@ QWidget {
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
         selection-background-color: $COLOR_ACCENT_1;
-        selection-color: $COLOR_TEXT_4;
+        selection-color: $COLOR_DISABLED;
     }
 
     &::item {
@@ -167,7 +167,7 @@ QCheckBox {
 
     QWidget:disabled {
         background-color: $COLOR_BACKGROUND_1;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
     }
 
     &::indicator {
@@ -305,7 +305,7 @@ QRadioButton {
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
         border: none;
         outline: none;
     }
@@ -572,7 +572,7 @@ QAbstractScrollArea {
     color: $COLOR_TEXT_1;
 
     &:disabled {
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
     }
 }
 
@@ -957,7 +957,7 @@ QLabel {
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
         border: 0px solid $COLOR_BACKGROUND_4;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
     }
 }
 
@@ -975,7 +975,7 @@ QTextBrowser {
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
         border: $BORDER_2;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
         border-radius: $SIZE_BORDER_RADIUS;
     }
 
@@ -999,7 +999,7 @@ QGraphicsView {
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
         border: $BORDER_2;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
         border-radius: $SIZE_BORDER_RADIUS;
     }
 
@@ -1020,7 +1020,7 @@ QCalendarWidget {
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
     }
 }
 
@@ -1033,7 +1033,7 @@ QLCDNumber {
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
     }
 }
 
@@ -1052,7 +1052,7 @@ QProgressBar {
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
         border: $BORDER_2;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
         border-radius: $SIZE_BORDER_RADIUS;
         text-align: center;
     }
@@ -1064,7 +1064,7 @@ QProgressBar {
 
         &:disabled {
             background-color: $COLOR_ACCENT_1;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             border-radius: $SIZE_BORDER_RADIUS;
         }
     }
@@ -1089,7 +1089,7 @@ QPushButton {
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_4;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
         border-radius: $SIZE_BORDER_RADIUS;
         padding: 2px;
     }
@@ -1102,7 +1102,7 @@ QPushButton {
 
         &:disabled {
             background-color: $COLOR_BACKGROUND_6;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             border-radius: $SIZE_BORDER_RADIUS;
             padding: 2px;
             outline: none;
@@ -1155,7 +1155,7 @@ QToolButton {
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_4;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
         border-radius: $SIZE_BORDER_RADIUS;
         padding: 2px;
     }
@@ -1168,7 +1168,7 @@ QToolButton {
 
         &:disabled {
             background-color: $COLOR_BACKGROUND_6;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             border-radius: $SIZE_BORDER_RADIUS;
             padding: 2px;
             outline: none;
@@ -1284,7 +1284,7 @@ QCommandLinkButton {
 
     &:disabled {
         background-color: transparent;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
     }
 }
 
@@ -1337,7 +1337,7 @@ QComboBox {
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
     }
 
     &:hover {
@@ -1526,7 +1526,7 @@ QLineEdit {
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
     }
 
     &:hover {
@@ -1605,50 +1605,50 @@ QTabBar, QDockWidget QTabBar {
 
         &:top:selected:disabled {
             border-bottom: 3px solid $COLOR_ACCENT_1;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             background-color: $COLOR_BACKGROUND_4;
         }
 
         &:bottom:selected:disabled {
             border-top: 3px solid $COLOR_ACCENT_1;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             background-color: $COLOR_BACKGROUND_4;
         }
 
         &:left:selected:disabled {
             border-right: 3px solid $COLOR_ACCENT_1;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             background-color: $COLOR_BACKGROUND_4;
         }
 
         &:right:selected:disabled {
             border-left: 3px solid $COLOR_ACCENT_1;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             background-color: $COLOR_BACKGROUND_4;
         }
 
         /* !selected and disabled ----------------------------------------- */
         &:top:!selected:disabled {
             border-bottom: 3px solid $COLOR_BACKGROUND_1;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             background-color: $COLOR_BACKGROUND_1;
         }
 
         &:bottom:!selected:disabled {
             border-top: 3px solid $COLOR_BACKGROUND_1;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             background-color: $COLOR_BACKGROUND_1;
         }
 
         &:left:!selected:disabled {
             border-right: 3px solid $COLOR_BACKGROUND_1;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             background-color: $COLOR_BACKGROUND_1;
         }
 
         &:right:!selected:disabled {
             border-left: 3px solid $COLOR_BACKGROUND_1;
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
             background-color: $COLOR_BACKGROUND_1;
         }
 
@@ -1985,7 +1985,7 @@ QColumnView {
 
     &:disabled {
         background-color: $COLOR_BACKGROUND_1;
-        color: $COLOR_TEXT_4;
+        color: $COLOR_DISABLED;
     }
 
     &:selected {
@@ -2071,7 +2071,7 @@ QHeaderView {
             }
 
             &:disabled {
-                color: $COLOR_TEXT_4;
+                color: $COLOR_DISABLED;
             }
         }
 
@@ -2088,7 +2088,7 @@ QHeaderView {
             }
 
             &:disabled {
-                color: $COLOR_TEXT_4;
+                color: $COLOR_DISABLED;
             }
         }
     }
@@ -2139,7 +2139,7 @@ QToolBox {
         border-top-right-radius: $SIZE_BORDER_RADIUS;
 
         &:disabled {
-            color: $COLOR_TEXT_4;
+            color: $COLOR_DISABLED;
         }
 
         &:selected {
