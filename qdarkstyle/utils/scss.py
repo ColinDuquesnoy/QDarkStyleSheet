@@ -20,8 +20,6 @@ from qdarkstyle.palette import Palette
 from qdarkstyle.utils.images import create_images, create_palette_image
 
 # Constants
-PY2 = sys.version[0] == '2'
-
 HEADER_SCSS = '''// ---------------------------------------------------------------------------
 //
 //    WARNING! File created programmatically. All changes made in this file will be lost!
@@ -113,17 +111,6 @@ def _create_qss(main_scss_path, qss_filepath, header=HEADER_QSS):
 
     return data
 
-def _is_identifier(name):
-    """Check that `name` string is a valid identifier in Python."""
-    if PY2:
-        is_not_keyword = name not in keyword.kwlist
-        pattern = re.compile(r'^[a-z_][a-z0-9_]*$', re.I)
-        matches_pattern = bool(pattern.match(name))
-        check = is_not_keyword and matches_pattern
-    else:
-        check = name.isidentifier()
-    return check
-
 
 def create_qss(palette, base_path=''):
     """Create variables files and run qtsass compilation.
@@ -204,8 +191,8 @@ def create_custom_qss(
     stylesheet = ''
 
     # Check if name/id is valid
-    if _is_identifier(id):
-        name = name if name[0].isupper() else name.capitalize()
+    if id.isidentifier():
+        name = id if id[0].isupper() else id.capitalize()
     else:
         raise Exception('The custom palette name must be a valid Python '
                         'identifier!')

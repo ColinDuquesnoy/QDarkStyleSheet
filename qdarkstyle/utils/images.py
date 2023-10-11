@@ -4,8 +4,6 @@ Utilities to process and convert svg images to png using palette colors.
 """
 
 # Standard library imports
-from __future__ import absolute_import, division, print_function
-
 import logging
 import os
 import re
