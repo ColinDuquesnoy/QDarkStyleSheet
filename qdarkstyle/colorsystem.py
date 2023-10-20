@@ -13,9 +13,9 @@ class Gray:
     B90 = '#ACB1B6'
     B100 = '#B4B8BC'
     B110 = '#C0C4C8'
-    B120 = '#CCD0D4'
-    B130 = '#D8DADC'
-    B140 = '#E3E7EB'
+    B120 = '#D2D5D8'
+    B130 = '#DFE1E2'
+    B140 = '#FAFAFA'
     B150 = '#FFFFFF'
 
 
