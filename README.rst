@@ -101,26 +101,26 @@ C++
 
 - Download/clone the project and copy the following files to your
   application directory (keep the existing directory hierarchy).
-  Substitute the **theme** by the currently available (dark/light)
-  the theme you need to use.
+  Substitute the all the **THEME** words by the currently available
+  (dark/light) the theme you need to use.
 
-    -  **qdarkstyle/theme/style.qss**
-    -  **qdarkstyle/theme/style.qrc**
-    -  **qdarkstyle/theme/rc/** (the whole directory)
+    -  **qdarkstyle/THEME/THEMEstyle.qss**
+    -  **qdarkstyle/THEME/THEMEstyle.qrc**
+    -  **qdarkstyle/THEME/rc/** (the whole directory)
 
 
--  Add **qdarkstyle/theme/style.qrc** to your **.pro file** as follows:
+-  Add **qdarkstyle/THEME/THEMEstyle.qrc** to your **.pro file** as follows:
 
     .. code:: c++
 
-        RESOURCES += qdarkstyle/theme/style.qrc
+        RESOURCES += qdarkstyle/THEME/THEMEstyle.qrc
 
 
 -  Load the stylesheet:
 
     .. code:: c++
 
-        QFile f(":qdarkstyle/theme/style.qss");
+        QFile f(":qdarkstyle/THEME/THEMEstyle.qss");
 
         if (!f.exists())   {
             printf("Unable to set stylesheet, file not found\n");
