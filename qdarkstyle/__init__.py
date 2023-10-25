@@ -239,13 +239,13 @@ def _load_stylesheet(qt_api='', palette=None):
 
     # Then we import resources - binary qrc content
     if palette is None:
-        from qdarkstyle.dark import darkstyle_rc
+        from qdarkstyle.dark import darkstyle_rc  # noqa
         palette = DarkPalette
     elif palette.ID == 'dark':
-        from qdarkstyle.dark import darkstyle_rc
+        from qdarkstyle.dark import darkstyle_rc  # noqa
         palette = DarkPalette
     elif palette.ID == 'light':
-        from qdarkstyle.light import lightstyle_rc
+        from qdarkstyle.light import lightstyle_rc  # noqa
         palette = LightPalette
     else:
         print("Not recognized ID for palette! Exiting!")
