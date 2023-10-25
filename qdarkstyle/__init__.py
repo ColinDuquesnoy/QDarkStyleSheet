@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 
 """The most complete dark/light style sheet for Qt applications (Qt4, Qt5,
-PySide, PySide2, PyQt4, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python 2/3 and C++.
+PySide, PySide2, PyQt4, PySide6, PyQt5, PyQt6, QtPy, PyQtGraph, Qt.Py) for
+Python 2/3 and C++.
 
 Python 2, as well as Qt4 (PyQt4 and PySide), will not be supported anymore.
 They are still there as it is, but no back-compatibility, fixes, nor features
 will be implemented.
 
-We still preparing the portability to Qt6 since we need changes in
-`QtPy <https://github.com/spyder-ide/qtpy>`__ dependency project.
 
 Check the `documentation <https://qdarkstylesheet.readthedocs.io/en/stable>`__
 to see how to set the desirable theme palette.
@@ -27,14 +26,14 @@ as shown below
 
 .. code-block:: python
 
-    # PySide
-    dark_stylesheet = qdarkstyle.load_stylesheet_pyside()
     # PySide 2
     dark_stylesheet = qdarkstyle.load_stylesheet_pyside2()
-    # PyQt4
-    dark_stylesheet = qdarkstyle.load_stylesheet_pyqt()
     # PyQt5
     dark_stylesheet = qdarkstyle.load_stylesheet_pyqt5()
+    # PySide 6
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyside6()
+    # PyQt6
+    dark_stylesheet = qdarkstyle.load_stylesheet_pyqt6()
 
 Alternatively, from environment variables provided by QtPy, PyQtGraph, Qt.Py
 
@@ -99,6 +98,7 @@ then use load_stylesheet() passing the argument qt_api='wanted_binding'.'''
 DEPRECATION_MSG_UNSUPPORTED = '''PyQt4/PySide use will be deprecated in v4.0,
 by the lack of support. We will follow the minimum requirements given by QtPy,
 project since QDarkStyle is dependent on it.'''
+
 
 def _apply_os_patches(palette):
     """

@@ -11,7 +11,7 @@ Requirements:
 
     - Python 3
     - QtPy
-    - PyQt5 or PyQt4 or PySide2 or PySide
+    - PyQt6 or PyQt5 or PyQt4 or PySide6 or PySide2 or PySide
     - PyQtGraph or Qt.Py (if chosen)
 
 To run this example using PyQt5, simple do
@@ -26,7 +26,9 @@ or
 
     python example.py  --qt_from=pyqt5
 
-Other options for qt_from are: pyqt5, pyside2, pyqt, pyside, qtpy, pyqtgraph, and qt.py.
+Other options for qt_from are: pyqt6, pyqt5, pyside6, pyside2, pyqt, pyside,
+qtpy, pyqtgraph, and qt.py.
+
 Also, you can run the example without any theme (none), to check for problems.
 
 .. code-block:: python

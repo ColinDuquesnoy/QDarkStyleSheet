@@ -5,8 +5,8 @@ QDarkStyleSheet
 |License: CC BY 4.0| |Conduct|
 
 The most complete dark/light style sheet for Qt applications (Qt4*, Qt5,
-PySide*, PySide2, PyQt4*, PyQt5, QtPy, PyQtGraph, Qt.Py) for Python
-2*/3 and C++.
+PySide*, PySide2, PySide6,  PyQt4*, PyQt5, PyQt6, QtPy, PyQtGraph, Qt.Py)
+for Python 2*/3 and C++.
 
 `Check out the complete documentation. <https://qdarkstylesheet.readthedocs.io/en/latest/screenshots.html>`__
 
@@ -27,10 +27,10 @@ and to be able to implement new themes thanks to the
 `Spyder team <https://github.com/spyder-ide/spyder>`__ collaboration.
 
 The current stable version is using Python 3 (preferable 3.6+) and Qt5
-(PyQt5 and PySide 2).
+(PyQt5 and PySide 2). Also in this version, an option for Qt6 (PyQt6, PySide6)
+was added.
 
-We still preparing the portability to Qt6 since we need changes in
-`QtPy <https://github.com/spyder-ide/qtpy>`__ dependency project.
+The current version for use with Qt6 may still present instabilities.
 
 [*] Python 2, as well as Qt4 (PyQt4 and PySide), will not be supported anymore.
 They are still there as it is, but no back compatibility, fixes, nor features
