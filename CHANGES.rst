@@ -1,6 +1,15 @@
 Changelog
 =========
 
+- 3.2:
+    - Improve C++ usage description #329
+    - Add Qt6 support, fixes entries and docs
+    - Fix warnings calls #325
+    - Fix hidden background Qtoolbox MR #324
+    - Enhance contrast ligh theme MR #335
+    - Drop Python 2 support #327
+    - Add constant to disable color of widgets
+    - Fixes small typos and shebang cleanup
 - 3.1:
     - Fixes generating resources
     - Correct spelling mistakes
