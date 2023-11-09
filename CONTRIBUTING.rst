@@ -333,38 +333,52 @@ passed all tests and checkers before continuing. You must have accounts to
 both test and official PyPI website below along with be inserted as a
 maintainer in both.
 
-1. Install ``twine``
+
+1. Update all the resources/assets using the `utils` main script.
+   This is important to update the auto generated files (qss, rc files, icons)
+   for the new distribution. It uses PySide6 when compiling.
+
+   ``python qdarkstyle\utils``
+
+2. Always check with the changes with the graphical examples (light/dark themes)
+   using `example` main script.
+
+   ``python qdarkstyle\example``
+
+3. Remember to create a tag for the new version in the master branch.
+
+4. Install ``twine``
 
    ``pip install twine``
 
-2. Generate a distribution (code package and wheel)
+5. Generate a distribution (code package and wheel)
 
    ``python setup.py sdist bdist_wheel``
 
-3. Check with ``twine``, which also tests README format for PyPI
+6. Check with ``twine``, which also tests README format for PyPI
 
    ``twine check dist/*``
 
-4. Try upload in `PyPI test
+7. Try upload in `PyPI test
    page <https://test.pypi.org/project/QDarkStyle>`__ platform before
    the official
 
    ``twine upload --repository-url https://test.pypi.org/legacy/ dist/*``
 
-5. Try to install from test
+8. Try to install from test
 
    ``pip install --no-deps --index-url https://test.pypi.org/simple/ qdarkstyle``
 
-6. Then, remove it
+9. Then, remove it
 
    ``pip uninstall qdarkstyle -y``
 
-7. Upload to `PyPI official
+10. Upload to `PyPI official
    page <https://pypi.python.org/pypi/QDarkStyle>`__
 
    ``twine upload --repository-url https://upload.pypi.org/legacy/ dist/*``
 
-8. Try to install from official
+11. Try to install from official
 
    ``pip install qdarkstyle``
 
