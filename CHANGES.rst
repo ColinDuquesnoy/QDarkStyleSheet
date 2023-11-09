@@ -1,6 +1,9 @@
 Changelog
 =========
 
+- 3.2.1:
+    - Add COLOR_DISABLED to vars #337
+    - Enhance contributing guide
 - 3.2:
     - Improve C++ usage description #329
     - Add Qt6 support, fixes entries and docs
