@@ -39,8 +39,6 @@ from qdarkstyle.utils import process_palette
 
 _logger = logging.getLogger(__name__)
 
-# logging.basicConfig(level=logging.DEBUG)
-
 
 class QSSFileHandler(FileSystemEventHandler):
     """QSS File observer."""
@@ -94,4 +92,5 @@ def main():
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.DEBUG)
     sys.exit(main())
