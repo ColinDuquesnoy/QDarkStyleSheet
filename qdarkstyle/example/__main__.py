@@ -75,7 +75,7 @@ def main():
     parser.add_argument('--palette', default='dark', type=str,
                         choices=['dark', 'light', 'none'],
                         help="Palette to display. Using 'none' there is no style sheet applied, OS like.")
-    parser.add_argument('--qt_from', default='pyside6', type=str,
+    parser.add_argument('--qt_from', default='pyqt5', type=str,
                         choices=['pyqt6', 'pyqt5', 'pyqt', 'pyside6', 'pyside2', 'pyside', 'qtpy', 'pyqtgraph', 'qt.py'],
                         help="Choose which binding and/or abstraction is to be used to run the example. Default is 'qtpy'")
     parser.add_argument('--test', action='store_true',

@@ -1,6 +1,7 @@
 Changelog
 =========
-
+- 3.2.2:
+    - Rebuild assets under Qt5 due QtPy limitation #339
 - 3.2.1:
     - Add COLOR_DISABLED to vars #337
     - Enhance contributing guide
