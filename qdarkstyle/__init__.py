@@ -68,7 +68,7 @@ from qdarkstyle.dark.palette import DarkPalette
 from qdarkstyle.light.palette import LightPalette
 from qdarkstyle.palette import Palette
 
-__version__ = "3.2.2"
+__version__ = "3.2.3"
 
 _logger = logging.getLogger(__name__)
 
