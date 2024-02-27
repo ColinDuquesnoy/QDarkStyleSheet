@@ -43,6 +43,7 @@ We moved to QtPy to simplify your code in v2.8, thus this is a required
 dependency now. We included special patches in three main categories:
 operating system, Qt/binding version, application.
 
+
 Included in that, lots of widgets' styles were included/fixed. A Qt
 application example (Python only) with almost all types of widgets and
 combinations were included to serve as a portfolio and a checklist for
