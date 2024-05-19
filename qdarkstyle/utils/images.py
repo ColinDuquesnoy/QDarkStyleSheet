@@ -97,7 +97,8 @@ def create_palette_image(base_svg_path=SVG_PATH, path=IMAGES_PATH,
     Create palette image svg and png image on specified path.
     """
     # Needed to use QPixmap
-    _ = QApplication([])
+    if not QApplication.instance():
+        _ = QApplication([])
 
     if palette is None:
         _logger.error("Please pass a palette class in order to create its "
@@ -147,7 +148,8 @@ def create_images(base_svg_path=SVG_PATH, rc_path=None, palette=None):
     """
 
     # Needed to use QPixmap
-    _ = QApplication([])
+    if not QApplication.instance():
+        _ = QApplication([])
 
     if palette is None:
         _logger.error("Please pass a palette class in order to create its "
