@@ -16,7 +16,7 @@ install_requires = ['qtpy>=2']
 extras_require = {
     'develop': ['qtsass', 'watchdog'],
     'docs': ['sphinx', 'sphinx_rtd_theme'],
-    'example': ['pyqt5', 'pyside2']
+    'example': ['pyqt5', 'pyside2; python_version<"3.12"']
 }
 
 classifiers = [
