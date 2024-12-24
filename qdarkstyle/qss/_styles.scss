@@ -1445,7 +1445,18 @@ QSlider {
             margin: 0px;
             border-radius: $SIZE_BORDER_RADIUS;
 
-            :disabled {
+            &:disabled {
+                background: $COLOR_ACCENT_1;
+            }
+        }
+        &:vertical[invertedAppearance=true] {
+            background: $COLOR_BACKGROUND_4;
+        }
+        &:horizontal[invertedAppearance=true] {
+            background: $COLOR_ACCENT_2;
+            border: $BORDER_2;
+
+            &:disabled[invertedAppearance=true] {
                 background: $COLOR_ACCENT_1;
             }
         }
@@ -1461,6 +1472,20 @@ QSlider {
             border-radius: $SIZE_BORDER_RADIUS;
 
             &:disabled {
+                background: $COLOR_ACCENT_1;
+            }
+        }
+        &:horizontal[invertedAppearance=true] {
+            background: $COLOR_BACKGROUND_4;
+        }
+        &:vertical {
+            background: $COLOR_BACKGROUND_4;
+        }
+        &:vertical[invertedAppearance=true] {
+            background: $COLOR_ACCENT_2;
+            border: $BORDER_2;
+
+            &:disabled[invertedAppearance=true] {
                 background: $COLOR_ACCENT_1;
             }
         }

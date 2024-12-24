@@ -1356,7 +1356,20 @@ QSlider::add-page:vertical {
   border-radius: 4px;
 }
 
-QSlider::add-page:vertical :disabled {
+QSlider::add-page:vertical:disabled {
+  background: #26486B;
+}
+
+QSlider::add-page:vertical[invertedAppearance=true] {
+  background: #455364;
+}
+
+QSlider::add-page:horizontal[invertedAppearance=true] {
+  background: #346792;
+  border: 1px solid #455364;
+}
+
+QSlider::add-page:horizontal[invertedAppearance=true]:disabled[invertedAppearance=true] {
   background: #26486B;
 }
 
@@ -1369,6 +1382,23 @@ QSlider::sub-page:horizontal {
 }
 
 QSlider::sub-page:horizontal:disabled {
+  background: #26486B;
+}
+
+QSlider::sub-page:horizontal[invertedAppearance=true] {
+  background: #455364;
+}
+
+QSlider::sub-page:vertical {
+  background: #455364;
+}
+
+QSlider::sub-page:vertical[invertedAppearance=true] {
+  background: #346792;
+  border: 1px solid #455364;
+}
+
+QSlider::sub-page:vertical[invertedAppearance=true]:disabled[invertedAppearance=true] {
   background: #26486B;
 }
 

@@ -43,40 +43,6 @@
       </property>
      </widget>
     </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="label_25">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="toolTip">
-       <string>This is a tool tip</string>
-      </property>
-      <property name="statusTip">
-       <string>This is a status tip</string>
-      </property>
-      <property name="whatsThis">
-       <string>This is &quot;what is this&quot;</string>
-      </property>
-      <property name="text">
-       <string>VerticalSlider</string>
-      </property>
-     </widget>
-    </item>
     <item row="3" column="2">
      <widget class="QScrollBar" name="horizontalScrollBarDis">
       <property name="enabled">
@@ -108,37 +74,6 @@
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QSlider" name="verticalSlider">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>70</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>70</height>
-       </size>
-      </property>
-      <property name="toolTip">
-       <string>This is a tool tip</string>
-      </property>
-      <property name="statusTip">
-       <string>This is a status tip</string>
-      </property>
-      <property name="whatsThis">
-       <string>This is &quot;what is this&quot;</string>
-      </property>
-      <property name="value">
-       <number>50</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
       </property>
      </widget>
     </item>
@@ -241,7 +176,112 @@
       </property>
      </widget>
     </item>
-    <item row="6" column="0">
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_24_inverted">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="text">
+       <string>HorizontalSlider[invertedAppearance=True]</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1" rowspan="2">
+     <widget class="QSlider" name="horizontalSliderInverted">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="invertedAppearance">
+       <bool>true</bool>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QSlider" name="horizontalSliderInvertedDis">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="invertedAppearance">
+       <bool>true</bool>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
      <widget class="QLabel" name="label_23">
       <property name="minimumSize">
        <size>
@@ -288,7 +328,7 @@
       </property>
      </widget>
     </item>
-    <item row="5" column="2" rowspan="2">
+    <item row="6" column="2" rowspan="2">
      <widget class="QScrollBar" name="verticalScrollBarDis">
       <property name="enabled">
        <bool>false</bool>
@@ -356,7 +396,7 @@
       </property>
      </widget>
     </item>
-    <item row="8" column="0">
+    <item row="10" column="0">
      <spacer name="verticalSpacerDis">
       <property name="toolTip">
        <string>This is a tool tip</string>
@@ -378,7 +418,7 @@
       </property>
      </spacer>
     </item>
-    <item row="6" column="1">
+    <item row="7" column="1">
      <widget class="QScrollBar" name="verticalScrollBar">
       <property name="minimumSize">
        <size>
@@ -545,7 +585,7 @@
       </property>
      </widget>
     </item>
-    <item row="9" column="0" colspan="3">
+    <item row="10" column="0" colspan="3">
      <widget class="QLabel" name="label_50">
       <property name="toolTip">
        <string>This is a tool tip</string>
@@ -629,10 +669,180 @@
       </property>
      </widget>
     </item>
-    <item row="7" column="2">
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_25">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="text">
+       <string>VerticalSlider</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QSlider" name="verticalSlider">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2">
      <widget class="QSlider" name="verticalSliderDis">
       <property name="enabled">
        <bool>false</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_25_inverted">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="text">
+       <string>VerticalSlider[invertedAppearance=True]</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QSlider" name="verticalSliderInverted">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="invertedAppearance">
+       <bool>true</bool>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>This is a tool tip</string>
+      </property>
+      <property name="statusTip">
+       <string>This is a status tip</string>
+      </property>
+      <property name="whatsThis">
+       <string>This is &quot;what is this&quot;</string>
+      </property>
+      <property name="value">
+       <number>50</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QSlider" name="verticalSliderInvertedDis">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="invertedAppearance">
+       <bool>true</bool>
       </property>
       <property name="minimumSize">
        <size>
