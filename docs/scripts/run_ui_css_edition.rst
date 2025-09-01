@@ -1,7 +1,7 @@
-run\_ui\_css\_edition module
-============================
+scripts.run\_ui\_css\_edition module
+====================================
 
-.. automodule:: run_ui_css_edition
+.. automodule:: scripts.run_ui_css_edition
    :members:
    :undoc-members:
    :show-inheritance:

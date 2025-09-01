@@ -65,6 +65,129 @@ B140        ``#F5FBFF`` |image31|
 B150        ``#FFFFFF`` |image32|
 =========== =========== =========
 
+Palette System
+--------------
+
+QDarkStyle uses a palette system that defines semantic color constants for different UI elements and states. This system ensures consistency across themes and makes it easy to customize colors.
+
+Background Colors
+~~~~~~~~~~~~~~~~~
+
+Background colors are used for different layers and depths in the interface:
+
+=================== ======================= ======================= =========
+Constant            Dark Theme              Light Theme             Usage
+=================== ======================= ======================= =========
+COLOR_BACKGROUND_1  ``Gray.B10`` (#19232D)  ``Gray.B140`` (#FAFAFA) Base background
+COLOR_BACKGROUND_2  ``Gray.B20`` (#293544)  ``Gray.B130`` (#DFE1E2) Secondary background
+COLOR_BACKGROUND_3  ``Gray.B30`` (#37414F)  ``Gray.B120`` (#D2D5D8) Tertiary background
+COLOR_BACKGROUND_4  ``Gray.B40`` (#455364)  ``Gray.B110`` (#C0C4C8) Raised elements
+COLOR_BACKGROUND_5  ``Gray.B50`` (#54687A)  ``Gray.B100`` (#B4B8BC) Pressed elements
+COLOR_BACKGROUND_6  ``Gray.B60`` (#60798B)  ``Gray.B90`` (#ACB1B6)  Hover elements
+=================== ======================= ======================= =========
+
+Text Colors
+~~~~~~~~~~~
+
+Text colors for different content types and importance levels:
+
+=================== ======================= ======================= =========
+Constant            Dark Theme              Light Theme             Usage
+=================== ======================= ======================= =========
+COLOR_TEXT_1        ``Gray.B130`` (#DFE1E2) ``Gray.B10`` (#19232D)  Primary text
+COLOR_TEXT_2        ``Gray.B110`` (#C0C4C8) ``Gray.B20`` (#293544)  Secondary text
+COLOR_TEXT_3        ``Gray.B90`` (#ACB1B6)  ``Gray.B50`` (#54687A)  Tertiary text
+COLOR_TEXT_4        ``Gray.B80`` (#9DA9B5)  ``Gray.B70`` (#788D9C)  Quaternary text
+=================== ======================= ======================= =========
+
+Accent Colors
+~~~~~~~~~~~~~
+
+Accent colors for interactive elements, selections, and highlights:
+
+=================== ======================= ======================= =========
+Constant            Dark Theme              Light Theme             Usage
+=================== ======================= ======================= =========
+COLOR_ACCENT_1      ``Blue.B20`` (#26486B)  ``Blue.B130`` (#DAEDFF) Selection background
+COLOR_ACCENT_2      ``Blue.B40`` (#346792)  ``Blue.B100`` (#9FCBFF) Primary selection
+COLOR_ACCENT_3      ``Blue.B50`` (#1A72BB)  ``Blue.B90`` (#73C7FF)  Hover selection
+COLOR_ACCENT_4      ``Blue.B70`` (#259AE9)  ``Blue.B80`` (#37AEFE)  Active elements
+COLOR_ACCENT_5      ``Blue.B80`` (#37AEFE)  ``Blue.B70`` (#259AE9)  Focus indicators
+=================== ======================= ======================= =========
+
+Special Colors
+~~~~~~~~~~~~~~
+
+Special-purpose colors for specific UI states:
+
+=================== ======================= ======================= =========
+Constant            Dark Theme              Light Theme             Usage
+=================== ======================= ======================= =========
+COLOR_DISABLED      ``Gray.B70`` (#788D9C)  ``Gray.B80`` (#9DA9B5)  Disabled elements
+=================== ======================= ======================= =========
+
+Other Palette Properties
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Additional properties that define the visual appearance:
+
+=================== ======================= =========
+Constant            Value                   Usage
+=================== ======================= =========
+OPACITY_TOOLTIP     230                     Tooltip opacity
+SIZE_BORDER_RADIUS  4px                     Border radius
+=================== ======================= =========
+
+Usage Examples
+~~~~~~~~~~~~~~
+
+**In custom palettes:**
+
+.. code-block:: python
+
+    from qdarkstyle.palette import Palette
+    from qdarkstyle.colorsystem import Gray, Blue
+    
+    class DarkOceanPalette(Palette):
+        ID = 'dark'  # Must use 'dark' for dark themes
+        
+        # Background colors
+        COLOR_BACKGROUND_1 = Gray.B15
+        COLOR_BACKGROUND_2 = Gray.B25
+        
+        # Text colors
+        COLOR_TEXT_1 = Gray.B130
+        COLOR_TEXT_2 = Gray.B110
+        
+        # Accent colors
+        COLOR_ACCENT_1 = Blue.B30
+        COLOR_ACCENT_2 = Blue.B50
+        
+        # Special colors
+        COLOR_DISABLED = Gray.B75
+
+**In SCSS/CSS:**
+
+.. code-block:: text
+
+    QWidget {
+        background-color: $COLOR_BACKGROUND_1;
+        color: $COLOR_TEXT_1;
+    }
+    
+    QPushButton {
+        background-color: $COLOR_BACKGROUND_4;
+        color: $COLOR_TEXT_1;
+    }
+    
+    QPushButton:hover {
+        background-color: $COLOR_BACKGROUND_6;
+    }
+    
+    QPushButton:disabled {
+        color: $COLOR_DISABLED;
+    }
+
 .. |image1| image:: images/color_samples/GrayB0.png
 .. |image2| image:: images/color_samples/GrayB10.png
 .. |image3| image:: images/color_samples/GrayB20.png

@@ -9,7 +9,6 @@ import argparse
 from subprocess import call
 import os
 import sys
-import tempfile
 
 # Constants
 SCRIPTS_PATH = os.path.abspath(os.path.dirname(__file__))
@@ -60,7 +59,7 @@ def main():
         no_styled = call(['python', example, '--palette', 'none'] + sys.argv[1:], shell=shell)
 
         if styled or no_styled:
-            print('Unf! It not worked! Please, check the error(s).')
+            print('Oops! It did not work! Please, check the error(s).')
             break
 
 

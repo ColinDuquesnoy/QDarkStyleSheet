@@ -14,4 +14,4 @@ Submodules
    :maxdepth: 4
 
    qdarkstyle.light.palette
-   qdarkstyle.light.style_rc
+   qdarkstyle.light.lightstyle_rc

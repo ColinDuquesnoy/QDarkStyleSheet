@@ -15,10 +15,10 @@ running this script.
 Links to understand those tools:
 
     - `pyside6-rcc`: https://doc.qt.io/qtforpython/tutorials/basictutorial/qrcfiles.html (Official)
-    - `pyrcc5`: http://pyqt.sourceforge.net/Docs/PyQt5/resources.html#pyrcc5
-    - `pyside2-rcc: https://doc.qt.io/qtforpython/overviews/resources.html (Documentation Incomplete)
-    - `rcc` on Qt6: https://doc.qt.io/qt-6/resources.html
-    - `rcc` on Qt5: http://doc.qt.io/qt-5/rcc.html
+    - `pyrcc5`: http://pyqt.sourceforge.net/Docs/PyQt5/resources.html#pyrcc5 (Official)
+    - `pyside2-rcc`: https://doc.qt.io/qtforpython/overviews/resources.html (Documentation Incomplete)
+    - `rcc` on Qt6: https://doc.qt.io/qt-6/resources.html (Official)
+    - `rcc` on Qt5: http://doc.qt.io/qt-5/rcc.html (Official)
 
 """
 

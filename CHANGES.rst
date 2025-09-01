@@ -174,8 +174,7 @@ Changelog
     - Fix tabs style - selected tab color and shift #59, #72
     - Restructure README creating AUTHORS, CHANGES, and LICENSE #71
 - 2.3.1:
-    - Improve checkbox color (use accent color used in other widgets) and
-    darken view hover/selected colors to play nicer with other widget colors
+    - Improve checkbox color (use accent color used in other widgets) and darken view hover/selected colors to play nicer with other widget colors
     - Shift to the right of the first tab
     - Update license year
     - Update README (fix snapshots links and formatting)
@@ -239,8 +238,7 @@ Changelog
     - Remove outline on button, checkbox and radio button
     - Add support for closable tabs
     - Better disabled buttons
-    - Fix QTextEdit background color to match the color of QPlainTextEdit
-    and QLineEdit
+    - Fix QTextEdit background color to match the color of QPlainTextEdit and QLineEdit
     - Better hover/selected states for QTreeView and QListView
     - Add QHeaderView support
 - 1.2:

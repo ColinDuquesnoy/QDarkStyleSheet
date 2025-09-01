@@ -14,6 +14,7 @@ Welcome to QDarkStyle's documentation!
    known_issues.rst
    contributing.rst
    color_reference.rst
+   custom_palettes.rst
    reference/modules.rst
    scripts/modules.rst
    changes.rst

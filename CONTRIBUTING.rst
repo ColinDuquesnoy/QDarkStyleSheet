@@ -201,6 +201,53 @@ To see more information about it, see its reference.
 
 Feel free to modify UI files with Qt Designer.
 
+Custom Themes Development
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+QDarkStyleSheet now supports custom theme development. If you want to contribute
+custom themes, follow these guidelines:
+
+**Creating Custom Themes:**
+
+1. **Use the Custom Themes Demo**: Start with `scripts/custom_themes_demo.py` to understand
+   the theme creation process and see working examples.
+
+2. **Follow Palette Structure**: All custom palettes must inherit from `qdarkstyle.palette.Palette`
+   and use standard 'dark'/'light' IDs for compatibility.
+
+3. **Document Your Theme**: Include comprehensive docstrings explaining your color strategy
+   and design approach.
+
+4. **Test Thoroughly**: Use the demo application to test your theme with various widgets.
+
+**Example Custom Theme Contribution:**
+
+.. code:: python
+
+    from qdarkstyle.palette import Palette
+
+    class DarkMyThemePalette(Palette):
+        """My custom dark theme with detailed documentation."""
+        
+        ID = 'dark'
+        
+        # Document your color strategy
+        COLOR_BACKGROUND_1 = '#1a1a1a'  # Primary background
+        COLOR_BACKGROUND_2 = '#2d2d2d'  # Secondary background
+        # ... other colors with comments
+        
+        COLOR_DISABLED = '#666666'
+        OPACITY_TOOLTIP = 230
+
+**Theme Generation Process:**
+
+1. Create your palette classes following the established pattern
+2. Use `qdarkstyle.utils` to generate theme assets
+3. Test with the demo application
+4. Document your theme's color strategy and use cases
+
+For complete custom theme documentation, see `docs/custom_palettes.rst`.
+
 Modifying QSS File
 ~~~~~~~~~~~~~~~~~~
 
@@ -218,7 +265,7 @@ Making It Easy
 
 To simplify this process for the developer, if you are changing many
 things, use the script
-`run\_ui\_css\_edition.py <https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/script/run_ui_css_edition.py>`__:
+`run_ui_css_edition.py <https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/scripts/run_ui_css_edition.py>`__:
 
 .. code:: bash
 
@@ -226,6 +273,15 @@ things, use the script
 
 This creates a loop that restarts the application, processes ui and css
 files.
+
+For custom theme development, use the custom themes demo:
+
+.. code:: bash
+
+   python scripts/custom_themes_demo.py
+
+This demonstrates the complete custom theme workflow and provides examples
+for theme development.
 
 For more information about those scripts, see their documentation.
 
@@ -250,6 +306,15 @@ color.
 
 -  `Paletton.com <http://paletton.com/>`__
 -  `Coolors.co <https://coolors.co/>`__
+
+**Custom Theme Color Guidelines:**
+
+When creating custom themes, consider these principles:
+
+1. **Color Hierarchy**: Use COLOR_BACKGROUND_1 for main areas, higher numbers for elevated surfaces
+2. **Text Contrast**: Ensure sufficient contrast between text and background colors
+3. **Accessibility**: Test with color vision deficiency simulators
+4. **System Integration**: Consider using built-in color constants for consistency
 
 As a minimal guide to create new icons (svg) images, we list two main
 sources.
@@ -322,11 +387,22 @@ inserted in the issue tracker, as a message. Better than that, use
 modules provided in test folder to create a GUI test, creating a new
 file for it.
 
+**Custom Theme Testing:**
+
+For custom themes, use the custom themes demo to test your theme:
+
+.. code:: bash
+
+   python scripts/custom_themes_demo.py
+
+This provides a comprehensive testing environment with various widgets
+to verify your theme works correctly across different UI elements.
+
 Check `test <./test>`__ files to more details. Tests will keep our
 application stable.
 
 If You Are a Maintainer, Go Ahead to Production
-----------------------------------------------
+-----------------------------------------------
 
 Of course, until you start these steps, make sure the package have
 passed all tests and checkers before continuing. You must have accounts to
@@ -338,47 +414,48 @@ maintainer in both.
    This is important to update the auto generated files (qss, rc files, icons)
    for the new distribution. It uses PySide6 when compiling.
 
-   ``python qdarkstyle\utils``
+   ``python -m qdarkstyle.utils``
 
 2. Always check with the changes with the graphical examples (light/dark themes)
    using `example` main script.
 
-   ``python qdarkstyle\example``
+   ``python -m qdarkstyle.example``
 
-3. Remember to create a tag for the new version in the master branch.
+3. Test custom themes demo to ensure theme framework works correctly:
 
-4. Install ``twine``
+   ``python scripts/custom_themes_demo.py``
+
+4. Remember to create a tag for the new version in the master branch.
+
+5. Install ``twine``
 
    ``pip install twine``
 
-5. Generate a distribution (code package and wheel)
+6. Generate a distribution (code package and wheel)
 
    ``python setup.py sdist bdist_wheel``
 
-6. Check with ``twine``, which also tests README format for PyPI
+7. Check with ``twine``, which also tests README format for PyPI
 
    ``twine check dist/*``
 
-7. Try upload in `PyPI test
-   page <https://test.pypi.org/project/QDarkStyle>`__ platform before
-   the official
+7. Try upload in `PyPI test page <https://test.pypi.org/project/QDarkStyle>`__ platform before the official
 
    ``twine upload --repository-url https://test.pypi.org/legacy/ dist/*``
 
-8. Try to install from test
+9. Try to install from test
 
    ``pip install --no-deps --index-url https://test.pypi.org/simple/ qdarkstyle``
 
-9. Then, remove it
+10. Then, remove it
 
    ``pip uninstall qdarkstyle -y``
 
-10. Upload to `PyPI official
-   page <https://pypi.python.org/pypi/QDarkStyle>`__
+10. Upload to `PyPI official page <https://pypi.python.org/pypi/QDarkStyle>`__
 
    ``twine upload --repository-url https://upload.pypi.org/legacy/ dist/*``
 
-11. Try to install from official
+12. Try to install from official
 
    ``pip install qdarkstyle``
 

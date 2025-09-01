@@ -14,4 +14,4 @@ Submodules
    :maxdepth: 4
 
    qdarkstyle.dark.palette
-   qdarkstyle.dark.style_rc
+   qdarkstyle.dark.darkstyle_rc
